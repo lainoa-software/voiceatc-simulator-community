@@ -1,5 +1,10 @@
 {
   "airports": {
+    "ESSA": {
+      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESSA/runway_config.json",
+      "sha256": "3aad0c39e78731392fd29cce6c9d27cfcd964a44e9602d705c8c3a17644f8f5c",
+      "size_bytes": 2580
+    },
     "GCFV": {
       "repo_path": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/GCFV/runway_config.json",
       "sha256": "f8deb16bab70dd2d5e85b23d0dd76d295f8426626e57139dad7099347c4534db",
@@ -107,8 +112,8 @@
     }
   },
   "branch": "main",
-  "commit_sha": "c1a9b5f34fe80ed15031c00bbbb8a40be83cf59b",
-  "generated_at": "2026-03-08T20:44:58Z",
+  "commit_sha": "1d1052cd762a9607f2abf91cddce06d48c4dd9f8",
+  "generated_at": "2026-03-08T20:48:07Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
