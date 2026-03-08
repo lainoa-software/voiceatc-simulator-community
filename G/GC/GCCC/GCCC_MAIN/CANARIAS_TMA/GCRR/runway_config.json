@@ -1,0 +1,17 @@
+{
+    "airport": "GCRR",
+    "runway_configs": [
+        {
+            "id": "NORTH",
+            "name": "PREFERENTIAL",
+            "arr": "03",
+            "dep": "03"
+        },
+        {
+            "id": "SOUTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "21",
+            "dep": "21"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "airport": "LEST",
+    "runway_configs": [
+        {
+            "id": "SOUTH",
+            "name": "PREFERENTIAL",
+            "arr": "17",
+            "dep": "17"
+        },
+        {
+            "id": "NORTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "35",
+            "dep": "35"
+        }
+    ]
+}

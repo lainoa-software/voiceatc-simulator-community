@@ -1,0 +1,17 @@
+{
+    "airport": "LECO",
+    "runway_configs": [
+        {
+            "id": "SOUTH",
+            "name": "PREFERENTIAL",
+            "arr": "21",
+            "dep": "21"
+        },
+        {
+            "id": "NORTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "03",
+            "dep": "03"
+        }
+    ]
+}

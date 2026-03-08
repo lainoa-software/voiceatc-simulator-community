@@ -1,0 +1,17 @@
+{
+    "airport": "LEBB",
+    "runway_configs": [
+        {
+            "id": "WEST",
+            "name": "PREFERENTIAL",
+            "arr": "30",
+            "dep": "30"
+        },
+        {
+            "id": "EAST",
+            "name": "NON PREFERENTIAL",
+            "arr": "12",
+            "dep": "12"
+        }
+    ]
+}

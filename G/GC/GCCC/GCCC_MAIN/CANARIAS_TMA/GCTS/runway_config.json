@@ -1,0 +1,17 @@
+{
+    "airport": "GCTS",
+    "runway_configs": [
+        {
+            "id": "EAST",
+            "name": "PREFERENTIAL",
+            "arr": "07",
+            "dep": "07"
+        },
+        {
+            "id": "WEST",
+            "name": "NON PREFERENTIAL",
+            "arr": "25",
+            "dep": "25"
+        }
+    ]
+}

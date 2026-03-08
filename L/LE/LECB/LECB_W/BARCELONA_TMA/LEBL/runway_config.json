@@ -1,0 +1,29 @@
+{
+    "airport": "LEBL",
+    "runway_configs": [
+        {
+            "id": "WRL",
+            "name": "DAYLIGHT PREFERENTIAL",
+            "arr": "24R",
+            "dep": "24L"
+        },
+        {
+            "id": "ELR",
+            "name": "DAYLIGHT NON PREFERENTIAL",
+            "arr": "06L",
+            "dep": "06R"
+        },
+        {
+            "id": "ENR",
+            "name": "NIGHT PREFERENTIAL",
+            "arr": "02",
+            "dep": "06R"
+        },
+        {
+            "id": "WLL",
+            "name": "NIGHT NON PREFERENTIAL",
+            "arr": "24L",
+            "dep": "24L"
+        }
+    ]
+}

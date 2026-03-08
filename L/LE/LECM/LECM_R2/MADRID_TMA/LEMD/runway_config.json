@@ -1,0 +1,17 @@
+{
+    "airport": "LEMD",
+    "runway_configs": [
+        {
+            "id": "NORTH",
+            "name": "PREFERENTIAL",
+            "arr": "32L 32R",
+            "dep": "36L 36R"
+        },
+        {
+            "id": "SOUTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "18L 18R",
+            "dep": "14L 14R"
+        }
+    ]
+}

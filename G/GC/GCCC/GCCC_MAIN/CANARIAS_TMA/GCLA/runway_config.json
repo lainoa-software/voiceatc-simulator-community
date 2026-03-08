@@ -1,0 +1,17 @@
+{
+    "airport": "GCLA",
+    "runway_configs": [
+        {
+            "id": "NORTH",
+            "name": "PREFERENTIAL",
+            "arr": "36",
+            "dep": "36"
+        },
+        {
+            "id": "SOUTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "18",
+            "dep": "18"
+        }
+    ]
+}

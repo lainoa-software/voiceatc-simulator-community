@@ -1,0 +1,17 @@
+{
+    "airport": "GCHI",
+    "runway_configs": [
+        {
+            "id": "SOUTH",
+            "name": "PREFERENTIAL",
+            "arr": "16",
+            "dep": "16"
+        },
+        {
+            "id": "NORTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "34",
+            "dep": "34"
+        }
+    ]
+}

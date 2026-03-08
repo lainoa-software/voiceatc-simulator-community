@@ -1,0 +1,17 @@
+{
+    "airport": "LEMG",
+    "runway_configs": [
+        {
+            "id": "SOUTH",
+            "name": "PREFERENTIAL",
+            "arr": "13",
+            "dep": "13"
+        },
+        {
+            "id": "NORTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "31",
+            "dep": "31"
+        }
+    ]
+}

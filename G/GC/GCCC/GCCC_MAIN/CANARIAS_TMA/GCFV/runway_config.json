@@ -1,0 +1,17 @@
+{
+    "airport": "GCFV",
+    "runway_configs": [
+        {
+            "id": "NORTH",
+            "name": "PREFERENTIAL",
+            "arr": "01",
+            "dep": "01"
+        },
+        {
+            "id": "SOUTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "19",
+            "dep": "19"
+        }
+    ]
+}

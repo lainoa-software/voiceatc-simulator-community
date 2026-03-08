@@ -1,0 +1,17 @@
+{
+    "airport": "GCLP",
+    "runway_configs": [
+        {
+            "id": "NORTH",
+            "name": "PREFERENTIAL",
+            "arr": "03L",
+            "dep": "03R"
+        },
+        {
+            "id": "SOUTH",
+            "name": "NON PREFERENTIAL",
+            "arr": "21R",
+            "dep": "21L"
+        }
+    ]
+}
