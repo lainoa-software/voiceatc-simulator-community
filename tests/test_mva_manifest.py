@@ -15,7 +15,6 @@ SPEC.loader.exec_module(MODULE)
 
 def valid_payload(airport: str) -> dict[str, object]:
     return {
-        "schema_version": 1,
         "airport": airport,
         "mva_areas": [
             {
@@ -59,6 +58,17 @@ class MvaManifestTests(unittest.TestCase):
             path.write_text(json.dumps(valid_payload("LEMD")), encoding="utf-8")
             entry = MODULE.validate_mva_file(path, root)
             self.assertEqual("LEMD", entry["airport"])
+
+    def test_validate_mva_file_ignores_legacy_schema_version(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            path = root / "LEBL" / "mva.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            payload = valid_payload("LEBL")
+            payload["schema_version"] = "obsolete"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            entry = MODULE.validate_mva_file(path, root)
+            self.assertEqual("LEBL", entry["airport"])
 
     def test_validate_mva_file_rejects_empty_area_list(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

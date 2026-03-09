@@ -16,7 +16,6 @@ REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 BRANCH_NAME = "main"
 SCHEMA_VERSION = 1
 MVA_FILENAME = "mva.json"
-MVA_SCHEMA_VERSION = 1
 
 
 def mva_files(root: Path = ROOT) -> list[Path]:
@@ -54,10 +53,6 @@ def validate_mva_file(path: Path, root: Path = ROOT) -> dict[str, object]:
 
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: mva file must be a JSON object")
-
-    schema_version = int(payload.get("schema_version", -1))
-    if schema_version != MVA_SCHEMA_VERSION:
-        raise ValueError(f"{path}: unsupported schema_version '{schema_version}'")
 
     airport = ensure_text_field(payload.get("airport"), "airport", path).upper()
 
