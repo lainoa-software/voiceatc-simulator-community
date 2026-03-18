@@ -26,6 +26,7 @@ RELEASE_MANIFEST_SCHEMA_VERSION = 2
 DATASET_MANIFEST_SCHEMA_VERSION = 2
 RELEASE_MANIFEST_PATH = ROOT / ".voiceatc" / "release_manifest.json"
 RELEASE_MANIFEST_ASSET_NAME = "release-manifest.json"
+RELEASE_TITLE_PREFIX = "Daily Community Cache"
 ZIP_TIMESTAMP = (2024, 1, 1, 0, 0, 0)
 ZIP_FILE_MODE = 0o100644 << 16
 
@@ -36,6 +37,35 @@ def _hash_bytes(raw_bytes: bytes) -> str:
 
 def _download_url(download_repo: str, release_tag: str, asset_name: str) -> str:
     return f"https://github.com/{download_repo}/releases/download/{release_tag}/{asset_name}"
+
+
+def _build_release_title(release_tag: str) -> str:
+    normalized_tag = release_tag.strip()
+    if not normalized_tag.startswith("daily-"):
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+
+    tag_body = normalized_tag.removeprefix("daily-")
+    if len(tag_body) < 10:
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+
+    date_text = tag_body[:10]
+    suffix = ""
+    if len(tag_body) > 10:
+        if tag_body[10] != "-":
+            raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+        suffix = tag_body[11:].strip()
+        if not suffix or not suffix.isalpha() or suffix.lower() != suffix:
+            raise ValueError(f"release_tag suffix must be lowercase letters: {release_tag}")
+
+    try:
+        title_date = datetime.strptime(date_text, "%Y-%m-%d")
+    except ValueError as exc:
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}") from exc
+
+    title = f"{RELEASE_TITLE_PREFIX} - {title_date.strftime('%A')} {date_text}"
+    if suffix:
+        title = f"{title} {suffix}"
+    return title
 
 
 def _write_json(path: Path, payload: dict[str, object]) -> None:
@@ -141,19 +171,15 @@ def build_release_manifest(
     mva_release_manifest: dict[str, object],
     runway_release_manifest: dict[str, object],
     published_at: str,
+    release_title: str | None = None,
 ) -> dict[str, object]:
     release_tag = str(routes_manifest.get("release_tag", "")).strip()
-    try:
-        title_date = datetime.strptime(release_tag.removeprefix("daily-"), "%Y-%m-%d")
-    except ValueError as exc:
-        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD': {release_tag}") from exc
-
-    weekday = title_date.strftime("%A")
+    resolved_release_title = release_title.strip() if release_title and release_title.strip() else _build_release_title(release_tag)
     return {
         "schema_version": RELEASE_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
         "release_tag": release_tag,
-        "release_title": f"Daily Community Release - {weekday} {release_tag.removeprefix('daily-')}",
+        "release_title": resolved_release_title,
         "commit_sha": str(routes_manifest.get("commit_sha", "")).strip(),
         "published_at": published_at.strip(),
         "airac": str(routes_manifest.get("airac", "")).strip(),
@@ -197,6 +223,7 @@ def build_release_bundle(
     published_at: str,
     commit_sha: str,
     download_repo: str,
+    release_title: str | None = None,
     root: Path = ROOT,
     write_manifests: bool = False,
 ) -> dict[str, object]:
@@ -255,6 +282,7 @@ def build_release_bundle(
         mva_release_manifest,
         runway_release_manifest,
         published_at,
+        release_title=release_title,
     )
 
     release_manifest_asset_path = output_dir / RELEASE_MANIFEST_ASSET_NAME
@@ -297,6 +325,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Build deterministic daily community release assets and manifests.")
     parser.add_argument("--output-dir", required=True, help="Directory where release assets will be written")
     parser.add_argument("--release-tag", required=True, help="Release tag, for example daily-2026-03-18")
+    parser.add_argument("--release-title", default="", help="Release title, for example Daily Community Cache - Wednesday 2026-03-18")
     parser.add_argument("--published-at", required=True, help="Release timestamp in UTC")
     parser.add_argument("--commit-sha", default="", help="Source commit SHA for the published release")
     parser.add_argument("--download-repo", default=REPO_NAME, help="GitHub repo used in release asset URLs")
@@ -311,6 +340,7 @@ def main() -> int:
             published_at=args.published_at.strip(),
             commit_sha=commit_sha,
             download_repo=args.download_repo.strip() or REPO_NAME,
+            release_title=args.release_title.strip() or None,
             root=ROOT,
             write_manifests=args.write_manifests,
         )

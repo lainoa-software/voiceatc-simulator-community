@@ -96,7 +96,27 @@ class RoutesReleaseManifestTests(unittest.TestCase):
         manifest = MODULE.build_release_manifest(routes_manifest, "2026-03-15T01:15:00Z")
 
         self.assertEqual("daily-2026-03-15", manifest["release_tag"])
+        self.assertEqual("Daily Community Cache - Sunday 2026-03-15", manifest["release_title"])
         self.assertEqual("routes-2602.tsv", manifest["assets"]["routes_tsv"]["asset_name"])
+
+    def test_build_release_manifest_accepts_suffixed_release_tag(self) -> None:
+        routes_manifest = {
+            "schema_version": 1,
+            "repo": "lainoa-software/voiceatc-simulator-community",
+            "release_tag": "daily-2026-03-15-b",
+            "commit_sha": "test-commit",
+            "airac": "2602",
+            "asset_name": "routes-2602.tsv",
+            "download_url": "https://github.com/example/releases/download/daily-2026-03-15-b/routes-2602.tsv",
+            "sha256": "abc",
+            "size_bytes": 123,
+            "route_count": 456,
+            "published_at": "2026-03-15T01:15:00Z",
+        }
+
+        manifest = MODULE.build_release_manifest(routes_manifest, "2026-03-15T01:15:00Z")
+
+        self.assertEqual("Daily Community Cache - Sunday 2026-03-15 b", manifest["release_title"])
 
 
 if __name__ == "__main__":

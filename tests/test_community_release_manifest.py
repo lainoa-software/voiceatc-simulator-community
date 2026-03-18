@@ -103,6 +103,7 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             release_manifest = bundle["manifests"]["release"]
             self.assertEqual(2, release_manifest["schema_version"])
             self.assertEqual("daily-2026-03-18", release_manifest["release_tag"])
+            self.assertEqual("Daily Community Cache - Wednesday 2026-03-18", release_manifest["release_title"])
             self.assertIn("mva_zip", release_manifest["assets"])
             self.assertIn("runway_configs_zip", release_manifest["assets"])
 
@@ -161,6 +162,25 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                     ],
                     archive.namelist(),
                 )
+
+    def test_build_release_bundle_accepts_suffixed_manual_release_title(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "repo"
+            build_fixture_repo(root)
+
+            bundle = MODULE.build_release_bundle(
+                output_dir=root / "build" / "manual",
+                release_tag="daily-2026-03-18-b",
+                release_title="Daily Community Cache - Wednesday 2026-03-18 b",
+                published_at="2026-03-18T12:15:00Z",
+                commit_sha="test-commit",
+                download_repo="lainoa-software/voiceatc-simulator-community",
+                root=root,
+            )
+
+            release_manifest = bundle["manifests"]["release"]
+            self.assertEqual("daily-2026-03-18-b", release_manifest["release_tag"])
+            self.assertEqual("Daily Community Cache - Wednesday 2026-03-18 b", release_manifest["release_title"])
 
 
 if __name__ == "__main__":

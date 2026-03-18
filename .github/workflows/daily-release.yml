@@ -30,19 +30,73 @@ jobs:
         run: python tools/runway_configs_manifest.py --validate-only
       - name: Compute release metadata
         id: meta
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
         shell: bash
         run: |
           set -euo pipefail
-          TAG="daily-$(date -u +%F)"
-          TITLE_DATE="$(date -u +%F)"
+          RELEASE_DATE="$(date -u +%F)"
+          BASE_TAG="daily-${RELEASE_DATE}"
           WEEKDAY="$(date -u +%A)"
-          TITLE="Daily Community Release - ${WEEKDAY} ${TITLE_DATE}"
+          BASE_TITLE="Daily Community Cache - ${WEEKDAY} ${RELEASE_DATE}"
           PUBLISHED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           SOURCE_SHA="$(git rev-parse HEAD)"
           mkdir -p build/release
+          export BASE_TAG BASE_TITLE
+          mapfile -t RELEASE_IDENTITY < <(python - <<'PY'
+          import json
+          import os
+          import subprocess
+
+          def suffix_for(index: int) -> str:
+              letters = "abcdefghijklmnopqrstuvwxyz"
+              value = index + 1
+              suffix = ""
+              while value > 0:
+                  value, remainder = divmod(value - 1, 26)
+                  suffix = letters[remainder] + suffix
+              return suffix
+
+          base_tag = os.environ["BASE_TAG"].strip()
+          base_title = os.environ["BASE_TITLE"].strip()
+          is_manual = os.environ.get("GITHUB_EVENT_NAME", "").strip() == "workflow_dispatch"
+          tag = base_tag
+          title = base_title
+
+          if is_manual:
+              releases = json.loads(
+                  subprocess.check_output(
+                      ["gh", "release", "list", "--limit", "200", "--json", "tagName,name"],
+                      text=True,
+                  )
+              )
+              existing_tags = {str(item.get("tagName", "")).strip() for item in releases}
+              existing_titles = {str(item.get("name", "")).strip() for item in releases}
+              if tag in existing_tags or title in existing_titles:
+                  candidate_index = 1
+                  while True:
+                      suffix = suffix_for(candidate_index)
+                      candidate_tag = f"{base_tag}-{suffix}"
+                      candidate_title = f"{base_title} {suffix}"
+                      if candidate_tag not in existing_tags and candidate_title not in existing_titles:
+                          tag = candidate_tag
+                          title = candidate_title
+                          break
+                      candidate_index += 1
+
+          print(tag)
+          print(title)
+          print("true" if is_manual else "false")
+          PY
+          )
+          TAG="${RELEASE_IDENTITY[0]}"
+          TITLE="${RELEASE_IDENTITY[1]}"
+          IS_MANUAL="${RELEASE_IDENTITY[2]}"
+          export IS_MANUAL
           python tools/community_release_manifest.py \
             --output-dir build/release \
             --release-tag "${TAG}" \
+            --release-title "${TITLE}" \
             --published-at "${PUBLISHED_AT}" \
             --commit-sha "${SOURCE_SHA}" \
             --download-repo "${GITHUB_REPOSITORY}" > build/release/summary.json
@@ -69,9 +123,11 @@ jobs:
               and previous_hash(".voiceatc/mva_manifest.json") == str(assets["mva_zip"]["sha256"]).strip()
               and previous_hash(".voiceatc/runway_configs_manifest.json") == str(assets["runway_configs_zip"]["sha256"]).strip()
           )
+          should_publish = changed or os.environ.get("IS_MANUAL", "").strip() == "true"
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
               handle.write(f"changed={'true' if changed else 'false'}\n")
+              handle.write(f"should_publish={'true' if should_publish else 'false'}\n")
               handle.write(f"airac={summary['airac']}\n")
               handle.write(f"routes_asset_name={assets['routes_tsv']['asset_name']}\n")
               handle.write(f"mva_asset_name={assets['mva_zip']['asset_name']}\n")
@@ -87,10 +143,10 @@ jobs:
           echo "published_at=${PUBLISHED_AT}" >> "$GITHUB_OUTPUT"
           echo "source_sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"
       - name: Stop when nothing changed
-        if: steps.meta.outputs.changed != 'true'
+        if: steps.meta.outputs.should_publish != 'true'
         run: echo "No release-managed community artifacts changed."
       - name: Create or update daily release
-        if: steps.meta.outputs.changed == 'true'
+        if: steps.meta.outputs.should_publish == 'true'
         shell: bash
         run: |
           set -euo pipefail

@@ -16,6 +16,7 @@ ROUTES_MANIFEST_PATH = ROOT / ".voiceatc" / "routes_manifest.json"
 RELEASE_MANIFEST_PATH = ROOT / ".voiceatc" / "release_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 SCHEMA_VERSION = 1
+RELEASE_TITLE_PREFIX = "Daily Community Cache"
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
@@ -104,20 +105,49 @@ def build_routes_manifest(
     }
 
 
-def build_release_manifest(routes_manifest: dict[str, object], published_at: str) -> dict[str, object]:
+def _build_release_title(release_tag: str) -> str:
+    normalized_tag = release_tag.strip()
+    if not normalized_tag.startswith("daily-"):
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+
+    tag_body = normalized_tag.removeprefix("daily-")
+    if len(tag_body) < 10:
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+
+    date_text = tag_body[:10]
+    suffix = ""
+    if len(tag_body) > 10:
+        if tag_body[10] != "-":
+            raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}")
+        suffix = tag_body[11:].strip()
+        if not suffix or not suffix.isalpha() or suffix.lower() != suffix:
+            raise ValueError(f"release_tag suffix must be lowercase letters: {release_tag}")
+
+    try:
+        title_date = datetime.strptime(date_text, "%Y-%m-%d")
+    except ValueError as exc:
+        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD[-suffix]': {release_tag}") from exc
+
+    title = f"{RELEASE_TITLE_PREFIX} - {title_date.strftime('%A')} {date_text}"
+    if suffix:
+        title = f"{title} {suffix}"
+    return title
+
+
+def build_release_manifest(
+    routes_manifest: dict[str, object],
+    published_at: str,
+    release_title: str | None = None,
+) -> dict[str, object]:
     release_tag = str(routes_manifest.get("release_tag", "")).strip()
     published = published_at.strip()
-    try:
-        title_date = datetime.strptime(release_tag.removeprefix("daily-"), "%Y-%m-%d")
-        weekday = title_date.strftime("%A")
-    except ValueError as exc:
-        raise ValueError(f"release_tag must match 'daily-YYYY-MM-DD': {release_tag}") from exc
+    resolved_release_title = release_title.strip() if release_title and release_title.strip() else _build_release_title(release_tag)
 
     return {
         "schema_version": SCHEMA_VERSION,
         "repo": REPO_NAME,
         "release_tag": release_tag,
-        "release_title": f"Daily Community Release - {weekday} {release_tag.removeprefix('daily-')}",
+        "release_title": resolved_release_title,
         "commit_sha": str(routes_manifest.get("commit_sha", "")).strip(),
         "published_at": published,
         "assets": {
@@ -140,6 +170,7 @@ def main() -> int:
     parser.add_argument("--write", action="store_true", help="Write .voiceatc/routes_manifest.json and .voiceatc/release_manifest.json")
     parser.add_argument("--validate-only", action="store_true", help="Validate ROUTES/routes.tsv without writing manifests")
     parser.add_argument("--release-tag", default="", help="Release tag, for example daily-2026-03-15")
+    parser.add_argument("--release-title", default="", help="Release title, for example Daily Community Cache - Saturday 2026-03-15")
     parser.add_argument("--asset-name", default="", help="Release asset name, for example routes-2602.tsv")
     parser.add_argument("--download-url", default="", help="Full release asset download URL")
     parser.add_argument("--published-at", default=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
@@ -160,7 +191,11 @@ def main() -> int:
             published_at=args.published_at,
             commit_sha=commit_sha,
         )
-        release_manifest = build_release_manifest(routes_manifest, args.published_at)
+        release_manifest = build_release_manifest(
+            routes_manifest,
+            args.published_at,
+            release_title=args.release_title.strip() or None,
+        )
     except Exception as exc:
         print(str(exc), file=sys.stderr)
         return 1
