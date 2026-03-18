@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["SOUTH", "NORTH"],
+      "sectors": [
+        {
+          "sector_id": "LEMGALL",
+          "frequency": "118.455"
+        }
+      ]
+    }
+  ]
+}

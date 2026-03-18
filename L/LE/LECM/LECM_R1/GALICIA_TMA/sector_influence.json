@@ -1,0 +1,8 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "LECGTMA",
+      "airports": ["LEST", "LECO", "LEVX"]
+    }
+  ]
+}

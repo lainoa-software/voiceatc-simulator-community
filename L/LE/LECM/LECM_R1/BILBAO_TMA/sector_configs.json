@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["WEST", "EAST"],
+      "sectors": [
+        {
+          "sector_id": "LEBBTMA",
+          "frequency": "127.450"
+        }
+      ]
+    }
+  ]
+}

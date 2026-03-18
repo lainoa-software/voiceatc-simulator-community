@@ -1,0 +1,12 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "LECLALV",
+      "airports": ["LEVC", "LEAL"]
+    },
+    {
+      "sector_id": "LECLVAP",
+      "airports": ["LEVC"]
+    }
+  ]
+}

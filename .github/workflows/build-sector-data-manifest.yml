@@ -1,0 +1,29 @@
+name: Validate Sector Data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/sector_configs.json"
+      - "**/sector_definitions.json"
+      - "**/sector_influence.json"
+      - "tools/sector_data_manifest.py"
+      - "tests/test_sector_data_manifest.py"
+      - ".github/workflows/build-sector-data-manifest.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Validate sector data files
+        run: python tools/sector_data_manifest.py --validate-only

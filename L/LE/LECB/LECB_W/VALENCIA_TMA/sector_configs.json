@@ -1,0 +1,22 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "sectors": [
+        {
+          "sector_id": "LECLALV",
+          "frequency": "120.100"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "3W",
+      "sectors": [
+        {
+          "sector_id": "LECLVAP",
+          "frequency": "120.100"
+        }
+      ]
+    }
+  ]
+}

@@ -77,6 +77,79 @@ def build_fixture_repo(root: Path) -> None:
         },
     )
 
+    write_json(
+        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "sector_configs.json",
+        {
+            "sector_configs": [
+                {
+                    "sector_config_id": "MADRID_CORE",
+                    "runway_configs": ["NORTH"],
+                    "sectors": [{"sector_id": "LEMDAAA", "frequency": "119.100"}],
+                }
+            ]
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "sector_definitions.json",
+        {
+            "sector_definitions": [
+                {
+                    "sector_id": "LEMDAAA",
+                    "lower_limit": 0,
+                    "higher_limit": 24500,
+                    "polygon": [[40.0, -3.8], [40.1, -3.7], [40.2, -3.8]],
+                }
+            ]
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "sector_influence.json",
+        {
+            "sector_influences": [
+                {
+                    "sector_id": "LEMDAAA",
+                    "airports": ["LEMD"],
+                }
+            ]
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "sector_configs.json",
+        {
+            "sector_configs": [
+                {
+                    "sector_config_id": "BARCELONA_CORE",
+                    "runway_configs": ["WEST"],
+                    "sectors": [{"sector_id": "LEBLAAA", "frequency": "131.125"}],
+                }
+            ]
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "sector_definitions.json",
+        {
+            "sector_definitions": [
+                {
+                    "sector_id": "LEBLAAA",
+                    "lower_limit": 0,
+                    "higher_limit": 24500,
+                    "polygon": [[41.2, 2.0], [41.3, 2.1], [41.4, 2.0]],
+                }
+            ]
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "sector_influence.json",
+        {
+            "sector_influences": [
+                {
+                    "sector_id": "LEBLAAA",
+                    "airports": ["LEBL"],
+                }
+            ]
+        },
+    )
+
 
 class CommunityReleaseManifestTests(unittest.TestCase):
     def test_build_release_bundle_creates_expected_assets_and_manifests(self) -> None:
@@ -98,6 +171,7 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertEqual("routes-2602.tsv", bundle["assets"]["routes_tsv"]["asset_name"])
             self.assertEqual("mva-2602.zip", bundle["assets"]["mva_zip"]["asset_name"])
             self.assertEqual("runway-configs-2602.zip", bundle["assets"]["runway_configs_zip"]["asset_name"])
+            self.assertEqual("sector-data-2602.zip", bundle["assets"]["sector_data_zip"]["asset_name"])
             self.assertEqual("release-manifest.json", bundle["assets"]["release_manifest"]["asset_name"])
 
             release_manifest = bundle["manifests"]["release"]
@@ -106,6 +180,7 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertEqual("Daily Community Release - Wednesday 2026-03-18", release_manifest["release_title"])
             self.assertIn("mva_zip", release_manifest["assets"])
             self.assertIn("runway_configs_zip", release_manifest["assets"])
+            self.assertIn("sector_data_zip", release_manifest["assets"])
 
             mva_manifest = bundle["manifests"]["mva"]
             self.assertEqual(2, mva_manifest["schema_version"])
@@ -116,6 +191,11 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertEqual(2, runway_manifest["schema_version"])
             self.assertEqual("runway-configs-2602.zip", runway_manifest["asset_name"])
             self.assertEqual(2, runway_manifest["airport_count"])
+
+            sector_manifest = bundle["manifests"]["sector_data"]
+            self.assertEqual(2, sector_manifest["schema_version"])
+            self.assertEqual("sector-data-2602.zip", sector_manifest["asset_name"])
+            self.assertEqual(2, sector_manifest["bundle_count"])
 
     def test_zip_assets_are_deterministic_and_preserve_repo_paths(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -144,6 +224,10 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                 first["assets"]["runway_configs_zip"]["sha256"],
                 second["assets"]["runway_configs_zip"]["sha256"],
             )
+            self.assertEqual(
+                first["assets"]["sector_data_zip"]["sha256"],
+                second["assets"]["sector_data_zip"]["sha256"],
+            )
 
             with zipfile.ZipFile(first["assets"]["mva_zip"]["path"], "r") as archive:
                 self.assertEqual(
@@ -159,6 +243,19 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                     [
                         "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/runway_configs.json",
                         "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/runway_configs.json",
+                    ],
+                    archive.namelist(),
+                )
+
+            with zipfile.ZipFile(first["assets"]["sector_data_zip"]["path"], "r") as archive:
+                self.assertEqual(
+                    [
+                        "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_configs.json",
+                        "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
+                        "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
+                        "L/LE/LECM/LECM_R2/MADRID_TMA/sector_configs.json",
+                        "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
+                        "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
                     ],
                     archive.namelist(),
                 )

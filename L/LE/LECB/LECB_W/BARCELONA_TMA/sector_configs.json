@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "2CO",
+      "runway_configs": ["WRL", "ELR", "ENR", "WLL"],
+      "sectors": [
+        {
+          "sector_id": "LEBLCORE",
+          "frequency": "131.125"
+        }
+      ]
+    }
+  ]
+}

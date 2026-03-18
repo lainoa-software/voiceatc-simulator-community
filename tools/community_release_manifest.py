@@ -19,6 +19,7 @@ if str(TOOLS_DIR) not in sys.path:
 import mva_manifest
 import routes_release_manifest
 import runway_configs_manifest
+import sector_data_manifest
 
 
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
@@ -166,10 +167,39 @@ def build_runway_release_manifest(
     }
 
 
+def build_sector_data_release_manifest(
+    *,
+    release_tag: str,
+    asset_name: str,
+    download_url: str,
+    published_at: str,
+    commit_sha: str,
+    asset_sha256: str,
+    asset_size_bytes: int,
+    root: Path = ROOT,
+) -> dict[str, object]:
+    base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
+    bundles = base_manifest["bundles"]
+    return {
+        "schema_version": DATASET_MANIFEST_SCHEMA_VERSION,
+        "repo": REPO_NAME,
+        "release_tag": release_tag.strip(),
+        "commit_sha": commit_sha.strip(),
+        "asset_name": asset_name.strip(),
+        "download_url": download_url.strip(),
+        "sha256": asset_sha256.strip(),
+        "size_bytes": int(asset_size_bytes),
+        "bundle_count": len(bundles),
+        "published_at": published_at.strip(),
+        "bundles": bundles,
+    }
+
+
 def build_release_manifest(
     routes_manifest: dict[str, object],
     mva_release_manifest: dict[str, object],
     runway_release_manifest: dict[str, object],
+    sector_data_release_manifest: dict[str, object],
     published_at: str,
     release_title: str | None = None,
 ) -> dict[str, object]:
@@ -212,6 +242,15 @@ def build_release_manifest(
                 "content_type": "application/zip",
                 "preserves_repo_paths": True,
             },
+            "sector_data_zip": {
+                "asset_name": str(sector_data_release_manifest.get("asset_name", "")).strip(),
+                "download_url": str(sector_data_release_manifest.get("download_url", "")).strip(),
+                "sha256": str(sector_data_release_manifest.get("sha256", "")).strip(),
+                "size_bytes": int(sector_data_release_manifest.get("size_bytes", 0)),
+                "bundle_count": int(sector_data_release_manifest.get("bundle_count", 0)),
+                "content_type": "application/zip",
+                "preserves_repo_paths": True,
+            },
         },
     }
 
@@ -235,6 +274,7 @@ def build_release_bundle(
     routes_asset_name = f"routes-{airac}.tsv"
     mva_asset_name = f"mva-{airac}.zip"
     runway_asset_name = f"runway-configs-{airac}.zip"
+    sector_data_asset_name = f"sector-data-{airac}.zip"
 
     routes_source_path = root / "ROUTES" / "routes.tsv"
     routes_asset_path = output_dir / routes_asset_name
@@ -242,12 +282,19 @@ def build_release_bundle(
 
     mva_base_manifest = mva_manifest.build_manifest(root, commit_sha=commit_sha)
     runway_base_manifest = runway_configs_manifest.build_manifest(root, commit_sha=commit_sha)
+    sector_data_base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
 
     mva_repo_paths = [str(entry["repo_path"]) for entry in mva_base_manifest["airports"].values()]
     runway_repo_paths = [str(entry["repo_path"]) for entry in runway_base_manifest["airports"].values()]
+    sector_data_repo_paths = [
+        str(file_entry["repo_path"])
+        for bundle in sector_data_base_manifest["bundles"].values()
+        for file_entry in bundle["files"].values()
+    ]
 
     mva_asset = build_deterministic_zip(root, mva_repo_paths, output_dir / mva_asset_name)
     runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
+    sector_data_asset = build_deterministic_zip(root, sector_data_repo_paths, output_dir / sector_data_asset_name)
 
     routes_manifest = routes_release_manifest.build_routes_manifest(
         release_tag=release_tag,
@@ -277,10 +324,21 @@ def build_release_bundle(
         asset_size_bytes=int(runway_asset["size_bytes"]),
         root=root,
     )
+    sector_data_release_manifest = build_sector_data_release_manifest(
+        release_tag=release_tag,
+        asset_name=sector_data_asset_name,
+        download_url=_download_url(download_repo, release_tag, sector_data_asset_name),
+        published_at=published_at,
+        commit_sha=commit_sha,
+        asset_sha256=str(sector_data_asset["sha256"]),
+        asset_size_bytes=int(sector_data_asset["size_bytes"]),
+        root=root,
+    )
     release_manifest = build_release_manifest(
         routes_manifest,
         mva_release_manifest,
         runway_release_manifest,
+        sector_data_release_manifest,
         published_at,
         release_title=release_title,
     )
@@ -292,6 +350,7 @@ def build_release_bundle(
         _write_json(routes_release_manifest.ROUTES_MANIFEST_PATH, routes_manifest)
         _write_json(mva_manifest.MANIFEST_PATH, mva_release_manifest)
         _write_json(runway_configs_manifest.MANIFEST_PATH, runway_release_manifest)
+        _write_json(sector_data_manifest.MANIFEST_PATH, sector_data_release_manifest)
         _write_json(RELEASE_MANIFEST_PATH, release_manifest)
 
     return {
@@ -305,6 +364,7 @@ def build_release_bundle(
             },
             "mva_zip": mva_asset,
             "runway_configs_zip": runway_asset,
+            "sector_data_zip": sector_data_asset,
             "release_manifest": {
                 "asset_name": RELEASE_MANIFEST_ASSET_NAME,
                 "path": str(release_manifest_asset_path),
@@ -316,6 +376,7 @@ def build_release_bundle(
             "routes": routes_manifest,
             "mva": mva_release_manifest,
             "runway_configs": runway_release_manifest,
+            "sector_data": sector_data_release_manifest,
             "release": release_manifest,
         },
     }

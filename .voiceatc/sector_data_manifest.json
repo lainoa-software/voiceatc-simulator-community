@@ -1,0 +1,185 @@
+{
+  "asset_name": "sector-data-2602.zip",
+  "bundle_count": 9,
+  "bundles": {
+    "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/sector_configs.json",
+          "sha256": "2f51c8ec2fc87bf3d372b2c7f4b3c79ab4defb85f2246f05ecab20a1d6f56c51",
+          "size_bytes": 364
+        },
+        "definitions": {
+          "repo_path": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/sector_definitions.json",
+          "sha256": "63601810ef07f2c6a3e36ffe5519dc1abfba4b96dc95fe22da70b99c48ab256e",
+          "size_bytes": 17503
+        },
+        "influence": {
+          "repo_path": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/sector_influence.json",
+          "sha256": "5bc1fadde9a7dbfb58f260aee99914363d02649df7f27a22539cc97cd3e8e610",
+          "size_bytes": 353
+        }
+      }
+    },
+    "L/LE/LECB/LECB_E/PALMA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_configs.json",
+          "sha256": "52a224acaa0932158bc26725158d2482df1039fc75c5d35fa6f2beda274a010e",
+          "size_bytes": 275
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_definitions.json",
+          "sha256": "c346db7dabac2e9dc11948aed0faf91525ac73893bed9542ab3b532d002efda4",
+          "size_bytes": 11914
+        },
+        "influence": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_influence.json",
+          "sha256": "01c54cbec3a4785eed0bd3f1207c234465dacdd4146fe3d2c85ceb1d900e6c98",
+          "size_bytes": 203
+        }
+      }
+    },
+    "L/LE/LECB/LECB_W/BARCELONA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_configs.json",
+          "sha256": "26466e9f2ef476b8feab367a7ad34be1be74b7aa4622075c010c991369878319",
+          "size_bytes": 283
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
+          "sha256": "df8e841d6e4c3be85dbf68077266f0a266500aa506211747ff39723702d1d846",
+          "size_bytes": 34292
+        },
+        "influence": {
+          "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
+          "sha256": "6fa0bf2c4dcedd228286c653f3ab3a2b79236e7b385b52f44581dff4cbb7607d",
+          "size_bytes": 198
+        }
+      }
+    },
+    "L/LE/LECB/LECB_W/VALENCIA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_configs.json",
+          "sha256": "4953e41672dd35f07969a1a59eeb5e78aa97ab47ed1f3e7f6ab9143c330a6765",
+          "size_bytes": 345
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_definitions.json",
+          "sha256": "19257afea91707852b894f22d1d8ce3a7b5c0ced41dc3b986e6ddecb08ac0304",
+          "size_bytes": 19104
+        },
+        "influence": {
+          "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_influence.json",
+          "sha256": "af237a0df89255bdc9c4c6e74f78d32495758c7e2c21c0c8f9581e7e527b8549",
+          "size_bytes": 219
+        }
+      }
+    },
+    "L/LE/LECM/LECM_R1/BILBAO_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/sector_configs.json",
+          "sha256": "8a25f5f8790c65d65b945f978e7bc0cae1080f6a23f2e9d465d61a3c81f06696",
+          "size_bytes": 252
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/sector_definitions.json",
+          "sha256": "7d5472f7b9be8dd1fe47267b47585900fcb66162c107431242c1b897effc2c5a",
+          "size_bytes": 1325
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/sector_influence.json",
+          "sha256": "242d7716a429ead3c19d6f51c3fbc2e181eda8ad638243d684ed483acbb37268",
+          "size_bytes": 117
+        }
+      }
+    },
+    "L/LE/LECM/LECM_R1/GALICIA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/sector_configs.json",
+          "sha256": "d0089310bab90ce54d8796f5c42655f3bbd28d50d9b4bc27564b28c364cd8d88",
+          "size_bytes": 186
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/sector_definitions.json",
+          "sha256": "0f421d3a1cf8ced0fef93d2bb47ea09f9a55c060b0c129a741058170333159be",
+          "size_bytes": 52958
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/sector_influence.json",
+          "sha256": "675d679ba680720b2c17205ff6d330482a492627d2b7ec6340e421453649da03",
+          "size_bytes": 149
+        }
+      }
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_configs.json",
+          "sha256": "d29a5c041bfb5d34b456beb8de7b8618944d56ece789f296f66f93db4948dd08",
+          "size_bytes": 254
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
+          "sha256": "e41026676aad917a0dd2e938157e46494cd469ad6aa7b9716ebea718637b1745",
+          "size_bytes": 5083
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
+          "sha256": "d4b1669d8e38d371b019bc8f4d2d8c4a57077167aff63c5ed9e504c55c3c779b",
+          "size_bytes": 165
+        }
+      }
+    },
+    "L/LE/LECM/LECS/MALAGA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/sector_configs.json",
+          "sha256": "22ad95b6662eafd30805b60b44c981906c0ccad50c6f711b33290a4f219910fa",
+          "size_bytes": 254
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/sector_definitions.json",
+          "sha256": "9d40bf3ec15f03f826893bb63f0cca749bd7e74b753edfd2c49e26d1f2b6c741",
+          "size_bytes": 9105
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/sector_influence.json",
+          "sha256": "8c8baf91d1a232240c4d00b11d23dc1c33cd51bd5839c3d34ee9e3b9fbc1d169",
+          "size_bytes": 117
+        }
+      }
+    },
+    "L/LE/LECM/LECS/SEVILLA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_configs.json",
+          "sha256": "8cef1bc40e96bda89df1e558e0e1365989f27045a8d7818af5c811805c36c9a5",
+          "size_bytes": 186
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_definitions.json",
+          "sha256": "4c398067390ef235211e59e262de08fda2660f0b953ba6f9d9a13ff9212bf829",
+          "size_bytes": 16385
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_influence.json",
+          "sha256": "5ee70dddfe47f1ffe2d0bb8c2fd1bc57e52dbbd5b7939a0eff9d671561820fd9",
+          "size_bytes": 133
+        }
+      }
+    }
+  },
+  "commit_sha": "f820eb9359b99b68f987bfabea3ae898a21e9f8f",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-03-18/sector-data-2602.zip",
+  "published_at": "2026-03-18T12:15:07Z",
+  "release_tag": "daily-2026-03-18",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "schema_version": 2,
+  "sha256": "c76d014c80afb426a23614b4b6156c5ac4d7743081046d4acc7631ec1917959c",
+  "size_bytes": 25543
+}

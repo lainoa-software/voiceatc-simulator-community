@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "GCCCINB",
+      "airports": ["GCHI", "GCLA", "GCXO", "GCTS"]
+    },
+    {
+      "sector_id": "GCCCIGC",
+      "airports": ["GCLP"]
+    },
+    {
+      "sector_id": "GCCCAAC",
+      "airports": ["GCRR", "GCFV"]
+    }
+  ]
+}
