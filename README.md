@@ -4,6 +4,9 @@ The Github to manage custom airports and sectors for VoiceATC Simulator.
 ## Contributing
 To contribute, fork this repository, commit your changes there and then create a pull request onto the main repository. Read the wiki pages on this repository to gain knowledge on how to create or modify the airport of your liking.
 
+## Pull Requests
+In order to keep the reposititory organized, name all pull requests `[FIR/Airport] Updated/Fixed/Added...` - for example `[ESSA] Updated MVAs`. There are automatic checks that will be preformed when you create a pull request, and after those the files will be inspected by a maintainer before being merged. If any errors are spotted, we will ask you to update the pull request before we can merge it.
+
 ## Bugs, Suggestions & Feedback
 Open Github issues regarding the issue, suggestion or feedback. Remember to explain it thoroughly so someone can help you.
 
