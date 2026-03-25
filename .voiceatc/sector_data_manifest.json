@@ -1,5 +1,5 @@
 {
-  "asset_name": "sector-data-2602.zip",
+  "asset_name": "sector-data-2603.zip",
   "bundle_count": 9,
   "bundles": {
     "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA": {
@@ -174,10 +174,10 @@
       }
     }
   },
-  "commit_sha": "a80647081e56159eff5ba17a489ffa2d031afb31",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-03-18-g/sector-data-2602.zip",
-  "published_at": "2026-03-18T20:12:36Z",
-  "release_tag": "daily-2026-03-18-g",
+  "commit_sha": "cc50cc1ca8149a6117b80b8ea9a3a19a98b73fcb",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-03-25-b/sector-data-2603.zip",
+  "published_at": "2026-03-25T08:53:53Z",
+  "release_tag": "daily-2026-03-25-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
   "sha256": "7e14dcf3fd7826254e4a6c216b7a81d6383586317b71fa7aa0dc002272ecc321",
