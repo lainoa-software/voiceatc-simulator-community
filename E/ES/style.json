@@ -1,11 +1,11 @@
 {
-	"defined_symbols": {
-		"rps": "1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111"
-	},
-	"forecast_symbol": "rps",
-	"incoming_symbol": "rps",
-	"assumed_symbol": "rps",
-	"of_interest_symbol": "rps",
-	"unrelated_symbol": "rps",
-	"past_symbol": "rps"
+  "defined_symbols": {
+    "rps": "1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111;1111111111111"
+  },
+  "forecast_symbol": "rps",
+  "incoming_symbol": "rps",
+  "assumed_symbol": "rps",
+  "of_interest_symbol": "rps",
+  "unrelated_symbol": "rps",
+  "past_symbol": "rps"
 }
