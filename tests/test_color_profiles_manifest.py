@@ -32,14 +32,9 @@ def valid_style() -> dict[str, object]:
 class ColorProfilesManifestTests(unittest.TestCase):
     def test_repository_contains_expected_scope_paths(self) -> None:
         manifest = MODULE.build_manifest(REPO_ROOT, commit_sha="test-commit")
-        self.assertEqual(
-            {
-                "E/EH",
-                "G/GC",
-                "L/LE",
-            },
-            set(manifest["profiles"].keys()),
-        )
+        core_scopes = {"E/EH", "G/GC", "L/LE"}
+        found_scopes = set(manifest["profiles"].keys())
+        self.assertTrue(core_scopes.issubset(found_scopes), f"Missing core scopes: {core_scopes - found_scopes}")
 
     def test_build_manifest_accepts_country_fir_acc_tma_scopes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

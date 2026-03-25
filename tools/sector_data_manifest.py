@@ -146,11 +146,13 @@ def validate_sector_configs_file(path: Path, root: Path = ROOT) -> dict[str, obj
             raise ValueError(f"{path}: sector_config '{config_id}' must define at least one sector")
         for sector_index, sector in enumerate(sectors):
             if isinstance(sector, dict):
-                ensure_text_field(
-                    sector.get("sector_ids", sector.get("sector_id", sector.get("sector", sector.get("id", sector.get("SECTOR_ID", ""))))),
-                    "sector_id",
-                    path,
-                )
+                sector_id_raw = sector.get("sector_ids", sector.get("sector_id", sector.get("sector", sector.get("id", sector.get("SECTOR_ID", "")))))
+                if isinstance(sector_id_raw, list):
+                    for item in sector_id_raw:
+                        if not isinstance(item, str):
+                            raise ValueError(f"{path}: sector_config '{config_id}' sector {sector_index} sector_id entries must be strings")
+                else:
+                    ensure_text_field(sector_id_raw, "sector_id", path)
                 frequency = sector.get("frequency", None)
                 if frequency is not None and not isinstance(frequency, str):
                     raise ValueError(f"{path}: sector_config '{config_id}' frequency must be a string")

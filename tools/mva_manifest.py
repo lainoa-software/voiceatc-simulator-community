@@ -24,7 +24,6 @@ def mva_files(root: Path = ROOT) -> list[Path]:
         if ".git" not in path.parts and ".voiceatc" not in path.parts
     )
 
-
 def ensure_text_field(value: object, label: str, path: Path) -> str:
     if not isinstance(value, str):
         raise ValueError(f"{path}: '{label}' must be a string")
@@ -44,6 +43,21 @@ def ensure_point(value: object, label: str, path: Path) -> list[float]:
     return [float(lat), float(lon)]
 
 
+def _normalize_airports(value: object, label: str, path: Path) -> list[str]:
+    tokens = [value] if isinstance(value, str) else value
+    if not isinstance(tokens, list):
+        raise ValueError(f"{path}: '{label}' must be a string or array")
+
+    airports: list[str] = []
+    for token in tokens:
+        airport = ensure_text_field(token, label, path).upper()
+        if airport not in airports:
+            airports.append(airport)
+    if not airports:
+        raise ValueError(f"{path}: '{label}' must list at least one airport")
+    return airports
+
+
 def validate_mva_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     raw_bytes = path.read_bytes()
     try:
@@ -54,7 +68,7 @@ def validate_mva_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: mva file must be a JSON object")
 
-    airport = ensure_text_field(payload.get("airport"), "airport", path).upper()
+    airports = _normalize_airports(payload.get("airport", payload.get("airports")), "airport", path)
 
     areas = payload.get("mva_areas")
     if not isinstance(areas, list) or not areas:
@@ -92,7 +106,8 @@ def validate_mva_file(path: Path, root: Path = ROOT) -> dict[str, object]:
             ensure_point(label.get("position"), "position", path)
 
     return {
-        "airport": airport,
+        "airport": airports[0],
+        "airports": airports,
         "repo_path": path.relative_to(root).as_posix(),
         "sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "size_bytes": len(raw_bytes),
@@ -111,14 +126,14 @@ def build_manifest(root: Path = ROOT, commit_sha: str | None = None) -> dict[str
     airports: dict[str, dict[str, object]] = {}
     for path in mva_files(root):
         entry = validate_mva_file(path, root)
-        airport = str(entry["airport"])
-        if airport in airports:
-            raise ValueError(f"duplicate airport '{airport}' across mva files")
-        airports[airport] = {
-            "repo_path": entry["repo_path"],
-            "sha256": entry["sha256"],
-            "size_bytes": entry["size_bytes"],
-        }
+        for airport in entry["airports"]:
+            if airport in airports:
+                raise ValueError(f"duplicate airport '{airport}' across mva files")
+            airports[airport] = {
+                "repo_path": entry["repo_path"],
+                "sha256": entry["sha256"],
+                "size_bytes": entry["size_bytes"],
+            }
 
     return {
         "schema_version": SCHEMA_VERSION,

@@ -142,8 +142,14 @@ def _validate_labels(value: object, dataset_label: str, path: Path) -> None:
 def _validate_dataset(dataset: object, dataset_label: str, path: Path) -> None:
     if not isinstance(dataset, dict):
         raise ValueError(f"{path}: '{dataset_label}' must be an object")
-    if "runway_config" in dataset and not isinstance(dataset["runway_config"], str):
-        raise ValueError(f"{path}: '{dataset_label}.runway_config' must be a string")
+    if "runway_config" in dataset:
+        runway_config = dataset["runway_config"]
+        if isinstance(runway_config, list):
+            for item in runway_config:
+                if not isinstance(item, str):
+                    raise ValueError(f"{path}: '{dataset_label}.runway_config' entries must be strings")
+        elif not isinstance(runway_config, str):
+            raise ValueError(f"{path}: '{dataset_label}.runway_config' must be a string or array")
 
     has_supported_section = False
     if "line_sections" in dataset:
