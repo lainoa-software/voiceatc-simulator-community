@@ -1,0 +1,17 @@
+{
+  "airport": "ENGM",
+  "runway_configs": [
+    {
+      "id": "01 Dual",
+      "name": "01 Dual Parallel",
+      "arr": "01R 01L",
+      "dep": "01R 01L"
+    },
+    {
+      "id": "19 Dual",
+      "name": "19 Dual Parallel",
+      "arr": "19R 19L",
+      "dep": "19R 19L"
+    }
+  ]
+}

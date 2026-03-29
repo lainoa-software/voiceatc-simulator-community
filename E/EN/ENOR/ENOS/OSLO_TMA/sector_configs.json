@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["01 Dual", "19 Dual"],
+      "sectors": [
+        {
+          "sector_ids": "APP-W",
+          "frequency": "120.455"
+        }
+      ]
+    }
+  ]
+}
