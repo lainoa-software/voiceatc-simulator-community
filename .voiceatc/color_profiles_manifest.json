@@ -1,7 +1,7 @@
 {
   "asset_name": "color-profiles-2603.zip",
-  "commit_sha": "6a632dc93348d17497e63a46e4dfa678e7d9817c",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-03-30/color-profiles-2603.zip",
+  "commit_sha": "55cfffb3d6385f274dd20d6cb113d9ccd2da4535",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-08/color-profiles-2603.zip",
   "profile_count": 5,
   "profiles": {
     "E/EH": {
@@ -41,8 +41,8 @@
         },
         "style": {
           "repo_path": "E/ES/style.json",
-          "sha256": "b2f9ef89c50a4a9eb6cc5297dd56cf8986b3f1980710029f5e1952d01592becb",
-          "size_bytes": 393
+          "sha256": "f56ef1b3d3e0e58dda57e30ccd063f9d98458776e5ce08d7925fdaf9ae244434",
+          "size_bytes": 1862
         }
       }
     },
@@ -55,8 +55,8 @@
         },
         "style": {
           "repo_path": "G/GC/style.json",
-          "sha256": "304976b42b74e8b5ac86ecd42d9ae217f5df51f4f4073176530db7cecf3a406c",
-          "size_bytes": 1078
+          "sha256": "2c7076f0771150ae933d0c9651d090f2424f0e85da7a624485c09357ce3c87db",
+          "size_bytes": 1869
         }
       }
     },
@@ -69,16 +69,16 @@
         },
         "style": {
           "repo_path": "L/LE/style.json",
-          "sha256": "304976b42b74e8b5ac86ecd42d9ae217f5df51f4f4073176530db7cecf3a406c",
-          "size_bytes": 1078
+          "sha256": "2c7076f0771150ae933d0c9651d090f2424f0e85da7a624485c09357ce3c87db",
+          "size_bytes": 1869
         }
       }
     }
   },
-  "published_at": "2026-03-30T04:16:59Z",
-  "release_tag": "daily-2026-03-30",
+  "published_at": "2026-04-08T16:59:03Z",
+  "release_tag": "daily-2026-04-08",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "883e975de43984cd82ac27c3bea3817d53d9500a10d67d6fdb1045c4bf117024",
-  "size_bytes": 3322
+  "sha256": "48ac50d56767660fcb854169bdcc4392fc39a31d0aa3c34519de5ba43f52e2bd",
+  "size_bytes": 3803
 }
