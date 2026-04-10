@@ -4,7 +4,7 @@
     "color_profiles_zip": {
       "asset_name": "color-profiles-2603.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/color-profiles-2603.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/color-profiles-2603.zip",
       "preserves_repo_paths": true,
       "profile_count": 5,
       "sha256": "bf0e1b5c5340e7b0d2f3ae24e64df7ddce9e9fc7908775ff8fafd03b992e1ad1",
@@ -14,7 +14,7 @@
       "airport_count": 8,
       "asset_name": "misc-drawings-2603.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/misc-drawings-2603.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/misc-drawings-2603.zip",
       "preserves_repo_paths": true,
       "sha256": "f54c1051a4173af336996180978912efd3e732ef8b807e238b283814c411fe22",
       "size_bytes": 31550
@@ -23,7 +23,7 @@
       "airport_count": 11,
       "asset_name": "mva-2603.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/mva-2603.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/mva-2603.zip",
       "preserves_repo_paths": true,
       "sha256": "4f55baafad6b542558b7f16b9d454bdd4626ac0f66ffc761d5834124ff6ff72d",
       "size_bytes": 32079
@@ -32,17 +32,17 @@
       "airac": "2603",
       "asset_name": "routes-2603.tsv",
       "content_type": "text/tab-separated-values; charset=utf-8",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/routes-2603.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/routes-2603.tsv",
       "repo_path": "ROUTES/routes.tsv",
       "route_count": 99869,
-      "sha256": "792aa37e46fc962e39d6fa9cf4b3d9407e2cf4e20cb038200d98efb45f399a69",
-      "size_bytes": 8457387
+      "sha256": "d776e3e37152d2aab0311f8d722b32de79e9e17d2058c0bab2824ff0ccaa1bd9",
+      "size_bytes": 9745225
     },
     "runway_configs_zip": {
       "airport_count": 29,
       "asset_name": "runway-configs-2603.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/runway-configs-2603.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/runway-configs-2603.zip",
       "preserves_repo_paths": true,
       "sha256": "326ddcb3101c521a99cb329d7e0f8603a704aff7cfc8d940fc2525c348024022",
       "size_bytes": 9222
@@ -51,16 +51,16 @@
       "asset_name": "sector-data-2603.zip",
       "bundle_count": 12,
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-09/sector-data-2603.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-10/sector-data-2603.zip",
       "preserves_repo_paths": true,
       "sha256": "9df5ec3fc2f5c72feb02b9d1111822d4277dda687e5f5eb43202d085a577f9cf",
       "size_bytes": 28018
     }
   },
-  "commit_sha": "bbeededeb417a78fc316abe0bf51eafb525e95cd",
-  "published_at": "2026-04-09T11:44:03Z",
-  "release_tag": "daily-2026-04-09",
-  "release_title": "Daily Community Release - Thursday 2026-04-09",
+  "commit_sha": "787ccdb66d42fd5f7517181ceb6a9320cc314a1b",
+  "published_at": "2026-04-10T11:24:29Z",
+  "release_tag": "daily-2026-04-10",
+  "release_title": "Daily Community Release - Friday 2026-04-10",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 4
 }
