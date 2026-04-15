@@ -1,0 +1,17 @@
+{
+  "airport": "OMDB",
+  "runway_configs": [
+    {
+      "id": "30",
+      "name": "30s",
+      "arr": "30L",
+      "dep": "30R"
+    },
+    {
+      "id": "12",
+      "name": "12s",
+      "arr": "12L",
+      "dep": "12R"
+    }
+  ]
+}

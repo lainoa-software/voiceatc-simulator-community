@@ -1,0 +1,31 @@
+{
+  "bg_color": "121216",
+
+  "assumed_tfc_color": "18ef38",
+  "incoming_tfc_color": "ebebeb",
+  "selected_tfc_color": "18ef38",
+  "dragging_tfc_color": "18ef38",
+  "alien_tfc_color": "bebebe",
+  "alien_cs_color": "bebebe",
+  "released_tfc_color": "bebebe",
+  "released_cs_color": "bebebe",
+
+  "wake_light_color": "18ef38",
+  "wake_medium_color": "18ef38",
+  "wake_heavy_color": "18ef38",
+  "wake_super_color": "18ef38",
+
+  "geo_color": "747542",
+  "sid_color": "5f5f5f",
+  "star_color": "5f5f5f",
+  "tran_color": "5f5f5f",
+  "fix_color": "5f5f5f",
+  "vor_color": "5f5f5f",
+  "rwy_color": "aaaaaa",
+  "ils_color": "bebebe",
+
+  "qdm_color": "414141",
+  "route_tab_color": "aae7c5",
+  "mrva_color": "121216",
+  "alert_color": "e11919"
+}
