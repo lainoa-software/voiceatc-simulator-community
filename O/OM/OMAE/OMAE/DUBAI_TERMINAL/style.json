@@ -1,6 +1,6 @@
 {
-  "symbol_size": 0.45,
-  "traildot_size": 0.05,
+  "symbol_size": 0.65,
+  "traildot_size": 0.15,
   "symbol_line_width": 1.0,
   "forecast_symbol": "rps",
   "incoming_symbol": "rps",
