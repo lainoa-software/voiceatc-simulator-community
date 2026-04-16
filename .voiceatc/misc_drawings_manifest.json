@@ -1,5 +1,5 @@
 {
-  "airport_count": 8,
+  "airport_count": 11,
   "airports": {
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/misc_drawings.json",
@@ -40,15 +40,30 @@
       "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/misc_drawings.json",
       "sha256": "d9ae59e0995f0140c2a260762e0f28cbcaf7d36760d18ee0c64399c328f30661",
       "size_bytes": 52568
+    },
+    "OMDB": {
+      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
+      "size_bytes": 21643
+    },
+    "OMDW": {
+      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
+      "size_bytes": 21643
+    },
+    "OMSJ": {
+      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
+      "size_bytes": 21643
     }
   },
   "asset_name": "misc-drawings-2603.zip",
-  "commit_sha": "86d1798040838183e565431670facf4ad6e649c2",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-12/misc-drawings-2603.zip",
-  "published_at": "2026-04-12T10:28:21Z",
-  "release_tag": "daily-2026-04-12",
+  "commit_sha": "df47ea788f39b52457d29f397159b6a319384dc9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-15-d/misc-drawings-2603.zip",
+  "published_at": "2026-04-15T18:50:58Z",
+  "release_tag": "daily-2026-04-15-d",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f54c1051a4173af336996180978912efd3e732ef8b807e238b283814c411fe22",
-  "size_bytes": 31550
+  "sha256": "c4e463c4fbbbd96446465d15d513762f3e3a6794310e5a52e13c95512ac3fd52",
+  "size_bytes": 34800
 }

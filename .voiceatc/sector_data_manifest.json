@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2603.zip",
-  "bundle_count": 12,
+  "bundle_count": 13,
   "bundles": {
     "E/EN/ENOR/ENOS/OSLO_TMA": {
       "files": {
@@ -229,14 +229,33 @@
           "size_bytes": 110
         }
       }
+    },
+    "O/OM/OMAE/OMAE/DUBAI_TERMINAL": {
+      "files": {
+        "configs": {
+          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_configs.json",
+          "sha256": "162cc3cd23f3509d602f0dc8368ae4e56e0b2ea72b9190ed7ad01a0c3b9d6c9f",
+          "size_bytes": 226
+        },
+        "definitions": {
+          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_definitions.json",
+          "sha256": "92f6b363e0b947d5f94f9ab631fd7383f2095887e426c2e7445448b8748056ed",
+          "size_bytes": 1384
+        },
+        "influence": {
+          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_influence.json",
+          "sha256": "0acaea477d1bc2b472f648cbc543ee67831f43d014a145d4de6492e6502e1979",
+          "size_bytes": 118
+        }
+      }
     }
   },
-  "commit_sha": "86d1798040838183e565431670facf4ad6e649c2",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-12/sector-data-2603.zip",
-  "published_at": "2026-04-12T10:28:21Z",
-  "release_tag": "daily-2026-04-12",
+  "commit_sha": "df47ea788f39b52457d29f397159b6a319384dc9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-15-d/sector-data-2603.zip",
+  "published_at": "2026-04-15T18:50:58Z",
+  "release_tag": "daily-2026-04-15-d",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "9df5ec3fc2f5c72feb02b9d1111822d4277dda687e5f5eb43202d085a577f9cf",
-  "size_bytes": 28018
+  "sha256": "45c83074ba9e2111b0aaa60ced44fb4af1742400c4868626b8c16efb95c04e1e",
+  "size_bytes": 29143
 }
