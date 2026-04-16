@@ -1,28 +1,18 @@
 {
-  "symbol_size": 0.75,
+  "symbol_size": 0.65,
   "traildot_size": 0.15,
   "symbol_line_width": 1.0,
-  "forecast_symbol": "square_crossed",
-  "incoming_symbol": "square_crossed",
-  "assumed_symbol": "diamond_crossed",
-  "of_interest_symbol": "square_crossed",
-  "alien_symbol": "square_crossed",
-  "released_symbol": "square_crossed",
-  "traildot_symbol": "diamond_filled",
+  "forecast_symbol": "rps",
+  "incoming_symbol": "rps",
+  "assumed_symbol": "rps",
+  "of_interest_symbol": "rps",
+  "alien_symbol": "rps",
+  "released_symbol": "rps",
+  "traildot_symbol": "rps",
   "defined_symbols": {
-    "diamond_crossed": {
-      "type": "wireframe",
-      "draw": "M 0 -7 L 7 0 L 0 7 L -7 0 L 0 -7 M 0 -7 L 0 7 M -7 0 L 7 0",
-      "connection_points": [[0, 0]]
-    },
-    "square_crossed": {
-      "type": "wireframe",
-      "draw": "M -7 0 L 7 0 M 0 -7 L 0 7 M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7",
-      "connection_points": [[0, 0]]
-    },
-    "diamond_filled": {
+    "rps": {
       "type": "filled",
-      "draw": "M 0 -7 L 7 0 L 0 7 L -7 0",
+      "draw": "M -2 -2 L -2 2 L 2 2 L 2 -2 L -2 -2",
       "connection_points": [[0, 0]]
     }
   }
