@@ -152,18 +152,18 @@
       "size_bytes": 254
     },
     "OMDB": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/OMDB/runway_configs.json",
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/OMDB/runway_configs.json",
       "sha256": "cd3adad5998f3180be4df0ace3456bf77aecab79f818d646ed3ca116e7867966",
       "size_bytes": 232
     }
   },
   "asset_name": "runway-configs-2604.zip",
-  "commit_sha": "9309e21e623ac74a020677144a3427013c53b127",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-20/runway-configs-2604.zip",
-  "published_at": "2026-04-20T10:56:09Z",
-  "release_tag": "daily-2026-04-20",
+  "commit_sha": "9ad5fc80ea610aee6d52b360f39e8d01ac4f43a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-21/runway-configs-2604.zip",
+  "published_at": "2026-04-21T08:23:27Z",
+  "release_tag": "daily-2026-04-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "69fc1c4059dfe28dfab3139e98a5099c3a9ab9c781f5d4277348a898dc9063a1",
-  "size_bytes": 9816
+  "sha256": "624e0081545867725a39f6312adf1f2cf64746f6eacc1ae653ee805391f83d4f",
+  "size_bytes": 9806
 }

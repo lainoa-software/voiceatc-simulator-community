@@ -1,7 +1,7 @@
 {
   "asset_name": "color-profiles-2604.zip",
-  "commit_sha": "9309e21e623ac74a020677144a3427013c53b127",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-20/color-profiles-2604.zip",
+  "commit_sha": "9ad5fc80ea610aee6d52b360f39e8d01ac4f43a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-21/color-profiles-2604.zip",
   "profile_count": 7,
   "profiles": {
     "E/ED/EDXX/EDGG": {
@@ -83,25 +83,25 @@
         }
       }
     },
-    "O/OM/OMAE/OMAE/DUBAI_TERMINAL": {
+    "O/OM/OMAE/DUBAI_TERMINAL": {
       "files": {
         "colors": {
-          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/colors.json",
+          "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/colors.json",
           "sha256": "97e0b42368b1c8bdf3fd8d5f96b6a3443348f741c8d054b69641b10b61041502",
           "size_bytes": 734
         },
         "style": {
-          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/style.json",
+          "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/style.json",
           "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
           "size_bytes": 434
         }
       }
     }
   },
-  "published_at": "2026-04-20T10:56:09Z",
-  "release_tag": "daily-2026-04-20",
+  "published_at": "2026-04-21T08:23:27Z",
+  "release_tag": "daily-2026-04-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "cdc79ed0e4bf73f1606bc88146dec31942799cf37ed23ca48a66f1a53989bbf3",
-  "size_bytes": 4702
+  "sha256": "78c9a0842b399cfd1b82c9468f191c98ab9bafb21d48c81eb25aa3aad0cd01c6",
+  "size_bytes": 4682
 }

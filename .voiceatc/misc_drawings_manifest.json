@@ -47,28 +47,28 @@
       "size_bytes": 52568
     },
     "OMDB": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
       "size_bytes": 21639
     },
     "OMDW": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
       "size_bytes": 21639
     },
     "OMSJ": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
       "size_bytes": 21639
     }
   },
   "asset_name": "misc-drawings-2604.zip",
-  "commit_sha": "9309e21e623ac74a020677144a3427013c53b127",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-20/misc-drawings-2604.zip",
-  "published_at": "2026-04-20T10:56:09Z",
-  "release_tag": "daily-2026-04-20",
+  "commit_sha": "9ad5fc80ea610aee6d52b360f39e8d01ac4f43a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-21/misc-drawings-2604.zip",
+  "published_at": "2026-04-21T08:23:27Z",
+  "release_tag": "daily-2026-04-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "0609565118007b56e197c0ad1ea9e080f14394cc7b7d9c48c4ab61ed182c42b5",
-  "size_bytes": 36408
+  "sha256": "c4b86f4b86977dab3febaf8d50c910036060b7fdbe4183e098ea56325b7d6e3f",
+  "size_bytes": 36398
 }

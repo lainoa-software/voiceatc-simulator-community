@@ -249,32 +249,32 @@
         }
       }
     },
-    "O/OM/OMAE/OMAE/DUBAI_TERMINAL": {
+    "O/OM/OMAE/DUBAI_TERMINAL": {
       "files": {
         "configs": {
-          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_configs.json",
+          "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/sector_configs.json",
           "sha256": "162cc3cd23f3509d602f0dc8368ae4e56e0b2ea72b9190ed7ad01a0c3b9d6c9f",
           "size_bytes": 226
         },
         "definitions": {
-          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_definitions.json",
+          "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/sector_definitions.json",
           "sha256": "92f6b363e0b947d5f94f9ab631fd7383f2095887e426c2e7445448b8748056ed",
           "size_bytes": 1384
         },
         "influence": {
-          "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/sector_influence.json",
+          "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/sector_influence.json",
           "sha256": "0acaea477d1bc2b472f648cbc543ee67831f43d014a145d4de6492e6502e1979",
           "size_bytes": 118
         }
       }
     }
   },
-  "commit_sha": "9309e21e623ac74a020677144a3427013c53b127",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-20/sector-data-2604.zip",
-  "published_at": "2026-04-20T10:56:09Z",
-  "release_tag": "daily-2026-04-20",
+  "commit_sha": "9ad5fc80ea610aee6d52b360f39e8d01ac4f43a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-21/sector-data-2604.zip",
+  "published_at": "2026-04-21T08:23:27Z",
+  "release_tag": "daily-2026-04-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "6b78b62446844b14825dc186f33bd3e54a24e893fff01e7bff662bd80a9f4332",
-  "size_bytes": 30296
+  "sha256": "5aabf2edcea97a58cb5a6d125f31904eda809b57dfa124771b98f865175cbbf4",
+  "size_bytes": 30266
 }
