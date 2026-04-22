@@ -7,8 +7,8 @@
       "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-22/color-profiles-2604.zip",
       "preserves_repo_paths": true,
       "profile_count": 7,
-      "sha256": "78c9a0842b399cfd1b82c9468f191c98ab9bafb21d48c81eb25aa3aad0cd01c6",
-      "size_bytes": 4682
+      "sha256": "96d5a03813dda06ef2d6e0f6bfc54ef380b0c2a5caafe21513faf2fbcde79331",
+      "size_bytes": 4718
     },
     "misc_drawings_zip": {
       "airport_count": 12,
@@ -57,8 +57,8 @@
       "size_bytes": 30266
     }
   },
-  "commit_sha": "be273a12bb30abd0c04a06c7c803c4672d077f57",
-  "published_at": "2026-04-22T04:16:40Z",
+  "commit_sha": "8682cbbaea40b6cadd770e3023c4f1c1d2504732",
+  "published_at": "2026-04-22T14:13:43Z",
   "release_tag": "daily-2026-04-22",
   "release_title": "Daily Community Release - Wednesday 2026-04-22",
   "repo": "lainoa-software/voiceatc-simulator-community",
