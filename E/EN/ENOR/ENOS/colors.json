@@ -1,5 +1,6 @@
 {
   "bg_color": "140e13",
+  "controlled_sector_color": "0d090c",
 
   "assumed_tfc_color": "ffffff",
   "incoming_tfc_color": "bcbcbc",
