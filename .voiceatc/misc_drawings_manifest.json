@@ -28,17 +28,17 @@
     },
     "ESOW": {
       "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
-      "sha256": "f6f810181548935b50ed3302ead62df6310da34156f8bd1379830927bbbc5702",
+      "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
     "ESSA": {
       "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
-      "sha256": "f6f810181548935b50ed3302ead62df6310da34156f8bd1379830927bbbc5702",
+      "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
     "ESSB": {
       "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
-      "sha256": "f6f810181548935b50ed3302ead62df6310da34156f8bd1379830927bbbc5702",
+      "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
     "LEMD": {
@@ -47,28 +47,28 @@
       "size_bytes": 52568
     },
     "OMDB": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
-      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
-      "size_bytes": 21643
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
+      "size_bytes": 21639
     },
     "OMDW": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
-      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
-      "size_bytes": 21643
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
+      "size_bytes": 21639
     },
     "OMSJ": {
-      "repo_path": "O/OM/OMAE/OMAE/DUBAI_TERMINAL/misc_drawings.json",
-      "sha256": "a42611f05754485725593066969fc04c38f8519f533c24397ae1fe7e388a7aeb",
-      "size_bytes": 21643
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
+      "size_bytes": 21639
     }
   },
   "asset_name": "misc-drawings-2604.zip",
-  "commit_sha": "ee79ec9792fb5d7d486f74b14982e81e4abcbad5",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-17/misc-drawings-2604.zip",
-  "published_at": "2026-04-17T09:33:58Z",
-  "release_tag": "daily-2026-04-17",
+  "commit_sha": "be273a12bb30abd0c04a06c7c803c4672d077f57",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-22/misc-drawings-2604.zip",
+  "published_at": "2026-04-22T04:16:40Z",
+  "release_tag": "daily-2026-04-22",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "1ec1c7c618ca59415b874b9785fdd69707688905ec62a8a7a18de971e6793136",
-  "size_bytes": 36421
+  "sha256": "c4b86f4b86977dab3febaf8d50c910036060b7fdbe4183e098ea56325b7d6e3f",
+  "size_bytes": 36398
 }

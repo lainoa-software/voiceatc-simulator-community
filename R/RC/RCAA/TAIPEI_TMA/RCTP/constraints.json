@@ -1,0 +1,70 @@
+{
+  "airport": "RCTP",
+  "airac_min": 2604,
+  "stars": {
+    "GRAC1A": {
+      "GRACE": {
+        "altitude": {
+          "type": "at",
+          "ft": 20000
+        }
+      }
+    },
+    "GRAC1B": {
+      "GRACE": {
+        "altitude": {
+          "type": "at",
+          "ft": 14000
+        }
+      }
+    },
+    "DRAK1A": {
+      "DRAKE": {
+        "altitude": {
+          "type": "at",
+          "ft": 20000
+        }
+      }
+    },
+    "DRAK1B": {
+      "DRAKE": {
+        "altitude": {
+          "type": "at",
+          "ft": 14000
+        }
+      }
+    },
+    "BAKE1A": {
+      "BAKER": {
+        "altitude": {
+          "type": "at",
+          "ft": 20000
+        }
+      }
+    },
+    "BAKE1B": {
+      "BAKER": {
+        "altitude": {
+          "type": "at",
+          "ft": 14000
+        }
+      }
+    },
+    "TONG1A": {
+      "BOCCA": {
+        "altitude": {
+          "type": "at",
+          "ft": 29000
+        }
+      }
+    },
+    "TONG1B": {
+      "BOCCA": {
+        "altitude": {
+          "type": "at",
+          "ft": 29000
+        }
+      }
+    }
+  }
+}

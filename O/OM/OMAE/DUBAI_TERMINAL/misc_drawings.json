@@ -1,7 +1,7 @@
 {
   "airports": ["OMDB", "OMSJ", "OMDW"],
   "runway_config": "30",
-  "line_selections": [
+  "line_sections": [
     {
       "color": "#464646",
       "dash_length": 0.1,
@@ -192,7 +192,6 @@
         [25.361666666667, 55.658055555556]
       ]
     },
-
     {
       "color": "#b51414",
       "points": [
@@ -260,7 +259,6 @@
         [24.700525555556, 55.192079166667]
       ]
     },
-
     {
       "color": "#0f0f0f",
       "points": [

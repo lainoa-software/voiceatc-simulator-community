@@ -36,6 +36,8 @@ jobs:
         run: python tools/misc_drawings_manifest.py --validate-only
       - name: Validate color profile files
         run: python tools/color_profiles_manifest.py --validate-only
+      - name: Validate constraints files
+        run: python tools/constraints_manifest.py --validate-only
       - name: Compute release metadata
         id: meta
         env:
@@ -109,6 +111,8 @@ jobs:
             --commit-sha "${SOURCE_SHA}" \
             --download-repo "${GITHUB_REPOSITORY}" > build/release/summary.json
           python - <<'PY'
+          import hashlib
+          import importlib.util
           import json
           import os
           from pathlib import Path
@@ -126,7 +130,7 @@ jobs:
                   return ""
               return str(payload.get("sha256", "")).strip()
 
-          changed = not (
+          release_assets_changed = not (
               previous_hash(".voiceatc/routes_manifest.json") == str(assets["routes_tsv"]["sha256"]).strip()
               and previous_hash(".voiceatc/mva_manifest.json") == str(assets["mva_zip"]["sha256"]).strip()
               and previous_hash(".voiceatc/runway_configs_manifest.json") == str(assets["runway_configs_zip"]["sha256"]).strip()
@@ -134,10 +138,38 @@ jobs:
               and previous_hash(".voiceatc/misc_drawings_manifest.json") == str(assets["misc_drawings_zip"]["sha256"]).strip()
               and previous_hash(".voiceatc/color_profiles_manifest.json") == str(assets["color_profiles_zip"]["sha256"]).strip()
           )
-          should_publish = changed or os.environ.get("IS_MANUAL", "").strip() == "true"
+
+          constraints_spec = importlib.util.spec_from_file_location(
+              "constraints_manifest", Path("tools/constraints_manifest.py")
+          )
+          if constraints_spec is None or constraints_spec.loader is None:
+              raise RuntimeError("unable to load tools/constraints_manifest.py")
+          constraints_module = importlib.util.module_from_spec(constraints_spec)
+          constraints_spec.loader.exec_module(constraints_module)
+          generated_constraints_manifest = constraints_module.build_manifest(Path("."))
+          constraints_manifest_path = Path(".voiceatc/constraints_manifest.json")
+
+          current_constraints_manifest: object = {}
+          if constraints_manifest_path.exists():
+              try:
+                  current_constraints_manifest = json.loads(
+                      constraints_manifest_path.read_text(encoding="utf-8")
+                  )
+              except Exception:
+                  current_constraints_manifest = {}
+
+          def canonical_hash(payload: object) -> str:
+              encoded = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+              return hashlib.sha256(encoded).hexdigest()
+
+          constraints_changed = canonical_hash(current_constraints_manifest) != canonical_hash(generated_constraints_manifest)
+          changed = release_assets_changed or constraints_changed
+          should_publish = release_assets_changed or os.environ.get("IS_MANUAL", "").strip() == "true"
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
               handle.write(f"changed={'true' if changed else 'false'}\n")
+              handle.write(f"release_assets_changed={'true' if release_assets_changed else 'false'}\n")
+              handle.write(f"constraints_changed={'true' if constraints_changed else 'false'}\n")
               handle.write(f"should_publish={'true' if should_publish else 'false'}\n")
               handle.write(f"airac={summary['airac']}\n")
               handle.write(f"routes_asset_name={assets['routes_tsv']['asset_name']}\n")
@@ -255,16 +287,17 @@ jobs:
               payload = summary["manifests"][key]
               path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
           PY
+          python tools/constraints_manifest.py --write
       - name: Commit manifests
         if: steps.meta.outputs.changed == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- .voiceatc/routes_manifest.json .voiceatc/mva_manifest.json .voiceatc/runway_configs_manifest.json .voiceatc/sector_data_manifest.json .voiceatc/misc_drawings_manifest.json .voiceatc/color_profiles_manifest.json .voiceatc/release_manifest.json; then
+          if git diff --quiet -- .voiceatc/routes_manifest.json .voiceatc/mva_manifest.json .voiceatc/runway_configs_manifest.json .voiceatc/sector_data_manifest.json .voiceatc/misc_drawings_manifest.json .voiceatc/color_profiles_manifest.json .voiceatc/constraints_manifest.json .voiceatc/release_manifest.json; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .voiceatc/routes_manifest.json .voiceatc/mva_manifest.json .voiceatc/runway_configs_manifest.json .voiceatc/sector_data_manifest.json .voiceatc/misc_drawings_manifest.json .voiceatc/color_profiles_manifest.json .voiceatc/release_manifest.json
+          git add .voiceatc/routes_manifest.json .voiceatc/mva_manifest.json .voiceatc/runway_configs_manifest.json .voiceatc/sector_data_manifest.json .voiceatc/misc_drawings_manifest.json .voiceatc/color_profiles_manifest.json .voiceatc/constraints_manifest.json .voiceatc/release_manifest.json
           git commit -m "chore: refresh daily community release manifests"
           git push
