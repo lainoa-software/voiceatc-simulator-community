@@ -1,0 +1,21 @@
+{
+  "symbol_size": 1.2,
+  "traildot_size": 0.2,
+  "symbol_line_width": 1.0,
+
+  "forecast_symbol": "radar_dot",
+  "incoming_symbol": "radar_dot",
+  "assumed_symbol": "radar_dot",
+  "of_interest_symbol": "radar_dot",
+  "alien_symbol": "radar_dot",
+  "released_symbol": "radar_dot",
+  "traildot_symbol": "radar_dot",
+
+  "defined_symbols": {
+    "radar_dot": {
+      "type": "filled",
+      "draw": "M 0 -8 L 1.57 -7.84 L 3.06 -7.39 L 4.45 -6.66 L 5.66 -5.66 L 6.66 -4.45 L 7.39 -3.06 L 7.84 -1.57 L 8 0 L 7.84 1.57 L 7.39 3.06 L 6.66 4.45 L 5.66 5.66 L 4.45 6.66 L 3.06 7.39 L 1.57 7.84 L 0 8 L -1.57 7.84 L -3.06 7.39 L -4.45 6.66 L -5.66 5.66 L -6.66 4.45 L -7.39 3.06 L -7.84 1.57 L -8 0 L -7.84 -1.57 L -7.39 -3.06 L -6.66 -4.45 L -5.66 -5.66 L -4.45 -6.66 L -3.06 -7.39 L -1.57 -7.84 L 0 -8",
+      "connection_points": [ [ 0, 0 ] ]
+    }
+  }
+}
