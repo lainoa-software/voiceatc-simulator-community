@@ -1,9 +1,9 @@
 {
   "airac": "2604",
   "asset_name": "routes-2604.tsv",
-  "commit_sha": "e745c3972a6317b2e520718fe045cf013c1a6f11",
+  "commit_sha": "d346ab9222b42ffbddc6555332a6b9d2e829150c",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-23/routes-2604.tsv",
-  "published_at": "2026-04-23T04:20:56Z",
+  "published_at": "2026-04-23T11:42:02Z",
   "release_tag": "daily-2026-04-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "route_count": 99869,
