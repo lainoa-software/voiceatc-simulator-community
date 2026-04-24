@@ -1,0 +1,13 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "3D",
+      "sectors": [
+        {
+          "sector_ids": "LECPIXX",
+          "frequency": "134.825"
+        }
+      ]
+    }
+  ]
+}
