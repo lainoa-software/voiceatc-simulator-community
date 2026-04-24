@@ -1,8 +1,8 @@
 {
   "asset_name": "color-profiles-2604.zip",
-  "commit_sha": "e745c3972a6317b2e520718fe045cf013c1a6f11",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-23/color-profiles-2604.zip",
-  "profile_count": 7,
+  "commit_sha": "e24fb8f0c53b96799553749b55a23e70ffb643ca",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-24/color-profiles-2604.zip",
+  "profile_count": 8,
   "profiles": {
     "E/ED/EDXX/EDGG": {
       "files": {
@@ -87,7 +87,7 @@
       "files": {
         "colors": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/colors.json",
-          "sha256": "97e0b42368b1c8bdf3fd8d5f96b6a3443348f741c8d054b69641b10b61041502",
+          "sha256": "42bcea9b690bd967674669f3137c6cd93df2a4577f7aad0242493e1bb42d1a95",
           "size_bytes": 734
         },
         "style": {
@@ -96,12 +96,26 @@
           "size_bytes": 434
         }
       }
+    },
+    "R/RC/RCAA/TAIPEI_TMA": {
+      "files": {
+        "colors": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/colors.json",
+          "sha256": "b663de2d6d5f94254cfbfa9f518d5c5af94a35af75e385389bbef49223f645d6",
+          "size_bytes": 773
+        },
+        "style": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/style.json",
+          "sha256": "ff173526ac6ba78730ba76a18d8587e4515935d21942f7faf47cbcdbbe37841d",
+          "size_bytes": 843
+        }
+      }
     }
   },
-  "published_at": "2026-04-23T04:20:56Z",
-  "release_tag": "daily-2026-04-23",
+  "published_at": "2026-04-24T10:06:47Z",
+  "release_tag": "daily-2026-04-24",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "96d5a03813dda06ef2d6e0f6bfc54ef380b0c2a5caafe21513faf2fbcde79331",
-  "size_bytes": 4718
+  "sha256": "08d72df46784567bd47c51797f1f6397019b31f94569c24dbc602509d7fc4b88",
+  "size_bytes": 5597
 }
