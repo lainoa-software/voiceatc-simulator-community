@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2604.zip",
-  "bundle_count": 16,
+  "bundle_count": 14,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -101,56 +101,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_configs.json",
-          "sha256": "41ce5108272c8e0d018f9ed28c801ec408c62d69339be3e52180d40d5081e237",
-          "size_bytes": 278
+          "sha256": "61fb414329d97960ae93ba6c0793692947a3da5197581a4c02e6fca1e506e299",
+          "size_bytes": 367
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_definitions.json",
-          "sha256": "e0d6bdfcf83c17b6162b667081913f0f96b32d274c67781bb5c74f2cb74e2040",
-          "size_bytes": 6904
+          "sha256": "a2d5db37dc44b8740deb85c1e23de8ed2a859dbafedd90d8272a88caca371b9a",
+          "size_bytes": 14867
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_influence.json",
-          "sha256": "35a2f0061cf12f7ff1f9cc5712c8661af8b9b28aefba1d13b3b947ee76ca632c",
-          "size_bytes": 172
-        }
-      }
-    },
-    "L/LE/LECB/LECB_E/PALMA_TMA/LEIB": {
-      "files": {
-        "configs": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_configs.json",
-          "sha256": "a05be6659ffe21f323b46eb682cb953ea788cbb5f641ac0599472757f5a6a312",
-          "size_bytes": 189
-        },
-        "definitions": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_definitions.json",
-          "sha256": "0bba5ae22e4b1a50ee3689de5521e14a697646235f9e30f3a177e2fe1b9a24bc",
-          "size_bytes": 2468
-        },
-        "influence": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_influence.json",
-          "sha256": "e89eefc74ddf35ad302b29ba6d40d60f10533cd25c2c5b09589aa84e20693a46",
-          "size_bytes": 102
-        }
-      }
-    },
-    "L/LE/LECB/LECB_E/PALMA_TMA/LEMH": {
-      "files": {
-        "configs": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_configs.json",
-          "sha256": "8bdb848ba022db666a651f6bf3d165c58a7a4c608546e096c299fb7450147029",
-          "size_bytes": 189
-        },
-        "definitions": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_definitions.json",
-          "sha256": "a72a1579a3805bc304f2917a34c7bc24186fa1e12def8704aa91e01071453df7",
-          "size_bytes": 7996
-        },
-        "influence": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_influence.json",
-          "sha256": "f048096195781535cb4f345204af7d6a5ba9a8d712b5ca25d87ced9fdd6c3b97",
-          "size_bytes": 102
+          "sha256": "c05b3dbeb0706b77186f79cb44be3ad892626c02b5f14fc7a100984ebd537115",
+          "size_bytes": 242
         }
       }
     },
@@ -307,12 +269,12 @@
       }
     }
   },
-  "commit_sha": "ada726f582d19a0c21ffb27cd3e81a241377ec25",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-25/sector-data-2604.zip",
-  "published_at": "2026-04-25T04:07:46Z",
-  "release_tag": "daily-2026-04-25",
+  "commit_sha": "ceed6502d79ebac4b4f5556ed45e5b48dac888a1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-25-b/sector-data-2604.zip",
+  "published_at": "2026-04-25T11:18:59Z",
+  "release_tag": "daily-2026-04-25-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "5ba7a4dad059976368216aa82849d9c7950d78b05087d13a5d4feaacf636f1bd",
-  "size_bytes": 32959
+  "sha256": "2c6b1ea336430f83ea2832b202130d159ea7fda8f502c22f7ff50fda1bfd8836",
+  "size_bytes": 30836
 }
