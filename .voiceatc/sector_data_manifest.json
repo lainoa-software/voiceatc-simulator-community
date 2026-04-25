@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2604.zip",
-  "bundle_count": 15,
+  "bundle_count": 16,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -113,6 +113,25 @@
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_influence.json",
           "sha256": "35a2f0061cf12f7ff1f9cc5712c8661af8b9b28aefba1d13b3b947ee76ca632c",
           "size_bytes": 172
+        }
+      }
+    },
+    "L/LE/LECB/LECB_E/PALMA_TMA/LEIB": {
+      "files": {
+        "configs": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_configs.json",
+          "sha256": "a05be6659ffe21f323b46eb682cb953ea788cbb5f641ac0599472757f5a6a312",
+          "size_bytes": 189
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_definitions.json",
+          "sha256": "0bba5ae22e4b1a50ee3689de5521e14a697646235f9e30f3a177e2fe1b9a24bc",
+          "size_bytes": 2468
+        },
+        "influence": {
+          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/sector_influence.json",
+          "sha256": "e89eefc74ddf35ad302b29ba6d40d60f10533cd25c2c5b09589aa84e20693a46",
+          "size_bytes": 102
         }
       }
     },
@@ -288,12 +307,12 @@
       }
     }
   },
-  "commit_sha": "e24fb8f0c53b96799553749b55a23e70ffb643ca",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-24/sector-data-2604.zip",
-  "published_at": "2026-04-24T10:06:47Z",
-  "release_tag": "daily-2026-04-24",
+  "commit_sha": "ada726f582d19a0c21ffb27cd3e81a241377ec25",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-25/sector-data-2604.zip",
+  "published_at": "2026-04-25T04:07:46Z",
+  "release_tag": "daily-2026-04-25",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "4bfb07078d25e175779df9844812e93173e98285d12da6aef77f616b0bf76180",
-  "size_bytes": 31678
+  "sha256": "5ba7a4dad059976368216aa82849d9c7950d78b05087d13a5d4feaacf636f1bd",
+  "size_bytes": 32959
 }
