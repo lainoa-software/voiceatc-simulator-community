@@ -68,9 +68,9 @@
     }
   },
   "asset_name": "misc-drawings-2604.zip",
-  "commit_sha": "a3a4e86dfb7f82d5d6083e357c08e11366e267e9",
+  "commit_sha": "be4e9f5112c591c52c33788436ad1705543d88d9",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-27/misc-drawings-2604.zip",
-  "published_at": "2026-04-27T04:38:31Z",
+  "published_at": "2026-04-27T13:30:49Z",
   "release_tag": "daily-2026-04-27",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
