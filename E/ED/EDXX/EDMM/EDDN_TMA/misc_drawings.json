@@ -1,6 +1,6 @@
 {
   "airports": ["EDDN"],
-  "runway_config": ["10","28"],
+  "runway_config": ["10", "28"],
   "line_sections": [
     {
       "color": "#c9c9c9",
