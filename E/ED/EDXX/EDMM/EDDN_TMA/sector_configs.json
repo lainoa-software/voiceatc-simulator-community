@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["10", "28"],
+      "sectors": [
+        {
+          "sector_ids": ["FRK"],
+          "frequency": "129.525"
+        }
+      ]
+    }
+  ]
+}
