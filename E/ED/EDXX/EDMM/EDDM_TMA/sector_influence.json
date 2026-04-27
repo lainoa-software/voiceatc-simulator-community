@@ -1,0 +1,12 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "DMNH",
+      "airports": ["EDDM", "EDMA"]
+    },
+    {
+      "sector_id": "DMSH",
+      "airports": ["EDDM", "EDMO"]
+    }
+  ]
+}

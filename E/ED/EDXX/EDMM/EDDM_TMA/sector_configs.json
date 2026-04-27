@@ -1,0 +1,28 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["08", "26"],
+      "sectors": [
+        {
+          "sector_ids": ["DMNH", "DMSH"],
+          "frequency": "128.030"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "2",
+      "runway_configs": ["08", "26"],
+      "sectors": [
+        {
+          "sector_ids": ["DMNH"],
+          "frequency": "128.030"
+        },
+        {
+          "sector_ids": ["DMSH"],
+          "frequency": "120.780"
+        }
+      ]
+    }
+  ]
+}
