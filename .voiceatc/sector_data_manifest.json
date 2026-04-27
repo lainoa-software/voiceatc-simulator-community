@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2604.zip",
-  "bundle_count": 14,
+  "bundle_count": 15,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -18,6 +18,25 @@
           "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/sector_influence.json",
           "sha256": "20f56343f4729eb1159006604a5a7ba2f2822623d29718664473ffaad00162a9",
           "size_bytes": 99
+        }
+      }
+    },
+    "E/ED/EDXX/EDMM/EDDN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_configs.json",
+          "sha256": "006a789657febc3a27003ad45f46d93134888f6e53ccd737c0c76cc49b6e981a",
+          "size_bytes": 224
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_definitions.json",
+          "sha256": "0b011cbb27c237cbbf8f8fe1c746bdbf28d67f3889a1594d8c3c4d7fb120d30f",
+          "size_bytes": 2197
+        },
+        "influence": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_influence.json",
+          "sha256": "a498b3e3f311cfed168262559e35bf7d007b003806a095a65a081b96e9e4c287",
+          "size_bytes": 98
         }
       }
     },
@@ -269,12 +288,12 @@
       }
     }
   },
-  "commit_sha": "be4e9f5112c591c52c33788436ad1705543d88d9",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-27/sector-data-2604.zip",
-  "published_at": "2026-04-27T13:30:49Z",
-  "release_tag": "daily-2026-04-27",
+  "commit_sha": "662eb9f99cf93d5f56c47f1321dd568ae36c1417",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-27-b/sector-data-2604.zip",
+  "published_at": "2026-04-27T13:56:15Z",
+  "release_tag": "daily-2026-04-27-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "2c6b1ea336430f83ea2832b202130d159ea7fda8f502c22f7ff50fda1bfd8836",
-  "size_bytes": 30836
+  "sha256": "7e3e16b2a35b0ecd2e32cfb6d6da786d3c789cea04c4b89efe2020da61f965e0",
+  "size_bytes": 32000
 }
