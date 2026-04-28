@@ -1,11 +1,27 @@
 {
   "sector_influences": [
     {
-      "sector_id": "DMNH",
+      "sector_id": "DMNL",
       "airports": ["EDDM", "EDMA"]
     },
     {
+      "sector_id": "DMSL",
+      "airports": ["EDDM", "EDMO"]
+    },
+    {
+      "sector_id": "DMNH",
+      "airports": ["EDDM"]
+    },
+    {
       "sector_id": "DMSH",
+      "airports": ["EDDM"]
+    },
+    {
+      "sector_id": "DMNAT",
+      "airports": ["EDDM", "EDMA"]
+    },
+    {
+      "sector_id": "DMSAT",
       "airports": ["EDDM", "EDMO"]
     }
   ]
