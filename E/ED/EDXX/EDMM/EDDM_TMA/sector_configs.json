@@ -5,8 +5,8 @@
       "runway_configs": ["08", "26"],
       "sectors": [
         {
-          "sector_ids": ["DMNL", "DMSL"],
-          "frequency": "123.905"
+          "sector_ids": ["DMNL", "DMSL", "DMNH", "DMSH", "DMNAT", "DMSAT"],
+          "frequency": "128.030"
         }
       ]
     },
@@ -15,19 +15,9 @@
       "runway_configs": ["08", "26"],
       "sectors": [
         {
-          "sector_ids": ["DMNL"],
+          "sector_ids": ["DMNL", "DMSL", "DMNAT", "DMSAT"],
           "frequency": "123.905"
         },
-        {
-          "sector_ids": ["DMSL"],
-          "frequency": "127.955"
-        }
-      ]
-    },
-    {
-      "sector_config_id": "1",
-      "runway_configs": ["08", "26"],
-      "sectors": [
         {
           "sector_ids": ["DMNH", "DMSH"],
           "frequency": "128.030"
@@ -35,40 +25,20 @@
       ]
     },
     {
-      "sector_config_id": "2",
+      "sector_config_id": "3",
       "runway_configs": ["08", "26"],
       "sectors": [
         {
-          "sector_ids": ["DMNH"],
+          "sector_ids": ["DMNH", "DMSH"],
           "frequency": "128.030"
         },
         {
-          "sector_ids": ["DMSH"],
-          "frequency": "120.780"
-        }
-      ]
-    },
-    {
-      "sector_config_id": "1",
-      "runway_configs": ["08", "26"],
-      "sectors": [
+          "sector_ids": ["DMNL", "DMSL"],
+          "frequency": "123.905"
+        },
         {
           "sector_ids": ["DMNAT", "DMSAT"],
           "frequency": "118.830"
-        }
-      ]
-    },
-    {
-      "sector_config_id": "2",
-      "runway_configs": ["08", "26"],
-      "sectors": [
-        {
-          "sector_ids": ["DMNAT"],
-          "frequency": "118.830"
-        },
-        {
-          "sector_ids": ["DMSAT"],
-          "frequency": "132.305"
         }
       ]
     }
