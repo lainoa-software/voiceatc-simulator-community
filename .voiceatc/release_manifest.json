@@ -53,12 +53,12 @@
       "content_type": "application/zip",
       "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-28/sector-data-2604.zip",
       "preserves_repo_paths": true,
-      "sha256": "669094caf71160c5c2253eba8ae45f0e7ced9f72bf74c63a876766627edfb969",
-      "size_bytes": 33141
+      "sha256": "11b90b0b23bfe6feb92858d4d9e8322bd293810298fa6cef4d953d03553431fd",
+      "size_bytes": 33295
     }
   },
-  "commit_sha": "d8447c0397257cef7560b9d0e1cb3f5398d85fc9",
-  "published_at": "2026-04-28T04:44:14Z",
+  "commit_sha": "d5e07168ad20f9560ec64a66980dacb2ab4eacfc",
+  "published_at": "2026-04-28T14:30:44Z",
   "release_tag": "daily-2026-04-28",
   "release_title": "Daily Community Release - Tuesday 2026-04-28",
   "repo": "lainoa-software/voiceatc-simulator-community",
