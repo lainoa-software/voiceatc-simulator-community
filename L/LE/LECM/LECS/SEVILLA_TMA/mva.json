@@ -9268,7 +9268,7 @@
       ]
        },
     {
-      "area_id": "LECS27",
+      "area_id": "LECS28",
       "minimum_altitude_ft": 4400,
       "polygon": [
         [ 36.93711798034, -5.7246025198177 ],
@@ -9321,7 +9321,7 @@
       ]
       },
     {
-      "area_id": "LECS28",
+      "area_id": "LECS29",
       "minimum_altitude_ft": 3500,
       "polygon": [
         [ 36.943579350216, -5.6988476697051 ],
@@ -9579,7 +9579,7 @@
       ]
       },
     {
-      "area_id": "LECS29",
+      "area_id": "LECS30",
       "minimum_altitude_ft": 5000,
       "polygon": [
         [ 36.943541480049, -5.6988604697995 ],
@@ -10018,7 +10018,7 @@
       ]
       },
     {
-      "area_id": "LECS30",
+      "area_id": "LECS31",
       "minimum_altitude_ft": 7500,
       "polygon": [
         [ 36.859640590127, -4.8607011004464 ],
