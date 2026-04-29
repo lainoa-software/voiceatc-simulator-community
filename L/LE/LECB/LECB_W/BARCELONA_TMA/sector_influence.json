@@ -7,6 +7,10 @@
     {
       "sector_id": "LEGEAPP",
       "airports": ["LEGE"]
+    },
+    {
+      "sector_id": "LERSAPP",
+      "airports": ["LERS"]
     }
   ]
 }

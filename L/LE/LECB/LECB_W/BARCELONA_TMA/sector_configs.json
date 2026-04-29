@@ -19,6 +19,16 @@
           "frequency": "120.905"
         }
       ]
+    },
+    {
+      "sector_config_id": "1E",
+      "runway_configs": ["EAST", "WEST"],
+      "sectors": [
+        {
+          "sector_ids": "LERSAPP",
+          "frequency": "128.880"
+        }
+      ]
     }
   ]
 }
