@@ -9,6 +9,16 @@
           "frequency": "131.125"
         }
       ]
+    },
+    {
+      "sector_config_id": "1W",
+      "runway_configs": ["NORTH", "SOUTH"],
+      "sectors": [
+        {
+          "sector_ids": "LEGEAPP",
+          "frequency": "120.905"
+        }
+      ]
     }
   ]
 }

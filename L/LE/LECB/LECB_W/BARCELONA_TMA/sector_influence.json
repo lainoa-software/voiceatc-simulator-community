@@ -3,6 +3,10 @@
     {
       "sector_id": "LEBLCORE",
       "airports": ["LEBL", "LEGE", "LERS", "LELL", "LEDA", "LESU"]
+    },
+    {
+      "sector_id": "LEGEAPP",
+      "airports": ["LEGE"]
     }
   ]
 }
