@@ -21,7 +21,7 @@
       ]
     },
     {
-      "sector_config_id": "1W",
+      "sector_config_id": "1E",
       "runway_configs": ["EAST", "WEST"],
       "sectors": [
         {
