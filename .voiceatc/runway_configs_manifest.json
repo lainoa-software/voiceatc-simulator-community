@@ -1,5 +1,5 @@
 {
-  "airport_count": 34,
+  "airport_count": 36,
   "airports": {
     "EDDC": {
       "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/EDDC/runway_configs.json",
@@ -116,6 +116,11 @@
       "sha256": "2f585d4b4328da48cdd2dc7cd517d327009cec60bbac25445df5778fa9c2c7f0",
       "size_bytes": 256
     },
+    "LEGE": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEGE/runway_configs.json",
+      "sha256": "cc2f568910dc7f5754490867e0d0407324f642ecb2fd408177f610d670f64bbb",
+      "size_bytes": 238
+    },
     "LEIB": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/runway_configs.json",
       "sha256": "d658d61f92449986221f9f643df828321c768b9a6bd4e954958d8c8f5d1ad0df",
@@ -146,6 +151,11 @@
       "sha256": "cc2c72da50f9a65b3ea9beb97d10907988b0c37980be26494e2c97470e0503f1",
       "size_bytes": 256
     },
+    "LERS": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LERS/runway_configs.json",
+      "sha256": "518fd0ceba4a4de2b34c3bf7fb9f16a37601bb16449eb7cc461f67629ea87ee7",
+      "size_bytes": 234
+    },
     "LEST": {
       "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/LEST/runway_configs.json",
       "sha256": "4642bbd01ef1bfcc530072b852076c1548621a2a0063b731289b922c0c13f6cc",
@@ -173,12 +183,12 @@
     }
   },
   "asset_name": "runway-configs-2604.zip",
-  "commit_sha": "6e9a310d8129e2790675e0bcbced6ca473138eb4",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-29/runway-configs-2604.zip",
-  "published_at": "2026-04-29T04:38:05Z",
-  "release_tag": "daily-2026-04-29",
+  "commit_sha": "0da395cdd1d7898cdb195262e994f178659a295e",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-01/runway-configs-2604.zip",
+  "published_at": "2026-05-01T04:57:05Z",
+  "release_tag": "daily-2026-05-01",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "039aade8d8ee9b105a1beed53b6bb68bf95062fabbe596e9784b333ac2acaf40",
-  "size_bytes": 10652
+  "sha256": "a4c4a9ba716854faee9e9f48e1e7dd1ad9ce407e5db9c146f7d6444ba20fccd6",
+  "size_bytes": 11248
 }
