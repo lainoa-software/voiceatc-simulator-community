@@ -10,7 +10,7 @@
     },
     {
       "sector_id": "STG3",
-      "airports": []
+      "airports": ["EDDS"]
     },
     {
       "sector_id": "STG5",
@@ -18,7 +18,7 @@
     },
     {
       "sector_id": "STG6",
-      "airports": []
+      "airports": ["EDDS"]
     }
   ]
 }
