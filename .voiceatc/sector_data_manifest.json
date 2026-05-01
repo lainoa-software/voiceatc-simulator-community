@@ -177,18 +177,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_configs.json",
-          "sha256": "0795d91954750f0c7ee77e7200486b78d1380971d905d9fa5ea8aff5699f9a52",
-          "size_bytes": 245
+          "sha256": "278a0f414024a58a49f01a9234b293c28f24b3cc9302eab9907dce1e28f79096",
+          "size_bytes": 651
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
-          "sha256": "6f88fc495c3dd0a6142fb1ab4247b8fabb585995c49fce0d9f3849806d03e636",
-          "size_bytes": 19712
+          "sha256": "cc50c66ccbc9daefd77941a7faa026ad0a6456cf1c8277ddaa47c5ffd34afdfa",
+          "size_bytes": 36472
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
-          "sha256": "5587e24a6b637a109d76fde9b9f7ed961f4a31af1b5f0cf134dcc309b9800b64",
-          "size_bytes": 143
+          "sha256": "e187e5b1625d6fe195a4a27e36098352b36fd7943ea779f6ff1d970c49749cf4",
+          "size_bytes": 283
         }
       }
     },
@@ -326,12 +326,12 @@
       }
     }
   },
-  "commit_sha": "6e9a310d8129e2790675e0bcbced6ca473138eb4",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-29/sector-data-2604.zip",
-  "published_at": "2026-04-29T04:38:05Z",
-  "release_tag": "daily-2026-04-29",
+  "commit_sha": "0da395cdd1d7898cdb195262e994f178659a295e",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-01/sector-data-2604.zip",
+  "published_at": "2026-05-01T04:57:05Z",
+  "release_tag": "daily-2026-05-01",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "53a41df1e37edbe54a1d3d1ea21834c4d6cd1e9249f6480a8b8937be0beb32f9",
-  "size_bytes": 34793
+  "sha256": "7485dce10dc0c5aad54de228364d8974f0d1beffe0195571710ee5effa857d0c",
+  "size_bytes": 38923
 }
