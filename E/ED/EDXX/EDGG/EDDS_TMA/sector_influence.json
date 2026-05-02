@@ -1,0 +1,24 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "STG1",
+      "airports": ["EDDS", "EDTY"]
+    },
+    {
+      "sector_id": "STG2",
+      "airports": ["EDSB", "EDTL"]
+    },
+    {
+      "sector_id": "STG3",
+      "airports": ["EDDS"]
+    },
+    {
+      "sector_id": "STG5",
+      "airports": ["EDTY"]
+    },
+    {
+      "sector_id": "STG6",
+      "airports": ["EDDS"]
+    }
+  ]
+}
