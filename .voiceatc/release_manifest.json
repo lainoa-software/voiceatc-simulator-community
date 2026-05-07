@@ -35,8 +35,8 @@
       "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-07/routes-2604.tsv",
       "repo_path": "ROUTES/routes.tsv",
       "route_count": 99869,
-      "sha256": "18123fc572c86010d0b63f277e427fad8c73e7efb67bf77403c70e075a968dcb",
-      "size_bytes": 10102229
+      "sha256": "dd9848448541ec690e0f3751c7d60161d78064e5f28419ec69c5d011fc5d390f",
+      "size_bytes": 10244124
     },
     "runway_configs_zip": {
       "airport_count": 36,
@@ -57,8 +57,8 @@
       "size_bytes": 38923
     }
   },
-  "commit_sha": "55876ff2390823d92c23ee56ea433ab21ee185e8",
-  "published_at": "2026-05-07T04:44:17Z",
+  "commit_sha": "76f577984f1b098bb9b2c28e626518e38439fc52",
+  "published_at": "2026-05-07T11:02:14Z",
   "release_tag": "daily-2026-05-07",
   "release_title": "Daily Community Release - Thursday 2026-05-07",
   "repo": "lainoa-software/voiceatc-simulator-community",
