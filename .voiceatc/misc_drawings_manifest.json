@@ -82,10 +82,10 @@
       "size_bytes": 21639
     }
   },
-  "asset_name": "misc-drawings-2604.zip",
-  "commit_sha": "bb4efbf3b91a90fe9fb290cb1b8404588822a694",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-14/misc-drawings-2604.zip",
-  "published_at": "2026-05-14T04:57:05Z",
+  "asset_name": "misc-drawings-2605.zip",
+  "commit_sha": "40ebf5f634c698e5393b9ef98023ea8794730ee5",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-14/misc-drawings-2605.zip",
+  "published_at": "2026-05-14T12:58:41Z",
   "release_tag": "daily-2026-05-14",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
