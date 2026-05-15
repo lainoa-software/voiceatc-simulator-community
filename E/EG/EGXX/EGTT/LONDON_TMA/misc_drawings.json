@@ -1,7 +1,7 @@
 {
   "airports": ["EGLL"],
   "runway_config": "27",
-  "line_selections": [
+  "line_sections": [
     {
       "color": "#008080",
       "points": [
