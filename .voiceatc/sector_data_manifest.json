@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2605.zip",
-  "bundle_count": 17,
+  "bundle_count": 18,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -75,6 +75,25 @@
           "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_influence.json",
           "sha256": "3e468cb449060d600c16b8f80ee7b99bda58f81879468bb032d154bbde8de665",
           "size_bytes": 174
+        }
+      }
+    },
+    "E/EG/EGXX/EGTT/LONDON_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_configs.json",
+          "sha256": "9eb03229ab59ffb7637716eb2fba9dc35dbcfaf3d09c3bad9249d29a91ae6e9e",
+          "size_bytes": 222
+        },
+        "definitions": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_definitions.json",
+          "sha256": "2065285248bb79307dc1505d5dd97d56e755aef7b311c59e96a12867e132a980",
+          "size_bytes": 538
+        },
+        "influence": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_influence.json",
+          "sha256": "20409c5fdcbfce53e72769f59089987cad4a7ffc86544677008c0fbcc489de36",
+          "size_bytes": 112
         }
       }
     },
@@ -326,12 +345,12 @@
       }
     }
   },
-  "commit_sha": "580ca57e112ee8fab4771e19287d995c5983d594",
+  "commit_sha": "29324a1da0772307f23b1fb8ae5b6172bde3b9f0",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-15/sector-data-2605.zip",
-  "published_at": "2026-05-15T05:00:38Z",
+  "published_at": "2026-05-15T15:53:03Z",
   "release_tag": "daily-2026-05-15",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "7485dce10dc0c5aad54de228364d8974f0d1beffe0195571710ee5effa857d0c",
-  "size_bytes": 38923
+  "sha256": "13dee85000cf3594b943d099e2600abfe191e1adac15e03dc196935658ae758c",
+  "size_bytes": 39847
 }
