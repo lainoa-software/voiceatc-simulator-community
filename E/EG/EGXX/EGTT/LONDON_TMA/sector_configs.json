@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["27"],
+      "sectors": [
+        {
+          "sector_ids": "EGLLINT27",
+          "frequency": "119.730"
+        }
+      ]
+    }
+  ]
+}
