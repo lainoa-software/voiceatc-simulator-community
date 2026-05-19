@@ -4,7 +4,7 @@
     "color_profiles_zip": {
       "asset_name": "color-profiles-2605.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/color-profiles-2605.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/color-profiles-2605.zip",
       "preserves_repo_paths": true,
       "profile_count": 8,
       "sha256": "ee675b2a9593c33b6a20a18882dd67e6c7a08706dd432332511ace37e1874263",
@@ -14,7 +14,7 @@
       "airport_count": 17,
       "asset_name": "misc-drawings-2605.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/misc-drawings-2605.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/misc-drawings-2605.zip",
       "preserves_repo_paths": true,
       "sha256": "b4dba42f7b9fee33754ae58ec646daf7de71d470593efce8c2daaf2d22c013cf",
       "size_bytes": 49335
@@ -23,7 +23,7 @@
       "airport_count": 17,
       "asset_name": "mva-2605.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/mva-2605.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/mva-2605.zip",
       "preserves_repo_paths": true,
       "sha256": "5912def3def0a010ee9ef9e6d0a516fd345ec1a494f9f944efeec06f981937d8",
       "size_bytes": 170936
@@ -32,7 +32,7 @@
       "airac": "2605",
       "asset_name": "routes-2605.tsv",
       "content_type": "text/tab-separated-values; charset=utf-8",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/routes-2605.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/routes-2605.tsv",
       "repo_path": "ROUTES/routes.tsv",
       "route_count": 99869,
       "sha256": "60927ccbaef01a7ca853ef1b4f3f5858cf89ce73a46be50969b946907a9c7dbb",
@@ -42,7 +42,7 @@
       "airport_count": 37,
       "asset_name": "runway-configs-2605.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/runway-configs-2605.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/runway-configs-2605.zip",
       "preserves_repo_paths": true,
       "sha256": "df5b02fed5e69f721332a077b56cfe1fc33e55da696b427f5aecc551aa971907",
       "size_bytes": 11539
@@ -51,16 +51,16 @@
       "asset_name": "sector-data-2605.zip",
       "bundle_count": 18,
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-18/sector-data-2605.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-19/sector-data-2605.zip",
       "preserves_repo_paths": true,
       "sha256": "13dee85000cf3594b943d099e2600abfe191e1adac15e03dc196935658ae758c",
       "size_bytes": 39847
     }
   },
-  "commit_sha": "c12eed1d2a3951bac69c062fb118dbb074953c17",
-  "published_at": "2026-05-18T05:16:47Z",
-  "release_tag": "daily-2026-05-18",
-  "release_title": "Daily Community Release - Monday 2026-05-18",
+  "commit_sha": "cd09864e2140c21a81018950f3598fb29420eca6",
+  "published_at": "2026-05-19T05:12:48Z",
+  "release_tag": "daily-2026-05-19",
+  "release_title": "Daily Community Release - Tuesday 2026-05-19",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 4
 }
