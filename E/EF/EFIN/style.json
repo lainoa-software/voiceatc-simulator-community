@@ -1,0 +1,29 @@
+{
+  "symbol_size": 0.75,
+  "traildot_size": 0.15,
+  "symbol_line_width": 0.7,
+  "forecast_symbol": "assumed",
+  "incoming_symbol": "assumed",
+  "assumed_symbol": "assumed",
+  "of_interest_symbol": "rps",
+  "alien_symbol": "released",
+  "released_symbol": "released",
+  "traildot_symbol": "trail",
+  "defined_symbols": {
+    "released": {
+      "type": "wireframe",
+      "draw": "M 0 7 L 0 7 L 0 -7 L -7 0 L 0 7",
+      "connection_points": [[0, 0]]
+    },
+    "assumed": {
+      "type": "wireframe",
+      "draw": "M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7 M 0 -7 L 0 7 M 7 0 L 0 -7",
+      "connection_points": [[0, 0]]
+    },
+    "trail": {
+      "type": "filled",
+      "draw": "M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7",
+      "connection_points": [[0, 0]]
+    }
+  }
+}
