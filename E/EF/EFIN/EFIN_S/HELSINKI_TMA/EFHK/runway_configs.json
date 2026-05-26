@@ -1,0 +1,17 @@
+{
+  "airport": "EFHK",
+  "runway_configs": [
+    {
+      "id": "22 PARA",
+      "name": "Parallel 22s",
+      "arr": "22L 22R",
+      "dep": "22R"
+    },
+    {
+      "id": "04 PARA",
+      "name": "Parallel 04s",
+      "arr": "04L 04R",
+      "dep": "04R"
+    }
+  ]
+}

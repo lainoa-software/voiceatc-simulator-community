@@ -87,11 +87,11 @@
       "size_bytes": 442047
     }
   },
-  "asset_name": "mva-2604.zip",
-  "commit_sha": "bb4efbf3b91a90fe9fb290cb1b8404588822a694",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-14/mva-2604.zip",
-  "published_at": "2026-05-14T04:57:05Z",
-  "release_tag": "daily-2026-05-14",
+  "asset_name": "mva-2605.zip",
+  "commit_sha": "694861d3d4b33e0e3b3b751d69ca4a0dcd8c1c25",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-26/mva-2605.zip",
+  "published_at": "2026-05-26T05:12:49Z",
+  "release_tag": "daily-2026-05-26",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
   "sha256": "5912def3def0a010ee9ef9e6d0a516fd345ec1a494f9f944efeec06f981937d8",

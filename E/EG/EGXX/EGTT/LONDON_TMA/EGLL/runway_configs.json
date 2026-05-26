@@ -1,0 +1,17 @@
+{
+  "airport": "EGLL",
+  "runway_configs": [
+    {
+      "id": "27",
+      "name": "27s",
+      "arr": "27R",
+      "dep": "27L"
+    },
+    {
+      "id": "09",
+      "name": "09s",
+      "arr": "09L",
+      "dep": "09R"
+    }
+  ]
+}

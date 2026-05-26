@@ -1,5 +1,5 @@
 {
-  "airport_count": 36,
+  "airport_count": 38,
   "airports": {
     "EDDC": {
       "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/EDDC/runway_configs.json",
@@ -20,6 +20,16 @@
       "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/EDDN/runway_configs.json",
       "sha256": "8b9756741206d4ffef54d82e1ba8b7e721c757d94d34ec890770a693518f892b",
       "size_bytes": 226
+    },
+    "EFHK": {
+      "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/EFHK/runway_configs.json",
+      "sha256": "cc35883169c440df1dbc3edeea9ad6d7c31ebf2b924286d8d5e2a67d371d469d",
+      "size_bytes": 268
+    },
+    "EGLL": {
+      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGLL/runway_configs.json",
+      "sha256": "6f8234318561a622fde6c35cb857ed1dd7415d0c8fd55439085518e007bb80f6",
+      "size_bytes": 232
     },
     "EHAM": {
       "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/EHAM/runway_configs.json",
@@ -182,13 +192,13 @@
       "size_bytes": 232
     }
   },
-  "asset_name": "runway-configs-2604.zip",
-  "commit_sha": "bb4efbf3b91a90fe9fb290cb1b8404588822a694",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-14/runway-configs-2604.zip",
-  "published_at": "2026-05-14T04:57:05Z",
-  "release_tag": "daily-2026-05-14",
+  "asset_name": "runway-configs-2605.zip",
+  "commit_sha": "694861d3d4b33e0e3b3b751d69ca4a0dcd8c1c25",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-05-26/runway-configs-2605.zip",
+  "published_at": "2026-05-26T05:12:49Z",
+  "release_tag": "daily-2026-05-26",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "a4c4a9ba716854faee9e9f48e1e7dd1ad9ce407e5db9c146f7d6444ba20fccd6",
-  "size_bytes": 11248
+  "sha256": "7ee50dae2015a28ff8ca0a1b32b8488d99b606029afdd764391ca69583927798",
+  "size_bytes": 11858
 }
