@@ -1,0 +1,12 @@
+{
+  "airac": "2503",
+  "asset_name": "routes_default.tsv",
+  "navdata_cycle": "2503",
+  "navdata_revision": "bundled",
+  "repo_path": "ROUTES/routes_default.tsv",
+  "route_count": 99869,
+  "routes_tier": "offline_fallback",
+  "schema_version": 1,
+  "sha256": "b0c8de9a768c7379b083ab2f87fb839cae25c330be58170c56dcec0902027910",
+  "size_bytes": 14941433
+}

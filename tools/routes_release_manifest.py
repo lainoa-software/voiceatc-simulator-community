@@ -18,7 +18,7 @@ RELEASE_MANIFEST_PATH = ROOT / ".voiceatc" / "release_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 SCHEMA_VERSION = 1
 RELEASE_TITLE_PREFIX = "Daily Community Release"
-BUNDLED_DEFAULT_AIRAC = "2403"
+BUNDLED_DEFAULT_AIRAC = "2503"
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
@@ -187,7 +187,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate ROUTES/routes.tsv and write GitHub-release-backed community manifests.")
     parser.add_argument("--write", action="store_true", help="Write .voiceatc/routes_manifest.json and .voiceatc/release_manifest.json")
     parser.add_argument("--validate-only", action="store_true", help="Validate ROUTES/routes.tsv without writing manifests")
-    parser.add_argument("--validate-default", action="store_true", help="Also validate ROUTES/routes_default.tsv (bundled default AIRAC 2403)")
+    parser.add_argument("--validate-default", action="store_true", help="Also validate ROUTES/routes_default.tsv (bundled default AIRAC 2503)")
     parser.add_argument("--release-tag", default="", help="Release tag, for example daily-2026-03-15")
     parser.add_argument("--release-title", default="", help="Release title, for example Daily Community Release - Saturday 2026-03-15")
     parser.add_argument("--asset-name", default="", help="Release asset name, for example routes-2602.tsv")

@@ -99,21 +99,21 @@ class RoutesReleaseManifestTests(unittest.TestCase):
         self.assertEqual("Daily Community Release - Sunday 2026-03-15", manifest["release_title"])
         self.assertEqual("routes-2602.tsv", manifest["assets"]["routes_tsv"]["asset_name"])
 
-    def test_validate_routes_default_file_passes_with_valid_2403_file(self) -> None:
+    def test_validate_routes_default_file_passes_with_valid_2503_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             default_path = root / "ROUTES" / "routes_default.tsv"
             default_path.parent.mkdir(parents=True, exist_ok=True)
             default_path.write_text(
-                "airac 2403\n"
+                "airac 2503\n"
                 "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
-                "RKSS\tRKPC\tRKSS BULTI Y711 DOTOL RKPC\t2403\tLainoaSoftware\n",
+                "RKSS\tRKPC\tRKSS BULTI Y711 DOTOL RKPC\t2503\tLainoaSoftware\n",
                 encoding="utf-8",
             )
 
             result = MODULE.validate_routes_default_file(root)
 
-            self.assertEqual("2403", result["airac"])
+            self.assertEqual("2503", result["airac"])
             self.assertEqual(1, result["route_count"])
 
     def test_validate_routes_default_file_rejects_wrong_airac(self) -> None:
@@ -128,7 +128,7 @@ class RoutesReleaseManifestTests(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with self.assertRaisesRegex(ValueError, "expected AIRAC 2403 but found 2603"):
+            with self.assertRaisesRegex(ValueError, "expected AIRAC 2503 but found 2603"):
                 MODULE.validate_routes_default_file(root)
 
     def test_validate_routes_default_file_rejects_missing_file(self) -> None:
