@@ -3,11 +3,11 @@
   "controlled_sector_color": "999a95",
 
   "assumed_tfc_color": "010001",
-  "incoming_tfc_color": "999a95",
+  "incoming_tfc_color": "6e6262",
   "selected_tfc_color": "010001",
   "dragging_tfc_color": "010001",
-  "alien_tfc_color": "6e6262",
-  "alien_cs_color": "6e6262",
+  "alien_tfc_color": "999a95",
+  "alien_cs_color": "999a95",
   "released_tfc_color": "9c603b",
   "released_cs_color": "9c603b",
 
