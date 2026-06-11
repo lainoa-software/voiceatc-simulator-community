@@ -22,8 +22,8 @@ class RoutesReleaseManifestTests(unittest.TestCase):
             routes_path.write_text(
                 "airac 2602\n"
                 "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
-                "LEMD\tEGLL\tLEMD NANDO UN10 SAM EGLL\n"
-                "EGLL\tLEMD\tEGLL SAM UL9 NANDO LEMD\n",
+                "LEMD\tEGLL\tLEMD NANDO UN10 SAM EGLL\t2602\tLainoaSoftware\n"
+                "EGLL\tLEMD\tEGLL SAM UL9 NANDO LEMD\t2602\tLainoaSoftware\n",
                 encoding="utf-8",
             )
 
@@ -37,8 +37,70 @@ class RoutesReleaseManifestTests(unittest.TestCase):
             )
 
             self.assertEqual("2602", manifest["airac"])
+            self.assertEqual(2, manifest["schema_version"])
+            self.assertEqual("2602", manifest["source_airac"])
+            self.assertFalse(manifest["compatibility_fallback"])
             self.assertEqual("routes-2602.tsv", manifest["asset_name"])
             self.assertEqual(2, manifest["route_count"])
+
+    def test_build_routes_manifest_marks_previous_cycle_compatibility_fallback(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "ROUTES" / "routes.tsv"
+            routes_path.parent.mkdir(parents=True, exist_ok=True)
+            routes_path.write_text(
+                "airac 2606\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "LEMD\tEGLL\tLEMD DCT NANDO DCT EGLL\t2605\tLainoaSoftware\n"
+                "EGLL\tLEMD\tEGLL DCT SAM DCT LEMD\t2604\tLainoaSoftware\n",
+                encoding="utf-8",
+            )
+
+            manifest = MODULE.build_routes_manifest(
+                release_tag="daily-2026-06-11",
+                asset_name="routes-2606.tsv",
+                download_url="https://github.com/example/releases/download/daily-2026-06-11/routes-2606.tsv",
+                published_at="2026-06-11T10:00:00Z",
+                commit_sha="test-commit",
+                root=root,
+            )
+
+            self.assertEqual("2606", manifest["airac"])
+            self.assertEqual("2605", manifest["source_airac"])
+            self.assertTrue(manifest["compatibility_fallback"])
+
+    def test_parse_routes_file_rejects_creation_airac_newer_than_declared_cycle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "ROUTES" / "routes.tsv"
+            routes_path.parent.mkdir(parents=True, exist_ok=True)
+            routes_path.write_text(
+                "airac 2605\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "LEMD\tEGLL\tLEMD DCT NANDO DCT EGLL\t2606\tLainoaSoftware\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "CREATION_AIRAC 2606 must not be newer than declared AIRAC 2605",
+            ):
+                MODULE.parse_routes_file(root)
+
+    def test_parse_routes_file_rejects_invalid_creation_airac(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "ROUTES" / "routes.tsv"
+            routes_path.parent.mkdir(parents=True, exist_ok=True)
+            routes_path.write_text(
+                "airac 2606\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "LEMD\tEGLL\tLEMD DCT NANDO DCT EGLL\tinvalid\tLainoaSoftware\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "invalid CREATION_AIRAC 'invalid'"):
+                MODULE.parse_routes_file(root)
 
     def test_parse_routes_file_rejects_invalid_header(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -80,11 +142,13 @@ class RoutesReleaseManifestTests(unittest.TestCase):
 
     def test_build_release_manifest_includes_routes_asset(self) -> None:
         routes_manifest = {
-            "schema_version": 1,
+            "schema_version": 2,
             "repo": "lainoa-software/voiceatc-simulator-community",
             "release_tag": "daily-2026-03-15",
             "commit_sha": "test-commit",
             "airac": "2602",
+            "source_airac": "2601",
+            "compatibility_fallback": True,
             "asset_name": "routes-2602.tsv",
             "download_url": "https://github.com/example/releases/download/daily-2026-03-15/routes-2602.tsv",
             "sha256": "abc",
@@ -96,8 +160,11 @@ class RoutesReleaseManifestTests(unittest.TestCase):
         manifest = MODULE.build_release_manifest(routes_manifest, "2026-03-15T01:15:00Z")
 
         self.assertEqual("daily-2026-03-15", manifest["release_tag"])
+        self.assertEqual(1, manifest["schema_version"])
         self.assertEqual("Daily Community Release - Sunday 2026-03-15", manifest["release_title"])
         self.assertEqual("routes-2602.tsv", manifest["assets"]["routes_tsv"]["asset_name"])
+        self.assertEqual("2601", manifest["assets"]["routes_tsv"]["source_airac"])
+        self.assertTrue(manifest["assets"]["routes_tsv"]["compatibility_fallback"])
 
     def test_validate_routes_default_file_passes_with_valid_2503_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

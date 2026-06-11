@@ -26,8 +26,8 @@ def build_fixture_repo(root: Path) -> None:
         "\n".join(
             [
                 "airac 2602",
-                "ORIGIN\tDEST\tFULL_ROUTE",
-                "LEMD\tLEBL\tLEMD TEST LEBL",
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR",
+                "LEMD\tLEBL\tLEMD DCT TEST DCT LEBL\t2601\tLainoaSoftware",
             ]
         )
         + "\n",
@@ -226,6 +226,8 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertIn("sector_data_zip", release_manifest["assets"])
             self.assertIn("misc_drawings_zip", release_manifest["assets"])
             self.assertIn("color_profiles_zip", release_manifest["assets"])
+            self.assertEqual("2601", release_manifest["assets"]["routes_tsv"]["source_airac"])
+            self.assertTrue(release_manifest["assets"]["routes_tsv"]["compatibility_fallback"])
 
             mva_manifest = bundle["manifests"]["mva"]
             self.assertEqual(2, mva_manifest["schema_version"])

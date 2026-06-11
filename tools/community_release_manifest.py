@@ -277,6 +277,8 @@ def build_release_manifest(
             "routes_tsv": {
                 "repo_path": "ROUTES/routes.tsv",
                 "airac": str(routes_manifest.get("airac", "")).strip(),
+                "source_airac": str(routes_manifest.get("source_airac", "")).strip(),
+                "compatibility_fallback": bool(routes_manifest.get("compatibility_fallback", False)),
                 "asset_name": str(routes_manifest.get("asset_name", "")).strip(),
                 "download_url": str(routes_manifest.get("download_url", "")).strip(),
                 "sha256": str(routes_manifest.get("sha256", "")).strip(),
