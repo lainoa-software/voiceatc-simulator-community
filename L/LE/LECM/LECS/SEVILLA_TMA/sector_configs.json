@@ -8,6 +8,19 @@
           "frequency": "120.800"
         }
       ]
+    },
+    {
+      "sector_config_id": "2",
+      "sectors": [
+        {
+          "sector_ids": "LECSASN",
+          "frequency": "128.600"
+        },
+        {
+          "sector_ids": "LECSASV",
+          "frequency": "128.500"
+        }
+      ]
     }
   ]
 }

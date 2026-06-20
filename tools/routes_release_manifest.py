@@ -16,9 +16,10 @@ ROUTES_DEFAULT_PATH = ROOT / "ROUTES" / "routes_default.tsv"
 ROUTES_MANIFEST_PATH = ROOT / ".voiceatc" / "routes_manifest.json"
 RELEASE_MANIFEST_PATH = ROOT / ".voiceatc" / "release_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
-SCHEMA_VERSION = 1
+ROUTES_MANIFEST_SCHEMA_VERSION = 2
+RELEASE_MANIFEST_SCHEMA_VERSION = 1
 RELEASE_TITLE_PREFIX = "Daily Community Release"
-BUNDLED_DEFAULT_AIRAC = "2403"
+BUNDLED_DEFAULT_AIRAC = "2503"
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
@@ -45,6 +46,7 @@ def _parse_routes_tsv(route_path: Path) -> dict[str, object]:
         raise ValueError(f"{route_path}: invalid AIRAC cycle '{airac}'")
 
     route_count = 0
+    source_airac = ""
     for line_number, raw_line in enumerate(lines[1:], start=2):
         line = raw_line.rstrip("\r\n")
         if not line.strip() or line.upper().startswith("ORIGIN"):
@@ -57,6 +59,18 @@ def _parse_routes_tsv(route_path: Path) -> dict[str, object]:
         full_route = parts[2].strip().upper()
         if not origin or not dest:
             raise ValueError(f"{route_path}:{line_number}: origin and dest must be non-empty")
+        creation_airac = parts[3].strip() if len(parts) >= 4 else ""
+        if creation_airac:
+            if not creation_airac.isdigit() or len(creation_airac) != 4:
+                raise ValueError(
+                    f"{route_path}:{line_number}: invalid CREATION_AIRAC '{creation_airac}'"
+                )
+            if creation_airac > airac:
+                raise ValueError(
+                    f"{route_path}:{line_number}: CREATION_AIRAC {creation_airac} "
+                    f"must not be newer than declared AIRAC {airac}"
+                )
+            source_airac = max(source_airac, creation_airac)
         if not full_route:
             continue
         route_count += 1
@@ -64,8 +78,13 @@ def _parse_routes_tsv(route_path: Path) -> dict[str, object]:
     if route_count <= 0:
         raise ValueError(f"{route_path}: no route rows found")
 
+    if not source_airac:
+        source_airac = airac
+
     return {
         "airac": airac,
+        "source_airac": source_airac,
+        "compatibility_fallback": source_airac < airac,
         "route_count": route_count,
         "sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "size_bytes": len(raw_bytes),
@@ -109,11 +128,13 @@ def build_routes_manifest(
 
     routes = parse_routes_file(root)
     return {
-        "schema_version": SCHEMA_VERSION,
+        "schema_version": ROUTES_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
         "release_tag": release_tag.strip(),
         "commit_sha": commit_sha.strip(),
         "airac": str(routes["airac"]),
+        "source_airac": str(routes["source_airac"]),
+        "compatibility_fallback": bool(routes["compatibility_fallback"]),
         "asset_name": asset_name.strip(),
         "download_url": download_url.strip(),
         "sha256": str(routes["sha256"]),
@@ -162,7 +183,7 @@ def build_release_manifest(
     resolved_release_title = release_title.strip() if release_title and release_title.strip() else _build_release_title(release_tag)
 
     return {
-        "schema_version": SCHEMA_VERSION,
+        "schema_version": RELEASE_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
         "release_tag": release_tag,
         "release_title": resolved_release_title,
@@ -172,6 +193,8 @@ def build_release_manifest(
             "routes_tsv": {
                 "repo_path": "ROUTES/routes.tsv",
                 "airac": str(routes_manifest.get("airac", "")).strip(),
+                "source_airac": str(routes_manifest.get("source_airac", "")).strip(),
+                "compatibility_fallback": bool(routes_manifest.get("compatibility_fallback", False)),
                 "asset_name": str(routes_manifest.get("asset_name", "")).strip(),
                 "download_url": str(routes_manifest.get("download_url", "")).strip(),
                 "sha256": str(routes_manifest.get("sha256", "")).strip(),
@@ -187,7 +210,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate ROUTES/routes.tsv and write GitHub-release-backed community manifests.")
     parser.add_argument("--write", action="store_true", help="Write .voiceatc/routes_manifest.json and .voiceatc/release_manifest.json")
     parser.add_argument("--validate-only", action="store_true", help="Validate ROUTES/routes.tsv without writing manifests")
-    parser.add_argument("--validate-default", action="store_true", help="Also validate ROUTES/routes_default.tsv (bundled default AIRAC 2403)")
+    parser.add_argument("--validate-default", action="store_true", help="Also validate ROUTES/routes_default.tsv (bundled default AIRAC 2503)")
     parser.add_argument("--release-tag", default="", help="Release tag, for example daily-2026-03-15")
     parser.add_argument("--release-title", default="", help="Release title, for example Daily Community Release - Saturday 2026-03-15")
     parser.add_argument("--asset-name", default="", help="Release asset name, for example routes-2602.tsv")

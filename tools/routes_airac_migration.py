@@ -54,7 +54,7 @@ from routes_connectivity_check import (  # noqa: E402
 # ---------------------------------------------------------------------------
 # AIRAC guard constant
 # ---------------------------------------------------------------------------
-_PROTECTED_AIRAC_MAX = 2403  # inclusive — 2403 is the bundled default
+_PROTECTED_AIRAC_MAX = 2503  # inclusive — 2503 is the bundled default
 
 
 # ---------------------------------------------------------------------------
@@ -421,7 +421,7 @@ def main() -> int:
     target_airac = args.target_airac.strip()
 
     # -----------------------------------------------------------------------
-    # Hard guard: never modify routes for AIRAC 2403 or older
+    # Hard guard: never modify routes for the bundled default AIRAC or older
     # -----------------------------------------------------------------------
     if not target_airac.isdigit() or len(target_airac) != 4:
         print(f"ERROR: --target-airac must be a 4-digit AIRAC cycle, got: {target_airac!r}",

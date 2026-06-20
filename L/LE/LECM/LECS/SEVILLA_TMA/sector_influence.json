@@ -3,6 +3,14 @@
     {
       "sector_id": "LECSAPT",
       "airports": ["LEZL", "LEJR"]
+    },
+    {
+      "sector_id": "LECSASN",
+      "airports": ["LEZL"]
+    },
+    {
+      "sector_id": "LECSASV",
+      "airports": ["LEJR"]
     }
   ]
 }

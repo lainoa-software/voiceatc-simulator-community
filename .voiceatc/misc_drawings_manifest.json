@@ -1,10 +1,35 @@
 {
-  "airport_count": 13,
+  "airport_count": 18,
   "airports": {
+    "EDDC": {
+      "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/misc_drawings.json",
+      "sha256": "bb02484b3242322accbdd8ada513d3560e7adace8c904deb2ee16e7dfee462ce",
+      "size_bytes": 745
+    },
     "EDDF": {
       "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/misc_drawings.json",
-      "sha256": "93c55f09958211e0a6e289da71fb60a1e7214b715f47082498cd017c9fcda509",
-      "size_bytes": 7247
+      "sha256": "68c12602c6c343922e8736284f90a00a7c498e9cc4d8ed025114c5da9ff8b850",
+      "size_bytes": 7229
+    },
+    "EDDM": {
+      "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/misc_drawings.json",
+      "sha256": "bb74a84ae7ea3f376ceb03980097e05635e1402219e7fb248e3fea36b4f995bf",
+      "size_bytes": 1709
+    },
+    "EDDN": {
+      "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/misc_drawings.json",
+      "sha256": "f6fee453097975b537abb21318a8f56b9a9b318de80cca68b07545db899d33b8",
+      "size_bytes": 2166
+    },
+    "EFHK": {
+      "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/misc_drawings.json",
+      "sha256": "7fcdda24e92de9ebdaf82284179f695fd608b40213b9c5a8ae8f04872e9ffc4c",
+      "size_bytes": 93
+    },
+    "EGLL": {
+      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/misc_drawings.json",
+      "sha256": "5bea4d9901ae0c33e70454e3cf562b0f73018db94b8fb3a64106319ce7d0faac",
+      "size_bytes": 58976
     },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/misc_drawings.json",
@@ -48,8 +73,8 @@
     },
     "LEMH": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/misc_drawings.json",
-      "sha256": "ee873bb10b84178fc1a35aea9d8b27f9cdc7ba69ff74ec19b571ee32ddcf947b",
-      "size_bytes": 3379
+      "sha256": "2f9fb62db2a9da8e0ed2f642cb712a8983462e35cdbb9d746f36bd04d695ed01",
+      "size_bytes": 3742
     },
     "OMDB": {
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
@@ -67,13 +92,13 @@
       "size_bytes": 21639
     }
   },
-  "asset_name": "misc-drawings-2604.zip",
-  "commit_sha": "e24fb8f0c53b96799553749b55a23e70ffb643ca",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-24/misc-drawings-2604.zip",
-  "published_at": "2026-04-24T10:06:47Z",
-  "release_tag": "daily-2026-04-24",
+  "asset_name": "misc-drawings-2606.zip",
+  "commit_sha": "9961384031934a94a4b76fd59bf9eeff86217073",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-20/misc-drawings-2606.zip",
+  "published_at": "2026-06-20T05:42:43Z",
+  "release_tag": "daily-2026-06-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "6d1c6846366b4edbfb3cbc50f80d43d65d1608a53fe2bd7e3a264934f78505a1",
-  "size_bytes": 36945
+  "sha256": "ab6b9b3965e0d6ab89c74bcf5a23efb852f5a81fa8b240e0bf1a6f2674822eaf",
+  "size_bytes": 49587
 }

@@ -1,6 +1,6 @@
 {
-  "asset_name": "sector-data-2604.zip",
-  "bundle_count": 15,
+  "asset_name": "sector-data-2606.zip",
+  "bundle_count": 19,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -18,6 +18,101 @@
           "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/sector_influence.json",
           "sha256": "20f56343f4729eb1159006604a5a7ba2f2822623d29718664473ffaad00162a9",
           "size_bytes": 99
+        }
+      }
+    },
+    "E/ED/EDXX/EDMM/EDDC_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/sector_configs.json",
+          "sha256": "8b255dbeae6c2272d814ec07b6380aca663ff1a82a62898539a709a17311af0b",
+          "size_bytes": 224
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/sector_definitions.json",
+          "sha256": "a9a4f32e09d74877e357e8cde86f8e184a864a1a151180b7344da4f1819160de",
+          "size_bytes": 722
+        },
+        "influence": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/sector_influence.json",
+          "sha256": "e9661ffd90c06a87f81f136c3fbd80dd6f37ebabb552a7caaa28ce6c9d6d01b1",
+          "size_bytes": 106
+        }
+      }
+    },
+    "E/ED/EDXX/EDMM/EDDM_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/sector_configs.json",
+          "sha256": "c23c43175a57c275a17d889d9b78d953ab4eab7ec2a8adbf25fafe3b5027159f",
+          "size_bytes": 983
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/sector_definitions.json",
+          "sha256": "fabf23ec369b8f6a754cabea0a54b95c517a81ca7f9e1349687cd7f53b15ef1c",
+          "size_bytes": 5166
+        },
+        "influence": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/sector_influence.json",
+          "sha256": "711be999533613145a255d86e347fc404fd28bf41126aed0644732eee459ed17",
+          "size_bytes": 468
+        }
+      }
+    },
+    "E/ED/EDXX/EDMM/EDDN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_configs.json",
+          "sha256": "7688afa57ee740424dbe6d543ae8ed093cb8307b7d24c759e5b782a32420b7ec",
+          "size_bytes": 233
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_definitions.json",
+          "sha256": "90bcdd296cc766bf3cbba5c229ea77152ba1ac23a443a8976d7302b14f2a868c",
+          "size_bytes": 2199
+        },
+        "influence": {
+          "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/sector_influence.json",
+          "sha256": "3e468cb449060d600c16b8f80ee7b99bda58f81879468bb032d154bbde8de665",
+          "size_bytes": 174
+        }
+      }
+    },
+    "E/EF/EFIN/EFIN_S/HELSINKI_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/sector_configs.json",
+          "sha256": "5d8df3557c2a0716ffbebb33794d194d5154a4078b6868d48aeeee9360ae4c68",
+          "size_bytes": 267
+        },
+        "definitions": {
+          "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/sector_definitions.json",
+          "sha256": "bcb11854b818751688f2620b07ae7932f084a20cea75407cae54ca952fd24da0",
+          "size_bytes": 2654
+        },
+        "influence": {
+          "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/sector_influence.json",
+          "sha256": "aef01bb9cc0cae162cc1dc0b8bb12db8aa1a53d4d8c4ade7bacbf7595dcaac11",
+          "size_bytes": 101
+        }
+      }
+    },
+    "E/EG/EGXX/EGTT/LONDON_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_configs.json",
+          "sha256": "9eb03229ab59ffb7637716eb2fba9dc35dbcfaf3d09c3bad9249d29a91ae6e9e",
+          "size_bytes": 222
+        },
+        "definitions": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_definitions.json",
+          "sha256": "2065285248bb79307dc1505d5dd97d56e755aef7b311c59e96a12867e132a980",
+          "size_bytes": 538
+        },
+        "influence": {
+          "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/sector_influence.json",
+          "sha256": "20409c5fdcbfce53e72769f59089987cad4a7ffc86544677008c0fbcc489de36",
+          "size_bytes": 112
         }
       }
     },
@@ -101,37 +196,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_configs.json",
-          "sha256": "41ce5108272c8e0d018f9ed28c801ec408c62d69339be3e52180d40d5081e237",
-          "size_bytes": 278
+          "sha256": "61fb414329d97960ae93ba6c0793692947a3da5197581a4c02e6fca1e506e299",
+          "size_bytes": 367
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_definitions.json",
-          "sha256": "e0d6bdfcf83c17b6162b667081913f0f96b32d274c67781bb5c74f2cb74e2040",
-          "size_bytes": 6904
+          "sha256": "a2d5db37dc44b8740deb85c1e23de8ed2a859dbafedd90d8272a88caca371b9a",
+          "size_bytes": 14867
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_influence.json",
-          "sha256": "35a2f0061cf12f7ff1f9cc5712c8661af8b9b28aefba1d13b3b947ee76ca632c",
-          "size_bytes": 172
-        }
-      }
-    },
-    "L/LE/LECB/LECB_E/PALMA_TMA/LEMH": {
-      "files": {
-        "configs": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_configs.json",
-          "sha256": "8bdb848ba022db666a651f6bf3d165c58a7a4c608546e096c299fb7450147029",
-          "size_bytes": 189
-        },
-        "definitions": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_definitions.json",
-          "sha256": "a72a1579a3805bc304f2917a34c7bc24186fa1e12def8704aa91e01071453df7",
-          "size_bytes": 7996
-        },
-        "influence": {
-          "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/sector_influence.json",
-          "sha256": "f048096195781535cb4f345204af7d6a5ba9a8d712b5ca25d87ced9fdd6c3b97",
-          "size_bytes": 102
+          "sha256": "c05b3dbeb0706b77186f79cb44be3ad892626c02b5f14fc7a100984ebd537115",
+          "size_bytes": 242
         }
       }
     },
@@ -139,18 +215,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_configs.json",
-          "sha256": "0795d91954750f0c7ee77e7200486b78d1380971d905d9fa5ea8aff5699f9a52",
-          "size_bytes": 245
+          "sha256": "278a0f414024a58a49f01a9234b293c28f24b3cc9302eab9907dce1e28f79096",
+          "size_bytes": 651
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
-          "sha256": "6f88fc495c3dd0a6142fb1ab4247b8fabb585995c49fce0d9f3849806d03e636",
-          "size_bytes": 19712
+          "sha256": "cc50c66ccbc9daefd77941a7faa026ad0a6456cf1c8277ddaa47c5ffd34afdfa",
+          "size_bytes": 36472
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
-          "sha256": "5587e24a6b637a109d76fde9b9f7ed961f4a31af1b5f0cf134dcc309b9800b64",
-          "size_bytes": 143
+          "sha256": "e187e5b1625d6fe195a4a27e36098352b36fd7943ea779f6ff1d970c49749cf4",
+          "size_bytes": 283
         }
       }
     },
@@ -253,18 +329,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_configs.json",
-          "sha256": "6dffc0b1f1f17b9e1506b63fa2ee0a8eb62e2b5c3e24dc14a4ad1da3fef49a62",
-          "size_bytes": 188
+          "sha256": "badb74796f77e4486df89b3d3a4bf62397d79796f21204e008acaa7a9b799953",
+          "size_bytes": 436
         },
         "definitions": {
           "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_definitions.json",
-          "sha256": "f33859fc2d4af4c1334f9b4e146992ec0f3516a45582c8090c3c8cb44b14b8db",
-          "size_bytes": 9575
+          "sha256": "0964102eeec8cf89b37c29c033f7e42cffc79ac6769fa4a716e7e95790b031e2",
+          "size_bytes": 11972
         },
         "influence": {
           "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_influence.json",
-          "sha256": "ab8bbd272d845c99c4ee39fdbd5141cbf9e49036dfdd2f0649e3c05bf2bd7784",
-          "size_bytes": 110
+          "sha256": "92103e3d4a279fdb4642cd38797dee5dfb5a52bd3a2d4454e6d464e807e3cf95",
+          "size_bytes": 250
         }
       }
     },
@@ -288,12 +364,12 @@
       }
     }
   },
-  "commit_sha": "e24fb8f0c53b96799553749b55a23e70ffb643ca",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-24/sector-data-2604.zip",
-  "published_at": "2026-04-24T10:06:47Z",
-  "release_tag": "daily-2026-04-24",
+  "commit_sha": "9961384031934a94a4b76fd59bf9eeff86217073",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-20/sector-data-2606.zip",
+  "published_at": "2026-06-20T05:42:43Z",
+  "release_tag": "daily-2026-06-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "4bfb07078d25e175779df9844812e93173e98285d12da6aef77f616b0bf76180",
-  "size_bytes": 31678
+  "sha256": "029829e164ee58eb59a9cc8e48add63672602f5980cf61e9bd5236d13cfc6cda",
+  "size_bytes": 41156
 }

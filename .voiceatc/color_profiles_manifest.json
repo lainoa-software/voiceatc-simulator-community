@@ -1,20 +1,34 @@
 {
-  "asset_name": "color-profiles-2604.zip",
-  "commit_sha": "e24fb8f0c53b96799553749b55a23e70ffb643ca",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-04-24/color-profiles-2604.zip",
-  "profile_count": 8,
+  "asset_name": "color-profiles-2606.zip",
+  "commit_sha": "9961384031934a94a4b76fd59bf9eeff86217073",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-20/color-profiles-2606.zip",
+  "profile_count": 9,
   "profiles": {
-    "E/ED/EDXX/EDGG": {
+    "E/ED/EDXX": {
       "files": {
         "colors": {
-          "repo_path": "E/ED/EDXX/EDGG/colors.json",
-          "sha256": "93e6b4ee38ea16b6aedec515404603946081468351ba22e34d958ccaad85485f",
-          "size_bytes": 734
+          "repo_path": "E/ED/EDXX/colors.json",
+          "sha256": "f4967b1779ae67bb0883eb90511378a415249db6747aa4421a022c3f6dd1c79a",
+          "size_bytes": 773
         },
         "style": {
-          "repo_path": "E/ED/EDXX/EDGG/style.json",
+          "repo_path": "E/ED/EDXX/style.json",
           "sha256": "00727b2e663e99840c9b7f1bc146ecdfc0fd2c5399b724dfde6db870e6dd625c",
           "size_bytes": 437
+        }
+      }
+    },
+    "E/EF/EFIN": {
+      "files": {
+        "colors": {
+          "repo_path": "E/EF/EFIN/colors.json",
+          "sha256": "aadacbd49816dbb1b052d810334dafd8b2794f4e918b66cb98aa38b21fd1c318",
+          "size_bytes": 773
+        },
+        "style": {
+          "repo_path": "E/EF/EFIN/style.json",
+          "sha256": "c19778e08bd151792c6a833884d8b457c6289fe8ef59b3a0fda24e6354d40d25",
+          "size_bytes": 765
         }
       }
     },
@@ -106,16 +120,16 @@
         },
         "style": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/style.json",
-          "sha256": "ff173526ac6ba78730ba76a18d8587e4515935d21942f7faf47cbcdbbe37841d",
-          "size_bytes": 843
+          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
+          "size_bytes": 854
         }
       }
     }
   },
-  "published_at": "2026-04-24T10:06:47Z",
-  "release_tag": "daily-2026-04-24",
+  "published_at": "2026-06-20T05:42:43Z",
+  "release_tag": "daily-2026-06-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "08d72df46784567bd47c51797f1f6397019b31f94569c24dbc602509d7fc4b88",
-  "size_bytes": 5597
+  "sha256": "b17d9c23c6af0962b2a8441bffbe9fef203df39b6fe0552b98ed402254fe3baf",
+  "size_bytes": 6344
 }

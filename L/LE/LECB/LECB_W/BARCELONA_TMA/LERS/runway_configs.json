@@ -1,0 +1,17 @@
+{
+  "airport": "LERS",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "EAST",
+      "arr": "07",
+      "dep": "07"
+    },
+    {
+      "id": "WEST",
+      "name": "WEST",
+      "arr": "25",
+      "dep": "25"
+    }
+  ]
+}

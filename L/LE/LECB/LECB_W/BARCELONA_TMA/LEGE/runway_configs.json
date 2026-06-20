@@ -1,0 +1,17 @@
+{
+  "airport": "LEGE",
+  "runway_configs": [
+    {
+      "id": "NORTH",
+      "name": "NORTH",
+      "arr": "01",
+      "dep": "01"
+    },
+    {
+      "id": "SOUTH",
+      "name": "SOUTH",
+      "arr": "19",
+      "dep": "19"
+    }
+  ]
+}
