@@ -1,5 +1,5 @@
 {
-  "airport_count": 17,
+  "airport_count": 18,
   "airports": {
     "EHAM": {
       "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/mva.json",
@@ -85,15 +85,20 @@
       "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/mva.json",
       "sha256": "e34c683e0edf66d9d724c620e60d1da3c94cf9e962972d26c076c61fe1bed64e",
       "size_bytes": 442047
+    },
+    "RCTP": {
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/mva.json",
+      "sha256": "acc80c8f6960033be4eb4bfa81abc60351a2002c3178230055df3514d8201e87",
+      "size_bytes": 162875
     }
   },
   "asset_name": "mva-2606.zip",
-  "commit_sha": "36b60388e9975edf82d5108ecc62d7ea7bbb63a8",
+  "commit_sha": "c7b4f3a980c3489677b5867cb118a1b014cb3e6e",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-21/mva-2606.zip",
-  "published_at": "2026-06-21T06:16:58Z",
+  "published_at": "2026-06-21T09:08:32Z",
   "release_tag": "daily-2026-06-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "5912def3def0a010ee9ef9e6d0a516fd345ec1a494f9f944efeec06f981937d8",
-  "size_bytes": 170936
+  "sha256": "24e3667db66f15bf2ffbb7a4921aad678a3adace69782cf174062dffb46fefb1",
+  "size_bytes": 197481
 }

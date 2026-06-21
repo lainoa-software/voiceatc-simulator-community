@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2606.zip",
-  "bundle_count": 19,
+  "bundle_count": 20,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
       "files": {
@@ -362,14 +362,33 @@
           "size_bytes": 118
         }
       }
+    },
+    "R/RC/RCTP_S_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCTP_S_APP/sector_configs.json",
+          "sha256": "57855f9999c206d3b6f42809cf71f9d7bda9f066516881f2a3095a6731c6de7f",
+          "size_bytes": 228
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCTP_S_APP/sector_definitions.json",
+          "sha256": "7bb869c087f6ec64b1626d18dc7c1030bb71d0151331a67e757eb1a560af957b",
+          "size_bytes": 849
+        },
+        "influence": {
+          "repo_path": "R/RC/RCTP_S_APP/sector_influence.json",
+          "sha256": "2407429e5edf479df44b3612a4ddaa9a023905b6c7b0ae88d0883d954a6642f3",
+          "size_bytes": 114
+        }
+      }
     }
   },
-  "commit_sha": "36b60388e9975edf82d5108ecc62d7ea7bbb63a8",
+  "commit_sha": "c7b4f3a980c3489677b5867cb118a1b014cb3e6e",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-21/sector-data-2606.zip",
-  "published_at": "2026-06-21T06:16:58Z",
+  "published_at": "2026-06-21T09:08:32Z",
   "release_tag": "daily-2026-06-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "029829e164ee58eb59a9cc8e48add63672602f5980cf61e9bd5236d13cfc6cda",
-  "size_bytes": 41156
+  "sha256": "a2017a80191dde8b0beaf02d12dc411f708ac05eb0d38e2ae36f045e6745970d",
+  "size_bytes": 42074
 }

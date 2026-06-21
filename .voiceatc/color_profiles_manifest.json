@@ -1,8 +1,8 @@
 {
   "asset_name": "color-profiles-2606.zip",
-  "commit_sha": "36b60388e9975edf82d5108ecc62d7ea7bbb63a8",
+  "commit_sha": "c7b4f3a980c3489677b5867cb118a1b014cb3e6e",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-21/color-profiles-2606.zip",
-  "profile_count": 9,
+  "profile_count": 11,
   "profiles": {
     "E/ED/EDXX": {
       "files": {
@@ -124,12 +124,40 @@
           "size_bytes": 854
         }
       }
+    },
+    "R/RK/RKRR/INCHEON_TMA": {
+      "files": {
+        "colors": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/colors.json",
+          "sha256": "df93e5d67a2dab1c298f69f6112583fc5248d525efe72cc7655bce02ce76fd88",
+          "size_bytes": 773
+        },
+        "style": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/style.json",
+          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
+          "size_bytes": 854
+        }
+      }
+    },
+    "V/VH/VHHX/HONGKONG_TMA": {
+      "files": {
+        "colors": {
+          "repo_path": "V/VH/VHHX/HONGKONG_TMA/colors.json",
+          "sha256": "393d459d5fd11d584bde83a0a28dce322aa2d87dc482faa3b0ce8446a8474c27",
+          "size_bytes": 773
+        },
+        "style": {
+          "repo_path": "V/VH/VHHX/HONGKONG_TMA/style.json",
+          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
+          "size_bytes": 854
+        }
+      }
     }
   },
-  "published_at": "2026-06-21T06:16:58Z",
+  "published_at": "2026-06-21T09:08:32Z",
   "release_tag": "daily-2026-06-21",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "b17d9c23c6af0962b2a8441bffbe9fef203df39b6fe0552b98ed402254fe3baf",
-  "size_bytes": 6344
+  "sha256": "44f8a5708e9c986567d7a8882dcfe93903719eeba1af1561792b979935783665",
+  "size_bytes": 8116
 }
