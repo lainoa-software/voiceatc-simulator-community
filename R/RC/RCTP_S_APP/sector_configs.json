@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "TTS",
+      "runway_configs": [ "05L", "05R" ],
+      "sectors": [
+        {
+          "sector_ids": [ "TTS" ],
+          "frequency": "125.100"
+        }
+      ]
+    }
+  ]
+}
