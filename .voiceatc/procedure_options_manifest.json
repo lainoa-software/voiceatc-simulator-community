@@ -2,11 +2,11 @@
   "airports": {
     "EDDS": {
       "repo_path": "E/ED/EDXX/EDGG/EDDS_TMA/EDDS/procedure_options.json",
-      "sha256": "c469b61a36756207a45d5d4901eab269d7dfdc6bc53782a43c5b754b3612e563",
-      "size_bytes": 1703
+      "sha256": "d2c1cd570c31c4198fe063914fa78cec79c68cd5cba1e0d00c79dcd155507802",
+      "size_bytes": 1748
     }
   },
-  "published_at": "2026-06-29T12:16:03Z",
+  "published_at": "2026-06-29T15:10:38Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

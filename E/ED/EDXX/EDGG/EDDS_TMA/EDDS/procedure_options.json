@@ -1,51 +1,52 @@
 {
-  "airport": "EDDS",
+  "airport": "edds",
   "schema_version": 1,
   "airac_min": 2604,
   "defaults": { "spawn_enabled": true },
+  "transitions": { "spawn_enabled": false },
   "stars": {
-    "REUT5A": { "spawn_enabled": false },
-    "TEKS5A": { "spawn_enabled": false }
+    "reut5a": { "spawn_enabled": false },
+    "teks5a": { "spawn_enabled": false }
   },
   "sids": {},
   "iaps": {},
   "runways": {
     "25": {
       "stars": {
-        "BADS2A": { "spawn_enabled": true },
-        "GEBN1W": { "spawn_enabled": true },
-        "TEKS1W": { "spawn_enabled": true },
-        "REUT1W": { "spawn_enabled": true },
-        "LUPO1W": { "spawn_enabled": true },
-        "SUL1W": { "spawn_enabled": true },
-        "KRH1W": { "spawn_enabled": true },
-        "TAGI1W": { "spawn_enabled": true },
-        "REUT5A": { "spawn_enabled": false },
-        "TEKS5A": { "spawn_enabled": false },
-        "BABE1E": { "spawn_enabled": false },
-        "DENE1E": { "spawn_enabled": false },
-        "DITB1E": { "spawn_enabled": false },
-        "KRH1E": { "spawn_enabled": false },
-        "NOSB1E": { "spawn_enabled": false }
+        "bads2a": { "spawn_enabled": true },
+        "gebn1w": { "spawn_enabled": true },
+        "teks1w": { "spawn_enabled": true },
+        "reut1w": { "spawn_enabled": true },
+        "lupo1w": { "spawn_enabled": true },
+        "sul1w": { "spawn_enabled": true },
+        "krh1w": { "spawn_enabled": true },
+        "tagi1w": { "spawn_enabled": true },
+        "reut5a": { "spawn_enabled": false },
+        "teks5a": { "spawn_enabled": false },
+        "babe1e": { "spawn_enabled": false },
+        "dene1e": { "spawn_enabled": false },
+        "ditb1e": { "spawn_enabled": false },
+        "krh1e": { "spawn_enabled": false },
+        "nosb1e": { "spawn_enabled": false }
       }
     },
     "07": {
       "stars": {
-        "BABE1E": { "spawn_enabled": true },
-        "BADS2A": { "spawn_enabled": true },
-        "DENE1E": { "spawn_enabled": true },
-        "DITB1E": { "spawn_enabled": true },
-        "KRH1E": { "spawn_enabled": true },
-        "NOSB1E": { "spawn_enabled": true },
-        "REUT5A": { "spawn_enabled": false },
-        "TEKS5A": { "spawn_enabled": false },
-        "GEBN1W": { "spawn_enabled": false },
-        "KRH1W": { "spawn_enabled": false },
-        "LUPO1W": { "spawn_enabled": false },
-        "REUT1W": { "spawn_enabled": false },
-        "SUL1W": { "spawn_enabled": false },
-        "TAGI1W": { "spawn_enabled": false },
-        "TEKS1W": { "spawn_enabled": false }
+        "babe1e": { "spawn_enabled": true },
+        "bads2a": { "spawn_enabled": true },
+        "dene1e": { "spawn_enabled": true },
+        "ditb1e": { "spawn_enabled": true },
+        "krh1e": { "spawn_enabled": true },
+        "nosb1e": { "spawn_enabled": true },
+        "reut5a": { "spawn_enabled": false },
+        "teks5a": { "spawn_enabled": false },
+        "gebn1w": { "spawn_enabled": false },
+        "krh1w": { "spawn_enabled": false },
+        "lupo1w": { "spawn_enabled": false },
+        "reut1w": { "spawn_enabled": false },
+        "sul1w": { "spawn_enabled": false },
+        "tagi1w": { "spawn_enabled": false },
+        "teks1w": { "spawn_enabled": false }
       }
     }
   }

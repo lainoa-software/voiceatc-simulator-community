@@ -71,6 +71,20 @@ def _validate_enabled_flag(container: object, where: str, path: Path) -> None:
         raise ValueError(f"{path}: {where}.spawn_enabled must be true or false")
 
 
+def _validate_transitions(container: object, where: str, path: Path) -> None:
+    """Validate a `transitions` block: an optional blanket `spawn_enabled` bool
+    (forbids/allows every approach feeder at once) plus optional per-feeder
+    `{spawn_enabled: bool}` objects keyed by transition ident."""
+    if not isinstance(container, dict):
+        raise ValueError(f"{path}: '{where}' must be a JSON object")
+    for key, value in container.items():
+        if key == "spawn_enabled":
+            if not isinstance(value, bool):
+                raise ValueError(f"{path}: {where}.spawn_enabled must be true or false")
+            continue
+        _validate_enabled_flag(value, f"{where}.{key}", path)
+
+
 def _validate_buckets(payload: dict[str, object], prefix: str, path: Path) -> None:
     for bucket in BUCKETS:
         if bucket not in payload:
@@ -89,6 +103,8 @@ def validate_options_schema(payload: dict[str, object], path: Path) -> None:
         if key in payload and not isinstance(payload[key], int):
             raise ValueError(f"{path}: '{key}' must be an integer")
     _validate_buckets(payload, "", path)
+    if "transitions" in payload:
+        _validate_transitions(payload["transitions"], "transitions", path)
     if "runways" in payload:
         runways = payload["runways"]
         if not isinstance(runways, dict):
@@ -99,6 +115,8 @@ def validate_options_schema(payload: dict[str, object], path: Path) -> None:
             if not isinstance(runway_payload, dict):
                 raise ValueError(f"{path}: 'runways.{runway_key}' must be a JSON object")
             _validate_buckets(runway_payload, f"runways.{runway_key}.", path)
+            if "transitions" in runway_payload:
+                _validate_transitions(runway_payload["transitions"], f"runways.{runway_key}.transitions", path)
 
 
 def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:

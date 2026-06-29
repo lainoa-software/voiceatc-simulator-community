@@ -52,6 +52,35 @@ Most procedures are already locked to one landing/departure direction by the nav
 }
 ```
 
+### Approach transitions / feeders (`transitions`)
+Approaches often have feeder **transitions** (an IAF feeder such as `LBU25`) that bridge enroute traffic onto the final approach. At airports whose arrivals already lead onto the final approach, those feeders are rarely flown, and you may not want auto-generated traffic spawning onto them. Add an optional `transitions` block to forbid them for generated traffic. It only affects spawned traffic — a controller can still clear any feeder manually.
+
+The block mirrors the per-procedure shape but also accepts a blanket `spawn_enabled` directly under `transitions` (like `defaults`): set it once to disable **every** feeder, and optionally re-enable named feeders. The **final approach itself is never affected** — aircraft are simply vectored onto final instead of flying the feeder. You can also nest `transitions` inside a `runways` entry for per-direction control.
+
+```json
+{
+  "airport": "EDDS",
+  "schema_version": 1,
+  "airac_min": 2604,
+  "transitions": { "spawn_enabled": false }
+}
+```
+
+Granular form (forbid all feeders except one), and the per-feeder resolution order — per-runway per-feeder → global per-feeder → per-runway blanket → global blanket → `defaults.spawn_enabled` → enabled:
+
+```json
+{
+  "airport": "EDDS",
+  "schema_version": 1,
+  "transitions": {
+    "spawn_enabled": false,
+    "LBU25": { "spawn_enabled": true }
+  }
+}
+```
+
+Keys are matched case-insensitively, so you may write idents (and the rest of the file) in lower case if you prefer consistent formatting.
+
 ## Bugs, Suggestions & Feedback
 Open Github issues regarding the issue, suggestion or feedback. Remember to explain it thoroughly so someone can help you.
 
