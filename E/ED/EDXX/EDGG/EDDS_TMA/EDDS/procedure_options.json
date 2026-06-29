@@ -1,0 +1,52 @@
+{
+  "airport": "EDDS",
+  "schema_version": 1,
+  "airac_min": 2604,
+  "defaults": { "spawn_enabled": true },
+  "stars": {
+    "REUT5A": { "spawn_enabled": false },
+    "TEKS5A": { "spawn_enabled": false }
+  },
+  "sids": {},
+  "iaps": {},
+  "runways": {
+    "25": {
+      "stars": {
+        "BADS2A": { "spawn_enabled": true },
+        "GEBN1W": { "spawn_enabled": true },
+        "TEKS1W": { "spawn_enabled": true },
+        "REUT1W": { "spawn_enabled": true },
+        "LUPO1W": { "spawn_enabled": true },
+        "SUL1W": { "spawn_enabled": true },
+        "KRH1W": { "spawn_enabled": true },
+        "TAGI1W": { "spawn_enabled": true },
+        "REUT5A": { "spawn_enabled": false },
+        "TEKS5A": { "spawn_enabled": false },
+        "BABE1E": { "spawn_enabled": false },
+        "DENE1E": { "spawn_enabled": false },
+        "DITB1E": { "spawn_enabled": false },
+        "KRH1E": { "spawn_enabled": false },
+        "NOSB1E": { "spawn_enabled": false }
+      }
+    },
+    "07": {
+      "stars": {
+        "BABE1E": { "spawn_enabled": true },
+        "BADS2A": { "spawn_enabled": true },
+        "DENE1E": { "spawn_enabled": true },
+        "DITB1E": { "spawn_enabled": true },
+        "KRH1E": { "spawn_enabled": true },
+        "NOSB1E": { "spawn_enabled": true },
+        "REUT5A": { "spawn_enabled": false },
+        "TEKS5A": { "spawn_enabled": false },
+        "GEBN1W": { "spawn_enabled": false },
+        "KRH1W": { "spawn_enabled": false },
+        "LUPO1W": { "spawn_enabled": false },
+        "REUT1W": { "spawn_enabled": false },
+        "SUL1W": { "spawn_enabled": false },
+        "TAGI1W": { "spawn_enabled": false },
+        "TEKS1W": { "spawn_enabled": false }
+      }
+    }
+  }
+}
