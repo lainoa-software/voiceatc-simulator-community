@@ -1,0 +1,140 @@
+{
+  "airport": "essa",
+  "schema_version": 1,
+  "airac_min": 2606,
+  "defaults": { "spawn_enabled": true },
+  "stars": {},
+  "sids": {},
+  "iaps": {},
+  "runways": {
+    "26": {
+      "stars": {
+        "elto2h": { "spawn_enabled": false }
+      }
+    },
+    "19R": {
+      "sids": {
+        "hapz1g": { "spawn_enabled": false }
+      }
+    },
+    "01L": {
+      "sids": {
+        "meng2c": { "spawn_enabled": false }
+      }
+    }
+  },
+  "configs": {
+    "4": {
+      "sids": {
+        "ABEN4R": { "spawn_enabled": false },
+        "DIGL4R": { "spawn_enabled": false },
+        "GALN4R": { "spawn_enabled": false },
+        "ROKN4R": { "spawn_enabled": false },
+        "TALE6R": { "spawn_enabled": false },
+        "LUMA6R": { "spawn_enabled": false },
+        "TOVR5R": { "spawn_enabled": false },
+        "BABA4R": { "spawn_enabled": false }
+      }
+    },
+    "5": {
+      "sids": {
+        "ABEN4R": { "spawn_enabled": false },
+        "DIGL4R": { "spawn_enabled": false },
+        "GALN4R": { "spawn_enabled": false },
+        "ROKN4R": { "spawn_enabled": false },
+        "TALE6R": { "spawn_enabled": false },
+        "LUMA6R": { "spawn_enabled": false },
+        "TOVR5R": { "spawn_enabled": false },
+        "BABA4R": { "spawn_enabled": false }
+      }
+    },
+    "7": {
+      "sids": {
+        "INWI1L": { "spawn_enabled": false },
+        "NOSL6L": { "spawn_enabled": false },
+        "PETE2L": { "spawn_enabled": false },
+        "ARS4L": { "spawn_enabled": false },
+        "TALE6R": { "spawn_enabled": false },
+        "LUMA6R": { "spawn_enabled": false },
+        "TOVR5L": { "spawn_enabled": false },
+        "BABA4L": { "spawn_enabled": false }
+      }
+    },
+    "8": {
+      "sids": {
+        "INWI1E": { "spawn_enabled": false },
+        "NOSL6E": { "spawn_enabled": false },
+        "PETE2E": { "spawn_enabled": false },
+        "ARS6E": { "spawn_enabled": false }
+      }
+    },
+    "9A": {
+      "sids": {
+        "INWI1E": { "spawn_enabled": false },
+        "NOSL6E": { "spawn_enabled": false },
+        "PETE2E": { "spawn_enabled": false },
+        "ARS6E": { "spawn_enabled": false }
+      }
+    },
+    "9B": {
+      "sids": {
+        "ABEN6Q": { "spawn_enabled": false },
+        "DIGL6Q": { "spawn_enabled": false },
+        "GALN6Q": { "spawn_enabled": false },
+        "ARS6E": { "spawn_enabled": false }
+      }
+    },
+    "9C": {
+      "sids": {
+        "ABEN6Q": { "spawn_enabled": false },
+        "DIGL6Q": { "spawn_enabled": false },
+        "GALN6Q": { "spawn_enabled": false },
+        "ROKN6Q": { "spawn_enabled": false }
+      }
+    },
+    "10": {
+      "sids": {
+        "BABA4L": { "spawn_enabled": false },
+        "TOVR5L": { "spawn_enabled": false },
+        "RESN4L": { "spawn_enabled": false },
+        "KOGA4L": { "spawn_enabled": false },
+        "ARS4L": { "spawn_enabled": false },
+        "PETE2L": { "spawn_enabled": false },
+        "NOSL6L": { "spawn_enabled": false },
+        "INWI1L": { "spawn_enabled": false }
+      }
+    },
+    "11": {
+      "sids": {
+        "ABEN6Q": { "spawn_enabled": false },
+        "DIGL6Q": { "spawn_enabled": false },
+        "GALN6Q": { "spawn_enabled": false },
+        "ROKN6Q": { "spawn_enabled": false }
+      }
+    },
+    "15A": {
+      "sids": {
+        "INWI1E": { "spawn_enabled": false },
+        "NOSL6E": { "spawn_enabled": false },
+        "PETE2E": { "spawn_enabled": false },
+        "ARS6E": { "spawn_enabled": false }
+      }
+    },
+    "15B": {
+      "sids": {
+        "ABEN6Q": { "spawn_enabled": false },
+        "DIGL6Q": { "spawn_enabled": false },
+        "GALN6Q": { "spawn_enabled": false },
+        "ARS6E": { "spawn_enabled": false }
+      }
+    },
+    "15C": {
+      "sids": {
+        "ABEN6Q": { "spawn_enabled": false },
+        "DIGL6Q": { "spawn_enabled": false },
+        "GALN6Q": { "spawn_enabled": false },
+        "ROKN6Q": { "spawn_enabled": false }
+      }
+    }
+  }
+}
