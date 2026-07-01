@@ -296,8 +296,8 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
-          "sha256": "e10b554f06b3e149dc5d03f1bb5ac6d43702405ba820efe26911eb2640e142cc",
-          "size_bytes": 2894
+          "sha256": "f488b978398ab5e2e4e91a26d471b6a14455e4e3e0ee44db12518b088cefbc97",
+          "size_bytes": 1125
         },
         "influence": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
@@ -383,12 +383,12 @@
       }
     }
   },
-  "commit_sha": "c8187c928b1a048b27fac2204b472e145e5f728a",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-06-30/sector-data-2606.zip",
-  "published_at": "2026-06-30T05:16:37Z",
-  "release_tag": "daily-2026-06-30",
+  "commit_sha": "c24d94b72c49d5f001928e29ba8266280792b11e",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-01/sector-data-2606.zip",
+  "published_at": "2026-07-01T05:53:19Z",
+  "release_tag": "daily-2026-07-01",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "a2017a80191dde8b0beaf02d12dc411f708ac05eb0d38e2ae36f045e6745970d",
-  "size_bytes": 42074
+  "sha256": "a9f6cd4a9c8f426b04ec8b29b3026708ab622b9d868fcaa3fb98167c0e562db9",
+  "size_bytes": 41682
 }
