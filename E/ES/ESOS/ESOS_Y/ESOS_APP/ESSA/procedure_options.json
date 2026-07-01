@@ -1,5 +1,5 @@
 {
-  "airport": "essa",
+  "airport": "ESSA",
   "schema_version": 1,
   "airac_min": 2606,
   "defaults": { "spawn_enabled": true },
