@@ -1,0 +1,37 @@
+{
+  "airport": "ENGM",
+  "schema_version": 1,
+  "airac_min": 2606,
+  "defaults": { "spawn_enabled": true },
+  "stars": {},
+  "sids": {},
+  "iaps": {},
+  "runways": {
+    "19L": {
+      "sids": {
+        "ATLA3C": { "spawn_enabled": false },
+        "EVTO3C": { "spawn_enabled": false }
+      }
+    },
+    "19R": {
+      "sids": {
+        "MASE6D": { "spawn_enabled": false },
+        "OKSA6D": { "spawn_enabled": false },
+        "VEMI1D": { "spawn_enabled": false }
+      }
+    },
+    "01R": {
+      "sids": {
+        "EVTO9B": { "spawn_enabled": false },
+        "ATLA9B": { "spawn_enabled": false }
+      }
+    },
+    "01L": {
+      "sids": {
+        "MASE4A": { "spawn_enabled": false },
+        "OKSA4A": { "spawn_enabled": false },
+        "VEMI5A": { "spawn_enabled": false }
+      }
+    }
+  }
+}
