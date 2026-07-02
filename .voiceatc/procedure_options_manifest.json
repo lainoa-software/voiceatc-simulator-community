@@ -1,12 +1,27 @@
 {
   "airports": {
+    "EDDF": {
+      "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/EDDF/procedure_options.json",
+      "sha256": "743a5879e3ada01e2cb71bda0f80733bb529f3ac63531638a2d218d0abc3158c",
+      "size_bytes": 1578
+    },
     "EDDS": {
       "repo_path": "E/ED/EDXX/EDGG/EDDS_TMA/EDDS/procedure_options.json",
       "sha256": "d2c1cd570c31c4198fe063914fa78cec79c68cd5cba1e0d00c79dcd155507802",
       "size_bytes": 1748
+    },
+    "ENGM": {
+      "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_options.json",
+      "sha256": "a5abe0f13923102d47780762f94379876fc1c3317e4fa27c88667cd82ca314f9",
+      "size_bytes": 803
+    },
+    "ESSA": {
+      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESSA/procedure_options.json",
+      "sha256": "07e45937b1592907a7801ebaf668d299ac7f324207d0b8d954498221c8dcdfb0",
+      "size_bytes": 3897
     }
   },
-  "published_at": "2026-07-01T05:53:25Z",
+  "published_at": "2026-07-02T05:08:46Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
