@@ -178,12 +178,19 @@ class NavdataIndex:
                 # transition/route_type group. This defines the valid entry points.
                 query = """
                     SELECT airport_identifier, waypoint_identifier
-                    FROM tbl_pe_stars
-                    WHERE (airport_identifier, procedure_identifier, transition_identifier, route_type, seqno) IN (
-                        SELECT airport_identifier, procedure_identifier, transition_identifier, route_type, MIN(seqno)
+                    FROM (
+                        SELECT airport_identifier,
+                               waypoint_identifier,
+                               ROW_NUMBER() OVER (
+                                   PARTITION BY airport_identifier,
+                                                procedure_identifier,
+                                                COALESCE(transition_identifier, ''),
+                                                route_type
+                                   ORDER BY seqno
+                               ) AS entry_rank
                         FROM tbl_pe_stars
-                        GROUP BY airport_identifier, procedure_identifier, transition_identifier, route_type
                     )
+                    WHERE entry_rank = 1
                 """
                 for row in con.execute(query):
                     apt = str(row[0] or "").strip().upper()
@@ -439,9 +446,15 @@ def validate_routes(
 
         # STAR entry membership check — requires navdata with tbl_pe_stars
         if navdata and navdata.star_airports:
-            tokens = [t.strip().upper() for t in row.route.split() if t.strip()]
-            if len(tokens) >= 3:
-                last_fix = tokens[-2]
+            last_fix = ""
+            for segment in reversed(segments):
+                if segment.to_token != row.dest:
+                    continue
+                candidate = segment.from_token
+                if candidate not in {row.origin, row.dest}:
+                    last_fix = candidate
+                break
+            if last_fix:
                 if not navdata.is_valid_star_entry_point(row.dest, last_fix):
                     errors.append(Finding(
                         row.line_number, "error", "star_entry_not_in_procedure",
