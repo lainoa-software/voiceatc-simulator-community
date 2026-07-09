@@ -314,6 +314,61 @@ jobs:
           PY
           python tools/constraints_manifest.py --write
           python tools/procedure_options_manifest.py --write
+      - name: Publish routes to Cloudflare R2
+        if: steps.meta.outputs.should_publish == 'true'
+        continue-on-error: true
+        shell: bash
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.CLOUDFLARE_R2_BUCKET }}
+          SUB_AIRAC: ${{ steps.meta.outputs.airac }}
+          SUB_TSV: ${{ steps.meta.outputs.routes_asset_path }}
+        run: |
+          # Mirror the just-published routes to Cloudflare R2 so the game can fetch route data
+          # from the api.voiceatcsimulator.com Worker (routes/<airac>/...) instead of GitHub
+          # raw/Releases. This is the single canonical R2 publisher. The canonical manifests are
+          # uploaded byte-identical; the Worker rewrites their download_url to itself at serve
+          # time. Guarded on the R2 secrets being present and continue-on-error, so it is a safe
+          # no-op until the secrets are configured and can never fail the release.
+          set -euo pipefail
+          if [[ -z "${AWS_ACCESS_KEY_ID:-}" || -z "${R2_ACCOUNT_ID:-}" || -z "${R2_BUCKET:-}" ]]; then
+            echo "Cloudflare R2 secrets not configured — skipping R2 publish."
+            exit 0
+          fi
+          python -m pip install --quiet --upgrade awscli
+          EP="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          header_airac() { head -n 1 "$1" | sed -nE 's/^airac[[:space:]]+([0-9]{4}).*/\1/Ip'; }
+
+          # Subscriber cycle: TSV as routes/<airac>/routes.tsv, canonical manifest alongside.
+          if [[ -n "${SUB_TSV:-}" && -f "${SUB_TSV}" && -f ".voiceatc/routes_manifest.json" && -n "${SUB_AIRAC:-}" ]]; then
+            aws s3 cp "${SUB_TSV}" "s3://${R2_BUCKET}/routes/${SUB_AIRAC}/routes.tsv" \
+              --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+            aws s3 cp ".voiceatc/routes_manifest.json" "s3://${R2_BUCKET}/routes/${SUB_AIRAC}/routes_manifest.json" \
+              --content-type "application/json" --endpoint-url "${EP}"
+            echo "Published subscriber routes to routes/${SUB_AIRAC}/."
+          else
+            echo "Subscriber routes asset or manifest missing — skipping subscriber R2 upload."
+          fi
+
+          # Offline/default cycle: routes_default.tsv + its manifest, AIRAC read from the file.
+          if [[ -f "ROUTES/routes_default.tsv" && -f "ROUTES/routes_default_manifest.json" ]]; then
+            DEF_AIRAC="$(header_airac ROUTES/routes_default.tsv)"
+            if [[ -n "${DEF_AIRAC}" ]]; then
+              aws s3 cp "ROUTES/routes_default.tsv" "s3://${R2_BUCKET}/routes/${DEF_AIRAC}/routes_default.tsv" \
+                --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+              aws s3 cp "ROUTES/routes_default_manifest.json" "s3://${R2_BUCKET}/routes/${DEF_AIRAC}/routes_manifest.json" \
+                --content-type "application/json" --endpoint-url "${EP}"
+              echo "Published default routes to routes/${DEF_AIRAC}/."
+            else
+              echo "Could not read default routes AIRAC header — skipping default R2 upload."
+            fi
+          else
+            echo "Default routes file or manifest missing — skipping default R2 upload."
+          fi
+
       - name: Commit manifests
         if: steps.meta.outputs.changed == 'true'
         shell: bash
