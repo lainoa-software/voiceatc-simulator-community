@@ -1,5 +1,5 @@
 {
-  "asset_name": "sector-data-2606.zip",
+  "asset_name": "sector-data-2607.zip",
   "bundle_count": 20,
   "bundles": {
     "E/ED/EDXX/EDGG/EDDF_TMA": {
@@ -383,9 +383,9 @@
       }
     }
   },
-  "commit_sha": "c0f9a29866d53446fc851f530461be832db20986",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-09/sector-data-2606.zip",
-  "published_at": "2026-07-09T05:04:20Z",
+  "commit_sha": "8603aaa46204b18b53ff8990e51f6e845030bf15",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-09/sector-data-2607.zip",
+  "published_at": "2026-07-09T13:00:50Z",
   "release_tag": "daily-2026-07-09",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
