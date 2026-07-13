@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ROUTES_PATH = ROOT / "ROUTES" / "routes.tsv"
 ROUTES_DEFAULT_PATH = ROOT / "ROUTES" / "routes_default.tsv"
+ROUTES_DEFAULT_MANIFEST_PATH = ROOT / "ROUTES" / "routes_default_manifest.json"
 ROUTES_MANIFEST_PATH = ROOT / ".voiceatc" / "routes_manifest.json"
 RELEASE_MANIFEST_PATH = ROOT / ".voiceatc" / "release_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
@@ -20,6 +21,7 @@ ROUTES_MANIFEST_SCHEMA_VERSION = 2
 RELEASE_MANIFEST_SCHEMA_VERSION = 1
 RELEASE_TITLE_PREFIX = "Daily Community Release"
 BUNDLED_DEFAULT_AIRAC = "2503"
+BUNDLED_DEFAULT_MANIFEST_SCHEMA_VERSION = 1
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
@@ -106,6 +108,64 @@ def validate_routes_default_file(root: Path = ROOT) -> dict[str, object]:
             f"{route_path}: expected AIRAC {BUNDLED_DEFAULT_AIRAC} but found {result['airac']}"
         )
     return result
+
+
+def build_default_routes_manifest(root: Path = ROOT) -> dict[str, object]:
+    routes = validate_routes_default_file(root)
+    return {
+        "schema_version": BUNDLED_DEFAULT_MANIFEST_SCHEMA_VERSION,
+        "airac": BUNDLED_DEFAULT_AIRAC,
+        "navdata_cycle": BUNDLED_DEFAULT_AIRAC,
+        "navdata_revision": "bundled",
+        "routes_tier": "offline_fallback",
+        "asset_name": "routes_default.tsv",
+        "repo_path": "ROUTES/routes_default.tsv",
+        "sha256": str(routes["sha256"]),
+        "size_bytes": int(routes["size_bytes"]),
+        "route_count": int(routes["route_count"]),
+    }
+
+
+def validate_default_routes_manifest(root: Path = ROOT) -> dict[str, object]:
+    manifest_path = (
+        ROUTES_DEFAULT_MANIFEST_PATH
+        if root == ROOT
+        else root / "ROUTES" / "routes_default_manifest.json"
+    )
+    if not manifest_path.exists():
+        raise ValueError(f"{manifest_path}: routes_default_manifest.json not found")
+    try:
+        actual = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"{manifest_path}: invalid JSON: {exc}") from exc
+    expected = build_default_routes_manifest(root)
+    if actual != expected:
+        mismatches = [
+            key
+            for key in expected
+            if actual.get(key) != expected[key]
+        ]
+        extras = sorted(set(actual) - set(expected))
+        fields = ", ".join(sorted(mismatches) + extras)
+        raise ValueError(
+            f"{manifest_path}: stale default manifest fields: {fields}"
+        )
+    return expected
+
+
+def write_default_routes_manifest(root: Path = ROOT) -> Path:
+    manifest_path = (
+        ROUTES_DEFAULT_MANIFEST_PATH
+        if root == ROOT
+        else root / "ROUTES" / "routes_default_manifest.json"
+    )
+    manifest = build_default_routes_manifest(root)
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+    return manifest_path
 
 
 def build_routes_manifest(
@@ -209,6 +269,7 @@ def build_release_manifest(
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate ROUTES/routes.tsv and write GitHub-release-backed community manifests.")
     parser.add_argument("--write", action="store_true", help="Write .voiceatc/routes_manifest.json and .voiceatc/release_manifest.json")
+    parser.add_argument("--write-default", action="store_true", help="Write the deterministic bundled routes_default manifest")
     parser.add_argument("--validate-only", action="store_true", help="Validate ROUTES/routes.tsv without writing manifests")
     parser.add_argument("--validate-default", action="store_true", help="Also validate ROUTES/routes_default.tsv (bundled default AIRAC 2503)")
     parser.add_argument("--release-tag", default="", help="Release tag, for example daily-2026-03-15")
@@ -221,10 +282,15 @@ def main() -> int:
 
     try:
         routes = parse_routes_file()
+        if args.write_default:
+            manifest_path = write_default_routes_manifest()
+            print(f"Wrote {manifest_path.relative_to(ROOT).as_posix()}")
+            if not args.write:
+                return 0
         if args.validate_only and not args.write:
             print(f"Validated routes.tsv: AIRAC {routes['airac']} with {routes['route_count']} rows.")
             if args.validate_default:
-                default_routes = validate_routes_default_file()
+                default_routes = validate_default_routes_manifest()
                 print(f"Validated routes_default.tsv: AIRAC {default_routes['airac']} with {default_routes['route_count']} rows.")
             return 0
 

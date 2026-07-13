@@ -205,6 +205,47 @@ class RoutesReleaseManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "routes_default.tsv not found"):
                 MODULE.validate_routes_default_file(root)
 
+    def test_default_manifest_is_deterministic_and_validates_exact_bytes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            default_path = root / "ROUTES" / "routes_default.tsv"
+            default_path.parent.mkdir(parents=True, exist_ok=True)
+            default_path.write_text(
+                "airac 2503\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "RKSI\tRJTT\tRKSI EGOBA Y697 LANAT RJTT\t2503\tTester\n",
+                encoding="utf-8",
+            )
+
+            manifest_path = MODULE.write_default_routes_manifest(root)
+            first_bytes = manifest_path.read_bytes()
+            MODULE.write_default_routes_manifest(root)
+
+            self.assertEqual(first_bytes, manifest_path.read_bytes())
+            manifest = MODULE.validate_default_routes_manifest(root)
+            self.assertEqual("2503", manifest["airac"])
+            self.assertEqual(1, manifest["route_count"])
+            self.assertEqual(len(default_path.read_bytes()), manifest["size_bytes"])
+
+    def test_default_manifest_validation_rejects_stale_hash(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            default_path = root / "ROUTES" / "routes_default.tsv"
+            default_path.parent.mkdir(parents=True, exist_ok=True)
+            default_path.write_text(
+                "airac 2503\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "RKSI\tRJTT\tRKSI EGOBA Y697 LANAT RJTT\t2503\tTester\n",
+                encoding="utf-8",
+            )
+            manifest_path = MODULE.write_default_routes_manifest(root)
+            stale = json.loads(manifest_path.read_text(encoding="utf-8"))
+            stale["sha256"] = "0" * 64
+            manifest_path.write_text(json.dumps(stale), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "stale default manifest fields: sha256"):
+                MODULE.validate_default_routes_manifest(root)
+
     def test_build_release_manifest_accepts_suffixed_release_tag(self) -> None:
         routes_manifest = {
             "schema_version": 1,
