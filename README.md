@@ -12,7 +12,7 @@ An optional per-airport file that records attributes for each of the airport's p
 
 Today it controls **which procedures the automatically generated traffic may be assigned**. It does **not** change what the controller can assign manually. Behaviour is opt-out: an airport with no file, and any procedure not listed, is treated as enabled — so adding the file never reduces traffic unless you explicitly disable something.
 
-Keys are procedure idents as they appear in the navigation data (the same idents you see in-game), grouped into `stars`, `sids`, and `iaps`. Each procedure maps to an object so more attributes can be added later (for example a SID's initial climb).
+Keys are procedure idents as they appear in the navigation data (the same idents you see in-game), grouped into `stars`, `sids`, and `iaps`. Each procedure maps to an object so more attributes can be added without changing the distribution format.
 
 ```json
 {
@@ -31,6 +31,7 @@ Keys are procedure idents as they appear in the navigation data (the same idents
 
 - `spawn_enabled: false` withholds a procedure from generated traffic. Resolution order per procedure: a matching per-runway override (see below), then its own global `spawn_enabled`, then `defaults.spawn_enabled`, then `true`.
 - `defaults.spawn_enabled: false` flips the airport to allow-list style (disable everything, then enable only the listed procedures).
+- `init_climb` sets a generated departure's initial cleared altitude in feet. It must be a positive integer and may appear in `defaults` or a SID entry. Resolution is active-configuration SID → active-runway SID → global SID → `defaults.init_climb` → no curated override. Unlike `spawn_enabled`, this operational metadata remains active when a player customises the procedure spawn whitelist.
 - `airport` must match the folder name. Run `python tools/procedure_options_manifest.py --validate-only` before opening a PR; the manifest is regenerated automatically on release.
 
 ### Per-runway overrides (`runways`)

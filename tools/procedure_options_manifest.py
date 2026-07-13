@@ -3,16 +3,16 @@
 
 A procedure_options.json file carries per-procedure attributes for an airport,
 keyed by procedure ident inside `stars` / `sids` / `iaps` buckets. The attribute
-consumed by the simulator today is `spawn_enabled` (whether auto-traffic may be
-assigned the procedure); the per-procedure object is intentionally open so future
-attributes (e.g. a SID's initial climb) can be added without changing this tool
-or the file's distribution.
+consumed by the simulator are `spawn_enabled` (whether auto-traffic may be
+assigned the procedure) and `init_climb` (the initial cleared altitude in feet
+for a generated departure). The per-procedure object remains open for future
+attributes without changing this tool or the file's distribution.
 
 An optional top-level `runways` object lets a curator override the per-procedure
 flag for a specific landing/departure direction: each key is a bare runway token
 (e.g. "25") whose `stars`/`sids`/`iaps` sub-objects use the same per-procedure
-shape. The simulator resolves per-runway override → global per-procedure flag →
-`defaults.spawn_enabled` → enabled.
+shape. The simulator resolves per-runway override → global per-procedure value →
+the matching default → the built-in fallback.
 
 Validation here is structural only (the same scope as constraints_manifest.py):
 JSON shape, airport==folder, bucket/entry types, boolean flags. Procedure idents
@@ -64,11 +64,15 @@ def ensure_text_field(value: object, label: str, path: Path) -> str:
     return text
 
 
-def _validate_enabled_flag(container: object, where: str, path: Path) -> None:
+def _validate_option_entry(container: object, where: str, path: Path) -> None:
     if not isinstance(container, dict):
         raise ValueError(f"{path}: {where} must be a JSON object")
     if "spawn_enabled" in container and not isinstance(container["spawn_enabled"], bool):
         raise ValueError(f"{path}: {where}.spawn_enabled must be true or false")
+    if "init_climb" in container:
+        init_climb = container["init_climb"]
+        if isinstance(init_climb, bool) or not isinstance(init_climb, int) or init_climb <= 0:
+            raise ValueError(f"{path}: {where}.init_climb must be a positive integer feet value")
 
 
 def _validate_transitions(container: object, where: str, path: Path) -> None:
@@ -82,7 +86,7 @@ def _validate_transitions(container: object, where: str, path: Path) -> None:
             if not isinstance(value, bool):
                 raise ValueError(f"{path}: {where}.spawn_enabled must be true or false")
             continue
-        _validate_enabled_flag(value, f"{where}.{key}", path)
+        _validate_option_entry(value, f"{where}.{key}", path)
 
 
 def _validate_buckets(payload: dict[str, object], prefix: str, path: Path) -> None:
@@ -93,30 +97,44 @@ def _validate_buckets(payload: dict[str, object], prefix: str, path: Path) -> No
         if not isinstance(bucket_payload, dict):
             raise ValueError(f"{path}: '{prefix}{bucket}' must be a JSON object")
         for proc_ident, entry in bucket_payload.items():
-            _validate_enabled_flag(entry, f"{prefix}{bucket}.{proc_ident}", path)
+            _validate_option_entry(entry, f"{prefix}{bucket}.{proc_ident}", path)
+
+
+def _validate_direction_overrides(
+    payload: dict[str, object],
+    key: str,
+    path: Path,
+) -> None:
+    if key not in payload:
+        return
+    overrides = payload[key]
+    if not isinstance(overrides, dict):
+        raise ValueError(f"{path}: '{key}' must be a JSON object")
+    for override_key, override_payload in overrides.items():
+        if not isinstance(override_key, str) or not override_key.strip():
+            raise ValueError(f"{path}: {key} key must be a non-empty string")
+        if not isinstance(override_payload, dict):
+            raise ValueError(f"{path}: '{key}.{override_key}' must be a JSON object")
+        _validate_buckets(override_payload, f"{key}.{override_key}.", path)
+        if "transitions" in override_payload:
+            _validate_transitions(
+                override_payload["transitions"],
+                f"{key}.{override_key}.transitions",
+                path,
+            )
 
 
 def validate_options_schema(payload: dict[str, object], path: Path) -> None:
     if "defaults" in payload:
-        _validate_enabled_flag(payload["defaults"], "defaults", path)
+        _validate_option_entry(payload["defaults"], "defaults", path)
     for key in ("schema_version", "airac_min"):
         if key in payload and not isinstance(payload[key], int):
             raise ValueError(f"{path}: '{key}' must be an integer")
     _validate_buckets(payload, "", path)
     if "transitions" in payload:
         _validate_transitions(payload["transitions"], "transitions", path)
-    if "runways" in payload:
-        runways = payload["runways"]
-        if not isinstance(runways, dict):
-            raise ValueError(f"{path}: 'runways' must be a JSON object")
-        for runway_key, runway_payload in runways.items():
-            if not isinstance(runway_key, str) or not runway_key.strip():
-                raise ValueError(f"{path}: runway key must be a non-empty string")
-            if not isinstance(runway_payload, dict):
-                raise ValueError(f"{path}: 'runways.{runway_key}' must be a JSON object")
-            _validate_buckets(runway_payload, f"runways.{runway_key}.", path)
-            if "transitions" in runway_payload:
-                _validate_transitions(runway_payload["transitions"], f"runways.{runway_key}.transitions", path)
+    _validate_direction_overrides(payload, "runways", path)
+    _validate_direction_overrides(payload, "configs", path)
 
 
 def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:

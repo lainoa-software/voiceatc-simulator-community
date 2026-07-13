@@ -84,6 +84,43 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "'stars' must be a JSON object"):
                 MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
 
+    def test_build_manifest_accepts_positive_initial_climb(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["defaults"]["init_climb"] = 3000
+            payload["sids"]["CHAL1A"] = {"init_climb": 4000}
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
+            self.assertIn("RCTP", manifest["airports"])
+
+    def test_build_manifest_rejects_invalid_initial_climb(self) -> None:
+        for value in (0, -1000, 3000.0, True, "3000"):
+            with self.subTest(value=value), tempfile.TemporaryDirectory() as tmp_dir:
+                root = Path(tmp_dir)
+                payload = valid_payload("RCTP")
+                payload["defaults"]["init_climb"] = value
+                path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(payload), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "init_climb must be a positive integer"):
+                    MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
+    def test_build_manifest_validates_initial_climb_in_config_sid_override(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["configs"] = {"WEST": {"sids": {"CHAL1A": {"init_climb": -1}}}}
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "init_climb must be a positive integer"):
+                MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
     def test_build_manifest_accepts_runways_overrides(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
