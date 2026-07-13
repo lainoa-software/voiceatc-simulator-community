@@ -2,8 +2,8 @@
   "airports": {
     "EDDF": {
       "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/EDDF/procedure_options.json",
-      "sha256": "d6826e50b5db651b56dd1a83f489637461c3c1d9dd33a3a09f8b96079bba9a6d",
-      "size_bytes": 1640
+      "sha256": "743a5879e3ada01e2cb71bda0f80733bb529f3ac63531638a2d218d0abc3158c",
+      "size_bytes": 1578
     },
     "EDDS": {
       "repo_path": "E/ED/EDXX/EDGG/EDDS_TMA/EDDS/procedure_options.json",
@@ -12,13 +12,13 @@
     },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_options.json",
-      "sha256": "5876415f3b7e940afefa9f756d0fb2ffb8e392988783c5f5f759dbc6f1df1998",
-      "size_bytes": 840
+      "sha256": "a5abe0f13923102d47780762f94379876fc1c3317e4fa27c88667cd82ca314f9",
+      "size_bytes": 803
     },
     "ESSA": {
       "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESSA/procedure_options.json",
-      "sha256": "5b63742b6ff3cf4a0384c419a9d4dcc88a1c1db7a3b1e59cdfae1c6df788b40f",
-      "size_bytes": 4037
+      "sha256": "07e45937b1592907a7801ebaf668d299ac7f324207d0b8d954498221c8dcdfb0",
+      "size_bytes": 3897
     },
     "RCTP": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/procedure_options.json",
@@ -26,7 +26,7 @@
       "size_bytes": 182
     }
   },
-  "published_at": "2026-07-13T10:47:56Z",
+  "published_at": "2026-07-13T12:27:14Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

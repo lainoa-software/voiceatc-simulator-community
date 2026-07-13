@@ -1,3 +1,4 @@
+import hashlib
 import importlib.util
 import json
 import tempfile
@@ -44,6 +45,20 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
                 "R/RC/RCAA/TAIPEI_TMA/RCTP/procedure_options.json",
                 manifest["airports"]["RCTP"]["repo_path"],
             )
+
+    def test_manifest_hash_is_independent_of_checkout_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            lf_bytes = (json.dumps(valid_payload("RCTP"), indent=2) + "\n").encode("utf-8")
+            path.write_bytes(lf_bytes.replace(b"\n", b"\r\n"))
+
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            entry = manifest["airports"]["RCTP"]
+
+            self.assertEqual(hashlib.sha256(lf_bytes).hexdigest(), entry["sha256"])
+            self.assertEqual(len(lf_bytes), entry["size_bytes"])
 
     def test_build_manifest_rejects_duplicate_airports(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

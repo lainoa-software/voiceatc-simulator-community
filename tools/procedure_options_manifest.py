@@ -64,6 +64,11 @@ def ensure_text_field(value: object, label: str, path: Path) -> str:
     return text
 
 
+def _canonical_repo_bytes(raw_bytes: bytes) -> bytes:
+    """Match the LF bytes stored and served by Git, regardless of checkout EOL."""
+    return raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
 def _validate_option_entry(container: object, where: str, path: Path) -> None:
     if not isinstance(container, dict):
         raise ValueError(f"{path}: {where} must be a JSON object")
@@ -139,6 +144,7 @@ def validate_options_schema(payload: dict[str, object], path: Path) -> None:
 
 def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     raw_bytes = path.read_bytes()
+    canonical_bytes = _canonical_repo_bytes(raw_bytes)
     try:
         payload = json.loads(raw_bytes.decode("utf-8"))
     except Exception as exc:
@@ -158,8 +164,8 @@ def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     return {
         "airport": airport,
         "repo_path": repo_path,
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
+        "sha256": hashlib.sha256(canonical_bytes).hexdigest(),
+        "size_bytes": len(canonical_bytes),
     }
 
 
