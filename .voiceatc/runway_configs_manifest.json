@@ -193,9 +193,9 @@
     }
   },
   "asset_name": "runway-configs-2607.zip",
-  "commit_sha": "a1cc382148d1b11562def7c89c60e12d2358ff00",
+  "commit_sha": "b7d942a84730b3ca61b7028f07c5967eed349f06",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-14/runway-configs-2607.zip",
-  "published_at": "2026-07-14T04:15:57Z",
+  "published_at": "2026-07-14T10:04:54Z",
   "release_tag": "daily-2026-07-14",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
