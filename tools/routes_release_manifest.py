@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -22,6 +23,7 @@ RELEASE_MANIFEST_SCHEMA_VERSION = 1
 RELEASE_TITLE_PREFIX = "Daily Community Release"
 BUNDLED_DEFAULT_AIRAC = "2503"
 BUNDLED_DEFAULT_MANIFEST_SCHEMA_VERSION = 1
+RUNWAY_THRESHOLD_IDENT_RE = re.compile(r"^RW(?:0[1-9]|[12][0-9]|3[0-6])[LCR]?$")
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
@@ -75,6 +77,16 @@ def _parse_routes_tsv(route_path: Path) -> dict[str, object]:
             source_airac = max(source_airac, creation_airac)
         if not full_route:
             continue
+        runway_tokens = [
+            token
+            for token in full_route.split()[1:-1]
+            if RUNWAY_THRESHOLD_IDENT_RE.fullmatch(token)
+        ]
+        if runway_tokens:
+            raise ValueError(
+                f"{route_path}:{line_number}: route contains runway threshold "
+                f"waypoint(s): {', '.join(runway_tokens)}"
+            )
         route_count += 1
 
     if route_count <= 0:

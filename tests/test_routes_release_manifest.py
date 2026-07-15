@@ -140,6 +140,40 @@ class RoutesReleaseManifestTests(unittest.TestCase):
             self.assertEqual("2602", parsed["airac"])
             self.assertEqual(1, parsed["route_count"])
 
+    def test_parse_routes_file_rejects_runway_threshold_waypoint(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "ROUTES" / "routes.tsv"
+            routes_path.parent.mkdir(parents=True, exist_ok=True)
+            routes_path.write_text(
+                "airac 2607\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "EGLL\tLIML\tEGLL DCT RW04 DCT LIML\t2607\tTester\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                "route contains runway threshold waypoint.*RW04",
+            ):
+                MODULE.parse_routes_file(root)
+
+    def test_parse_routes_file_accepts_similarly_shaped_non_runway_fix(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "ROUTES" / "routes.tsv"
+            routes_path.parent.mkdir(parents=True, exist_ok=True)
+            routes_path.write_text(
+                "airac 2607\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "EGLL\tLIML\tEGLL DCT RW04X DCT LIML\t2607\tTester\n",
+                encoding="utf-8",
+            )
+
+            parsed = MODULE.parse_routes_file(root)
+
+            self.assertEqual(1, parsed["route_count"])
+
     def test_build_release_manifest_includes_routes_asset(self) -> None:
         routes_manifest = {
             "schema_version": 2,
