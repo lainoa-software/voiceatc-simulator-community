@@ -1,0 +1,23 @@
+{
+  "airport": "EKCH",
+  "runway_configs": [
+    {
+      "id": "DAY_22",
+      "name": "PREFERENTIAL",
+      "arr": "22L",
+      "dep": "22R"
+    },
+    {
+      "id": "DAY_04",
+      "name": "NON PREFERENTIAL",
+      "arr": "04L",
+      "dep": "04R"
+    },
+    {
+      "id": "NIGHT_22",
+      "name": "Night single runway",
+      "arr": "22L",
+      "dep": "22L"
+    }
+  ]
+}

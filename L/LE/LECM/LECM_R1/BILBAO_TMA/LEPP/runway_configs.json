@@ -1,0 +1,17 @@
+{
+  "airport": "LEPP",
+  "runway_configs": [
+    {
+      "id": "NORTH",
+      "name": "PREFERENTIAL",
+      "arr": "15",
+      "dep": "15"
+    },
+    {
+      "id": "SOUTH",
+      "name": "NON PREFERENTIAL",
+      "arr": "33",
+      "dep": "33"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "airport": "LECH",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "PREFERENTIAL",
+      "arr": "06",
+      "dep": "06"
+    },
+    {
+      "id": "WEST",
+      "name": "NON PREFERENTIAL",
+      "arr": "24",
+      "dep": "24"
+    }
+  ]
+}

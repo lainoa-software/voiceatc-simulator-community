@@ -1,0 +1,17 @@
+{
+  "airport": "LTFM",
+  "runway_configs": [
+    {
+      "id": "NORTH_PRS",
+      "name": "Northern PRS",
+      "arr": "34L 35R",
+      "dep": "34L 35L"
+    },
+    {
+      "id": "SOUTH_PRS",
+      "name": "Southern PRS",
+      "arr": "16R 17L",
+      "dep": "16R 17R"
+    }
+  ]
+}

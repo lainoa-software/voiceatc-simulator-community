@@ -1,45 +1,89 @@
 {
-  "airport_count": 38,
   "airports": {
+    "EBBR": {
+      "repo_path": "E/EB/EBXX/EBBU/BRUSSELS_TMA/EBBR/runway_configs.json",
+      "sha256": "3d708c40f922e9b86cec51a30ce1cbfa3bf9ed13053ddb7600fd06e3733d7066",
+      "size_bytes": 266
+    },
+    "EDDB": {
+      "repo_path": "E/ED/EDXX/EDGG/BERLIN_TMA/EDDB/runway_configs.json",
+      "sha256": "1d386f0b7f8db533110ee5fceb8a4f5b970e5a566c7605f6d7d610e3a6939711",
+      "size_bytes": 264
+    },
     "EDDC": {
       "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/EDDC/runway_configs.json",
-      "sha256": "c60a0a65e49d2158f7d395def37f2347416b59abd6b5bbdc0d6c0476803c1a13",
-      "size_bytes": 226
+      "sha256": "6a2b7f4b20aa9d5e182a428c3e036fbf8016dbd719a172facf35ab6204dbfee6",
+      "size_bytes": 243
     },
     "EDDF": {
       "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/EDDF/runway_configs.json",
-      "sha256": "372176b4c077fc080cf487ffdd91db5a7ffe0018effbbcbbd975922574641772",
-      "size_bytes": 246
+      "sha256": "5bc2a63ae35cb27791ad37f5d4dc7652416f1eb10f09cc2b400a2df212ae87c5",
+      "size_bytes": 263
+    },
+    "EDDL": {
+      "repo_path": "E/ED/EDXX/EDGG/DUSSELDORF_TMA/EDDL/runway_configs.json",
+      "sha256": "359d48368bdc1609efd294bfe4b8bae27dfa1d942b5b275d3330af710fee48f6",
+      "size_bytes": 264
     },
     "EDDM": {
       "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/EDDM/runway_configs.json",
-      "sha256": "26f82a48d8fd3b2385a35874b928c969f1c08c3be601fd2ec280133bf2abf1a5",
-      "size_bytes": 248
+      "sha256": "1e94b6f10bf0263e20f632cd1f5509e9aaf8dda8faae975bb9baab03042c9eee",
+      "size_bytes": 265
     },
     "EDDN": {
       "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/EDDN/runway_configs.json",
-      "sha256": "8b9756741206d4ffef54d82e1ba8b7e721c757d94d34ec890770a693518f892b",
-      "size_bytes": 226
+      "sha256": "7ed714235b187af566af4e90018cb26c10e660c2a0889de9f96b6e897b505c0c",
+      "size_bytes": 243
     },
     "EFHK": {
       "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/EFHK/runway_configs.json",
       "sha256": "cc35883169c440df1dbc3edeea9ad6d7c31ebf2b924286d8d5e2a67d371d469d",
       "size_bytes": 268
     },
+    "EGCC": {
+      "repo_path": "E/EG/EGXX/EGTT/MANCHESTER_TMA/EGCC/runway_configs.json",
+      "sha256": "3b3722ce033d6312827a7d94fccec51108b59d7d190a61ea2a9ee611d3a333c2",
+      "size_bytes": 374
+    },
+    "EGKK": {
+      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGKK/runway_configs.json",
+      "sha256": "11d804286d042195696c5cc38dbcd19811cfbf93683fb456f9f775f086670a1b",
+      "size_bytes": 266
+    },
     "EGLL": {
       "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGLL/runway_configs.json",
       "sha256": "6f8234318561a622fde6c35cb857ed1dd7415d0c8fd55439085518e007bb80f6",
       "size_bytes": 232
+    },
+    "EGSS": {
+      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGSS/runway_configs.json",
+      "sha256": "f3aee1aaf96202199e6948b986b71670aba0af7ae75cce6f9291e5f544449278",
+      "size_bytes": 265
     },
     "EHAM": {
       "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/EHAM/runway_configs.json",
       "sha256": "4d3c7c31d51f929a7699d0508ee9dd94e0899f429d15de4fa10f719b190e0e68",
       "size_bytes": 412
     },
+    "EIDW": {
+      "repo_path": "E/EI/EIXX/EISN/DUBLIN_TMA/EIDW/runway_configs.json",
+      "sha256": "4b9460ecf8e96c16e7ae37a16c09534db7658d3a4cd5495445aa8e1b5948fc82",
+      "size_bytes": 258
+    },
+    "EKCH": {
+      "repo_path": "E/EK/EKXX/EKDK/COPENHAGEN_TMA/EKCH/runway_configs.json",
+      "sha256": "06a8d308c1a7e9ee0dfc6170589dba45d13da827ab24b31305715c776fab99a2",
+      "size_bytes": 375
+    },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/runway_configs.json",
-      "sha256": "c5430d06e52c94b2ce5e1f9616d84bbfe18c960e17633d2bfabd0063be9da3ba",
-      "size_bytes": 284
+      "sha256": "ff127fae1bffe25d522748f47b41e4c7b90e4024cdf2aab0efdec8766079110c",
+      "size_bytes": 301
+    },
+    "EPWA": {
+      "repo_path": "E/EP/EPXX/EPWW/WARSAW_TMA/EPWA/runway_configs.json",
+      "sha256": "aa7c4bd6d9bcac03ddf15f138fcdf602ae7e0d2083fe1db840df4b427b7b4a8f",
+      "size_bytes": 364
     },
     "ESGG": {
       "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/ESGG/runway_configs.json",
@@ -111,6 +155,16 @@
       "sha256": "2ad5b160f30bcdd7582bad7c3a071c74a68bdc95d254a9940f993a345becc508",
       "size_bytes": 254
     },
+    "LEAM": {
+      "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/LEAM/runway_configs.json",
+      "sha256": "1be7026440ee7a1c54fc936cd081194922d059caba3fe189520ec702b9247910",
+      "size_bytes": 254
+    },
+    "LEAS": {
+      "repo_path": "L/LE/LECM/LECM_R1/ASTURIAS_TMA/LEAS/runway_configs.json",
+      "sha256": "eccac710791baf9fde6e6646e053f37d680c58bd0a35ae3befb896fb6a131315",
+      "size_bytes": 254
+    },
     "LEBB": {
       "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LEBB/runway_configs.json",
       "sha256": "b1fd0d53cba965567e69e8f2a687d3d5f1c5314a13aab269217f97bddf86da1d",
@@ -121,6 +175,11 @@
       "sha256": "d779c9930562bd1a9caefea534e4c820e31a82c15249627d693e7a9f5c322eb3",
       "size_bytes": 491
     },
+    "LECH": {
+      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LECH/runway_configs.json",
+      "sha256": "ffa38006314f9dffb45818d784cf272aafdda4b3ba7f4feaa8de2c0aa0942dbe",
+      "size_bytes": 254
+    },
     "LECO": {
       "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/LECO/runway_configs.json",
       "sha256": "2f585d4b4328da48cdd2dc7cd517d327009cec60bbac25445df5778fa9c2c7f0",
@@ -128,8 +187,13 @@
     },
     "LEGE": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEGE/runway_configs.json",
-      "sha256": "cc2f568910dc7f5754490867e0d0407324f642ecb2fd408177f610d670f64bbb",
-      "size_bytes": 238
+      "sha256": "9adbb954427ecad98030bf7d6cf22c52efd03be97b7c36fb3e8efb8102705096",
+      "size_bytes": 255
+    },
+    "LEGR": {
+      "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/LEGR/runway_configs.json",
+      "sha256": "fd52fe61d55e27a75259834af04f0ea02190b40c5ca8e10d193a05c66d736667",
+      "size_bytes": 254
     },
     "LEIB": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/runway_configs.json",
@@ -139,6 +203,11 @@
     "LEJR": {
       "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/LEJR/runway_configs.json",
       "sha256": "3662980eabd7e4513924abe3fd7042d91dfecf92edd15fee682d94d5efba718e",
+      "size_bytes": 256
+    },
+    "LELN": {
+      "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LELN/runway_configs.json",
+      "sha256": "cf3d9c0cf45d217898f25c667a3a3054d38f593eee593edc36a3956ca961b377",
       "size_bytes": 256
     },
     "LEMD": {
@@ -156,15 +225,35 @@
       "sha256": "6ffdccda2ce63287b6b9e26aaab0376930753f5fdcea0318fd179839c829f66f",
       "size_bytes": 238
     },
+    "LEMI": {
+      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEMI/runway_configs.json",
+      "sha256": "514110b2359d240856798949dac359f1471e826d3aac30e7352f5ffb37c2efd9",
+      "size_bytes": 254
+    },
     "LEPA": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEPA/runway_configs.json",
       "sha256": "cc2c72da50f9a65b3ea9beb97d10907988b0c37980be26494e2c97470e0503f1",
       "size_bytes": 256
     },
+    "LEPP": {
+      "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LEPP/runway_configs.json",
+      "sha256": "3112a55f2746d5624abf084048f5e45a8005a80e782b69b7bafdcbf12de29414",
+      "size_bytes": 256
+    },
+    "LERJ": {
+      "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LERJ/runway_configs.json",
+      "sha256": "d910f7a9c3e4985eb17b16b10be621ba6e55164fa45ccf84e071e12356eb9e11",
+      "size_bytes": 254
+    },
     "LERS": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LERS/runway_configs.json",
-      "sha256": "518fd0ceba4a4de2b34c3bf7fb9f16a37601bb16449eb7cc461f67629ea87ee7",
-      "size_bytes": 234
+      "sha256": "36fd5f457c0c6780f21d52232609d07e1188ecdb7017eaa46dfdc203f7668a2e",
+      "size_bytes": 251
+    },
+    "LESO": {
+      "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LESO/runway_configs.json",
+      "sha256": "c7b2b3a876c73eb2081ec09f95e88d844b0eef2ab087f8a91d488af8cccd9ac6",
+      "size_bytes": 254
     },
     "LEST": {
       "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/LEST/runway_configs.json",
@@ -176,15 +265,85 @@
       "sha256": "2af12b208ffedd2d01955ac401e50635a11e999f6684123e587fcb780b0b5566",
       "size_bytes": 254
     },
+    "LEVD": {
+      "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LEVD/runway_configs.json",
+      "sha256": "3a2f2a1abc866540156f1ee555debd571c9a456700ae1d00468d652f806f5d1f",
+      "size_bytes": 256
+    },
+    "LEVT": {
+      "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LEVT/runway_configs.json",
+      "sha256": "ad5588e5c56031cfe0f9be8e9e976476e238c1eaaec065a26b16a6aab16e20fa",
+      "size_bytes": 256
+    },
     "LEVX": {
       "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/LEVX/runway_configs.json",
       "sha256": "f0a15228b4ba94a68f46e6189e837034d1d2a42aae1606490ccfe536493507ee",
       "size_bytes": 256
     },
+    "LEXJ": {
+      "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/LEXJ/runway_configs.json",
+      "sha256": "eb0e24601905dc1641ad4d577a374f3bd2461eb4cd7c44a57545c69eb16fcba8",
+      "size_bytes": 254
+    },
+    "LEZG": {
+      "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/runway_configs.json",
+      "sha256": "4d5507c5b33f6f3f04fa26dfa20606ebfa52723e5c1b8d8b77402a364fb91c16",
+      "size_bytes": 258
+    },
     "LEZL": {
       "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/LEZL/runway_configs.json",
       "sha256": "406d28b79c99c83c20ea21ccdea3ca5c505fbfedc77e48819437e4bf5fe4c94a",
       "size_bytes": 254
+    },
+    "LFPG": {
+      "repo_path": "E/LF/LFXX/LFFF/PARIS_TMA/LFPG/runway_configs.json",
+      "sha256": "6e65250ae81c38a891ff36b2f22b79b587a43c308c4d19b08c4af9db4d37bc4d",
+      "size_bytes": 274
+    },
+    "LFPO": {
+      "repo_path": "E/LF/LFXX/LFFF/PARIS_TMA/LFPO/runway_configs.json",
+      "sha256": "fca8e7470adba68a0b964a8cd53dd34951147551b570e2be599435f3e176ae27",
+      "size_bytes": 254
+    },
+    "LGAV": {
+      "repo_path": "E/LG/LGXX/LGGG/ATHENS_TMA/LGAV/runway_configs.json",
+      "sha256": "95d3160e657c69becab014ba829379b7dc935233d003a891220073fc92da9afe",
+      "size_bytes": 269
+    },
+    "LIMC": {
+      "repo_path": "E/LI/LIXX/LIMM/MILAN_TMA/LIMC/runway_configs.json",
+      "sha256": "58666385bf38a2abb5aae824bb83e35575e1ea0b0818ba12fed6a44ed7f97c59",
+      "size_bytes": 379
+    },
+    "LIRF": {
+      "repo_path": "E/LI/LIXX/LIMM/ROME_TMA/LIRF/runway_configs.json",
+      "sha256": "13c2b6be172e44dbbe088b59dd20ebc09ee46307a7b606a8ecfd0895721f3e99",
+      "size_bytes": 266
+    },
+    "LOWW": {
+      "repo_path": "E/LO/LOXX/LOVV/VIENNA_TMA/LOWW/runway_configs.json",
+      "sha256": "6d0abf31d2fa5b196223618a59dc7835cc8d1430b48a5bad6d1e471ad0526efe",
+      "size_bytes": 368
+    },
+    "LPPT": {
+      "repo_path": "E/LP/LPXX/LPPC/LISBON_TMA/LPPT/runway_configs.json",
+      "sha256": "bd088e012d5be852e01c0f539cf1ad11ce50dca71cf850c5a18128cd8e6e19c4",
+      "size_bytes": 265
+    },
+    "LSZH": {
+      "repo_path": "E/LS/LSXX/LSAS/ZURICH_TMA/LSZH/runway_configs.json",
+      "sha256": "a9d0c2f4a8e693c2aba94185995675de89441c8fc1b5f4cd5d8a9ce62245076e",
+      "size_bytes": 354
+    },
+    "LTFJ": {
+      "repo_path": "L/LT/LTXX/LTBB/ISTANBUL_TMA/LTFJ/runway_configs.json",
+      "sha256": "8770668772662a9190f37c03b480bd1cffeef69ac400e7527b0cf8401cab050a",
+      "size_bytes": 280
+    },
+    "LTFM": {
+      "repo_path": "L/LT/LTXX/LTBB/ISTANBUL_TMA/LTFM/runway_configs.json",
+      "sha256": "b7d545160f7e03af629f2c6f455ead81ea52e8949e248966926e989c5d2f8e5f",
+      "size_bytes": 280
     },
     "OMDB": {
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/OMDB/runway_configs.json",
@@ -192,13 +351,9 @@
       "size_bytes": 232
     }
   },
-  "asset_name": "runway-configs-2607.zip",
-  "commit_sha": "91b9ad548a36633771b27898a13e5a52d30f7f3a",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-16/runway-configs-2607.zip",
-  "published_at": "2026-07-16T04:23:35Z",
-  "release_tag": "daily-2026-07-16",
+  "branch": "main",
+  "commit_sha": "2ae14a25f50238a0cb5bea7b0b885c786731eaa9",
+  "generated_at": "2026-07-16T13:39:43Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "schema_version": 2,
-  "sha256": "7ee50dae2015a28ff8ca0a1b32b8488d99b606029afdd764391ca69583927798",
-  "size_bytes": 11858
+  "schema_version": 1
 }

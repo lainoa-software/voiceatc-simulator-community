@@ -1,0 +1,17 @@
+{
+  "airport": "EIDW",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "28L",
+      "dep": "28R"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "10L",
+      "dep": "10R"
+    }
+  ]
+}

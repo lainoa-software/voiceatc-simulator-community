@@ -1,0 +1,17 @@
+{
+  "airport": "LFPO",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "25",
+      "dep": "24"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "06",
+      "dep": "07"
+    }
+  ]
+}

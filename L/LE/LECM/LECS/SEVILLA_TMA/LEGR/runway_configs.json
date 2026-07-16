@@ -1,0 +1,17 @@
+{
+  "airport": "LEGR",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "PREFERENTIAL",
+      "arr": "09",
+      "dep": "09"
+    },
+    {
+      "id": "WEST",
+      "name": "NON PREFERENTIAL",
+      "arr": "27",
+      "dep": "27"
+    }
+  ]
+}
