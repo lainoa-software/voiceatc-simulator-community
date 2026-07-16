@@ -1,0 +1,17 @@
+{
+  "airport": "KSTL",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "WEST CONFIG",
+      "arr": "30L 30R",
+      "dep": "30R 30L"
+    },
+    {
+      "id": "EAST",
+      "name": "EAST CONFIG",
+      "arr": "12L 12R",
+      "dep": "12L 12R"
+    }
+  ]
+}

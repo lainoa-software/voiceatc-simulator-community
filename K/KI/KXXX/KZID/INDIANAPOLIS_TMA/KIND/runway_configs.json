@@ -1,0 +1,23 @@
+{
+  "airport": "KIND",
+  "runway_configs": [
+    {
+      "id": "NE",
+      "name": "NORTHEAST FLOW",
+      "arr": "05L",
+      "dep": "05R"
+    },
+    {
+      "id": "SW",
+      "name": "SOUTHWEST FLOW",
+      "arr": "23R",
+      "dep": "23L"
+    },
+    {
+      "id": "CROSSWIND",
+      "name": "CROSSWIND 14/32",
+      "arr": "14",
+      "dep": "32"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "airport": "KRSW",
+  "runway_configs": [
+    {
+      "id": "NIGHT",
+      "name": "NIGHT PREF RWY 24",
+      "arr": "24",
+      "dep": "24"
+    },
+    {
+      "id": "WEST",
+      "name": "WEST FLOW",
+      "arr": "24",
+      "dep": "24"
+    },
+    {
+      "id": "EAST",
+      "name": "EAST FLOW",
+      "arr": "06",
+      "dep": "06"
+    }
+  ]
+}

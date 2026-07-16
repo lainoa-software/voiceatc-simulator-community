@@ -1,0 +1,29 @@
+{
+  "airport": "KSEA",
+  "runway_configs": [
+    {
+      "id": "SOUTH_DAY",
+      "name": "SOUTH FLOW DAY",
+      "arr": "16R 16L 16C",
+      "dep": "16L 16C"
+    },
+    {
+      "id": "SOUTH_NIGHT",
+      "name": "SOUTH FLOW NIGHT",
+      "arr": "16L 16C",
+      "dep": "16L 16C"
+    },
+    {
+      "id": "NORTH_DAY",
+      "name": "NORTH FLOW DAY",
+      "arr": "34L 34R 34C",
+      "dep": "34R 34C"
+    },
+    {
+      "id": "NORTH_NIGHT",
+      "name": "NORTH FLOW NIGHT",
+      "arr": "34R 34C",
+      "dep": "34R 34C"
+    }
+  ]
+}

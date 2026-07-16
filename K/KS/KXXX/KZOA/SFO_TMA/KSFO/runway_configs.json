@@ -1,0 +1,23 @@
+{
+  "airport": "KSFO",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "WEST PLAN",
+      "arr": "28L 28R",
+      "dep": "01L 01R"
+    },
+    {
+      "id": "SOUTHEAST",
+      "name": "SOUTHEAST PLAN",
+      "arr": "19L 19R 10L 10R",
+      "dep": "19L 19R 10L 10R"
+    },
+    {
+      "id": "NIGHT_10",
+      "name": "NIGHT PREF RWY 10",
+      "arr": "28L 28R",
+      "dep": "10L 10R"
+    }
+  ]
+}
