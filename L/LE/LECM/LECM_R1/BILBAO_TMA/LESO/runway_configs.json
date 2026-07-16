@@ -1,0 +1,17 @@
+{
+  "airport": "LESO",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "22",
+      "dep": "22"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "04",
+      "dep": "04"
+    }
+  ]
+}

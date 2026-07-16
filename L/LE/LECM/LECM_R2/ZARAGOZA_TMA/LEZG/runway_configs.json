@@ -1,0 +1,17 @@
+{
+  "airport": "LEZG",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "30R",
+      "dep": "30R"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "12L",
+      "dep": "12L"
+    }
+  ]
+}

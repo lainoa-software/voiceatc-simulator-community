@@ -1,0 +1,17 @@
+{
+  "airport": "LIRF",
+  "runway_configs": [
+    {
+      "id": "SOUTH",
+      "name": "PREFERENTIAL",
+      "arr": "16L 16R",
+      "dep": "25"
+    },
+    {
+      "id": "NORTH",
+      "name": "NON PREFERENTIAL",
+      "arr": "34L 34R",
+      "dep": "25"
+    }
+  ]
+}

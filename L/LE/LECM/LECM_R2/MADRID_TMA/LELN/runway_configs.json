@@ -1,0 +1,17 @@
+{
+  "airport": "LELN",
+  "runway_configs": [
+    {
+      "id": "SOUTH",
+      "name": "PREFERENTIAL",
+      "arr": "23",
+      "dep": "23"
+    },
+    {
+      "id": "NORTH",
+      "name": "NON PREFERENTIAL",
+      "arr": "05",
+      "dep": "05"
+    }
+  ]
+}

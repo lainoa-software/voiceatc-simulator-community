@@ -1,0 +1,17 @@
+{
+  "airport": "LEXJ",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "29",
+      "dep": "29"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "11",
+      "dep": "11"
+    }
+  ]
+}

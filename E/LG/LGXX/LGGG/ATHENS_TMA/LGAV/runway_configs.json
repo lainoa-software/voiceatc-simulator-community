@@ -1,0 +1,17 @@
+{
+  "airport": "LGAV",
+  "runway_configs": [
+    {
+      "id": "PREFER_03",
+      "name": "PREFERENTIAL",
+      "arr": "03L",
+      "dep": "03L"
+    },
+    {
+      "id": "NONPREF_21",
+      "name": "NON PREFERENTIAL",
+      "arr": "21R",
+      "dep": "21R"
+    }
+  ]
+}

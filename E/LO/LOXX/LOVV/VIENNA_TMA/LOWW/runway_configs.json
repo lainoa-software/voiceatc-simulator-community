@@ -1,0 +1,23 @@
+{
+  "airport": "LOWW",
+  "runway_configs": [
+    {
+      "id": "DAY_WEST",
+      "name": "Day westerly",
+      "arr": "34",
+      "dep": "29"
+    },
+    {
+      "id": "DAY_SE",
+      "name": "Day southeasterly",
+      "arr": "11",
+      "dep": "16"
+    },
+    {
+      "id": "NIGHT",
+      "name": "Night preferential",
+      "arr": "29",
+      "dep": "29"
+    }
+  ]
+}
