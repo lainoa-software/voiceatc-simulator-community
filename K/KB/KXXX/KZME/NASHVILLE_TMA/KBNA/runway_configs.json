@@ -1,0 +1,23 @@
+{
+  "airport": "KBNA",
+  "runway_configs": [
+    {
+      "id": "NORTH",
+      "name": "NORTH FLOW",
+      "arr": "02L 02C 02R",
+      "dep": "02L 02C 02R"
+    },
+    {
+      "id": "SOUTH",
+      "name": "SOUTH FLOW",
+      "arr": "20L 20C 20R",
+      "dep": "20L 20C 20R"
+    },
+    {
+      "id": "MIL_TBJT",
+      "name": "MIL TBJT NOISE",
+      "arr": "13 31",
+      "dep": "13 31"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "airport": "KCMH",
+  "runway_configs": [
+    {
+      "id": "NIGHT",
+      "name": "NIGHT PREF SOUTH RWY",
+      "arr": "10R",
+      "dep": "28L"
+    },
+    {
+      "id": "DAY",
+      "name": "DAYTIME JET PREF",
+      "arr": "28L",
+      "dep": "10R"
+    }
+  ]
+}

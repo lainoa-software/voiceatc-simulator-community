@@ -1,0 +1,23 @@
+{
+  "airport": "KPIT",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "WEST FLOW",
+      "arr": "28L",
+      "dep": "28R"
+    },
+    {
+      "id": "EAST",
+      "name": "EAST FLOW",
+      "arr": "10R",
+      "dep": "10L"
+    },
+    {
+      "id": "CROSSWIND",
+      "name": "CROSSWIND 32/14",
+      "arr": "32",
+      "dep": "14"
+    }
+  ]
+}

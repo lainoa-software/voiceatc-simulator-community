@@ -1,0 +1,29 @@
+{
+  "airport": "KLAX",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "WEST TRAFFIC",
+      "arr": "24R 25L",
+      "dep": "24L 25R"
+    },
+    {
+      "id": "EAST",
+      "name": "EAST TRAFFIC",
+      "arr": "06L 07R",
+      "dep": "06R 07L"
+    },
+    {
+      "id": "OVER_OCEAN",
+      "name": "OVER-OCEAN OPS",
+      "arr": "06R",
+      "dep": "25R"
+    },
+    {
+      "id": "NIGHT_INBOARD",
+      "name": "NIGHT INBOARD PREF",
+      "arr": "06R 24L 07L",
+      "dep": "06R 24L 07L"
+    }
+  ]
+}

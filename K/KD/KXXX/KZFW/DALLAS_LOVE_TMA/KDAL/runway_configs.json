@@ -1,0 +1,17 @@
+{
+  "airport": "KDAL",
+  "runway_configs": [
+    {
+      "id": "NIGHT_JET",
+      "name": "NIGHT JET PREF",
+      "arr": "13R 31L",
+      "dep": "13R 31L"
+    },
+    {
+      "id": "NIGHT_TRINITY",
+      "name": "NIGHT TRINITY DEP",
+      "arr": "13R 31L",
+      "dep": "13R"
+    }
+  ]
+}

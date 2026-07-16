@@ -1,0 +1,17 @@
+{
+  "airport": "KMCO",
+  "runway_configs": [
+    {
+      "id": "SOUTH",
+      "name": "SOUTH FLOW",
+      "arr": "17L 18R",
+      "dep": "17R 18L"
+    },
+    {
+      "id": "NORTH",
+      "name": "NORTH FLOW",
+      "arr": "35R 36L",
+      "dep": "35L 36R"
+    }
+  ]
+}

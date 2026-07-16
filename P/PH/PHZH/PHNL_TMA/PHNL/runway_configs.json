@@ -1,0 +1,23 @@
+{
+  "airport": "PHNL",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "EAST OPS",
+      "arr": "8L 8R 4R",
+      "dep": "8L 8R 4R 4L"
+    },
+    {
+      "id": "EAST_HEAVY",
+      "name": "EAST OPS HEAVY DEP",
+      "arr": "8L 8R 4R",
+      "dep": "8R"
+    },
+    {
+      "id": "WEST",
+      "name": "WEST OPS",
+      "arr": "26L 22L",
+      "dep": "26R 22L"
+    }
+  ]
+}

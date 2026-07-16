@@ -1,0 +1,23 @@
+{
+  "airport": "KCLT",
+  "runway_configs": [
+    {
+      "id": "SOUTH_3RWY",
+      "name": "SOUTH OPS 3 RUNWAYS",
+      "arr": "18R",
+      "dep": "18C 18L"
+    },
+    {
+      "id": "SOUTH_4RWY",
+      "name": "SOUTH OPS 4 RUNWAYS",
+      "arr": "18R 18C 18L 23",
+      "dep": "18C 18L"
+    },
+    {
+      "id": "NORTH_3RWY",
+      "name": "NORTH OPS 3 RUNWAYS",
+      "arr": "36L",
+      "dep": "36C 36R"
+    }
+  ]
+}

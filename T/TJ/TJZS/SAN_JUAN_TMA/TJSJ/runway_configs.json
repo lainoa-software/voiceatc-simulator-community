@@ -1,0 +1,17 @@
+{
+  "airport": "TJSJ",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "EAST OPS",
+      "arr": "10",
+      "dep": "08"
+    },
+    {
+      "id": "WEST",
+      "name": "WEST OPS",
+      "arr": "26",
+      "dep": "28"
+    }
+  ]
+}

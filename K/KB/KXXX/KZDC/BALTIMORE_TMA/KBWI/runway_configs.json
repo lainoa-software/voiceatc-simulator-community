@@ -1,0 +1,23 @@
+{
+  "airport": "KBWI",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "WEST OPS PREF",
+      "arr": "10",
+      "dep": "28"
+    },
+    {
+      "id": "OVERNIGHT",
+      "name": "OVERNIGHT 10/28 PREF",
+      "arr": "10",
+      "dep": "28"
+    },
+    {
+      "id": "PARALLEL",
+      "name": "PARALLEL 15/33",
+      "arr": "33L",
+      "dep": "15R"
+    }
+  ]
+}
