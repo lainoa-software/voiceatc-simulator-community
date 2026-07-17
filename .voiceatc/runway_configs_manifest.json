@@ -2,37 +2,37 @@
   "airport_count": 120,
   "airports": {
     "EBBR": {
-      "repo_path": "E/EB/EBXX/EBBU/BRUSSELS_TMA/EBBR/runway_configs.json",
+      "repo_path": "E/EB/EBBU/BRUSSELS_TMA/EBBR/runway_configs.json",
       "sha256": "3d708c40f922e9b86cec51a30ce1cbfa3bf9ed13053ddb7600fd06e3733d7066",
       "size_bytes": 266
     },
     "EDDB": {
-      "repo_path": "E/ED/EDXX/EDGG/BERLIN_TMA/EDDB/runway_configs.json",
+      "repo_path": "E/ED/EDWW/BERLIN_TMA/EDDB/runway_configs.json",
       "sha256": "1d386f0b7f8db533110ee5fceb8a4f5b970e5a566c7605f6d7d610e3a6939711",
       "size_bytes": 264
     },
     "EDDC": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/EDDC/runway_configs.json",
+      "repo_path": "E/ED/EDMM/EDDC_TMA/EDDC/runway_configs.json",
       "sha256": "c60a0a65e49d2158f7d395def37f2347416b59abd6b5bbdc0d6c0476803c1a13",
       "size_bytes": 226
     },
     "EDDF": {
-      "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/EDDF/runway_configs.json",
+      "repo_path": "E/ED/EDGG/EDDF_TMA/EDDF/runway_configs.json",
       "sha256": "372176b4c077fc080cf487ffdd91db5a7ffe0018effbbcbbd975922574641772",
       "size_bytes": 246
     },
     "EDDL": {
-      "repo_path": "E/ED/EDXX/EDGG/DUSSELDORF_TMA/EDDL/runway_configs.json",
+      "repo_path": "E/ED/EDGG/DUSSELDORF_TMA/EDDL/runway_configs.json",
       "sha256": "359d48368bdc1609efd294bfe4b8bae27dfa1d942b5b275d3330af710fee48f6",
       "size_bytes": 264
     },
     "EDDM": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/EDDM/runway_configs.json",
+      "repo_path": "E/ED/EDMM/EDDM_TMA/EDDM/runway_configs.json",
       "sha256": "26f82a48d8fd3b2385a35874b928c969f1c08c3be601fd2ec280133bf2abf1a5",
       "size_bytes": 248
     },
     "EDDN": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/EDDN/runway_configs.json",
+      "repo_path": "E/ED/EDMM/EDDN_TMA/EDDN/runway_configs.json",
       "sha256": "8b9756741206d4ffef54d82e1ba8b7e721c757d94d34ec890770a693518f892b",
       "size_bytes": 226
     },
@@ -42,22 +42,22 @@
       "size_bytes": 268
     },
     "EGCC": {
-      "repo_path": "E/EG/EGXX/EGTT/MANCHESTER_TMA/EGCC/runway_configs.json",
+      "repo_path": "E/EG/EGTT/MANCHESTER_TMA/EGCC/runway_configs.json",
       "sha256": "3b3722ce033d6312827a7d94fccec51108b59d7d190a61ea2a9ee611d3a333c2",
       "size_bytes": 374
     },
     "EGKK": {
-      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGKK/runway_configs.json",
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGKK/runway_configs.json",
       "sha256": "11d804286d042195696c5cc38dbcd19811cfbf93683fb456f9f775f086670a1b",
       "size_bytes": 266
     },
     "EGLL": {
-      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGLL/runway_configs.json",
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGLL/runway_configs.json",
       "sha256": "6f8234318561a622fde6c35cb857ed1dd7415d0c8fd55439085518e007bb80f6",
       "size_bytes": 232
     },
     "EGSS": {
-      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/EGSS/runway_configs.json",
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGSS/runway_configs.json",
       "sha256": "f3aee1aaf96202199e6948b986b71670aba0af7ae75cce6f9291e5f544449278",
       "size_bytes": 265
     },
@@ -67,12 +67,12 @@
       "size_bytes": 412
     },
     "EIDW": {
-      "repo_path": "E/EI/EIXX/EISN/DUBLIN_TMA/EIDW/runway_configs.json",
+      "repo_path": "E/EI/EISN/DUBLIN_TMA/EIDW/runway_configs.json",
       "sha256": "4b9460ecf8e96c16e7ae37a16c09534db7658d3a4cd5495445aa8e1b5948fc82",
       "size_bytes": 258
     },
     "EKCH": {
-      "repo_path": "E/EK/EKXX/EKDK/COPENHAGEN_TMA/EKCH/runway_configs.json",
+      "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/EKCH/runway_configs.json",
       "sha256": "06a8d308c1a7e9ee0dfc6170589dba45d13da827ab24b31305715c776fab99a2",
       "size_bytes": 375
     },
@@ -82,37 +82,37 @@
       "size_bytes": 284
     },
     "EPWA": {
-      "repo_path": "E/EP/EPXX/EPWW/WARSAW_TMA/EPWA/runway_configs.json",
+      "repo_path": "E/EP/EPWW/WARSAW_TMA/EPWA/runway_configs.json",
       "sha256": "aa7c4bd6d9bcac03ddf15f138fcdf602ae7e0d2083fe1db840df4b427b7b4a8f",
       "size_bytes": 364
     },
     "ESGG": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/ESGG/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/ESGG/runway_configs.json",
       "sha256": "807174acd2eb75d0e5b4647faff31313a54df1c8adf13e0932b30bb25925d5f2",
       "size_bytes": 232
     },
     "ESGT": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/ESGT/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/ESGT/runway_configs.json",
       "sha256": "25350e7173a5e059d387a20e147cb1f3876368bce4d695e66cce48c09830ba67",
       "size_bytes": 232
     },
     "ESIB": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/ESIB/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/ESIB/runway_configs.json",
       "sha256": "49497ed617d9808a2f943e009fe62671850101921f0b7a4a4d1ad7b3a2515971",
       "size_bytes": 232
     },
     "ESOW": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESOW/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESOW/runway_configs.json",
       "sha256": "e1f0986b90b407c61160631563946ec234691f26aaac3cca79143fde16edae4d",
       "size_bytes": 232
     },
     "ESSA": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESSA/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/runway_configs.json",
       "sha256": "ca216444c15f80e9da9d5a177eb402ab66f7cdcc7c0d826ac7b1d44da6386cfc",
       "size_bytes": 1935
     },
     "ESSB": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/ESSB/runway_configs.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/runway_configs.json",
       "sha256": "83b50bd599c560f87a21c9feeae88878bfa1b36a73f0fd6d0d451624e78284e1",
       "size_bytes": 232
     },
@@ -152,242 +152,242 @@
       "size_bytes": 254
     },
     "KATL": {
-      "repo_path": "K/KA/KXXX/KZTL/ATLANTA_TMA/KATL/runway_configs.json",
+      "repo_path": "K/KZTL/ATLANTA_TMA/KATL/runway_configs.json",
       "sha256": "b7bde42d1c3ac3f358a81902bf288a332e18ef77172f0cf9c22764465947fd4c",
       "size_bytes": 264
     },
     "KAUS": {
-      "repo_path": "K/KA/KXXX/KZFW/AUSTIN_TMA/KAUS/runway_configs.json",
+      "repo_path": "K/KZHU/AUSTIN_TMA/KAUS/runway_configs.json",
       "sha256": "65aada2717cd9114ff6829e5b00a21073e3007423f5308759bffb7454a6d0c25",
       "size_bytes": 386
     },
     "KBNA": {
-      "repo_path": "K/KB/KXXX/KZME/NASHVILLE_TMA/KBNA/runway_configs.json",
+      "repo_path": "K/KZME/NASHVILLE_TMA/KBNA/runway_configs.json",
       "sha256": "ef784f1b844a73cb5406eb05057c857be3690717685290208288f1eb4b743a09",
       "size_bytes": 396
     },
     "KBOS": {
-      "repo_path": "K/KB/KXXX/KZBW/BOSTON_TMA/KBOS/runway_configs.json",
+      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/runway_configs.json",
       "sha256": "ac0e91243536efeacd954bb1eb320fd61f855b799bff5ad09674a40f7cafc49d",
       "size_bytes": 279
     },
     "KBWI": {
-      "repo_path": "K/KB/KXXX/KZDC/BALTIMORE_TMA/KBWI/runway_configs.json",
+      "repo_path": "K/KZDC/BALTIMORE_TMA/KBWI/runway_configs.json",
       "sha256": "8745fc8aaef86547ba05f18462495b49c734281b5a35d1c25491a346357c8d98",
       "size_bytes": 372
     },
     "KCLE": {
-      "repo_path": "K/KC/KXXX/KZOB/CLEVELAND_TMA/KCLE/runway_configs.json",
+      "repo_path": "K/KZOB/CLEVELAND_TMA/KCLE/runway_configs.json",
       "sha256": "c403e7e0a0e30a1d6efc8fc76e9af929ed2521a23a459efbef4e46df1791f031",
       "size_bytes": 262
     },
     "KCLT": {
-      "repo_path": "K/KC/KXXX/KZTL/CHARLOTTE_TMA/KCLT/runway_configs.json",
+      "repo_path": "K/KZTL/CHARLOTTE_TMA/KCLT/runway_configs.json",
       "sha256": "db52ef0d389a109d682f187e92d3534699d14f872821ed1b2555f37047db151e",
       "size_bytes": 418
     },
     "KCMH": {
-      "repo_path": "K/KC/KXXX/KZID/COLUMBUS_TMA/KCMH/runway_configs.json",
+      "repo_path": "K/KZID/COLUMBUS_TMA/KCMH/runway_configs.json",
       "sha256": "731ea3aabc0d8b17c556ebfb0d6316959b8b5776cd281dba757a8cc4370c29c0",
       "size_bytes": 266
     },
     "KCVG": {
-      "repo_path": "K/KC/KXXX/KZID/CINCINNATI_TMA/KCVG/runway_configs.json",
+      "repo_path": "K/KZID/CINCINNATI_TMA/KCVG/runway_configs.json",
       "sha256": "be7eba9ced7e730091d27adba346dcd4eef0b70407fbd880d18f8ba1c675bd65",
       "size_bytes": 352
     },
     "KDAL": {
-      "repo_path": "K/KD/KXXX/KZFW/DALLAS_LOVE_TMA/KDAL/runway_configs.json",
+      "repo_path": "K/KZFW/DALLAS_LOVE_TMA/KDAL/runway_configs.json",
       "sha256": "4aa3c9ba58b74683b7569ac9f5d9f99d94f20d351736c6c828bb4cbd7adde5fc",
       "size_bytes": 287
     },
     "KDCA": {
-      "repo_path": "K/KD/KXXX/KZDC/WASHINGTON_DCA_TMA/KDCA/runway_configs.json",
+      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/runway_configs.json",
       "sha256": "8bd961f543168eef8bfc68eafe642db818866e3eeccdc2a26c6d18329fd02aa2",
       "size_bytes": 360
     },
     "KDEN": {
-      "repo_path": "K/KD/KXXX/KZDV/DENVER_TMA/KDEN/runway_configs.json",
+      "repo_path": "K/KZDV/DENVER_TMA/KDEN/runway_configs.json",
       "sha256": "ba8a44ead68cc5c28aa32e9c695147ed2812e1d4d6a95f3c54079d634f17fc81",
       "size_bytes": 452
     },
     "KDFW": {
-      "repo_path": "K/KD/KXXX/KZFW/DFW_TMA/KDFW/runway_configs.json",
+      "repo_path": "K/KZFW/DFW_TMA/KDFW/runway_configs.json",
       "sha256": "57b2ba8e9a0a3b23e64d5e2bd1add7fbbe14b247597843a19908b9660740d9b8",
       "size_bytes": 586
     },
     "KDTW": {
-      "repo_path": "K/KD/KXXX/KZMP/DETROIT_TMA/KDTW/runway_configs.json",
+      "repo_path": "K/KZOB/DETROIT_TMA/KDTW/runway_configs.json",
       "sha256": "5b66bb5b6b4746ecceb1bee63ae04e02b1938814900abcfe65feeae6316af6e9",
       "size_bytes": 512
     },
     "KEWR": {
-      "repo_path": "K/KE/KXXX/KZNY/NEWARK_TMA/KEWR/runway_configs.json",
+      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/runway_configs.json",
       "sha256": "24e3d51948e8208d2ebb7a47d421cb9e1fb2329436b20021f6579b3c00202c0e",
       "size_bytes": 503
     },
     "KFLL": {
-      "repo_path": "K/KF/KXXX/KZMA/FORT_LAUDERDALE_TMA/KFLL/runway_configs.json",
+      "repo_path": "K/KZMA/FORT_LAUDERDALE_TMA/KFLL/runway_configs.json",
       "sha256": "8d398e8452fe7e3469d14cac4929c309765a4183324b8abf9e83ae41dd916986",
       "size_bytes": 380
     },
     "KHOU": {
-      "repo_path": "K/KH/KXXX/KZHU/HOUSTON_HOBBY_TMA/KHOU/runway_configs.json",
+      "repo_path": "K/KZHU/HOUSTON_HOBBY_TMA/KHOU/runway_configs.json",
       "sha256": "23df917dc383d3677c74cd18531b293ae88efeb7ecf03d6ea456a317f6774f30",
       "size_bytes": 283
     },
     "KIAD": {
-      "repo_path": "K/KI/KXXX/KZDC/DULLES_TMA/KIAD/runway_configs.json",
+      "repo_path": "K/KZDC/DULLES_TMA/KIAD/runway_configs.json",
       "sha256": "b0db1a8fd5593d43b431c04231df7bcb4a498aadb1a63c319e581c610373bdff",
       "size_bytes": 392
     },
     "KIAH": {
-      "repo_path": "K/KI/KXXX/KZHU/HOUSTON_IAH_TMA/KIAH/runway_configs.json",
+      "repo_path": "K/KZHU/HOUSTON_IAH_TMA/KIAH/runway_configs.json",
       "sha256": "b18197a80a8f030e0e786c913ecec6b9a9e92c077311400bc14b2a4255746325",
       "size_bytes": 392
     },
     "KIND": {
-      "repo_path": "K/KI/KXXX/KZID/INDIANAPOLIS_TMA/KIND/runway_configs.json",
+      "repo_path": "K/KZID/INDIANAPOLIS_TMA/KIND/runway_configs.json",
       "sha256": "f18f490fa7ce302cdbd3124beb9a9cd16dd19f79c2f1b7e67a877264b390c507",
       "size_bytes": 362
     },
     "KJFK": {
-      "repo_path": "K/KJ/KXXX/KZNY/JFK_TMA/KJFK/runway_configs.json",
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/runway_configs.json",
       "sha256": "c1fd7cf508e49cb43136e6b182d7d0a56d2ef6c14422465362fdedc5d12d463e",
       "size_bytes": 516
     },
     "KLAS": {
-      "repo_path": "K/KL/KXXX/KZLA/LAS_TMA/KLAS/runway_configs.json",
+      "repo_path": "K/KZLA/LAS_TMA/KLAS/runway_configs.json",
       "sha256": "732408026dd40fd1479a86248d9b1b045a498fe30df41acf67d2d6703ee21c01",
       "size_bytes": 462
     },
     "KLAX": {
-      "repo_path": "K/KL/KXXX/KZLA/LAX_TMA/KLAX/runway_configs.json",
+      "repo_path": "K/KZLA/LAX_TMA/KLAX/runway_configs.json",
       "sha256": "424cef998ce28f08c7d14838faf242333609be62e53ed6b9276db432c0331d2e",
       "size_bytes": 513
     },
     "KLGA": {
-      "repo_path": "K/KL/KXXX/KZNY/LAGUARDIA_TMA/KLGA/runway_configs.json",
+      "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/runway_configs.json",
       "sha256": "a712538c3fdbe5775b00e09c0787fae18dc316e401f615d6d3450d3d5dd6c844",
       "size_bytes": 252
     },
     "KMCI": {
-      "repo_path": "K/KM/KXXX/KZKC/KANSAS_CITY_TMA/KMCI/runway_configs.json",
+      "repo_path": "K/KZKC/KANSAS_CITY_TMA/KMCI/runway_configs.json",
       "sha256": "ed0385fd787a4a6b687fa97fdde6ee916a9f0c50c29d6dd232788922c6a14507",
       "size_bytes": 429
     },
     "KMCO": {
-      "repo_path": "K/KM/KXXX/KZJX/ORLANDO_TMA/KMCO/runway_configs.json",
+      "repo_path": "K/KZJX/ORLANDO_TMA/KMCO/runway_configs.json",
       "sha256": "74600ed557a6ac848d78c1f3a708f88c733608d4d2c5d52cd76da0318ae7666f",
       "size_bytes": 268
     },
     "KMDW": {
-      "repo_path": "K/KM/KXXX/KZAU/CHICAGO_MDW_TMA/KMDW/runway_configs.json",
+      "repo_path": "K/KZAU/CHICAGO_MDW_TMA/KMDW/runway_configs.json",
       "sha256": "fb35ac2d5753db265e2b5efed01ff9af4eb99851871aa1d548d1478a6e56783c",
       "size_bytes": 309
     },
     "KMIA": {
-      "repo_path": "K/KM/KXXX/KZMA/MIAMI_TMA/KMIA/runway_configs.json",
+      "repo_path": "K/KZMA/MIAMI_TMA/KMIA/runway_configs.json",
       "sha256": "c09612cd7d01377df36739ffe5436ddf5aeafee129b97127394de796fc434e15",
       "size_bytes": 365
     },
     "KMSP": {
-      "repo_path": "K/KM/KXXX/KZMP/MINNEAPOLIS_TMA/KMSP/runway_configs.json",
+      "repo_path": "K/KZMP/MINNEAPOLIS_TMA/KMSP/runway_configs.json",
       "sha256": "9d018071de7b6de38dd722649934ac5a19dfe1be125b26c453a6fbaeaf1aadee",
       "size_bytes": 401
     },
     "KMSY": {
-      "repo_path": "K/KM/KXXX/KZHU/NEW_ORLEANS_TMA/KMSY/runway_configs.json",
+      "repo_path": "K/KZHU/NEW_ORLEANS_TMA/KMSY/runway_configs.json",
       "sha256": "d77a4c90b86f34fb6a4e0687cc006279bc4f452bd2f1f3c5708df1bc3519b13f",
       "size_bytes": 274
     },
     "KOAK": {
-      "repo_path": "K/KO/KXXX/KZOA/OAKLAND_TMA/KOAK/runway_configs.json",
+      "repo_path": "K/KZOA/OAKLAND_TMA/KOAK/runway_configs.json",
       "sha256": "8734c7cac287bbfa052ec32b1047ad3d1609970474251d91ece3afbd031f82cf",
       "size_bytes": 384
     },
     "KORD": {
-      "repo_path": "K/KO/KXXX/KZAU/CHICAGO_ORD_TMA/KORD/runway_configs.json",
+      "repo_path": "K/KZAU/CHICAGO_ORD_TMA/KORD/runway_configs.json",
       "sha256": "c08e237e746c9acff3718f95f1ec950d8022c1078172a228e84ba2e8e18ceb11",
       "size_bytes": 526
     },
     "KPDX": {
-      "repo_path": "K/KP/KXXX/KZSE/PORTLAND_TMA/KPDX/runway_configs.json",
+      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/runway_configs.json",
       "sha256": "7d80c818cd70f6a8bc9d36b3610b9b14d4ae7b31f7549da8f197cea840d3f94f",
       "size_bytes": 410
     },
     "KPHL": {
-      "repo_path": "K/KP/KXXX/KZNY/PHILADELPHIA_TMA/KPHL/runway_configs.json",
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/runway_configs.json",
       "sha256": "79044aa7d4fb903a010c3fc9b923fe97647c748836f2fec864dc5399191b3ef6",
       "size_bytes": 390
     },
     "KPHX": {
-      "repo_path": "K/KP/KXXX/KZAB/PHOENIX_TMA/KPHX/runway_configs.json",
+      "repo_path": "K/KZAB/PHOENIX_TMA/KPHX/runway_configs.json",
       "sha256": "f27394e65667907bac5ef71997407b3d9a663bbbfa9339b920e1ce19dfef1a8c",
       "size_bytes": 254
     },
     "KPIT": {
-      "repo_path": "K/KP/KXXX/KZOB/PITTSBURGH_TMA/KPIT/runway_configs.json",
+      "repo_path": "K/KZOB/PITTSBURGH_TMA/KPIT/runway_configs.json",
       "sha256": "5a93cf67a43956cd16dc88a86cf4ae64d22a9d1f79ee7877ac73042b0fe451a6",
       "size_bytes": 356
     },
     "KRDU": {
-      "repo_path": "K/KR/KXXX/KZDC/RALEIGH_TMA/KRDU/runway_configs.json",
+      "repo_path": "K/KZDC/RALEIGH_TMA/KRDU/runway_configs.json",
       "sha256": "d214eb0ac4204a5be343f19b5b1b9d03390dc865da5ea470ee8e83cd20ad1011",
       "size_bytes": 268
     },
     "KRSW": {
-      "repo_path": "K/KR/KXXX/KZMA/FORT_MYERS_TMA/KRSW/runway_configs.json",
+      "repo_path": "K/KZMA/FORT_MYERS_TMA/KRSW/runway_configs.json",
       "sha256": "c8f73186bff355e9cca021b11be0c35b0319ce1783208946b7b5858f2f352955",
       "size_bytes": 350
     },
     "KSAN": {
-      "repo_path": "K/KS/KXXX/KZLA/SAN_DIEGO_TMA/KSAN/runway_configs.json",
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/runway_configs.json",
       "sha256": "0cc8c0c4951b67684b114e2bfa1bf9be22475a68875ac3285a77120f910ae9ae",
       "size_bytes": 360
     },
     "KSAT": {
-      "repo_path": "K/KS/KXXX/KZFW/SAN_ANTONIO_TMA/KSAT/runway_configs.json",
+      "repo_path": "K/KZHU/SAN_ANTONIO_TMA/KSAT/runway_configs.json",
       "sha256": "e2ddf75e0c8f08ae36a2f9df73c75b39d477751a9ee7b313494e593035cba520",
       "size_bytes": 360
     },
     "KSEA": {
-      "repo_path": "K/KS/KXXX/KZSE/SEATTLE_TMA/KSEA/runway_configs.json",
+      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/runway_configs.json",
       "sha256": "1f4a63022606c878932bbd75c7ca98bebe3d6c00c44830936b4f0fea210f4088",
       "size_bytes": 534
     },
     "KSFO": {
-      "repo_path": "K/KS/KXXX/KZOA/SFO_TMA/KSFO/runway_configs.json",
+      "repo_path": "K/KZOA/SFO_TMA/KSFO/runway_configs.json",
       "sha256": "14aec75513afaef5c006a1361220ec7d67f90a3e75a67551b0f68090bd9a9a42",
       "size_bytes": 409
     },
     "KSJC": {
-      "repo_path": "K/KS/KXXX/KZOA/SAN_JOSE_TMA/KSJC/runway_configs.json",
+      "repo_path": "K/KZOA/SAN_JOSE_TMA/KSJC/runway_configs.json",
       "sha256": "e6aec8d7cd39828ee851894fd4061634f2043318241ea3da734ba911c70fe3b2",
       "size_bytes": 258
     },
     "KSLC": {
-      "repo_path": "K/KS/KXXX/KZLC/SALT_LAKE_TMA/KSLC/runway_configs.json",
+      "repo_path": "K/KZLC/SALT_LAKE_TMA/KSLC/runway_configs.json",
       "sha256": "fc624979482099dd2212f696c8ee3286ddf6434b6c129ffac6b9fd08a1fec8b2",
       "size_bytes": 414
     },
     "KSMF": {
-      "repo_path": "K/KS/KXXX/KZOA/SACRAMENTO_TMA/KSMF/runway_configs.json",
+      "repo_path": "K/KZOA/SACRAMENTO_TMA/KSMF/runway_configs.json",
       "sha256": "9d3ad427787e1a421e580583f5802b0efcf1c0925e63d1f853a9a4bccbf38a33",
       "size_bytes": 270
     },
     "KSNA": {
-      "repo_path": "K/KS/KXXX/KZLA/SANTA_ANA_TMA/KSNA/runway_configs.json",
+      "repo_path": "K/KZLA/SANTA_ANA_TMA/KSNA/runway_configs.json",
       "sha256": "b0a1f8add1c986b2549056fba1e58a1a1e8d37b9922275c2ef6d2754b4e614d5",
       "size_bytes": 273
     },
     "KSTL": {
-      "repo_path": "K/KS/KXXX/KZME/ST_LOUIS_TMA/KSTL/runway_configs.json",
+      "repo_path": "K/KZKC/ST_LOUIS_TMA/KSTL/runway_configs.json",
       "sha256": "f637fe38a3d775197f7799afc7c73ca3b250f1e9cf8ceb2c6528a416de73190e",
       "size_bytes": 268
     },
     "KTPA": {
-      "repo_path": "K/KT/KXXX/KZJX/TAMPA_TMA/KTPA/runway_configs.json",
+      "repo_path": "K/KZMA/TAMPA_TMA/KTPA/runway_configs.json",
       "sha256": "f760f2531a671290a23b285c4f5ad520101d6f095a38dc94b101327ddbc34de4",
       "size_bytes": 490
     },
@@ -537,52 +537,52 @@
       "size_bytes": 254
     },
     "LFPG": {
-      "repo_path": "E/LF/LFXX/LFFF/PARIS_TMA/LFPG/runway_configs.json",
+      "repo_path": "E/LF/LFFF/PARIS_TMA/LFPG/runway_configs.json",
       "sha256": "6e65250ae81c38a891ff36b2f22b79b587a43c308c4d19b08c4af9db4d37bc4d",
       "size_bytes": 274
     },
     "LFPO": {
-      "repo_path": "E/LF/LFXX/LFFF/PARIS_TMA/LFPO/runway_configs.json",
+      "repo_path": "E/LF/LFFF/PARIS_TMA/LFPO/runway_configs.json",
       "sha256": "fca8e7470adba68a0b964a8cd53dd34951147551b570e2be599435f3e176ae27",
       "size_bytes": 254
     },
     "LGAV": {
-      "repo_path": "E/LG/LGXX/LGGG/ATHENS_TMA/LGAV/runway_configs.json",
+      "repo_path": "E/LG/LGGG/ATHENS_TMA/LGAV/runway_configs.json",
       "sha256": "95d3160e657c69becab014ba829379b7dc935233d003a891220073fc92da9afe",
       "size_bytes": 269
     },
     "LIMC": {
-      "repo_path": "E/LI/LIXX/LIMM/MILAN_TMA/LIMC/runway_configs.json",
+      "repo_path": "E/LI/LIMM/MILAN_TMA/LIMC/runway_configs.json",
       "sha256": "58666385bf38a2abb5aae824bb83e35575e1ea0b0818ba12fed6a44ed7f97c59",
       "size_bytes": 379
     },
     "LIRF": {
-      "repo_path": "E/LI/LIXX/LIMM/ROME_TMA/LIRF/runway_configs.json",
+      "repo_path": "E/LI/LIRR/ROME_TMA/LIRF/runway_configs.json",
       "sha256": "13c2b6be172e44dbbe088b59dd20ebc09ee46307a7b606a8ecfd0895721f3e99",
       "size_bytes": 266
     },
     "LOWW": {
-      "repo_path": "E/LO/LOXX/LOVV/VIENNA_TMA/LOWW/runway_configs.json",
+      "repo_path": "E/LO/LOVV/VIENNA_TMA/LOWW/runway_configs.json",
       "sha256": "6d0abf31d2fa5b196223618a59dc7835cc8d1430b48a5bad6d1e471ad0526efe",
       "size_bytes": 368
     },
     "LPPT": {
-      "repo_path": "E/LP/LPXX/LPPC/LISBON_TMA/LPPT/runway_configs.json",
+      "repo_path": "E/LP/LPPC/LISBON_TMA/LPPT/runway_configs.json",
       "sha256": "bd088e012d5be852e01c0f539cf1ad11ce50dca71cf850c5a18128cd8e6e19c4",
       "size_bytes": 265
     },
     "LSZH": {
-      "repo_path": "E/LS/LSXX/LSAS/ZURICH_TMA/LSZH/runway_configs.json",
+      "repo_path": "E/LS/LSAS/ZURICH_TMA/LSZH/runway_configs.json",
       "sha256": "a9d0c2f4a8e693c2aba94185995675de89441c8fc1b5f4cd5d8a9ce62245076e",
       "size_bytes": 354
     },
     "LTFJ": {
-      "repo_path": "L/LT/LTXX/LTBB/ISTANBUL_TMA/LTFJ/runway_configs.json",
+      "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFJ/runway_configs.json",
       "sha256": "8770668772662a9190f37c03b480bd1cffeef69ac400e7527b0cf8401cab050a",
       "size_bytes": 280
     },
     "LTFM": {
-      "repo_path": "L/LT/LTXX/LTBB/ISTANBUL_TMA/LTFM/runway_configs.json",
+      "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFM/runway_configs.json",
       "sha256": "b7d545160f7e03af629f2c6f455ead81ea52e8949e248966926e989c5d2f8e5f",
       "size_bytes": 280
     },
@@ -603,12 +603,12 @@
     }
   },
   "asset_name": "runway-configs-2607.zip",
-  "commit_sha": "450f71d5c56d7a37dee3911e0d48a73f047f0d62",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17/runway-configs-2607.zip",
-  "published_at": "2026-07-17T04:22:56Z",
-  "release_tag": "daily-2026-07-17",
+  "commit_sha": "8ab35c052d6e44dfcfa8496ad14494b8cfd6e20d",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17-b/runway-configs-2607.zip",
+  "published_at": "2026-07-17T07:54:56Z",
+  "release_tag": "daily-2026-07-17-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "7a8ab919cdc9a38525544b755e891dfb4b21454cec90dfbef398986c0bf07fa3",
-  "size_bytes": 38858
+  "sha256": "1bb6415ce970539a011bcc337ee933db685ef1057ccdb342654a37fc9f072d38",
+  "size_bytes": 37850
 }

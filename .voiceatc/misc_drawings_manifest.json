@@ -2,22 +2,22 @@
   "airport_count": 18,
   "airports": {
     "EDDC": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDC_TMA/misc_drawings.json",
+      "repo_path": "E/ED/EDMM/EDDC_TMA/misc_drawings.json",
       "sha256": "bb02484b3242322accbdd8ada513d3560e7adace8c904deb2ee16e7dfee462ce",
       "size_bytes": 745
     },
     "EDDF": {
-      "repo_path": "E/ED/EDXX/EDGG/EDDF_TMA/misc_drawings.json",
+      "repo_path": "E/ED/EDGG/EDDF_TMA/misc_drawings.json",
       "sha256": "68c12602c6c343922e8736284f90a00a7c498e9cc4d8ed025114c5da9ff8b850",
       "size_bytes": 7229
     },
     "EDDM": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDM_TMA/misc_drawings.json",
+      "repo_path": "E/ED/EDMM/EDDM_TMA/misc_drawings.json",
       "sha256": "bb74a84ae7ea3f376ceb03980097e05635e1402219e7fb248e3fea36b4f995bf",
       "size_bytes": 1709
     },
     "EDDN": {
-      "repo_path": "E/ED/EDXX/EDMM/EDDN_TMA/misc_drawings.json",
+      "repo_path": "E/ED/EDMM/EDDN_TMA/misc_drawings.json",
       "sha256": "f6fee453097975b537abb21318a8f56b9a9b318de80cca68b07545db899d33b8",
       "size_bytes": 2166
     },
@@ -27,7 +27,7 @@
       "size_bytes": 93
     },
     "EGLL": {
-      "repo_path": "E/EG/EGXX/EGTT/LONDON_TMA/misc_drawings.json",
+      "repo_path": "E/EG/EGTT/LONDON_TMA/misc_drawings.json",
       "sha256": "5bea4d9901ae0c33e70454e3cf562b0f73018db94b8fb3a64106319ce7d0faac",
       "size_bytes": 58976
     },
@@ -37,32 +37,32 @@
       "size_bytes": 22605
     },
     "ESGG": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/misc_drawings.json",
       "sha256": "3d20dedd6c0683d7dff4b3ef3b6892ac1488a5a560fb84dabfe1dfd21946c881",
       "size_bytes": 49455
     },
     "ESGT": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/misc_drawings.json",
       "sha256": "3d20dedd6c0683d7dff4b3ef3b6892ac1488a5a560fb84dabfe1dfd21946c881",
       "size_bytes": 49455
     },
     "ESIB": {
-      "repo_path": "E/ES/ESMM/ESMM_23W45/ESGG_TMA/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/misc_drawings.json",
       "sha256": "3d20dedd6c0683d7dff4b3ef3b6892ac1488a5a560fb84dabfe1dfd21946c881",
       "size_bytes": 49455
     },
     "ESOW": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/misc_drawings.json",
       "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
     "ESSA": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/misc_drawings.json",
       "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
     "ESSB": {
-      "repo_path": "E/ES/ESOS/ESOS_Y/ESOS_APP/misc_drawings.json",
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/misc_drawings.json",
       "sha256": "5afdc92c99164c51d3748565b2336486d2a4ba8cf7252073558e740bd631e968",
       "size_bytes": 80145
     },
@@ -72,7 +72,7 @@
       "size_bytes": 52568
     },
     "LEMH": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/misc_drawings.json",
+      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/misc_drawings.json",
       "sha256": "2f9fb62db2a9da8e0ed2f642cb712a8983462e35cdbb9d746f36bd04d695ed01",
       "size_bytes": 3742
     },
@@ -93,12 +93,12 @@
     }
   },
   "asset_name": "misc-drawings-2607.zip",
-  "commit_sha": "450f71d5c56d7a37dee3911e0d48a73f047f0d62",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17/misc-drawings-2607.zip",
-  "published_at": "2026-07-17T04:22:56Z",
-  "release_tag": "daily-2026-07-17",
+  "commit_sha": "8ab35c052d6e44dfcfa8496ad14494b8cfd6e20d",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17-b/misc-drawings-2607.zip",
+  "published_at": "2026-07-17T07:54:56Z",
+  "release_tag": "daily-2026-07-17-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "ab6b9b3965e0d6ab89c74bcf5a23efb852f5a81fa8b240e0bf1a6f2674822eaf",
-  "size_bytes": 49587
+  "sha256": "89dee34f08a8158cc205a1746ede987837d105352d8c35b426309b82cf689a34",
+  "size_bytes": 49527
 }
