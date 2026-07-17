@@ -1,0 +1,19 @@
+{
+  "symbol_size": 0.65,
+  "traildot_size": 0.15,
+  "symbol_line_width": 1.0,
+  "forecast_symbol": "rps",
+  "incoming_symbol": "rps",
+  "assumed_symbol": "rps",
+  "of_interest_symbol": "rps",
+  "alien_symbol": "rps",
+  "released_symbol": "rps",
+  "traildot_symbol": "rps",
+  "defined_symbols": {
+    "rps": {
+      "type": "wireframe",
+      "draw": "M -2 -2 L -2 2 L 2 2 L 2 -2 L -2 -2",
+      "connection_points": [[0, 0]]
+    }
+  }
+}

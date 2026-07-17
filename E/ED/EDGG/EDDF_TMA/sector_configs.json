@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["07", "25"],
+      "sectors": [
+        {
+          "sector_ids": ["DFAN"],
+          "frequency": "120.805"
+        }
+      ]
+    }
+  ]
+}

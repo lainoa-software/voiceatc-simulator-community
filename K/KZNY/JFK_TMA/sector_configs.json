@@ -1,0 +1,14 @@
+{
+  "airport": "KJFK",
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "sectors": [
+        {
+          "sector_ids": ["KJFKAPP"],
+          "frequency": "127.400"
+        }
+      ]
+    }
+  ]
+}

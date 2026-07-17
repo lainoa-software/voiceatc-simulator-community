@@ -14,6 +14,57 @@ SPEC.loader.exec_module(MODULE)
 
 
 class RoutesReleaseManifestTests(unittest.TestCase):
+    def test_dual_manifest_keeps_legacy_root_and_advertises_rich_asset(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_dir = root / "ROUTES"
+            routes_dir.mkdir(parents=True)
+            header = "airac 2607\nORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+            (routes_dir / "routes.tsv").write_text(
+                header
+                + "KJFK\tEGLL\tKJFK DCT 5100N05000W DCT EGLL\t2607\tTest\n",
+                encoding="utf-8",
+            )
+            (routes_dir / "routes_legacy.tsv").write_text(
+                header + "KJFK\tEGLL\tKJFK DCT EGLL\t2607\tTest\n",
+                encoding="utf-8",
+            )
+
+            manifest = MODULE.build_routes_manifest(
+                release_tag="daily-2026-07-16",
+                asset_name="routes-2607.tsv",
+                download_url="https://example.test/routes-2607.tsv",
+                rich_asset_name="routes-rich-2607.tsv",
+                rich_download_url="https://example.test/routes-rich-2607.tsv",
+                published_at="2026-07-16T10:00:00Z",
+                commit_sha="test",
+                root=root,
+            )
+
+            self.assertEqual(
+                MODULE._parse_routes_tsv(routes_dir / "routes_legacy.tsv")["sha256"],
+                manifest["sha256"],
+            )
+            self.assertEqual(
+                "routes-rich-2607.tsv",
+                manifest["rich_routes_tsv"]["asset_name"],
+            )
+
+    def test_dual_distribution_rejects_rich_tokens_in_legacy_table(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_dir = root / "ROUTES"
+            routes_dir.mkdir(parents=True)
+            payload = (
+                "airac 2607\nORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                "KJFK\tEGLL\tKJFK DCT 5100N05000W DCT EGLL\t2607\tTest\n"
+            )
+            (routes_dir / "routes.tsv").write_text(payload, encoding="utf-8")
+            (routes_dir / "routes_legacy.tsv").write_text(payload, encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "legacy route contains rich token"):
+                MODULE.validate_routes_distribution(root)
+
     def test_build_routes_manifest_accepts_valid_routes_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)

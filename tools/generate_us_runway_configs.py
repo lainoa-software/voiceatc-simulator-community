@@ -2,64 +2,12 @@
 """One-shot generator for FAA CY2024 top-50 US preferential runway configs."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-
-# repo_path suffix: .../{ICAO}/runway_configs.json
-AIRPORT_PATHS: dict[str, str] = {
-    "KATL": "K/KA/KXXX/KZTL/ATLANTA_TMA/KATL",
-    "KDFW": "K/KD/KXXX/KZFW/DFW_TMA/KDFW",
-    "KDEN": "K/KD/KXXX/KZDV/DENVER_TMA/KDEN",
-    "KORD": "K/KO/KXXX/KZAU/CHICAGO_ORD_TMA/KORD",
-    "KLAX": "K/KL/KXXX/KZLA/LAX_TMA/KLAX",
-    "KJFK": "K/KJ/KXXX/KZNY/JFK_TMA/KJFK",
-    "KCLT": "K/KC/KXXX/KZTL/CHARLOTTE_TMA/KCLT",
-    "KLAS": "K/KL/KXXX/KZLA/LAS_TMA/KLAS",
-    "KMCO": "K/KM/KXXX/KZJX/ORLANDO_TMA/KMCO",
-    "KMIA": "K/KM/KXXX/KZMA/MIAMI_TMA/KMIA",
-    "KPHX": "K/KP/KXXX/KZAB/PHOENIX_TMA/KPHX",
-    "KSEA": "K/KS/KXXX/KZSE/SEATTLE_TMA/KSEA",
-    "KSFO": "K/KS/KXXX/KZOA/SFO_TMA/KSFO",
-    "KEWR": "K/KE/KXXX/KZNY/NEWARK_TMA/KEWR",
-    "KIAH": "K/KI/KXXX/KZHU/HOUSTON_IAH_TMA/KIAH",
-    "KBOS": "K/KB/KXXX/KZBW/BOSTON_TMA/KBOS",
-    "KMSP": "K/KM/KXXX/KZMP/MINNEAPOLIS_TMA/KMSP",
-    "KFLL": "K/KF/KXXX/KZMA/FORT_LAUDERDALE_TMA/KFLL",
-    "KLGA": "K/KL/KXXX/KZNY/LAGUARDIA_TMA/KLGA",
-    "KDTW": "K/KD/KXXX/KZMP/DETROIT_TMA/KDTW",
-    "KPHL": "K/KP/KXXX/KZNY/PHILADELPHIA_TMA/KPHL",
-    "KSLC": "K/KS/KXXX/KZLC/SALT_LAKE_TMA/KSLC",
-    "KBWI": "K/KB/KXXX/KZDC/BALTIMORE_TMA/KBWI",
-    "KIAD": "K/KI/KXXX/KZDC/DULLES_TMA/KIAD",
-    "KSAN": "K/KS/KXXX/KZLA/SAN_DIEGO_TMA/KSAN",
-    "KDCA": "K/KD/KXXX/KZDC/WASHINGTON_DCA_TMA/KDCA",
-    "KTPA": "K/KT/KXXX/KZJX/TAMPA_TMA/KTPA",
-    "KBNA": "K/KB/KXXX/KZME/NASHVILLE_TMA/KBNA",
-    "KAUS": "K/KA/KXXX/KZFW/AUSTIN_TMA/KAUS",
-    "PHNL": "P/PH/PHZH/PHNL_TMA/PHNL",
-    "KMDW": "K/KM/KXXX/KZAU/CHICAGO_MDW_TMA/KMDW",
-    "KDAL": "K/KD/KXXX/KZFW/DALLAS_LOVE_TMA/KDAL",
-    "KPDX": "K/KP/KXXX/KZSE/PORTLAND_TMA/KPDX",
-    "KSTL": "K/KS/KXXX/KZME/ST_LOUIS_TMA/KSTL",
-    "KRDU": "K/KR/KXXX/KZDC/RALEIGH_TMA/KRDU",
-    "KHOU": "K/KH/KXXX/KZHU/HOUSTON_HOBBY_TMA/KHOU",
-    "KSMF": "K/KS/KXXX/KZOA/SACRAMENTO_TMA/KSMF",
-    "KMSY": "K/KM/KXXX/KZHU/NEW_ORLEANS_TMA/KMSY",
-    "TJSJ": "T/TJ/TJZS/SAN_JUAN_TMA/TJSJ",
-    "KMCI": "K/KM/KXXX/KZKC/KANSAS_CITY_TMA/KMCI",
-    "KSJC": "K/KS/KXXX/KZOA/SAN_JOSE_TMA/KSJC",
-    "KSAT": "K/KS/KXXX/KZFW/SAN_ANTONIO_TMA/KSAT",
-    "KRSW": "K/KR/KXXX/KZMA/FORT_MYERS_TMA/KRSW",
-    "KSNA": "K/KS/KXXX/KZLA/SANTA_ANA_TMA/KSNA",
-    "KOAK": "K/KO/KXXX/KZOA/OAKLAND_TMA/KOAK",
-    "KIND": "K/KI/KXXX/KZID/INDIANAPOLIS_TMA/KIND",
-    "KCLE": "K/KC/KXXX/KZOB/CLEVELAND_TMA/KCLE",
-    "KPIT": "K/KP/KXXX/KZOB/PITTSBURGH_TMA/KPIT",
-    "KCVG": "K/KC/KXXX/KZID/CINCINNATI_TMA/KCVG",
-    "KCMH": "K/KC/KXXX/KZID/COLUMBUS_TMA/KCMH",
-}
+REGISTRY_PATH = ROOT / "documentation" / "content_hierarchy.json"
 
 AIRPORT_CONFIGS: dict[str, list[dict[str, str]]] = {
     "KATL": [
@@ -307,22 +255,49 @@ AIRPORT_CONFIGS: dict[str, list[dict[str, str]]] = {
 }
 
 
-def main() -> None:
-    if set(AIRPORT_PATHS) != set(AIRPORT_CONFIGS):
-        missing_paths = set(AIRPORT_CONFIGS) - set(AIRPORT_PATHS)
-        missing_configs = set(AIRPORT_PATHS) - set(AIRPORT_CONFIGS)
-        raise SystemExit(f"path/config mismatch paths={missing_paths} configs={missing_configs}")
+def airport_paths_from_registry() -> dict[str, str]:
+    registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    terminal_scopes = registry.get("terminal_scopes", {})
+    if not isinstance(terminal_scopes, dict):
+        raise SystemExit(f"{REGISTRY_PATH}: terminal_scopes must be an object")
+    registered_paths: dict[str, str] = {}
+    for scope, airports in terminal_scopes.items():
+        if not isinstance(scope, str) or not isinstance(airports, list):
+            raise SystemExit(f"{REGISTRY_PATH}: invalid terminal scope entry")
+        for icao in airports:
+            if icao in registered_paths:
+                raise SystemExit(f"{REGISTRY_PATH}: duplicate airport {icao}")
+            registered_paths[str(icao)] = f"{scope}/{icao}"
+    missing_paths = set(AIRPORT_CONFIGS) - set(registered_paths)
+    if missing_paths:
+        raise SystemExit(f"hierarchy registry is missing generator airports: {sorted(missing_paths)}")
+    return {icao: registered_paths[icao] for icao in AIRPORT_CONFIGS}
 
-    for icao, rel_path in sorted(AIRPORT_PATHS.items()):
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="verify generated files without writing them")
+    args = parser.parse_args()
+    airport_paths = airport_paths_from_registry()
+    mismatches: list[str] = []
+    for icao, rel_path in sorted(airport_paths.items()):
         configs = AIRPORT_CONFIGS[icao]
         payload = {"airport": icao, "runway_configs": configs}
         out_dir = ROOT / rel_path
-        out_dir.mkdir(parents=True, exist_ok=True)
         out_file = out_dir / "runway_configs.json"
-        out_file.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        expected = json.dumps(payload, indent=2) + "\n"
+        if args.check:
+            if not out_file.is_file() or out_file.read_text(encoding="utf-8") != expected:
+                mismatches.append(out_file.relative_to(ROOT).as_posix())
+            continue
+        out_dir.mkdir(parents=True, exist_ok=True)
+        out_file.write_text(expected, encoding="utf-8")
         print(f"Wrote {out_file.relative_to(ROOT).as_posix()} ({len(configs)} configs)")
 
-    print(f"Total airports: {len(AIRPORT_PATHS)}")
+    if mismatches:
+        raise SystemExit("Runway config generation check failed:\n- " + "\n- ".join(mismatches))
+    action = "Checked" if args.check else "Total"
+    print(f"{action} airports: {len(airport_paths)}")
 
 
 if __name__ == "__main__":

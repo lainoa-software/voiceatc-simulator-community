@@ -1,0 +1,29 @@
+{
+  "airport": "KTPA",
+  "runway_configs": [
+    {
+      "id": "SOUTH",
+      "name": "SOUTH FLOW",
+      "arr": "19L 19R",
+      "dep": "19R 19L"
+    },
+    {
+      "id": "NORTH",
+      "name": "NORTH FLOW",
+      "arr": "01L 01R",
+      "dep": "01L 01R"
+    },
+    {
+      "id": "OVERNIGHT",
+      "name": "OVERNIGHT PREF",
+      "arr": "01L",
+      "dep": "19R"
+    },
+    {
+      "id": "EAST_WEST",
+      "name": "EAST WEST FLOW",
+      "arr": "10 28",
+      "dep": "10 28"
+    }
+  ]
+}

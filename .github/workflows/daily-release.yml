@@ -22,6 +22,8 @@ jobs:
           python-version: "3.11"
       - name: Run tests
         run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Validate content hierarchy
+        run: python tools/content_hierarchy.py --validate-only
       - name: Validate routes file
         run: python tools/routes_release_manifest.py --validate-only
       - name: Validate default routes file
@@ -132,8 +134,20 @@ jobs:
                   return ""
               return str(payload.get("sha256", "")).strip()
 
+          def previous_rich_routes_hash(path: str) -> str:
+              manifest_path = Path(path)
+              if not manifest_path.exists():
+                  return ""
+              try:
+                  payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+              except Exception:
+                  return ""
+              rich = payload.get("rich_routes_tsv", {})
+              return str(rich.get("sha256", "")).strip() if isinstance(rich, dict) else ""
+
           release_assets_changed = not (
               previous_hash(".voiceatc/routes_manifest.json") == str(assets["routes_tsv"]["sha256"]).strip()
+              and previous_rich_routes_hash(".voiceatc/routes_manifest.json") == str(assets["routes_rich_tsv"]["sha256"]).strip()
               and previous_hash(".voiceatc/mva_manifest.json") == str(assets["mva_zip"]["sha256"]).strip()
               and previous_hash(".voiceatc/runway_configs_manifest.json") == str(assets["runway_configs_zip"]["sha256"]).strip()
               and previous_hash(".voiceatc/sector_data_manifest.json") == str(assets["sector_data_zip"]["sha256"]).strip()
@@ -198,6 +212,7 @@ jobs:
               handle.write(f"should_publish={'true' if should_publish else 'false'}\n")
               handle.write(f"airac={summary['airac']}\n")
               handle.write(f"routes_asset_name={assets['routes_tsv']['asset_name']}\n")
+              handle.write(f"routes_rich_asset_name={assets['routes_rich_tsv']['asset_name']}\n")
               handle.write(f"mva_asset_name={assets['mva_zip']['asset_name']}\n")
               handle.write(f"runway_asset_name={assets['runway_configs_zip']['asset_name']}\n")
               handle.write(f"sector_data_asset_name={assets['sector_data_zip']['asset_name']}\n")
@@ -205,6 +220,7 @@ jobs:
               handle.write(f"color_profiles_asset_name={assets['color_profiles_zip']['asset_name']}\n")
               handle.write(f"release_manifest_asset_name={assets['release_manifest']['asset_name']}\n")
               handle.write(f"routes_asset_path={assets['routes_tsv']['path']}\n")
+              handle.write(f"routes_rich_asset_path={assets['routes_rich_tsv']['path']}\n")
               handle.write(f"mva_asset_path={assets['mva_zip']['path']}\n")
               handle.write(f"runway_asset_path={assets['runway_configs_zip']['path']}\n")
               handle.write(f"sector_data_asset_path={assets['sector_data_zip']['path']}\n")
@@ -233,6 +249,7 @@ jobs:
             gh release edit "${TAG}" --title "${TITLE}"
             gh release upload "${TAG}" \
               "${{ steps.meta.outputs.routes_asset_path }}#${{ steps.meta.outputs.routes_asset_name }}" \
+              "${{ steps.meta.outputs.routes_rich_asset_path }}#${{ steps.meta.outputs.routes_rich_asset_name }}" \
               "${{ steps.meta.outputs.mva_asset_path }}#${{ steps.meta.outputs.mva_asset_name }}" \
               "${{ steps.meta.outputs.runway_asset_path }}#${{ steps.meta.outputs.runway_asset_name }}" \
               "${{ steps.meta.outputs.sector_data_asset_path }}#${{ steps.meta.outputs.sector_data_asset_name }}" \
@@ -243,6 +260,7 @@ jobs:
           else
             gh release create "${TAG}" \
               "${{ steps.meta.outputs.routes_asset_path }}#${{ steps.meta.outputs.routes_asset_name }}" \
+              "${{ steps.meta.outputs.routes_rich_asset_path }}#${{ steps.meta.outputs.routes_rich_asset_name }}" \
               "${{ steps.meta.outputs.mva_asset_path }}#${{ steps.meta.outputs.mva_asset_name }}" \
               "${{ steps.meta.outputs.runway_asset_path }}#${{ steps.meta.outputs.runway_asset_name }}" \
               "${{ steps.meta.outputs.sector_data_asset_path }}#${{ steps.meta.outputs.sector_data_asset_name }}" \
@@ -278,6 +296,7 @@ jobs:
           fi
           gh release create "${TAG}" \
             "${{ steps.meta.outputs.routes_asset_path }}#${{ steps.meta.outputs.routes_asset_name }}" \
+            "${{ steps.meta.outputs.routes_rich_asset_path }}#${{ steps.meta.outputs.routes_rich_asset_name }}" \
             "${{ steps.meta.outputs.mva_asset_path }}#${{ steps.meta.outputs.mva_asset_name }}" \
             "${{ steps.meta.outputs.runway_asset_path }}#${{ steps.meta.outputs.runway_asset_name }}" \
             "${{ steps.meta.outputs.sector_data_asset_path }}#${{ steps.meta.outputs.sector_data_asset_name }}" \
@@ -326,6 +345,7 @@ jobs:
           R2_BUCKET: ${{ secrets.CLOUDFLARE_R2_BUCKET }}
           SUB_AIRAC: ${{ steps.meta.outputs.airac }}
           SUB_TSV: ${{ steps.meta.outputs.routes_asset_path }}
+          SUB_RICH_TSV: ${{ steps.meta.outputs.routes_rich_asset_path }}
         run: |
           # Mirror the just-published routes to Cloudflare R2 so the game can fetch route data
           # from the api.voiceatcsimulator.com Worker (routes/<airac>/...) instead of GitHub
@@ -346,6 +366,10 @@ jobs:
           if [[ -n "${SUB_TSV:-}" && -f "${SUB_TSV}" && -f ".voiceatc/routes_manifest.json" && -n "${SUB_AIRAC:-}" ]]; then
             aws s3 cp "${SUB_TSV}" "s3://${R2_BUCKET}/routes/${SUB_AIRAC}/routes.tsv" \
               --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+            if [[ -n "${SUB_RICH_TSV:-}" && -f "${SUB_RICH_TSV}" ]]; then
+              aws s3 cp "${SUB_RICH_TSV}" "s3://${R2_BUCKET}/routes/${SUB_AIRAC}/routes_rich.tsv" \
+                --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+            fi
             aws s3 cp ".voiceatc/routes_manifest.json" "s3://${R2_BUCKET}/routes/${SUB_AIRAC}/routes_manifest.json" \
               --content-type "application/json" --endpoint-url "${EP}"
             echo "Published subscriber routes to routes/${SUB_AIRAC}/."
@@ -359,6 +383,10 @@ jobs:
             if [[ -n "${DEF_AIRAC}" ]]; then
               aws s3 cp "ROUTES/routes_default.tsv" "s3://${R2_BUCKET}/routes/${DEF_AIRAC}/routes_default.tsv" \
                 --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+              if [[ -f "ROUTES/routes_default_rich.tsv" ]]; then
+                aws s3 cp "ROUTES/routes_default_rich.tsv" "s3://${R2_BUCKET}/routes/${DEF_AIRAC}/routes_default_rich.tsv" \
+                  --content-type "text/tab-separated-values" --endpoint-url "${EP}"
+              fi
               aws s3 cp "ROUTES/routes_default_manifest.json" "s3://${R2_BUCKET}/routes/${DEF_AIRAC}/routes_manifest.json" \
                 --content-type "application/json" --endpoint-url "${EP}"
               echo "Published default routes to routes/${DEF_AIRAC}/."

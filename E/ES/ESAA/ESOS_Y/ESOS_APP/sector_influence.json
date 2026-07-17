@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "E",
+      "airports": ["ESSA", "ESSB", "ESOW"]
+    },
+    {
+      "sector_id": "W",
+      "airports": ["ESSA", "ESSB", "ESOW"]
+    },
+    {
+      "sector_id": "S",
+      "airports": ["ESSB", "ESOW"]
+    }
+  ]
+}

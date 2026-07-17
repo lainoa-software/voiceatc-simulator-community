@@ -1,0 +1,23 @@
+{
+  "airport": "KOAK",
+  "runway_configs": [
+    {
+      "id": "JET_NOISE",
+      "name": "JET NOISE 12/30",
+      "arr": "30",
+      "dep": "30"
+    },
+    {
+      "id": "NORTH_FIELD",
+      "name": "NORTH FIELD PARALLEL",
+      "arr": "28R",
+      "dep": "28L"
+    },
+    {
+      "id": "SOUTH_FIELD",
+      "name": "SOUTH FIELD 12",
+      "arr": "12",
+      "dep": "12"
+    }
+  ]
+}

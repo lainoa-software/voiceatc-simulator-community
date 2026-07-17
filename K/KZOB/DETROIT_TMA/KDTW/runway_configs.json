@@ -1,0 +1,29 @@
+{
+  "airport": "KDTW",
+  "runway_configs": [
+    {
+      "id": "SOUTH",
+      "name": "SOUTH FLOW",
+      "arr": "21L 21R",
+      "dep": "22L 22R"
+    },
+    {
+      "id": "SOUTH_OIB",
+      "name": "SOUTH OUTBOARD ARR",
+      "arr": "22R 21L",
+      "dep": "22L 21R"
+    },
+    {
+      "id": "NORTH",
+      "name": "NORTH FLOW",
+      "arr": "03R 03L",
+      "dep": "04L 04R"
+    },
+    {
+      "id": "NIGHT_CONTRA",
+      "name": "NIGHT CONTRA-FLOW",
+      "arr": "22L 22R",
+      "dep": "22L 22R"
+    }
+  ]
+}

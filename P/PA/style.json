@@ -1,0 +1,68 @@
+{
+  "symbol_size": 0.55,
+  "traildot_size": 0.12,
+  "symbol_line_width": 1.0,
+  "forecast_symbol": "stars_asterisk",
+  "incoming_symbol": "stars_asterisk",
+  "assumed_symbol": "stars_asterisk",
+  "of_interest_symbol": "stars_asterisk",
+  "alien_symbol": "stars_asterisk",
+  "released_symbol": "stars_asterisk",
+  "traildot_symbol": "stars_history_dot",
+  "defined_symbols": {
+    "stars_asterisk": {
+      "type": "wireframe",
+      "draw": "M -6 0 L 6 0 M 0 -6 L 0 6 M -4 -4 L 4 4 M -4 4 L 4 -4",
+      "connection_points": [[0, 0]]
+    },
+    "stars_history_dot": {
+      "type": "filled",
+      "draw": "M -2 -2 L 2 -2 L 2 2 L -2 2",
+      "connection_points": [[0, 0]]
+    }
+  },
+  "label": {
+    "row_count": 4,
+    "col_count": 3,
+    "fields": [
+      { "id": "CS", "row": 0, "col": 0, "content_source": "flight.cs" },
+      { "id": "CFL", "row": 1, "col": 0, "content_source": "flight.cfl" },
+      {
+        "id": "ARROW",
+        "row": 1,
+        "col": 1,
+        "min_width_em": 0.6,
+        "font_variant": "arrow_symbol",
+        "content_source": "flight.arrow_glyph",
+        "gap_before_em": -0.06,
+        "y_offset_em": -0.2,
+        "reserve_space_when_hidden": true
+      },
+      {
+        "id": "AFL",
+        "row": 1,
+        "col": 2,
+        "content_source": "flight.afl",
+        "action": "open_afl_menu",
+        "gap_before_em": -0.06
+      },
+      { "id": "GS", "row": 2, "col": 0, "content_source": "flight.gs" },
+      {
+        "id": "WPT",
+        "row": 2,
+        "col": 1,
+        "content_source": "flight.wpt",
+        "action": "open_wpt_menu",
+        "visibility_rule": "when_has_wpt"
+      },
+      {
+        "id": "IRT",
+        "row": 3,
+        "col": 0,
+        "content_source": "flight.irt",
+        "action": "open_irt_menu",
+        "visibility_rule": "when_has_irt"
+      }
+    ]
+  }
+}

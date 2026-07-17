@@ -20,6 +20,16 @@ def write_json(path: Path, payload: dict[str, object]) -> None:
 
 
 def build_fixture_repo(root: Path) -> None:
+    write_json(
+        root / "documentation" / "content_hierarchy.json",
+        {
+            "nationality_areas": {"E": ["EH"], "L": ["LE"]},
+            "release_compatibility": {
+                "color_profile_aliases": {},
+                "retention": "until_explicit_deprecation",
+            }
+        },
+    )
     routes_path = root / "ROUTES" / "routes.tsv"
     routes_path.parent.mkdir(parents=True, exist_ok=True)
     routes_path.write_text(
@@ -33,6 +43,7 @@ def build_fixture_repo(root: Path) -> None:
         + "\n",
         encoding="utf-8",
     )
+    (root / "ROUTES" / "routes_legacy.tsv").write_bytes(routes_path.read_bytes())
 
     write_json(
         root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "mva.json",
@@ -192,7 +203,56 @@ def build_fixture_repo(root: Path) -> None:
     )
 
 
+def add_us_region_profile(root: Path) -> None:
+    aliases = [f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)]
+    write_json(
+        root / "documentation" / "content_hierarchy.json",
+        {
+            "nationality_areas": {"E": ["EH"], "K": [], "L": ["LE"]},
+            "release_compatibility": {
+                "color_profile_aliases": {"K": aliases},
+                "retention": "until_explicit_deprecation",
+            }
+        },
+    )
+    write_json(
+        root / "K" / "colors.json",
+        {
+            "assumed_tfc_color": "3bf451",
+            "bg_color": "080808",
+        },
+    )
+    write_json(
+        root / "K" / "style.json",
+        {
+            "defined_symbols": {
+                "diamond": {
+                    "type": "wireframe",
+                    "draw": "M 0 -7 L 7 0 L 0 7 L -7 0 L 0 -7",
+                    "connection_points": [[0, -7], [7, 0], [0, 7], [-7, 0]],
+                }
+            },
+            "assumed_symbol": "diamond",
+        },
+    )
+
+
 class CommunityReleaseManifestTests(unittest.TestCase):
+    def test_mapped_zip_rejects_normalized_archive_collision(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            source = root / "K" / "colors.json"
+            write_json(source, {"bg_color": "080808"})
+            with self.assertRaisesRegex(ValueError, "duplicate archive path"):
+                MODULE.build_deterministic_zip_from_sources(
+                    root,
+                    {
+                        "K/KA/colors.json": "K/colors.json",
+                        "K\\KA\\colors.json": "K/colors.json",
+                    },
+                    root / "color-profiles.zip",
+                )
+
     def test_build_release_bundle_creates_expected_assets_and_manifests(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir) / "repo"
@@ -210,6 +270,10 @@ class CommunityReleaseManifestTests(unittest.TestCase):
 
             self.assertEqual("2602", bundle["airac"])
             self.assertEqual("routes-2602.tsv", bundle["assets"]["routes_tsv"]["asset_name"])
+            self.assertEqual(
+                "routes-rich-2602.tsv",
+                bundle["assets"]["routes_rich_tsv"]["asset_name"],
+            )
             self.assertEqual("mva-2602.zip", bundle["assets"]["mva_zip"]["asset_name"])
             self.assertEqual("runway-configs-2602.zip", bundle["assets"]["runway_configs_zip"]["asset_name"])
             self.assertEqual("sector-data-2602.zip", bundle["assets"]["sector_data_zip"]["asset_name"])
@@ -226,6 +290,7 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertIn("sector_data_zip", release_manifest["assets"])
             self.assertIn("misc_drawings_zip", release_manifest["assets"])
             self.assertIn("color_profiles_zip", release_manifest["assets"])
+            self.assertIn("routes_rich_tsv", release_manifest["assets"])
             self.assertEqual("2601", release_manifest["assets"]["routes_tsv"]["source_airac"])
             self.assertTrue(release_manifest["assets"]["routes_tsv"]["compatibility_fallback"])
 
@@ -362,6 +427,52 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             release_manifest = bundle["manifests"]["release"]
             self.assertEqual("daily-2026-03-18-b", release_manifest["release_tag"])
             self.assertEqual("Daily Community Release - Wednesday 2026-03-18 b", release_manifest["release_title"])
+
+    def test_us_region_profile_is_projected_to_deterministic_legacy_aliases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "repo"
+            build_fixture_repo(root)
+            add_us_region_profile(root)
+
+            first = MODULE.build_release_bundle(
+                output_dir=root / "build" / "one",
+                release_tag="daily-2026-03-18",
+                published_at="2026-03-18T01:15:00Z",
+                commit_sha="test-commit",
+                download_repo="lainoa-software/voiceatc-simulator-community",
+                root=root,
+            )
+            second = MODULE.build_release_bundle(
+                output_dir=root / "build" / "two",
+                release_tag="daily-2026-03-18",
+                published_at="2026-03-18T01:15:00Z",
+                commit_sha="test-commit",
+                download_repo="lainoa-software/voiceatc-simulator-community",
+                root=root,
+            )
+
+            color_manifest = first["manifests"]["color_profiles"]
+            aliases = {f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)}
+            self.assertEqual(2, color_manifest["schema_version"])
+            self.assertEqual(28, color_manifest["profile_count"])
+            self.assertNotIn("K", color_manifest["profiles"])
+            self.assertEqual(aliases, {scope for scope in color_manifest["profiles"] if scope.startswith("K/")})
+            self.assertEqual(
+                first["assets"]["color_profiles_zip"]["sha256"],
+                second["assets"]["color_profiles_zip"]["sha256"],
+            )
+
+            with zipfile.ZipFile(first["assets"]["color_profiles_zip"]["path"], "r") as archive:
+                names = archive.namelist()
+                self.assertEqual(sorted(names), names)
+                self.assertEqual(56, len(names))
+                self.assertNotIn("K/colors.json", names)
+                self.assertNotIn("K/style.json", names)
+                canonical_colors = (root / "K" / "colors.json").read_bytes()
+                canonical_style = (root / "K" / "style.json").read_bytes()
+                for alias in aliases:
+                    self.assertEqual(canonical_colors, archive.read(f"{alias}/colors.json"))
+                    self.assertEqual(canonical_style, archive.read(f"{alias}/style.json"))
 
 
 if __name__ == "__main__":

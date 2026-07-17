@@ -2,7 +2,19 @@
 The Github to manage custom airports and sectors for VoiceATC Simulator.
 
 ## Contributing
-To contribute, fork this repository, commit your changes there and then create a pull request onto the main repository. Read the wiki pages on this repository to gain knowledge on how to create or modify the airport of your liking.
+To contribute, fork this repository, commit your changes there and then create a pull request onto the main repository. Read [the content hierarchy guide](documentation/CONTENT_HIERARCHY.md) and the wiki pages before creating or modifying an airport.
+
+Community assets follow `Region / [Nationality] / FIR-or-ARTCC / [ACC] / Terminal / [Airport]`. Bracketed layers are optional. The continental United States omits nationality, so Austin is `K/KZHU/AUSTIN_TMA/KAUS`, while Frankfurt is `E/ED/EDGG/EDDF_TMA/EDDF`. Placeholder identifiers such as `KXXX` and `EDXX` are prohibited. U.S. `K/KA`–`K/KZ` colour/style paths are generated release compatibility aliases only and must never be added to the source tree. Run `python tools/content_hierarchy.py --validate-only` before opening a pull request.
+
+## Route publication compatibility
+
+`ROUTES/routes.tsv` and `ROUTES/routes_default_rich.tsv` are the coordinate-capable
+current/default route tables. Their `routes_legacy.tsv` and `routes_default.tsv`
+companions are deterministic projections for older simulator builds. Release
+manifests deliberately keep the legacy asset in the existing root fields and expose
+the rich asset under `rich_routes_tsv`; contributors must update both through the
+route projection tool, never edit the legacy copy independently. The daily release
+publishes both assets with unchanged manifest schema versions.
 
 ## Pull Requests
 In order to keep the reposititory organized, name all pull requests `[FIR/Airport] Updated/Fixed/Added...` - for example `[ESSA] Updated MVAs`. There are automatic checks that will be preformed when you create a pull request, and after those the files will be inspected by a maintainer before being merged. If any errors are spotted, we will ask you to update the pull request before we can merge it.

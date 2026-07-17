@@ -1,0 +1,23 @@
+{
+  "airport": "LSZH",
+  "runway_configs": [
+    {
+      "id": "DAY",
+      "name": "Daytime primary",
+      "arr": "14",
+      "dep": "28"
+    },
+    {
+      "id": "MORNING",
+      "name": "Early morning",
+      "arr": "34",
+      "dep": "32"
+    },
+    {
+      "id": "EVENING",
+      "name": "Evening",
+      "arr": "28",
+      "dep": "32"
+    }
+  ]
+}

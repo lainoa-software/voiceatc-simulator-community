@@ -1,0 +1,23 @@
+{
+  "airport": "KPDX",
+  "runway_configs": [
+    {
+      "id": "NIGHT_ARR",
+      "name": "NIGHT PREF ARRIVALS",
+      "arr": "10R 28R",
+      "dep": "10R 10L 28R 28L"
+    },
+    {
+      "id": "NIGHT_CONTRA",
+      "name": "NIGHT CONTRA FLOW",
+      "arr": "28L 28R",
+      "dep": "10L 10R"
+    },
+    {
+      "id": "WEST",
+      "name": "WEST FLOW",
+      "arr": "28L 28R",
+      "dep": "28L 28R"
+    }
+  ]
+}

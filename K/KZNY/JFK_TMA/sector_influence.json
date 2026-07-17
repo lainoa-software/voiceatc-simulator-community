@@ -1,0 +1,9 @@
+{
+  "airport": "KJFK",
+  "sector_influences": [
+    {
+      "sector_id": "KJFKAPP",
+      "airports": ["KJFK", "KFRG"]
+    }
+  ]
+}

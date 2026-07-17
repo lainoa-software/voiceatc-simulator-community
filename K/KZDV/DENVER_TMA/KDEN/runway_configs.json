@@ -1,0 +1,23 @@
+{
+  "airport": "KDEN",
+  "runway_configs": [
+    {
+      "id": "NORTH_FLOW",
+      "name": "NORTH FLOW",
+      "arr": "34R 34L 35R 35L",
+      "dep": "34L 34R 35L 35R"
+    },
+    {
+      "id": "SOUTH_FLOW",
+      "name": "SOUTH FLOW",
+      "arr": "16L 16R 17L 17R",
+      "dep": "08 17L 17R"
+    },
+    {
+      "id": "NIGHT_NORTH",
+      "name": "NIGHT NORTH FLOW",
+      "arr": "26 34R 35L 35R 16L 16R",
+      "dep": "08 35L 35R 34L 34R"
+    }
+  ]
+}

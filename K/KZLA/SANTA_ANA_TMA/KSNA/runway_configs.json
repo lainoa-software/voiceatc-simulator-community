@@ -1,0 +1,17 @@
+{
+  "airport": "KSNA",
+  "runway_configs": [
+    {
+      "id": "PREF_DEP",
+      "name": "PREFERRED DEPARTURES",
+      "arr": "20L 20R",
+      "dep": "20R 20L"
+    },
+    {
+      "id": "NORTH",
+      "name": "NORTH FLOW",
+      "arr": "20R",
+      "dep": "20R"
+    }
+  ]
+}

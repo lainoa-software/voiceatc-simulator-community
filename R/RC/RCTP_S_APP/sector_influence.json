@@ -1,8 +1,0 @@
-{
-  "sector_influences": [
-    {
-      "sector_id": "TTS",
-      "airports": ["RCTP", "RCSS", "RCMQ"]
-    }
-  ]
-}

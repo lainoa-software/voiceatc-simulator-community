@@ -91,14 +91,31 @@ def _safe_repo_paths(paths: list[str], dataset_label: str) -> list[str]:
 
 
 def build_deterministic_zip(root: Path, repo_paths: list[str], output_path: Path) -> dict[str, object]:
+    archive_sources = {repo_path: repo_path for repo_path in repo_paths}
+    return build_deterministic_zip_from_sources(root, archive_sources, output_path)
+
+
+def build_deterministic_zip_from_sources(
+    root: Path,
+    archive_sources: dict[str, str],
+    output_path: Path,
+) -> dict[str, object]:
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    normalized_paths = _safe_repo_paths(repo_paths, output_path.name)
+    normalized_sources: dict[str, str] = {}
+    for raw_archive_path, raw_source_path in archive_sources.items():
+        archive_path = _safe_repo_paths([raw_archive_path], output_path.name)[0]
+        source_path = _safe_repo_paths([raw_source_path], output_path.name)[0]
+        if archive_path in normalized_sources:
+            raise ValueError(f"{output_path.name}: duplicate archive path '{archive_path}'")
+        normalized_sources[archive_path] = source_path
+    for source_repo_path in normalized_sources.values():
+        if not (root / source_repo_path).is_file():
+            raise ValueError(f"Missing release asset source file: {source_repo_path}")
     with zipfile.ZipFile(output_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
-        for repo_path in normalized_paths:
-            source_path = root / repo_path
-            if not source_path.is_file():
-                raise ValueError(f"Missing release asset source file: {repo_path}")
-            info = zipfile.ZipInfo(repo_path, date_time=ZIP_TIMESTAMP)
+        for archive_path in sorted(normalized_sources):
+            source_repo_path = normalized_sources[archive_path]
+            source_path = root / source_repo_path
+            info = zipfile.ZipInfo(archive_path, date_time=ZIP_TIMESTAMP)
             info.compress_type = zipfile.ZIP_DEFLATED
             info.create_system = 3
             info.external_attr = ZIP_FILE_MODE
@@ -234,10 +251,13 @@ def build_color_profiles_release_manifest(
     commit_sha: str,
     asset_sha256: str,
     asset_size_bytes: int,
+    profiles: dict[str, object] | None = None,
     root: Path = ROOT,
 ) -> dict[str, object]:
-    base_manifest = color_profiles_manifest.build_manifest(root, commit_sha=commit_sha)
-    profiles = base_manifest["profiles"]
+    resolved_profiles = profiles
+    if resolved_profiles is None:
+        projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
+        resolved_profiles = projection["profiles"]
     return {
         "schema_version": DATASET_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
@@ -247,9 +267,9 @@ def build_color_profiles_release_manifest(
         "download_url": download_url.strip(),
         "sha256": asset_sha256.strip(),
         "size_bytes": int(asset_size_bytes),
-        "profile_count": len(profiles),
+        "profile_count": len(resolved_profiles),
         "published_at": published_at.strip(),
-        "profiles": profiles,
+        "profiles": resolved_profiles,
     }
 
 
@@ -265,6 +285,78 @@ def build_release_manifest(
 ) -> dict[str, object]:
     release_tag = str(routes_manifest.get("release_tag", "")).strip()
     resolved_release_title = release_title.strip() if release_title and release_title.strip() else _build_release_title(release_tag)
+    assets = {
+        "routes_tsv": {
+            "repo_path": "ROUTES/routes_legacy.tsv",
+            "airac": str(routes_manifest.get("airac", "")).strip(),
+            "source_airac": str(routes_manifest.get("source_airac", "")).strip(),
+            "compatibility_fallback": bool(routes_manifest.get("compatibility_fallback", False)),
+            "asset_name": str(routes_manifest.get("asset_name", "")).strip(),
+            "download_url": str(routes_manifest.get("download_url", "")).strip(),
+            "sha256": str(routes_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(routes_manifest.get("size_bytes", 0)),
+            "route_count": int(routes_manifest.get("route_count", 0)),
+            "content_type": "text/tab-separated-values; charset=utf-8",
+        },
+        "mva_zip": {
+            "asset_name": str(mva_release_manifest.get("asset_name", "")).strip(),
+            "download_url": str(mva_release_manifest.get("download_url", "")).strip(),
+            "sha256": str(mva_release_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(mva_release_manifest.get("size_bytes", 0)),
+            "airport_count": int(mva_release_manifest.get("airport_count", 0)),
+            "content_type": "application/zip",
+            "preserves_repo_paths": True,
+        },
+        "runway_configs_zip": {
+            "asset_name": str(runway_release_manifest.get("asset_name", "")).strip(),
+            "download_url": str(runway_release_manifest.get("download_url", "")).strip(),
+            "sha256": str(runway_release_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(runway_release_manifest.get("size_bytes", 0)),
+            "airport_count": int(runway_release_manifest.get("airport_count", 0)),
+            "content_type": "application/zip",
+            "preserves_repo_paths": True,
+        },
+        "sector_data_zip": {
+            "asset_name": str(sector_data_release_manifest.get("asset_name", "")).strip(),
+            "download_url": str(sector_data_release_manifest.get("download_url", "")).strip(),
+            "sha256": str(sector_data_release_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(sector_data_release_manifest.get("size_bytes", 0)),
+            "bundle_count": int(sector_data_release_manifest.get("bundle_count", 0)),
+            "content_type": "application/zip",
+            "preserves_repo_paths": True,
+        },
+        "misc_drawings_zip": {
+            "asset_name": str(misc_drawings_release_manifest.get("asset_name", "")).strip(),
+            "download_url": str(misc_drawings_release_manifest.get("download_url", "")).strip(),
+            "sha256": str(misc_drawings_release_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(misc_drawings_release_manifest.get("size_bytes", 0)),
+            "airport_count": int(misc_drawings_release_manifest.get("airport_count", 0)),
+            "content_type": "application/zip",
+            "preserves_repo_paths": True,
+        },
+        "color_profiles_zip": {
+            "asset_name": str(color_profiles_release_manifest.get("asset_name", "")).strip(),
+            "download_url": str(color_profiles_release_manifest.get("download_url", "")).strip(),
+            "sha256": str(color_profiles_release_manifest.get("sha256", "")).strip(),
+            "size_bytes": int(color_profiles_release_manifest.get("size_bytes", 0)),
+            "profile_count": int(color_profiles_release_manifest.get("profile_count", 0)),
+            "content_type": "application/zip",
+            "preserves_repo_paths": True,
+        },
+    }
+    rich = routes_manifest.get("rich_routes_tsv")
+    if isinstance(rich, dict):
+        assets["routes_rich_tsv"] = {
+            "repo_path": "ROUTES/routes.tsv",
+            "airac": str(routes_manifest.get("airac", "")).strip(),
+            "asset_name": str(rich.get("asset_name", "")).strip(),
+            "download_url": str(rich.get("download_url", "")).strip(),
+            "sha256": str(rich.get("sha256", "")).strip(),
+            "size_bytes": int(rich.get("size_bytes", 0)),
+            "route_count": int(rich.get("route_count", 0)),
+            "projection_id": str(rich.get("projection_id", "")).strip(),
+            "content_type": "text/tab-separated-values; charset=utf-8",
+        }
     return {
         "schema_version": RELEASE_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
@@ -273,65 +365,7 @@ def build_release_manifest(
         "commit_sha": str(routes_manifest.get("commit_sha", "")).strip(),
         "published_at": published_at.strip(),
         "airac": str(routes_manifest.get("airac", "")).strip(),
-        "assets": {
-            "routes_tsv": {
-                "repo_path": "ROUTES/routes.tsv",
-                "airac": str(routes_manifest.get("airac", "")).strip(),
-                "source_airac": str(routes_manifest.get("source_airac", "")).strip(),
-                "compatibility_fallback": bool(routes_manifest.get("compatibility_fallback", False)),
-                "asset_name": str(routes_manifest.get("asset_name", "")).strip(),
-                "download_url": str(routes_manifest.get("download_url", "")).strip(),
-                "sha256": str(routes_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(routes_manifest.get("size_bytes", 0)),
-                "route_count": int(routes_manifest.get("route_count", 0)),
-                "content_type": "text/tab-separated-values; charset=utf-8",
-            },
-            "mva_zip": {
-                "asset_name": str(mva_release_manifest.get("asset_name", "")).strip(),
-                "download_url": str(mva_release_manifest.get("download_url", "")).strip(),
-                "sha256": str(mva_release_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(mva_release_manifest.get("size_bytes", 0)),
-                "airport_count": int(mva_release_manifest.get("airport_count", 0)),
-                "content_type": "application/zip",
-                "preserves_repo_paths": True,
-            },
-            "runway_configs_zip": {
-                "asset_name": str(runway_release_manifest.get("asset_name", "")).strip(),
-                "download_url": str(runway_release_manifest.get("download_url", "")).strip(),
-                "sha256": str(runway_release_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(runway_release_manifest.get("size_bytes", 0)),
-                "airport_count": int(runway_release_manifest.get("airport_count", 0)),
-                "content_type": "application/zip",
-                "preserves_repo_paths": True,
-            },
-            "sector_data_zip": {
-                "asset_name": str(sector_data_release_manifest.get("asset_name", "")).strip(),
-                "download_url": str(sector_data_release_manifest.get("download_url", "")).strip(),
-                "sha256": str(sector_data_release_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(sector_data_release_manifest.get("size_bytes", 0)),
-                "bundle_count": int(sector_data_release_manifest.get("bundle_count", 0)),
-                "content_type": "application/zip",
-                "preserves_repo_paths": True,
-            },
-            "misc_drawings_zip": {
-                "asset_name": str(misc_drawings_release_manifest.get("asset_name", "")).strip(),
-                "download_url": str(misc_drawings_release_manifest.get("download_url", "")).strip(),
-                "sha256": str(misc_drawings_release_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(misc_drawings_release_manifest.get("size_bytes", 0)),
-                "airport_count": int(misc_drawings_release_manifest.get("airport_count", 0)),
-                "content_type": "application/zip",
-                "preserves_repo_paths": True,
-            },
-            "color_profiles_zip": {
-                "asset_name": str(color_profiles_release_manifest.get("asset_name", "")).strip(),
-                "download_url": str(color_profiles_release_manifest.get("download_url", "")).strip(),
-                "sha256": str(color_profiles_release_manifest.get("sha256", "")).strip(),
-                "size_bytes": int(color_profiles_release_manifest.get("size_bytes", 0)),
-                "profile_count": int(color_profiles_release_manifest.get("profile_count", 0)),
-                "content_type": "application/zip",
-                "preserves_repo_paths": True,
-            },
-        },
+        "assets": assets,
     }
 
 
@@ -348,25 +382,29 @@ def build_release_bundle(
 ) -> dict[str, object]:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    routes_info = routes_release_manifest.parse_routes_file(root)
-    airac = str(routes_info["airac"])
+    routes_distribution = routes_release_manifest.validate_routes_distribution(root)
+    airac = str(routes_distribution["rich"]["airac"])
 
     routes_asset_name = f"routes-{airac}.tsv"
+    routes_rich_asset_name = f"routes-rich-{airac}.tsv"
     mva_asset_name = f"mva-{airac}.zip"
     runway_asset_name = f"runway-configs-{airac}.zip"
     sector_data_asset_name = f"sector-data-{airac}.zip"
     misc_drawings_asset_name = f"misc-drawings-{airac}.zip"
     color_profiles_asset_name = f"color-profiles-{airac}.zip"
 
-    routes_source_path = root / "ROUTES" / "routes.tsv"
+    routes_source_path = root / "ROUTES" / "routes_legacy.tsv"
     routes_asset_path = output_dir / routes_asset_name
     shutil.copyfile(routes_source_path, routes_asset_path)
+    routes_rich_source_path = root / "ROUTES" / "routes.tsv"
+    routes_rich_asset_path = output_dir / routes_rich_asset_name
+    shutil.copyfile(routes_rich_source_path, routes_rich_asset_path)
 
     mva_base_manifest = mva_manifest.build_manifest(root, commit_sha=commit_sha)
     runway_base_manifest = runway_configs_manifest.build_manifest(root, commit_sha=commit_sha)
     sector_data_base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
     misc_drawings_base_manifest = misc_drawings_manifest.build_manifest(root, commit_sha=commit_sha)
-    color_profiles_base_manifest = color_profiles_manifest.build_manifest(root, commit_sha=commit_sha)
+    color_profiles_projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
 
     mva_repo_paths = sorted({str(entry["repo_path"]) for entry in mva_base_manifest["airports"].values()})
     runway_repo_paths = [str(entry["repo_path"]) for entry in runway_base_manifest["airports"].values()]
@@ -376,17 +414,15 @@ def build_release_bundle(
         for file_entry in bundle["files"].values()
     ]
     misc_drawings_repo_paths = sorted({str(entry["repo_path"]) for entry in misc_drawings_base_manifest["airports"].values()})
-    color_profiles_repo_paths = [
-        str(file_entry["repo_path"])
-        for profile in color_profiles_base_manifest["profiles"].values()
-        for file_entry in profile["files"].values()
-    ]
-
     mva_asset = build_deterministic_zip(root, mva_repo_paths, output_dir / mva_asset_name)
     runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
     sector_data_asset = build_deterministic_zip(root, sector_data_repo_paths, output_dir / sector_data_asset_name)
     misc_drawings_asset = build_deterministic_zip(root, misc_drawings_repo_paths, output_dir / misc_drawings_asset_name)
-    color_profiles_asset = build_deterministic_zip(root, color_profiles_repo_paths, output_dir / color_profiles_asset_name)
+    color_profiles_asset = build_deterministic_zip_from_sources(
+        root,
+        color_profiles_projection["archive_sources"],
+        output_dir / color_profiles_asset_name,
+    )
 
     routes_manifest = routes_release_manifest.build_routes_manifest(
         release_tag=release_tag,
@@ -394,6 +430,12 @@ def build_release_bundle(
         download_url=_download_url(download_repo, release_tag, routes_asset_name),
         published_at=published_at,
         commit_sha=commit_sha,
+        rich_asset_name=routes_rich_asset_name,
+        rich_download_url=_download_url(
+            download_repo,
+            release_tag,
+            routes_rich_asset_name,
+        ),
         root=root,
     )
     mva_release_manifest = build_mva_release_manifest(
@@ -444,6 +486,7 @@ def build_release_bundle(
         commit_sha=commit_sha,
         asset_sha256=str(color_profiles_asset["sha256"]),
         asset_size_bytes=int(color_profiles_asset["size_bytes"]),
+        profiles=color_profiles_projection["profiles"],
         root=root,
     )
     release_manifest = build_release_manifest(
@@ -477,6 +520,12 @@ def build_release_bundle(
                 "path": str(routes_asset_path),
                 "sha256": str(routes_manifest["sha256"]),
                 "size_bytes": int(routes_manifest["size_bytes"]),
+            },
+            "routes_rich_tsv": {
+                "asset_name": routes_rich_asset_name,
+                "path": str(routes_rich_asset_path),
+                "sha256": str(routes_manifest["rich_routes_tsv"]["sha256"]),
+                "size_bytes": int(routes_manifest["rich_routes_tsv"]["size_bytes"]),
             },
             "mva_zip": mva_asset,
             "runway_configs_zip": runway_asset,

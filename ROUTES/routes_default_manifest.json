@@ -4,9 +4,17 @@
   "navdata_cycle": "2503",
   "navdata_revision": "bundled",
   "repo_path": "ROUTES/routes_default.tsv",
+  "rich_routes_tsv": {
+    "asset_name": "routes_default_rich.tsv",
+    "projection_id": "rich_route_coordinates_v1",
+    "repo_path": "ROUTES/routes_default_rich.tsv",
+    "route_count": 99869,
+    "sha256": "5bbf8598de48ec4668acf859fcaf59679ba384df1bb7757fa14dddf9eed1ca6c",
+    "size_bytes": 15491771
+  },
   "route_count": 99869,
   "routes_tier": "offline_fallback",
   "schema_version": 1,
-  "sha256": "733c47b428dcab3320191140894ee6b3bfdc004c103744e242e852a79882f368",
-  "size_bytes": 15447815
+  "sha256": "7823176bf59358b8a9ce8b9f0b72af73715ca1b39b2b572572e0a6992cd8593b",
+  "size_bytes": 15485890
 }
