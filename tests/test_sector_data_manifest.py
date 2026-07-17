@@ -109,13 +109,14 @@ class SectorDataManifestTests(unittest.TestCase):
             f"Missing core sector bundles: {core_bundles - found_bundles}",
         )
 
-    def test_kjfk_bundle_uses_full_current_n90_envelope(self) -> None:
+    def test_kjfk_bundle_combines_all_playable_jfk_airspace(self) -> None:
         bundle = REPO_ROOT / "K" / "KZNY" / "JFK_TMA"
         definitions = json.loads((bundle / "sector_definitions.json").read_text(encoding="utf-8"))
         influence = json.loads((bundle / "sector_influence.json").read_text(encoding="utf-8"))
 
         self.assertEqual("KJFK", definitions["airport"])
-        self.assertNotIn("source", definitions)
+        forbidden_metadata = {"source", "provenance", "retrieval", "citation", "licensing"}
+        self.assertTrue(forbidden_metadata.isdisjoint(definitions))
 
         sector_definitions = definitions["sector_definitions"]
         self.assertEqual(1, len(sector_definitions))
@@ -125,43 +126,77 @@ class SectorDataManifestTests(unittest.TestCase):
         self.assertEqual(19000, sector["higher_limit"])
 
         polygon = sector["polygon"]
-        self.assertEqual(203, len(polygon))
+        self.assertEqual(45, len(polygon))
         self.assertEqual(polygon[0], polygon[-1])
         latitudes = [point[0] for point in polygon]
         longitudes = [point[1] for point in polygon]
-        self.assertAlmostEqual(39.63990, min(latitudes), places=5)
-        self.assertAlmostEqual(42.48541, max(latitudes), places=5)
-        self.assertAlmostEqual(-75.50005, min(longitudes), places=5)
-        self.assertAlmostEqual(-71.77389, max(longitudes), places=5)
+        self.assertAlmostEqual(40.033031, min(latitudes), places=6)
+        self.assertAlmostEqual(41.003082, max(latitudes), places=6)
+        self.assertAlmostEqual(-74.333046, min(longitudes), places=6)
+        self.assertAlmostEqual(-72.761970, max(longitudes), places=6)
 
         maximum_distance_nm = max(
             great_circle_distance_nm(latitude, longitude) for latitude, longitude in polygon
         )
-        self.assertGreaterEqual(maximum_distance_nm, 112.0)
-        self.assertLessEqual(maximum_distance_nm, 114.0)
+        self.assertGreaterEqual(maximum_distance_nm, 47.5)
+        self.assertLessEqual(maximum_distance_nm, 48.5)
 
-        terminal_owned_feeders = {
+        required_volume_samples = {
+            "CAMRN_13RL": (40.297022, -73.668013),
+            "CAMRN_22RL": (40.284084, -73.841186),
+            "CAMRN_31RL": (40.284084, -73.888745),
+            "CAMRN_4RL": (40.297022, -73.668013),
+            "JFK_DEP_13RL": (40.606491, -73.599588),
+            "JFK_DEP_22RL": (40.606491, -73.728324),
+            "JFK_DEP_31RL": (40.605333, -73.594744),
+            "JFK_DEP_4RL": (40.605333, -73.594724),
+            "JFK_FINAL_13RL": (40.531683, -74.080998),
+            "JFK_FINAL_22RL": (40.666092, -73.557843),
+            "JFK_FINAL_31RL": (40.439880, -73.419786),
+            "JFK_FINAL_4RL": (40.462480, -73.912525),
+            "JFK_SATELITE_13RL": (40.774351, -73.410729),
+            "JFK_SATELITE_22RL": (40.707720, -73.396395),
+            "JFK_SATELITE_31RL": (40.754585, -73.399640),
+            "JFK_SATELITE_4RL": (40.774351, -73.410729),
+            "LENDY_13RL": (40.722431, -73.974851),
+            "LENDY_22RL": (40.681906, -73.971396),
+            "LENDY_31RL": (40.675983, -73.967143),
+            "LENDY_4RL": (40.722431, -73.974851),
+            "ROBER_22RL": (40.718605, -73.040139),
+            "ROBER_31RL": (40.728580, -73.139448),
+            "ROBER_4RL": (40.665029, -73.092999),
+        }
+        self.assertEqual(23, len(required_volume_samples))
+        for volume_name, (latitude, longitude) in required_volume_samples.items():
+            self.assertTrue(
+                polygon_contains(polygon, latitude, longitude),
+                f"Expected {volume_name} sample to be inside the combined JFK envelope",
+            )
+
+        influenced_airports = {
+            "KJFK": (KJFK_LATITUDE, KJFK_LONGITUDE),
+            "KFRG": (40.7288, -73.4134),
+        }
+        for airport, (latitude, longitude) in influenced_airports.items():
+            self.assertTrue(
+                polygon_contains(polygon, latitude, longitude),
+                f"Expected {airport} to be inside the combined JFK envelope",
+            )
+
+        remote_points = {
             "ATHOS": (42.24708, -73.81210),
             "DANZI": (42.17829, -74.95672),
             "PARCH": (41.09923, -72.12074),
             "PAWLN": (41.76986, -73.60073),
             "YODAA": (41.72255, -74.03132),
-        }
-        for fix_name, (latitude, longitude) in terminal_owned_feeders.items():
-            self.assertTrue(
-                polygon_contains(polygon, latitude, longitude),
-                f"Expected {fix_name} to be inside the full N90 envelope",
-            )
-
-        center_owned_feeders = {
             "ALB": (42.74728, -73.80318),
             "ENE": (43.42567, -70.61352),
             "SIE": (39.09551, -74.80034),
         }
-        for fix_name, (latitude, longitude) in center_owned_feeders.items():
+        for point_name, (latitude, longitude) in remote_points.items():
             self.assertFalse(
                 polygon_contains(polygon, latitude, longitude),
-                f"Expected {fix_name} to remain outside the N90 envelope",
+                f"Expected {point_name} to remain outside the combined JFK envelope",
             )
 
         sector_influences = influence["sector_influences"]
