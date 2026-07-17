@@ -201,8 +201,8 @@
         },
         "definitions": {
           "repo_path": "K/KZNY/JFK_TMA/sector_definitions.json",
-          "sha256": "781e6974ffe589a0e6d82f1864928e7fb8eb0d4c2478ec75cc10d551ab29274e",
-          "size_bytes": 14468
+          "sha256": "5c18631460ff80d7ae125797a68abaafd068aa717a846ba16d26417e01d11377",
+          "size_bytes": 6427
         },
         "influence": {
           "repo_path": "K/KZNY/JFK_TMA/sector_influence.json",
@@ -402,12 +402,12 @@
       }
     }
   },
-  "commit_sha": "8ab35c052d6e44dfcfa8496ad14494b8cfd6e20d",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17-b/sector-data-2607.zip",
-  "published_at": "2026-07-17T07:54:56Z",
-  "release_tag": "daily-2026-07-17-b",
+  "commit_sha": "a282d01720fd5a43384bb457a289ce2e07662935",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17-c/sector-data-2607.zip",
+  "published_at": "2026-07-17T08:55:34Z",
+  "release_tag": "daily-2026-07-17-c",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f2760288956784aef03d36f7f5cfe3799b03ba1fe4681edba4f0eea91feecc93",
-  "size_bytes": 44255
+  "sha256": "02d46d6c2b64e64d34294bd6074b4d7295fca74d7cdd9eb53759a0e88712a754",
+  "size_bytes": 43957
 }
