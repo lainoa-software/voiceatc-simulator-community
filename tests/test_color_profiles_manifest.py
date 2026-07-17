@@ -241,6 +241,32 @@ class ColorProfilesManifestTests(unittest.TestCase):
             manifest = MODULE.build_manifest(root, commit_sha="test-commit")
             self.assertIn("L/LE", manifest["profiles"])
 
+    def test_validate_style_accepts_objective_symbol_height(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            scope_dir = root / "L" / "LE"
+            scope_dir.mkdir(parents=True, exist_ok=True)
+            style = valid_style()
+            style["defined_symbols"]["diamond"]["height"] = 0.78
+            (scope_dir / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
+            (scope_dir / "style.json").write_text(json.dumps(style), encoding="utf-8")
+            manifest = MODULE.build_manifest(root, commit_sha="test-commit")
+            self.assertIn("L/LE", manifest["profiles"])
+
+    def test_validate_style_rejects_invalid_objective_symbol_height(self) -> None:
+        invalid_heights = [0, -0.1, True, "0.78", float("nan"), float("inf")]
+        for invalid_height in invalid_heights:
+            with self.subTest(height=invalid_height), tempfile.TemporaryDirectory() as tmp_dir:
+                root = Path(tmp_dir)
+                scope_dir = root / "L" / "LE"
+                scope_dir.mkdir(parents=True, exist_ok=True)
+                style = valid_style()
+                style["defined_symbols"]["diamond"]["height"] = invalid_height
+                (scope_dir / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
+                (scope_dir / "style.json").write_text(json.dumps(style), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "height.*finite positive number"):
+                    MODULE.build_manifest(root, commit_sha="test-commit")
+
     def test_validate_style_accepts_label_block(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)

@@ -12,6 +12,7 @@
   "defined_symbols": {
     "stars_asterisk": {
       "type": "wireframe",
+      "height": 0.78,
       "draw": "M -6 0 L 6 0 M 0 -6 L 0 6 M -4 -4 L 4 4 M -4 4 L 4 -4",
       "connection_points": [[0, 0]]
     },

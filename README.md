@@ -16,6 +16,16 @@ the rich asset under `rich_routes_tsv`; contributors must update both through th
 route projection tool, never edit the legacy copy independently. The daily release
 publishes both assets with unchanged manifest schema versions.
 
+## Objective symbol heights (`style.json`)
+
+Vector entries under `defined_symbols` may declare a positive numeric `height` in
+callsign-row units. `1.0` is exactly the rendered height of the callsign row, and
+the renderer fits the symbol's complete outer height to that target without optical
+normalisation. Omit `height` to retain the legacy `symbol_size` / `traildot_size`
+and optical-normalisation behaviour. Keep those legacy top-level values when adding
+an objective height: older simulator builds ignore the new definition field and
+continue to render the compatible fallback.
+
 ## Pull Requests
 In order to keep the reposititory organized, name all pull requests `[FIR/Airport] Updated/Fixed/Added...` - for example `[ESSA] Updated MVAs`. There are automatic checks that will be preformed when you create a pull request, and after those the files will be inspected by a maintainer before being merged. If any errors are spotted, we will ask you to update the pull request before we can merge it.
 

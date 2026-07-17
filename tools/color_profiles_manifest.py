@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 import subprocess
 import sys
@@ -115,6 +116,18 @@ def validate_style_file(path: Path, root: Path = ROOT) -> dict[str, object]:
                         raise ValueError(f"{path}: defined_symbols['{symbol_name}']['draw'] must be a non-empty string")
                     if not isinstance(symbol_def["connection_points"], list):
                         raise ValueError(f"{path}: defined_symbols['{symbol_name}']['connection_points'] must be an array")
+                    if "height" in symbol_def:
+                        height = symbol_def["height"]
+                        if (
+                            isinstance(height, bool)
+                            or not isinstance(height, (int, float))
+                            or not math.isfinite(float(height))
+                            or height <= 0
+                        ):
+                            raise ValueError(
+                                f"{path}: defined_symbols['{symbol_name}']['height'] "
+                                "must be a finite positive number"
+                            )
                 else:
                     raise ValueError(f"{path}: defined_symbols['{symbol_name}'] must be an object with 'type', 'draw', and 'connection_points'")
             continue
