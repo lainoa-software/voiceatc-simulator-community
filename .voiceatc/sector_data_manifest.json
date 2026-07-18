@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2607.zip",
-  "bundle_count": 21,
+  "bundle_count": 22,
   "bundles": {
     "E/ED/EDGG/EDDF_TMA": {
       "files": {
@@ -211,6 +211,25 @@
         }
       }
     },
+    "K/KZNY/LAGUARDIA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZNY/LAGUARDIA_TMA/sector_configs.json",
+          "sha256": "f5859add8059a2c9d74a9eac46003e1c9e89f80df0acca29bca42e129b9725ca",
+          "size_bytes": 211
+        },
+        "definitions": {
+          "repo_path": "K/KZNY/LAGUARDIA_TMA/sector_definitions.json",
+          "sha256": "a90ced7d164d453bf043c65245abb7b3806e5a358209525f52cf2361e4a8e78d",
+          "size_bytes": 2162
+        },
+        "influence": {
+          "repo_path": "K/KZNY/LAGUARDIA_TMA/sector_influence.json",
+          "sha256": "20745cf907a12698d814fd057a5543270228d519e3db8bf94607dc54252c813e",
+          "size_bytes": 123
+        }
+      }
+    },
     "L/LE/LECB/LECB_E/PALMA_TMA": {
       "files": {
         "configs": {
@@ -402,12 +421,12 @@
       }
     }
   },
-  "commit_sha": "0b108ce0282d9575f2f78c469d3b1e70119d1945",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-18-b/sector-data-2607.zip",
-  "published_at": "2026-07-18T11:13:07Z",
-  "release_tag": "daily-2026-07-18-b",
+  "commit_sha": "bed81945185918ecfeb79dc74448ea131aec101e",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-18-c/sector-data-2607.zip",
+  "published_at": "2026-07-18T11:28:40Z",
+  "release_tag": "daily-2026-07-18-c",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "53997a0a122deaef1c769b819739b12634beef60e1d3d35d93c080ffe404f948",
-  "size_bytes": 42742
+  "sha256": "e5e28672271b4608f4cfe85cf5023a51e23dc6df80ccebfe280a4559457f18ff",
+  "size_bytes": 44052
 }
