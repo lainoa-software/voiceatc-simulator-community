@@ -402,10 +402,10 @@
       }
     }
   },
-  "commit_sha": "d4b76c62f2c4811fbf622406a13acce29b98294a",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-17-f/sector-data-2607.zip",
-  "published_at": "2026-07-17T10:11:37Z",
-  "release_tag": "daily-2026-07-17-f",
+  "commit_sha": "3d582227ffd701695b2bacaa44d2a30f73975097",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-18/sector-data-2607.zip",
+  "published_at": "2026-07-18T04:12:29Z",
+  "release_tag": "daily-2026-07-18",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
   "sha256": "53997a0a122deaef1c769b819739b12634beef60e1d3d35d93c080ffe404f948",
