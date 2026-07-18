@@ -104,6 +104,13 @@ Granular form (forbid all feeders except one), and the per-feeder resolution ord
 
 Keys are matched case-insensitively, so you may write idents (and the rest of the file) in lower case if you prefer consistent formatting.
 
+## Minimum vectoring altitudes (`mva.json`)
+An optional file at the terminal-scope folder (e.g. `K/KZNY/JFK_TMA/mva.json`) that gives the simulator minimum vectoring altitude areas for low-altitude alerts and the MRVA map display. `airport` names the served airport (an `airports` array may share one file across a terminal group). `mva_areas` rows carry `area_id`, `minimum_altitude_ft` (positive integer), a closed `[lat, lon]` `polygon` ring, and optional `labels` (`text`, `position`) for the altitude readout on scope.
+
+For U.S. airports the authoritative source is the FAA's AIXM 5.1 MVA publication (<https://aeronav.faa.gov/MVA_Charts/aixm/>, one `<FACILITY>_MVA_FUS*.xml` per TRACON/ATCT). Use the **FUS3** variant of a facility's chart — the same choice the Vice ATC simulator makes for its bundled MVA data. Conversion conventions: keep the sectors relevant to the playable terminal area, drop AIXM interior rings only when each hole is covered by a higher-MVA lettered sector (the simulator evaluates the highest MVA of all polygons covering a point, so the hole region still resolves correctly; verified for N90 FUS3), and emit one label per area with the altitude in full feet.
+
+Run `python tools/mva_manifest.py --validate-only` before opening a PR; the manifest is regenerated automatically on release.
+
 ## Bugs, Suggestions & Feedback
 Open Github issues regarding the issue, suggestion or feedback. Remember to explain it thoroughly so someone can help you.
 
