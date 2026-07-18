@@ -17,6 +17,8 @@ SPEC.loader.exec_module(MODULE)
 EARTH_RADIUS_NM = 3440.065
 KJFK_LATITUDE = 40.6413
 KJFK_LONGITUDE = -73.7781
+KLGA_LATITUDE = 40.7772
+KLGA_LONGITUDE = -73.8726
 
 
 def polygon_contains(polygon: list[list[float]], latitude: float, longitude: float) -> bool:
@@ -38,9 +40,15 @@ def polygon_contains(polygon: list[list[float]], latitude: float, longitude: flo
     return inside
 
 
-def great_circle_distance_nm(latitude: float, longitude: float) -> float:
-    latitude_1 = math.radians(KJFK_LATITUDE)
-    longitude_1 = math.radians(KJFK_LONGITUDE)
+def great_circle_distance_nm(
+    latitude: float,
+    longitude: float,
+    *,
+    origin_latitude: float = KJFK_LATITUDE,
+    origin_longitude: float = KJFK_LONGITUDE,
+) -> float:
+    latitude_1 = math.radians(origin_latitude)
+    longitude_1 = math.radians(origin_longitude)
     latitude_2 = math.radians(latitude)
     longitude_2 = math.radians(longitude)
     delta_latitude = latitude_2 - latitude_1
@@ -94,6 +102,7 @@ class SectorDataManifestTests(unittest.TestCase):
         core_bundles = {
             "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA",
             "K/KZNY/JFK_TMA",
+            "K/KZNY/LAGUARDIA_TMA",
             "L/LE/LECB/LECB_E/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
             "L/LE/LECB/LECB_W/VALENCIA_TMA",
@@ -203,6 +212,72 @@ class SectorDataManifestTests(unittest.TestCase):
         self.assertEqual(1, len(sector_influences))
         self.assertEqual("KJFKAPP", sector_influences[0]["sector_id"])
         self.assertEqual({"KJFK", "KFRG"}, set(sector_influences[0]["airports"]))
+
+    def test_klga_bundle_uses_simaware_lga_envelope(self) -> None:
+        bundle = REPO_ROOT / "K" / "KZNY" / "LAGUARDIA_TMA"
+        definitions = json.loads((bundle / "sector_definitions.json").read_text(encoding="utf-8"))
+        configs = json.loads((bundle / "sector_configs.json").read_text(encoding="utf-8"))
+        influence = json.loads((bundle / "sector_influence.json").read_text(encoding="utf-8"))
+        mva = json.loads((bundle / "mva.json").read_text(encoding="utf-8"))
+
+        self.assertEqual("KLGA", definitions["airport"])
+        forbidden_metadata = {"source", "provenance", "retrieval", "citation", "licensing"}
+        self.assertTrue(forbidden_metadata.isdisjoint(definitions))
+        self.assertTrue(forbidden_metadata.isdisjoint(mva))
+
+        sector_definitions = definitions["sector_definitions"]
+        self.assertEqual(1, len(sector_definitions))
+        sector = sector_definitions[0]
+        self.assertEqual("KLGAAPP", sector["sector_id"])
+        self.assertEqual(0, sector["lower_limit"])
+        self.assertEqual(19000, sector["higher_limit"])
+
+        polygon = sector["polygon"]
+        self.assertEqual(65, len(polygon))
+        self.assertEqual(polygon[0], polygon[-1])
+        latitudes = [point[0] for point in polygon]
+        longitudes = [point[1] for point in polygon]
+        self.assertAlmostEqual(40.02028, min(latitudes), places=5)
+        self.assertAlmostEqual(41.60459, max(latitudes), places=5)
+        self.assertAlmostEqual(-75.10694, min(longitudes), places=5)
+        self.assertAlmostEqual(-73.27281, max(longitudes), places=5)
+
+        maximum_distance_nm = max(
+            great_circle_distance_nm(
+                latitude,
+                longitude,
+                origin_latitude=KLGA_LATITUDE,
+                origin_longitude=KLGA_LONGITUDE,
+            )
+            for latitude, longitude in polygon
+        )
+        self.assertGreaterEqual(maximum_distance_nm, 57.5)
+        self.assertLessEqual(maximum_distance_nm, 58.5)
+
+        self.assertTrue(polygon_contains(polygon, KLGA_LATITUDE, KLGA_LONGITUDE))
+        # Geometry may cover satellites; influence is the ownership authority.
+        self.assertTrue(polygon_contains(polygon, 41.0669, -73.7076))  # KHPN
+        self.assertTrue(polygon_contains(polygon, 41.3715, -73.4822))  # KDXR
+        self.assertFalse(polygon_contains(polygon, KJFK_LATITUDE, KJFK_LONGITUDE))
+
+        config_sectors = configs["sector_configs"][0]["sectors"][0]
+        self.assertEqual(["KLGAAPP"], config_sectors["sector_ids"])
+        self.assertEqual("120.800", config_sectors["frequency"])
+
+        sector_influences = influence["sector_influences"]
+        self.assertEqual(1, len(sector_influences))
+        self.assertEqual("KLGAAPP", sector_influences[0]["sector_id"])
+        self.assertEqual({"KLGA"}, set(sector_influences[0]["airports"]))
+
+        self.assertEqual("KLGA", mva["airport"])
+        area_ids = [area["area_id"] for area in mva["mva_areas"]]
+        self.assertEqual(len(area_ids), len(set(area_ids)))
+        self.assertGreaterEqual(len(area_ids), 15)
+        for area in mva["mva_areas"]:
+            self.assertGreater(int(area["minimum_altitude_ft"]), 0)
+            self.assertGreaterEqual(len(area["polygon"]), 4)
+            self.assertEqual(area["polygon"][0], area["polygon"][-1])
+            self.assertTrue(area.get("labels"))
 
     def test_build_manifest_rejects_missing_required_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
