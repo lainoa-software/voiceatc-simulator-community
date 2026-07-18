@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -35,6 +36,10 @@ REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 SCHEMA_VERSION = 1
 OPTIONS_FILENAME = "procedure_options.json"
 BUCKETS = ("stars", "sids", "iaps")
+CLIMB_RULE_KINDS = ("route_contains", "aircraft_type", "utc_window", "fallback")
+CLIMB_PATH_TERMS = ("IF", "TF", "DF", "CF", "CA", "VA", "VM", "FM")
+RUNWAY_TOKEN_RE = re.compile(r"^[0-9]{1,2}[LRCB]?$")
+NAVAID_IDENT_RE = re.compile(r"^[A-Z0-9]{2,8}$")
 IGNORED_PARTS = {
     ".git",
     ".voiceatc",
@@ -69,7 +74,170 @@ def _canonical_repo_bytes(raw_bytes: bytes) -> bytes:
     return raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
-def _validate_option_entry(container: object, where: str, path: Path) -> None:
+def _positive_number(value: object, where: str, path: Path) -> float:
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or value <= 0:
+        raise ValueError(f"{path}: {where} must be a positive number")
+    return float(value)
+
+
+def _heading(value: object, where: str, path: Path) -> float:
+    heading = _positive_number(value, where, path)
+    if heading > 360:
+        raise ValueError(f"{path}: {where} must be between 1 and 360 degrees")
+    return heading
+
+
+def _navaid_ident(value: object, where: str, path: Path) -> str:
+    ident = ensure_text_field(value, where, path).upper()
+    if not NAVAID_IDENT_RE.fullmatch(ident):
+        raise ValueError(f"{path}: {where} must be a 2-8 character navaid ident")
+    return ident
+
+
+def _validate_crossing_candidate(candidate: object, where: str, path: Path) -> None:
+    if not isinstance(candidate, dict):
+        raise ValueError(f"{path}: {where} must be a JSON object")
+    kind = ensure_text_field(candidate.get("kind"), f"{where}.kind", path).lower()
+    if kind not in ("dme", "radial"):
+        raise ValueError(f"{path}: {where}.kind must be 'dme' or 'radial'")
+    _navaid_ident(candidate.get("navaid"), f"{where}.navaid", path)
+    if kind == "dme":
+        _positive_number(candidate.get("distance_nm"), f"{where}.distance_nm", path)
+    else:
+        _heading(candidate.get("radial"), f"{where}.radial", path)
+
+
+def _validate_containment(assertions: object, where: str, path: Path) -> None:
+    if not isinstance(assertions, list) or not assertions:
+        raise ValueError(f"{path}: {where} must be a non-empty array")
+    for index, assertion in enumerate(assertions):
+        item_where = f"{where}[{index}]"
+        if not isinstance(assertion, dict):
+            raise ValueError(f"{path}: {item_where} must be a JSON object")
+        kind = ensure_text_field(assertion.get("kind"), f"{item_where}.kind", path).lower()
+        if kind not in ("east_of_radial", "max_dme"):
+            raise ValueError(f"{path}: {item_where}.kind is unsupported")
+        _navaid_ident(assertion.get("navaid"), f"{item_where}.navaid", path)
+        if kind == "east_of_radial":
+            _heading(assertion.get("radial"), f"{item_where}.radial", path)
+        else:
+            _positive_number(assertion.get("distance_nm"), f"{item_where}.distance_nm", path)
+
+
+def _validate_climb_leg(leg: object, where: str, path: Path) -> None:
+    if not isinstance(leg, dict):
+        raise ValueError(f"{path}: {where} must be a JSON object")
+    path_term = ensure_text_field(leg.get("path_term"), f"{where}.path_term", path).upper()
+    if path_term not in CLIMB_PATH_TERMS:
+        raise ValueError(f"{path}: {where}.path_term '{path_term}' is unsupported")
+    if "ident" in leg:
+        ensure_text_field(leg["ident"], f"{where}.ident", path)
+    if "course" in leg:
+        _heading(leg["course"], f"{where}.course", path)
+    if path_term in ("CA", "VA", "VM", "FM", "CF") and "course" not in leg:
+        raise ValueError(f"{path}: {where}.course is required for {path_term}")
+    if "turn_direction" in leg:
+        turn = ensure_text_field(leg["turn_direction"], f"{where}.turn_direction", path).upper()
+        if turn not in ("L", "R"):
+            raise ValueError(f"{path}: {where}.turn_direction must be 'L' or 'R'")
+    for key in ("altitude1", "altitude2", "speed_limit", "distance_nm"):
+        if key in leg:
+            _positive_number(leg[key], f"{where}.{key}", path)
+    if "altitude_description" in leg:
+        desc = ensure_text_field(leg["altitude_description"], f"{where}.altitude_description", path).upper()
+        if desc not in ("+", "-", "@", "B"):
+            raise ValueError(f"{path}: {where}.altitude_description is unsupported")
+    if "recommended_navaid" in leg:
+        _navaid_ident(leg["recommended_navaid"], f"{where}.recommended_navaid", path)
+    if "endpoint" in leg:
+        endpoint = leg["endpoint"]
+        if not isinstance(endpoint, dict):
+            raise ValueError(f"{path}: {where}.endpoint must be a JSON object")
+        if str(endpoint.get("kind", "")).lower() != "radial_dme":
+            raise ValueError(f"{path}: {where}.endpoint.kind must be 'radial_dme'")
+        _navaid_ident(endpoint.get("navaid"), f"{where}.endpoint.navaid", path)
+        _heading(endpoint.get("radial"), f"{where}.endpoint.radial", path)
+        _positive_number(endpoint.get("distance_nm"), f"{where}.endpoint.distance_nm", path)
+    if "crossing" in leg:
+        crossing = leg["crossing"]
+        if not isinstance(crossing, dict):
+            raise ValueError(f"{path}: {where}.crossing must be a JSON object")
+        ensure_text_field(crossing.get("id"), f"{where}.crossing.id", path)
+        first_of = crossing.get("first_of")
+        if not isinstance(first_of, list) or len(first_of) < 2:
+            raise ValueError(f"{path}: {where}.crossing.first_of must contain at least two alternatives")
+        for index, candidate in enumerate(first_of):
+            _validate_crossing_candidate(candidate, f"{where}.crossing.first_of[{index}]", path)
+        for key in ("altitude1", "altitude2"):
+            if key in crossing:
+                _positive_number(crossing[key], f"{where}.crossing.{key}", path)
+    if "containment" in leg:
+        _validate_containment(leg["containment"], f"{where}.containment", path)
+
+
+def _validate_auto_rule(rule: object, where: str, path: Path) -> str:
+    if not isinstance(rule, dict):
+        raise ValueError(f"{path}: {where} must be a JSON object")
+    kind = ensure_text_field(rule.get("kind"), f"{where}.kind", path).lower()
+    if kind not in CLIMB_RULE_KINDS:
+        raise ValueError(f"{path}: {where}.kind '{kind}' is unsupported")
+    if kind in ("route_contains", "aircraft_type"):
+        values = rule.get("values")
+        if not isinstance(values, list) or not values:
+            raise ValueError(f"{path}: {where}.values must be a non-empty array")
+        for index, value in enumerate(values):
+            ensure_text_field(value, f"{where}.values[{index}]", path)
+    elif kind == "utc_window":
+        start = rule.get("start_minute")
+        end = rule.get("end_minute")
+        if isinstance(start, bool) or not isinstance(start, int) or not 0 <= start < 1440:
+            raise ValueError(f"{path}: {where}.start_minute must be an integer from 0 to 1439")
+        if isinstance(end, bool) or not isinstance(end, int) or not 0 <= end <= 1440:
+            raise ValueError(f"{path}: {where}.end_minute must be an integer from 0 to 1440")
+        if start == end:
+            raise ValueError(f"{path}: {where} UTC window must not be empty")
+    return kind
+
+
+def _validate_climb_variants(container: object, where: str, path: Path) -> None:
+    if not isinstance(container, list) or not container:
+        raise ValueError(f"{path}: {where} must be a non-empty array")
+    seen_ids: set[str] = set()
+    fallback_indices: list[int] = []
+    for index, variant in enumerate(container):
+        variant_where = f"{where}[{index}]"
+        if not isinstance(variant, dict):
+            raise ValueError(f"{path}: {variant_where} must be a JSON object")
+        variant_id = ensure_text_field(variant.get("id"), f"{variant_where}.id", path).upper()
+        if variant_id in seen_ids:
+            raise ValueError(f"{path}: duplicate climb variant id '{variant_id}'")
+        seen_ids.add(variant_id)
+        ensure_text_field(variant.get("display_name"), f"{variant_where}.display_name", path)
+        runways = variant.get("runways")
+        if not isinstance(runways, list) or not runways:
+            raise ValueError(f"{path}: {variant_where}.runways must be a non-empty array")
+        for runway_index, runway in enumerate(runways):
+            token = ensure_text_field(runway, f"{variant_where}.runways[{runway_index}]", path).upper()
+            if not RUNWAY_TOKEN_RE.fullmatch(token):
+                raise ValueError(f"{path}: {variant_where}.runways[{runway_index}] is invalid")
+        kind = _validate_auto_rule(variant.get("auto_rule"), f"{variant_where}.auto_rule", path)
+        if kind == "fallback":
+            fallback_indices.append(index)
+        legs = variant.get("legs")
+        if not isinstance(legs, list) or not legs:
+            raise ValueError(f"{path}: {variant_where}.legs must be a non-empty array")
+        for leg_index, leg in enumerate(legs):
+            _validate_climb_leg(leg, f"{variant_where}.legs[{leg_index}]", path)
+    if fallback_indices != [len(container) - 1]:
+        raise ValueError(f"{path}: {where} must contain exactly one final fallback rule")
+
+
+def _validate_option_entry(
+    container: object,
+    where: str,
+    path: Path,
+    allow_climb_variants: bool = False,
+) -> None:
     if not isinstance(container, dict):
         raise ValueError(f"{path}: {where} must be a JSON object")
     if "spawn_enabled" in container and not isinstance(container["spawn_enabled"], bool):
@@ -78,6 +246,10 @@ def _validate_option_entry(container: object, where: str, path: Path) -> None:
         init_climb = container["init_climb"]
         if isinstance(init_climb, bool) or not isinstance(init_climb, int) or init_climb <= 0:
             raise ValueError(f"{path}: {where}.init_climb must be a positive integer feet value")
+    if "climb_variants" in container:
+        if not allow_climb_variants:
+            raise ValueError(f"{path}: {where}.climb_variants is only supported on SID entries")
+        _validate_climb_variants(container["climb_variants"], f"{where}.climb_variants", path)
 
 
 def _validate_transitions(container: object, where: str, path: Path) -> None:
@@ -102,7 +274,12 @@ def _validate_buckets(payload: dict[str, object], prefix: str, path: Path) -> No
         if not isinstance(bucket_payload, dict):
             raise ValueError(f"{path}: '{prefix}{bucket}' must be a JSON object")
         for proc_ident, entry in bucket_payload.items():
-            _validate_option_entry(entry, f"{prefix}{bucket}.{proc_ident}", path)
+            _validate_option_entry(
+                entry,
+                f"{prefix}{bucket}.{proc_ident}",
+                path,
+                allow_climb_variants=bucket == "sids",
+            )
 
 
 def _validate_direction_overrides(

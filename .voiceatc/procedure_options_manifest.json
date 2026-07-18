@@ -20,13 +20,18 @@
       "sha256": "07e45937b1592907a7801ebaf668d299ac7f324207d0b8d954498221c8dcdfb0",
       "size_bytes": 3897
     },
+    "KJFK": {
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/procedure_options.json",
+      "sha256": "0db83123c8c443ab9633ad121f3397c8ac33168ed20e1c7d87565a902be59353",
+      "size_bytes": 4217
+    },
     "RCTP": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/procedure_options.json",
       "sha256": "9e03f5944e37e4abc35143efcaaa16176d63e12d8a82749b0f620c0add692fec",
       "size_bytes": 182
     }
   },
-  "published_at": "2026-07-18T09:42:06Z",
+  "published_at": "2026-07-18T11:10:52Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

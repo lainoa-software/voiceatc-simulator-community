@@ -29,6 +29,52 @@ def valid_payload(airport: str) -> dict[str, object]:
     }
 
 
+def valid_climb_variants() -> list[dict[str, object]]:
+    return [
+        {
+            "id": "GATEWAY",
+            "display_name": "GATEWAY",
+            "runways": ["31L", "31R"],
+            "auto_rule": {"kind": "utc_window", "start_minute": 180, "end_minute": 720},
+            "legs": [
+                {
+                    "path_term": "CF",
+                    "course": 232,
+                    "endpoint": {
+                        "kind": "radial_dme",
+                        "navaid": "JFK",
+                        "radial": 232,
+                        "distance_nm": 5,
+                    },
+                },
+                {"path_term": "VM", "course": 219, "turn_direction": "L"},
+            ],
+        },
+        {
+            "id": "CANARSIE",
+            "display_name": "CANARSIE",
+            "runways": ["31L", "31R"],
+            "auto_rule": {"kind": "fallback"},
+            "legs": [
+                {"path_term": "DF", "ident": "CRI", "turn_direction": "L"},
+                {
+                    "path_term": "FM",
+                    "course": 176,
+                    "crossing": {
+                        "id": "CANARSIE_CROSSING",
+                        "altitude_description": "+",
+                        "altitude1": 2500,
+                        "first_of": [
+                            {"kind": "dme", "navaid": "CRI", "distance_nm": 2},
+                            {"kind": "radial", "navaid": "JFK", "radial": 253},
+                        ],
+                    },
+                },
+            ],
+        },
+    ]
+
+
 class ProcedureOptionsManifestTests(unittest.TestCase):
     def _write(self, root: Path, airport: str, folder_tma: str = "TAIPEI_TMA") -> Path:
         path = root / "R" / "RC" / "RCAA" / folder_tma / airport / "procedure_options.json"
@@ -112,6 +158,78 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
 
             self.assertIn("RCTP", manifest["airports"])
+
+    def test_build_manifest_accepts_sid_climb_variants(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("KJFK")
+            payload["sids"]["JFK5"] = {
+                "init_climb": 5000,
+                "climb_variants": valid_climb_variants(),
+            }
+            path = root / "K" / "KZNY" / "JFK_TMA" / "KJFK" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            manifest = MODULE.build_manifest(root, published_at="2026-07-18T00:00:00Z")
+
+            self.assertIn("KJFK", manifest["airports"])
+
+    def test_build_manifest_rejects_duplicate_climb_variant_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("KJFK")
+            variants = valid_climb_variants()
+            variants[1]["id"] = "GATEWAY"
+            payload["sids"]["JFK5"] = {"climb_variants": variants}
+            path = root / "K" / "KZNY" / "JFK_TMA" / "KJFK" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "duplicate climb variant id"):
+                MODULE.build_manifest(root, published_at="2026-07-18T00:00:00Z")
+
+    def test_build_manifest_requires_one_final_climb_fallback(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("KJFK")
+            variants = valid_climb_variants()
+            variants.reverse()
+            payload["sids"]["JFK5"] = {"climb_variants": variants}
+            path = root / "K" / "KZNY" / "JFK_TMA" / "KJFK" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "exactly one final fallback"):
+                MODULE.build_manifest(root, published_at="2026-07-18T00:00:00Z")
+
+    def test_build_manifest_rejects_unsupported_climb_path_term(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("KJFK")
+            variants = valid_climb_variants()
+            variants[0]["legs"][0]["path_term"] = "RF"
+            payload["sids"]["JFK5"] = {"climb_variants": variants}
+            path = root / "K" / "KZNY" / "JFK_TMA" / "KJFK" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "path_term 'RF' is unsupported"):
+                MODULE.build_manifest(root, published_at="2026-07-18T00:00:00Z")
+
+    def test_build_manifest_rejects_invalid_climb_utc_bounds(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("KJFK")
+            variants = valid_climb_variants()
+            variants[0]["auto_rule"]["start_minute"] = 1440
+            payload["sids"]["JFK5"] = {"climb_variants": variants}
+            path = root / "K" / "KZNY" / "JFK_TMA" / "KJFK" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "start_minute"):
+                MODULE.build_manifest(root, published_at="2026-07-18T00:00:00Z")
 
     def test_build_manifest_rejects_invalid_initial_climb(self) -> None:
         for value in (0, -1000, 3000.0, True, "3000"):

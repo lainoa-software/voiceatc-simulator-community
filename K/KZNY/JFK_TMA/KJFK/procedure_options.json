@@ -1,0 +1,156 @@
+{
+  "airport": "KJFK",
+  "schema_version": 1,
+  "airac_min": 2607,
+  "stars": {},
+  "sids": {
+    "DEEZZ6": {
+      "init_climb": 5000
+    },
+    "JFK5": {
+      "init_climb": 5000,
+      "climb_variants": [
+        {
+          "id": "BREEZY_POINT",
+          "display_name": "BREEZY POINT",
+          "runways": ["31L", "31R"],
+          "auto_rule": {
+            "kind": "route_contains",
+            "values": ["RNGRR"]
+          },
+          "legs": [
+            {
+              "path_term": "CA",
+              "course": 314,
+              "altitude_description": "+",
+              "altitude1": 420
+            },
+            {
+              "path_term": "DF",
+              "ident": "CRI",
+              "turn_direction": "L",
+              "containment": [
+                { "kind": "east_of_radial", "navaid": "CRI", "radial": 39 },
+                { "kind": "max_dme", "navaid": "JFK", "distance_nm": 4.5 }
+              ]
+            },
+            {
+              "path_term": "CF",
+              "ident": "RNGRR",
+              "course": 223,
+              "crossing": {
+                "id": "BREEZY_CROSSING",
+                "altitude_description": "+",
+                "altitude1": 2500,
+                "first_of": [
+                  { "kind": "dme", "navaid": "CRI", "distance_nm": 3 },
+                  { "kind": "radial", "navaid": "JFK", "radial": 253 }
+                ]
+              }
+            },
+            {
+              "path_term": "FM",
+              "ident": "RNGRR",
+              "course": 223
+            }
+          ]
+        },
+        {
+          "id": "IDLEWILD",
+          "display_name": "IDLEWILD",
+          "runways": ["31L", "31R"],
+          "auto_rule": {
+            "kind": "aircraft_type",
+            "values": ["PC12"]
+          },
+          "legs": [
+            {
+              "path_term": "VA",
+              "course": 90,
+              "turn_direction": "R",
+              "altitude_description": "+",
+              "altitude1": 2000,
+              "containment": [
+                { "kind": "max_dme", "navaid": "JFK", "distance_nm": 2.5 }
+              ]
+            },
+            {
+              "path_term": "VM",
+              "course": 90
+            }
+          ]
+        },
+        {
+          "id": "GATEWAY",
+          "display_name": "GATEWAY",
+          "runways": ["31L", "31R"],
+          "auto_rule": {
+            "kind": "utc_window",
+            "start_minute": 180,
+            "end_minute": 720
+          },
+          "legs": [
+            {
+              "path_term": "CF",
+              "course": 232,
+              "turn_direction": "R",
+              "endpoint": {
+                "kind": "radial_dme",
+                "navaid": "JFK",
+                "radial": 232,
+                "distance_nm": 5
+              }
+            },
+            {
+              "path_term": "VM",
+              "course": 219,
+              "turn_direction": "L"
+            }
+          ]
+        },
+        {
+          "id": "CANARSIE",
+          "display_name": "CANARSIE",
+          "runways": ["31L", "31R"],
+          "auto_rule": {
+            "kind": "fallback"
+          },
+          "legs": [
+            {
+              "path_term": "CA",
+              "course": 314,
+              "altitude_description": "+",
+              "altitude1": 420
+            },
+            {
+              "path_term": "DF",
+              "ident": "CRI",
+              "turn_direction": "L",
+              "containment": [
+                { "kind": "east_of_radial", "navaid": "CRI", "radial": 39 },
+                { "kind": "max_dme", "navaid": "JFK", "distance_nm": 4.5 }
+              ]
+            },
+            {
+              "path_term": "FM",
+              "course": 176,
+              "crossing": {
+                "id": "CANARSIE_CROSSING",
+                "altitude_description": "+",
+                "altitude1": 2500,
+                "first_of": [
+                  { "kind": "dme", "navaid": "CRI", "distance_nm": 2 },
+                  { "kind": "radial", "navaid": "JFK", "radial": 253 }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "SKORR6": {
+      "init_climb": 5000
+    }
+  },
+  "iaps": {}
+}

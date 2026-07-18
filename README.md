@@ -54,7 +54,43 @@ Keys are procedure idents as they appear in the navigation data (the same idents
 - `spawn_enabled: false` withholds a procedure from generated traffic. Resolution order per procedure: a matching per-runway override (see below), then its own global `spawn_enabled`, then `defaults.spawn_enabled`, then `true`.
 - `defaults.spawn_enabled: false` flips the airport to allow-list style (disable everything, then enable only the listed procedures).
 - `init_climb` sets a generated departure's initial cleared altitude in feet. It must be a positive integer and may appear in `defaults` or a SID entry. Resolution is active-configuration SID → active-runway SID → global SID → `defaults.init_climb` → no curated override. Unlike `spawn_enabled`, this operational metadata remains active when a player customises the procedure spawn whitelist.
+- A SID entry may also contain ordered `climb_variants` when a published procedure has named, mutually exclusive runway climbs that are not distinguished by the navigation-data SID ident. Each variant supplies a stable `id`, player-facing `display_name`, eligible `runways`, one `auto_rule`, and a complete replacement `legs` sequence. The first matching rule wins, and exactly one final `fallback` is required.
 - `airport` must match the folder name. Run `python tools/procedure_options_manifest.py --validate-only` before opening a PR; the manifest is regenerated automatically on release.
+
+### SID climb variants (`climb_variants`)
+
+Climb variants are additive schema-1 data: simulator versions that do not understand them ignore the new attribute and continue using the AIRAC SID. Supported automatic rules are `route_contains` (exact filed-route token), `aircraft_type`, a half-open `utc_window` in minutes after midnight, and the required final `fallback`. Array order is policy priority.
+
+Legs use typed procedure fields. Supported path terms are `IF`, `TF`, `DF`, `CF`, `CA`, `VA`, `VM`, and `FM`; headings use `course`, turns use `turn_direction`, and altitude/speed restrictions use the normal ARINC-style description and numeric fields. `endpoint` can define a `radial_dme` point. A `crossing.first_of` block represents the first reached DME or radial condition. Optional `containment` assertions document an `east_of_radial` or `max_dme` limit for construction and regression checks.
+
+```json
+{
+  "sids": {
+    "JFK5": {
+      "init_climb": 5000,
+      "climb_variants": [
+        {
+          "id": "GATEWAY",
+          "display_name": "GATEWAY",
+          "runways": ["31L", "31R"],
+          "auto_rule": {"kind": "utc_window", "start_minute": 180, "end_minute": 720},
+          "legs": [
+            {"path_term": "CF", "course": 232, "endpoint": {"kind": "radial_dme", "navaid": "JFK", "radial": 232, "distance_nm": 5}},
+            {"path_term": "VM", "course": 219, "turn_direction": "L"}
+          ]
+        },
+        {
+          "id": "CANARSIE",
+          "display_name": "CANARSIE",
+          "runways": ["31L", "31R"],
+          "auto_rule": {"kind": "fallback"},
+          "legs": [{"path_term": "FM", "course": 176}]
+        }
+      ]
+    }
+  }
+}
+```
 
 ### Per-runway overrides (`runways`)
 Most procedures are already locked to one landing/departure direction by the navigation data, so the per-procedure flags above are usually enough. When a **shared** procedure (one that serves more than one direction) should be available for one runway but not another, add an optional top-level `runways` object. Each key is a bare runway token (e.g. `"25"`); its `stars`/`sids`/`iaps` use the same per-procedure shape and override the global flag **only** when that runway is active.
