@@ -2,16 +2,29 @@
   "airport": "KATL",
   "runway_configs": [
     {
-      "id": "WEST",
-      "name": "WEST FLOW",
+      "id": "WEST DUAL",
+      "name": "WEST DUAL FLOW",
       "arr": "26R 27L",
       "dep": "26L 27R"
     },
     {
-      "id": "EAST",
-      "name": "EAST FLOW",
+      "id": "EAST DUAL",
+      "name": "EAST DUAL FLOW",
       "arr": "08L 09R",
       "dep": "08R 09L"
+    },
+    {
+      "id": "WEST TRIPS",
+      "name": "WEST TRIPLE FLOW",
+      "arr": "26R 27L 28",
+      "dep": "26L 27R"
+    },
+    {
+      "id": "EAST TRIPS",
+      "name": "EAST TRIPLE FLOW",
+      "arr": "08L 09R 10",
+      "dep": "08R 09L"
     }
+    
   ]
 }
