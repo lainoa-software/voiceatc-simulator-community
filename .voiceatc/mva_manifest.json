@@ -103,9 +103,9 @@
     }
   },
   "asset_name": "mva-2607.zip",
-  "commit_sha": "e75b47a220e9bd5a212c44f28328153c90d02c51",
+  "commit_sha": "5e1c0439ea6622d2449fbb53e5e9a8e2efb88fe4",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-07-22/mva-2607.zip",
-  "published_at": "2026-07-22T04:32:04Z",
+  "published_at": "2026-07-22T08:41:29Z",
   "release_tag": "daily-2026-07-22",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
