@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "WADD",
   "routes": [
     {
       "id": "bb62cec2",
       "route": "RKPK DCT ENGOT Y572 BILUM Z85 RUGMA Y579 RUSAR Y27 SAKON A582 TELEN W3 SAJ A461 ZAM G578 EMTAS DCT WADD",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

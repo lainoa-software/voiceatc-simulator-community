@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RJGG",
   "dest": "RKPK",
   "routes": [
     {
       "id": "66c5bd53",
       "route": "RJGG DCT HIKNE DCT PUDAN DCT YME Y18 MIHOU Y206 KALEK Z84 PSN DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

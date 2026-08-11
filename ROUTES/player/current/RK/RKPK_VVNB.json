@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "VVNB",
   "routes": [
     {
       "id": "7df97763",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 PONIK A593 PUD A599 NXD W131 AKDIM A470 DUBGO W134 ELNEX A599 GYA R474 NAKHA DCT VVNB",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

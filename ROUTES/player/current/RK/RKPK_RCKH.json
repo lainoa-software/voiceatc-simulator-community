@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "RCKH",
   "routes": [
     {
       "id": "a6ab97d0",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 BONSO Z86 ATOTI B576 APU A1 PIDGY T13 LUGIA DCT RCKH",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

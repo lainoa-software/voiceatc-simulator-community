@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RJOT",
   "dest": "RKPK",
   "routes": [
     {
       "id": "9effefa9",
       "route": "RJOT DCT TAROH DCT MIHOU Y206 KALEK DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

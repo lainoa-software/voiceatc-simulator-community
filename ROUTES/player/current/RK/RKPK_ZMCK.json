@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "ZMCK",
   "routes": [
     {
       "id": "e2a0359b",
       "route": "RKPK DCT KALOD Y782 BITUX Z53 BASEM Y685 SEL Y697 AGAVO A591 IKEKA W4 HCH W200 DOVIV W55 PAMRU W34 LADIX B339 POLHO Y345 MENUG DCT ZMCK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

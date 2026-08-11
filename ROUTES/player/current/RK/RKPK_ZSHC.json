@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "ZSHC",
   "routes": [
     {
       "id": "d8523128",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 PONIK A593 DUMET W114 LASAN G327 NINAS B221 SUPAR W505 DSH DCT ZSHC",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

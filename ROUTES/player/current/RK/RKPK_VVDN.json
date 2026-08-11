@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "VVDN",
   "routes": [
     {
       "id": "ab6a7a00",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 MUGUS Y742 SALMI Q11 TACLE B591 HCN G86 KAPLI DCT MADRU DCT SULUX DCT IGLEG DCT IKELA A1 BUNTA DCT VVDN",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

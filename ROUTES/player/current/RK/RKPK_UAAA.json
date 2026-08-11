@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "UAAA",
   "routes": [
     {
       "id": "2a599d9f",
       "route": "RKPK DCT KALOD Y782 BITUX Z53 BASEM Y685 SEL Y697 AGAVO A591 IKEKA W4 HCH W200 DOVIV W55 PAMRU W34 VYK B215 APOGO W218 YLX W193 ALGIB W47 IDSOT W48 DKO W66 NUKTI B215 FKG A368 SARIN N161 GOMAL L135 DESOK DCT UAAA",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "RCTP",
   "routes": [
     {
       "id": "e7cc2ef9",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 MUGUS Y742 SALMI B576 BAKER DCT RCTP",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

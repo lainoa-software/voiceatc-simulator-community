@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "VVNB",
   "dest": "RKPK",
   "routes": [
     {
       "id": "b24f2b19",
       "route": "VVNB DCT NAKHA R474 TEBAK R474 WUY R343 ONEMI R343 GOSMA W82 UPMAT W56 IDPOG A581 WHA R343 PK W116 JTN G327 LAMEN A593 SADLI Y590 ELGEP Y722 SOSDO Y571 ANROD DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

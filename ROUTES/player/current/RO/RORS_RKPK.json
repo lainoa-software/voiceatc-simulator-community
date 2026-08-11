@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RORS",
   "dest": "RKPK",
   "routes": [
     {
       "id": "65708afc",
       "route": "RORS DCT FREED Y57 AZAMA Y579 RUGMA Z85 PAPLU Y571 ANROD DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

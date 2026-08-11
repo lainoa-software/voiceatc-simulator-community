@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RJOM",
   "dest": "RKPK",
   "routes": [
     {
       "id": "af828bee",
       "route": "RJOM DCT MARCO Y28 DGC G339 BEETL Y208 INVOK Z91 PSN DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

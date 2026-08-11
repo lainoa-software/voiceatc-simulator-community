@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "WSSS",
   "routes": [
     {
       "id": "ca7d04aa",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 MUGUS Y742 SALMI Q11 TACLE Q12 KABAM N892 MELAS DCT MABAL DCT WSSS",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

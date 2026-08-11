@@ -49,6 +49,21 @@ regeneration pipeline **never** create, edit, or delete files under
 website flow is preferred; `python tools/player_routes_manifest.py
 --validate-only` must pass.
 
+### Schema changes ship to the website first
+
+The single writer deploys separately from the repository that checks it, so a
+`FILE_SCHEMA_VERSION` bump must be **live on the website before** the stricter
+check lands here — never the other way round. Anything the site publishes in
+between is written to the old shape and rejected on arrival, and because
+`--validate-only` gates the daily release, that halts MVAs, runway configs,
+sector data and colour profiles too, not just routes. This is the reverse of the
+rule for tightening an existing rule (raise the Python first, alone): a shape
+change has a window, a stricter rule does not.
+
+The 2026-08-10 incident is the worked example — the schema went to 2 nine hours
+before the site stopped writing 1, and the 87 files published in that window
+took the whole nightly release down for a day.
+
 ## Nightly validation and deprecation
 
 The daily release checks every route against the live cycle's navigation data.

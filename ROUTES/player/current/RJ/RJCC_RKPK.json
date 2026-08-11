@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RJCC",
   "dest": "RKPK",
   "routes": [
     {
       "id": "4dd44a2b",
       "route": "RJCC DCT DALBI Y120 TAPPI Y12 ARIKA Y14 MIHOU Y206 KALEK DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "VHHH",
   "dest": "RKPK",
   "routes": [
     {
       "id": "3c894029",
       "route": "VHHH DCT DALOL V631 ENVAR M750 ANLOT B1 APU DCT DRAKE Q11 WP900 L4 LIPLO Y741 ATOTI Y722 SOSDO Y571 ANROD DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

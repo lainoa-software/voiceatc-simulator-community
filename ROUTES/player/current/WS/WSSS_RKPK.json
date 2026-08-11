@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "WSSS",
   "dest": "RKPK",
   "routes": [
     {
       "id": "b58752e5",
       "route": "WSSS DCT TOMAN L625 GUTUP L625 ABVAR M646 HCN B591 TINHO DCT SANAS M750 MAMOD Y759 IGMON Z401 POTET Y579 RUGMA DCT ANROD DCT RKPK",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }

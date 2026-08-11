@@ -1,12 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "origin": "RKPK",
   "dest": "VMMC",
   "routes": [
     {
       "id": "2ce9163a",
       "route": "RKPK DCT ENGOT Y572 CJU Z82 PANSI Y711 MUGUS Y742 SALMI Q11 DRAKE A1 ELATO J101 SMT DCT VMMC",
-      "author": "SS ATC",
       "created_at": "2026-08-10T04:36:11Z",
       "creation_airac": "2608"
     }
