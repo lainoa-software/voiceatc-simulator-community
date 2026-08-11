@@ -1,1 +1,11 @@
+# Every tracked file is already LF in the index and CI runs on Linux, so give
+# the working tree LF as well. Without this, core.autocrlf on a Windows checkout
+# writes CRLF, and two things break: prettier --check fails on files CI itself
+# formatted (.prettierrc.json pins endOfLine: lf), and `git add` prints a
+# "LF will be replaced by CRLF" warning that lint-staged folds into its own
+# command output, so its backup step reads the warning as a revision and dies
+# with "fatal: Needed a single revision" before prettier ever runs.
+* text=auto eol=lf
+
+# Listed after the wildcard so it wins. These stay unconverted.
 ROUTES/*.tsv -text
