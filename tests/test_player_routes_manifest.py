@@ -223,6 +223,26 @@ class PlayerRoutesManifestTests(unittest.TestCase):
             write_player_file(root, "current", "LEMH", "LEPA", [])
             self.assertEqual([], MODULE.load_lane("current", root))
 
+    def test_validate_tree_reports_every_bad_file(self) -> None:
+        """One stale publish breaks many files at once; reporting them one per
+        run costs the contributor a round trip per file."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            write_player_file(root, "current", "LEMH", "LEPA", [make_route_entry("LEMH", "LEPA", "MAMEB")])
+            legacy = write_player_file(root, "current", "LEMD", "LEBL", [make_route_entry("LEMD", "LEBL", "PINAR")])
+            legacy.write_text(legacy.read_text(encoding="utf-8").replace('"schema_version": 2', '"schema_version": 1'), encoding="utf-8")
+            named = make_route_entry("LEZL", "LEVC", "TERSA")
+            write_player_file(root, "current", "LEZL", "LEVC", [{**named, "author": "Test Pilot"}])
+
+            with self.assertRaises(ValueError) as caught:
+                MODULE.validate_tree(root)
+
+        message = str(caught.exception)
+        self.assertIn("2 player route file(s) failed validation:", message)
+        self.assertIn("LEMD_LEBL.json: schema_version must be 2", message)
+        self.assertIn("LEZL_LEVC.json: routes[0].author is not allowed", message)
+        self.assertNotIn("LEMH_LEPA.json", message)
+
     def test_deep_validate_flags_unknown_token_only(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

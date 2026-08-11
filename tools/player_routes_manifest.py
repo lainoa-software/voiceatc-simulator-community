@@ -50,6 +50,7 @@ MAX_ROUTE_TOKENS = 120
 MIN_ROUTE_TOKENS = 3
 MAX_REASONS_PER_ROUTE = 5
 MAX_REASON_CHARS = 160
+MAX_REPORTED_FILE_ERRORS = 25
 
 ICAO_RE = re.compile(r"^[A-Z0-9]{4}$")
 TOKEN_RE = re.compile(r"^[A-Z0-9]{1,15}$")
@@ -233,12 +234,14 @@ def _validate_player_file(path: Path, lane: str, root: Path) -> list[PlayerRoute
     return routes
 
 
-def load_lane(lane: str, root: Path = ROOT) -> list[PlayerRoute]:
+def _lane_files(lane: str, root: Path) -> list[Path]:
     lane_root = root / "ROUTES" / "player" / lane
-    if not lane_root.is_dir():
-        return []
+    return sorted(lane_root.rglob("*.json")) if lane_root.is_dir() else []
+
+
+def load_lane(lane: str, root: Path = ROOT) -> list[PlayerRoute]:
     routes: list[PlayerRoute] = []
-    for path in sorted(lane_root.rglob("*.json")):
+    for path in _lane_files(lane, root):
         routes.extend(_validate_player_file(path, lane, root))
     routes.sort(key=lambda row: (row.origin, row.dest, row.order_index))
     return routes
@@ -458,10 +461,34 @@ def build_bundle(
     }
 
 
+def _format_file_errors(errors: list[str]) -> str:
+    lines = [f"{len(errors)} player route file(s) failed validation:"]
+    lines.extend(f"  {message}" for message in errors[:MAX_REPORTED_FILE_ERRORS])
+    if len(errors) > MAX_REPORTED_FILE_ERRORS:
+        lines.append(f"  ... and {len(errors) - MAX_REPORTED_FILE_ERRORS} more")
+    return "\n".join(lines)
+
+
 def validate_tree(root: Path = ROOT) -> dict[str, int]:
+    """Validate every player route file and report all faults in one pass.
+
+    Deliberately not `load_lane`, which stops at the first bad file because the
+    release build has nothing to do with a partial tree. Here the caller is a
+    contributor or the release gate, and one bad batch hiding behind itself
+    costs a round trip per file -- the same reason a route is inspected to the
+    end rather than stopping at its first bad token."""
     counts: dict[str, int] = {}
+    errors: list[str] = []
     for lane in LANES:
-        counts[lane] = len(load_lane(lane, root))
+        lane_count = 0
+        for path in _lane_files(lane, root):
+            try:
+                lane_count += len(_validate_player_file(path, lane, root))
+            except ValueError as exc:
+                errors.append(str(exc))
+        counts[lane] = lane_count
+    if errors:
+        raise ValueError(_format_file_errors(errors))
 
     for committed_path in (root / ".voiceatc" / "player_routes_manifest.json", root / ".voiceatc" / "player_routes_status.json"):
         if not committed_path.is_file():
