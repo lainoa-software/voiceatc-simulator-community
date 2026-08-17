@@ -4,6 +4,23 @@ FAA CY2024 commercial-service enplanement ranking (top 50). Configs authored fro
 
 **Pad single-digit runway identifiers.** US sources write `8L` and `4R`; the game matches configuration runways against Navigraph identifiers, which are padded (`08L`, `04R`), and pads neither side before comparing — so an unpadded identifier matches nothing and the whole configuration silently resolves to no runways. PHNL shipped four of them this way. `tools/runway_configs_manifest.py` now rejects them.
 
+## Shipped files that deliberately differ from the generator
+
+`tools/generate_us_runway_configs.py` was a one-shot import. Its `AIRPORT_CONFIGS`
+table is a historical record of that import, not the current truth, so
+`--check` reports the airports whose shipped files have since been improved by
+hand. Those reports are expected and are not a reason to revert a file:
+
+| ICAO | Why it differs |
+|------|----------------|
+| KATL | Shipped configs extended past the imported preferential-use pair |
+| KORD | Shipped configs extended past the imported Fly Quiet set |
+| PHNL | Padding fixes and SOP detail applied after the import |
+| KMDW | Replaced with observed real-world configurations, including cross-runway departures (arrives with PR #84; drop this row if that PR is closed unmerged) |
+
+The generator is not a contributor check and is not run in CI. When a shipped file
+and this table disagree, the shipped file wins.
+
 | ICAO | Primary source | Key quote |
 |------|----------------|-----------|
 | KATL | https://airnav.com/airport/KATL | PREFERENTIAL RWY USE: deps 08R/26L, 09L/27R; arr 08L/26R, 09R/27L |

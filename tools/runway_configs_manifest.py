@@ -26,8 +26,12 @@ LEGACY_RUNWAY_CONFIG_FILENAME = "runway_config.json"
 # unpadded, which is how PHNL shipped four of them.
 RUNWAY_IDENT_RE = re.compile(r"^(0[1-9]|[12][0-9]|3[0-6])[LCR]?$")
 
-# The separators the game's normalize_runway_tokens accepts.
-RUNWAY_FIELD_SEPARATORS = re.compile(r"[,;|+\\\t ]+")
+# The separators the game accepts. ConfigOptions._parse_runway_config_field
+# rewrites ',', ';', '|', '+', '\', tab and space to '/' and then splits on '/',
+# so '/' is the game's canonical separator and has to be listed here too. Leaving
+# it out rejected '22L/22R' — the way charts write a runway pair — with a
+# zero-padding error that named the whole field as one identifier.
+RUNWAY_FIELD_SEPARATORS = re.compile(r"[,;|+\\/\t ]+")
 
 
 def _tracked_runway_files(root: Path, filename: str) -> list[Path]:

@@ -1,5 +1,10 @@
 # Community content hierarchy
 
+> This page is the machine-backed rule set the tools enforce, for maintainers and
+> for settling arguments. If you are **adding** an airport or terminal area, the
+> [modding wiki](https://github.com/lainoa-software/voiceatc-simulator-community/wiki)
+> teaches the same rules in order, with worked examples.
+
 The canonical operational path is:
 
 `Region / [Nationality area] / FIR-or-ARTCC / [ACC group] / Terminal area / [Airport]`
@@ -43,14 +48,39 @@ Community publication does not require a simulator-channel promotion once the ge
 
 Terminal-area data can reference several airports, but each referenced airport must be registered in that terminal scope. Do not place terminal data inside an airport folder.
 
+## Registering a new terminal area or airport
+
+A new terminal-area folder, or a new airport inside one, needs an entry in
+[`content_hierarchy.json`](content_hierarchy.json) in the same pull request. The
+entry records which FIR or ARTCC the airport belongs to, sourced to the registry's
+declared authority, so it is reviewed rather than inferred:
+
+```json
+"K/KZAU/MKE_TMA": ["KMKE"]
+```
+
+The validator writes it for you from the folders already on disk:
+
+```text
+python tools/content_hierarchy.py --register K/KZAU/MKE_TMA
+```
+
 ## Contributor checks
 
 Run these before opening a pull request:
 
 ```text
 python tools/content_hierarchy.py --validate-only
-python tools/generate_us_runway_configs.py --check
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
 The hierarchy validator rejects unknown operational areas, placeholders, excess ACC depth, misplaced airport or terminal files, airports assigned to the wrong registered scope, and release-only aliases committed as source content.
+
+JSON formatting is **not** something to check by hand. CI normalises every JSON
+file after merge, so do not run prettier yourself and do not treat indentation or
+a missing trailing newline as a review finding.
+
+`tools/generate_us_runway_configs.py` is maintainer tooling, not a contributor
+check. It reproduces a one-shot import of FAA preferential-use configurations, and
+several shipped airports have deliberately been improved past it — see
+[`US_RUNWAY_CONFIG_SOURCES.md`](US_RUNWAY_CONFIG_SOURCES.md).

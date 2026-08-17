@@ -8,6 +8,11 @@ permissions:
   contents: read
 
 jobs:
+  # Keep this job named `validate`. The branch ruleset on main requires a status
+  # check with exactly that context, and this is the only validation workflow
+  # without a paths filter, so it is the one that reports on every pull request.
+  # Renaming it without updating the ruleset first blocks every pull request
+  # forever, waiting for a check that no longer exists.
   validate:
     runs-on: ubuntu-latest
     steps:

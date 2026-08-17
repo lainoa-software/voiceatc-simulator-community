@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""One-shot generator for FAA CY2024 top-50 US preferential runway configs."""
+"""One-shot generator for FAA CY2024 top-50 US preferential runway configs.
+
+Maintainer tooling, not a contributor check, and deliberately not run in CI. The
+table below is a record of the original import; several shipped airports have
+since been improved past it, so `--check` reports them by design. See
+documentation/US_RUNWAY_CONFIG_SOURCES.md for the accepted differences. When a
+shipped file and this table disagree, the shipped file wins.
+"""
 from __future__ import annotations
 
 import argparse

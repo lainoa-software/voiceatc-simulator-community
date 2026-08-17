@@ -84,6 +84,10 @@ class RunwayConfigsManifestTests(unittest.TestCase):
         self.assertEqual(["08L", "08R", "04R"], MODULE.runway_idents("08L 08R 04R"))
         self.assertEqual(["08L", "26R"], MODULE.runway_idents("08L,26R"))
         self.assertEqual(["08L", "26R"], MODULE.runway_idents("08L|26R"))
+        # '/' is what the game normalises the others to, and how charts write a
+        # runway pair, so it must split rather than read as one identifier.
+        self.assertEqual(["08L", "26R"], MODULE.runway_idents("08L/26R"))
+        self.assertEqual(["31R", "22L"], MODULE.runway_idents("31R, 22L"))
         self.assertEqual(["08L", "26R"], MODULE.runway_idents(["08L", "26R"]))
         self.assertEqual([], MODULE.runway_idents("   "))
 
