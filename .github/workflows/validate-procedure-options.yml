@@ -1,0 +1,24 @@
+name: Validate Procedure Options
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**/procedure_options.json"
+      - "tools/procedure_options_manifest.py"
+      - "tests/test_procedure_options_manifest.py"
+      - ".github/workflows/validate-procedure-options.yml"
+
+jobs:
+  procedure-options:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Validate procedure options files
+        run: python tools/procedure_options_manifest.py --validate-only
