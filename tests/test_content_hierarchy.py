@@ -119,6 +119,24 @@ class ContentHierarchyTests(unittest.TestCase):
         self.write_registry(registry)
         self.assertTrue(any("source 'K' is missing colors.json" in error for error in self.errors()))
 
+    def test_rejects_nationality_area_registered_under_the_wrong_region(self) -> None:
+        # The regression this guards: France, Greece, Italy, Austria, Portugal and
+        # Switzerland were registered under 'E' because their folders were there.
+        registry = fixture_registry()
+        registry["nationality_areas"]["E"] = ["ED", "ES", "LF"]
+        self.write_registry(registry)
+        self.assertTrue(
+            any("nationality area 'LF' belongs under region 'L'" in error for error in self.errors())
+        )
+
+    def test_rejects_malformed_nationality_area(self) -> None:
+        registry = fixture_registry()
+        registry["nationality_areas"]["E"] = ["ED", "EDGG"]
+        self.write_registry(registry)
+        self.assertTrue(
+            any("nationality area 'EDGG' must be two uppercase letters" in error for error in self.errors())
+        )
+
     def test_reports_one_unregistered_scope_block_for_many_files(self) -> None:
         self.write_json("K/KZHU/MKE_TMA/KMKE/runway_configs.json", {"airport": "KMKE"})
         self.write_json("K/KZHU/MKE_TMA/KMKE/procedure_options.json", {"airport": "KMKE"})

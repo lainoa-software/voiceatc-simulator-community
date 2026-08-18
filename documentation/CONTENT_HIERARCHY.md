@@ -30,6 +30,7 @@ Community publication does not require a simulator-channel promotion once the ge
 ## Identifier rules
 
 - The operational layer must be a registered, real FIR or ARTCC/control-area identifier from the hierarchy registry.
+- Region and nationality both come from the FIR code, so the nationality area always starts with its region letter: `LFFF` is filed at `L/LF/LFFF`, never `E/LF/LFFF`. Registering an area under any other region is rejected — a folder filed by continent rather than by code put France, Greece, Italy, Austria, Portugal and Switzerland under `E` for a month before this check existed.
 - `XX` and `XXX` placeholders such as `EDXX`, `KXXX`, or similar nationality placeholders are not operational areas and are prohibited.
 - Outside the United States, the registry uses the declared Navigraph AIRAC authority set. U.S. assignments use the declared FAA NASR authority set.
 - Update the registry authority metadata and re-audit assignments when the baseline cycle changes.
@@ -74,7 +75,7 @@ python tools/content_hierarchy.py --validate-only
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-The hierarchy validator rejects unknown operational areas, placeholders, excess ACC depth, misplaced airport or terminal files, airports assigned to the wrong registered scope, and release-only aliases committed as source content.
+The hierarchy validator rejects unknown operational areas, placeholders, excess ACC depth, misplaced airport or terminal files, airports assigned to the wrong registered scope, nationality areas registered under a region their own code does not start with, and release-only aliases committed as source content.
 
 JSON formatting is **not** something to check by hand. CI normalises every JSON
 file after merge, so do not run prettier yourself and do not treat indentation or

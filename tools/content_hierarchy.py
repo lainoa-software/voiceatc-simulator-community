@@ -24,6 +24,7 @@ PROFILE_FILE_NAMES = {"colors.json", "style.json"}
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
 PLACEHOLDER_RE = re.compile(r"^[A-Z]{1,2}X{2,3}$")
 AIRPORT_RE = re.compile(r"^[A-Z0-9]{4}$")
+NATIONALITY_AREA_RE = re.compile(r"^[A-Z]{2}$")
 EXPECTED_US_COLOR_ALIASES = {f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)}
 UNREGISTERED_SCOPE = "unregistered_scope"
 PRINT_WIDTH = 80
@@ -114,6 +115,23 @@ def _validate_registry(registry: dict[str, Any]) -> list[str]:
         return errors + [f"registry: {exc}"]
     if not isinstance(authorities, dict):
         return errors + ["registry: authorities must be an object"]
+
+    # A nationality area is the first two letters of its FIR code, so its first
+    # letter is the region. Registering it anywhere else makes the registry agree
+    # with a misfiled folder instead of catching it: France, Greece, Italy,
+    # Austria, Portugal and Switzerland sat under 'E' that way for a month.
+    for region, areas in _nationalities.items():
+        if not isinstance(areas, list):
+            errors.append(f"registry: nationality areas for region '{region}' must be an array")
+            continue
+        for area in areas:
+            if not isinstance(area, str) or not NATIONALITY_AREA_RE.fullmatch(area):
+                errors.append(f"registry: nationality area '{area}' must be two uppercase letters")
+                continue
+            if not area.startswith(region):
+                errors.append(
+                    f"registry: nationality area '{area}' belongs under region '{area[0]}', not '{region}'"
+                )
 
     compatibility = registry.get("release_compatibility", {})
     if not isinstance(compatibility, dict):
