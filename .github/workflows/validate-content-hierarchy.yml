@@ -1,4 +1,4 @@
-name: Validate Content Hierarchy
+name: Validate Community Repository
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 jobs:
   # Keep this job named `validate`. The branch ruleset on main requires a status
   # check with exactly that context, and this is the only validation workflow
-  # without a paths filter, so it is the one that reports on every pull request.
+  # without a paths filter, so it runs every release preflight on every pull request.
   # Renaming it without updating the ruleset first blocks every pull request
   # forever, waiting for a check that no longer exists.
   validate:
@@ -20,7 +20,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Run hierarchy tests
-        run: python -m unittest discover -s tests -p "test_content_hierarchy.py"
+      - name: Run tests
+        run: python -m unittest discover -s tests -p "test_*.py"
       - name: Validate content hierarchy
         run: python tools/content_hierarchy.py --validate-only
+      - name: Validate routes file
+        run: python tools/routes_release_manifest.py --validate-only
+      - name: Validate default routes file
+        run: python tools/routes_release_manifest.py --validate-only --validate-default
+      - name: Validate MVA files
+        run: python tools/mva_manifest.py --validate-only
+      - name: Validate runway config files
+        run: python tools/runway_configs_manifest.py --validate-only
+      - name: Validate sector data files
+        run: python tools/sector_data_manifest.py --validate-only
+      - name: Validate misc drawings files
+        run: python tools/misc_drawings_manifest.py --validate-only
+      - name: Validate color profile files
+        run: python tools/color_profiles_manifest.py --validate-only
+      - name: Validate constraints files
+        run: python tools/constraints_manifest.py --validate-only
+      - name: Validate procedure options files
+        run: python tools/procedure_options_manifest.py --validate-only
+      - name: Validate player route files
+        run: python tools/player_routes_manifest.py --validate-only

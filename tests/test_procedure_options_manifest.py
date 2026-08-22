@@ -75,6 +75,13 @@ def valid_climb_variants() -> list[dict[str, object]]:
     ]
 
 
+def write_manifest(root: Path, manifest: dict[str, object]) -> Path:
+    manifest_path = root / ".voiceatc" / "procedure_options_manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    return manifest_path
+
+
 class ProcedureOptionsManifestTests(unittest.TestCase):
     def _write(self, root: Path, airport: str, folder_tma: str = "TAIPEI_TMA") -> Path:
         path = root / "R" / "RC" / "RCAA" / folder_tma / airport / "procedure_options.json"
@@ -313,7 +320,11 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
                 encoding="utf-8",
             )
             with self.assertRaisesRegex(ValueError, "missing file"):
-                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+                MODULE.validate_existing_manifest_entries(
+                    root,
+                    manifest_path=manifest_path,
+                    expected_airports={"RCTP"},
+                )
 
     def test_validate_existing_manifest_rejects_hash_mismatch(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -340,6 +351,55 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             )
             with self.assertRaisesRegex(ValueError, "sha256 mismatch"):
                 MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_rejects_missing_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            self._write(root, "RCTP")
+
+            with self.assertRaisesRegex(ValueError, "manifest is missing"):
+                MODULE.validate_existing_manifest_entries(
+                    root,
+                    manifest_path=root / ".voiceatc" / "procedure_options_manifest.json",
+                )
+
+    def test_validate_existing_manifest_reports_sorted_missing_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            self._write(root, "RCTP")
+            self._write(root, "RCSS")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            airports = manifest["airports"]
+            assert isinstance(airports, dict)
+            airports.clear()
+            manifest_path = write_manifest(root, manifest)
+
+            with self.assertRaisesRegex(ValueError, "missing entries: RCSS, RCTP"):
+                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_reports_sorted_unexpected_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            self._write(root, "RCTP")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            airports = manifest["airports"]
+            assert isinstance(airports, dict)
+            airports["ZZZZ"] = dict(airports["RCTP"])
+            airports["AAAA"] = dict(airports["RCTP"])
+            manifest_path = write_manifest(root, manifest)
+
+            with self.assertRaisesRegex(ValueError, "unexpected entries: AAAA, ZZZZ"):
+                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_accepts_exact_airport_set(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            self._write(root, "RCTP")
+            self._write(root, "RCSS")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            manifest_path = write_manifest(root, manifest)
+
+            self.assertEqual(2, MODULE.validate_existing_manifest_entries(root, manifest_path))
 
 
 if __name__ == "__main__":

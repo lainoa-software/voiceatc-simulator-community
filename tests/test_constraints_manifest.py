@@ -30,6 +30,20 @@ def valid_payload(airport: str) -> dict[str, object]:
     }
 
 
+def write_constraints(root: Path, airport: str, folder_tma: str = "TAIPEI_TMA") -> Path:
+    path = root / "R" / "RC" / "RCAA" / folder_tma / airport / "constraints.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(valid_payload(airport)), encoding="utf-8")
+    return path
+
+
+def write_manifest(root: Path, manifest: dict[str, object]) -> Path:
+    manifest_path = root / ".voiceatc" / "constraints_manifest.json"
+    manifest_path.parent.mkdir(parents=True, exist_ok=True)
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    return manifest_path
+
+
 class ConstraintsManifestTests(unittest.TestCase):
     def test_build_manifest_uses_real_repo_path(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -82,7 +96,11 @@ class ConstraintsManifestTests(unittest.TestCase):
             )
 
             with self.assertRaisesRegex(ValueError, "missing file"):
-                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+                MODULE.validate_existing_manifest_entries(
+                    root,
+                    manifest_path=manifest_path,
+                    expected_airports={"RCTP"},
+                )
 
     def test_validate_existing_manifest_rejects_hash_mismatch(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -113,6 +131,55 @@ class ConstraintsManifestTests(unittest.TestCase):
 
             with self.assertRaisesRegex(ValueError, "sha256 mismatch"):
                 MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_rejects_missing_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            write_constraints(root, "RCTP")
+
+            with self.assertRaisesRegex(ValueError, "manifest is missing"):
+                MODULE.validate_existing_manifest_entries(
+                    root,
+                    manifest_path=root / ".voiceatc" / "constraints_manifest.json",
+                )
+
+    def test_validate_existing_manifest_reports_sorted_missing_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            write_constraints(root, "RCTP")
+            write_constraints(root, "RCSS")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            airports = manifest["airports"]
+            assert isinstance(airports, dict)
+            airports.clear()
+            manifest_path = write_manifest(root, manifest)
+
+            with self.assertRaisesRegex(ValueError, "missing entries: RCSS, RCTP"):
+                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_reports_sorted_unexpected_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            write_constraints(root, "RCTP")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            airports = manifest["airports"]
+            assert isinstance(airports, dict)
+            airports["ZZZZ"] = dict(airports["RCTP"])
+            airports["AAAA"] = dict(airports["RCTP"])
+            manifest_path = write_manifest(root, manifest)
+
+            with self.assertRaisesRegex(ValueError, "unexpected entries: AAAA, ZZZZ"):
+                MODULE.validate_existing_manifest_entries(root, manifest_path=manifest_path)
+
+    def test_validate_existing_manifest_accepts_exact_airport_set(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            write_constraints(root, "RCTP")
+            write_constraints(root, "RCSS")
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            manifest_path = write_manifest(root, manifest)
+
+            self.assertEqual(2, MODULE.validate_existing_manifest_entries(root, manifest_path))
 
 
 if __name__ == "__main__":

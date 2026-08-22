@@ -50,8 +50,24 @@ tree: [the content hierarchy guide](documentation/CONTENT_HIERARCHY.md).
 4. Say where the data comes from. Automatic checks run first, then a maintainer
    reviews the data itself.
 
-You do **not** need to run prettier or fix JSON indentation — that is normalised
-automatically after merge.
+`procedure_options.json` and `constraints.json` are indexed by byte hash. Prepare
+either file in this order: normalize the changed JSON with
+`npx prettier --write <path>`, run the matching manifest tool with `--write`, run
+that tool again with `--validate-only`, then commit both the data file and the
+generated `.voiceatc/*_manifest.json`. For example:
+
+```text
+npx prettier --write E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_options.json
+python tools/procedure_options_manifest.py --write
+python tools/procedure_options_manifest.py --validate-only
+```
+
+Use `tools/constraints_manifest.py` for `constraints.json`. Do not reformat
+unrelated JSON just to satisfy review style; ordinary formatting is still
+normalised automatically after merge.
+
+A maintainer approval does not override a red required `validate` check. Both
+approval and a green required check are necessary before merge.
 
 ## Reference
 
