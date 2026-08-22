@@ -12,13 +12,18 @@
     },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_options.json",
-      "sha256": "a5abe0f13923102d47780762f94379876fc1c3317e4fa27c88667cd82ca314f9",
-      "size_bytes": 803
+      "sha256": "3797dbae1c0e6ddc986e2cd9a80a79b1e1ca907ef4b564f933e3dccae65e75e1",
+      "size_bytes": 823
     },
     "ESSA": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_options.json",
-      "sha256": "07e45937b1592907a7801ebaf668d299ac7f324207d0b8d954498221c8dcdfb0",
-      "size_bytes": 3897
+      "sha256": "2769a9f204ea3d9fe75c4e00a42985137ac336f933bc299375293ab044bb0ac1",
+      "size_bytes": 3917
+    },
+    "ESSB": {
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/procedure_options.json",
+      "sha256": "f514fc8b345c1393f6bb98bf32be3b8690467a486ea9fdf548ec9cd6dfb358c5",
+      "size_bytes": 182
     },
     "KJFK": {
       "repo_path": "K/KZNY/JFK_TMA/KJFK/procedure_options.json",
@@ -35,13 +40,18 @@
       "sha256": "0b8114051ccbaa22c403b01560228b156d99ad8b09a398d71347340d4eeb624d",
       "size_bytes": 266
     },
+    "LTFM": {
+      "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_options.json",
+      "sha256": "5b6c23c6eec54cb24f1c66e0c79440fc947e8aed2a669d654ff59128269f64cf",
+      "size_bytes": 2157
+    },
     "RCTP": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/procedure_options.json",
       "sha256": "9e03f5944e37e4abc35143efcaaa16176d63e12d8a82749b0f620c0add692fec",
       "size_bytes": 182
     }
   },
-  "published_at": "2026-08-21T02:36:01Z",
+  "published_at": "2026-08-22T12:00:04Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
