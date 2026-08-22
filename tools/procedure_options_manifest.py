@@ -50,6 +50,11 @@ IGNORED_PARTS = {
     ".codex",
     "logs",
 }
+VALIDATION_REPAIR_HINT = (
+    "Repair: normalize changed procedure_options.json files with Prettier; run "
+    "`python tools/procedure_options_manifest.py --write`; commit the changed JSON and manifest; "
+    "then rerun `python tools/procedure_options_manifest.py --validate-only`."
+)
 
 
 def options_files(root: Path = ROOT) -> list[Path]:
@@ -382,9 +387,13 @@ def _safe_relative_path(repo_path: str, root: Path) -> Path:
     return candidate
 
 
-def validate_existing_manifest_entries(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) -> int:
+def validate_existing_manifest_entries(
+    root: Path = ROOT,
+    manifest_path: Path = MANIFEST_PATH,
+    expected_airports: set[str] | None = None,
+) -> int:
     if not manifest_path.exists():
-        return 0
+        raise ValueError(f"{manifest_path}: manifest is missing")
 
     try:
         payload = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -406,7 +415,7 @@ def validate_existing_manifest_entries(root: Path = ROOT, manifest_path: Path = 
         raise ValueError(f"{manifest_path}: airports must be an object")
 
     seen_airports: set[str] = set()
-    for airport_key, entry in airports.items():
+    for airport_key in airports:
         airport = str(airport_key).strip().upper()
         if not airport:
             raise ValueError(f"{manifest_path}: airport key must not be empty")
@@ -414,6 +423,23 @@ def validate_existing_manifest_entries(root: Path = ROOT, manifest_path: Path = 
             raise ValueError(f"{manifest_path}: duplicate airport '{airport}' in manifest")
         seen_airports.add(airport)
 
+    if expected_airports is None:
+        generated = build_manifest(root, published_at="")
+        expected_airports = set(generated["airports"])
+    expected_airports = {str(airport).strip().upper() for airport in expected_airports}
+    missing_airports = sorted(expected_airports - seen_airports)
+    unexpected_airports = sorted(seen_airports - expected_airports)
+    if missing_airports or unexpected_airports:
+        differences: list[str] = []
+        if missing_airports:
+            differences.append(f"missing entries: {', '.join(missing_airports)}")
+        if unexpected_airports:
+            differences.append(f"unexpected entries: {', '.join(unexpected_airports)}")
+        message = f"{manifest_path}: manifest airport set does not match source files ({'; '.join(differences)})"
+        raise ValueError(message)
+
+    for airport_key, entry in airports.items():
+        airport = str(airport_key).strip().upper()
         if not isinstance(entry, dict):
             raise ValueError(f"{manifest_path}: entry for airport '{airport}' must be an object")
 
@@ -450,9 +476,12 @@ def main() -> int:
         manifest = build_manifest()
         validated_entries = 0
         if args.validate_only:
-            validated_entries = validate_existing_manifest_entries()
+            validated_entries = validate_existing_manifest_entries(expected_airports=set(manifest["airports"]))
     except Exception as exc:
-        print(str(exc), file=sys.stderr)
+        message = str(exc)
+        if args.validate_only:
+            message = f"{message}\n{VALIDATION_REPAIR_HINT}"
+        print(message, file=sys.stderr)
         return 1
 
     if args.write:
