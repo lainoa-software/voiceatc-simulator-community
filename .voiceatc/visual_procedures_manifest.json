@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "LCPH": {
+      "repo_path": "L/LC/LCCC/PAPHOS_TMA/LCPH/visual_procedures.json",
+      "sha256": "22653e6564f65cbe101dc3ffcd9e3659dc7dbdd9af406a8bc6d40b2e134ff499",
+      "size_bytes": 3644
+    }
+  },
+  "published_at": "2026-08-24T15:24:20Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
