@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "airport": "KBOS",
+  "procedures": [
+    {
+      "id": "LIGHT_VISUAL_33L",
+      "name": "Light Visual RWY 33L",
+      "aliases": ["light visual", "boston light visual"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "LIGHT VISUAL RWY 33L",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00058LIGHT_VIS33L.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3000,
+        "visibility": { "value": 5, "unit": "SM" },
+        "notes": "Amdt 1A 12OCT17. SCUPP/LOBBY/KRANN are radar-vector feeder contexts; visual route is MYNOT-Boston Light-WORRN."
+      },
+      "variants": [
+        {
+          "id": "LIGHT_VISUAL_MAIN",
+          "runway": "33L",
+          "clearance_name": "Light Visual",
+          "entry_point_id": "MYNOT",
+          "sight_reference_point_id": "BOSTON_LIGHT_TRACE",
+          "legs": [
+            {
+              "id": "MYNOT",
+              "name": "MYNOT / BOS 11.5 DME",
+              "path_term": "CF",
+              "latitude": 42.2855027778,
+              "longitude": -70.7505527778,
+              "fly_over": true,
+              "course_deg": 308,
+              "reference": "BOS VOR/DME R-128",
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "BOSTON_LIGHT_TRACE",
+              "name": "LYHTT / Boston Light (chart-traced)",
+              "path_term": "CF",
+              "latitude": 42.327,
+              "longitude": -70.89,
+              "fly_over": true,
+              "course_deg": 308,
+              "reference": "BOS VOR/DME R-128",
+              "altitude": {
+                "value_ft": 1800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "WORRN",
+              "name": "WORRN",
+              "path_term": "CF",
+              "latitude": 42.3197833333,
+              "longitude": -70.9449083333,
+              "fly_over": true,
+              "course_deg": 275,
+              "reference": "BOS VOR/DME",
+              "altitude": {
+                "value_ft": 1000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": { "course_deg": 330, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

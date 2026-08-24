@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KBOS": {
+      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_procedures.json",
+      "sha256": "a7c3fed71775829224edbd832e26fd40bd35f696d1e12e99370b8375a11d1aa5",
+      "size_bytes": 2613
+    }
+  },
+  "published_at": "2026-08-24T15:22:03Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
