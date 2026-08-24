@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "airport": "KSAN",
+  "procedures": [
+    {
+      "id": "SWEETWATER_VISUAL_27",
+      "name": "Sweetwater Visual RWY 27",
+      "aliases": ["sweetwater visual", "sweetwater"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "SWEETWATER VISUAL RWY 27",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00373SWEETWATER_VIS27.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 5000,
+        "visibility": { "value": 10, "unit": "SM" },
+        "notes": "Amdt 1 31MAR16. Northern STEPN and southern OKAIN entries; the stadium and SR125/base points are chart-traced from the current plate."
+      },
+      "variants": [
+        {
+          "id": "STEPN_BRANCH",
+          "runway": "27",
+          "clearance_name": "Sweetwater Visual",
+          "entry_point_id": "STEPN",
+          "sight_reference_point_id": "STEPN",
+          "legs": [
+            {
+              "id": "STEPN",
+              "name": "STEPN",
+              "path_term": "TF",
+              "latitude": 32.8113888889,
+              "longitude": -117.2088888889,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "STADIUM_TRACE",
+              "name": "Stadium (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.7831122,
+              "longitude": -117.1195716,
+              "fly_over": false
+            },
+            {
+              "id": "KLOMN",
+              "name": "KLOMN",
+              "path_term": "TF",
+              "latitude": 32.7788722222,
+              "longitude": -117.0643972222,
+              "fly_over": true
+            },
+            {
+              "id": "SR125_BASE_TRACE",
+              "name": "After State Route 125 (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.76,
+              "longitude": -117.005,
+              "fly_over": true
+            },
+            {
+              "id": "FREEWAY_INTERCHANGE_TRACE",
+              "name": "Freeway interchange (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.71,
+              "longitude": -117.015,
+              "fly_over": false
+            },
+            {
+              "id": "CIJHI",
+              "name": "CIJHI / I-UBR 8.7 DME",
+              "path_term": "CF",
+              "latitude": 32.6972027778,
+              "longitude": -117.0401333333,
+              "fly_over": true,
+              "course_deg": 275,
+              "reference": "I-UBR 275°",
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": { "course_deg": 275, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "OKAIN_ENTRY",
+          "runway": "27",
+          "clearance_name": "Sweetwater Visual",
+          "entry_point_id": "OKAIN",
+          "sight_reference_point_id": "CIJHI",
+          "legs": [
+            {
+              "id": "OKAIN",
+              "name": "OKAIN / I-UBR 12.2 DME",
+              "path_term": "TF",
+              "latitude": 32.6809888889,
+              "longitude": -116.973725,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3600,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CIJHI",
+              "name": "CIJHI / I-UBR 8.7 DME",
+              "path_term": "CF",
+              "latitude": 32.6972027778,
+              "longitude": -117.0401333333,
+              "fly_over": true,
+              "course_deg": 275,
+              "reference": "I-UBR 275°",
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": { "course_deg": 275, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

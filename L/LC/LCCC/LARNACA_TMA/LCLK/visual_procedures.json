@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "airport": "LCLK",
+  "procedures": [
+    {
+      "id": "LCLK_ADLAS_RNAV_VISUAL_RWY22",
+      "name": "ADLAS RNAV-to-Visual RWY 22",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Cyprus DCA AIS",
+        "chart_title": "ADLAS RNAV TO VISUAL RWY 22",
+        "url": "https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement",
+        "effective_date": "2026-07-09",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Cyprus AMDT003/26 effective 09 JUL 2026; page edition 14 MAY 2026. ADLAS RNAV1; LK505 is the charted visual point."
+      },
+      "variants": [
+        {
+          "id": "LCLK_RWY22_ADLAS",
+          "runway": "22",
+          "clearance_name": "ADLAS RNAV-to-Visual RWY 22",
+          "entry_point_id": "ADLAS",
+          "sight_reference_point_id": "LK505",
+          "legs": [
+            {
+              "id": "ADLAS",
+              "name": "ADLAS",
+              "path_term": "TF",
+              "latitude": 34.9620472222,
+              "longitude": 33.3199194444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "KUKUS",
+              "name": "KUKUS",
+              "path_term": "TF",
+              "latitude": 34.9629166667,
+              "longitude": 33.4462138889,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 210,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "LK511",
+              "name": "LK511",
+              "path_term": "TF",
+              "latitude": 34.9706861111,
+              "longitude": 33.5973194444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3100,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "LK509",
+              "name": "LK509",
+              "path_term": "TF",
+              "latitude": 34.9776444444,
+              "longitude": 33.6706944444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2200,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "LK505",
+              "name": "LK505",
+              "path_term": "TF",
+              "latitude": 34.9442055556,
+              "longitude": 33.7101222222,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1600,
+                "status": "required",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 220,
+            "glidepath_deg": 2.75
+          }
+        }
+      ]
+    }
+  ]
+}

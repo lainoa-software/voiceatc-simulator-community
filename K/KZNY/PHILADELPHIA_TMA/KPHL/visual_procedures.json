@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "airport": "KPHL",
+  "procedures": [
+    {
+      "id": "RIVER_VISUAL_09LR",
+      "name": "River Visual RWY 09L/R",
+      "aliases": [
+        "river visual",
+        "river visual nine left",
+        "river visual nine right"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "RIVER VISUAL RWY 09L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00320RIVER_VIS9LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 4500,
+        "visibility": { "value": 3, "unit": "SM" },
+        "notes": "Orig 05MAR92. DQO R-061/5 DME, 9/14-DME gates, and Delaware River are chart-traced; altitude gates are published."
+      },
+      "variants": [
+        {
+          "id": "RIVER_09L",
+          "runway": "09L",
+          "clearance_name": "River Visual",
+          "entry_point_id": "DQO_R061_5_TRACE",
+          "sight_reference_point_id": "DELAWARE_RIVER_TRACE",
+          "legs": [
+            {
+              "id": "DQO_R061_5_TRACE",
+              "name": "DQO R-061 / 5.0 DME (chart-traced)",
+              "path_term": "CF",
+              "latitude": 39.72,
+              "longitude": -75.534,
+              "fly_over": true,
+              "course_deg": 61,
+              "reference": "DQO R-061 / 5.0 DME",
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DQO_R061_9_TRACE",
+              "name": "DQO R-061 / 9.0 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.753,
+              "longitude": -75.477,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DQO_R061_14_TRACE",
+              "name": "DQO R-061 / 14.0 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.795,
+              "longitude": -75.404,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DELAWARE_RIVER_TRACE",
+              "name": "Delaware River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.82,
+              "longitude": -75.29,
+              "fly_over": false
+            }
+          ],
+          "final": { "course_deg": 75.47, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "RIVER_09R",
+          "runway": "09R",
+          "clearance_name": "River Visual",
+          "entry_point_id": "DQO_R061_5_TRACE",
+          "sight_reference_point_id": "DELAWARE_RIVER_TRACE",
+          "legs": [
+            {
+              "id": "DQO_R061_5_TRACE",
+              "name": "DQO R-061 / 5.0 DME (chart-traced)",
+              "path_term": "CF",
+              "latitude": 39.72,
+              "longitude": -75.534,
+              "fly_over": true,
+              "course_deg": 61,
+              "reference": "DQO R-061 / 5.0 DME",
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DQO_R061_9_TRACE",
+              "name": "DQO R-061 / 9.0 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.753,
+              "longitude": -75.477,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DQO_R061_14_TRACE",
+              "name": "DQO R-061 / 14.0 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.795,
+              "longitude": -75.404,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "DELAWARE_RIVER_TRACE",
+              "name": "Delaware River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.82,
+              "longitude": -75.29,
+              "fly_over": false
+            }
+          ],
+          "final": { "course_deg": 75.47, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
