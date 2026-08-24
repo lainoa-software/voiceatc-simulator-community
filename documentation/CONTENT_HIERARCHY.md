@@ -42,6 +42,7 @@ Community publication does not require a simulator-channel promotion once the ge
 | `runway_configs.json` | Airport folder |
 | `constraints.json` | Airport folder |
 | `procedure_options.json` | Airport folder |
+| `visual_procedures.json` | Airport folder |
 | `mva.json` | Terminal-area folder |
 | `misc_drawings.json` | Terminal-area folder |
 | `sector_configs.json`, `sector_definitions.json`, `sector_influence.json` | Terminal-area folder as one bundle |

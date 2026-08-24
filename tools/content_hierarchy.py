@@ -12,7 +12,12 @@ from typing import Any, NamedTuple
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY_RELATIVE = "documentation/content_hierarchy.json"
 REGISTRY_PATH = ROOT / REGISTRY_RELATIVE
-AIRPORT_FILE_NAMES = {"runway_configs.json", "constraints.json", "procedure_options.json"}
+AIRPORT_FILE_NAMES = {
+    "runway_configs.json",
+    "constraints.json",
+    "procedure_options.json",
+    "visual_procedures.json",
+}
 TERMINAL_FILE_NAMES = {
     "mva.json",
     "misc_drawings.json",

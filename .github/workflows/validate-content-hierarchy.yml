@@ -42,5 +42,7 @@ jobs:
         run: python tools/constraints_manifest.py --validate-only
       - name: Validate procedure options files
         run: python tools/procedure_options_manifest.py --validate-only
+      - name: Validate visual procedure files
+        run: python tools/visual_procedures_manifest.py --validate-only
       - name: Validate player route files
         run: python tools/player_routes_manifest.py --validate-only

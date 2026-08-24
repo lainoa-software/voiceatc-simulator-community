@@ -13,6 +13,7 @@ merged pull request, one file type at a time.
 |---|---|
 | Add or fix an airport | [Airport](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Airport) → [Runway Configs](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Runway-Configs) |
 | Set which procedures spawn | [Procedure Options](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Procedure-Options) |
+| Add a charted visual approach | [Charted visual procedures](documentation/visual-procedures.md) |
 | Draw MVAs or radar geometry | [MVA](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/MVA), [Sector Definitions](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Sector-Definitions) |
 | Match a radar display | [Colours](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Colours), [Styles](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Styles) |
 | Check my work and submit it | [Validate and Submit](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Validate-and-Submit) |
@@ -50,8 +51,8 @@ tree: [the content hierarchy guide](documentation/CONTENT_HIERARCHY.md).
 4. Say where the data comes from. Automatic checks run first, then a maintainer
    reviews the data itself.
 
-`procedure_options.json` and `constraints.json` are indexed by byte hash. Prepare
-either file in this order: normalize the changed JSON with
+`procedure_options.json`, `constraints.json`, and `visual_procedures.json` are
+indexed by byte hash. Prepare either file in this order: normalize the changed JSON with
 `npx prettier --write <path>`, run the matching manifest tool with `--write`, run
 that tool again with `--validate-only`, then commit both the data file and the
 generated `.voiceatc/*_manifest.json`. For example:
@@ -65,6 +66,12 @@ python tools/procedure_options_manifest.py --validate-only
 Use `tools/constraints_manifest.py` for `constraints.json`. Do not reformat
 unrelated JSON just to satisfy review style; ordinary formatting is still
 normalised automatically after merge.
+
+For a named charted visual approach, use
+`tools/visual_procedures_manifest.py` and read the full source, licensing,
+schema, and review checklist in
+[`documentation/visual-procedures.md`](documentation/visual-procedures.md).
+The visual manifest is a direct JSON index; it does not create a release ZIP.
 
 A maintainer approval does not override a red required `validate` check. Both
 approval and a green required check are necessary before merge.

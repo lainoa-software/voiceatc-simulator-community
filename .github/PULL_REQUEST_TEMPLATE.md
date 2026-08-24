@@ -20,6 +20,9 @@ facility SOP, or published noise procedure. A link is ideal. "From memory" or
 - [ ] `python tools/content_hierarchy.py --validate-only` passes
 - [ ] Changed `procedure_options.json`? Ran Prettier on the changed file, then `python tools/procedure_options_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
 - [ ] Changed `constraints.json`? Ran Prettier on the changed file, then `python tools/constraints_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
+- [ ] Changed `visual_procedures.json`? Verified every leg against a current official chart, ran Prettier on the changed file, then `python tools/visual_procedures_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
+- [ ] Visual procedure source is factual operational data only — no chart raster, screenshot, copied artwork, invented geometry, missed-approach field, or `Z` marker
+- [ ] Visual procedure has one explicit entry and sight reference per variant, a current source/effective date, and a playable runway
 - [ ] New terminal area or airport? Its entry is in `documentation/content_hierarchy.json` (`--register <scope>` writes it)
 - [ ] Runway identifiers are zero-padded (`08L`, not `8L`) — unpadded ones silently match no runways
 - [ ] The required `validate` check is green — approval does not override a red required check

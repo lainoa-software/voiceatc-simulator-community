@@ -59,6 +59,8 @@ jobs:
         run: python tools/constraints_manifest.py --validate-only
       - name: Validate procedure options files
         run: python tools/procedure_options_manifest.py --validate-only
+      - name: Validate visual procedure files
+        run: python tools/visual_procedures_manifest.py --validate-only
       - name: Validate player route files
         run: python tools/player_routes_manifest.py --validate-only
       - name: Compute route lane cycles
@@ -308,6 +310,33 @@ jobs:
 
           procedure_options_changed = canonical_hash(current_options_manifest) != canonical_hash(generated_options_manifest)
 
+          visual_spec = importlib.util.spec_from_file_location(
+              "visual_procedures_manifest", Path("tools/visual_procedures_manifest.py")
+          )
+          if visual_spec is None or visual_spec.loader is None:
+              raise RuntimeError("unable to load tools/visual_procedures_manifest.py")
+          visual_module = importlib.util.module_from_spec(visual_spec)
+          visual_spec.loader.exec_module(visual_module)
+          generated_visual_manifest = visual_module.build_manifest(Path("."), published_at="")
+          visual_manifest_path = Path(".voiceatc/visual_procedures_manifest.json")
+          current_visual_manifest: object = {}
+          if visual_manifest_path.exists():
+              try:
+                  current_visual_manifest = json.loads(
+                      visual_manifest_path.read_text(encoding="utf-8")
+                  )
+              except Exception:
+                  current_visual_manifest = {}
+          current_visual_airports = (
+              current_visual_manifest.get("airports", {})
+              if isinstance(current_visual_manifest, dict)
+              else {}
+          )
+          visual_procedures_changed = (
+              not visual_manifest_path.is_file()
+              or current_visual_airports != generated_visual_manifest["airports"]
+          )
+
           # Player route status drift (deprecation flips, revalidation stamps) must
           # commit even when the overlay bytes are unchanged — the website badges
           # read the committed status file. The player manifest itself embeds the
@@ -325,7 +354,13 @@ jobs:
           stable_current_status.pop("generated_at", None)
           player_status_changed = canonical_hash(stable_current_status) != canonical_hash(generated_player_status)
 
-          changed = release_assets_changed or constraints_changed or procedure_options_changed or player_status_changed
+          changed = (
+              release_assets_changed
+              or constraints_changed
+              or procedure_options_changed
+              or visual_procedures_changed
+              or player_status_changed
+          )
           should_publish = release_assets_changed or os.environ.get("IS_MANUAL", "").strip() == "true"
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
@@ -333,6 +368,7 @@ jobs:
               handle.write(f"release_assets_changed={'true' if release_assets_changed else 'false'}\n")
               handle.write(f"constraints_changed={'true' if constraints_changed else 'false'}\n")
               handle.write(f"procedure_options_changed={'true' if procedure_options_changed else 'false'}\n")
+              handle.write(f"visual_procedures_changed={'true' if visual_procedures_changed else 'false'}\n")
               handle.write(f"player_status_changed={'true' if player_status_changed else 'false'}\n")
               handle.write(f"should_publish={'true' if should_publish else 'false'}\n")
               handle.write(f"airac={summary['airac']}\n")
@@ -363,6 +399,9 @@ jobs:
           echo "source_sha=${SOURCE_SHA}" >> "$GITHUB_OUTPUT"
           echo "latest_tag=latest" >> "$GITHUB_OUTPUT"
           echo "latest_title=Latest Daily Community Release" >> "$GITHUB_OUTPUT"
+      - name: Refresh visual procedure manifest
+        if: steps.meta.outputs.visual_procedures_changed == 'true'
+        run: python tools/visual_procedures_manifest.py --write
       - name: Stop when nothing changed
         if: steps.meta.outputs.should_publish != 'true'
         run: echo "No release-managed community artifacts changed."
@@ -615,11 +654,12 @@ jobs:
             .voiceatc/color_profiles_manifest.json
             .voiceatc/constraints_manifest.json
             .voiceatc/procedure_options_manifest.json
+            .voiceatc/visual_procedures_manifest.json
             .voiceatc/release_manifest.json
             .voiceatc/player_routes_manifest.json
             .voiceatc/player_routes_status.json
           )
-          if git diff --quiet -- "${MANIFESTS[@]}" && [[ -z "$(git status --porcelain -- .voiceatc/player_routes_manifest.json .voiceatc/player_routes_status.json)" ]]; then
+          if git diff --quiet -- "${MANIFESTS[@]}" && [[ -z "$(git status --porcelain -- "${MANIFESTS[@]}")" ]]; then
             exit 0
           fi
           # The main ruleset requires a pull request and GITHUB_TOKEN is not a
