@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "airport": "LCPH",
+  "procedures": [
+    {
+      "id": "LCPH_ESERI_RNAV_VISUAL_RWY29",
+      "name": "ESERI RNAV-to-Visual RWY 29",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Cyprus DCA AIS",
+        "chart_title": "ESERI RNAV TO VISUAL RWY 29",
+        "url": "https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement",
+        "effective_date": "2026-07-09",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Cyprus AMDT003/26 effective 09 JUL 2026; page edition 14 MAY 2026, embedded 02 OCT 2025. PHC02 chart center retained; PHC06 shares its coordinate."
+      },
+      "variants": [
+        {
+          "id": "LCPH_RWY29_ESERI",
+          "runway": "29",
+          "clearance_name": "ESERI RNAV-to-Visual RWY 29",
+          "entry_point_id": "ESERI",
+          "sight_reference_point_id": "PH962",
+          "legs": [
+            {
+              "id": "ESERI",
+              "name": "ESERI",
+              "path_term": "TF",
+              "latitude": 34.4819888889,
+              "longitude": 32.3854611111,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "PH968",
+              "name": "PH968",
+              "path_term": "TF",
+              "latitude": 34.5698527778,
+              "longitude": 32.5267027778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "PH963",
+              "name": "PH963",
+              "path_term": "TF",
+              "latitude": 34.6031777778,
+              "longitude": 32.5806805556,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 210,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "PH962",
+              "name": "PH962",
+              "path_term": "RF",
+              "latitude": 34.6604138889,
+              "longitude": 32.594125,
+              "fly_over": false,
+              "arc_center": {
+                "latitude": 34.6379194444,
+                "longitude": 32.5492055556
+              },
+              "arc_radius_nm": 2.6,
+              "turn_direction": "L",
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "PH960",
+              "name": "PH960",
+              "path_term": "TF",
+              "latitude": 34.6918583333,
+              "longitude": 32.5711527778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1300,
+                "status": "required",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 285,
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}
