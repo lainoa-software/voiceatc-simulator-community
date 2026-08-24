@@ -6,7 +6,7 @@ current operational authenticity, gameplay distinctiveness, geographic
 diversity, and transcription feasibility.
 
 The infrastructure pull request deliberately contains no route geometry.
-After it merges, contributors submit the list as 25 airport-level pull
+After it merges, contributors submit the list as 24 airport-level pull
 requests: procedures sharing an airport stay in one `visual_procedures.json`.
 Every row must be rechecked against the current official chart immediately
 before it is transcribed.
