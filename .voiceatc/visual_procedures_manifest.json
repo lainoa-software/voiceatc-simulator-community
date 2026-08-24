@@ -1,12 +1,87 @@
 {
   "airports": {
+    "KASE": {
+      "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_procedures.json",
+      "sha256": "b9372d51deae559f695207d6e19b8209a8e87d7b1c18115d8c64e953133aa750",
+      "size_bytes": 4072
+    },
+    "KBFI": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_procedures.json",
+      "sha256": "ae01d4ba1b7db8bd6c3e50e7b4b972a5ab6bfba080f6252d1e8bce061a70c582",
+      "size_bytes": 6175
+    },
+    "KBOS": {
+      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_procedures.json",
+      "sha256": "a7c3fed71775829224edbd832e26fd40bd35f696d1e12e99370b8375a11d1aa5",
+      "size_bytes": 2613
+    },
+    "KDCA": {
+      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_procedures.json",
+      "sha256": "f82c163c83255c3d09ae8e24904a09c339b11801bcb2668c1d395a9f9e14ec14",
+      "size_bytes": 9530
+    },
+    "KEWR": {
+      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/visual_procedures.json",
+      "sha256": "f006f9de8052ad7e0ccf214d1f97906b66d7a339f4f5168fe8857060f3f3d018",
+      "size_bytes": 4065
+    },
+    "KJFK": {
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
+      "sha256": "f8e950d2d8ed30c73ddec63eef4eed15c10cbb9355032ab3ce112c472615fede",
+      "size_bytes": 4848
+    },
+    "KLGA": {
+      "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_procedures.json",
+      "sha256": "1cab00708aab0fe361ee38176f634fa8fbcf13502e6581857c5c4d20d8822a86",
+      "size_bytes": 3667
+    },
+    "KLGB": {
+      "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_procedures.json",
+      "sha256": "b279ec2e4fa4f27a24fc88fe7d4301a2d74575a8ce5c4cf606b89359b7fec6fd",
+      "size_bytes": 4769
+    },
+    "KLSV": {
+      "repo_path": "K/KZLA/LAS_TMA/KLSV/visual_procedures.json",
+      "sha256": "034d36b234f05ecafd0cf1829cdd43284eb301813ebbfea3e4477bba91b85f27",
+      "size_bytes": 6206
+    },
+    "KPDX": {
+      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/visual_procedures.json",
+      "sha256": "1c2219aa42f08edbf8826aa789d38c9cb9c00048aea2dd9fe6dc1f75c26a989c",
+      "size_bytes": 7227
+    },
+    "KPHL": {
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/visual_procedures.json",
+      "sha256": "b147eb74acd0cce976034549bb54db3804d3430f046d3a30c742edf3e329375c",
+      "size_bytes": 4758
+    },
+    "KSAN": {
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/visual_procedures.json",
+      "sha256": "44f1f7dc31874c018adf22e2a4652584b5d3186f53dd764a3c4c76346feb4f3b",
+      "size_bytes": 4281
+    },
+    "KSEA": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/visual_procedures.json",
+      "sha256": "24b3d02d8599c859907ef80825800ec15db4e60284962e9ef6059d5484c6d4ee",
+      "size_bytes": 7254
+    },
+    "KSFO": {
+      "repo_path": "K/KZOA/SFO_TMA/KSFO/visual_procedures.json",
+      "sha256": "7e969c4128d27e8e65d32c71c9c373006deb620301f29292cfba892fd7ce7396",
+      "size_bytes": 9603
+    },
     "LCLK": {
       "repo_path": "L/LC/LCCC/LARNACA_TMA/LCLK/visual_procedures.json",
       "sha256": "5cf5209ec7db0a9c4556669876b53e4ad64f29e3626c8da7168d6dbbd3053e2c",
       "size_bytes": 3420
+    },
+    "TJSJ": {
+      "repo_path": "T/TJ/TJZS/SAN_JUAN_TMA/TJSJ/visual_procedures.json",
+      "sha256": "0310d1fd2f3f9e51eb7a7ff5d3965ce011260be0324d0076268fecdd2c9dae38",
+      "size_bytes": 2591
     }
   },
-  "published_at": "2026-08-24T15:24:14Z",
+  "published_at": "2026-08-24T15:51:41Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
