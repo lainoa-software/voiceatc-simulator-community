@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "airport": "KLSV",
+  "procedures": [
+    {
+      "id": "SIN_CITY_VISUAL_03LR",
+      "name": "Sin City Visual RWY 03L/R",
+      "aliases": ["sin city visual", "sin city"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "SIN CITY VISUAL RWY 03L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00227SINCITY_VIS3LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 4300,
+        "visibility": { "value": 6, "unit": "SM" },
+        "notes": "Amdt 3 10AUG23. Report the northwest Las Vegas city outline; follow LSV R-277 via HASIL/ONDAE, then the right turn to the 4 DME arc."
+      },
+      "variants": [
+        {
+          "id": "SIN_CITY_03L",
+          "runway": "03L",
+          "clearance_name": "Sin City Visual",
+          "entry_point_id": "HASIL_TRACE",
+          "sight_reference_point_id": "NW_CITY_OUTLINE_TRACE",
+          "legs": [
+            {
+              "id": "HASIL_TRACE",
+              "name": "HASIL (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.304332025,
+              "longitude": -115.267306619,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277 / 12 DME",
+              "altitude": {
+                "value_ft": 6500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 250,
+                "status": "recommended",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "NW_CITY_OUTLINE_TRACE",
+              "name": "Northwest Las Vegas city outline (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.2901751538,
+              "longitude": -115.2187207834,
+              "fly_over": false,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277"
+            },
+            {
+              "id": "ONDAE_TRACE",
+              "name": "ONDAE (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.276,
+              "longitude": -115.17,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277",
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ARC_JOIN_TRACE",
+              "name": "LSV TACAN 4 DME arc join (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.2493137566,
+              "longitude": -115.1153003108,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277 / 4 DME"
+            },
+            {
+              "id": "ARC_EXIT_TRACE",
+              "name": "LSV TACAN 4 DME arc exit/base (chart-traced)",
+              "path_term": "AF",
+              "latitude": 36.18,
+              "longitude": -115.08,
+              "fly_over": false,
+              "arc_center": {
+                "latitude": 36.2362,
+                "longitude": -115.0342555556
+              },
+              "arc_radius_nm": 4.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": { "course_deg": 41.28, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "SIN_CITY_03R",
+          "runway": "03R",
+          "clearance_name": "Sin City Visual",
+          "entry_point_id": "HASIL_TRACE",
+          "sight_reference_point_id": "NW_CITY_OUTLINE_TRACE",
+          "legs": [
+            {
+              "id": "HASIL_TRACE",
+              "name": "HASIL (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.304332025,
+              "longitude": -115.267306619,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277 / 12 DME",
+              "altitude": {
+                "value_ft": 6500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 250,
+                "status": "recommended",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "NW_CITY_OUTLINE_TRACE",
+              "name": "Northwest Las Vegas city outline (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.2901751538,
+              "longitude": -115.2187207834,
+              "fly_over": false,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277"
+            },
+            {
+              "id": "ONDAE_TRACE",
+              "name": "ONDAE (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.276,
+              "longitude": -115.17,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277",
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ARC_JOIN_TRACE",
+              "name": "LSV TACAN 4 DME arc join (chart-traced)",
+              "path_term": "CF",
+              "latitude": 36.2493137566,
+              "longitude": -115.1153003108,
+              "fly_over": true,
+              "course_deg": 277,
+              "reference": "LSV TACAN R-277 / 4 DME"
+            },
+            {
+              "id": "ARC_EXIT_TRACE",
+              "name": "LSV TACAN 4 DME arc exit/base (chart-traced)",
+              "path_term": "AF",
+              "latitude": 36.18,
+              "longitude": -115.08,
+              "fly_over": false,
+              "arc_center": {
+                "latitude": 36.2362,
+                "longitude": -115.0342555556
+              },
+              "arc_radius_nm": 4.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": { "course_deg": 41.28, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
