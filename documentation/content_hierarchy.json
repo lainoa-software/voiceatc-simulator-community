@@ -13,14 +13,13 @@
     }
   },
   "nationality_areas": {
-    "C": ["CY"],
     "E": ["EB", "ED", "EF", "EG", "EH", "EI", "EK", "EN", "EP", "ES"],
     "G": ["GC"],
     "K": [],
     "L": ["LC", "LE", "LF", "LG", "LI", "LL", "LO", "LP", "LS", "LT"],
     "O": ["OM"],
     "P": ["PA", "PG", "PH"],
-    "R": ["RC", "RJ", "RK"],
+    "R": ["RC", "RK"],
     "T": ["TJ"],
     "V": ["VH"]
   },
@@ -58,7 +57,6 @@
     "retention": "until_explicit_deprecation"
   },
   "operational_areas": {
-    "CZVR": { "authority": "navigraph_2607", "kind": "fir" },
     "EBBU": { "authority": "navigraph_2607", "kind": "fir" },
     "EDGG": { "authority": "navigraph_2607", "kind": "fir" },
     "EDMM": { "authority": "navigraph_2607", "kind": "fir" },
@@ -110,13 +108,11 @@
     "PAZA": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
     "PHZH": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
     "RCAA": { "authority": "navigraph_2607", "kind": "fir" },
-    "RJJJ": { "authority": "navigraph_2607", "kind": "fir" },
     "RKRR": { "authority": "navigraph_2607", "kind": "fir" },
     "TJZS": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
     "VHHK": { "authority": "navigraph_2607", "kind": "fir" }
   },
   "terminal_scopes": {
-    "C/CY/CZVR/VANCOUVER_TMA": ["CYVR"],
     "E/EB/EBBU/BRUSSELS_TMA": ["EBBR"],
     "E/ED/EDGG/DUSSELDORF_TMA": ["EDDL"],
     "E/ED/EDGG/EDDF_TMA": ["EDDF"],
@@ -245,8 +241,6 @@
     "P/PH/PHZH/MAUI_TMA": ["PHOG"],
     "P/PH/PHZH/PHNL_TMA": ["PHNL"],
     "R/RC/RCAA/TAIPEI_TMA": ["RCMQ", "RCSS", "RCTP"],
-    "R/RJ/RJJJ/KAGOSHIMA_TMA": ["RJFK"],
-    "R/RJ/RJJJ/TOKYO_TMA": ["RJTT"],
     "R/RK/RKRR/INCHEON_TMA": ["RKSI", "RKSS"],
     "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
     "V/VH/VHHK/HONGKONG_TMA": [],
