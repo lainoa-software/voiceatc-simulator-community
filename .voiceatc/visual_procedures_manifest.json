@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "PHNL": {
+      "repo_path": "P/PH/PHZH/PHNL_TMA/PHNL/visual_procedures.json",
+      "sha256": "dd72cc128b6b14c2555975173f9e8bec82f99fdda4455c1b3e108269447f3b89",
+      "size_bytes": 5656
+    }
+  },
+  "published_at": "2026-08-24T15:25:27Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
