@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "airport": "LLBG",
+  "procedures": [
+    {
+      "id": "LLBG_GAVRI_RNAV_VISUAL_RWY30",
+      "name": "GAVRI Visual RNAV RWY 30",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - GAVRI VISUAL RNAV RWY 30",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-2_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Israel eAIP AIRAC 08/26; chart native 02 NOV 2023. RNAV1; pilot request or ATC visual proposal; visual terrain reference at GAVRI."
+      },
+      "variants": [
+        {
+          "id": "LLBG_RWY30_GAVRI",
+          "runway": "30",
+          "clearance_name": "GAVRI Visual RWY 30",
+          "entry_point_id": "LIMKO",
+          "sight_reference_point_id": "GAVRI",
+          "legs": [
+            {
+              "id": "LIMKO",
+              "name": "LIMKO",
+              "path_term": "TF",
+              "latitude": 32.0633333333,
+              "longitude": 34.7716666667,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 220,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "REBDO",
+              "name": "REBDO",
+              "path_term": "TF",
+              "latitude": 31.9880555556,
+              "longitude": 34.8177777778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "value2_ft": 8000,
+                "status": "required",
+                "kind": "between"
+              }
+            },
+            {
+              "id": "GAVRI",
+              "name": "GAVRI",
+              "path_term": "TF",
+              "latitude": 31.8930833333,
+              "longitude": 34.9454444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "BG075",
+              "name": "BG075",
+              "path_term": "TF",
+              "latitude": 31.9170277778,
+              "longitude": 34.9970277778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2100,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "BG040",
+              "name": "BG040",
+              "path_term": "TF",
+              "latitude": 31.9610555556,
+              "longitude": 34.9689444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1700,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 296
+          }
+        }
+      ]
+    },
+    {
+      "id": "LLBG_NAMIM_RNAV_VISUAL_RWY21",
+      "name": "NAMIM Visual RNAV RWY 21",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - NAMIM VISUAL RNAV RWY 21",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_21NAMIM_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Israel eAIP AIRAC 08/26; chart native 15 MAY 2025. TADOV and GINTU entries prescribe RNAV1 via NAMIM and IBATI to RWY21."
+      },
+      "variants": [
+        {
+          "id": "LLBG_RWY21_NAMIM_TADOV",
+          "runway": "21",
+          "clearance_name": "NAMIM Visual RWY 21 from TADOV",
+          "entry_point_id": "TADOV",
+          "sight_reference_point_id": "NAMIM",
+          "legs": [
+            {
+              "id": "TADOV",
+              "name": "TADOV",
+              "path_term": "TF",
+              "latitude": 32.2541666667,
+              "longitude": 34.8,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "VATAT",
+              "name": "VATAT",
+              "path_term": "TF",
+              "latitude": 32.2166666667,
+              "longitude": 34.9369444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "NAMIM",
+              "name": "NAMIM",
+              "path_term": "TF",
+              "latitude": 32.1541666667,
+              "longitude": 34.9358333333,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "IBATI",
+              "name": "IBATI",
+              "path_term": "TF",
+              "latitude": 32.0708333333,
+              "longitude": 34.9341666667,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1300,
+                "status": "required",
+                "kind": "at"
+              },
+              "speed": {
+                "value_kt": 230,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 204
+          }
+        },
+        {
+          "id": "LLBG_RWY21_NAMIM_GINTU",
+          "runway": "21",
+          "clearance_name": "NAMIM Visual RWY 21 from GINTU",
+          "entry_point_id": "GINTU",
+          "sight_reference_point_id": "NAMIM",
+          "legs": [
+            {
+              "id": "GINTU",
+              "name": "GINTU",
+              "path_term": "TF",
+              "latitude": 32.0801111111,
+              "longitude": 35.1661666667,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 6000,
+                "value2_ft": 8000,
+                "status": "required",
+                "kind": "between"
+              }
+            },
+            {
+              "id": "RABIN",
+              "name": "RABIN",
+              "path_term": "TF",
+              "latitude": 32.1256111111,
+              "longitude": 35.1224722222,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "OFFIK",
+              "name": "OFFIK",
+              "path_term": "TF",
+              "latitude": 32.1920833333,
+              "longitude": 35.0133888889,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "VATAT",
+              "name": "VATAT",
+              "path_term": "TF",
+              "latitude": 32.2166666667,
+              "longitude": 34.9369444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 210,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "NAMIM",
+              "name": "NAMIM",
+              "path_term": "TF",
+              "latitude": 32.1541666667,
+              "longitude": 34.9358333333,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "IBATI",
+              "name": "IBATI",
+              "path_term": "TF",
+              "latitude": 32.0708333333,
+              "longitude": 34.9341666667,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1300,
+                "status": "required",
+                "kind": "at"
+              },
+              "speed": {
+                "value_kt": 230,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 204
+          }
+        }
+      ]
+    },
+    {
+      "id": "LLBG_ROMIE_RNAV_VISUAL_RWY30",
+      "name": "ROMIE Visual RNAV RWY 30",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - ROMIE VISUAL RNAV RWY 30",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-3_v1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Israel eAIP AIRAC 08/26; chart native 16 MAY 2024. Chart route is BG304-BG303-BG302-BG301-ROMIE-BG005; VFR limit near ROMIE/BG005 charted."
+      },
+      "variants": [
+        {
+          "id": "LLBG_RWY30_ROMIE",
+          "runway": "30",
+          "clearance_name": "ROMIE Visual RWY 30",
+          "entry_point_id": "BG304",
+          "sight_reference_point_id": "ROMIE",
+          "legs": [
+            {
+              "id": "BG304",
+              "name": "BG304",
+              "path_term": "TF",
+              "latitude": 32.1566666667,
+              "longitude": 34.7661111111,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 6000,
+                "value2_ft": 8000,
+                "status": "required",
+                "kind": "between"
+              }
+            },
+            {
+              "id": "BG303",
+              "name": "BG303",
+              "path_term": "TF",
+              "latitude": 32.1215833333,
+              "longitude": 34.855,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "BG302",
+              "name": "BG302",
+              "path_term": "TF",
+              "latitude": 32.0859722222,
+              "longitude": 34.945,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "BG301",
+              "name": "BG301",
+              "path_term": "TF",
+              "latitude": 32.05025,
+              "longitude": 35.035,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "ROMIE",
+              "name": "ROMIE",
+              "path_term": "TF",
+              "latitude": 31.9551388889,
+              "longitude": 35.0335277778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2400,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "BG005",
+              "name": "BG005",
+              "path_term": "TF",
+              "latitude": 31.9564722222,
+              "longitude": 34.9778333333,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 296
+          }
+        }
+      ]
+    }
+  ]
+}

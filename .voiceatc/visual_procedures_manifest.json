@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "LLBG": {
+      "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_procedures.json",
+      "sha256": "c4a1981e3f4ebc1f4cf9e6ec4d83dbfa4c7e49478616d1763298e1a1d3d6630b",
+      "size_bytes": 13011
+    }
+  },
+  "published_at": "2026-08-24T15:24:35Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
