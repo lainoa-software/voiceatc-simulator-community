@@ -127,3 +127,6 @@ nightly sync.
 The review lane may combine several procedures for one airport in one pull
 request. A pull request is reviewed and never auto-merged by the contribution
 workflow.
+
+The curated 0.6.2 authoring order and per-procedure evidence gate are in
+[`visual-procedures-launch-portfolio.md`](visual-procedures-launch-portfolio.md).
