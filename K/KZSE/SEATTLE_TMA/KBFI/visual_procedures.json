@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "airport": "KBFI",
+  "procedures": [
+    {
+      "id": "HARBOR_VISUAL_14R",
+      "name": "Harbor Visual RWY 14R",
+      "aliases": ["harbor visual", "harbor visual fourteen right"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "HARBOR VISUAL RWY 14R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00384HARBOR_VIS14R.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3100,
+        "visibility": { "value": 4, "unit": "SM" },
+        "notes": "Amdt 4 24MAY18. Three branches (NW Hood Canal/SEA R-310, North Lake Washington, South Vashon) converge via Elliott Bay/Harbor Island."
+      },
+      "variants": [
+        {
+          "id": "NORTHWEST_HOOD_CANAL",
+          "runway": "14R",
+          "clearance_name": "Harbor Visual",
+          "entry_point_id": "SUQUAMISH_TRACE",
+          "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "legs": [
+            {
+              "id": "SUQUAMISH_TRACE",
+              "name": "Suquamish (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.73,
+              "longitude": -122.55,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.66,
+              "longitude": -122.44,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.61,
+              "longitude": -122.4,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "HARBOR_ISLAND_TRACE",
+              "name": "Harbor Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.57,
+              "longitude": -122.35,
+              "fly_over": false
+            }
+          ],
+          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "NORTH_LAKE_WASHINGTON",
+          "runway": "14R",
+          "clearance_name": "Harbor Visual",
+          "entry_point_id": "NORTH_LAKE_TRACE",
+          "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "legs": [
+            {
+              "id": "NORTH_LAKE_TRACE",
+              "name": "North end of Lake Washington (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.75,
+              "longitude": -122.22,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.66,
+              "longitude": -122.44,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.61,
+              "longitude": -122.4,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "HARBOR_ISLAND_TRACE",
+              "name": "Harbor Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.57,
+              "longitude": -122.35,
+              "fly_over": false
+            }
+          ],
+          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "SOUTH_VASHON",
+          "runway": "14R",
+          "clearance_name": "Harbor Visual",
+          "entry_point_id": "VASHON_NORTH_TRACE",
+          "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "legs": [
+            {
+              "id": "VASHON_NORTH_TRACE",
+              "name": "North tip of Vashon Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.52,
+              "longitude": -122.51,
+              "fly_over": false
+            },
+            {
+              "id": "ALKI_POINT_TRACE",
+              "name": "Alki Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.58,
+              "longitude": -122.41,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.61,
+              "longitude": -122.4,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "HARBOR_ISLAND_TRACE",
+              "name": "Harbor Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.57,
+              "longitude": -122.35,
+              "fly_over": false
+            }
+          ],
+          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
