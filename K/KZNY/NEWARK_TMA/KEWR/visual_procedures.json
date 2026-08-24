@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "airport": "KEWR",
+  "procedures": [
+    {
+      "id": "STADIUM_VISUAL_29",
+      "name": "Stadium Visual RWY 29",
+      "aliases": ["stadium visual", "stadium visual twenty nine"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "STADIUM VISUAL RWY 29",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00285STADIUM_VIS29.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3500,
+        "visibility": { "value": 5, "unit": "SM" },
+        "notes": "Amdt 6A 22JAN26. HILOK and SLIMR are 1500-2000; procedure NA when RWY 29 REIL or PAPI is inoperative."
+      },
+      "variants": [
+        {
+          "id": "STADIUM_MAIN",
+          "runway": "29",
+          "clearance_name": "Stadium Visual",
+          "entry_point_id": "TEB",
+          "sight_reference_point_id": "CHUMR",
+          "legs": [
+            {
+              "id": "TEB",
+              "name": "Teterboro VOR/DME",
+              "path_term": "TF",
+              "latitude": 40.848725,
+              "longitude": -74.0622361111,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "GIMEE",
+              "name": "GIMEE / Meadowlands Sports Complex",
+              "path_term": "CF",
+              "latitude": 40.8131305556,
+              "longitude": -74.0879027778,
+              "fly_over": true,
+              "course_deg": 220,
+              "reference": "Meadowlands Sports Complex",
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "HILOK",
+              "name": "HILOK / Laurel Hill Park",
+              "path_term": "CF",
+              "latitude": 40.7619944444,
+              "longitude": -74.0838861111,
+              "fly_over": true,
+              "course_deg": 190,
+              "reference": "East side of river",
+              "altitude": {
+                "value_ft": 1500,
+                "value2_ft": 2000,
+                "status": "required",
+                "kind": "between"
+              }
+            },
+            {
+              "id": "SLIMR",
+              "name": "SLIMR / Lincoln Park",
+              "path_term": "CF",
+              "latitude": 40.7321083333,
+              "longitude": -74.0815194444,
+              "fly_over": true,
+              "course_deg": 190,
+              "reference": "East side of river",
+              "altitude": {
+                "value_ft": 1500,
+                "value2_ft": 2000,
+                "status": "required",
+                "kind": "between"
+              }
+            },
+            {
+              "id": "COPKO",
+              "name": "COPKO / East Side Railway Bridge",
+              "path_term": "CF",
+              "latitude": 40.69775,
+              "longitude": -74.1049583333,
+              "fly_over": true,
+              "course_deg": 220,
+              "reference": "East side railway bridge",
+              "altitude": {
+                "value_ft": 700,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CHUMR",
+              "name": "CHUMR / West Side Railway Bridge",
+              "path_term": "CF",
+              "latitude": 40.6992222222,
+              "longitude": -74.1263361111,
+              "fly_over": true,
+              "course_deg": 288,
+              "reference": "West side railway bridge",
+              "altitude": {
+                "value_ft": 500,
+                "status": "required",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

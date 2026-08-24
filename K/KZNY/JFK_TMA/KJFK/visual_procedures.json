@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "airport": "KJFK",
+  "procedures": [
+    {
+      "id": "PARKWAY_VISUAL_13LR",
+      "name": "Parkway Visual RWY 13L/R",
+      "aliases": [
+        "parkway visual",
+        "parkway visual thirteen left",
+        "parkway visual thirteen right"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "PARKWAY VISUAL RWY 13L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00610PARKWAY_VIS13LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 2500,
+        "visibility": { "value": 3, "unit": "SM" },
+        "notes": "Amdt 1 29MAY14. Route-side landmark cues and the runway-specific Canarsie/Twin Stacks descent sequence are retained."
+      },
+      "variants": [
+        {
+          "id": "PARKWAY_13L",
+          "runway": "13L",
+          "clearance_name": "Parkway Visual",
+          "entry_point_id": "ROCKAWAY_POINT_TRACE",
+          "sight_reference_point_id": "CANARSIE_TRACE",
+          "legs": [
+            {
+              "id": "ROCKAWAY_POINT_TRACE",
+              "name": "Rockaway Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.56,
+              "longitude": -73.92,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "KINGSBOROUGH_TRACE",
+              "name": "Remain east of Kingsborough Community College (route-side chart trace)",
+              "path_term": "TF",
+              "latitude": 40.59,
+              "longitude": -73.91,
+              "fly_over": false
+            },
+            {
+              "id": "CGAS_TRACE",
+              "name": "Brooklyn CGAS crossing (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.575,
+              "longitude": -73.89,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CANARSIE_TRACE",
+              "name": "Canarsie Pier (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.635,
+              "longitude": -73.88,
+              "fly_over": false
+            },
+            {
+              "id": "TWIN_STACKS_TRACE",
+              "name": "Twin Stacks abeam (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.669,
+              "longitude": -73.877,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 2.75 }
+        },
+        {
+          "id": "PARKWAY_13R",
+          "runway": "13R",
+          "clearance_name": "Parkway Visual",
+          "entry_point_id": "ROCKAWAY_POINT_TRACE",
+          "sight_reference_point_id": "TWIN_STACKS_TRACE",
+          "legs": [
+            {
+              "id": "ROCKAWAY_POINT_TRACE",
+              "name": "Rockaway Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.56,
+              "longitude": -73.92,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "KINGSBOROUGH_TRACE",
+              "name": "Remain east of Kingsborough Community College (route-side chart trace)",
+              "path_term": "TF",
+              "latitude": 40.59,
+              "longitude": -73.91,
+              "fly_over": false
+            },
+            {
+              "id": "CGAS_TRACE",
+              "name": "Brooklyn CGAS crossing (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.575,
+              "longitude": -73.89,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CANARSIE_TRACE",
+              "name": "Canarsie Pier (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.635,
+              "longitude": -73.88,
+              "fly_over": false
+            },
+            {
+              "id": "TWIN_STACKS_TRACE",
+              "name": "Twin Stacks abeam (chart-traced)",
+              "path_term": "TF",
+              "latitude": 40.669,
+              "longitude": -73.877,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

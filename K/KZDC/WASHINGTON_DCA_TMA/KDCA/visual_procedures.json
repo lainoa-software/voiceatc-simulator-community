@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "airport": "KDCA",
+  "procedures": [
+    {
+      "id": "MOUNT_VERNON_VISUAL_01",
+      "name": "Mount Vernon Visual RWY 01",
+      "aliases": ["mount vernon visual", "mount vernon"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "MOUNT VERNON VISUAL RWY 01",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00443MOUNTVERNON_VIS1.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3000,
+        "visibility": { "value": 4, "unit": "SM" },
+        "notes": "Amdt 4A 14MAY26. Avoid P-56; R-185 uses Mount Vernon abeam/on-river, while ILS/LOC follows the river north after BADDN."
+      },
+      "variants": [
+        {
+          "id": "DCA_R185_ENTRY",
+          "runway": "01",
+          "clearance_name": "Mount Vernon Visual",
+          "entry_point_id": "KATRN",
+          "sight_reference_point_id": "MOUNT_VERNON_ABEAM_TRACE",
+          "legs": [
+            {
+              "id": "KATRN",
+              "name": "KATRN (I-DCA 10.7 DME)",
+              "path_term": "CF",
+              "latitude": 38.6816388889,
+              "longitude": -77.0206583333,
+              "fly_over": true,
+              "course_deg": 5,
+              "reference": "DCA R-185 inbound",
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "MOUNT_VERNON_ABEAM_TRACE",
+              "name": "Mount Vernon abeam / Potomac River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.721,
+              "longitude": -77.06,
+              "fly_over": false
+            },
+            {
+              "id": "BADDN",
+              "name": "BADDN (I-DCA 5.9 DME)",
+              "path_term": "TF",
+              "latitude": 38.7614027778,
+              "longitude": -77.0286722222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1600,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "ILS_LOC_59_ENTRY",
+          "runway": "01",
+          "clearance_name": "Mount Vernon Visual",
+          "entry_point_id": "BADDN",
+          "sight_reference_point_id": "POTOMAC_RIVER_NORTH_TRACE",
+          "legs": [
+            {
+              "id": "BADDN",
+              "name": "I-DCA 5.9 DME",
+              "path_term": "TF",
+              "latitude": 38.7614027778,
+              "longitude": -77.0286722222,
+              "fly_over": true
+            },
+            {
+              "id": "POTOMAC_RIVER_NORTH_TRACE",
+              "name": "Potomac River north of BADDN (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.82,
+              "longitude": -77.055,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    },
+    {
+      "id": "RIVER_VISUAL_19",
+      "name": "River Visual RWY 19",
+      "aliases": ["river visual", "river visual nineteen"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "RIVER VISUAL RWY 19",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00443RIVER_VIS19.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3500,
+        "visibility": { "value": 3, "unit": "SM" },
+        "notes": "Amdt 6 11JUL24. Clearance does not authorize P-56 penetration; river/bridge coordinates are chart-traced."
+      },
+      "variants": [
+        {
+          "id": "DIRECT_RIVER",
+          "runway": "19",
+          "clearance_name": "River Visual",
+          "entry_point_id": "DARIC",
+          "sight_reference_point_id": "ROCHAMBEAU_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "DARIC",
+              "name": "DARIC",
+              "path_term": "TF",
+              "latitude": 38.9650138889,
+              "longitude": -77.1531888889,
+              "fly_over": false
+            },
+            {
+              "id": "CHAIN_BRIDGE_TRACE",
+              "name": "Chain Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.932,
+              "longitude": -77.101,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1800,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "KEY_BRIDGE_TRACE",
+              "name": "Key Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.905,
+              "longitude": -77.072,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ROOSEVELT_MEMORIAL_BRIDGES_TRACE",
+              "name": "Roosevelt / Memorial Bridges (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.895,
+              "longitude": -77.055,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ROCHAMBEAU_BRIDGE_TRACE",
+              "name": "Rochambeau Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.875,
+              "longitude": -77.052,
+              "fly_over": true
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "RNAV_GPS_Y_RORRK",
+          "runway": "19",
+          "clearance_name": "River Visual",
+          "entry_point_id": "RORRK",
+          "sight_reference_point_id": "ROCHAMBEAU_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "RORRK",
+              "name": "RORRK",
+              "path_term": "TF",
+              "latitude": 38.9098472222,
+              "longitude": -77.0988944444,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "KEY_BRIDGE_TRACE",
+              "name": "Key Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.905,
+              "longitude": -77.072,
+              "fly_over": true
+            },
+            {
+              "id": "ROOSEVELT_MEMORIAL_BRIDGES_TRACE",
+              "name": "Roosevelt / Memorial Bridges (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.895,
+              "longitude": -77.055,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ROCHAMBEAU_BRIDGE_TRACE",
+              "name": "Rochambeau Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.875,
+              "longitude": -77.052,
+              "fly_over": true
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "RNAV_RNP_Z_GREYZ",
+          "runway": "19",
+          "clearance_name": "River Visual",
+          "entry_point_id": "GREYZ",
+          "sight_reference_point_id": "ROCHAMBEAU_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "GREYZ",
+              "name": "GREYZ",
+              "path_term": "TF",
+              "latitude": 38.9182,
+              "longitude": -77.1084055556,
+              "fly_over": true
+            },
+            {
+              "id": "RORRK",
+              "name": "RORRK",
+              "path_term": "TF",
+              "latitude": 38.9098472222,
+              "longitude": -77.0988944444,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "KEY_BRIDGE_TRACE",
+              "name": "Key Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.905,
+              "longitude": -77.072,
+              "fly_over": true
+            },
+            {
+              "id": "ROOSEVELT_MEMORIAL_BRIDGES_TRACE",
+              "name": "Roosevelt / Memorial Bridges (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.895,
+              "longitude": -77.055,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ROCHAMBEAU_BRIDGE_TRACE",
+              "name": "Rochambeau Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 38.875,
+              "longitude": -77.052,
+              "fly_over": true
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
