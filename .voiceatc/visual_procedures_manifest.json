@@ -1,9 +1,19 @@
 {
   "airports": {
+    "KJFK": {
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
+      "sha256": "f8e950d2d8ed30c73ddec63eef4eed15c10cbb9355032ab3ce112c472615fede",
+      "size_bytes": 4848
+    },
     "KLSV": {
       "repo_path": "K/KZLA/LAS_TMA/KLSV/visual_procedures.json",
       "sha256": "034d36b234f05ecafd0cf1829cdd43284eb301813ebbfea3e4477bba91b85f27",
       "size_bytes": 6206
+    },
+    "KSEA": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/visual_procedures.json",
+      "sha256": "24b3d02d8599c859907ef80825800ec15db4e60284962e9ef6059d5484c6d4ee",
+      "size_bytes": 7254
     },
     "TJSJ": {
       "repo_path": "T/TJ/TJZS/SAN_JUAN_TMA/TJSJ/visual_procedures.json",
@@ -11,7 +21,7 @@
       "size_bytes": 2591
     }
   },
-  "published_at": "2026-08-24T15:34:46Z",
+  "published_at": "2026-08-24T15:42:00Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
