@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KPHL": {
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/visual_procedures.json",
+      "sha256": "b147eb74acd0cce976034549bb54db3804d3430f046d3a30c742edf3e329375c",
+      "size_bytes": 4758
+    }
+  },
+  "published_at": "2026-08-24T15:23:16Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
