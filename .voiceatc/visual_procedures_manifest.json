@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KEWR": {
+      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/visual_procedures.json",
+      "sha256": "f006f9de8052ad7e0ccf214d1f97906b66d7a339f4f5168fe8857060f3f3d018",
+      "size_bytes": 4065
+    }
+  },
+  "published_at": "2026-08-24T15:22:17Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
