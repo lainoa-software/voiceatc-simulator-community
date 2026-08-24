@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KJFK": {
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
+      "sha256": "f8e950d2d8ed30c73ddec63eef4eed15c10cbb9355032ab3ce112c472615fede",
+      "size_bytes": 4848
+    }
+  },
+  "published_at": "2026-08-24T15:22:25Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
