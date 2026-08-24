@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "airport": "LLER",
+  "procedures": [
+    {
+      "id": "LLER_ADIVI_RNAV_VISUAL_RWY01",
+      "name": "ADIVI RNAV Visual RWY 01",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLER - ADIVI RNAV VISUAL RWY 01",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLER_VAC-01-1_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Israel eAIP AIRAC 08/26; chart native 15 MAY 2025. RNAV1/Prior Authorization; visual reference is ADIVI."
+      },
+      "variants": [
+        {
+          "id": "LLER_RWY01_ADIVI",
+          "runway": "01",
+          "clearance_name": "ADIVI Visual RWY 01",
+          "entry_point_id": "ESHEL",
+          "sight_reference_point_id": "ADIVI",
+          "legs": [
+            {
+              "id": "ESHEL",
+              "name": "ESHEL",
+              "path_term": "TF",
+              "latitude": 29.8222222222,
+              "longitude": 35.0177777778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 220,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "DUBIT",
+              "name": "DUBIT",
+              "path_term": "TF",
+              "latitude": 29.7511111111,
+              "longitude": 34.9769444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "ADIVI",
+              "name": "ADIVI",
+              "path_term": "TF",
+              "latitude": 29.7180277778,
+              "longitude": 34.9658888889,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4600,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "LIRAZ",
+              "name": "LIRAZ",
+              "path_term": "TF",
+              "latitude": 29.6397222222,
+              "longitude": 34.9394444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3200,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 160,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "ELDAD",
+              "name": "ELDAD",
+              "path_term": "TF",
+              "latitude": 29.6302777778,
+              "longitude": 34.9869444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1900,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 160,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": "LLER_NURIT_RNAV_VISUAL_RWY19",
+      "name": "NURIT RNAV Visual RWY 19",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLER - NURIT RNAV VISUAL RWY 19",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLER_VAC-19-1_V2_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current Israel eAIP AIRAC 08/26; chart native 06 AUG 2026. RNAV1; ER015 coordinate transcribed from chart, absent local 2607 navdata."
+      },
+      "variants": [
+        {
+          "id": "LLER_RWY19_NURIT",
+          "runway": "19",
+          "clearance_name": "NURIT Visual RWY 19",
+          "entry_point_id": "NURIT",
+          "sight_reference_point_id": "NURIT",
+          "legs": [
+            {
+              "id": "NURIT",
+              "name": "NURIT",
+              "path_term": "TF",
+              "latitude": 30.0694444444,
+              "longitude": 35.0658333333,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 5000,
+                "value2_ft": 6000,
+                "status": "required",
+                "kind": "between"
+              },
+              "speed": {
+                "value_kt": 220,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "ER015",
+              "name": "ER015",
+              "path_term": "TF",
+              "latitude": 30.0177777778,
+              "longitude": 35.0618333333,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "ER012",
+              "name": "ER012",
+              "path_term": "TF",
+              "latitude": 29.9411666667,
+              "longitude": 35.0528611111,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 3500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "ER007",
+              "name": "ER007",
+              "path_term": "TF",
+              "latitude": 29.8576666667,
+              "longitude": 35.0444444444,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            },
+            {
+              "id": "YANIV",
+              "name": "YANIV",
+              "path_term": "TF",
+              "latitude": 29.8236111111,
+              "longitude": 35.0411111111,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1900,
+                "status": "required",
+                "kind": "at_or_above"
+              },
+              "speed": {
+                "value_kt": 185,
+                "status": "required",
+                "kind": "at_or_below"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 189
+          }
+        }
+      ]
+    }
+  ]
+}

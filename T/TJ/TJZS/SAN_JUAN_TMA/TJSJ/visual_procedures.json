@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "airport": "TJSJ",
+  "procedures": [
+    {
+      "id": "BRIDGE_VISUAL_10",
+      "name": "Bridge Visual RWY 10",
+      "aliases": ["bridge visual", "bridge visual ten"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "BRIDGE VISUAL RWY 10",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00784BRIDGE_VIS10.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 2500,
+        "visibility": { "value": 5, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Daylight only; not jets or four-engine props. Base east of Moscoso Bridge. Chart not to scale; route points are traces."
+      },
+      "variants": [
+        {
+          "id": "BRIDGE_MAIN",
+          "runway": "10",
+          "clearance_name": "Bridge Visual",
+          "entry_point_id": "CANOVANAS_TRACE",
+          "sight_reference_point_id": "BASE_EAST_MOSCOSO_TRACE",
+          "legs": [
+            {
+              "id": "CANOVANAS_TRACE",
+              "name": "Canovanas / Highway 3 (chart-traced)",
+              "path_term": "TF",
+              "latitude": 18.385,
+              "longitude": -65.9,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "PLAZA_CAROLINA_TRACE",
+              "name": "Plaza Carolina Mall (chart-traced)",
+              "path_term": "CF",
+              "latitude": 18.39328,
+              "longitude": -65.97517,
+              "fly_over": false,
+              "course_deg": 280,
+              "reference": "Highway 3"
+            },
+            {
+              "id": "BASE_EAST_MOSCOSO_TRACE",
+              "name": "Base east of Moscoso Bridge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 18.407,
+              "longitude": -66.02,
+              "fly_over": false
+            },
+            {
+              "id": "FINAL_INTERCEPT_TRACE",
+              "name": "Runway 10 final intercept (chart-traced)",
+              "path_term": "CF",
+              "latitude": 18.4332,
+              "longitude": -66.02,
+              "fly_over": false,
+              "course_deg": 10,
+              "reference": "East of Moscoso Bridge"
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
