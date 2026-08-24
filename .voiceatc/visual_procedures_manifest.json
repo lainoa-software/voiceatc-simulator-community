@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "PANC": {
+      "repo_path": "P/PA/PAZA/ANCHORAGE_TMA/PANC/visual_procedures.json",
+      "sha256": "c46a76a4fc8d214971cf5f9d75f835aafca449ddbfd573b66bebab834116b83d",
+      "size_bytes": 6299
+    }
+  },
+  "published_at": "2026-08-24T15:25:20Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

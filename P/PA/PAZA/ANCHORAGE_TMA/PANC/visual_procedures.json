@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "airport": "PANC",
+  "procedures": [
+    {
+      "id": "HIGHWAY_VISUAL_25R",
+      "name": "Highway Visual RWY 25R",
+      "aliases": ["highway visual", "highway visual twenty five right"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "HIGHWAY VISUAL RWY 25R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3000,
+        "visibility": { "value": 3, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Amdt 1 09FEB12. AK cycle 09JUL-03SEP; UHEPU/XIBLY highway gates and TED 3 DME arc are navdata/chart traced."
+      },
+      "variants": [
+        {
+          "id": "LITTLE_SUSITNA_ENTRY",
+          "runway": "25R",
+          "clearance_name": "Highway Visual",
+          "entry_point_id": "OSPUF",
+          "sight_reference_point_id": "XIBLY",
+          "legs": [
+            {
+              "id": "OSPUF",
+              "name": "Mouth of Little Susitna River / OSPUF",
+              "path_term": "TF",
+              "latitude": 61.2517638889,
+              "longitude": -150.2956138889,
+              "fly_over": true
+            },
+            {
+              "id": "IFHIX",
+              "name": "IFHIX",
+              "path_term": "TF",
+              "latitude": 61.125,
+              "longitude": -150.2333333333,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "EFYEZ",
+              "name": "Shoreline / EFYEZ",
+              "path_term": "TF",
+              "latitude": 61.0936111111,
+              "longitude": -149.8797222222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2600,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "UHEPU",
+              "name": "O'Malley Road overpass / UHEPU",
+              "path_term": "TF",
+              "latitude": 61.1227777778,
+              "longitude": -149.8566666667,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "XIBLY",
+              "name": "Dimond Boulevard overpass / XIBLY",
+              "path_term": "TF",
+              "latitude": 61.1447222222,
+              "longitude": -149.8563888889,
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_JOIN_TRACE",
+              "name": "TED 3 DME arc join (chart-traced)",
+              "path_term": "TF",
+              "latitude": 61.1715344903,
+              "longitude": -149.8567360469,
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_EXIT_TRACE",
+              "name": "TED 3 DME arc final exit (chart-traced)",
+              "path_term": "AF",
+              "latitude": 61.2016316379,
+              "longitude": -149.8836336855,
+              "fly_over": false,
+              "arc_center": {
+                "latitude": 61.1678666667,
+                "longitude": -149.9601444444
+              },
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": { "course_deg": 269.93, "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "POINT_POSSESSION_ENTRY",
+          "runway": "25R",
+          "clearance_name": "Highway Visual",
+          "entry_point_id": "MOPMY",
+          "sight_reference_point_id": "XIBLY",
+          "legs": [
+            {
+              "id": "MOPMY",
+              "name": "Point Possession / MOPMY",
+              "path_term": "TF",
+              "latitude": 61.0333333333,
+              "longitude": -150.3669444444,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "EFYEZ",
+              "name": "Shoreline / EFYEZ",
+              "path_term": "TF",
+              "latitude": 61.0936111111,
+              "longitude": -149.8797222222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2600,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "UHEPU",
+              "name": "O'Malley Road overpass / UHEPU",
+              "path_term": "TF",
+              "latitude": 61.1227777778,
+              "longitude": -149.8566666667,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "XIBLY",
+              "name": "Dimond Boulevard overpass / XIBLY",
+              "path_term": "TF",
+              "latitude": 61.1447222222,
+              "longitude": -149.8563888889,
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_JOIN_TRACE",
+              "name": "TED 3 DME arc join (chart-traced)",
+              "path_term": "TF",
+              "latitude": 61.1715344903,
+              "longitude": -149.8567360469,
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_EXIT_TRACE",
+              "name": "TED 3 DME arc final exit (chart-traced)",
+              "path_term": "AF",
+              "latitude": 61.2016316379,
+              "longitude": -149.8836336855,
+              "fly_over": false,
+              "arc_center": {
+                "latitude": 61.1678666667,
+                "longitude": -149.9601444444
+              },
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": { "course_deg": 269.93, "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
