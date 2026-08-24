@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "LCLK": {
+      "repo_path": "L/LC/LCCC/LARNACA_TMA/LCLK/visual_procedures.json",
+      "sha256": "5cf5209ec7db0a9c4556669876b53e4ad64f29e3626c8da7168d6dbbd3053e2c",
+      "size_bytes": 3420
+    }
+  },
+  "published_at": "2026-08-24T15:24:14Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
