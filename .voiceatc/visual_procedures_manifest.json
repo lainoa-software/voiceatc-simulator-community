@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "LLER": {
+      "repo_path": "L/LL/LLLL/EILAT_TMA/LLER/visual_procedures.json",
+      "sha256": "7e789d666b9a68a9ace5953a5dd3f240656c609d827096164f4c7708572d8b0c",
+      "size_bytes": 7271
+    }
+  },
+  "published_at": "2026-08-24T15:24:42Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
