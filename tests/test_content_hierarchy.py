@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -7,6 +8,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = REPO_ROOT / "tools" / "content_hierarchy.py"
+LAUNCH_PORTFOLIO_PATH = REPO_ROOT / "documentation" / "visual-procedures-launch-portfolio.md"
 SPEC = importlib.util.spec_from_file_location("content_hierarchy", MODULE_PATH)
 MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
@@ -221,6 +223,17 @@ class ContentHierarchyTests(unittest.TestCase):
         self.write_json("K/colors.json", {"bg_color": "000000"})
         self.write_json("K/KA/colors.json", {"bg_color": "000000"})
         self.assertTrue(any("release-only compatibility alias must not exist" in error for error in self.errors()))
+
+
+class LaunchPortfolioHierarchyTests(unittest.TestCase):
+    def test_every_visual_launch_airport_has_a_review_target(self) -> None:
+        portfolio = LAUNCH_PORTFOLIO_PATH.read_text(encoding="utf-8")
+        airport_rows = re.findall(r"^\|\s*\d+\s*\|\s*([A-Z0-9]{4})\s*\|", portfolio, flags=re.MULTILINE)
+        registry = MODULE.load_registry(REPO_ROOT / MODULE.REGISTRY_RELATIVE)
+        airport_scopes = MODULE._airport_scope_map(registry)
+
+        self.assertEqual(30, len(airport_rows))
+        self.assertEqual([], sorted(set(airport_rows) - set(airport_scopes)))
 
 
 if __name__ == "__main__":
