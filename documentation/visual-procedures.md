@@ -49,7 +49,9 @@ an `id`, display `name`, `path_term` (`TF`, `CF`, `RF`, or `AF`), latitude,
 longitude, and `fly_over`. `CF` legs require `course_deg`; `RF` and `AF` legs
 require `arc_center`, `arc_radius_nm`, and `turn_direction`. Optional altitude
 and speed constraints use `status: "required"` or `"recommended"` and are
-checked by the simulator accordingly.
+checked by the simulator accordingly. A published altitude window uses
+`kind: "between"`, `value_ft` for the lower bound, and `value2_ft` for the
+upper bound; do not discard either mandatory limit.
 
 An optional `final` object may provide `course_deg` and `glidepath_deg`. Do not
 write a runway threshold, missed approach, `approach_visual_segment`, contact

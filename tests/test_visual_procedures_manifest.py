@@ -180,6 +180,16 @@ class VisualProceduresManifestTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "arc start"):
             MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
 
+    def test_accepts_altitude_windows_and_rejects_reversed_bounds(self) -> None:
+        payload = valid_payload()
+        altitude = payload["procedures"][0]["variants"][0]["legs"][0]["altitude"]
+        altitude.update({"kind": "between", "value_ft": 1500, "value2_ft": 2000})
+        MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
+        altitude["value2_ft"] = 1000
+        with self.assertRaisesRegex(ValueError, "must exceed"):
+            MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
     def test_requires_source_provenance(self) -> None:
         payload = valid_payload()
         del payload["procedures"][0]["source"]["url"]

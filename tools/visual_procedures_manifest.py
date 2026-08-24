@@ -49,7 +49,7 @@ LEG_KEYS = {
     "reference", "arc_center", "arc_radius_nm", "turn_direction", "altitude", "speed",
 }
 POINT_KEYS = {"latitude", "longitude"}
-CONSTRAINT_KEYS = {"value_ft", "value_kt", "status", "kind"}
+CONSTRAINT_KEYS = {"value_ft", "value2_ft", "value_kt", "status", "kind"}
 FINAL_KEYS = {"course_deg", "glidepath_deg"}
 MANIFEST_KEYS = {"schema_version", "repo", "airports", "published_at"}
 MANIFEST_ENTRY_KEYS = {"repo_path", "sha256", "size_bytes"}
@@ -151,11 +151,29 @@ def _validate_constraint(value: object, value_key: str, where: str, path: Path) 
         return
     constraint = _object(value, where, path)
     _strict_keys(constraint, CONSTRAINT_KEYS, where, path)
-    _number(constraint.get(value_key), f"{where}.{value_key}", path, 0.0, 100000.0)
+    first_value = _number(
+        constraint.get(value_key), f"{where}.{value_key}", path, 0.0, 100000.0
+    )
     if constraint.get("status") not in {"required", "recommended"}:
         raise ValueError(f"{path}: {where}.status must be required or recommended")
-    if constraint.get("kind") not in {"at", "at_or_above", "at_or_below"}:
+    kind = constraint.get("kind")
+    allowed_kinds = {"at", "at_or_above", "at_or_below"}
+    if value_key == "value_ft":
+        allowed_kinds.add("between")
+    if kind not in allowed_kinds:
         raise ValueError(f"{path}: {where}.kind is invalid")
+    if kind == "between":
+        second_value = _number(
+            constraint.get("value2_ft"), f"{where}.value2_ft", path, 0.0, 100000.0
+        )
+        if second_value <= first_value:
+            raise ValueError(f"{path}: {where}.value2_ft must exceed value_ft")
+    elif "value2_ft" in constraint:
+        raise ValueError(f"{path}: {where}.value2_ft is only valid for an altitude window")
+    if value_key == "value_kt" and "value_ft" in constraint:
+        raise ValueError(f"{path}: {where}.value_ft is invalid for a speed constraint")
+    if value_key == "value_ft" and "value_kt" in constraint:
+        raise ValueError(f"{path}: {where}.value_kt is invalid for an altitude constraint")
 
 
 def _validate_source(value: object, where: str, path: Path) -> None:
