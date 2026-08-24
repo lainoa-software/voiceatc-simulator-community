@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "airport": "KPDX",
+  "procedures": [
+    {
+      "id": "COLUMBIA_VISUAL_10LR",
+      "name": "Columbia Visual RWY 10L/R",
+      "aliases": [
+        "columbia visual",
+        "columbia visual ten left",
+        "columbia visual ten right"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3500,
+        "visibility": { "value": 5, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Amdt 3 02MAY13. CNFLU is navdata-backed; Sauvie/Scappoose/Columbia River and bridge geometry are chart-traced."
+      },
+      "variants": [
+        {
+          "id": "SAUVIE_10L",
+          "runway": "10L",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SAUVIE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "SAUVIE_TRACE",
+              "name": "Sauvie Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.67,
+              "longitude": -122.82,
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "path_term": "TF",
+              "latitude": 45.6583333333,
+              "longitude": -122.7725,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.61,
+              "longitude": -122.68,
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.6,
+              "longitude": -122.67,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1400,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "SAUVIE_10R",
+          "runway": "10R",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SAUVIE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "SAUVIE_TRACE",
+              "name": "Sauvie Island (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.67,
+              "longitude": -122.82,
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "path_term": "TF",
+              "latitude": 45.6583333333,
+              "longitude": -122.7725,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.61,
+              "longitude": -122.68,
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.6,
+              "longitude": -122.67,
+              "fly_over": true
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "SCAPPOOSE_10L",
+          "runway": "10L",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SCAPPOOSE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "SCAPPOOSE_TRACE",
+              "name": "Scappoose (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.76,
+              "longitude": -122.88,
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "path_term": "TF",
+              "latitude": 45.6583333333,
+              "longitude": -122.7725,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.61,
+              "longitude": -122.68,
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced; RWY 10L cue)",
+              "path_term": "TF",
+              "latitude": 45.6,
+              "longitude": -122.67,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1400,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "SCAPPOOSE_10R",
+          "runway": "10R",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SCAPPOOSE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "legs": [
+            {
+              "id": "SCAPPOOSE_TRACE",
+              "name": "Scappoose (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.76,
+              "longitude": -122.88,
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "path_term": "TF",
+              "latitude": 45.6583333333,
+              "longitude": -122.7725,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.61,
+              "longitude": -122.68,
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "path_term": "TF",
+              "latitude": 45.6,
+              "longitude": -122.67,
+              "fly_over": true
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
