@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "airport": "KSFO",
+  "procedures": [
+    {
+      "id": "QUIET_BRIDGE_VISUAL_28R",
+      "name": "Quiet Bridge Visual RWY 28R",
+      "aliases": ["quiet bridge visual", "quiet bridge"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "QUIET BRIDGE VISUAL RWY 28R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375QUIETBRIDGE_VIS28R.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 2500,
+        "visibility": { "value": 5, "unit": "SM" },
+        "notes": "Orig 09JUL26. Eastern quadrant alternate is 1000/3 with 5 SM; parallel 28L visual approaches may be in progress."
+      },
+      "variants": [
+        {
+          "id": "SOUTH_ENTRY",
+          "runway": "28R",
+          "clearance_name": "Quiet Bridge Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "SAPPP_TRACE",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "path_term": "TF",
+              "latitude": 37.3749027778,
+              "longitude": -122.11875,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "path_term": "TF",
+              "latitude": 37.4507111111,
+              "longitude": -122.1447472222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "JANYY",
+              "name": "JANYY / San Mateo Bridge",
+              "path_term": "TF",
+              "latitude": 37.5568166667,
+              "longitude": -122.1795555556,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "RAACL_TRACE",
+              "name": "RAACL (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.599,
+              "longitude": -122.275,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SHLTN_TRACE",
+              "name": "SHLTN (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.606,
+              "longitude": -122.325,
+              "fly_over": true
+            },
+            {
+              "id": "SAPPP_TRACE",
+              "name": "SAPPP (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.61,
+              "longitude": -122.35,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "EAST_ENTRY",
+          "runway": "28R",
+          "clearance_name": "Quiet Bridge Visual",
+          "entry_point_id": "ARCHI",
+          "sight_reference_point_id": "SAPPP_TRACE",
+          "legs": [
+            {
+              "id": "ARCHI",
+              "name": "ARCHI",
+              "path_term": "TF",
+              "latitude": 37.4907972222,
+              "longitude": -121.8755416667,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 7000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "TRBOW_TRACE",
+              "name": "TRBOW (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.53,
+              "longitude": -121.97,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "GAROW",
+              "name": "GAROW / Salt Ponds",
+              "path_term": "TF",
+              "latitude": 37.5253611111,
+              "longitude": -122.0825083333,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "JANYY",
+              "name": "JANYY / San Mateo Bridge",
+              "path_term": "TF",
+              "latitude": 37.5568166667,
+              "longitude": -122.1795555556,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "RAACL_TRACE",
+              "name": "RAACL (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.599,
+              "longitude": -122.275,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 1800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SHLTN_TRACE",
+              "name": "SHLTN (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.606,
+              "longitude": -122.325,
+              "fly_over": true
+            },
+            {
+              "id": "SAPPP_TRACE",
+              "name": "SAPPP (chart-traced)",
+              "path_term": "TF",
+              "latitude": 37.61,
+              "longitude": -122.35,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    },
+    {
+      "id": "TIPP_TOE_VISUAL_28LR",
+      "name": "Tipp Toe Visual RWY 28L/R",
+      "aliases": ["tipp toe visual", "tipp toe"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 2500,
+        "visibility": { "value": 5, "unit": "SM" },
+        "notes": "Amdt 3 24MAR22. Eastern quadrant alternate and San Mateo AWOS conditions are chart facts; go-around headings remain out of schema."
+      },
+      "variants": [
+        {
+          "id": "TIPP_TOE_28L",
+          "runway": "28L",
+          "clearance_name": "Tipp Toe Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "CHERA",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "path_term": "TF",
+              "latitude": 37.3749027778,
+              "longitude": -122.11875,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "path_term": "TF",
+              "latitude": 37.4507111111,
+              "longitude": -122.1447472222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CHERA",
+              "name": "CHERA",
+              "path_term": "CF",
+              "latitude": 37.4810805556,
+              "longitude": -122.1582833333,
+              "fly_over": true,
+              "course_deg": 310,
+              "reference": "I-SFO localizer"
+            }
+          ],
+          "final": { "glidepath_deg": 2.85 }
+        },
+        {
+          "id": "TIPP_TOE_28R",
+          "runway": "28R",
+          "clearance_name": "Tipp Toe Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "CHERA",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "path_term": "TF",
+              "latitude": 37.3749027778,
+              "longitude": -122.11875,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 6000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "path_term": "TF",
+              "latitude": 37.4507111111,
+              "longitude": -122.1447472222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "CHERA",
+              "name": "CHERA",
+              "path_term": "CF",
+              "latitude": 37.4810805556,
+              "longitude": -122.1582833333,
+              "fly_over": true,
+              "course_deg": 310,
+              "reference": "I-GWQ localizer"
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "airport": "PHNL",
+  "procedures": [
+    {
+      "id": "KAHE_POWER_PLANT_VISUAL_22L",
+      "name": "Kahe Power Plant Visual RWY 22L",
+      "aliases": ["kahe power plant visual", "kahe power plant"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "KAHE POWER PLANT VISUAL RWY 22L",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00754KAHEPOWERPLANT_VIS22L.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 5100,
+        "visibility": { "value": 3, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Amdt 1 27APR17. CAT I/II only; pilots may expect 22R. The route follows Kahe, H1/H2, Ford Island, the Navy/Marine Golf Course, and the charted right pattern."
+      },
+      "variants": [
+        {
+          "id": "KAHE_MAIN",
+          "runway": "22L",
+          "clearance_name": "Kahe Power Plant Visual",
+          "entry_point_id": "KAHE_TRACE",
+          "sight_reference_point_id": "KAHE_TRACE",
+          "legs": [
+            {
+              "id": "KAHE_TRACE",
+              "name": "Kahe Power Plant",
+              "path_term": "TF",
+              "latitude": 21.356395,
+              "longitude": -158.128853,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "H1_H2_TRACE",
+              "name": "H1/H2 Interchange (chart-traced)",
+              "path_term": "TF",
+              "latitude": 21.4,
+              "longitude": -157.989,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "FORD_ISLAND_TRACE",
+              "name": "Ford Island",
+              "path_term": "TF",
+              "latitude": 21.3631531,
+              "longitude": -157.9606491,
+              "fly_over": true
+            },
+            {
+              "id": "NAVY_GOLF_TRACE",
+              "name": "Navy/Marine Golf Course",
+              "path_term": "TF",
+              "latitude": 21.3431031,
+              "longitude": -157.923802,
+              "fly_over": true
+            },
+            {
+              "id": "RIGHT_DOWNWIND_END_TRACE",
+              "name": "Right downwind end (chart-traced)",
+              "path_term": "TF",
+              "latitude": 21.365,
+              "longitude": -157.9,
+              "fly_over": false
+            },
+            {
+              "id": "FINAL_INTERCEPT_TRACE",
+              "name": "Final intercept (chart-traced)",
+              "path_term": "CF",
+              "latitude": 21.349,
+              "longitude": -157.8774,
+              "fly_over": false,
+              "course_deg": 233,
+              "reference": "RWY 22L final"
+            }
+          ],
+          "final": { "course_deg": 233, "glidepath_deg": 3.44 }
+        }
+      ]
+    },
+    {
+      "id": "WAIALAE_GOLF_COURSE_VISUAL_22L",
+      "name": "Waialae Golf Course Visual RWY 22L",
+      "aliases": ["waialae golf course visual", "waialae visual", "waialae"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "WAIALAE GOLF COURSE VISUAL RWY 22L",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00754WAIALAEGOLFCOURSE_VIS22L.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 5100,
+        "visibility": { "value": 3, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Amdt 1 27APR17. CAT I/II only; pilots may expect 22R. Punchbowl/Fort Shafter/Waialae coordinates are chart-traced."
+      },
+      "variants": [
+        {
+          "id": "WAIALAE_MAIN",
+          "runway": "22L",
+          "clearance_name": "Waialae Golf Course Visual",
+          "entry_point_id": "CKH",
+          "sight_reference_point_id": "WAIALAE_TRACE",
+          "legs": [
+            {
+              "id": "CKH",
+              "name": "Koko Head / CKH R-267",
+              "path_term": "CF",
+              "latitude": 21.2651111111,
+              "longitude": -157.7029805556,
+              "fly_over": true,
+              "course_deg": 267,
+              "reference": "CKH R-267 / 4.5 DME"
+            },
+            {
+              "id": "WAIALAE_TRACE",
+              "name": "Waialae Golf Course (chart-traced)",
+              "path_term": "TF",
+              "latitude": 21.273,
+              "longitude": -157.79,
+              "fly_over": true
+            },
+            {
+              "id": "PUNCHBOWL_TRACE",
+              "name": "Punchbowl (chart-traced)",
+              "path_term": "TF",
+              "latitude": 21.31,
+              "longitude": -157.85,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 2000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "FORT_SHAFTER_TRACE",
+              "name": "Fort Shafter (chart-traced)",
+              "path_term": "TF",
+              "latitude": 21.34,
+              "longitude": -157.89,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.44 }
+        }
+      ]
+    }
+  ]
+}
