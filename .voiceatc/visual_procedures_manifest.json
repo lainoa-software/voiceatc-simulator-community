@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KPDX": {
+      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/visual_procedures.json",
+      "sha256": "1c2219aa42f08edbf8826aa789d38c9cb9c00048aea2dd9fe6dc1f75c26a989c",
+      "size_bytes": 7227
+    }
+  },
+  "published_at": "2026-08-24T15:23:09Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
