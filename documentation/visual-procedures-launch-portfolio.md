@@ -12,9 +12,11 @@ Every row must be rechecked against the current official chart immediately
 before it is transcribed.
 
 The 24 August 2026 source gate could not inspect current authoritative plates
-for the two Japan procedures or NAV CANADA's GOWER chart. In accordance with
-the fallback order below, ranks 2, 5, and 6 use Waialae Golf Course, Bridge,
-and Columbia respectively; no geometry was inferred from mirrors.
+for the two Japan procedures or NAV CANADA's GOWER chart. France SIA's LFBD
+environment chart could not be represented safely without inventing unnamed
+radial geometry. In accordance with the fallback order below, ranks 2, 5, 6,
+and 9 use Waialae Golf Course, Bridge, Columbia, and Harbor respectively; no
+geometry was inferred from mirrors or incomplete chart cues.
 
 ## Ranked procedures
 
@@ -28,7 +30,7 @@ and Columbia respectively; no geometry was inferred from mirrors.
 | 6 | KPDX | Columbia Visual | Columbia River routing and Portland landmarks |
 | 7 | LPMA | Visual Approach RWY 05 | Coastal turn with close terrain |
 | 8 | LFMN | Environment Visual RWY 04 | Offshore routing and populated-area avoidance |
-| 9 | LFBD | Environment Visual RWY 05 | Prescribed environmental track |
+| 9 | KBFI | Harbor Visual | Seattle harbour and shoreline routing |
 | 10 | KSFO | Tipp Toe Visual RWY 28L/R | Bridges, altitude gates, and parallel finals |
 | 11 | KPHL | River Visual RWY 09L/R | Delaware River alignment and runway branching |
 | 12 | KSAN | Sweetwater Visual RWY 27 | Reservoir, mountain, and urban landmarks |
