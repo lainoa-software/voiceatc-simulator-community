@@ -60,7 +60,10 @@ resolves the threshold from navdata and owns go-around behavior.
 
 An RF or AF leg cannot be the first leg. Its preceding point and endpoint must
 both lie on the declared radius within the validator's small chart-tracing
-tolerance; author a straight leg to the arc join before the curved leg.
+tolerance; author a straight leg to the arc join before the curved leg. The
+authored direction must produce a sweep of at most 300 degrees. This guard
+catches a reversed `turn_direction` before the simulator can treat an
+unsupported long arc as a straight chord.
 
 The validator rejects unknown keys, duplicate IDs or spoken names, invalid
 coordinates, malformed leg geometry, missing source/entry/sight evidence,
@@ -120,6 +123,7 @@ nightly sync.
 - [ ] Every variant has one explicit entry and one sight reference; no nearest
       entry or runway is inferred by the simulator.
 - [ ] TF/CF/RF/AF geometry and turn direction are transcribed from the source.
+- [ ] Every RF/AF direction produces the intended sweep, never more than 300°.
 - [ ] Required constraints are distinguished from recommended values.
 - [ ] The runway resolves in the current playable navdata and the exact
       navdata threshold is used by the simulator preview.

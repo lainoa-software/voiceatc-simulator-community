@@ -26,6 +26,7 @@ ADVISORY_DISTANCE_NM = 40.0
 REJECT_DISTANCE_NM = 100.0
 ARC_RADIUS_TOLERANCE_NM = 0.25
 ARC_RADIUS_TOLERANCE_RATIO = 0.05
+MAX_ARC_SWEEP_DEG = 300.0
 EARTH_RADIUS_NM = 3440.065
 ID_RE = re.compile(r"^[A-Z0-9][A-Z0-9_]{0,63}$")
 AIRPORT_RE = re.compile(r"^[A-Z]{4}$")
@@ -144,6 +145,31 @@ def _distance_nm(left: tuple[float, float], right: tuple[float, float]) -> float
     dlon = lon2 - lon1
     hav = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
     return EARTH_RADIUS_NM * 2 * math.atan2(math.sqrt(hav), math.sqrt(max(0.0, 1.0 - hav)))
+
+
+def _bearing_deg(origin: tuple[float, float], target: tuple[float, float]) -> float:
+    lat1, lon1 = map(math.radians, origin)
+    lat2, lon2 = map(math.radians, target)
+    delta_lon = lon2 - lon1
+    y = math.sin(delta_lon) * math.cos(lat2)
+    x = (
+        math.cos(lat1) * math.sin(lat2)
+        - math.sin(lat1) * math.cos(lat2) * math.cos(delta_lon)
+    )
+    return math.degrees(math.atan2(y, x)) % 360.0
+
+
+def _arc_sweep_deg(
+    center: tuple[float, float],
+    start: tuple[float, float],
+    end: tuple[float, float],
+    turn_direction: str,
+) -> float:
+    start_bearing = _bearing_deg(center, start)
+    end_bearing = _bearing_deg(center, end)
+    if turn_direction == "R":
+        return (end_bearing - start_bearing) % 360.0
+    return (start_bearing - end_bearing) % 360.0
 
 
 def _validate_constraint(value: object, value_key: str, where: str, path: Path) -> None:
@@ -308,6 +334,17 @@ def _validate_variant(value: object, where: str, path: Path, advisories: list[st
                     f"{path}: {where}.legs[{index}] arc {endpoint_name} is "
                     f"{endpoint_radius:.2f} NM from its center; expected {radius:.2f} NM"
                 )
+        sweep = _arc_sweep_deg(
+            center,
+            positions[index - 1],
+            positions[index],
+            str(leg["turn_direction"]),
+        )
+        if sweep > MAX_ARC_SWEEP_DEG:
+            raise ValueError(
+                f"{path}: {where}.legs[{index}] arc sweep is {sweep:.1f} degrees; "
+                f"maximum is {MAX_ARC_SWEEP_DEG:.0f} degrees"
+            )
     if "final" in variant:
         final = _object(variant["final"], f"{where}.final", path)
         _strict_keys(final, FINAL_KEYS, f"{where}.final", path)

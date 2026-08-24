@@ -180,6 +180,17 @@ class VisualProceduresManifestTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "arc start"):
             MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
 
+    def test_rejects_overlong_arc_sweep_from_wrong_turn_direction(self) -> None:
+        payload = valid_payload()
+        arc = payload["procedures"][0]["variants"][0]["legs"][3]
+        arc.update({
+            "latitude": 38.875,
+            "longitude": -77.0555,
+            "turn_direction": "R",
+        })
+        with self.assertRaisesRegex(ValueError, "arc sweep"):
+            MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
     def test_accepts_altitude_windows_and_rejects_reversed_bounds(self) -> None:
         payload = valid_payload()
         altitude = payload["procedures"][0]["variants"][0]["legs"][0]["altitude"]
