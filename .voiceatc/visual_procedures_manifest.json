@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KASE": {
+      "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_procedures.json",
+      "sha256": "b9372d51deae559f695207d6e19b8209a8e87d7b1c18115d8c64e953133aa750",
+      "size_bytes": 4072
+    }
+  },
+  "published_at": "2026-08-24T15:21:49Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
