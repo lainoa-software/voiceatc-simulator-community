@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "PHOG": {
+      "repo_path": "P/PH/PHZH/MAUI_TMA/PHOG/visual_procedures.json",
+      "sha256": "5d169c5df45e8a23a1ba1f3ebffbf44e0ad09fec9b64ca0ee7264adbef7eee0e",
+      "size_bytes": 3370
+    }
+  },
+  "published_at": "2026-08-24T15:25:34Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

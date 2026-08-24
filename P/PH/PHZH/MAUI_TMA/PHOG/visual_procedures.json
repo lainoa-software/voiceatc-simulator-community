@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "airport": "PHOG",
+  "procedures": [
+    {
+      "id": "SMOKE_STACK_VISUAL_02",
+      "name": "Smoke Stack Visual RWY 02",
+      "aliases": ["smoke stack visual", "smoke stacks visual", "smoke stack"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "SMOKE STACK VISUAL RWY 02",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3000,
+        "visibility": { "value": 3, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Amdt 1A 30NOV23. PAC cycle 09JUL-03SEP; LANAI/MAKENA branches and KNUI/smokestack coordinates are chart-traced."
+      },
+      "variants": [
+        {
+          "id": "LANAI_ENTRY",
+          "runway": "02",
+          "clearance_name": "Smoke Stack Visual",
+          "entry_point_id": "LNY",
+          "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "legs": [
+            {
+              "id": "LNY",
+              "name": "Lanai / LNY",
+              "path_term": "CF",
+              "latitude": 20.7645027778,
+              "longitude": -156.9689,
+              "fly_over": false,
+              "course_deg": 85,
+              "reference": "LNY VORTAC R-085"
+            },
+            {
+              "id": "MAALAEA_TRACE",
+              "name": "Mid-Maalaea Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.7,
+              "longitude": -156.5,
+              "fly_over": true
+            },
+            {
+              "id": "KNUI_TRACE",
+              "name": "KNUI Radio Tower (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.78,
+              "longitude": -156.48,
+              "fly_over": true
+            },
+            {
+              "id": "SMOKESTACK_TRACE",
+              "name": "Sugar Mill Smoke Stacks (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.82,
+              "longitude": -156.47,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "MAKENA_ENTRY",
+          "runway": "02",
+          "clearance_name": "Smoke Stack Visual",
+          "entry_point_id": "MAKENA_TRACE",
+          "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "legs": [
+            {
+              "id": "MAKENA_TRACE",
+              "name": "Makena (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.63,
+              "longitude": -156.44,
+              "fly_over": false
+            },
+            {
+              "id": "KNUI_TRACE",
+              "name": "KNUI Radio Tower (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.78,
+              "longitude": -156.48,
+              "fly_over": true
+            },
+            {
+              "id": "SMOKESTACK_TRACE",
+              "name": "Sugar Mill Smoke Stacks (chart-traced)",
+              "path_term": "TF",
+              "latitude": 20.82,
+              "longitude": -156.47,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}
