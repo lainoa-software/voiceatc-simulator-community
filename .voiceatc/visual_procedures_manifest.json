@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KBFI": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_procedures.json",
+      "sha256": "ae01d4ba1b7db8bd6c3e50e7b4b972a5ab6bfba080f6252d1e8bce061a70c582",
+      "size_bytes": 6175
+    }
+  },
+  "published_at": "2026-08-24T15:21:56Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
