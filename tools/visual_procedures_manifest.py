@@ -24,6 +24,8 @@ MAX_LEGS = 128
 MAX_ALIASES = 8
 ADVISORY_DISTANCE_NM = 40.0
 REJECT_DISTANCE_NM = 100.0
+ARC_RADIUS_TOLERANCE_NM = 0.25
+ARC_RADIUS_TOLERANCE_RATIO = 0.05
 EARTH_RADIUS_NM = 3440.065
 ID_RE = re.compile(r"^[A-Z0-9][A-Z0-9_]{0,63}$")
 AIRPORT_RE = re.compile(r"^[A-Z]{4}$")
@@ -267,6 +269,26 @@ def _validate_variant(value: object, where: str, path: Path, advisories: list[st
             if distance > ADVISORY_DISTANCE_NM:
                 advisories.append(
                     f"{path}: {where}.legs[{right_index}] is over 40 NM from leg {left_index}"
+                )
+    for index, leg_value in enumerate(legs):
+        leg = _object(leg_value, f"{where}.legs[{index}]", path)
+        if leg.get("path_term") not in {"RF", "AF"}:
+            continue
+        if index == 0:
+            raise ValueError(f"{path}: {where}.legs[0] cannot start with an arc")
+        center_value = _object(leg["arc_center"], f"{where}.legs[{index}].arc_center", path)
+        center = _coordinate(center_value, f"{where}.legs[{index}].arc_center", path)
+        radius = float(leg["arc_radius_nm"])
+        tolerance = max(ARC_RADIUS_TOLERANCE_NM, radius * ARC_RADIUS_TOLERANCE_RATIO)
+        for endpoint_name, endpoint in (
+            ("start", positions[index - 1]),
+            ("end", positions[index]),
+        ):
+            endpoint_radius = _distance_nm(center, endpoint)
+            if abs(endpoint_radius - radius) > tolerance:
+                raise ValueError(
+                    f"{path}: {where}.legs[{index}] arc {endpoint_name} is "
+                    f"{endpoint_radius:.2f} NM from its center; expected {radius:.2f} NM"
                 )
     if "final" in variant:
         final = _object(variant["final"], f"{where}.final", path)

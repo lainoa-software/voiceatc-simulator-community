@@ -56,6 +56,10 @@ write a runway threshold, missed approach, `approach_visual_segment`, contact
 approach, circling route, or VFR/AFIS landing route into this schema. The game
 resolves the threshold from navdata and owns go-around behavior.
 
+An RF or AF leg cannot be the first leg. Its preceding point and endpoint must
+both lie on the declared radius within the validator's small chart-tracing
+tolerance; author a straight leg to the arc join before the curved leg.
+
 The validator rejects unknown keys, duplicate IDs or spoken names, invalid
 coordinates, malformed leg geometry, missing source/entry/sight evidence,
 files over 256 KiB, more than 64 procedures, or more than 128 legs per variant.

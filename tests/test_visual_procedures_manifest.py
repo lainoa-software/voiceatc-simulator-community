@@ -81,21 +81,21 @@ def valid_payload(airport: str = "KDCA") -> dict[str, object]:
                                 "name": "River turn",
                                 "path_term": "RF",
                                 "latitude": 38.88,
-                                "longitude": -77.06,
+                                "longitude": -77.0572,
                                 "fly_over": False,
                                 "arc_center": {"latitude": 38.88, "longitude": -77.07},
-                                "arc_radius_nm": 1.0,
+                                "arc_radius_nm": 0.6,
                                 "turn_direction": "R",
                             },
                             {
                                 "id": "AFLEG",
                                 "name": "Final turn",
                                 "path_term": "AF",
-                                "latitude": 38.86,
-                                "longitude": -77.05,
+                                "latitude": 38.87,
+                                "longitude": -77.0444,
                                 "fly_over": True,
-                                "arc_center": {"latitude": 38.87, "longitude": -77.05},
-                                "arc_radius_nm": 0.8,
+                                "arc_center": {"latitude": 38.88, "longitude": -77.0444},
+                                "arc_radius_nm": 0.6,
                                 "turn_direction": "L",
                             },
                         ],
@@ -172,6 +172,12 @@ class VisualProceduresManifestTests(unittest.TestCase):
         payload = valid_payload()
         del payload["procedures"][0]["variants"][0]["legs"][2]["arc_center"]
         with self.assertRaisesRegex(ValueError, "arc_center"):
+            MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
+    def test_rejects_arc_endpoints_off_the_declared_radius(self) -> None:
+        payload = valid_payload()
+        payload["procedures"][0]["variants"][0]["legs"][2]["arc_radius_nm"] = 4.0
+        with self.assertRaisesRegex(ValueError, "arc start"):
             MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
 
     def test_requires_source_provenance(self) -> None:
