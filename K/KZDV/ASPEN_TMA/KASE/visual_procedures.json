@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "airport": "KASE",
+  "procedures": [
+    {
+      "id": "ROARING_FORK_VISUAL_15",
+      "name": "Roaring Fork Visual RWY 15",
+      "aliases": ["roaring fork visual", "roaring fork"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "ROARING FORK VISUAL RWY 15",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 6000,
+        "visibility": { "value": 10, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Orig 16NOV89. Chart not to scale. Includes Carbondale/Basalt, DBL and Ruedi entry lines; other published landmark entries are not represented."
+      },
+      "variants": [
+        {
+          "id": "CARBONDALE_VALLEY_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CARBONDALE_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "CARBONDALE_TRACE",
+              "name": "Carbondale (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.396,
+              "longitude": -107.21,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 10000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "BASALT_TRACE",
+              "name": "Basalt (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.368,
+              "longitude": -106.825,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 12500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.5 }
+        },
+        {
+          "id": "DBL_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "DBL",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "DBL",
+              "name": "Red Table / DBL",
+              "path_term": "TF",
+              "latitude": 39.4393444444,
+              "longitude": -106.8946805556,
+              "fly_over": true
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.5 }
+        },
+        {
+          "id": "EAST_VALLEY_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "RUEDI_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "RUEDI_TRACE",
+              "name": "Ruedi Reservoir (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.352,
+              "longitude": -106.681,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 11500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.5 }
+        }
+      ]
+    }
+  ]
+}
