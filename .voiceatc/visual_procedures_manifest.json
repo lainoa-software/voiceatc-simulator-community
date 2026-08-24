@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "LPMA": {
+      "repo_path": "L/LP/LPPC/MADEIRA_TMA/LPMA/visual_procedures.json",
+      "sha256": "53e4cce3b0ab7383dfc263752c9f639bb33d9c76827cdf6dc3c6b8a0fa4f61a5",
+      "size_bytes": 1890
+    }
+  },
+  "published_at": "2026-08-24T15:25:13Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

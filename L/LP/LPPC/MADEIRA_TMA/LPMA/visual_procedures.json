@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "airport": "LPMA",
+  "procedures": [
+    {
+      "id": "LPMA_VISUAL_RWY05",
+      "name": "Visual Approach RWY 05",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "NAV Portugal AIS",
+        "chart_title": "Visual Approach RWY 05",
+        "url": "https://ais.nav.pt/wp-content/uploads/AIS_Files/eAIP_Current/eAIP_Online/eAIP/graphics/eAIP/LP_AD_2_LPMA_13-1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current eAIP AIRAC 006/26 effective 06 AUG 2026; chart 06 OCT 2022. Night RWY05 approach lights required; GELO to ROSARIO (ROSRO) visual sequence."
+      },
+      "variants": [
+        {
+          "id": "LPMA_RWY05",
+          "runway": "05",
+          "clearance_name": "Visual RWY 05",
+          "entry_point_id": "GELO",
+          "sight_reference_point_id": "ROSRO",
+          "legs": [
+            {
+              "id": "GELO",
+              "name": "GELO",
+              "path_term": "TF",
+              "latitude": 32.6617055556,
+              "longitude": -16.8025,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 850,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "ROSRO",
+              "name": "ROSARIO",
+              "path_term": "TF",
+              "latitude": 32.6768527778,
+              "longitude": -16.7990277778,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 460,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}
