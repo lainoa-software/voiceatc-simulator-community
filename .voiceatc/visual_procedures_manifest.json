@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KSAN": {
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/visual_procedures.json",
+      "sha256": "44f1f7dc31874c018adf22e2a4652584b5d3186f53dd764a3c4c76346feb4f3b",
+      "size_bytes": 4281
+    }
+  },
+  "published_at": "2026-08-24T15:23:24Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
