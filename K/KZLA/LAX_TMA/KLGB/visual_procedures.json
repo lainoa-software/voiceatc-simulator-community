@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "airport": "KLGB",
+  "procedures": [
+    {
+      "id": "LA_RIVER_VISUAL_12",
+      "name": "LA River Visual RWY 12",
+      "aliases": ["la river visual", "los angeles river visual"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "LA RIVER VISUAL RWY 12",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00236LARIVER_VIS12.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 5000,
+        "visibility": { "value": 10, "unit": "SM" },
+        "daylight_required": true,
+        "notes": "Orig 12MAY05. PADDR/ALBAS branches merge at the breakwater, follow the LA River, then turn at the freeway junction; cues are chart-traced."
+      },
+      "variants": [
+        {
+          "id": "PADDR_ENTRY",
+          "runway": "12",
+          "clearance_name": "LA River Visual",
+          "entry_point_id": "PADDR",
+          "sight_reference_point_id": "FREEWAY_JUNCTION_TRACE",
+          "legs": [
+            {
+              "id": "PADDR",
+              "name": "PADDR",
+              "path_term": "TF",
+              "latitude": 33.5916333333,
+              "longitude": -118.2835166667,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "VINCENT_THOMAS_TRACE",
+              "name": "Vincent Thomas Bridge abeam (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.735,
+              "longitude": -118.273,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "BREAKWATER_TRACE",
+              "name": "Breakwater / harbor merge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.75,
+              "longitude": -118.22,
+              "fly_over": false
+            },
+            {
+              "id": "LA_RIVER_NORTH_TRACE",
+              "name": "LA River northbound (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.79,
+              "longitude": -118.19,
+              "fly_over": false
+            },
+            {
+              "id": "FREEWAY_JUNCTION_TRACE",
+              "name": "Long Beach/San Diego freeway junction (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.81,
+              "longitude": -118.17,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "ALBAS_ENTRY",
+          "runway": "12",
+          "clearance_name": "LA River Visual",
+          "entry_point_id": "ALBAS",
+          "sight_reference_point_id": "FREEWAY_JUNCTION_TRACE",
+          "legs": [
+            {
+              "id": "ALBAS",
+              "name": "ALBAS",
+              "path_term": "TF",
+              "latitude": 33.5996333333,
+              "longitude": -118.0778222222,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "required",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "QUEEN_MARY_TRACE",
+              "name": "Queen Mary abeam (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.752,
+              "longitude": -118.19,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "BREAKWATER_TRACE",
+              "name": "Breakwater / harbor merge (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.75,
+              "longitude": -118.22,
+              "fly_over": false
+            },
+            {
+              "id": "LA_RIVER_NORTH_TRACE",
+              "name": "LA River northbound (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.79,
+              "longitude": -118.19,
+              "fly_over": false
+            },
+            {
+              "id": "FREEWAY_JUNCTION_TRACE",
+              "name": "Long Beach/San Diego freeway junction (chart-traced)",
+              "path_term": "TF",
+              "latitude": 33.81,
+              "longitude": -118.17,
+              "fly_over": false
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

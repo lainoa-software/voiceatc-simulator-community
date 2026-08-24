@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "airport": "KSEA",
+  "procedures": [
+    {
+      "id": "BAY_VISUAL_16RCL",
+      "name": "Bay Visual RWY 16R/C/L",
+      "aliases": ["bay visual", "bay visual sixteen"],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "BAY VISUAL RWY 16 R/C/L",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "ceiling_ft": 3100,
+        "visibility": { "value": 4, "unit": "SM" },
+        "notes": "Amdt 5 10MAR11. See CONT.1 alignment warning for Taxiway Tango/RWY 16C; the localizer intercept is at SEA 8 DME."
+      },
+      "variants": [
+        {
+          "id": "BAY_16R",
+          "runway": "16R",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.66,
+              "longitude": -122.44,
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.59,
+              "longitude": -122.4,
+              "fly_over": true
+            },
+            {
+              "id": "ALKI_POINT_TRACE",
+              "name": "Alki Point / Golf Course (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.58,
+              "longitude": -122.41,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "SEA 8 DME / localizer interception (chart-traced)",
+              "path_term": "CF",
+              "latitude": 47.54,
+              "longitude": -122.36,
+              "fly_over": true,
+              "course_deg": 341,
+              "reference": "SEA R-341 / localizer interception",
+              "altitude": {
+                "value_ft": 2400,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.49,
+              "longitude": -122.33,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "BAY_16C",
+          "runway": "16C",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.66,
+              "longitude": -122.44,
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.59,
+              "longitude": -122.4,
+              "fly_over": true
+            },
+            {
+              "id": "ALKI_POINT_TRACE",
+              "name": "Alki Point / Golf Course (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.58,
+              "longitude": -122.41,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "SEA 8 DME / localizer interception (chart-traced)",
+              "path_term": "CF",
+              "latitude": 47.54,
+              "longitude": -122.36,
+              "fly_over": true,
+              "course_deg": 341,
+              "reference": "SEA R-341 / localizer interception",
+              "altitude": {
+                "value_ft": 2400,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.49,
+              "longitude": -122.33,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        },
+        {
+          "id": "BAY_16L",
+          "runway": "16L",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.66,
+              "longitude": -122.44,
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle Elliott Bay (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.59,
+              "longitude": -122.4,
+              "fly_over": true
+            },
+            {
+              "id": "ALKI_POINT_TRACE",
+              "name": "Alki Point / Golf Course (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.58,
+              "longitude": -122.41,
+              "fly_over": true,
+              "altitude": {
+                "value_ft": 3000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "SEA 8 DME / localizer interception (chart-traced)",
+              "path_term": "CF",
+              "latitude": 47.54,
+              "longitude": -122.36,
+              "fly_over": true,
+              "course_deg": 341,
+              "reference": "SEA R-341 / localizer interception",
+              "altitude": {
+                "value_ft": 2400,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME (chart-traced)",
+              "path_term": "TF",
+              "latitude": 47.49,
+              "longitude": -122.33,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 1900,
+                "status": "recommended",
+                "kind": "at"
+              }
+            }
+          ],
+          "final": { "glidepath_deg": 3.0 }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "airport": "LFMN",
+  "procedures": [
+    {
+      "id": "LFMN_ENV_VISUAL_RWY04",
+      "name": "Environment Visual Approach RWY 04",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "France SIA",
+        "chart_title": "ENVIRONNEMENT APPROCHE A VUE / Environment visual approach",
+        "url": "https://www.sia.aviation-civile.gouv.fr/media/dvd/eAIP_06_AUG_2026/FRANCE/AIRAC-2026-08-06/html/eAIP/Cartes/LFMN/AD_2_LFMN_ENV_01.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-24"
+      },
+      "availability": {
+        "notes": "Current France AIRAC 08/26; chart native 22 JAN 2026. R353 MN04A; do not overfly ground below 5000 ASFC or Nice/Villefranche/Cap Ferrat."
+      },
+      "variants": [
+        {
+          "id": "LFMN_RWY04L",
+          "runway": "04L",
+          "clearance_name": "Environment Visual RWY 04L",
+          "entry_point_id": "MN04A",
+          "sight_reference_point_id": "MN04A",
+          "legs": [
+            {
+              "id": "MN04A",
+              "name": "MN04A",
+              "path_term": "CF",
+              "latitude": 43.5621111111,
+              "longitude": 7.1538888889,
+              "fly_over": false,
+              "course_deg": 353,
+              "reference": "MAG",
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 43
+          }
+        },
+        {
+          "id": "LFMN_RWY04R",
+          "runway": "04R",
+          "clearance_name": "Environment Visual RWY 04R",
+          "entry_point_id": "MN04A",
+          "sight_reference_point_id": "MN04A",
+          "legs": [
+            {
+              "id": "MN04A",
+              "name": "MN04A",
+              "path_term": "CF",
+              "latitude": 43.5621111111,
+              "longitude": 7.1538888889,
+              "fly_over": false,
+              "course_deg": 353,
+              "reference": "MAG",
+              "altitude": {
+                "value_ft": 5000,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 43
+          }
+        }
+      ]
+    }
+  ]
+}
