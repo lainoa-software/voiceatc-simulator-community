@@ -1,6 +1,12 @@
 {
-  "airports": {},
-  "published_at": "2026-08-24T10:18:43Z",
+  "airports": {
+    "KLGB": {
+      "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_procedures.json",
+      "sha256": "b279ec2e4fa4f27a24fc88fe7d4301a2d74575a8ce5c4cf606b89359b7fec6fd",
+      "size_bytes": 4769
+    }
+  },
+  "published_at": "2026-08-24T15:23:02Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
