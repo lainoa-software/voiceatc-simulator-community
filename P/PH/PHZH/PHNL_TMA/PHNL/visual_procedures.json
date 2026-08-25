@@ -5,7 +5,10 @@
     {
       "id": "KAHE_POWER_PLANT_VISUAL_22L",
       "name": "Kahe Power Plant Visual RWY 22L",
-      "aliases": ["kahe power plant visual", "kahe power plant"],
+      "aliases": [
+        "kahe power plant visual",
+        "kahe power plant"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,7 +21,10 @@
       },
       "availability": {
         "ceiling_ft": 5100,
-        "visibility": { "value": 3, "unit": "SM" },
+        "visibility": {
+          "value": 3,
+          "unit": "SM"
+        },
         "daylight_required": true,
         "notes": "Amdt 1 27APR17. CAT I/II only; pilots may expect 22R. The route follows Kahe, H1/H2, Ford Island, the Navy/Marine Golf Course, and the charted right pattern."
       },
@@ -91,14 +97,21 @@
               "reference": "RWY 22L final"
             }
           ],
-          "final": { "course_deg": 233, "glidepath_deg": 3.44 }
+          "final": {
+            "course_deg": 233,
+            "glidepath_deg": 3.44
+          }
         }
       ]
     },
     {
       "id": "WAIALAE_GOLF_COURSE_VISUAL_22L",
       "name": "Waialae Golf Course Visual RWY 22L",
-      "aliases": ["waialae golf course visual", "waialae visual", "waialae"],
+      "aliases": [
+        "waialae golf course visual",
+        "waialae visual",
+        "waialae"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -111,7 +124,10 @@
       },
       "availability": {
         "ceiling_ft": 5100,
-        "visibility": { "value": 3, "unit": "SM" },
+        "visibility": {
+          "value": 3,
+          "unit": "SM"
+        },
         "daylight_required": true,
         "notes": "Amdt 1 27APR17. CAT I/II only; pilots may expect 22R. Punchbowl/Fort Shafter/Waialae coordinates are chart-traced."
       },
@@ -147,7 +163,7 @@
               "path_term": "TF",
               "latitude": 21.31,
               "longitude": -157.85,
-              "fly_over": true,
+              "fly_over": false,
               "altitude": {
                 "value_ft": 2000,
                 "status": "required",
@@ -163,7 +179,9 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.44 }
+          "final": {
+            "glidepath_deg": 3.44
+          }
         }
       ]
     }

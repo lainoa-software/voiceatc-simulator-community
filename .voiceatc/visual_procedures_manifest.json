@@ -107,8 +107,8 @@
     },
     "PHNL": {
       "repo_path": "P/PH/PHZH/PHNL_TMA/PHNL/visual_procedures.json",
-      "sha256": "dd72cc128b6b14c2555975173f9e8bec82f99fdda4455c1b3e108269447f3b89",
-      "size_bytes": 5656
+      "sha256": "f2683cade8431482b54856b1aa0e5cfd9cd85b342f9578e321a9e4dc20457160",
+      "size_bytes": 5825
     },
     "PHOG": {
       "repo_path": "P/PH/PHZH/MAUI_TMA/PHOG/visual_procedures.json",
