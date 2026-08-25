@@ -5,7 +5,10 @@
     {
       "id": "STADIUM_VISUAL_29",
       "name": "Stadium Visual RWY 29",
-      "aliases": ["stadium visual", "stadium visual twenty nine"],
+      "aliases": [
+        "stadium visual",
+        "stadium visual twenty nine"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,8 +21,11 @@
       },
       "availability": {
         "ceiling_ft": 3500,
-        "visibility": { "value": 5, "unit": "SM" },
-        "notes": "Amdt 6A 22JAN26. HILOK and SLIMR are 1500-2000; procedure NA when RWY 29 REIL or PAPI is inoperative."
+        "visibility": {
+          "value": 5,
+          "unit": "SM"
+        },
+        "notes": "Amdt 6A 22JAN26. Radar required. HILOK/SLIMR 1500-2000. Observe noise-abatement altitudes and TEB departures. NA if RWY 29 REIL or PAPI is inop."
       },
       "variants": [
         {
@@ -120,7 +126,9 @@
               }
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }
