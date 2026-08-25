@@ -2,8 +2,8 @@
   "airports": {
     "KASE": {
       "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_procedures.json",
-      "sha256": "b9372d51deae559f695207d6e19b8209a8e87d7b1c18115d8c64e953133aa750",
-      "size_bytes": 4072
+      "sha256": "62766c0134ecae5b7312e10d2f54278bee023c6209663bf847911f305af05e61",
+      "size_bytes": 8680
     },
     "KBFI": {
       "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_procedures.json",

@@ -5,7 +5,10 @@
     {
       "id": "ROARING_FORK_VISUAL_15",
       "name": "Roaring Fork Visual RWY 15",
-      "aliases": ["roaring fork visual", "roaring fork"],
+      "aliases": [
+        "roaring fork visual",
+        "roaring fork"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,37 +21,27 @@
       },
       "availability": {
         "ceiling_ft": 6000,
-        "visibility": { "value": 10, "unit": "SM" },
+        "visibility": {
+          "value": 10,
+          "unit": "SM"
+        },
         "daylight_required": true,
-        "notes": "Orig 16NOV89. Chart not to scale. Includes Carbondale/Basalt, DBL and Ruedi entry lines; other published landmark entries are not represented."
+        "notes": "Radar required; daylight only; chart not to scale. Seven arms separate; landmark locations are conservative chart traces; altitudes are published."
       },
       "variants": [
         {
-          "id": "CARBONDALE_VALLEY_ENTRY",
+          "id": "DBL_R163_ENTRY",
           "runway": "15",
           "clearance_name": "Roaring Fork Visual",
-          "entry_point_id": "CARBONDALE_TRACE",
+          "entry_point_id": "DBL",
           "sight_reference_point_id": "ASPEN_TRACE",
           "legs": [
             {
-              "id": "CARBONDALE_TRACE",
-              "name": "Carbondale (chart-traced)",
+              "id": "DBL",
+              "name": "Red Table / DBL R-163",
               "path_term": "TF",
-              "latitude": 39.396,
-              "longitude": -107.21,
-              "fly_over": true,
-              "altitude": {
-                "value_ft": 10000,
-                "status": "recommended",
-                "kind": "at"
-              }
-            },
-            {
-              "id": "BASALT_TRACE",
-              "name": "Basalt (chart-traced)",
-              "path_term": "TF",
-              "latitude": 39.368,
-              "longitude": -106.825,
+              "latitude": 39.4393444444,
+              "longitude": -106.8946805556,
               "fly_over": true,
               "altitude": {
                 "value_ft": 12500,
@@ -65,50 +58,39 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.5 }
+          "final": {
+            "glidepath_deg": 3.5
+          }
         },
         {
-          "id": "DBL_ENTRY",
+          "id": "CARBONDALE_BASALT_ENTRY",
           "runway": "15",
           "clearance_name": "Roaring Fork Visual",
-          "entry_point_id": "DBL",
+          "entry_point_id": "CARBONDALE_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
           "legs": [
             {
-              "id": "DBL",
-              "name": "Red Table / DBL",
+              "id": "CARBONDALE_TRACE",
+              "name": "Carbondale (chart-traced)",
               "path_term": "TF",
-              "latitude": 39.4393444444,
-              "longitude": -106.8946805556,
-              "fly_over": true
+              "latitude": 39.396,
+              "longitude": -107.21,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 10000,
+                "status": "recommended",
+                "kind": "at"
+              }
             },
             {
-              "id": "ASPEN_TRACE",
-              "name": "Aspen / Roaring Fork (chart-traced)",
+              "id": "BASALT_TRACE",
+              "name": "Basalt (chart-traced)",
               "path_term": "TF",
-              "latitude": 39.27,
-              "longitude": -106.86,
-              "fly_over": false
-            }
-          ],
-          "final": { "glidepath_deg": 3.5 }
-        },
-        {
-          "id": "EAST_VALLEY_ENTRY",
-          "runway": "15",
-          "clearance_name": "Roaring Fork Visual",
-          "entry_point_id": "RUEDI_TRACE",
-          "sight_reference_point_id": "ASPEN_TRACE",
-          "legs": [
-            {
-              "id": "RUEDI_TRACE",
-              "name": "Ruedi Reservoir (chart-traced)",
-              "path_term": "TF",
-              "latitude": 39.352,
-              "longitude": -106.681,
-              "fly_over": true,
+              "latitude": 39.368,
+              "longitude": -106.825,
+              "fly_over": false,
               "altitude": {
-                "value_ft": 11500,
+                "value_ft": 12500,
                 "status": "recommended",
                 "kind": "at"
               }
@@ -122,7 +104,182 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.5 }
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "MT_SOPRIS_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "MT_SOPRIS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "MT_SOPRIS_TRACE",
+              "name": "Mount Sopris (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.19,
+              "longitude": -107.09,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 14500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "CAPITAL_PEAK_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CAPITAL_PEAK_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "CAPITAL_PEAK_TRACE",
+              "name": "Capital Peak (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.15,
+              "longitude": -107.07,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 15500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "CASTLE_PEAK_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CASTLE_PEAK_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "CASTLE_PEAK_TRACE",
+              "name": "Castle Peak (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.01,
+              "longitude": -106.86,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 16000,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "INDEPENDENCE_PASS_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "INDEPENDENCE_PASS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "INDEPENDENCE_PASS_TRACE",
+              "name": "Independence Pass (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.11,
+              "longitude": -106.56,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 14500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "HOLY_CROSS_RUEDI_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "HOLY_CROSS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "legs": [
+            {
+              "id": "HOLY_CROSS_TRACE",
+              "name": "Mount of the Holy Cross (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.47,
+              "longitude": -106.48,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 11500,
+                "status": "recommended",
+                "kind": "at"
+              }
+            },
+            {
+              "id": "RUEDI_TRACE",
+              "name": "Ruedi Reservoir / Hagerman valley cue (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.352,
+              "longitude": -106.681,
+              "fly_over": false
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "path_term": "TF",
+              "latitude": 39.27,
+              "longitude": -106.86,
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
         }
       ]
     }
