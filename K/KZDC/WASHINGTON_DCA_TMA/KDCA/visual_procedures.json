@@ -5,7 +5,10 @@
     {
       "id": "MOUNT_VERNON_VISUAL_01",
       "name": "Mount Vernon Visual RWY 01",
-      "aliases": ["mount vernon visual", "mount vernon"],
+      "aliases": [
+        "mount vernon visual",
+        "mount vernon"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -34,7 +37,9 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": ["river"],
+            "aliases": [
+              "river"
+            ],
             "scope": "route"
           },
           "legs": [
@@ -92,7 +97,10 @@
     {
       "id": "RIVER_VISUAL_19",
       "name": "River Visual RWY 19",
-      "aliases": ["river visual", "river visual nineteen"],
+      "aliases": [
+        "river visual",
+        "river visual nineteen"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -109,7 +117,7 @@
           "value": 3,
           "unit": "SM"
         },
-        "notes": "Radar required; Amdt 6 11JUL24. River route from American Legion/David W. Taylor; RNAV feeders join ahead. No P-56 penetration; trace points chart-traced."
+        "notes": "Radar required; Amdt 6 11JUL24. River from American Legion/David W. Taylor; RNAV feeders join ahead. Avoid P-56. Rochambeau checked against DDOT GIS."
       },
       "variants": [
         {
@@ -121,7 +129,9 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": ["river"],
+            "aliases": [
+              "river"
+            ],
             "scope": "route"
           },
           "legs": [
@@ -189,8 +199,8 @@
               "id": "ROCHAMBEAU_BRIDGE_TRACE",
               "name": "Rochambeau Bridge (chart-traced)",
               "path_term": "TF",
-              "latitude": 38.875,
-              "longitude": -77.052,
+              "latitude": 38.8764601507,
+              "longitude": -77.0413292679,
               "fly_over": true
             }
           ],
