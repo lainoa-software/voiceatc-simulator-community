@@ -34,7 +34,7 @@ jobs:
       # Formatting changes the exact bytes protected by the visual manifest.
       # Refresh it in the same commit so main can never contain formatted data
       # paired with the pre-format hash and size.
-      - run: python tools/visual_procedures_manifest.py --write
+      - run: python tools/visual_procedures_manifest.py --write --preserve-published-at
       - run: python tools/visual_procedures_manifest.py --validate-only
       - name: Commit formatted JSON
         shell: bash

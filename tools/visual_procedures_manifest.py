@@ -497,6 +497,17 @@ def build_manifest(root: Path = ROOT, published_at: str | None = None) -> dict[s
     }
 
 
+def existing_published_at(path: Path = MANIFEST_PATH) -> str:
+    """Read the stable publication time for byte-only maintenance rewrites."""
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid or missing manifest ({exc})") from exc
+    value = str(payload.get("published_at", "")) if isinstance(payload, dict) else ""
+    _date(value[:10], "manifest.published_at", path)
+    return value
+
+
 def _safe_path(repo_path: str, root: Path) -> Path:
     if not repo_path or "\\" in repo_path or re.match(r"^[A-Za-z]:", repo_path):
         raise ValueError(f"manifest entry path is not canonical: {repo_path}")
@@ -554,9 +565,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--validate-only", action="store_true")
+    parser.add_argument(
+        "--preserve-published-at",
+        action="store_true",
+        help="retain published_at while refreshing hashes after formatting",
+    )
     args = parser.parse_args()
+    if args.preserve_published_at and not args.write:
+        parser.error("--preserve-published-at requires --write")
     try:
-        manifest = build_manifest()
+        published_at = existing_published_at() if args.preserve_published_at else None
+        manifest = build_manifest(published_at=published_at)
         count = validate_existing_manifest() if args.validate_only else 0
     except Exception as exc:
         print(str(exc), file=sys.stderr)

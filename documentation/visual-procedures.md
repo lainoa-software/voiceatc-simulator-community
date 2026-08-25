@@ -114,6 +114,11 @@ python tools/content_hierarchy.py --validate-only
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
+The automatic JSON formatter runs the manifest writer with
+`--preserve-published-at`. Formatting changes protected bytes and therefore
+refreshes hashes and sizes, but it is not a new data publication. Daily release
+generation continues to mint the actual publication timestamp.
+
 Commit both `visual_procedures.json` and
 `.voiceatc/visual_procedures_manifest.json`. The manifest maps each ICAO to
 the repository path, canonical LF-byte SHA-256, and byte size. It is a direct

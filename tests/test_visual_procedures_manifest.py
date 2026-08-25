@@ -321,12 +321,22 @@ class VisualProceduresManifestTests(unittest.TestCase):
             encoding="utf-8"
         )
         formatter = workflow.index("npm run format:json")
-        refresh = workflow.index("python tools/visual_procedures_manifest.py --write")
+        refresh = workflow.index(
+            "python tools/visual_procedures_manifest.py --write --preserve-published-at"
+        )
         validation = workflow.index("python tools/visual_procedures_manifest.py --validate-only")
         commit = workflow.index("git commit -m")
         self.assertLess(formatter, refresh)
         self.assertLess(refresh, validation)
         self.assertLess(validation, commit)
+
+    def test_maintenance_refresh_can_preserve_publication_time(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._write(root)
+            manifest = MODULE.build_manifest(root, published_at="2026-08-24T12:34:56Z")
+            path = self._write_manifest(root, manifest)
+            self.assertEqual("2026-08-24T12:34:56Z", MODULE.existing_published_at(path))
 
 
 if __name__ == "__main__":
