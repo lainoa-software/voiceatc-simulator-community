@@ -12,8 +12,8 @@
     },
     "KBOS": {
       "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_procedures.json",
-      "sha256": "a7c3fed71775829224edbd832e26fd40bd35f696d1e12e99370b8375a11d1aa5",
-      "size_bytes": 2613
+      "sha256": "8110b834e83ed296c72dc24d1d101976b00ff087cbb570a8f6571a70dd33fbd4",
+      "size_bytes": 2694
     },
     "KDCA": {
       "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_procedures.json",

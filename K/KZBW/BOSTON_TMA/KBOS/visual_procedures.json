@@ -5,7 +5,10 @@
     {
       "id": "LIGHT_VISUAL_33L",
       "name": "Light Visual RWY 33L",
-      "aliases": ["light visual", "boston light visual"],
+      "aliases": [
+        "light visual",
+        "boston light visual"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,8 +21,11 @@
       },
       "availability": {
         "ceiling_ft": 3000,
-        "visibility": { "value": 5, "unit": "SM" },
-        "notes": "Amdt 1A 12OCT17. SCUPP/LOBBY/KRANN are radar-vector feeder contexts; visual route is MYNOT-Boston Light-WORRN."
+        "visibility": {
+          "value": 5,
+          "unit": "SM"
+        },
+        "notes": "Amdt 1A 12OCT17. Radar required. Maintain 3000 or above until within BOS 10 DME. SCUPP/LOBBY/KRANN are feeders; route is MYNOT-LYHTT-WORRN."
       },
       "variants": [
         {
@@ -27,7 +33,7 @@
           "runway": "33L",
           "clearance_name": "Light Visual",
           "entry_point_id": "MYNOT",
-          "sight_reference_point_id": "BOSTON_LIGHT_TRACE",
+          "sight_reference_point_id": "LYHTT",
           "legs": [
             {
               "id": "MYNOT",
@@ -45,11 +51,11 @@
               }
             },
             {
-              "id": "BOSTON_LIGHT_TRACE",
-              "name": "LYHTT / Boston Light (chart-traced)",
+              "id": "LYHTT",
+              "name": "LYHTT / Boston Light",
               "path_term": "CF",
-              "latitude": 42.327,
-              "longitude": -70.89,
+              "latitude": 42.3276667,
+              "longitude": -70.8903444,
               "fly_over": true,
               "course_deg": 308,
               "reference": "BOS VOR/DME R-128",
@@ -75,7 +81,10 @@
               }
             }
           ],
-          "final": { "course_deg": 330, "glidepath_deg": 3.0 }
+          "final": {
+            "course_deg": 330,
+            "glidepath_deg": 3
+          }
         }
       ]
     }
