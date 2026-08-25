@@ -22,7 +22,10 @@
       },
       "availability": {
         "ceiling_ft": 2500,
-        "visibility": { "value": 3, "unit": "SM" },
+        "visibility": {
+          "value": 3,
+          "unit": "SM"
+        },
         "notes": "Amdt 1 29MAY14. Route-side landmark cues and the runway-specific Canarsie/Twin Stacks descent sequence are retained."
       },
       "variants": [
@@ -39,7 +42,7 @@
               "path_term": "TF",
               "latitude": 40.56,
               "longitude": -73.92,
-              "fly_over": true,
+              "fly_over": false,
               "altitude": {
                 "value_ft": 2000,
                 "status": "required",
@@ -84,7 +87,9 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 2.75 }
+          "final": {
+            "glidepath_deg": 2.75
+          }
         },
         {
           "id": "PARKWAY_13R",
@@ -99,7 +104,7 @@
               "path_term": "TF",
               "latitude": 40.56,
               "longitude": -73.92,
-              "fly_over": true,
+              "fly_over": false,
               "altitude": {
                 "value_ft": 2000,
                 "status": "required",
@@ -144,7 +149,9 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }
