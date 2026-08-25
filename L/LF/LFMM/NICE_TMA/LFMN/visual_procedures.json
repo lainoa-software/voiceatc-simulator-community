@@ -16,7 +16,7 @@
         "checked_date": "2026-08-24"
       },
       "availability": {
-        "notes": "Current France AIRAC 08/26; chart native 22 JAN 2026. R353 MN04A; do not overfly ground below 5000 ASFC or Nice/Villefranche/Cap Ferrat."
+        "notes": "Current France AIRAC 08/26; chart 22 JAN 2026. 04L west of R173/R353 <6.9 DME NI; 04R <6.5 DME NA; no land <5000 ASFC."
       },
       "variants": [
         {
@@ -29,12 +29,10 @@
             {
               "id": "MN04A",
               "name": "MN04A",
-              "path_term": "CF",
+              "path_term": "TF",
               "latitude": 43.5621111111,
               "longitude": 7.1538888889,
               "fly_over": false,
-              "course_deg": 353,
-              "reference": "MAG",
               "altitude": {
                 "value_ft": 5000,
                 "status": "required",
@@ -43,7 +41,7 @@
             }
           ],
           "final": {
-            "course_deg": 43
+            "course_deg": 42
           }
         },
         {
@@ -56,12 +54,10 @@
             {
               "id": "MN04A",
               "name": "MN04A",
-              "path_term": "CF",
+              "path_term": "TF",
               "latitude": 43.5621111111,
               "longitude": 7.1538888889,
               "fly_over": false,
-              "course_deg": 353,
-              "reference": "MAG",
               "altitude": {
                 "value_ft": 5000,
                 "status": "required",
@@ -70,7 +66,7 @@
             }
           ],
           "final": {
-            "course_deg": 43
+            "course_deg": 42
           }
         }
       ]

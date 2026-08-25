@@ -82,8 +82,8 @@
     },
     "LFMN": {
       "repo_path": "L/LF/LFMM/NICE_TMA/LFMN/visual_procedures.json",
-      "sha256": "426838ca79d12d96e8805366154c798ea06193e36874efe86431086677cc580b",
-      "size_bytes": 2408
+      "sha256": "f6546aa7c2cf0dc273b5edcaa87ca72e4ca0d0a60246f82a229bd0b52012ec82",
+      "size_bytes": 2256
     },
     "LLBG": {
       "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_procedures.json",
