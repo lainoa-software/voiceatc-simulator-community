@@ -5,7 +5,10 @@
     {
       "id": "SWEETWATER_VISUAL_27",
       "name": "Sweetwater Visual RWY 27",
-      "aliases": ["sweetwater visual", "sweetwater"],
+      "aliases": [
+        "sweetwater visual",
+        "sweetwater"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,17 +21,65 @@
       },
       "availability": {
         "ceiling_ft": 5000,
-        "visibility": { "value": 10, "unit": "SM" },
-        "notes": "Amdt 1 31MAR16. Northern STEPN and southern OKAIN entries; the stadium and SR125/base points are chart-traced from the current plate."
+        "visibility": {
+          "value": 10,
+          "unit": "SM"
+        },
+        "notes": "Radar required; Amdt 1 31MAR16. East branch starts on MZB R-084 east of MZB, then Mount Helix/SR125, KLOMN, Stadium, STEPN. Trace points are chart-derived."
       },
       "variants": [
         {
-          "id": "STEPN_BRANCH",
+          "id": "MZB_R084_EAST_BRANCH",
           "runway": "27",
           "clearance_name": "Sweetwater Visual",
-          "entry_point_id": "STEPN",
+          "entry_point_id": "MZB_R084_EAST_TRACE",
           "sight_reference_point_id": "STEPN",
           "legs": [
+            {
+              "id": "MZB_R084_EAST_TRACE",
+              "name": "MZB R-084 east-of-field entry (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.76,
+              "longitude": -116.96,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "MOUNT_HELIX_TRACE",
+              "name": "Mount Helix (chart-traced cue)",
+              "path_term": "TF",
+              "latitude": 32.78,
+              "longitude": -116.98,
+              "fly_over": false
+            },
+            {
+              "id": "SR125_BASE_TRACE",
+              "name": "After passing State Route 125 / base turn (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.75,
+              "longitude": -117.015,
+              "fly_over": false
+            },
+            {
+              "id": "KLOMN",
+              "name": "KLOMN / Lake Murray",
+              "path_term": "TF",
+              "latitude": 32.7788722222,
+              "longitude": -117.0643972222,
+              "fly_over": true
+            },
+            {
+              "id": "STADIUM_TRACE",
+              "name": "Stadium (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.7831122,
+              "longitude": -117.1195716,
+              "fly_over": false
+            },
             {
               "id": "STEPN",
               "name": "STEPN",
@@ -41,56 +92,12 @@
                 "status": "recommended",
                 "kind": "at"
               }
-            },
-            {
-              "id": "STADIUM_TRACE",
-              "name": "Stadium (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.7831122,
-              "longitude": -117.1195716,
-              "fly_over": false
-            },
-            {
-              "id": "KLOMN",
-              "name": "KLOMN",
-              "path_term": "TF",
-              "latitude": 32.7788722222,
-              "longitude": -117.0643972222,
-              "fly_over": true
-            },
-            {
-              "id": "SR125_BASE_TRACE",
-              "name": "After State Route 125 (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.76,
-              "longitude": -117.005,
-              "fly_over": true
-            },
-            {
-              "id": "FREEWAY_INTERCHANGE_TRACE",
-              "name": "Freeway interchange (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.71,
-              "longitude": -117.015,
-              "fly_over": false
-            },
-            {
-              "id": "CIJHI",
-              "name": "CIJHI / I-UBR 8.7 DME",
-              "path_term": "CF",
-              "latitude": 32.6972027778,
-              "longitude": -117.0401333333,
-              "fly_over": true,
-              "course_deg": 275,
-              "reference": "I-UBR 275°",
-              "altitude": {
-                "value_ft": 2500,
-                "status": "required",
-                "kind": "at_or_above"
-              }
             }
           ],
-          "final": { "course_deg": 275, "glidepath_deg": 3.0 }
+          "final": {
+            "course_deg": 275,
+            "glidepath_deg": 3
+          }
         },
         {
           "id": "OKAIN_ENTRY",
@@ -128,7 +135,10 @@
               }
             }
           ],
-          "final": { "course_deg": 275, "glidepath_deg": 3.0 }
+          "final": {
+            "course_deg": 275,
+            "glidepath_deg": 3
+          }
         }
       ]
     }
