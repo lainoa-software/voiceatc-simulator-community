@@ -316,6 +316,18 @@ class VisualProceduresManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "escapes repository root"):
                 MODULE._safe_path("../visual_procedures.json", root)
 
+    def test_json_formatter_refreshes_visual_manifest_before_commit(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "format-all-json.yml").read_text(
+            encoding="utf-8"
+        )
+        formatter = workflow.index("npm run format:json")
+        refresh = workflow.index("python tools/visual_procedures_manifest.py --write")
+        validation = workflow.index("python tools/visual_procedures_manifest.py --validate-only")
+        commit = workflow.index("git commit -m")
+        self.assertLess(formatter, refresh)
+        self.assertLess(refresh, validation)
+        self.assertLess(validation, commit)
+
 
 if __name__ == "__main__":
     unittest.main()
