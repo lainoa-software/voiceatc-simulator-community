@@ -27,8 +27,8 @@
     },
     "KJFK": {
       "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
-      "sha256": "f8e950d2d8ed30c73ddec63eef4eed15c10cbb9355032ab3ce112c472615fede",
-      "size_bytes": 4848
+      "sha256": "853598f767b94cfd486fab57f5469b1556fed466c68712fe2615d35488f90bff",
+      "size_bytes": 4920
     },
     "KLGA": {
       "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_procedures.json",
