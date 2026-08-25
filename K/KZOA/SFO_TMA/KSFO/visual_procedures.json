@@ -5,7 +5,10 @@
     {
       "id": "QUIET_BRIDGE_VISUAL_28R",
       "name": "Quiet Bridge Visual RWY 28R",
-      "aliases": ["quiet bridge visual", "quiet bridge"],
+      "aliases": [
+        "quiet bridge visual",
+        "quiet bridge"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,8 +21,11 @@
       },
       "availability": {
         "ceiling_ft": 2500,
-        "visibility": { "value": 5, "unit": "SM" },
-        "notes": "Orig 09JUL26. Eastern quadrant alternate is 1000/3 with 5 SM; parallel 28L visual approaches may be in progress."
+        "visibility": {
+          "value": 5,
+          "unit": "SM"
+        },
+        "notes": "Orig 09JUL26. Radar required. Eastern quadrant alternate is 1000/3 with 5 SM; parallel 28L visual approaches may be in progress."
       },
       "variants": [
         {
@@ -98,7 +104,9 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         },
         {
           "id": "EAST_ENTRY",
@@ -189,14 +197,19 @@
               "fly_over": false
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     },
     {
       "id": "TIPP_TOE_VISUAL_28LR",
       "name": "Tipp Toe Visual RWY 28L/R",
-      "aliases": ["tipp toe visual", "tipp toe"],
+      "aliases": [
+        "tipp toe visual",
+        "tipp toe"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -209,8 +222,11 @@
       },
       "availability": {
         "ceiling_ft": 2500,
-        "visibility": { "value": 5, "unit": "SM" },
-        "notes": "Amdt 3 24MAR22. Eastern quadrant alternate and San Mateo AWOS conditions are chart facts; go-around headings remain out of schema."
+        "visibility": {
+          "value": 5,
+          "unit": "SM"
+        },
+        "notes": "Amdt 3 24MAR22. Radar required. Recommended: 2300 at SFO 9.2 DME; 1500 at 6.9 DME. Eastern alternate/AWOS apply; go-around is out of schema."
       },
       "variants": [
         {
@@ -257,7 +273,9 @@
               "reference": "I-SFO localizer"
             }
           ],
-          "final": { "glidepath_deg": 2.85 }
+          "final": {
+            "glidepath_deg": 2.85
+          }
         },
         {
           "id": "TIPP_TOE_28R",
@@ -303,7 +321,9 @@
               "reference": "I-GWQ localizer"
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }
