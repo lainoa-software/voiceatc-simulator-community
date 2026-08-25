@@ -152,8 +152,9 @@
               "fly_over": false,
               "altitude": {
                 "value_ft": 5000,
+                "value2_ft": 8000,
                 "status": "required",
-                "kind": "at_or_above"
+                "kind": "between"
               }
             },
             {
@@ -221,9 +222,8 @@
               "fly_over": false,
               "altitude": {
                 "value_ft": 6000,
-                "value2_ft": 8000,
                 "status": "required",
-                "kind": "between"
+                "kind": "at_or_above"
               }
             },
             {
@@ -355,8 +355,9 @@
               "fly_over": false,
               "altitude": {
                 "value_ft": 6000,
+                "value2_ft": 8000,
                 "status": "required",
-                "kind": "at_or_above"
+                "kind": "between"
               }
             },
             {
