@@ -167,11 +167,6 @@
                 "value_ft": 4000,
                 "status": "required",
                 "kind": "at_or_above"
-              },
-              "speed": {
-                "value_kt": 185,
-                "status": "required",
-                "kind": "at_or_below"
               }
             },
             {
@@ -185,11 +180,6 @@
                 "value_ft": 3500,
                 "status": "required",
                 "kind": "at_or_above"
-              },
-              "speed": {
-                "value_kt": 185,
-                "status": "required",
-                "kind": "at_or_below"
               }
             },
             {
@@ -203,11 +193,6 @@
                 "value_ft": 2500,
                 "status": "required",
                 "kind": "at_or_above"
-              },
-              "speed": {
-                "value_kt": 185,
-                "status": "required",
-                "kind": "at_or_below"
               }
             },
             {
@@ -221,11 +206,6 @@
                 "value_ft": 1900,
                 "status": "required",
                 "kind": "at_or_above"
-              },
-              "speed": {
-                "value_kt": 185,
-                "status": "required",
-                "kind": "at_or_below"
               }
             }
           ],
