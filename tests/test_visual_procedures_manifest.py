@@ -127,6 +127,38 @@ class VisualProceduresManifestTests(unittest.TestCase):
             manifest = MODULE.build_manifest(root, published_at="2026-08-24T00:00:00Z")
             self.assertIn("KDCA", manifest["airports"])
 
+    def test_accepts_both_join_policies_and_sight_scopes(self) -> None:
+        payload = valid_payload()
+        variant = payload["procedures"][0]["variants"][0]
+        variant["join_policy"] = "forward_route"
+        variant["sight_reference"] = {
+            "name": "the river",
+            "aliases": ["Potomac River"],
+            "scope": "route",
+        }
+        MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
+        variant["join_policy"] = "entry_required"
+        variant["sight_reference"]["scope"] = "point"
+        MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
+    def test_rejects_invalid_join_policy_and_sight_reference(self) -> None:
+        payload = valid_payload()
+        variant = payload["procedures"][0]["variants"][0]
+        variant["join_policy"] = "nearest"
+        with self.assertRaisesRegex(ValueError, "join_policy"):
+            MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
+        payload = valid_payload()
+        variant = payload["procedures"][0]["variants"][0]
+        variant["sight_reference"] = {
+            "name": "the river",
+            "aliases": [],
+            "scope": "airport",
+        }
+        with self.assertRaisesRegex(ValueError, "sight_reference.scope"):
+            MODULE.validate_visual_schema(payload, Path("visual_procedures.json"))
+
     def test_hash_normalizes_checkout_line_endings(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

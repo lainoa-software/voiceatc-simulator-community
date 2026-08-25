@@ -53,6 +53,18 @@ checked by the simulator accordingly. A published altitude window uses
 `kind: "between"`, `value_ft` for the lower bound, and `value2_ft` for the
 upper bound; do not discard either mandatory limit.
 
+Two optional fields refine how a published route is acquired without breaking
+existing files. `join_policy` is `entry_required` by default; use
+`forward_route` only when the published procedure permits joining an already
+established route instead of flying back to its first authored anchor. A
+forward join is still accepted only inside the simulator's 0.5 NM corridor at
+no more than a 45-degree intercept. `sight_reference` contains a spoken `name`,
+up to eight `aliases`, and `scope: "point" | "route"`. Point scope uses the
+existing sight-reference leg. Route scope means the crew identifies the
+authored route ahead—such as "the river"—rather than claiming a feeder fix is
+the visual landmark. The required entry and sight point IDs remain stable
+anchors in both cases.
+
 An optional `final` object may provide `course_deg` and `glidepath_deg`. Do not
 write a runway threshold, missed approach, `approach_visual_segment`, contact
 approach, circling route, or VFR/AFIS landing route into this schema. The game
@@ -122,6 +134,11 @@ nightly sync.
       inaccessible procedures are replaced before submission.
 - [ ] Every variant has one explicit entry and one sight reference; no nearest
       entry or runway is inferred by the simulator.
+- [ ] Any `forward_route` policy is supported by the official procedure and
+      its route-scope sight wording is faithfully transcribed; it is not used
+      to turn a feeder method into a separate clearance.
+- [ ] Genuine same-runway branches remain separate variants with distinct
+      entry IDs/names so controllers can select them explicitly with `via`.
 - [ ] TF/CF/RF/AF geometry and turn direction are transcribed from the source.
 - [ ] Every RF/AF direction produces the intended sweep, never more than 300°.
 - [ ] Required constraints are distinguished from recommended values.

@@ -43,8 +43,9 @@ AVAILABILITY_KEYS = {"ceiling_ft", "visibility", "daylight_required", "tower_req
 VISIBILITY_KEYS = {"value", "unit"}
 VARIANT_KEYS = {
     "id", "runway", "clearance_name", "entry_point_id", "sight_reference_point_id",
-    "legs", "final",
+    "join_policy", "sight_reference", "legs", "final",
 }
+SIGHT_REFERENCE_KEYS = {"name", "aliases", "scope"}
 LEG_KEYS = {
     "id", "name", "path_term", "latitude", "longitude", "fly_over", "course_deg",
     "reference", "arc_center", "arc_radius_nm", "turn_direction", "altitude", "speed",
@@ -280,6 +281,51 @@ def _validate_variant(value: object, where: str, path: Path, advisories: list[st
     if not RUNWAY_RE.fullmatch(runway):
         raise ValueError(f"{path}: {where}.runway is invalid")
     _text(variant.get("clearance_name"), f"{where}.clearance_name", path, maximum=80)
+    join_policy = variant.get("join_policy", "entry_required")
+    if join_policy not in {"entry_required", "forward_route"}:
+        raise ValueError(
+            f"{path}: {where}.join_policy must be entry_required or forward_route"
+        )
+    if "sight_reference" in variant:
+        sight_reference = _object(
+            variant["sight_reference"], f"{where}.sight_reference", path
+        )
+        _strict_keys(
+            sight_reference,
+            SIGHT_REFERENCE_KEYS,
+            f"{where}.sight_reference",
+            path,
+        )
+        _text(
+            sight_reference.get("name"),
+            f"{where}.sight_reference.name",
+            path,
+            maximum=80,
+        )
+        aliases = _array(
+            sight_reference.get("aliases"),
+            f"{where}.sight_reference.aliases",
+            path,
+        )
+        if len(aliases) > MAX_ALIASES:
+            raise ValueError(
+                f"{path}: {where}.sight_reference.aliases exceeds {MAX_ALIASES}"
+            )
+        normalized_aliases: set[str] = set()
+        for index, alias in enumerate(aliases):
+            spoken = _text(
+                alias,
+                f"{where}.sight_reference.aliases[{index}]",
+                path,
+                maximum=64,
+            ).upper()
+            if spoken in normalized_aliases:
+                raise ValueError(f"{path}: duplicate sight-reference alias '{spoken}'")
+            normalized_aliases.add(spoken)
+        if sight_reference.get("scope") not in {"point", "route"}:
+            raise ValueError(
+                f"{path}: {where}.sight_reference.scope must be point or route"
+            )
     legs = _array(variant.get("legs"), f"{where}.legs", path)
     if not legs or len(legs) > MAX_LEGS:
         raise ValueError(f"{path}: {where}.legs must contain 1..{MAX_LEGS} legs")
