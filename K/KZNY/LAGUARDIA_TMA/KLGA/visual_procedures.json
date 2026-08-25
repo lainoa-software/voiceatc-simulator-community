@@ -5,7 +5,10 @@
     {
       "id": "PARK_VISUAL_31",
       "name": "Park Visual RWY 31",
-      "aliases": ["park visual", "park visual thirty one"],
+      "aliases": [
+        "park visual",
+        "park visual thirty one"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -18,8 +21,11 @@
       },
       "availability": {
         "ceiling_ft": 3000,
-        "visibility": { "value": 5, "unit": "SM" },
-        "notes": "Amdt 1A 23FEB23. RNAV (GPS) X RWY 31 is an alternate entry; charted fix coordinates are navdata-backed."
+        "visibility": {
+          "value": 5,
+          "unit": "SM"
+        },
+        "notes": "Amdt 1A 23FEB23. Radar required. RNAV (GPS) X RWY 31 is an alternate feeder; published sight references are the airport or Twin White Tanks."
       },
       "variants": [
         {
@@ -27,7 +33,16 @@
           "runway": "31",
           "clearance_name": "Park Visual",
           "entry_point_id": "PACHU",
-          "sight_reference_point_id": "DCTRK",
+          "sight_reference_point_id": "GACAR",
+          "sight_reference": {
+            "name": "the Twin White Tanks",
+            "aliases": [
+              "Twin White Tanks",
+              "the airport",
+              "LaGuardia airport"
+            ],
+            "scope": "point"
+          },
           "legs": [
             {
               "id": "PACHU",
@@ -53,7 +68,7 @@
               "reference": "Seven High Rises",
               "altitude": {
                 "value_ft": 2500,
-                "status": "required",
+                "status": "recommended",
                 "kind": "at_or_above"
               },
               "speed": {
@@ -75,6 +90,11 @@
                 "value_kt": 165,
                 "status": "required",
                 "kind": "at_or_below"
+              },
+              "altitude": {
+                "value_ft": 2200,
+                "status": "recommended",
+                "kind": "at"
               }
             },
             {
@@ -85,7 +105,12 @@
               "longitude": -73.8443333333,
               "fly_over": true,
               "course_deg": 89,
-              "reference": "Flushing Meadows Corona Park Lake"
+              "reference": "Flushing Meadows Corona Park Lake",
+              "altitude": {
+                "value_ft": 1100,
+                "status": "recommended",
+                "kind": "at"
+              }
             },
             {
               "id": "KEYTH",
@@ -95,7 +120,12 @@
               "longitude": -73.8319638889,
               "fly_over": true,
               "course_deg": 44,
-              "reference": "Flushing Meadows Corona Park Round Pond"
+              "reference": "Flushing Meadows Corona Park Round Pond",
+              "altitude": {
+                "value_ft": 700,
+                "status": "recommended",
+                "kind": "at"
+              }
             },
             {
               "id": "DCTRK",
@@ -105,10 +135,17 @@
               "longitude": -73.8371388889,
               "fly_over": true,
               "course_deg": 359,
-              "reference": "Stadium"
+              "reference": "Stadium",
+              "altitude": {
+                "value_ft": 400,
+                "status": "recommended",
+                "kind": "at"
+              }
             }
           ],
-          "final": { "glidepath_deg": 3.0 }
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }

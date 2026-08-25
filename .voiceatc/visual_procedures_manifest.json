@@ -32,8 +32,8 @@
     },
     "KLGA": {
       "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_procedures.json",
-      "sha256": "1cab00708aab0fe361ee38176f634fa8fbcf13502e6581857c5c4d20d8822a86",
-      "size_bytes": 3667
+      "sha256": "51148708f5e7921510d70cdde9eb09e75647ca873973116badcc6079806a26df",
+      "size_bytes": 4627
     },
     "KLGB": {
       "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_procedures.json",
