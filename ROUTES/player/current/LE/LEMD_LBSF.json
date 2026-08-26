@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LEMD",
+  "dest": "LBSF",
+  "routes": [
+    {
+      "id": "39d5b330",
+      "route": "LEMD DCT NANDO T257 MABUX M871 PTC N851 MHN M603 MORSS DCT RIPAL M603 SOR M742 PAPIZ P92 SKJ T215 VELBA T343 MOREK DCT LBSF",
+      "created_at": "2026-08-26T15:37:08Z",
+      "creation_airac": "2608"
+    }
+  ]
+}
