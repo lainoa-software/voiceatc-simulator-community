@@ -50,6 +50,11 @@
       "sha256": "0b8114051ccbaa22c403b01560228b156d99ad8b09a398d71347340d4eeb624d",
       "size_bytes": 266
     },
+    "LEBL": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_options.json",
+      "sha256": "c87a0b08b48731df057a28c4a85e8429b8f06c51596e7d7354484b7c426b7e15",
+      "size_bytes": 1379
+    },
     "LTFM": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_options.json",
       "sha256": "5b6c23c6eec54cb24f1c66e0c79440fc947e8aed2a669d654ff59128269f64cf",
