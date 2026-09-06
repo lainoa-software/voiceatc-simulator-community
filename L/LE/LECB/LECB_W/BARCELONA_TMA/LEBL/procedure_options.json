@@ -1,0 +1,44 @@
+{
+  "airport": "LEBL",
+  "schema_version": 1,
+  "airac_min": 2609,
+  "defaults": {
+    "spawn_enabled": true,
+    "init_climb": 6000
+  },
+  "stars": {},
+  "sids": {
+    "AGEN7Q": { "spawn_enabled": true },
+    "DALI6Q": { "spawn_enabled": true },
+    "DIPE3Q": { "spawn_enabled": true },
+    "DUNE7Q": { "spawn_enabled": true },
+    "GRAU7Q": { "spawn_enabled": true },
+    "LARP7Q": { "spawn_enabled": true },
+    "LOBA8Q": { "spawn_enabled": true },
+    "LOTO7Q": { "spawn_enabled": true },
+    "MOPA6Q": { "spawn_enabled": true },
+    "NATP4Q": { "spawn_enabled": true },
+    "OLOX3Q": { "spawn_enabled": true },
+    "SENI7Q": { "spawn_enabled": true },
+    "DUQQ3Q": { "spawn_enabled": true },
+    "MAMU3Q": { "spawn_enabled": true },
+    "REBU3Q": { "spawn_enabled": true },
+    "VIBO3Q": { "spawn_enabled": true },
+
+    "AGEN4F": { "spawn_enabled": false },
+    "DALI4F": { "spawn_enabled": false },
+    "DIPE2F": { "spawn_enabled": false },
+    "DUNE4F": { "spawn_enabled": false },
+    "GRAU4F": { "spawn_enabled": false },
+    "LARP4F": { "spawn_enabled": false },
+    "LOBA4F": { "spawn_enabled": false },
+    "LOTO5F": { "spawn_enabled": false },
+    "MOPA3F": { "spawn_enabled": false },
+    "NATP2F": { "spawn_enabled": false },
+    "OLOX2F": { "spawn_enabled": false },
+    "SENI5F": { "spawn_enabled": false }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}
