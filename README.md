@@ -46,9 +46,12 @@ tree: [the content hierarchy guide](documentation/CONTENT_HIERARCHY.md).
 2. Run `python tools/content_hierarchy.py --validate-only`, plus the validator
    for the file you edited — see
    [Validate and Submit](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Validate-and-Submit).
-3. Open a pull request named `[FIR/Airport] Updated/Fixed/Added…`, for example
+3. Test it in your own game first — see
+   [Validate and Submit](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Validate-and-Submit)
+   § Test in the game.
+4. Open a pull request named `[FIR/Airport] Updated/Fixed/Added…`, for example
    `[ESSA] Updated MVAs`.
-4. Say where the data comes from. Automatic checks run first, then a maintainer
+5. Say where the data comes from. Automatic checks run first, then a maintainer
    reviews the data itself.
 
 `procedure_options.json`, `constraints.json`, `visual_procedures.json`,
