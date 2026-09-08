@@ -245,5 +245,7 @@
     "V/VH/VHHK/HONGKONG_TMA": [],
     "R/RK/RKRR/JEJU_TMA": ["RKPC"],
     "R/RK/RKRR/GIMHAE_TMA": ["RKPK"]
-  }
+  ,
+    "E/ED/EDGG/EDFH_APP": ["EDFH"]
+}
 }
