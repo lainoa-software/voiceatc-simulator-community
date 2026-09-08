@@ -4,7 +4,7 @@
   "airac_min": 2609,
   "defaults": {
     "spawn_enabled": true,
-    "init_climb": 6000
+    "init_climb": 6000.0
   },
   "stars": {},
   "sids": {
