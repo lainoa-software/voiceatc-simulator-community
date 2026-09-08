@@ -52,13 +52,13 @@
       "source_airac": "2609"
     },
     "runway_configs_zip": {
-      "airport_count": 134,
+      "airport_count": 135,
       "asset_name": "runway-configs-2609.zip",
       "content_type": "application/zip",
       "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-09-08/runway-configs-2609.zip",
       "preserves_repo_paths": true,
-      "sha256": "faf136e21e537f8ae47444270ecd6a99e86daf646ddec16310b789fcd67bfc17",
-      "size_bytes": 42325
+      "sha256": "5b51ecc6819ec7a950afefe6e8a37cb6e27927f774168eceeb9d0268b546f206",
+      "size_bytes": 42608
     },
     "sector_data_zip": {
       "asset_name": "sector-data-2609.zip",
@@ -70,8 +70,8 @@
       "size_bytes": 48581
     }
   },
-  "commit_sha": "6359777754415f201c045f737802cf05319a5cf0",
-  "published_at": "2026-09-08T05:56:27Z",
+  "commit_sha": "861fa515db28e6d704e2c724e750513ea029ac31",
+  "published_at": "2026-09-08T13:21:03Z",
   "release_tag": "daily-2026-09-08",
   "release_title": "Daily Community Release - Tuesday 2026-09-08",
   "repo": "lainoa-software/voiceatc-simulator-community",
