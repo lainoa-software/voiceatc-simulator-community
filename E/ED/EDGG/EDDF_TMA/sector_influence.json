@@ -2,7 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "DFAN",
-      "airports": ["EDDF"]
+      "airports": ["EDDF", "EDFH"]
     }
   ]
 }
