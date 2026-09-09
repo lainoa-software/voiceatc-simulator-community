@@ -3247,9 +3247,7 @@
       "YSSY_RKSI": {
         "bc299822": {
           "checked_airac": "2609",
-          "reasons": [
-            "airway_disconnect: YSSY->RKSI: RIC not on airway H530"
-          ],
+          "reasons": ["airway_disconnect: YSSY->RKSI: RIC not on airway H530"],
           "status": "deprecated"
         }
       },
