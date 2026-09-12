@@ -1,5 +1,5 @@
 {
-  "airports": ["EDDF"],
+  "airports": ["EDDF", "EDFH"],
   "runway_config": "25",
   "line_sections": [
     {
