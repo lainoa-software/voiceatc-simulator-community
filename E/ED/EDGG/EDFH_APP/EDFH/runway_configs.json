@@ -3,13 +3,13 @@
   "runway_configs": [
     {
       "id": "21_CONFIG",
-      "name": "21 Config.",
+      "name": "21 CONFIG.",
       "arr": "21",
       "dep": "21"
     },
     {
       "id": "03_CONFIG",
-      "name": "03 Config.",
+      "name": "03 CONFIG.",
       "arr": "03",
       "dep": "03"
     }
