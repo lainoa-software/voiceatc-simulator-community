@@ -114,7 +114,7 @@
   "terminal_scopes": {
     "E/EB/EBBU/BRUSSELS_TMA": ["EBBR"],
     "E/ED/EDGG/DUSSELDORF_TMA": ["EDDL"],
-    "E/ED/EDGG/EDDF_TMA": ["EDDF"],
+    "E/ED/EDGG/EDDF_TMA": ["EDDF", "EDFH"],
     "E/ED/EDGG/EDDS_TMA": ["EDDS"],
     "E/ED/EDMM/EDDC_TMA": ["EDAB", "EDDC"],
     "E/ED/EDMM/EDDM_TMA": ["EDDM", "EDMA", "EDMO"],
@@ -244,7 +244,6 @@
     "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
     "V/VH/VHHK/HONGKONG_TMA": [],
     "R/RK/RKRR/JEJU_TMA": ["RKPC"],
-    "R/RK/RKRR/GIMHAE_TMA": ["RKPK"],
-    "E/ED/EDGG/EDFH_APP": ["EDFH"]
+    "R/RK/RKRR/GIMHAE_TMA": ["RKPK"]
   }
 }
