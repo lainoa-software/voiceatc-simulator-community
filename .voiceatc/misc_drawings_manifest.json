@@ -108,18 +108,18 @@
     },
     "LTBA": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/misc_drawings.json",
-      "sha256": "ba8ad0159bb8c5863603d11e6c44c9023cf64ebb62ddfd6390a9e02e3a72727c",
-      "size_bytes": 4054
+      "sha256": "d58c1b267a8de0e7b1703ad7a232daed9a4e2e5c9e5d6915db16b784e99e5371",
+      "size_bytes": 11224
     },
     "LTFJ": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/misc_drawings.json",
-      "sha256": "ba8ad0159bb8c5863603d11e6c44c9023cf64ebb62ddfd6390a9e02e3a72727c",
-      "size_bytes": 4054
+      "sha256": "d58c1b267a8de0e7b1703ad7a232daed9a4e2e5c9e5d6915db16b784e99e5371",
+      "size_bytes": 11224
     },
     "LTFM": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/misc_drawings.json",
-      "sha256": "ba8ad0159bb8c5863603d11e6c44c9023cf64ebb62ddfd6390a9e02e3a72727c",
-      "size_bytes": 4054
+      "sha256": "d58c1b267a8de0e7b1703ad7a232daed9a4e2e5c9e5d6915db16b784e99e5371",
+      "size_bytes": 11224
     },
     "OMDB": {
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
@@ -138,12 +138,12 @@
     }
   },
   "asset_name": "misc-drawings-2609.zip",
-  "commit_sha": "8577265d0301fb21afe3e489f0428c7800cc6589",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-09-19/misc-drawings-2609.zip",
-  "published_at": "2026-09-19T05:50:51Z",
-  "release_tag": "daily-2026-09-19",
+  "commit_sha": "cb74f8ea1c193cf5198108fc1b3c7ead098ef3a0",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-09-20/misc-drawings-2609.zip",
+  "published_at": "2026-09-20T05:28:43Z",
+  "release_tag": "daily-2026-09-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "3d8c6ecf5963b7f92c72d60d04cf0f6923ee478e9bdd34f831df2648d8b6e74b",
-  "size_bytes": 190077
+  "sha256": "088a2822a7abba1d64379e61feefc9b57908ba8ae3dcc9c7fb266d4dcbaf0b25",
+  "size_bytes": 191238
 }
