@@ -3450,7 +3450,9 @@
       "YSSY_RKSI": {
         "bc299822": {
           "checked_airac": "2609",
-          "reasons": ["airway_disconnect: YSSY->RKSI: RIC not on airway H530"],
+          "reasons": [
+            "airway_disconnect: YSSY->RKSI: RIC not on airway H530"
+          ],
           "status": "deprecated"
         }
       },
@@ -3939,7 +3941,7 @@
     "deep_validation": false,
     "pairs": {}
   },
-  "generated_at": "2026-09-22T06:11:42Z",
+  "generated_at": "2026-09-23T05:56:56Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
