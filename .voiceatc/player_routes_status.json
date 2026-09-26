@@ -1558,6 +1558,11 @@
         }
       },
       "RKPS_RKSS": {
+        "217711bb": {
+          "checked_airac": "2609",
+          "reasons": [],
+          "status": "ok"
+        },
         "e17f08bb": {
           "checked_airac": "2609",
           "reasons": [],
@@ -2787,6 +2792,11 @@
           "checked_airac": "2609",
           "reasons": [],
           "status": "ok"
+        },
+        "a591c164": {
+          "checked_airac": "2609",
+          "reasons": [],
+          "status": "ok"
         }
       },
       "RKSS_RKPU": {
@@ -3450,7 +3460,9 @@
       "YSSY_RKSI": {
         "bc299822": {
           "checked_airac": "2609",
-          "reasons": ["airway_disconnect: YSSY->RKSI: RIC not on airway H530"],
+          "reasons": [
+            "airway_disconnect: YSSY->RKSI: RIC not on airway H530"
+          ],
           "status": "deprecated"
         }
       },
@@ -3939,7 +3951,7 @@
     "deep_validation": false,
     "pairs": {}
   },
-  "generated_at": "2026-09-26T06:09:03Z",
+  "generated_at": "2026-09-26T06:20:50Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
