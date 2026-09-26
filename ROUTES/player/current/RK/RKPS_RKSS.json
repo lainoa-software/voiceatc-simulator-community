@@ -8,6 +8,12 @@
       "route": "RKPS DCT SARAM Z83 TGU Y782 SOT DCT SEL DCT RKSS",
       "created_at": "2026-08-09T08:55:01Z",
       "creation_airac": "2608"
+    },
+    {
+      "id": "217711bb",
+      "route": "RKPS DCT SARAM Z83 TGU Y782 BITUX Z53 BASEM Y685 GUKDO DCT RKSS",
+      "created_at": "2026-09-26T06:11:13Z",
+      "creation_airac": "2609"
     }
   ]
 }
