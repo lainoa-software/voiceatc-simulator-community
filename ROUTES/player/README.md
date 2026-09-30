@@ -100,3 +100,8 @@ Consequences worth remembering:
   `route_token_pattern` / `token_unknown` codes stayed in `DEPRECATING_CODES` for
   previously stored statuses but are no longer emitted.
 - A route is inspected to the end; one bad token no longer hides later faults.
+- At an airport with STARs the last fix must be a STAR's first fix or an approach
+  transition's first fix (`tbl_pf_iaps`, route type `A`, `IF` leg); anything else is
+  `star_entry_not_in_procedure`. Routes end at an approach fix when every STAR entry
+  lies behind the aircraft, and the game flies that fix as the arrival's clearance
+  limit (game `rules/procedures-approach-guidance-and-holds.md`).

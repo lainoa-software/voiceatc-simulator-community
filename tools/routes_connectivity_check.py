@@ -177,6 +177,8 @@ class NavdataIndex:
         self.star_airports: set[str] = set()
         self.star_waypoints: dict[str, set[str]] = {}
         self._load_star_waypoints()
+        self.approach_entries: dict[str, set[str]] = {}
+        self._load_approach_entries()
         self.airway_sequences: dict[str, list[str]] = {}
         self._load_airway_sequences()
 
@@ -235,6 +237,27 @@ class NavdataIndex:
         except sqlite3.OperationalError:
             pass  # table absent in mock/older navdata — skip silently
 
+    def _load_approach_entries(self) -> None:
+        """First fixes of approach transitions (route_type A, IF leg): where a route may end without a STAR.
+
+        The generator files to one of these when every STAR entry lies behind the aircraft, and the game flies
+        it as the arrival's clearance limit, joining the approach there (Routes rules/procedure-selection.md;
+        game rules/procedures-approach-guidance-and-holds.md "Arrivals filed to an approach fix").
+        """
+        try:
+            with closing(sqlite3.connect(self.db_path)) as con:
+                query = (
+                    "SELECT airport_identifier, waypoint_identifier FROM tbl_pf_iaps "
+                    "WHERE route_type = 'A' AND path_termination = 'IF'"
+                )
+                for row in con.execute(query):
+                    apt = str(row[0] or "").strip().upper()
+                    wpt = str(row[1] or "").strip().upper()
+                    if apt and wpt:
+                        self.approach_entries.setdefault(apt, set()).add(wpt)
+        except sqlite3.OperationalError:
+            pass  # table absent in mock/older navdata — only STAR entries then qualify
+
     def _load_values(self, query: str) -> set[str]:
         try:
             with closing(sqlite3.connect(self.db_path)) as con:
@@ -287,10 +310,15 @@ class NavdataIndex:
         return fix.strip().upper() in self.airway_sequences.get(airway.strip().upper(), ())
 
     def is_valid_star_entry_point(self, airport: str, fix: str) -> bool:
-        """Return True if fix is a published STAR entry point for airport, or if the
-        airport has no STAR data (so the check is skipped for airports without procedures)."""
+        """Return True if fix is a published STAR entry point or approach-transition first fix for airport, or if
+        the airport has no STAR data (so the check is skipped for airports without procedures)."""
         apt = airport.strip().upper()
-        return apt not in self.star_airports or fix.strip().upper() in self.star_waypoints.get(apt, set())
+        ident = fix.strip().upper()
+        return (
+            apt not in self.star_airports
+            or ident in self.star_waypoints.get(apt, set())
+            or ident in self.approach_entries.get(apt, set())
+        )
 
 
 def parse_routes_file(routes_path: Path) -> tuple[str, list[RouteRow]]:
@@ -566,7 +594,7 @@ def validate_routes(
                     errors.append(Finding(
                         row.line_number, "error", "star_entry_not_in_procedure",
                         f"{row.origin}->{row.dest}: last fix '{last_fix}' is not a published "
-                        f"STAR entry point for {row.dest} — possible proximity substitution",
+                        f"STAR or approach entry point for {row.dest} — possible proximity substitution",
                     ))
 
         if len(errors) >= max_findings:

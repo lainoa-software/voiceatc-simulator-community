@@ -69,6 +69,8 @@ def create_graph_db(path: Path) -> None:
             (2, "GOOD_ENTRY", 0.0, 1.0),
             (3, "WRONG_FIX", 0.0, 2.0),
             (4, "MID_STAR", 0.0, 3.0),
+            (5, "APP_IAF", 0.0, 4.0),
+            (6, "APP_FAF", 0.0, 5.0),
         ],
     )
     cur.executemany(
@@ -81,6 +83,8 @@ def create_graph_db(path: Path) -> None:
             (1, 1, 2, "Y1", 10.0),
             (2, 1, 3, "Y1", 10.0),
             (3, 1, 4, "Y1", 10.0),
+            (4, 1, 5, "Y1", 10.0),
+            (5, 1, 6, "Y1", 10.0),
         ],
     )
     con.commit()
@@ -88,7 +92,8 @@ def create_graph_db(path: Path) -> None:
 
 
 def create_navdata_with_stars(path: Path) -> None:
-    """Navdata that includes tbl_pe_stars — GOOD_ENTRY is valid for KDDD, WRONG_FIX is not."""
+    """Navdata with tbl_pe_stars and tbl_pf_iaps: GOOD_ENTRY (a STAR's first fix) and APP_IAF (an approach
+    transition's first fix) are valid arrival ends for KDDD; WRONG_FIX, MID_STAR and APP_FAF are not."""
     con = sqlite3.connect(path)
     cur = con.cursor()
     cur.executescript(
@@ -105,10 +110,31 @@ def create_navdata_with_stars(path: Path) -> None:
             seqno INTEGER NOT NULL,
             waypoint_identifier TEXT NOT NULL
         );
+        CREATE TABLE tbl_pf_iaps (
+            airport_identifier TEXT NOT NULL,
+            procedure_identifier TEXT NOT NULL,
+            transition_identifier TEXT,
+            route_type TEXT NOT NULL,
+            seqno INTEGER NOT NULL,
+            path_termination TEXT NOT NULL,
+            waypoint_identifier TEXT NOT NULL
+        );
         """
     )
     cur.executemany("INSERT INTO tbl_pa_airports VALUES (?)", [("KAAA",), ("KDDD",)])
-    cur.executemany("INSERT INTO tbl_ea_enroute_waypoints VALUES (?)", [("AAA",), ("GOOD_ENTRY",), ("MID_STAR",), ("WRONG_FIX",)])
+    cur.executemany(
+        "INSERT INTO tbl_ea_enroute_waypoints VALUES (?)",
+        [("AAA",), ("GOOD_ENTRY",), ("MID_STAR",), ("WRONG_FIX",), ("APP_IAF",), ("APP_FAF",)],
+    )
+    cur.executemany(
+        "INSERT INTO tbl_pf_iaps VALUES (?, ?, ?, ?, ?, ?, ?)",
+        [
+            ("KDDD", "I09", "APP_IAF", "A", 10, "IF", "APP_IAF"),
+            ("KDDD", "I09", "APP_IAF", "A", 20, "TF", "APP_FAF"),
+            ("KDDD", "I09", None, "I", 10, "IF", "APP_FAF"),
+            ("KDDD", "I09", None, "I", 20, "TF", "RW09"),
+        ],
+    )
     cur.executemany(
         "INSERT INTO tbl_pe_stars(airport_identifier, procedure_identifier, transition_identifier, route_type, seqno, waypoint_identifier) VALUES (?, ?, ?, ?, ?, ?)",
         [
@@ -203,7 +229,35 @@ class StarEntryValidationTests(unittest.TestCase):
 
             self.assertFalse(summary.is_valid)
             self.assertEqual("star_entry_not_in_procedure", summary.errors[0].code)
-            self.assertIn("is not a published STAR entry point", summary.errors[0].detail)
+            self.assertIn("is not a published STAR or approach entry point", summary.errors[0].detail)
+
+    def _validate_last_fix(self, last_fix: str) -> object:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            root = Path(tmp_dir)
+            routes_path = root / "routes.tsv"
+            graph_db = root / "graph.s3db"
+            navdata_db = root / "navdata.s3db"
+            create_graph_db(graph_db)
+            create_navdata_with_stars(navdata_db)
+            routes_path.write_text(
+                "airac 2602\n"
+                "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+                f"KAAA\tKDDD\tKAAA DCT AAA Y1 {last_fix} DCT KDDD\t2602\tLainoaSoftware\n",
+                encoding="utf-8",
+            )
+            return MODULE.validate_routes(routes_path, graph_db, navdata_db, strict_dct=False, max_findings=10)
+
+    def test_approach_transition_start_passes_at_an_airport_with_stars(self) -> None:
+        """Routes end without a STAR at an approach transition's first fix when every STAR entry lies behind the
+        aircraft; the game flies that fix as the arrival's clearance limit and joins the approach there."""
+        summary = self._validate_last_fix("APP_IAF")
+        self.assertEqual([], [e.code for e in summary.errors])
+
+    def test_a_later_approach_fix_is_not_an_arrival_end(self) -> None:
+        """Only an approach transition's first fix qualifies; a later approach fix is a proximity substitution."""
+        summary = self._validate_last_fix("APP_FAF")
+        self.assertEqual(["star_entry_not_in_procedure"], [e.code for e in summary.errors])
+        self.assertIn("is not a published STAR or approach entry point", summary.errors[0].detail)
 
     def test_check_skipped_without_star_table(self) -> None:
         """When tbl_pe_stars is absent from navdata, no STAR check runs — no false failure."""
