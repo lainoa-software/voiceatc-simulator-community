@@ -50,6 +50,7 @@ from routes_connectivity_check import (  # noqa: E402
     RouteRow,
     parse_routes_file,
     validate_routes,
+    load_airport_aliases,
 )
 
 # ---------------------------------------------------------------------------
@@ -85,6 +86,7 @@ def _validate_rows(
     navdata_db: Path,
     *,
     strict_dct: bool,
+    airport_aliases: dict[str, str] | None = None,
 ) -> list[RouteOutcome]:
     """Categorise every route row using the shared connectivity checker.
 
@@ -109,6 +111,7 @@ def _validate_rows(
         # Migration has to see every route: a findings cap stops the scan early
         # and would silently categorise the untouched tail as "ok".
         max_findings=sys.maxsize,
+        airport_aliases=airport_aliases,
     )
 
     errors_by_line: dict[int, list[Finding]] = {}
@@ -230,7 +233,7 @@ def _build_json_report(
         "schema_version": 1,
         "target_airac": target_airac,
         "source_airac": source_airac,
-        "generated_at_utc": datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "generated_at_utc": datetime.datetime.now(datetime.UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "graph_db": str(graph_path),
         "navdata_db": str(navdata_path),
         "summary": {
@@ -339,6 +342,7 @@ def main() -> int:
                         help="Path to compacted_route_graph_XXXX.s3db")
     parser.add_argument("--navdata", metavar="PATH", default="",
                         help="Path to navigraph_data.s3db — decides route acceptance")
+    parser.add_argument("--airport-aliases", type=Path, help="Reviewed same-site aliases for the target AIRAC")
     parser.add_argument("--target-airac", required=True, metavar="XXXX",
                         help="New AIRAC cycle to migrate to (4-digit)")
     parser.add_argument("--output-tsv", required=True, metavar="PATH",
@@ -418,7 +422,8 @@ def main() -> int:
     print(f"  Graph:   {graph_path} (FRA DCT warnings only)", flush=True)
     try:
         outcomes = _validate_rows(
-            routes_path, rows, graph_path, navdata_path, strict_dct=args.strict_dct
+            routes_path, rows, graph_path, navdata_path, strict_dct=args.strict_dct,
+            airport_aliases=load_airport_aliases(args.airport_aliases, target_airac),
         )
     except Exception as exc:
         print(f"ERROR validating routes: {exc}", file=sys.stderr)

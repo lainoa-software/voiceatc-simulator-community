@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import sqlite3
 import sys
 import tempfile
@@ -140,6 +141,45 @@ def create_navdata_db(path: Path) -> None:
 
 
 class RoutesConnectivityCheckTests(unittest.TestCase):
+    def test_airport_identifiers_follow_exact_us_and_same_site_resolution(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            database = Path(directory) / "navdata.s3db"
+            create_navdata_db(database)
+            with sqlite3.connect(database) as connection:
+                connection.execute("ALTER TABLE tbl_pa_airports ADD COLUMN country TEXT")
+                connection.executemany("INSERT INTO tbl_pa_airports VALUES (?, ?)", [
+                    ("F70", "UNITED STATES"), ("XYZ", "CANADA"),
+                    ("KNEW", "UNITED STATES"), ("AAA", "UNITED STATES"),
+                ])
+            connection.close()
+            index = MODULE.NavdataIndex(database, airport_aliases={"KOLD": "KNEW"})
+            self.assertTrue(index.has_airport("KF70"))
+            self.assertTrue(index.has_airport("KOLD"))
+            self.assertTrue(index.has_point("KOLD"))
+            self.assertFalse(index.has_airport("KXYZ"))
+            self.assertFalse(index.has_airport("EDBW"))
+            index.star_airports = {"KNEW", "KAAA", "AAA"}
+            index.star_waypoints = {"KNEW": {"FIX"}, "KAAA": {"EXACT"}, "AAA": {"WRONG"}}
+            self.assertTrue(index.is_valid_star_entry_point("KOLD", "FIX"))
+            self.assertFalse(index.is_valid_star_entry_point("KOLD", "BAD"))
+            self.assertTrue(index.is_valid_star_entry_point("KAAA", "EXACT"))
+            self.assertFalse(index.is_valid_star_entry_point("KAAA", "WRONG"))
+
+    def test_cycle_alias_manifest_fails_closed(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "aliases.json"
+            manifest = {"airac": "2610", "aliases": {"KOLD": {
+                "active_ident": "KNEW", "reason": "same_site_alias", "distance_nm": 0.0,
+            }}}
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertEqual({"KOLD": "KNEW"}, MODULE.load_airport_aliases(path, "2610"))
+            with self.assertRaises(ValueError):
+                MODULE.load_airport_aliases(path, "2609")
+            manifest["aliases"]["KOLD"]["distance_nm"] = 2.0
+            path.write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                MODULE.load_airport_aliases(path, "2610")
+
     def test_parse_route_tokens_accepts_expected_pattern(self) -> None:
         row = MODULE.RouteRow(12, "KAAA", "KDDD", "KAAA AAA Y1 CCC KDDD", "2602", "Tester")
 

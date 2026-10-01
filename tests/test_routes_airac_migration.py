@@ -41,6 +41,7 @@ class RoutesAiracMigrationTests(unittest.TestCase):
         *,
         target_airac: str = "2609",
         with_navdata: bool = True,
+        aliases: dict | None = None,
     ) -> tuple[int, list[str], dict]:
         """Run the migration end to end; return (exit_code, output_lines, report)."""
         routes_path = root / "routes.tsv"
@@ -67,6 +68,10 @@ class RoutesAiracMigrationTests(unittest.TestCase):
         ]
         if with_navdata:
             argv += ["--navdata", str(navdata_db)]
+        if aliases is not None:
+            alias_path = root / "aliases.json"
+            alias_path.write_text(json.dumps(aliases), encoding="utf-8")
+            argv += ["--airport-aliases", str(alias_path)]
 
         with mock.patch.object(sys, "argv", argv):
             exit_code = MODULE.main()
@@ -88,6 +93,18 @@ class RoutesAiracMigrationTests(unittest.TestCase):
             self.assertEqual(0, report["summary"]["lainoa_routes_to_rebuild"])
             self.assertEqual(0, report["summary"]["community_routes_needing_review"])
             self.assertIn(row, output_lines)
+
+    def test_target_cycle_alias_preserves_prior_route_bytes(self) -> None:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
+            row = f"KOLD\tKDDD\tKOLD DCT AAA Y1 CCC DCT KDDD\t2608\t{LAINOA}"
+            status, lines, report = self._run(Path(directory), [row], aliases={
+                "airac": "2609", "aliases": {"KOLD": {
+                    "active_ident": "KAAA", "reason": "same_site_alias", "distance_nm": 0,
+                }},
+            })
+            self.assertEqual(0, status)
+            self.assertEqual(1, report["summary"]["routes_ok"])
+            self.assertIn(row, lines)
 
     def test_graph_collapsed_pass_through_fix_is_not_rebuilt(self) -> None:
         """EEE is a pass-through fix the compacted graph bake deleted. The game

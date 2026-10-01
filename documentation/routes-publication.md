@@ -15,6 +15,15 @@ and lifecycle: [`ROUTES/player/README.md`](../ROUTES/player/README.md).
 
 ## Publication compatibility
 
+The migration and contribution checker resolve US local FAA identifiers with a
+leading `K` only when the exact four-character airport is absent and the local
+identifier belongs to the United States. Reviewed same-site renames can be passed
+with `--airport-aliases`; their manifest must name the validation cycle, an existing
+target airport and a same-site distance at most 0.01 NM. Migration checks the target
+cycle even while reading the prior-cycle table. Procedure checks use the resolved
+airport, while the source row remains byte-identical. Missing airports still fail;
+private exception and alias evidence never becomes a community release asset.
+
 `ROUTES/routes.tsv` and `ROUTES/routes_default_rich.tsv` are the coordinate-capable
 current/default route tables. Their `routes_legacy.tsv` and `routes_default.tsv`
 companions are deterministic projections for older simulator builds. Release
