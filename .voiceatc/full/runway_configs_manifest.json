@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2610-full.zip",
-  "commit_sha": "704582e8d5e32f13bae42c2e282586d1e9c4228f",
+  "commit_sha": "5145d3466589519238355811e2ac156b8dfda618",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-d/runway-configs-2610-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-e/runway-configs-2610-full.zip",
   "entries": [
     {
       "id": "EBBR",
@@ -849,13 +849,19 @@
       "repo_path": "T/TJ/TJZS/SAN_JUAN_TMA/TJSJ/runway_configs.json",
       "sha256": "94269b4c49a0b32301dc3b3438070fee1a38e47858c61b5799b1af71a4565666",
       "size_bytes": 242
+    },
+    {
+      "id": "VABB",
+      "repo_path": "V/VA/VABF/MUMBAI_TMA/VABB/runway_configs.json",
+      "sha256": "e3bf07bbb18c5229e9f4abcf048c08b0cdbfa70a7275ce0402a02a57e6427c87",
+      "size_bytes": 450
     }
   ],
-  "entry_count": 141,
-  "generated_at": "2026-10-04T15:03:42Z",
-  "published_at": "2026-10-04T15:03:42Z",
-  "release_tag": "daily-2026-10-04-d",
+  "entry_count": 142,
+  "generated_at": "2026-10-04T16:21:30Z",
+  "published_at": "2026-10-04T16:21:30Z",
+  "release_tag": "daily-2026-10-04-e",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "e33cb376dabf3a7885f00de200b54606bf3486b5a506a8c7730aec49c53bf7ef",
-  "size_bytes": 44285
+  "sha256": "bc47b7e0e6869ab441c015cdefb67b4e52f45fcd05b7b181e93654093dc93dd7",
+  "size_bytes": 44613
 }

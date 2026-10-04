@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2610.zip",
-  "bundle_count": 26,
+  "bundle_count": 27,
   "bundles": {
     "E/ED/EDGG/EDDF_TMA": {
       "files": {
@@ -495,14 +495,33 @@
           "size_bytes": 114
         }
       }
+    },
+    "V/VA/VABF/MUMBAI_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_configs.json",
+          "sha256": "ea7188b95911e4fd61c9b31638c24e0587f2ca84dd7b302372a826b57205b37d",
+          "size_bytes": 258
+        },
+        "definitions": {
+          "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_definitions.json",
+          "sha256": "34888c89f2500249cf882ceae72b2f2d7eeef14d227f13d7e8ea068cb85c8d07",
+          "size_bytes": 135760
+        },
+        "influence": {
+          "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_influence.json",
+          "sha256": "b28f0297c2e063790dabf38ce55c733c4e2f66921f0b9dc5caf4eeb161a3ddbb",
+          "size_bytes": 1289
+        }
+      }
     }
   },
-  "commit_sha": "704582e8d5e32f13bae42c2e282586d1e9c4228f",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-d/sector-data-2610.zip",
-  "published_at": "2026-10-04T15:03:42Z",
-  "release_tag": "daily-2026-10-04-d",
+  "commit_sha": "5145d3466589519238355811e2ac156b8dfda618",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-e/sector-data-2610.zip",
+  "published_at": "2026-10-04T16:21:30Z",
+  "release_tag": "daily-2026-10-04-e",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "3e10c96ea1b87c0aee8f03cb22fd59654db4c5d138d0943bb873e4a7ed65172c",
-  "size_bytes": 49354
+  "sha256": "df862276f5a5f5776cdb07832b044029899126b57c072f2db4b276f71a7b78ee",
+  "size_bytes": 86496
 }
