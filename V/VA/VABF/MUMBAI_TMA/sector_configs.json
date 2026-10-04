@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "APP_ONLY",
+      "runway_configs": ["RWY27", "RWY09", "RWY14", "RWY32"],
+      "sectors": [
+        {
+          "sector_ids": "VABB_APP",
+          "frequency": "127.900"
+        }
+      ]
+    }
+  ]
+}
