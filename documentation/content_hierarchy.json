@@ -21,7 +21,7 @@
     "P": ["PA", "PG", "PH"],
     "R": ["RC", "RK"],
     "T": ["TJ"],
-    "V": ["VH"]
+    "V": ["VA", "VH"]
   },
   "release_compatibility": {
     "color_profile_aliases": {
@@ -109,6 +109,7 @@
     "RCAA": { "authority": "navigraph_2607", "kind": "fir" },
     "RKRR": { "authority": "navigraph_2607", "kind": "fir" },
     "TJZS": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
+    "VABF": { "authority": "navigraph_2607", "kind": "fir" },
     "VHHK": { "authority": "navigraph_2607", "kind": "fir" }
   },
   "terminal_scopes": {
@@ -248,6 +249,7 @@
     "R/RK/RKRR/INCHEON_TMA": ["RKSI", "RKSS"],
     "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
     "V/VH/VHHK/HONGKONG_TMA": [],
+    "V/VA/VABF/MUMBAI_TMA": ["VABB"],
     "R/RK/RKRR/JEJU_TMA": ["RKPC"],
     "R/RK/RKRR/GIMHAE_TMA": ["RKPK"]
   }

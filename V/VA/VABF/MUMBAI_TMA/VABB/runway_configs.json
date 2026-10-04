@@ -1,0 +1,29 @@
+{
+  "airport": "VABB",
+  "runway_configs": [
+    {
+      "id": "RWY27",
+      "name": "ARR27 DEP27",
+      "arr": "27",
+      "dep": "27"
+    },
+    {
+      "id": "RWY09",
+      "name": "ARR09 DEP09",
+      "arr": "09",
+      "dep": "09"
+    },
+    {
+      "id": "RWY14",
+      "name": "ARR14 DEP14",
+      "arr": "14",
+      "dep": "14"
+    },
+    {
+      "id": "RWY32",
+      "name": "ARR32 DEP32",
+      "arr": "32",
+      "dep": "32"
+    }
+  ]
+}
