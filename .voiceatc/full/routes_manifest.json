@@ -1,15 +1,19 @@
 {
-  "commit_sha": "43a1c1445afaef09b22b547367e1c0bd23c74c6e",
+  "commit_sha": "fb489f08d0fd576f9355fbcacca7536ed9701b4e",
   "dataset": "routes",
   "entries": [
     {
       "airac": "2610",
       "asset_name": "routes-rich-2610-full.tsv",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-b/routes-rich-2610-full.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-c/routes-rich-2610-full.tsv",
       "id": "starless_arrivals",
-      "overlays": ["ROUTES/full/starless_arrivals.tsv"],
+      "overlays": [
+        "ROUTES/full/starless_arrivals.tsv"
+      ],
       "projection_id": "rich_route_coordinates_v1",
-      "requires": ["routes.starless_arrivals"],
+      "requires": [
+        "routes.starless_arrivals"
+      ],
       "route_count": 99856,
       "sha256": "802578c6cdd8cb14364e314a6ad27b04010bde7c2b78f16d4b7965152c04761c",
       "size_bytes": 12176330,
@@ -17,8 +21,8 @@
     }
   ],
   "entry_count": 1,
-  "generated_at": "2026-10-04T14:45:47Z",
-  "published_at": "2026-10-04T14:45:47Z",
-  "release_tag": "daily-2026-10-04-b",
+  "generated_at": "2026-10-04T14:56:25Z",
+  "published_at": "2026-10-04T14:56:25Z",
+  "release_tag": "daily-2026-10-04-c",
   "repo": "lainoa-software/voiceatc-simulator-community"
 }
