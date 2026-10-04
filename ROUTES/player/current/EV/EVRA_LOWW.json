@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "origin": "EVRA",
+  "dest": "LOWW",
+  "routes": [
+    {
+      "id": "7a0d18a1",
+      "route": "EVRA DCT BERIL UBORU ORZIK BOKSU DESEN MIKOV DCT LOWW",
+      "created_at": "2026-10-04T16:19:14Z",
+      "creation_airac": "2610"
+    },
+    {
+      "id": "4fc250e2",
+      "route": "EVRA DCT BERIL BOKSU DESEN MIKOV DCT LOWW",
+      "created_at": "2026-10-04T16:19:14Z",
+      "creation_airac": "2610"
+    },
+    {
+      "id": "7ab38f0e",
+      "route": "EVRA DCT BERIL SUWGI M857 BULEP EVINA BAVOK MIKOV DCT LOWW",
+      "created_at": "2026-10-04T16:19:14Z",
+      "creation_airac": "2610"
+    },
+    {
+      "id": "92f90a97",
+      "route": "EVRA DCT BERIL BOKSU SKARY BABNI TUTPI P182 REKLU DCT LOWW",
+      "created_at": "2026-10-04T16:19:14Z",
+      "creation_airac": "2610"
+    },
+    {
+      "id": "611d6aa5",
+      "route": "EVRA DCT BERIL NAPOT SUWGI M857 BULEP EVINA BAVOK MIKOV DCT LOWW",
+      "created_at": "2026-10-04T16:19:14Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
