@@ -8,13 +8,13 @@
     "asset_name": "routes_default_rich.tsv",
     "projection_id": "rich_route_coordinates_v1",
     "repo_path": "ROUTES/routes_default_rich.tsv",
-    "route_count": 99869,
-    "sha256": "5bbf8598de48ec4668acf859fcaf59679ba384df1bb7757fa14dddf9eed1ca6c",
-    "size_bytes": 15491771
+    "route_count": 100091,
+    "sha256": "8f14108bb702f782b94a72abd40a33c017ab3dd46d6040eeecb2eb2bb10e6c32",
+    "size_bytes": 15524023
   },
-  "route_count": 99869,
+  "route_count": 100091,
   "routes_tier": "offline_fallback",
   "schema_version": 1,
-  "sha256": "7823176bf59358b8a9ce8b9f0b72af73715ca1b39b2b572572e0a6992cd8593b",
-  "size_bytes": 15485890
+  "sha256": "c219663644454ee023b6f3e13ddf2222b946eabb3f6c0efbef17016c69dba60c",
+  "size_bytes": 15518142
 }
