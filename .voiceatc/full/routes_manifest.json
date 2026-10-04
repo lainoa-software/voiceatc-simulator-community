@@ -7,13 +7,9 @@
       "asset_name": "routes-rich-2610-full.tsv",
       "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-04-b/routes-rich-2610-full.tsv",
       "id": "starless_arrivals",
-      "overlays": [
-        "ROUTES/full/starless_arrivals.tsv"
-      ],
+      "overlays": ["ROUTES/full/starless_arrivals.tsv"],
       "projection_id": "rich_route_coordinates_v1",
-      "requires": [
-        "routes.starless_arrivals"
-      ],
+      "requires": ["routes.starless_arrivals"],
       "route_count": 99856,
       "sha256": "802578c6cdd8cb14364e314a6ad27b04010bde7c2b78f16d4b7965152c04761c",
       "size_bytes": 12176330,
