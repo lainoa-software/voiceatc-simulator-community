@@ -64,6 +64,11 @@
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/procedure_options.json",
       "sha256": "9e03f5944e37e4abc35143efcaaa16176d63e12d8a82749b0f620c0add692fec",
       "size_bytes": 182
+    },
+    "VABB": {
+      "repo_path": "V/VA/VABF/MUMBAI_TMA/VABB/procedure_options.json",
+      "sha256": "ef77b54e3585444e427b0f70a7e9dee498405bbb5bb0b3ed984883c5e9d702c2",
+      "size_bytes": 149
     }
   },
   "published_at": "2026-10-04T15:03:58Z",
