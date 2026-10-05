@@ -1,1 +1,14 @@
-123
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["21R", "21L", "03L", "03R"],
+      "sectors": [
+        {
+          "sector_ids": "VTBD_APP",
+          "frequency": "119.400"
+        }
+      ]
+    }
+  ]
+}
