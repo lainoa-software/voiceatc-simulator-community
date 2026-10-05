@@ -425,10 +425,10 @@ jobs:
               Path("."), published_at=""
           )
           visual_sight_reference_manifest_path = Path(
+              ".voiceatc/visual_sight_references_manifest.json"
+          )
           generated_visual_sight_reference_manifest = visual_sight_reference_module.airac_overrides.publish_raw_manifest(
               Path("."), visual_sight_reference_manifest_path, generated_visual_sight_reference_manifest
-          )
-              ".voiceatc/visual_sight_references_manifest.json"
           )
           current_visual_sight_reference_manifest: object = {}
           if visual_sight_reference_manifest_path.exists():
