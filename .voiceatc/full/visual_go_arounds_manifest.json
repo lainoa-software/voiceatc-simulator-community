@@ -1,0 +1,23 @@
+{
+  "airports": {
+    "KSFO": {
+      "repo_path": "K/KZOA/SFO_TMA/KSFO/visual_go_arounds.json",
+      "sha256": "c356c60ec9aef6df6c374a209e85309fbdc9e67f5c2b72c7dce172bae2e695dc",
+      "size_bytes": 1401
+    },
+    "LLBG": {
+      "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_go_arounds.json",
+      "sha256": "ad377da582158a1fc4e24d48a1db73a098fa962159191fed5242cb2b63cf4326",
+      "size_bytes": 6165
+    },
+    "LLER": {
+      "repo_path": "L/LL/LLLL/EILAT_TMA/LLER/visual_go_arounds.json",
+      "sha256": "d4385e259f6319b00c0fb426c4a8e58739d7c022bd255ae9e7c7bb0efeced9a9",
+      "size_bytes": 3387
+    }
+  },
+  "published_at": "2026-08-27T10:41:54Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "requires": ["community.airac_overrides"],
+  "schema_version": 1
+}

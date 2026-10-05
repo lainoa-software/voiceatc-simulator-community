@@ -1,0 +1,13 @@
+{
+  "airports": {
+    "RCTP": {
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/constraints.json",
+      "sha256": "c7bd589d0c58f0bb9cffd99ab11d99339664b57cf20b1ea316a3728487fccad7",
+      "size_bytes": 1070
+    }
+  },
+  "published_at": "2026-10-05T07:00:21Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "requires": ["community.airac_overrides"],
+  "schema_version": 1
+}
