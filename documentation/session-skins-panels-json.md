@@ -15,6 +15,18 @@ See [Where it goes](https://github.com/lainoa-software/voiceatc-simulator-commun
 
 See [Minimal example](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Regional-Skins#minimal-example).
 
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "extends": "generic",
+  "tokens": { "case": "upper", "bevel": { "width": 2 } },
+  "primitives": {
+    "bar_cell": { "states": { "normal": { "box": { "kind": "bevel", "fill": "bar" } } } }
+  }
+}
+```
+
 ## Name, author and description
 
 See [Name, author and description](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Regional-Skins#name-author-and-description).

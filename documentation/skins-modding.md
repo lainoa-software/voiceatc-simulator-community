@@ -7,6 +7,18 @@ Start at [Skins](https://github.com/lainoa-software/voiceatc-simulator-community
 
 See [Quick start](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#quick-start).
 
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "$schema": "../../tools/interface_contract/interface.schema.json",
+  "name": "Harbour Blue",
+  "author": "Your name",
+  "extends": "generic",
+  "tokens": { "colors": { "bar": "10233F", "panel": "0E1C33", "accent": "2F6DB5" } }
+}
+```
+
 ## The five parts
 
 See [The five parts](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#the-five-parts).
@@ -39,17 +51,85 @@ See [Cookbook](https://github.com/lainoa-software/voiceatc-simulator-community/w
 
 See [A three-colour recolour](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#a-three-colour-recolour).
 
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "name": "Harbour Blue",
+  "extends": "generic",
+  "tokens": { "colors": { "bar": "10233F", "panel": "0E1C33", "accent": "2F6DB5" } }
+}
+```
+
 ### A minimal dark skin
 
 See [A minimal dark skin](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#a-minimal-dark-skin).
+
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "name": "Night Shift",
+  "author": "Jane Modder",
+  "extends": "generic",
+  "tokens": {
+    "colors": {
+      "bar": "05070B", "edge": "1A1F2A", "panel": "080B11", "title": "10141C",
+      "accent": "1E2A3D", "well": "05070B", "button": "10141C", "field": "05070B",
+      "text": "A7B0C0", "dim": "5D6678", "value": "E4E8F0", "scope": "020305"
+    },
+    "case": "upper"
+  },
+  "primitives": {
+    "window": { "title": { "height": 22 } },
+    "list": { "row_height": 20, "current": { "mark": "<", "left_bar": 0 } }
+  }
+}
+```
 
 ### The radio as a status line
 
 See [The radio as a status line](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#the-radio-as-a-status-line).
 
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "name": "Quiet Radio",
+  "extends": "generic",
+  "components": { "radio": { "mode": "status_line" } }
+}
+```
+
 ### A STARS-like DCB bar
 
 See [A STARS-like DCB bar](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Authoring#a-stars-like-dcb-bar).
+
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "name": "Square Buttons",
+  "extends": "generic",
+  "components": {
+    "top": {
+      "mode": "dcb_grid",
+      "slots": {
+        "columns": [
+          {"ids": ["maps"]}, {"ids": ["procs"]}, {"ids": ["airspaces"]},
+          {"ids": ["tag", "range"]}, {"ids": ["vector", "tl"]}, {"ids": ["com", "tfc"]},
+          {"ids": ["vprof"]}, {"ids": ["warp", "pause"]}, {"ids": ["clr_qdm", "clr_routes"]},
+          {"ids": ["settings"], "width": 1.5}
+        ],
+        "status": [["clock", "airport", "qnh"], ["rwy"], ["radio"]]
+      },
+      "templates": { "range": "RANGE\n{value}", "airspaces": "AIR\nSPACE" }
+    },
+    "bottom": { "mode": "merged_into_top" },
+    "menus": { "mode": "dock_strip" }
+  }
+}
+```
 
 ## Schema maintenance
 

@@ -7,6 +7,26 @@ Start at [Skins](https://github.com/lainoa-software/voiceatc-simulator-community
 
 See [Make one](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Catalog#make-one).
 
+Canonical example, checked by the repository skin tests:
+
+```json
+{
+  "name": "Harbour Blue",
+  "author": "Jane Modder",
+  "description": "Cool blue bevelled cells with upper-case chrome.",
+  "extends": "generic",
+  "tokens": {
+    "colors": { "bar": "1F3555", "edge": "35527D" },
+    "fonts": { "text": "barlow_semi_condensed" },
+    "case": "upper",
+    "bevel": { "width": 2 }
+  },
+  "primitives": {
+    "bar_cell": { "states": { "normal": { "box": { "kind": "bevel", "fill": "bar" } } } }
+  }
+}
+```
+
 ## What you can and cannot change
 
 See [What you can and cannot change](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skin-Catalog#what-you-can-and-cannot-change).
