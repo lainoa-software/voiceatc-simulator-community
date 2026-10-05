@@ -17,6 +17,15 @@ def inline_run_commands(workflow: str) -> set[str]:
 
 
 class RequiredValidationWorkflowTests(unittest.TestCase):
+    def test_daily_release_embedded_python_compiles(self) -> None:
+        import textwrap
+        workflow = DAILY_WORKFLOW.read_text(encoding="utf-8")
+        blocks = re.findall(r"(?m)^([ ]*)python - <<'PY'\n(.*?)^\1PY$", workflow, re.S)
+        self.assertTrue(blocks)
+        for index, (_, source) in enumerate(blocks):
+            with self.subTest(block=index):
+                compile(textwrap.dedent(source), str(DAILY_WORKFLOW), "exec")
+
     def test_required_workflow_runs_on_every_pull_request(self) -> None:
         workflow = REQUIRED_WORKFLOW.read_text(encoding="utf-8")
         trigger_block = workflow.split("permissions:", maxsplit=1)[0]
