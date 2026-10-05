@@ -1,5 +1,8 @@
 # Charted visual procedures
 
+Contributor workflow: [Visual Procedures](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Visual-Procedures).
+This page owns the detailed schema, evidence contract and maintainer review checklist.
+
 `visual_procedures.json` contains named, charted IFR visual approaches for one
 airport. It is community data consumed by the simulator's 0.6.2 visual-
 approach catalog. A generic visual approach is a simulator capability and does
@@ -204,20 +207,9 @@ merge.
 
 ## Checks
 
-Run these on the file you are contributing:
-
-```text
-python tools/visual_procedures_manifest.py --validate-sources
-python tools/visual_go_arounds_manifest.py --validate-sources
-python tools/visual_sight_references_manifest.py --validate-sources
-python tools/content_hierarchy.py --validate-only
-python -m unittest discover -s tests -p "test_*.py"
-```
-
-Commit `visual_procedures.json`, and `visual_go_arounds.json` when a sourced
-go-around is present. Commit `visual_sight_references.json` only for variants
-that pass the sight-object evidence gate. Do not run Prettier and do not commit
-anything under `.voiceatc/`.
+Follow the [visual contribution checks](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Visual-Procedures#validate) and
+[local installation guide](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Test-Locally#visual-procedures-and-their-companion-files).
+Keep related source files together; generated indexes are CI-owned.
 
 ## The raw-file index
 
@@ -227,7 +219,7 @@ repository path, canonical LF-byte SHA-256, and byte size. They are direct
 raw-file indexes: none is a release archive, and none may cause a visual-
 procedure ZIP to be added.
 
-Both are written by CI, never by hand. `format-all-json.yml` rebuilds them after
+These indexes are written by CI, never by hand. `format-all-json.yml` rebuilds them after
 every merge with `--preserve-published-at`, because formatting changes the
 protected bytes without being a new publication, and `daily-release.yml` mints
 the actual publication timestamp nightly. Each writer verifies its own output
