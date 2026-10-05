@@ -2,6 +2,11 @@
 """Validate visual_go_arounds.json sidecars and maintain their raw-file manifest."""
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -212,11 +217,11 @@ def _validate_leg(value: object, where: str, path: Path, prior_sequence: int) ->
     return sequence
 
 
-def _visual_keys(path: Path) -> dict[tuple[str, str], str]:
+def _visual_keys(path: Path, tier: str = "") -> dict[tuple[str, str], str]:
     source = path.with_name("visual_procedures.json")
     if not source.is_file():
         raise ValueError(f"{path}: sibling visual_procedures.json is required")
-    payload = json.loads(source.read_text(encoding="utf-8"))
+    payload = airac_overrides.resolve(json.loads(source.read_text(encoding="utf-8")), tier)
     result: dict[tuple[str, str], str] = {}
     for procedure in payload.get("procedures", []):
         for variant in procedure.get("variants", []):
@@ -224,7 +229,7 @@ def _visual_keys(path: Path) -> dict[tuple[str, str], str]:
     return result
 
 
-def validate_go_around_schema(payload: dict[str, Any], path: Path) -> None:
+def validate_go_around_schema(payload: dict[str, Any], path: Path, tier: str = "") -> None:
     _strict_keys(payload, TOP_KEYS, "root", path)
     if payload.get("schema_version") != LEGACY_VISUAL_SCHEMA_VERSION:
         raise ValueError(f"{path}: schema_version must be {LEGACY_VISUAL_SCHEMA_VERSION}")
@@ -234,7 +239,7 @@ def validate_go_around_schema(payload: dict[str, Any], path: Path) -> None:
     entries = _array(payload.get("go_arounds"), "go_arounds", path)
     if not entries or len(entries) > MAX_GO_AROUNDS:
         raise ValueError(f"{path}: go_arounds must contain 1..{MAX_GO_AROUNDS} entries")
-    visual_keys = _visual_keys(path)
+    visual_keys = _visual_keys(path, tier)
     seen: set[tuple[str, str]] = set()
     for index, value in enumerate(entries):
         where = f"go_arounds[{index}]"
@@ -274,9 +279,20 @@ def validate_go_around_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     if len(raw_bytes) > MAX_FILE_BYTES:
         raise ValueError(f"{path}: file exceeds {MAX_FILE_BYTES} bytes")
     payload = json.loads(raw_bytes.decode("utf-8"))
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier in ("", "bundled", "latest"):
+        document = airac_overrides.resolve(payload, tier)
+        checked = _validate_go_around_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_go_around_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: visual go-arounds file must be an object")
-    validate_go_around_schema(payload, path)
+    validate_go_around_schema(payload, path, tier)
     airport = str(payload["airport"]).upper()
     if airport != path.parent.name.upper():
         raise ValueError(f"{path}: airport must match its parent folder")
@@ -367,6 +383,7 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
     if args.write:
+        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         print(f"Wrote {MANIFEST_PATH.relative_to(ROOT).as_posix()}")

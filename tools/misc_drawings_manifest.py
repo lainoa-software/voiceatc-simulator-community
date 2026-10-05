@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -181,6 +186,16 @@ def _validate_dataset(dataset: object, dataset_label: str, path: Path) -> None:
 
 def validate_misc_drawings_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_misc_drawings_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_misc_drawings_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     airports = _parse_airports_metadata(payload, path)
 
     drawings = payload.get("drawings", None)

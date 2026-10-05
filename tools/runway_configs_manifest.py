@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -83,6 +88,16 @@ def validate_runway_file(path: Path, root: Path = ROOT) -> dict[str, object]:
         payload = json.loads(raw_bytes.decode("utf-8"))
     except Exception as exc:
         raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_runway_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_runway_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
 
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: runway config must be a JSON object")

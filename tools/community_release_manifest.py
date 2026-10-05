@@ -22,6 +22,7 @@ import routes_release_manifest
 import runway_configs_manifest
 import sector_data_manifest
 import color_profiles_manifest
+import airac_overrides
 import release_gates
 import routes_full_feed
 import skins_manifest
@@ -453,6 +454,9 @@ def build_release_bundle(
             "skins", skins_base_manifest["skins"], gates=gates
         ),
     }
+    for dataset in ("mva", "runway_configs", "misc_drawings"):
+        airac_overrides.project_feed(root, gated[dataset])
+    sector_default_sources, sector_full_sources = airac_overrides.project_sector_feed(root, gated["sector_data"])
     mva_airports = gated["mva"]["default"]
     runway_airports = gated["runway_configs"]["default"]
     sector_data_bundles = gated["sector_data"]["default"]
@@ -467,15 +471,10 @@ def build_release_bundle(
 
     mva_repo_paths = sorted({str(entry["repo_path"]) for entry in mva_airports.values()})
     runway_repo_paths = [str(entry["repo_path"]) for entry in runway_airports.values()]
-    sector_data_repo_paths = [
-        str(file_entry["repo_path"])
-        for bundle in sector_data_bundles.values()
-        for file_entry in bundle["files"].values()
-    ]
     misc_drawings_repo_paths = sorted({str(entry["repo_path"]) for entry in misc_drawings_airports.values()})
     mva_asset = build_deterministic_zip(root, mva_repo_paths, output_dir / mva_asset_name)
     runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
-    sector_data_asset = build_deterministic_zip(root, sector_data_repo_paths, output_dir / sector_data_asset_name)
+    sector_data_asset = build_deterministic_zip_from_sources(root, sector_default_sources, output_dir / sector_data_asset_name)
     misc_drawings_asset = build_deterministic_zip(root, misc_drawings_repo_paths, output_dir / misc_drawings_asset_name)
     color_profiles_asset = build_deterministic_zip_from_sources(
         root,
@@ -486,22 +485,22 @@ def build_release_bundle(
     full_assets = {
         "mva": build_deterministic_zip(
             root,
-            sorted({str(entry["repo_path"]) for entry in mva_base_manifest["airports"].values()}),
+            airac_overrides.full_repo_paths(gated["mva"]),
             output_dir / _full_asset_name(mva_asset_name),
         ),
         "runway_configs": build_deterministic_zip(
             root,
-            release_gates.entry_repo_paths(runway_base_manifest["airports"]),
+            airac_overrides.full_repo_paths(gated["runway_configs"]),
             output_dir / _full_asset_name(runway_asset_name),
         ),
-        "sector_data": build_deterministic_zip(
+        "sector_data": build_deterministic_zip_from_sources(
             root,
-            release_gates.entry_repo_paths(sector_data_base_manifest["bundles"]),
+            sector_full_sources,
             output_dir / _full_asset_name(sector_data_asset_name),
         ),
         "misc_drawings": build_deterministic_zip(
             root,
-            release_gates.entry_repo_paths(misc_drawings_base_manifest["airports"]),
+            airac_overrides.full_repo_paths(gated["misc_drawings"]),
             output_dir / _full_asset_name(misc_drawings_asset_name),
         ),
         "color_profiles": build_deterministic_zip_from_sources(

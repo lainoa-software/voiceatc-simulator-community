@@ -307,6 +307,9 @@ jobs:
           constraints_spec.loader.exec_module(constraints_module)
           generated_constraints_manifest = constraints_module.build_manifest(Path("."))
           constraints_manifest_path = Path(".voiceatc/constraints_manifest.json")
+          generated_constraints_manifest = constraints_module.airac_overrides.publish_raw_manifest(
+              Path("."), constraints_manifest_path, generated_constraints_manifest
+          )
 
           current_constraints_manifest: object = {}
           if constraints_manifest_path.exists():
@@ -332,6 +335,9 @@ jobs:
           options_spec.loader.exec_module(options_module)
           generated_options_manifest = options_module.build_manifest(Path("."))
           options_manifest_path = Path(".voiceatc/procedure_options_manifest.json")
+          generated_options_manifest = options_module.airac_overrides.publish_raw_manifest(
+              Path("."), options_manifest_path, generated_options_manifest
+          )
 
           current_options_manifest: object = {}
           if options_manifest_path.exists():
@@ -353,6 +359,9 @@ jobs:
           visual_spec.loader.exec_module(visual_module)
           generated_visual_manifest = visual_module.build_manifest(Path("."), published_at="")
           visual_manifest_path = Path(".voiceatc/visual_procedures_manifest.json")
+          generated_visual_manifest = visual_module.airac_overrides.publish_raw_manifest(
+              Path("."), visual_manifest_path, generated_visual_manifest
+          )
           current_visual_manifest: object = {}
           if visual_manifest_path.exists():
               try:
@@ -382,6 +391,9 @@ jobs:
               Path("."), published_at=""
           )
           visual_go_around_manifest_path = Path(".voiceatc/visual_go_arounds_manifest.json")
+          generated_visual_go_around_manifest = visual_go_around_module.airac_overrides.publish_raw_manifest(
+              Path("."), visual_go_around_manifest_path, generated_visual_go_around_manifest
+          )
           current_visual_go_around_manifest: object = {}
           if visual_go_around_manifest_path.exists():
               try:
@@ -413,6 +425,9 @@ jobs:
               Path("."), published_at=""
           )
           visual_sight_reference_manifest_path = Path(
+          generated_visual_sight_reference_manifest = visual_sight_reference_module.airac_overrides.publish_raw_manifest(
+              Path("."), visual_sight_reference_manifest_path, generated_visual_sight_reference_manifest
+          )
               ".voiceatc/visual_sight_references_manifest.json"
           )
           current_visual_sight_reference_manifest: object = {}
@@ -451,8 +466,17 @@ jobs:
           stable_current_status.pop("generated_at", None)
           player_status_changed = canonical_hash(stable_current_status) != canonical_hash(generated_player_status)
 
+          # Tier-only edits may leave every default hash unchanged. Full raw feeds
+          # and generated projections still need their own publication commit.
+          import subprocess
+          raw_feeds_changed = bool(subprocess.check_output(
+              ["git", "status", "--porcelain", "--", ".voiceatc/full", ".voiceatc/defaults"],
+              text=True,
+          ).strip())
+
           changed = (
-              release_assets_changed
+              raw_feeds_changed
+              or release_assets_changed
               or constraints_changed
               or procedure_options_changed
               or visual_procedures_changed
@@ -802,7 +826,13 @@ jobs:
             .voiceatc/full/color_profiles_manifest.json
             .voiceatc/full/skins_manifest.json
             .voiceatc/full/routes_manifest.json
+            .voiceatc/full/constraints_manifest.json
+            .voiceatc/full/procedure_options_manifest.json
+            .voiceatc/full/visual_procedures_manifest.json
+            .voiceatc/full/visual_go_arounds_manifest.json
+            .voiceatc/full/visual_sight_references_manifest.json
           )
+          if [[ -d .voiceatc/defaults ]]; then MANIFESTS+=(.voiceatc/defaults); fi
           if git diff --quiet -- "${MANIFESTS[@]}" && [[ -z "$(git status --porcelain -- "${MANIFESTS[@]}")" ]]; then
             exit 0
           fi

@@ -2,6 +2,11 @@
 """Validate visual_procedures.json files and maintain their raw-file manifest."""
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -441,6 +446,16 @@ def validate_visual_file(path: Path, root: Path = ROOT) -> dict[str, object]:
         payload = json.loads(raw_bytes.decode("utf-8"))
     except Exception as exc:
         raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_visual_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_visual_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: visual procedures file must be an object")
     advisories = validate_visual_schema(payload, path)
@@ -564,6 +579,7 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
     if args.write:
+        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(
             json.dumps(manifest, indent=2, sort_keys=True) + "\n",

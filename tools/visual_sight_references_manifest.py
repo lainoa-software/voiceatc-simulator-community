@@ -2,6 +2,11 @@
 """Validate visual_sight_references.json sidecars and maintain their raw-file manifest."""
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -177,12 +182,12 @@ def _phrase_key(value: str) -> str:
     return " ".join(value.casefold().split())
 
 
-def _visual_index(path: Path) -> tuple[str, dict[tuple[str, str], list[str]]]:
+def _visual_index(path: Path, tier: str = "") -> tuple[str, dict[tuple[str, str], list[str]]]:
     source_path = path.with_name("visual_procedures.json")
     if not source_path.is_file():
         raise ValueError(f"{path}: sibling visual_procedures.json is required")
     payload = json.loads(source_path.read_text(encoding="utf-8"))
-    visual = _object(payload, "visual procedures root", source_path)
+    visual = _object(airac_overrides.resolve(payload, tier), "visual procedures root", source_path)
     airport = str(visual.get("airport", "")).strip().upper()
     variants: dict[tuple[str, str], list[str]] = {}
     for procedure_value in visual.get("procedures", []):
@@ -198,14 +203,14 @@ def _visual_index(path: Path) -> tuple[str, dict[tuple[str, str], list[str]]]:
     return airport, variants
 
 
-def validate_sight_reference_schema(payload: dict[str, Any], path: Path) -> None:
+def validate_sight_reference_schema(payload: dict[str, Any], path: Path, tier: str = "") -> None:
     _strict_keys(payload, TOP_KEYS, "root", path)
     if payload.get("schema_version") != LEGACY_VISUAL_SCHEMA_VERSION:
         raise ValueError(f"{path}: schema_version must be {LEGACY_VISUAL_SCHEMA_VERSION}")
     airport = _text(payload.get("airport"), "airport", path, 4).upper()
     if not AIRPORT_RE.fullmatch(airport):
         raise ValueError(f"{path}: airport must be a four-character ICAO")
-    visual_airport, visual_variants = _visual_index(path)
+    visual_airport, visual_variants = _visual_index(path, tier)
     if visual_airport != airport:
         raise ValueError(f"{path}: airport must match sibling visual_procedures.json")
     variants = _array(payload.get("variants"), "variants", path)
@@ -281,9 +286,20 @@ def validate_sight_reference_file(path: Path, root: Path = ROOT) -> dict[str, ob
     if len(raw_bytes) > MAX_FILE_BYTES:
         raise ValueError(f"{path}: file exceeds {MAX_FILE_BYTES} bytes")
     payload = json.loads(raw_bytes.decode("utf-8"))
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier in ("", "bundled", "latest"):
+        document = airac_overrides.resolve(payload, tier)
+        checked = _validate_sight_reference_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_sight_reference_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: visual sight-reference file must be an object")
-    validate_sight_reference_schema(payload, path)
+    validate_sight_reference_schema(payload, path, tier)
     airport = str(payload["airport"]).upper()
     if airport != path.parent.name.upper():
         raise ValueError(f"{path}: airport must match its parent folder")
@@ -376,6 +392,7 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
     if args.write:
+        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(
             json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
