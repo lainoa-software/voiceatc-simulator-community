@@ -1,0 +1,17 @@
+{
+  "airport": "VTBD",
+  "runway_configs": [
+    {
+      "id": "21",
+      "name": "Main configuration when less than 15kt tailwind",
+      "arr": "21R 21L",
+      "dep": "21R 21L"
+    },
+    {
+      "id": "03",
+      "name": "Config if 21 has more than 15kt of Tailwind",
+      "arr": "03L 03R",
+      "dep": "03L 03R"
+    }
+  ]
+}
