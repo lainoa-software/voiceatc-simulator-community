@@ -1,6 +1,6 @@
 {
   "asset_name": "color-profiles-2610-full.zip",
-  "commit_sha": "fa0bffa8b3badba9d6d80c5aeb7ce8f96aa30ac0",
+  "commit_sha": "fd2702d32cfcb076fecb1d3e06a5f1ebfbbdaafa",
   "dataset": "color_profiles",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-05/color-profiles-2610-full.zip",
   "entries": [
@@ -128,7 +128,9 @@
         },
         "panels": {
           "repo_path": "K/KA/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -149,7 +151,9 @@
         },
         "panels": {
           "repo_path": "K/KB/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -170,7 +174,9 @@
         },
         "panels": {
           "repo_path": "K/KC/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -191,7 +197,9 @@
         },
         "panels": {
           "repo_path": "K/KD/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -212,7 +220,9 @@
         },
         "panels": {
           "repo_path": "K/KE/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -233,7 +243,9 @@
         },
         "panels": {
           "repo_path": "K/KF/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -254,7 +266,9 @@
         },
         "panels": {
           "repo_path": "K/KG/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -275,7 +289,9 @@
         },
         "panels": {
           "repo_path": "K/KH/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -296,7 +312,9 @@
         },
         "panels": {
           "repo_path": "K/KI/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -317,7 +335,9 @@
         },
         "panels": {
           "repo_path": "K/KJ/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -338,7 +358,9 @@
         },
         "panels": {
           "repo_path": "K/KK/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -359,7 +381,9 @@
         },
         "panels": {
           "repo_path": "K/KL/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -380,7 +404,9 @@
         },
         "panels": {
           "repo_path": "K/KM/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -401,7 +427,9 @@
         },
         "panels": {
           "repo_path": "K/KN/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -422,7 +450,9 @@
         },
         "panels": {
           "repo_path": "K/KO/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -443,7 +473,9 @@
         },
         "panels": {
           "repo_path": "K/KP/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -464,7 +496,9 @@
         },
         "panels": {
           "repo_path": "K/KQ/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -485,7 +519,9 @@
         },
         "panels": {
           "repo_path": "K/KR/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -506,7 +542,9 @@
         },
         "panels": {
           "repo_path": "K/KS/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -527,7 +565,9 @@
         },
         "panels": {
           "repo_path": "K/KT/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -548,7 +588,9 @@
         },
         "panels": {
           "repo_path": "K/KU/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -569,7 +611,9 @@
         },
         "panels": {
           "repo_path": "K/KV/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -590,7 +634,9 @@
         },
         "panels": {
           "repo_path": "K/KW/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -611,7 +657,9 @@
         },
         "panels": {
           "repo_path": "K/KX/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -632,7 +680,9 @@
         },
         "panels": {
           "repo_path": "K/KY/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -653,7 +703,9 @@
         },
         "panels": {
           "repo_path": "K/KZ/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "ba4554329afbdbf1a381316407bd9e511dc1e179ab52ff317b507e5873f12edd",
           "size_bytes": 5400
         },
@@ -674,7 +726,9 @@
         },
         "panels": {
           "repo_path": "L/LE/panels.json",
-          "requires": ["color_profiles.panels"],
+          "requires": [
+            "color_profiles.panels"
+          ],
           "sha256": "322c158f316afd9ae594e5b90b8ac8fd333803919fd9b6df466e98ca38c364ca",
           "size_bytes": 6699
         },
@@ -808,8 +862,8 @@
     }
   ],
   "entry_count": 43,
-  "generated_at": "2026-10-05T07:00:15Z",
-  "published_at": "2026-10-05T07:00:15Z",
+  "generated_at": "2026-10-05T19:07:48Z",
+  "published_at": "2026-10-05T19:07:48Z",
   "release_tag": "daily-2026-10-05",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "sha256": "b552cb3c67023c789ba8d84ac5837b1eb2483fb824b0cc710608f722dfb6fd45",

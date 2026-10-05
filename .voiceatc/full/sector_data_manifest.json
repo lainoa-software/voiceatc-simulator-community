@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2610-full.zip",
-  "commit_sha": "fa0bffa8b3badba9d6d80c5aeb7ce8f96aa30ac0",
+  "commit_sha": "fd2702d32cfcb076fecb1d3e06a5f1ebfbbdaafa",
   "dataset": "sector_data",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-05/sector-data-2610-full.zip",
   "entries": [
@@ -543,13 +543,33 @@
         }
       },
       "id": "V/VA/VABF/MUMBAI_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_configs.json",
+          "sha256": "d86833696175116efee51fc774b4c8d79d810459388d61653d3e23851a353d06",
+          "size_bytes": 230
+        },
+        "definitions": {
+          "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_definitions.json",
+          "sha256": "0abff6957b6857c1f970a384d1e48b9e18a73e93a58040bf9017eaa93e8cdfaa",
+          "size_bytes": 12663
+        },
+        "influence": {
+          "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_influence.json",
+          "sha256": "a1e48d31e5151c7ff5afdcd6cea7687125d6d7cb6522e18462ccc8dd95637f3e",
+          "size_bytes": 103
+        }
+      },
+      "id": "V/VT/VTBB/Bangkok_TMA"
     }
   ],
-  "entry_count": 27,
-  "generated_at": "2026-10-05T07:00:15Z",
-  "published_at": "2026-10-05T07:00:15Z",
+  "entry_count": 28,
+  "generated_at": "2026-10-05T19:07:48Z",
+  "published_at": "2026-10-05T19:07:48Z",
   "release_tag": "daily-2026-10-05",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "df862276f5a5f5776cdb07832b044029899126b57c072f2db4b276f71a7b78ee",
-  "size_bytes": 86496
+  "sha256": "9fd491f3a6b7d83baa474027dc0af6d41515ef1309b0fa3c868a1f91438e67ab",
+  "size_bytes": 90848
 }
