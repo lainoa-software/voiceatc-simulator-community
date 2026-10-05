@@ -69,6 +69,11 @@
       "repo_path": "V/VA/VABF/MUMBAI_TMA/VABB/procedure_options.json",
       "sha256": "ef77b54e3585444e427b0f70a7e9dee498405bbb5bb0b3ed984883c5e9d702c2",
       "size_bytes": 149
+    },
+    "VTBD": {
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json",
+      "sha256": "b9f95ddd4349b3429a0c11dc233d107bfda5db81526603a406d1f8e52331bb9a",
+      "size_bytes": 280
     }
   },
   "published_at": "2026-10-05T07:00:21Z",

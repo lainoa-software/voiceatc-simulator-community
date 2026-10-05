@@ -3,8 +3,8 @@
   "schema_version": 1,
   "airac_min": 2503,
   "defaults": { "spawn_enabled": true, "init_climb": 8000 },
-  "sids": { },
-  "runways": { 
+  "sids": {},
+  "runways": {
     "03L": { "init_climb": 6000, "spawn_enabled": false },
     "03R": { "init_climb": 6000, "spawn_enabled": false }
   }
