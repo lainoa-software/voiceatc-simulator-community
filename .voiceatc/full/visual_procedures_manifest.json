@@ -1,0 +1,128 @@
+{
+  "airports": {
+    "KASE": {
+      "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_procedures.json",
+      "sha256": "0f86d07d9c90593260f1f55afb970759557e73a34aa0d4886ad4800831e4393b",
+      "size_bytes": 8313
+    },
+    "KBFI": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_procedures.json",
+      "sha256": "dc902c91c99199cbe07d16ad4eae191d5d296401c8ac984676ea20bcfdb2eb4d",
+      "size_bytes": 5909
+    },
+    "KBOS": {
+      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_procedures.json",
+      "sha256": "9f64dde7546d45b65718def4cef2637eb0126899195877807d66e975574908a4",
+      "size_bytes": 2370
+    },
+    "KDCA": {
+      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_procedures.json",
+      "sha256": "792b5287427095786a1631176e43686883df43c17fc2ae08004df2d50874c1b8",
+      "size_bytes": 6392
+    },
+    "KEWR": {
+      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/visual_procedures.json",
+      "sha256": "2bcb94fc03511e5d63c311da3326eba0a3c7a616798fb51cad9c3b188300ee51",
+      "size_bytes": 3851
+    },
+    "KJFK": {
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
+      "sha256": "926d5f372efc6606c608266f4782b3b8c106f3b1dc9a75b141543d8e83109d73",
+      "size_bytes": 4643
+    },
+    "KLGA": {
+      "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_procedures.json",
+      "sha256": "8d92f544c857e6853f1624d21a26632b0ef391bd5187f3ea9d44e304cfdbbb2c",
+      "size_bytes": 4210
+    },
+    "KLGB": {
+      "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_procedures.json",
+      "sha256": "959192e1f79239f7bee375cfe7626a73526698b077dea36983959adc1b4c321c",
+      "size_bytes": 4462
+    },
+    "KLSV": {
+      "repo_path": "K/KZLA/LAS_TMA/KLSV/visual_procedures.json",
+      "sha256": "6f32a6dfde4c22a2174078fb78776d3ee3e16b186ad28e93f27a8ae14c96186f",
+      "size_bytes": 5941
+    },
+    "KPDX": {
+      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/visual_procedures.json",
+      "sha256": "ac4490878a7af16c38bba3fc5a8954b8f6fdb23fae8f986cd3899c76f24b99f7",
+      "size_bytes": 6949
+    },
+    "KPHL": {
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/visual_procedures.json",
+      "sha256": "872e3b60fd44e7cb556691a1560e4febf2b46653904d34a886d8fccd6a975e12",
+      "size_bytes": 4512
+    },
+    "KSAN": {
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/visual_procedures.json",
+      "sha256": "ff21f7f25ec6e88fd236af113defa94fe59ce03a3eb5aa52865c9134d2a07219",
+      "size_bytes": 4069
+    },
+    "KSEA": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/visual_procedures.json",
+      "sha256": "36dc3aaae21d270d769120dfd9e41383486a802d2f9e9cb6da84563377c76aea",
+      "size_bytes": 7009
+    },
+    "KSFO": {
+      "repo_path": "K/KZOA/SFO_TMA/KSFO/visual_procedures.json",
+      "sha256": "b4ac7c624942beb8ae2d8871ede22b6cb2cb9398edc517f7d43750f0eb9b8760",
+      "size_bytes": 9177
+    },
+    "LCLK": {
+      "repo_path": "L/LC/LCCC/LARNACA_TMA/LCLK/visual_procedures.json",
+      "sha256": "3e012ea7f5a331d13abbc79c5ce918fa65a236c226c0365f4df574d4dc69b04d",
+      "size_bytes": 3245
+    },
+    "LCPH": {
+      "repo_path": "L/LC/LCCC/PAPHOS_TMA/LCPH/visual_procedures.json",
+      "sha256": "f26ba4b1d5d0ad3e37fbf0a955c9ccb02b2c41c6c4dc59765eb252ec02d1ea16",
+      "size_bytes": 3437
+    },
+    "LFMN": {
+      "repo_path": "L/LF/LFMM/NICE_TMA/LFMN/visual_procedures.json",
+      "sha256": "082a53cb7d9d6ff4343e5fe2ca8431fce898997fdeefb2191ce0479b8d5a8c9b",
+      "size_bytes": 2085
+    },
+    "LLBG": {
+      "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_procedures.json",
+      "sha256": "2e64602a759e4c0d72870164b9e470446b0e42988b2f9d5f135e95f3a1fee665",
+      "size_bytes": 12471
+    },
+    "LLER": {
+      "repo_path": "L/LL/LLLL/EILAT_TMA/LLER/visual_procedures.json",
+      "sha256": "f3a87f7b854e81876eca82544e4a7041e4fe84cf21a3bfd4d03ae03e99725da6",
+      "size_bytes": 6316
+    },
+    "LPMA": {
+      "repo_path": "L/LP/LPPC/MADEIRA_TMA/LPMA/visual_procedures.json",
+      "sha256": "fa026537925561c0663c343971ad0ec3813587a6baff69819c32b40f436487cd",
+      "size_bytes": 1691
+    },
+    "PANC": {
+      "repo_path": "P/PA/PAZA/ANCHORAGE_TMA/PANC/visual_procedures.json",
+      "sha256": "39931f95b05f9fe9d3141afb79d0b83496259cc1f4ba82e6e71291c8974f6a32",
+      "size_bytes": 6024
+    },
+    "PHNL": {
+      "repo_path": "P/PH/PHZH/PHNL_TMA/PHNL/visual_procedures.json",
+      "sha256": "4e4aac10663d44ddda8b6f01ebf069d7eb608b90adb2c56aa525f3996ff7e448",
+      "size_bytes": 5106
+    },
+    "PHOG": {
+      "repo_path": "P/PH/PHZH/MAUI_TMA/PHOG/visual_procedures.json",
+      "sha256": "d32528e984c653d9625e25b2842e7f1e939332d3091f58a3641ca1a4801e3f34",
+      "size_bytes": 3091
+    },
+    "TJSJ": {
+      "repo_path": "T/TJ/TJZS/SAN_JUAN_TMA/TJSJ/visual_procedures.json",
+      "sha256": "bb056bf57fe50329df7a655df9f132a30844a671c83a5ec0e6e83d4fc578b1fa",
+      "size_bytes": 2304
+    }
+  },
+  "published_at": "2026-09-02T20:08:46Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "requires": ["community.airac_overrides"],
+  "schema_version": 1
+}
