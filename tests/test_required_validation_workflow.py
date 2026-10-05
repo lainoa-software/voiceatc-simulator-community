@@ -26,6 +26,28 @@ class RequiredValidationWorkflowTests(unittest.TestCase):
             with self.subTest(block=index):
                 compile(textwrap.dedent(source), str(DAILY_WORKFLOW), "exec")
 
+    def test_daily_release_manifest_loaders_import_dependencies(self) -> None:
+        import ast
+        import subprocess
+        import sys
+        import textwrap
+        workflow = DAILY_WORKFLOW.read_text(encoding="utf-8")
+        blocks = re.findall(r"(?m)^([ ]*)python - <<'PY'\n(.*?)^\1PY$", workflow, re.S)
+        loaders = [node for _, source in blocks for node in ast.walk(ast.parse(textwrap.dedent(source)))
+                   if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
+                   and node.func.attr == "spec_from_file_location"]
+        self.assertTrue(loaders)
+        for loader in loaders:
+            name = ast.literal_eval(loader.args[0])
+            path = ast.literal_eval(loader.args[1].args[0])
+            with self.subTest(module=name):
+                result = subprocess.run([sys.executable, "-c",
+                    "import importlib.util; from pathlib import Path; "
+                    f"spec = importlib.util.spec_from_file_location({name!r}, Path({path!r})); "
+                    "module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)"],
+                    cwd=REPO_ROOT, capture_output=True, text=True)
+                self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_required_workflow_runs_on_every_pull_request(self) -> None:
         workflow = REQUIRED_WORKFLOW.read_text(encoding="utf-8")
         trigger_block = workflow.split("permissions:", maxsplit=1)[0]

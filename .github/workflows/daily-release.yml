@@ -299,7 +299,7 @@ jobs:
           )
 
           constraints_spec = importlib.util.spec_from_file_location(
-              "constraints_manifest", Path("tools/constraints_manifest.py")
+              "tools.constraints_manifest", Path("tools/constraints_manifest.py")
           )
           if constraints_spec is None or constraints_spec.loader is None:
               raise RuntimeError("unable to load tools/constraints_manifest.py")
@@ -327,7 +327,7 @@ jobs:
           constraints_changed = canonical_hash(current_constraints_manifest) != canonical_hash(generated_constraints_manifest)
 
           options_spec = importlib.util.spec_from_file_location(
-              "procedure_options_manifest", Path("tools/procedure_options_manifest.py")
+              "tools.procedure_options_manifest", Path("tools/procedure_options_manifest.py")
           )
           if options_spec is None or options_spec.loader is None:
               raise RuntimeError("unable to load tools/procedure_options_manifest.py")
@@ -351,7 +351,7 @@ jobs:
           procedure_options_changed = canonical_hash(current_options_manifest) != canonical_hash(generated_options_manifest)
 
           visual_spec = importlib.util.spec_from_file_location(
-              "visual_procedures_manifest", Path("tools/visual_procedures_manifest.py")
+              "tools.visual_procedures_manifest", Path("tools/visual_procedures_manifest.py")
           )
           if visual_spec is None or visual_spec.loader is None:
               raise RuntimeError("unable to load tools/visual_procedures_manifest.py")
@@ -381,7 +381,7 @@ jobs:
           )
 
           visual_go_around_spec = importlib.util.spec_from_file_location(
-              "visual_go_arounds_manifest", Path("tools/visual_go_arounds_manifest.py")
+              "tools.visual_go_arounds_manifest", Path("tools/visual_go_arounds_manifest.py")
           )
           if visual_go_around_spec is None or visual_go_around_spec.loader is None:
               raise RuntimeError("unable to load tools/visual_go_arounds_manifest.py")
@@ -414,7 +414,7 @@ jobs:
           )
 
           visual_sight_reference_spec = importlib.util.spec_from_file_location(
-              "visual_sight_references_manifest",
+              "tools.visual_sight_references_manifest",
               Path("tools/visual_sight_references_manifest.py"),
           )
           if visual_sight_reference_spec is None or visual_sight_reference_spec.loader is None:
