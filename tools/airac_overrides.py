@@ -151,7 +151,7 @@ def project_sector_feed(root: Path, gated: dict) -> tuple[dict[str, str], dict[s
             entry["requires"] = sorted(set(entry.get("requires", [])) | {CAPABILITY})
             for item in entry["files"].values():
                 source = item["repo_path"]
-                alias = ".voiceatc/variants/" + source
+                alias = "airac_variants/" + source
                 full_sources[alias] = source
                 item["repo_path"] = alias
         entries.append(entry)
