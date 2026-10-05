@@ -164,3 +164,19 @@ class AiracOverridesTests(unittest.TestCase):
         raw = (self.root / legacy["airports"]["EDDB"]["repo_path"]).read_bytes()
         self.assertEqual(json.loads(raw), normal)
         self.assertEqual(legacy["airports"]["EDDB"]["sha256"], hashlib.sha256(raw).hexdigest())
+
+    def test_sector_reference_aliases_follow_matching_tier(self):
+        from tools import sector_data_manifest as sectors
+        from test_community_release_manifest import build_fixture_repo
+        build_fixture_repo(self.root)
+        path = next(self.root.glob("L/**/sector_definitions.json"))
+        definitions = json.loads(path.read_text())
+        definitions["airac_overrides"] = {"latest": deepcopy(definitions)}
+        path.write_text(json.dumps(definitions))
+        configs_path = path.with_name("sector_configs.json")
+        configs = json.loads(configs_path.read_text())
+        configs["sector_configs"][0]["sectors"] = [{"sector_ids": ["UNKNOWN"]}]
+        configs_path.write_text(json.dumps(configs))
+        files = {"definitions": path, "configs": configs_path, "influence": path.with_name("sector_influence.json")}
+        with self.assertRaisesRegex(ValueError, "undefined sectors.*UNKNOWN"):
+            sectors.validate_sector_bundle(path.parent, files, self.root)

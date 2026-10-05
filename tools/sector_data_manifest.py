@@ -289,18 +289,18 @@ def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root
             resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
             definitions = resolved["definitions"]
             rows = definitions.get("sector_definitions", definitions.get("definitions", definitions.get("sectors", [])))
-            defined = {str(row.get("sector_id", row.get("id", row.get("SECTOR_ID", "")))).upper() for row in rows}
+            defined = {str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper() for row in rows}
             configs = resolved["configs"]
             rows = configs.get("sector_configs", configs.get("sector_configurations", configs.get("configs", [])))
             referenced = set()
             for row in rows:
                 sectors = row.get("sectors", row.get("sector_entries", row.get("sector_ids", row.get("sector_id", []))))
                 for item in sectors if isinstance(sectors, list) else [sectors]:
-                    value = item.get("sector_id", item.get("id", item.get("SECTOR_ID", ""))) if isinstance(item, dict) else item
+                    value = item.get("sector_ids", item.get("sector_id", item.get("sector", item.get("id", item.get("SECTOR_ID", ""))))) if isinstance(item, dict) else item
                     referenced.update(_normalize_string_tokens(value, "sector_id", bundle_dir))
             influence = resolved["influence"]
             for row in influence.get("sector_influence", influence.get("sector_influences", influence.get("sectors", []))):
-                referenced.add(str(row.get("sector_id", row.get("id", row.get("SECTOR_ID", "")))).upper())
+                referenced.add(str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper())
             if referenced - defined:
                 raise ValueError(f"{bundle_dir}: {tier or 'shared default'} references undefined sectors: {sorted(referenced - defined)}")
     return {
