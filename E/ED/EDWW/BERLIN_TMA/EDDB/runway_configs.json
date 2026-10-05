@@ -2,16 +2,16 @@
   "airport": "EDDB",
   "runway_configs": [
     {
-      "id": "WEST_25",
-      "name": "PREFERENTIAL",
-      "arr": "25R",
-      "dep": "25L"
+      "id": "24",
+      "name": "24s",
+      "arr": "24R 24L",
+      "dep": "24R 24L"
     },
     {
-      "id": "EAST_07",
-      "name": "NON PREFERENTIAL",
-      "arr": "07R",
-      "dep": "07L"
+      "id": "06",
+      "name": "06s",
+      "arr": "06R 06L",
+      "dep": "06R 06L"
     }
   ]
 }

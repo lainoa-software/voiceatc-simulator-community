@@ -68,3 +68,7 @@ Ask in the questions channel: https://discord.gg/Hr4Z8e3cyn
 
 This repository is licensed under
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+## AIRAC variants
+
+Aviation files support optional Bundled/Latest replacements. See the [file contract and authoring guide](documentation/airac-overrides.md).

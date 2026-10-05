@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+try:
+    from . import airac_overrides
+except ImportError:
+    import airac_overrides
+
 import argparse
 import hashlib
 import json
@@ -113,6 +118,16 @@ def _normalize_string_tokens(value: object, label: str, path: Path) -> list[str]
 
 def validate_sector_configs_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_sector_configs_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_sector_configs_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     configs = payload.get("sector_configs", payload.get("sector_configurations", payload.get("configs")))
     if not isinstance(configs, list) or not configs:
         raise ValueError(f"{path}: missing non-empty sector_configs array")
@@ -171,6 +186,16 @@ def validate_sector_configs_file(path: Path, root: Path = ROOT) -> dict[str, obj
 
 def validate_sector_definitions_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_sector_definitions_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_sector_definitions_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     definitions = payload.get("sector_definitions", payload.get("definitions", payload.get("sectors")))
     if not isinstance(definitions, list) or not definitions:
         raise ValueError(f"{path}: missing non-empty sector_definitions array")
@@ -209,6 +234,16 @@ def validate_sector_definitions_file(path: Path, root: Path = ROOT) -> dict[str,
 
 def validate_sector_influence_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        checked = _validate_sector_influence_document(document, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
+def _validate_sector_influence_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
     influences = payload.get("sector_influence", payload.get("sector_influences", payload.get("sectors")))
     if not isinstance(influences, list) or not influences:
         raise ValueError(f"{path}: missing non-empty sector_influence array")
@@ -248,6 +283,26 @@ def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root
         "definitions": validate_sector_definitions_file(bundle_files["definitions"], root),
         "influence": validate_sector_influence_file(bundle_files["influence"], root),
     }
+    documents = {kind: json.loads(path.read_text(encoding="utf-8")) for kind, path in bundle_files.items()}
+    if any("airac_overrides" in document for document in documents.values()):
+        for tier in ("", *airac_overrides.TIERS):
+            resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
+            definitions = resolved["definitions"]
+            rows = definitions.get("sector_definitions", definitions.get("definitions", definitions.get("sectors", [])))
+            defined = {str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper() for row in rows}
+            configs = resolved["configs"]
+            rows = configs.get("sector_configs", configs.get("sector_configurations", configs.get("configs", [])))
+            referenced = set()
+            for row in rows:
+                sectors = row.get("sectors", row.get("sector_entries", row.get("sector_ids", row.get("sector_id", []))))
+                for item in sectors if isinstance(sectors, list) else [sectors]:
+                    value = item.get("sector_ids", item.get("sector_id", item.get("sector", item.get("id", item.get("SECTOR_ID", ""))))) if isinstance(item, dict) else item
+                    referenced.update(_normalize_string_tokens(value, "sector_id", bundle_dir))
+            influence = resolved["influence"]
+            for row in influence.get("sector_influence", influence.get("sector_influences", influence.get("sectors", []))):
+                referenced.add(str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper())
+            if referenced - defined:
+                raise ValueError(f"{bundle_dir}: {tier or 'shared default'} references undefined sectors: {sorted(referenced - defined)}")
     return {
         "bundle_path": bundle_repo_path,
         "files": files,
