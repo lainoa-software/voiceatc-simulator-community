@@ -2,17 +2,7 @@
   "sector_configs": [
     {
       "sector_config_id": "1",
-      "runway_configs": ["21"],
-      "sectors": [
-        {
-          "sector_ids": ["APP"],
-          "frequency": "119.400"
-        }
-      ]
-    },
-    {
-      "sector_config_id": "2",
-      "runway_configs": ["03"],
+      "runway_configs": ["03", "21"],
       "sectors": [
         {
           "sector_ids": ["APP"],
