@@ -1,7 +1,7 @@
 {
   "sector_influences": [
     {
-      "sector_id": "VTBD_APP",
+      "sector_id": "APP",
       "airports": ["VTBD"]
     }
   ]

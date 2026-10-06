@@ -1,7 +1,7 @@
 {
   "sector_definitions": [
     {
-      "sector_id": "VTBD_APP",
+      "sector_id": "APP",
       "lower_limit": 0,
       "higher_limit": 16000,
       "polygon": [
@@ -369,5 +369,6 @@
         [14.7512708, 100.5981869]
       ]
     }
-  ]
+]
 }
+
