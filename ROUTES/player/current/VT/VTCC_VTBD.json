@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "VTCC",
+  "dest": "VTBD",
+  "routes": [
+    {
+      "id": "d738b9d7",
+      "route": "VTCC DCT PANTA Y7 BLAFF DCT VTBD",
+      "created_at": "2026-10-06T10:37:52Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
