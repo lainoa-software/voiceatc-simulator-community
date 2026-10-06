@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "VTCT",
+  "dest": "VTBD",
+  "routes": [
+    {
+      "id": "1ed88de9",
+      "route": "VTCT DCT DUBEN Y28 BLAFF DCT NAKON DCT VTBD",
+      "created_at": "2026-10-06T11:04:07Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
