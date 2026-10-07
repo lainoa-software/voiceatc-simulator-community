@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "ULWC",
+  "routes": [
+    {
+      "id": "20dff338",
+      "route": "UMKK DCT PELUG GARSO PIVAX PIRUX PISIM PIDIN ARANS MIGTU T73 BESNO SUGIN T824 DIPMI DCT ULWC",
+      "created_at": "2026-10-07T09:09:25Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
