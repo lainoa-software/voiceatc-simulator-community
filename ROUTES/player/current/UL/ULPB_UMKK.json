@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "ULPB",
+  "dest": "UMKK",
+  "routes": [
+    {
+      "id": "36be8634",
+      "route": "ULPB DCT BOBMU T821 ROGID M856 GIKUR MOGPI L870 UMODI M60 UTETA PISIS ARANS PIDIN PISIM PIRUX PIVAX GARSO AGONA TURIP DCT UMKK",
+      "created_at": "2026-10-07T17:58:49Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

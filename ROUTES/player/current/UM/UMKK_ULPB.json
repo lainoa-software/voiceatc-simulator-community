@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "ULPB",
+  "routes": [
+    {
+      "id": "bf5d3f02",
+      "route": "UMKK DCT PELUG TIGNU GARSO EVONA NEBSI OSTOT PETOT VALOX RENKU INLOG AKARU PETAP BOBMU DCT ULPB",
+      "created_at": "2026-10-07T17:58:49Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
