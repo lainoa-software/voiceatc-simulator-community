@@ -9,7 +9,8 @@
         },
         {
           "sector_ids": ["VTBBAPP"],
-          "frequency": "125.200
+          "frequency": "125.200"
+        }
       ]
     }
   ]
