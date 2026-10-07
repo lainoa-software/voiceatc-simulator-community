@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UDYZ",
+  "routes": [
+    {
+      "id": "bc96afc2",
+      "route": "UMKK DCT PELUG L32 TIGNU GARSO PIVAX PINIX PIRUX PISIM PIDIN ARANS PISIS MIGTU TOGMO M56 DENUD M161 GUTAN URL W324 AKT IPLED A921 KUFAN DISKA ASMIK LODAC DCT UDYZ",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

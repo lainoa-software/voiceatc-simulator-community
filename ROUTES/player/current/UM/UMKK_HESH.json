@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "HESH",
+  "routes": [
+    {
+      "id": "048ebc0e",
+      "route": "UMKK DCT GOLAD L32 GRD M861 RAKUR UM856 BAG UP29 AYT UA16 TOMBI M855 RASDA A16 CVO L677 KAPIT DEDEV DCT HESH",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

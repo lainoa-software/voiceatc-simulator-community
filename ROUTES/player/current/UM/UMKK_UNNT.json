@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UNNT",
+  "routes": [
+    {
+      "id": "931c9785",
+      "route": "UMKK DCT PELUG OTVOV KEDUX PIVAX PIRUX PISIM PIDIN ARANS PISIS MIGTU P997 OBIBA L256 LEDBA L255 DOKOD M61 SUMOM P983 TINRI T448 RUBOR A300 ML R814 SZ W1 GOLIM DCT UNNT",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "ULMM",
+  "dest": "UMKK",
+  "routes": [
+    {
+      "id": "609040e1",
+      "route": "ULMM DCT ASGOR T693 PILAN M856 GUDEB BEMOT OGTUM GIPNI PISIS ARANS PIDIN PISIM PIRUX PINIX PIVAX GARSO AGONA TURIP DCT UMKK",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

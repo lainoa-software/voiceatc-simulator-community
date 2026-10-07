@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "ULMM",
+  "routes": [
+    {
+      "id": "9fa2d48b",
+      "route": "UMKK DCT PELUG OTVOV KEDUX PIVAX NEKET PIRUX PISIM PIDIN ARANS PISIS ODILU SORTA LULOR T693 ASGOR DCT ULMM",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

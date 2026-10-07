@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "URWW",
+  "dest": "UMKK",
+  "routes": [
+    {
+      "id": "f7225b44",
+      "route": "URWW DCT NATIT B105 NIMTA T689 GOKTI T661 GEKPA L736 OLOPI N50 NUDKO T561 ATLUM PISIS ARANS PIDIN PISIM PIRUX PIVAX GARSO AGONA TURIP DCT UMKK",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

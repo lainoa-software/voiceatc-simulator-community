@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UDYZ",
+  "dest": "UMKK",
+  "routes": [
+    {
+      "id": "7fb63b8f",
+      "route": "UDYZ DCT T924 TISOT DEDON N61 KUFAN B477 PINMU KUDAS ITAKA TUVGI EVZUN ZIZAR VAZLU UZZID NOKLI N72 WGD G481 OBABI T689 UNABI T784 OLATU T747 POGAS T540 RANTO N869 GAKLU P164 ODATI P145 ATLUM PISIS ARANS PIDIN PISIM PIRUX PIVAX GARSO AGONA N5 TURIP DCT UMKK",
+      "created_at": "2026-10-07T18:34:41Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
