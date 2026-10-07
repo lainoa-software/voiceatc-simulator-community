@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "ULLI",
+  "dest": "UMKK",
+  "routes": [
+    {
+      "id": "e3af7eeb",
+      "route": "ULLI DCT UTETA M60 ATLUM PISIS ARANS PIDIN PISIM PIRUX PIVAX GARSO AGONA N5 TURIP DCT UMKK",
+      "created_at": "2026-10-07T09:18:20Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
