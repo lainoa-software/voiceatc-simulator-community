@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UWWW",
+  "routes": [
+    {
+      "id": "c38b4773",
+      "route": "UMKK DCT PELUG OTVOV KEDUX PIVAX PIRUX PISIM PIDIN ARANS PISIS MIGTU T73 DESUD P164 ROKUR T784 OTKOL T787 OKSUD T778 RUBEK DCT UWWW",
+      "created_at": "2026-10-07T18:04:23Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
