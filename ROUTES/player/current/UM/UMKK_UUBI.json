@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UUBI",
+  "routes": [
+    {
+      "id": "2ccadf94",
+      "route": "UMKK DCT PELUG OTVOV KEDUX PIVAX PIRUX PISIM PIDIN ARANS PISIS MIGTU T73 DESUD P164 GAKLU N869 RANTO T540 POGAS T747 OLATU DCT UUBI",
+      "created_at": "2026-10-07T17:46:54Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

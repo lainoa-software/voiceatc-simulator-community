@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "ULOO",
+  "routes": [
+    {
+      "id": "5a2a06f3",
+      "route": "UMKK DCT TURIP AGONA GARSO LUKED PIVAX DEREX RASEL NEKET NEREN NEBSI PIRUX OSTOT PETOT VALOX DOBAN KOIVU RENKU BALTI MOHNI ARANS ATLUM OBANA ABMIS DCT ULOO",
+      "created_at": "2026-10-07T17:46:54Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
