@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDF",
+  "dest": "LIPZ",
+  "routes": [
+    {
+      "id": "36753612",
+      "route": "EDDF DCT ANEKI Y163 NATOR TRA ARGAX RESIA P131 ADOSA L612 ALBET DCT LIPZ",
+      "created_at": "2026-10-06T14:37:16Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

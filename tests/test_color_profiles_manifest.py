@@ -36,20 +36,6 @@ def valid_style() -> dict[str, object]:
     }
 
 
-def valid_panels() -> dict[str, object]:
-    return {
-        "extends": "generic",
-        "tokens": {
-            "colors": {"bar": "1F2535", "edge": "394258cc"},
-            "fonts": {"text": "barlow_semi_condensed", "data": "courier_prime"},
-            "case": "upper",
-            "bevel": {"width": 2},
-        },
-        "primitives": {"window": {"top_strip": "bar", "close": "cell"}},
-        "components": {"tfc": {"mode": "paper_es"}},
-    }
-
-
 def legacy_us_aliases() -> list[str]:
     return [f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)]
 
@@ -369,155 +355,18 @@ class ColorProfilesManifestTests(unittest.TestCase):
                 MODULE.build_manifest(root, commit_sha="test-commit")
 
 
-class PanelsFileTests(unittest.TestCase):
-    def build(self, panels: object, *, with_colors: bool = True, raw: str | None = None) -> dict[str, object]:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            root = Path(tmp_dir)
-            scope_dir = root / "L" / "LE"
-            scope_dir.mkdir(parents=True, exist_ok=True)
-            if with_colors:
-                (scope_dir / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
-            text = raw if raw is not None else json.dumps(panels)
-            (scope_dir / "panels.json").write_text(text, encoding="utf-8")
-            return MODULE.build_manifest(root, commit_sha="test-commit")
+class ProfileFileKindTests(unittest.TestCase):
+    def test_a_colour_profile_is_colors_plus_optional_style(self) -> None:
+        self.assertEqual({"colors": "colors.json", "style": "style.json"}, MODULE.PROFILE_FILE_NAMES)
+        self.assertEqual(("colors", "style"), MODULE.FILE_KIND_ORDER)
 
-    def test_panels_kind_is_registered(self) -> None:
-        self.assertEqual("panels.json", MODULE.PROFILE_FILE_NAMES["panels"])
-        self.assertEqual(("colors", "style", "panels"), MODULE.FILE_KIND_ORDER)
-
-    def test_accepts_a_valid_panels_file_and_lists_it_in_the_manifest(self) -> None:
-        manifest = self.build(valid_panels())
-        entry = manifest["profiles"]["L/LE"]["files"]["panels"]
-        self.assertEqual("L/LE/panels.json", entry["repo_path"])
-        self.assertEqual(64, len(entry["sha256"]))
-        self.assertGreater(entry["size_bytes"], 0)
-
-    def test_accepts_a_partial_panels_file(self) -> None:
-        recolour = {"tokens": {"colors": {"bar": "102030"}}}
-        self.assertIn("panels", self.build(recolour)["profiles"]["L/LE"]["files"])
-
-    def test_rejects_an_empty_panels_file(self) -> None:
-        with self.assertRaisesRegex(ValueError, "panels.json must not be empty"):
-            self.build({})
-
-    def test_rejects_non_object_and_invalid_json(self) -> None:
-        with self.assertRaisesRegex(ValueError, "must be a JSON object"):
-            self.build(["tokens"])
-        with self.assertRaisesRegex(ValueError, "invalid JSON"):
-            self.build(None, raw="{not json")
-
-    def test_rejects_the_old_switch_keys_with_their_path(self) -> None:
-        for key in ("frame_style", "bar_color", "show_radar"):
-            with self.subTest(key=key), self.assertRaisesRegex(ValueError, f"{key}: unknown key"):
-                self.build({key: "x", "tokens": {"case": "upper"}})
-
-    def test_rejects_what_the_game_strict_mode_rejects(self) -> None:
-        cases = {
-            "tokens.colors.bar: '#1F2535' is not a valid value": {"tokens": {"colors": {"bar": "#1F2535"}}},
-            "tokens.fonts.text: 'arial' is not one of": {"tokens": {"fonts": {"text": "arial"}}},
-            "tokens.bevel.width: 9 is outside 0..8": {"tokens": {"bevel": {"width": 9}}},
-            "components.wpt.mode: dock_strip needs components.top.mode dcb_grid":
-                {"components": {"wpt": {"mode": "dock_strip"}}},
-            "primitives.list.row_heigth: unknown key \\(did you mean 'row_height'\\?\\)":
-                {"primitives": {"list": {"row_heigth": 30}}},
-        }
-        for message, panels in cases.items():
-            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
-                self.build(panels)
-
-    def test_rejects_panels_without_colors(self) -> None:
-        with self.assertRaisesRegex(ValueError, "missing color profile files: colors"):
-            self.build(valid_panels(), with_colors=False)
-
-    def test_panels_is_optional_beside_colors(self) -> None:
+    def test_style_is_optional_beside_colors(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             (root / "L" / "LE").mkdir(parents=True)
             (root / "L" / "LE" / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
             manifest = MODULE.build_manifest(root, commit_sha="test-commit")
             self.assertEqual({"colors"}, set(manifest["profiles"]["L/LE"]["files"]))
-
-    def test_release_projection_ships_panels_and_copies_it_to_the_us_aliases(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            root = Path(tmp_dir)
-            for scope in (Path("K"), Path("L") / "LE"):
-                (root / scope).mkdir(parents=True)
-                (root / scope / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
-                (root / scope / "panels.json").write_text(json.dumps(valid_panels()), encoding="utf-8")
-            write_compatibility_registry(root, {"K": legacy_us_aliases()})
-
-            projection = MODULE.build_release_projection(root, commit_sha="test-commit")
-
-            self.assertEqual({"colors", "panels"}, set(projection["profiles"]["L/LE"]["files"]))
-            self.assertEqual("L/LE/panels.json", projection["archive_sources"]["L/LE/panels.json"])
-            self.assertEqual("K/panels.json", projection["archive_sources"]["K/KA/panels.json"])
-            self.assertEqual("K/panels.json", projection["archive_sources"]["K/KZ/panels.json"])
-            self.assertEqual(
-                projection["profiles"]["L/LE"]["files"]["panels"]["sha256"],
-                MODULE.build_manifest(root, commit_sha="x")["profiles"]["L/LE"]["files"]["panels"]["sha256"],
-            )
-
-    def test_accepts_the_optional_catalog_metadata_keys(self) -> None:
-        self.build({"name": "Spain (SACTA)", "author": "Lainoa Software", "description": "The SACTA look.",
-                    "tokens": {"case": "upper"}})
-        self.assertEqual(("name", "author", "description"), MODULE.PANELS_META_KEYS)
-
-    def test_metadata_keys_are_text_with_length_limits_and_are_not_skin_values(self) -> None:
-        for key, limit in (("name", 40), ("author", 60), ("description", 200)):
-            with self.subTest(key=key):
-                self.build({key: "x" * limit, "tokens": {"case": "upper"}})
-                for bad in ("x" * (limit + 1), "", " lead", "two\nlines", 5):
-                    with self.assertRaisesRegex(ValueError, f"'{key}'"):
-                        self.build({key: bad, "tokens": {"case": "upper"}})
-        with self.assertRaisesRegex(ValueError, "title: unknown key"):
-            self.build({"title": "x", "tokens": {"case": "upper"}})
-        # Metadata alone is not a skin: the file must set at least one look key.
-        with self.assertRaisesRegex(ValueError, "no skin keys"):
-            self.build({"name": "Only a name"})
-
-    def test_shipped_regional_skins_are_named(self) -> None:
-        names = {
-            scope: json.loads((REPO_ROOT / scope / "panels.json").read_text(encoding="utf-8")).get("name")
-            for scope in ("L/LE", "K")
-        }
-        self.assertEqual({"L/LE": "Spain (SACTA)", "K": "US (STARS)"}, names)
-
-    def test_the_skins_catalog_is_not_a_colour_profile_scope(self) -> None:
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            root = Path(tmp_dir)
-            (root / "L" / "LE").mkdir(parents=True)
-            (root / "L" / "LE" / "colors.json").write_text(json.dumps(valid_colors()), encoding="utf-8")
-            skin = root / "SKINS" / "harbour-blue"
-            skin.mkdir(parents=True)
-            (skin / "panels.json").write_text(
-                json.dumps({"name": "Harbour Blue", "tokens": {"colors": {"bar": "000000"}}}), encoding="utf-8"
-            )
-            manifest = MODULE.build_manifest(root, commit_sha="test-commit")
-            self.assertEqual(["L/LE"], list(manifest["profiles"]))
-
-    def test_repository_skins_are_complete_and_valid(self) -> None:
-        expected = {
-            "L/LE": {"top": "cell_row", "tfc": "paper_es", "top_strip": "bar"},
-            "K": {"top": "dcb_grid", "tfc": "paper_us", "top_strip": "none"},
-        }
-        manifest = MODULE.build_manifest(REPO_ROOT, commit_sha="test-commit")
-        for scope, facts in expected.items():
-            with self.subTest(scope=scope):
-                self.assertIn("panels", manifest["profiles"][scope]["files"])
-                payload = json.loads((REPO_ROOT / scope / "panels.json").read_text(encoding="utf-8"))
-                self.assertEqual("generic", payload["extends"])
-                components = payload["components"]
-                self.assertEqual(facts["top"], components.get("top", {}).get("mode", "cell_row"))
-                self.assertEqual(facts["tfc"], components["tfc"]["mode"])
-                window = payload["primitives"]["window"]
-                self.assertEqual(facts["top_strip"], window.get("top_strip", "none"))
-                self.assertEqual("upper", payload["tokens"]["case"])
-
-    def test_repository_panels_files_sit_beside_colors(self) -> None:
-        manifest = MODULE.build_manifest(REPO_ROOT, commit_sha="test-commit")
-        for scope, profile in manifest["profiles"].items():
-            if "panels" in profile["files"]:
-                self.assertIn("colors", profile["files"], scope)
 
 
 if __name__ == "__main__":

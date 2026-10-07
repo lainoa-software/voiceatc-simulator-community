@@ -31,8 +31,6 @@ jobs:
           python-version: "3.11"
       - run: npm ci
       - run: npm run format:json
-      - name: Validate the pinned interface contract
-        run: python -m unittest discover -s tests -p "test_validate_skin.py"
       # Formatting changes the exact bytes protected by the visual manifest.
       # Refresh it in the same commit so main can never contain formatted data
       # paired with the pre-format hash and size.
@@ -46,12 +44,22 @@ jobs:
       - run: python tools/constraints_manifest.py --validate-only
       - run: python tools/procedure_options_manifest.py --write --preserve-published-at
       - run: python tools/procedure_options_manifest.py --validate-only
+      # The generators above mirror their manifests into .voiceatc/full/ with
+      # json.dumps, which expands short arrays that prettier collapses. Format
+      # again so the commit holds prettier's bytes; otherwise the step below
+      # stages json.dumps output that the pre-commit prettier turns back into
+      # HEAD, and the commit is empty. Manifests hash data files, not other
+      # manifests, so this pass leaves every recorded hash valid.
+      - run: npm run format:json
       - name: Commit formatted JSON
         shell: bash
         env:
           RELEASE_DEPLOY_KEY: ${{ secrets.RELEASE_DEPLOY_KEY }}
         run: |
-          if [ -z "$(git status --porcelain -- ':(glob)**/*.json')" ]; then
+          git add -A -- ':(glob)**/*.json'
+          # Compare the index, not the working tree: a file that is only
+          # rewritten to its committed content is not a change to commit.
+          if git diff --cached --quiet; then
             echo "No JSON formatting changes."
             exit 0
           fi
@@ -69,8 +77,9 @@ jobs:
           git remote set-url origin "git@github.com:${GITHUB_REPOSITORY}.git"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- ':(glob)**/*.json'
-          git commit -m "chore: format JSON"
+          # Everything staged was just formatted by prettier, so the pre-commit
+          # hook (lint-staged running the same prettier) has nothing to add.
+          HUSKY=0 git commit -m "chore: format JSON"
           # Contributions push to main directly; rebase and retry instead of
           # failing and leaving unformatted JSON on the branch.
           for attempt in 1 2 3 4 5; do

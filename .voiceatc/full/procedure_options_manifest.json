@@ -74,12 +74,15 @@
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json",
       "sha256": "b9f95ddd4349b3429a0c11dc233d107bfda5db81526603a406d1f8e52331bb9a",
       "size_bytes": 280
+    },
+    "VTBS": {
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_options.json",
+      "sha256": "f67a351342e13cb109ee1cdef894265325f5e60086494f0878c9be7237cf188e",
+      "size_bytes": 129
     }
   },
-  "published_at": "2026-10-06T10:46:53Z",
+  "published_at": "2026-10-07T07:12:05Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": [
-    "community.airac_overrides"
-  ],
+  "requires": ["community.airac_overrides"],
   "schema_version": 1
 }

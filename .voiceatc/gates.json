@@ -1,19 +1,9 @@
 {
   "gates": [
     {
-      "dataset": "color_profiles",
-      "kind": "panels",
-      "requires": ["color_profiles.panels"]
-    },
-    {
       "dataset": "routes",
       "path": "ROUTES/full/starless_arrivals.tsv",
       "requires": ["routes.starless_arrivals"]
-    },
-    {
-      "dataset": "skins",
-      "path": "SKINS/*",
-      "requires": ["skins.catalog"]
     }
   ]
 }

@@ -38,8 +38,6 @@ jobs:
         run: python tools/misc_drawings_manifest.py --validate-only
       - name: Validate color profile files
         run: python tools/color_profiles_manifest.py --validate-only
-      - name: Validate skins catalog files
-        run: python tools/skins_manifest.py --validate-only
       - name: Validate constraints files
         run: python tools/constraints_manifest.py --validate-sources
       - name: Validate procedure options files

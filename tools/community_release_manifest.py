@@ -25,7 +25,6 @@ import color_profiles_manifest
 import airac_overrides
 import release_gates
 import routes_full_feed
-import skins_manifest
 from legacy_contract import LEGACY_DATASET_MANIFEST_SCHEMA_VERSION, LEGACY_RELEASE_MANIFEST_SCHEMA_VERSION
 
 
@@ -34,9 +33,6 @@ RELEASE_MANIFEST_ASSET_NAME = "release-manifest.json"
 RELEASE_TITLE_PREFIX = "Daily Community Release"
 ZIP_TIMESTAMP = (2024, 1, 1, 0, 0, 0)
 ZIP_FILE_MODE = 0o100644 << 16
-# The skins catalog is in the full feed only (no default manifest, no default zip), so its asset has a fixed
-# name: skins do not follow the AIRAC cycle.
-SKINS_FULL_ASSET_NAME = "skins-full.zip"
 
 
 def _hash_bytes(raw_bytes: bytes) -> str:
@@ -423,7 +419,6 @@ def build_release_bundle(
     sector_data_base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
     misc_drawings_base_manifest = misc_drawings_manifest.build_manifest(root, commit_sha=commit_sha)
     color_profiles_projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
-    skins_base_manifest = skins_manifest.build_manifest(root, commit_sha=commit_sha)
 
     # Channel gates: the default view (what every live build reads) drops gated
     # entries (any `requires`, or channels short of all three); the full view keeps them all.
@@ -448,10 +443,6 @@ def build_release_bundle(
             gates=gates,
             archive_sources=color_archive_sources,
             required_kinds=("colors",),
-        ),
-        # Only the full-feed entries of this are used: the catalog has no default view.
-        "skins": release_gates.apply_gates(
-            "skins", skins_base_manifest["skins"], gates=gates
         ),
     }
     for dataset in ("mva", "runway_configs", "misc_drawings"):
@@ -507,11 +498,6 @@ def build_release_bundle(
             root,
             color_archive_sources,
             output_dir / _full_asset_name(color_profiles_asset_name),
-        ),
-        "skins": build_deterministic_zip(
-            root,
-            release_gates.entry_repo_paths(skins_base_manifest["skins"]),
-            output_dir / SKINS_FULL_ASSET_NAME,
         ),
     }
     full_manifests = {

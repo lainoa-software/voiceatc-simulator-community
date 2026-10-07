@@ -7,10 +7,7 @@ on:
     paths:
       - "**/colors.json"
       - "**/style.json"
-      - "**/panels.json"
       - "tools/color_profiles_manifest.py"
-      - "tools/validate_skin.py"
-      - "tools/interface_contract/**"
       - "tests/test_color_profiles_manifest.py"
       - ".github/workflows/validate-color-profiles.yml"
 
