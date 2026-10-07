@@ -192,7 +192,7 @@ class VisualSightReferencesManifestTests(unittest.TestCase):
                 MODULE.validate_existing_manifest(root)
 
     def test_repository_workflows_register_sidecar_gate(self) -> None:
-        validation = (ROOT / ".github" / "workflows" / "validate-visual-procedures.yml").read_text(
+        validation = (ROOT / ".github" / "workflows" / "validate-content-hierarchy.yml").read_text(
             encoding="utf-8"
         )
         formatting = (ROOT / ".github" / "workflows" / "format-all-json.yml").read_text(

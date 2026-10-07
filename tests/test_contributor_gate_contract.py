@@ -26,13 +26,7 @@ CI_OWNED_TOOLS = (
     "visual_go_arounds_manifest",
     "visual_sight_references_manifest",
 )
-CONTRIBUTOR_GATES = (
-    "validate-content-hierarchy.yml",
-    "validate-constraints.yml",
-    "validate-procedure-options.yml",
-    "validate-map-display.yml",
-    "validate-visual-procedures.yml",
-)
+CONTRIBUTOR_GATES = ("validate-content-hierarchy.yml",)
 CI_WRITERS = ("daily-release.yml", "format-all-json.yml")
 
 

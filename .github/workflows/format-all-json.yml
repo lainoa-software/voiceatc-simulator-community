@@ -4,8 +4,14 @@ on:
   push:
     branches:
       - main
+    # .voiceatc/ is CI-owned. A push that touches nothing else is a release
+    # commit, and daily-release.yml already wrote it in this workflow's final
+    # form. A path filter (not a job `if:`) so such a push creates no run at all:
+    # a skipped run would still take the shared concurrency slot and could
+    # replace a pending run queued by a contributor merge.
     paths:
       - "**/*.json"
+      - "!.voiceatc/**"
   workflow_dispatch:
 
 permissions:

@@ -648,6 +648,16 @@ jobs:
             --title "${TITLE}" \
             --notes-file "${NOTES_FILE}" \
             --latest
+      # Prettier for the manifest writes below. --ignore-scripts keeps husky
+      # from arming a pre-commit hook that the commit step would then run.
+      - uses: actions/setup-node@v4
+        if: steps.meta.outputs.changed == 'true'
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install prettier
+        if: steps.meta.outputs.changed == 'true'
+        run: npm ci --ignore-scripts
       - name: Write manifests
         if: steps.meta.outputs.changed == 'true'
         shell: bash
@@ -679,6 +689,13 @@ jobs:
           python tools/constraints_manifest.py --write
           python tools/procedure_options_manifest.py --write
           python tools/map_display_manifest.py --write
+          # The change check above mirrors the visual manifests into .voiceatc/full/
+          # with an empty published_at, and the refresh steps rewrite them only when
+          # their airports changed. Restore the recorded date, as format-all-json.yml
+          # does after a merge; release commits no longer trigger that workflow.
+          python tools/visual_procedures_manifest.py --write --preserve-published-at
+          python tools/visual_go_arounds_manifest.py --write --preserve-published-at
+          python tools/visual_sight_references_manifest.py --write --preserve-published-at
           # Strict verification belongs after the write, never before it. The
           # preflight used to run these, so a manifest that lagged main failed the
           # release at the step before the one that would have repaired it.
@@ -690,6 +707,11 @@ jobs:
           python tools/visual_sight_references_manifest.py --validate-only
           python tools/player_routes_manifest.py --write-manifests --summary build/release/player_summary.json
           python tools/stable_contract_guard.py
+          # json.dumps expands the short arrays prettier collapses. Commit (and
+          # mirror to R2) prettier's bytes, so format-all-json.yml has nothing to
+          # rewrite. Manifests hash data files, never other manifests, so every
+          # recorded hash stays valid.
+          npx prettier --write --log-level=warn .voiceatc
       - name: Publish routes to Cloudflare R2
         if: steps.meta.outputs.should_publish == 'true'
         continue-on-error: true

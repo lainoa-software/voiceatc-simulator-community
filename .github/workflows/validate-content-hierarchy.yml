@@ -9,8 +9,9 @@ permissions:
 
 jobs:
   # Keep this job named `validate`. The branch ruleset on main requires a status
-  # check with exactly that context, and this is the only validation workflow
-  # without a paths filter, so it runs every release preflight on every pull request.
+  # check with exactly that context, and this is the only pull-request workflow:
+  # it runs every release preflight on every pull request, with no paths filter.
+  # Per-dataset copies of these steps were removed as pure duplicates.
   # Renaming it without updating the ruleset first blocks every pull request
   # forever, waiting for a check that no longer exists.
   validate:
