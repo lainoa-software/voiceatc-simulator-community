@@ -4,3 +4,4 @@ __pycache__/
 /node_modules/
 .vscode/
 *.ps1
+.claude/
