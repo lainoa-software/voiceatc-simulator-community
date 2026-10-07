@@ -2,12 +2,14 @@
   "sector_configs": [
     {
       "sector_config_id": "1",
-      "runway_configs": ["03", "21"],
       "sectors": [
         {
-          "sector_ids": ["APP"],
+          "sector_ids": ["VTBDAPP"],
           "frequency": "119.400"
-        }
+        },
+        {
+          "sector_ids": ["VTBBAPP"],
+          "frequency": "125.200
       ]
     }
   ]
