@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UUBC",
+  "routes": [
+    {
+      "id": "65db43a1",
+      "route": "UMKK DCT PELUG OTVOV KEDUX PIVAX PIRUX PISIM PIDIN LEDUN ATLUM RUMOL T272 GILAP M856 KUGEK N609 GODBI BAMDO DCT UUBC",
+      "created_at": "2026-10-07T17:56:29Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
