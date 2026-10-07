@@ -1,0 +1,12 @@
+{
+  "airports": {
+    "LEBL": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json",
+      "sha256": "93693d7504edea0aaf86f636d0cb5de5a277babc1a69deae81b984221e883512",
+      "size_bytes": 1149
+    }
+  },
+  "published_at": "2026-10-07T11:04:38Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "schema_version": 1
+}

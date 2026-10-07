@@ -42,6 +42,7 @@ Community publication does not require a simulator-channel promotion once the ge
 | `runway_configs.json` | Airport folder |
 | `constraints.json` | Airport folder |
 | `procedure_options.json` | Airport folder |
+| `map_display.json` | Airport folder |
 | `visual_procedures.json` | Airport folder |
 | `visual_go_arounds.json`, `visual_sight_references.json` | Airport folder beside `visual_procedures.json` |
 | `mva.json` | Terminal-area folder |

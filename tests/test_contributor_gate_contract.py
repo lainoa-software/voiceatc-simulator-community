@@ -1,6 +1,6 @@
 """A contribution is never gated on a manifest that CI owns.
 
-Five datasets keep a hash-and-size index under `.voiceatc/`. Those indexes are
+Six datasets keep a hash-and-size index under `.voiceatc/`. Those indexes are
 written by CI - `format-all-json.yml` after every merge, `daily-release.yml`
 nightly - so a pull request is gated on its own source files and nothing else.
 
@@ -21,6 +21,7 @@ WORKFLOWS = REPO_ROOT / ".github" / "workflows"
 CI_OWNED_TOOLS = (
     "constraints_manifest",
     "procedure_options_manifest",
+    "map_display_manifest",
     "visual_procedures_manifest",
     "visual_go_arounds_manifest",
     "visual_sight_references_manifest",
@@ -29,6 +30,7 @@ CONTRIBUTOR_GATES = (
     "validate-content-hierarchy.yml",
     "validate-constraints.yml",
     "validate-procedure-options.yml",
+    "validate-map-display.yml",
     "validate-visual-procedures.yml",
 )
 CI_WRITERS = ("daily-release.yml", "format-all-json.yml")

@@ -19,6 +19,7 @@ facility SOP, or published noise procedure. A link is ideal. "From memory" or
 
 - [ ] `python tools/content_hierarchy.py --validate-only` passes
 - [ ] Changed `procedure_options.json`? Ran Prettier on the changed file, then `python tools/procedure_options_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
+- [ ] Changed `map_display.json`? Ran Prettier on the changed file and `python tools/map_display_manifest.py --validate-sources` (CI writes the manifest)
 - [ ] Changed `constraints.json`? Ran Prettier on the changed file, then `python tools/constraints_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
 - [ ] Changed `visual_procedures.json`? Verified every leg against a current official chart, ran Prettier on the changed file, then `python tools/visual_procedures_manifest.py --write`, then `--validate-only`, and committed the data file plus generated manifest
 - [ ] Changed `visual_sight_references.json`? Verified every named object against a current official source, ran Prettier, then `python tools/visual_sight_references_manifest.py --write`, then `--validate-only`, and committed the sidecar plus generated manifest

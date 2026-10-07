@@ -16,6 +16,7 @@ AIRPORT_FILE_NAMES = {
     "runway_configs.json",
     "constraints.json",
     "procedure_options.json",
+    "map_display.json",
     "visual_procedures.json",
     "visual_go_arounds.json",
     "visual_sight_references.json",

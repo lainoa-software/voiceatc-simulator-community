@@ -42,6 +42,8 @@ jobs:
         run: python tools/constraints_manifest.py --validate-sources
       - name: Validate procedure options files
         run: python tools/procedure_options_manifest.py --validate-sources
+      - name: Validate map display files
+        run: python tools/map_display_manifest.py --validate-sources
       - name: Validate visual procedure files
         run: python tools/visual_procedures_manifest.py --validate-sources
       - name: Validate visual go-around files
