@@ -31,6 +31,13 @@
           "status": "ok"
         }
       },
+      "EDDF_LIPZ": {
+        "36753612": {
+          "checked_airac": "2610",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "EDDF_RKSI": {
         "948a9e66": {
           "checked_airac": "2610",
@@ -3195,6 +3202,13 @@
           "status": "ok"
         }
       },
+      "UMKK_UMMS": {
+        "b505d838": {
+          "checked_airac": "2610",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "UTAA_RKSI": {
         "e5ea62dd": {
           "checked_airac": "2610",
@@ -3337,6 +3351,13 @@
       },
       "VTSP_VTBD": {
         "d3108f4c": {
+          "checked_airac": "2610",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "VTUD_VTBD": {
+        "7d980b47": {
           "checked_airac": "2610",
           "reasons": [],
           "status": "ok"
@@ -4023,7 +4044,7 @@
     "deep_validation": false,
     "pairs": {}
   },
-  "generated_at": "2026-10-06T10:46:34Z",
+  "generated_at": "2026-10-07T07:11:59Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

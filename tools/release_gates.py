@@ -5,7 +5,7 @@ Content declares what it needs; builds declare what they can do. There are no
 version numbers anywhere. The maintainer-edited ``.voiceatc/gates.json`` marks
 new content (a file kind, a repo path glob, a route overlay under ``ROUTES/full/``
 or a route lane) with ``requires``
-(dotted capability names such as ``color_profiles.panels``) and/or ``channels``.
+(dotted capability names such as ``routes.starless_arrivals``) and/or ``channels``.
 
 The default manifests and zips (the paths every build already reads) keep an
 entry only when it has no ``requires`` and its ``channels`` is absent or lists
@@ -34,8 +34,7 @@ GATES_PATH = Path(".voiceatc") / "gates.json"
 FULL_DIR = Path(".voiceatc") / "full"
 CHANNELS = ("stable", "open-beta", "closed-beta")
 # Datasets whose default output this producer filters (the release zips).
-# ``skins`` has no default output at all (full feed only), so a gate on it only annotates its full-feed entries.
-FILTERED_DATASETS = ("mva", "runway_configs", "sector_data", "misc_drawings", "color_profiles", "skins")
+FILTERED_DATASETS = ("mva", "runway_configs", "sector_data", "misc_drawings", "color_profiles")
 # Datasets served by lane (the API worker); a lane gate never touches a default path.
 LANE_DATASETS = ("routes", "voice_priors", "snapshots")
 # Routes also takes path gates, but only on the gated overlays under ROUTES/full/
@@ -50,10 +49,10 @@ LANE_RE = re.compile(r"^[a-z][a-z0-9_-]*$")
 
 
 def validate_capability(name: object, label: str = "capability") -> str:
-    """A capability name is lowercase dotted (``color_profiles.panels``), at most 64 characters."""
+    """A capability name is lowercase dotted (``routes.starless_arrivals``), at most 64 characters."""
     if not isinstance(name, str) or len(name) > CAPABILITY_MAX_LENGTH or not CAPABILITY_RE.fullmatch(name):
         raise ValueError(
-            f"{label}: {name!r} must be a lowercase dotted capability name such as 'color_profiles.panels'"
+            f"{label}: {name!r} must be a lowercase dotted capability name such as 'routes.starless_arrivals'"
             f" (at most {CAPABILITY_MAX_LENGTH} characters)"
         )
     return name
@@ -106,7 +105,7 @@ def validate_gates(payload: object, label: str = str(GATES_PATH)) -> list[dict[s
                 raise ValueError(f"{where}: dataset must be one of {', '.join(FILTERED_DATASETS)}")
             value = gate[selector]
             if selector == "kind" and (not isinstance(value, str) or not KIND_RE.fullmatch(value)):
-                raise ValueError(f"{where}: kind must be a lowercase file kind such as 'panels'")
+                raise ValueError(f"{where}: kind must be a lowercase file kind such as 'style'")
             if selector == "path":
                 if not isinstance(value, str) or not value.strip() or value.startswith("/") or ".." in value:
                     raise ValueError(f"{where}: path must be a repo-relative path or glob")

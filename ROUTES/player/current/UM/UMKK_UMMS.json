@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "UMMS",
+  "routes": [
+    {
+      "id": "b505d838",
+      "route": "UMKK DCT PELUG DCT OTVOV DCT KEDUX DCT PIVAX DCT PIRUX DCT PISIM DCT PIDIN DCT ARANS DCT PISIS DCT MIGTU DCT RUMOL DCT LUTIT T272 GILAP M856 TEGLU P26 RUHAL DCT UMMS",
+      "created_at": "2026-10-06T19:39:00Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

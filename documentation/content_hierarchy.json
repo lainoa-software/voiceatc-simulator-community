@@ -251,7 +251,7 @@
     "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
     "V/VH/VHHK/HONGKONG_TMA": [],
     "V/VA/VABF/MUMBAI_TMA": ["VABB"],
-    "V/VT/VTBB/Bangkok_TMA": ["VTBD"],
+    "V/VT/VTBB/Bangkok_TMA": ["VTBD", "VTBS"],
     "R/RK/RKRR/JEJU_TMA": ["RKPC"],
     "R/RK/RKRR/GIMHAE_TMA": ["RKPK"]
   }

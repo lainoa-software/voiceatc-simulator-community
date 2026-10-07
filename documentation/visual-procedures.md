@@ -224,7 +224,10 @@ every merge with `--preserve-published-at`, because formatting changes the
 protected bytes without being a new publication, and `daily-release.yml` mints
 the actual publication timestamp nightly. Each writer verifies its own output
 with `--validate-only` immediately afterwards, so drift is caught where it can
-be repaired rather than on a contributor's pull request.
+be repaired rather than on a contributor's pull request. The workflow then runs
+prettier once more, because the writers mirror into `.voiceatc/full/` with
+`json.dumps`, whose expanded arrays prettier would otherwise fold back to the
+committed bytes and leave an empty commit.
 
 ## Maintainer review checklist
 

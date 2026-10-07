@@ -27,12 +27,12 @@ RELEASE_TESTS = _load("test_community_release_manifest", REPO_ROOT / "tests" / "
 
 SPEC_GATES = {
     "gates": [
-        {"dataset": "color_profiles", "kind": "panels", "requires": ["color_profiles.panels"]},
+        {"dataset": "color_profiles", "kind": "style", "requires": ["color_profiles.future"]},
         {"dataset": "routes", "lane": "next", "channels": ["closed-beta"]},
         {
             "dataset": "mva",
             "path": "E/ED/EDDM/mva.json",
-            "requires": ["community.full_feed", "color_profiles.panels"],
+            "requires": ["community.full_feed", "color_profiles.future"],
             "channels": ["closed-beta", "open-beta"],
         },
     ],
@@ -55,10 +55,10 @@ class GateFileValidationTests(unittest.TestCase):
             {"dataset": "mva", "path": "X/mva.json", "channels": ["beta"]},
             {"dataset": "mva", "path": "X/mva.json", "min_game_version": "0.6.2.380"},
             {"dataset": "mva", "path": "X/mva.json", "requires": []},
-            {"dataset": "mva", "path": "X/mva.json", "requires": "color_profiles.panels"},
-            {"dataset": "mva", "path": "X/mva.json", "requires": ["panels"]},
-            {"dataset": "mva", "path": "X/mva.json", "requires": ["Color_Profiles.panels"]},
-            {"dataset": "mva", "path": "X/mva.json", "requires": ["color-profiles.panels"]},
+            {"dataset": "mva", "path": "X/mva.json", "requires": "color_profiles.future"},
+            {"dataset": "mva", "path": "X/mva.json", "requires": ["future"]},
+            {"dataset": "mva", "path": "X/mva.json", "requires": ["Color_Profiles.future"]},
+            {"dataset": "mva", "path": "X/mva.json", "requires": ["color-profiles.future"]},
             {"dataset": "mva", "path": "X/mva.json", "requires": ["color_profiles."]},
             {"dataset": "mva", "path": "X/mva.json", "requires": ["a." + "b" * 63]},
             {"dataset": "mva", "path": "X/mva.json", "requires": ["a.b", "a.b"]},
@@ -71,7 +71,7 @@ class GateFileValidationTests(unittest.TestCase):
             {"dataset": "voice_priors", "path": "ROUTES/full/x.tsv", "requires": ["routes.starless_arrivals"]},
             {"dataset": "mva", "path": "../x", "channels": ["stable"]},
             {"dataset": "mva", "path": "X/mva.json", "channels": ["stable"], "note": "x"},
-            {"dataset": "color_profiles", "kind": "Panels", "channels": ["stable"]},
+            {"dataset": "color_profiles", "kind": "Style", "channels": ["stable"]},
         ]
         for gate in bad_gates:
             with self.subTest(gate=gate), self.assertRaises(ValueError):
@@ -109,10 +109,10 @@ class GateFileValidationTests(unittest.TestCase):
         self.assertNotIn("schema_version", committed)
 
     def test_capability_names_are_lowercase_dotted_and_at_most_64_characters(self) -> None:
-        for good in ("color_profiles.panels", "skins.catalog", "community.full_feed", "a.b.c", "x1.y_2", "a." + "b" * 62):
+        for good in ("color_profiles.future", "mva.extra", "community.full_feed", "a.b.c", "x1.y_2", "a." + "b" * 62):
             with self.subTest(name=good):
                 self.assertEqual(GATES.validate_capability(good), good)
-        for bad in ("panels", "A.b", "a.B", "a-b.c", "a..b", ".a.b", "a.b.", "a b.c", "", 3, None, "a." + "b" * 63):
+        for bad in ("style", "A.b", "a.B", "a-b.c", "a..b", ".a.b", "a.b.", "a b.c", "", 3, None, "a." + "b" * 63):
             with self.subTest(name=bad), self.assertRaises(ValueError):
                 GATES.validate_capability(bad)
 
@@ -139,8 +139,8 @@ class GateDecisionTests(unittest.TestCase):
         self.assertTrue(visible({"channels": ["closed-beta", "stable", "open-beta"]}))
         self.assertFalse(visible({"channels": ["closed-beta", "open-beta"]}))
         self.assertFalse(visible({"channels": ["closed-beta"]}))
-        self.assertFalse(visible({"requires": ["skins.catalog"]}))
-        self.assertFalse(visible({"requires": ["skins.catalog"], "channels": ["stable", "open-beta", "closed-beta"]}))
+        self.assertFalse(visible({"requires": ["mva.extra"]}))
+        self.assertFalse(visible({"requires": ["mva.extra"], "channels": ["stable", "open-beta", "closed-beta"]}))
 
     def test_ungated_entries_come_back_unchanged(self) -> None:
         entries = {"LEMD": _file("L/LE/LEMD/mva.json"), "EHAM": _file("E/EH/EHAM/mva.json")}
@@ -155,14 +155,14 @@ class GateDecisionTests(unittest.TestCase):
         self.assertEqual(list(result["default"]), ["LEMD"])
         eddm = result["full_entries"][0]
         self.assertEqual(eddm["id"], "EDDM")
-        self.assertEqual(eddm["requires"], ["community.full_feed", "color_profiles.panels"])
+        self.assertEqual(eddm["requires"], ["community.full_feed", "color_profiles.future"])
         self.assertEqual(eddm["channels"], ["open-beta", "closed-beta"])
         self.assertNotIn("requires", result["full_entries"][1])
 
     def test_kind_gate_drops_only_that_file_including_alias_copies(self) -> None:
         gates = GATES.validate_gates(SPEC_GATES)
         profiles = {
-            "K/KA": {"files": {"colors": _file("K/KA/colors.json"), "panels": _file("K/KA/panels.json")}},
+            "K/KA": {"files": {"colors": _file("K/KA/colors.json"), "style": _file("K/KA/style.json")}},
             "L/LE": {"files": {"colors": _file("L/LE/colors.json")}},
         }
         result = GATES.apply_gates(
@@ -170,8 +170,8 @@ class GateDecisionTests(unittest.TestCase):
         )
         self.assertEqual(result["default"]["K/KA"], {"files": {"colors": _file("K/KA/colors.json")}})
         self.assertIs(result["default"]["L/LE"], profiles["L/LE"])
-        full_panels = result["full_entries"][0]["files"]["panels"]
-        self.assertEqual(full_panels["requires"], ["color_profiles.panels"])
+        full_style = result["full_entries"][0]["files"]["style"]
+        self.assertEqual(full_style["requires"], ["color_profiles.future"])
         self.assertEqual(GATES.entry_repo_paths(result["default"]), ["K/KA/colors.json", "L/LE/colors.json"])
 
     def test_gating_a_required_kind_removes_the_whole_entry(self) -> None:
@@ -184,16 +184,16 @@ class GateDecisionTests(unittest.TestCase):
         self.assertEqual(len(result["full_entries"]), 1)
 
     def test_path_gate_matches_the_alias_source(self) -> None:
-        gates = [{"dataset": "color_profiles", "path": "K/panels.json", "requires": ["color_profiles.panels"]}]
-        profiles = {"K/KA": {"files": {"colors": _file("K/KA/colors.json"), "panels": _file("K/KA/panels.json")}}}
+        gates = [{"dataset": "color_profiles", "path": "K/style.json", "requires": ["color_profiles.future"]}]
+        profiles = {"K/KA": {"files": {"colors": _file("K/KA/colors.json"), "style": _file("K/KA/style.json")}}}
         result = GATES.apply_gates(
             "color_profiles",
             profiles,
             gates=gates,
-            archive_sources={"K/KA/colors.json": "K/colors.json", "K/KA/panels.json": "K/panels.json"},
+            archive_sources={"K/KA/colors.json": "K/colors.json", "K/KA/style.json": "K/style.json"},
             required_kinds=("colors",),
         )
-        self.assertNotIn("panels", result["default"]["K/KA"]["files"])
+        self.assertNotIn("style", result["default"]["K/KA"]["files"])
 
     def test_all_channel_gate_keeps_entry_in_default(self) -> None:
         gates = [{"dataset": "mva", "path": "L/*", "channels": ["stable", "open-beta", "closed-beta"]}]
@@ -204,13 +204,13 @@ class GateDecisionTests(unittest.TestCase):
 
     def test_requirements_from_several_gates_are_merged_without_duplicates(self) -> None:
         gates = [
-            {"dataset": "mva", "path": "L/*", "requires": ["skins.catalog"]},
-            {"dataset": "mva", "path": "L/LE/*", "requires": ["color_profiles.panels", "skins.catalog"]},
+            {"dataset": "mva", "path": "L/*", "requires": ["mva.extra"]},
+            {"dataset": "mva", "path": "L/LE/*", "requires": ["color_profiles.future", "mva.extra"]},
         ]
         entries = {"LEMD": _file("L/LE/LEMD/mva.json")}
         result = GATES.apply_gates("mva", entries, gates=gates)
         self.assertEqual(result["default"], {})
-        self.assertEqual(result["full_entries"][0]["requires"], ["skins.catalog", "color_profiles.panels"])
+        self.assertEqual(result["full_entries"][0]["requires"], ["mva.extra", "color_profiles.future"])
 
 
 class ProducerGateTests(unittest.TestCase):

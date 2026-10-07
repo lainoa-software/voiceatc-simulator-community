@@ -1,6 +1,6 @@
 # VoiceATC Simulator Community
 
-Community-authored airports, sectors, radar displays, interface skins and flight routes
+Community-authored airports, sectors, radar displays and flight routes
 for VoiceATC Simulator. Accepted contributions reach the game after publication.
 
 ## Start here
@@ -24,7 +24,6 @@ walks through choosing a task, editing, local testing, validation and submission
 | Add a charted visual approach | [Visual Procedures](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Visual-Procedures) |
 | Define airspace or radar geometry | [Sector Definitions](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Sector-Definitions), [MVA](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/MVA), [Misc Drawings](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Misc-Drawings) |
 | Change radar colours or symbols | [Colours](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Colours), [Styles](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Styles) |
-| Make an interface skin | [Skins](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Skins) |
 | Share a flight route | [Routes](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Routes) — website workflow |
 
 ## Where your files go
@@ -45,15 +44,12 @@ generated indexes under `.voiceatc/`. Approval and a green required check are bo
 
 - [Hierarchy authority](documentation/CONTENT_HIERARCHY.md) — registry and placement contracts.
 - [Visual-procedure contract](documentation/visual-procedures.md) — schema, source evidence and review.
-- [Generated skin key reference](documentation/skins-reference.md) — every supported skin key.
 - [US runway config sources](documentation/US_RUNWAY_CONFIG_SOURCES.md) — provenance of existing flows.
 
 ## Maintainers
 
 - [Route publication](documentation/routes-publication.md).
 - [Channel gates](documentation/channel-gates.md).
-- [Catalog publication](documentation/skins-catalog.md#how-it-ships-maintainers).
-- [Skin schema maintenance](documentation/skins-modding.md#schema-maintenance).
 
 ## Bugs, suggestions and feedback
 

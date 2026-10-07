@@ -317,34 +317,8 @@ def check_default_routes_references(manifests: dict[str, object]) -> list[str]:
     return errors
 
 
-def check_no_default_skins(root: Path = ROOT, summary: dict[str, object] | None = None) -> list[str]:
-    """The skins catalog is in the full feed only: no default manifest, default zip or release-manifest asset."""
-    errors: list[str] = []
-    default_manifest = root / ".voiceatc" / "skins_manifest.json"
-    if default_manifest.exists():
-        errors.append("skins: .voiceatc/skins_manifest.json must not exist; skins ship only as .voiceatc/full/")
-    if summary is None:
-        return errors
-    assets = summary.get("assets", {})
-    manifests = summary.get("manifests", {})
-    if isinstance(manifests, dict):
-        if "skins" in manifests:
-            errors.append("skins: the release must not write a default skins manifest")
-        release_assets = manifests.get("release", {}).get("assets", {}) if isinstance(manifests.get("release"), dict) else {}
-        if any("skins" in str(key) for key in release_assets):
-            errors.append("skins: the release manifest must not list a skins asset")
-    if isinstance(assets, dict):
-        for key, asset in assets.items():
-            name = str(asset.get("asset_name", "")) if isinstance(asset, dict) else ""
-            if key == "skins_full_zip":
-                continue
-            if "skins" in str(key) or name.startswith("skins"):
-                errors.append(f"skins: '{key}' ({name}) must not be a default release asset; only skins-full.zip exists")
-    return errors
-
-
 def check_repo_manifests(root: Path = ROOT) -> list[str]:
-    errors: list[str] = check_no_default_skins(root)
+    errors: list[str] = []
     for dataset in FILE_MANIFESTS:
         path = root / ".voiceatc" / f"{dataset}_manifest.json"
         if path.is_file():
@@ -366,7 +340,6 @@ def check_release_summary(summary_path: Path) -> list[str]:
     for dataset, rules in ZIP_DATASETS.items():
         zip_path = Path(summary["assets"][str(rules["asset_key"])]["path"])
         errors.extend(check_zip_dataset(dataset, summary["manifests"][dataset], zip_path))
-    errors.extend(check_no_default_skins(ROOT, summary))
     default_manifests = dict(summary["manifests"])
     release_asset = summary["assets"].get("release_manifest", {})
     release_asset_path = Path(str(release_asset.get("path", ""))) if isinstance(release_asset, dict) else None

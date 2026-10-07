@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2610-full.zip",
-  "commit_sha": "547e84ffa701e2aebba513a277cf8c77ca5dc500",
+  "commit_sha": "f171751d11d9a844bcd13cab703f47805c0bfbac",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-06-b/sector-data-2610-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-07/sector-data-2610-full.zip",
   "entries": [
     {
       "files": {
@@ -548,28 +548,28 @@
       "files": {
         "configs": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_configs.json",
-          "sha256": "d86833696175116efee51fc774b4c8d79d810459388d61653d3e23851a353d06",
-          "size_bytes": 230
+          "sha256": "109dc30c5d78b82aee8c43d9dff4c0e73215afa645621ecab3c2ad1f7cff3f4b",
+          "size_bytes": 224
         },
         "definitions": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_definitions.json",
-          "sha256": "0abff6957b6857c1f970a384d1e48b9e18a73e93a58040bf9017eaa93e8cdfaa",
-          "size_bytes": 12663
+          "sha256": "58a65d7a73aeec1a38aaf2128276e132aed8c599ec221211cef747a1362dfc0d",
+          "size_bytes": 12658
         },
         "influence": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_influence.json",
-          "sha256": "a1e48d31e5151c7ff5afdcd6cea7687125d6d7cb6522e18462ccc8dd95637f3e",
-          "size_bytes": 103
+          "sha256": "0f49ca2384248b9acbce8099cf0deacccd871b0c3493f4afb11bfdd46a42a807",
+          "size_bytes": 98
         }
       },
       "id": "V/VT/VTBB/Bangkok_TMA"
     }
   ],
   "entry_count": 28,
-  "generated_at": "2026-10-06T10:46:34Z",
-  "published_at": "2026-10-06T10:46:34Z",
-  "release_tag": "daily-2026-10-06-b",
+  "generated_at": "2026-10-07T07:11:59Z",
+  "published_at": "2026-10-07T07:11:59Z",
+  "release_tag": "daily-2026-10-07",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "9fd491f3a6b7d83baa474027dc0af6d41515ef1309b0fa3c868a1f91438e67ab",
-  "size_bytes": 90848
+  "sha256": "9a0c105e31787e7065ace211d1c5c76cb0163b017924fd6eb8a095c9c72f72f4",
+  "size_bytes": 90831
 }

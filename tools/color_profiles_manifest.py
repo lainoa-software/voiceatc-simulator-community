@@ -15,8 +15,6 @@ TOOLS_DIR = Path(__file__).resolve().parent
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
-import validate_skin  # noqa: E402
-
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
@@ -24,27 +22,15 @@ BRANCH_NAME = "main"
 PROFILE_FILE_NAMES = {
     "colors": "colors.json",
     "style": "style.json",
-    "panels": "panels.json",
 }
 FILE_KIND_BY_NAME = {file_name: kind for kind, file_name in PROFILE_FILE_NAMES.items()}
-FILE_KIND_ORDER = ("colors", "style", "panels")
+FILE_KIND_ORDER = ("colors", "style")
 ALLOWED_SCOPE_DEPTHS = {1, 2, 3, 4, 5}
 LEGACY_ALLOWED_SCOPE_DEPTHS = {2, 3, 4, 5}
 HIERARCHY_REGISTRY_PATH = Path("documentation") / "content_hierarchy.json"
 EXPECTED_US_RELEASE_ALIASES = {f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)}
 HEX_COLOR_RE = re.compile(r"^[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$")
 ALLOWED_NUMERIC_KEYS = {"symbol_size", "traildot_size", "symbol_line_width"}
-# panels.json is the session-interface skin in the interface language (tokens,
-# primitives, components, extends): tools/validate_skin.py checks it with the game's strict
-# rules against the schema vendored from the game (tools/interface_contract/).
-# Optional catalog metadata: the skin picker lists a skin by these. They are text for
-# people, never skin values, so the game does not apply them. The maximum lengths are
-# characters; one line, no leading or trailing space.
-PANELS_META_KEYS = ("name", "author", "description")
-PANELS_META_MAX_LENGTH = {"name": 40, "author": 60, "description": 200}
-# A skin sets at least one of these; metadata alone is not a skin.
-PANELS_LOOK_KEYS = ("extends", "tokens", "primitives", "components")
-SKINS_DIR_NAME = "SKINS"
 
 
 def _tracked_profile_files(root: Path) -> list[Path]:
@@ -55,7 +41,6 @@ def _tracked_profile_files(root: Path) -> list[Path]:
             for path in root.rglob(file_name)
             if ".git" not in path.parts
             and ".voiceatc" not in path.parts
-            and path.relative_to(root).parts[0] != SKINS_DIR_NAME
         )
     return sorted(paths)
 
@@ -170,53 +155,6 @@ def validate_style_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     }
 
 
-def _validate_panels_meta(key: str, value: object, path: Path) -> None:
-    limit = PANELS_META_MAX_LENGTH[key]
-    if (
-        not isinstance(value, str)
-        or not value
-        or value != value.strip()
-        or len(value) > limit
-        or any(ord(char) < 32 or ord(char) == 127 for char in value)
-    ):
-        raise ValueError(
-            f"{path}: '{key}' must be one line of text, 1 to {limit} characters, "
-            "with no space at either end"
-        )
-
-
-def validate_panels_file(
-    path: Path,
-    root: Path = ROOT,
-    *,
-    required_meta: tuple[str, ...] = (),
-) -> dict[str, object]:
-    """Validate one panels.json. ``required_meta`` names the metadata keys that must be present
-    (the skins catalog requires name and author; a regional skin may omit them)."""
-    payload, raw_bytes = _load_json_object(path)
-    if not payload:
-        raise ValueError(f"{path}: panels.json must not be empty")
-
-    for key in required_meta:
-        if key not in payload:
-            raise ValueError(f"{path}: '{key}' is required")
-    for key in PANELS_META_KEYS:
-        if key in payload:
-            _validate_panels_meta(key, payload[key], path)
-    if not any(key in PANELS_LOOK_KEYS for key in payload):
-        raise ValueError(f"{path}: panels.json has no skin keys; set at least one of "
-                         f"{', '.join(PANELS_LOOK_KEYS)}, not only {', '.join(PANELS_META_KEYS)}")
-    errors = validate_skin.strict_errors(payload, root)
-    if errors:
-        raise ValueError(f"{path}: " + "; ".join(errors))
-
-    return {
-        "repo_path": safe_repo_path(path, root),
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
-    }
-
-
 def validate_profile_directory(profile_dir: Path, profile_files: dict[str, Path], root: Path = ROOT) -> dict[str, object]:
     scope_path = safe_repo_path(profile_dir, root)
     _validate_scope_depth(scope_path, profile_dir)
@@ -229,8 +167,6 @@ def validate_profile_directory(profile_dir: Path, profile_files: dict[str, Path]
     }
     if "style" in profile_files:
         files["style"] = validate_style_file(profile_files["style"], root)
-    if "panels" in profile_files:
-        files["panels"] = validate_panels_file(profile_files["panels"], root)
     return {
         "scope_path": scope_path,
         "files": files,

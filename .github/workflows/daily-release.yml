@@ -55,8 +55,6 @@ jobs:
         run: python tools/misc_drawings_manifest.py --validate-only
       - name: Validate color profile files
         run: python tools/color_profiles_manifest.py --validate-only
-      - name: Validate skins catalog files
-        run: python tools/skins_manifest.py --validate-only
       - name: Validate constraints files
         run: python tools/constraints_manifest.py --validate-sources
       - name: Validate procedure options files
@@ -824,7 +822,6 @@ jobs:
             .voiceatc/full/sector_data_manifest.json
             .voiceatc/full/misc_drawings_manifest.json
             .voiceatc/full/color_profiles_manifest.json
-            .voiceatc/full/skins_manifest.json
             .voiceatc/full/routes_manifest.json
             .voiceatc/full/constraints_manifest.json
             .voiceatc/full/procedure_options_manifest.json

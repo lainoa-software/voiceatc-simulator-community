@@ -18,7 +18,7 @@ optional keys gated with `requires`.
 ```json
 {
   "gates": [
-    { "dataset": "color_profiles", "kind": "panels", "requires": ["color_profiles.panels"] }
+    { "dataset": "routes", "path": "ROUTES/full/starless_arrivals.tsv", "requires": ["routes.starless_arrivals"] }
   ]
 }
 ```
@@ -29,7 +29,7 @@ A gate names a `dataset` and exactly one selector:
 
 | Selector | Matches | Example |
 |---|---|---|
-| `kind` | a file kind inside an entry (`panels`, `style`, …) | `{"dataset": "color_profiles", "kind": "panels", …}` |
+| `kind` | a file kind inside an entry (`colors`, `style`, …) | `{"dataset": "color_profiles", "kind": "style", …}` |
 | `path` | a repo path; `*` matches anything, including `/` | `{"dataset": "mva", "path": "E/ED/EDDM/*", …}` |
 | `path` (routes) | a route overlay under `ROUTES/full/`; needs `requires` | `{"dataset": "routes", "path": "ROUTES/full/starless_arrivals.tsv", …}` |
 | `lane` | a route lane served by the API worker | `{"dataset": "routes", "lane": "next", …}` |
@@ -45,13 +45,8 @@ and at least one rule:
 
 Gateable datasets: `mva`, `runway_configs`, `sector_data`, `misc_drawings`,
 `color_profiles` (kind and path gates); `routes` (path gates on overlays under `ROUTES/full/`,
-always with `requires`; see "Route overlays" below); `skins` (path gates; see below); `routes`,
+always with `requires`; see "Route overlays" below); `routes`,
 `voice_priors`, `snapshots` (lane gates, read by the API worker, never by this release).
-
-`skins` is the [skins catalog](skins-catalog.md) and is **full feed only**: it has no default manifest or
-zip at all (old builds never read it), so a gate on it only annotates its full-feed entries. The committed
-`skins` gate requires `skins.catalog` (the `panels` kind gate requires `color_profiles.panels`). `stable_contract_guard.py` fails the release if a default
-skins manifest, zip or release-manifest asset ever appears.
 
 There is no `min_game_version` and no per-channel version list. Old gate files that use
 `min_game_version` are rejected by the validator.
@@ -64,8 +59,6 @@ only. The release never reads that column.
 
 | Capability | Meaning | First supported by |
 |---|---|---|
-| `color_profiles.panels` | Reads the `panels` file of a color profile (the session skin's panel layout). | closed beta (0.6.2 line) |
-| `skins.catalog` | Reads the `SKINS/<id>` skin catalog dataset and its name/author/description metadata. | closed beta (0.6.2 line) |
 | `community.full_feed` | Reads the full manifests under `.voiceatc/full/` and filters entries by `requires` and `channels`. | closed beta (0.6.2 line) |
 | `routes.starless_arrivals` | Flies an arrival filed to an approach transition's first fix (no STAR) and reads `.voiceatc/full/routes_manifest.json`. | closed beta (0.6.2 line) |
 
@@ -147,7 +140,7 @@ frozen in one place, `tools/legacy_contract.py` (the `LEGACY_*` constants), and 
 | `.voiceatc/visual_{procedures,go_arounds,sight_references}_manifest.json` and their files | 1 |
 
 `tools/stable_contract_guard.py` checks these values independently. The rule for everything
-new (`gates.json`, the full feed, the skins catalog, any future dataset): no version keys;
+new (`gates.json`, the full feed, any future dataset): no version keys;
 gate new content with `requires`.
 
 ## Recipes

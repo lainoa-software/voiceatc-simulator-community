@@ -7,7 +7,6 @@ on:
     paths:
       - "**/colors.json"
       - "**/style.json"
-      - "**/panels.json"
       - "tools/color_profiles_manifest.py"
       - "tests/test_color_profiles_manifest.py"
       - ".github/workflows/build-color-profiles-manifest.yml"

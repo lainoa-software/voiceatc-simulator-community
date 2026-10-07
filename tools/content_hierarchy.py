@@ -27,7 +27,7 @@ TERMINAL_FILE_NAMES = {
     "sector_definitions.json",
     "sector_influence.json",
 }
-PROFILE_FILE_NAMES = {"colors.json", "style.json", "panels.json"}
+PROFILE_FILE_NAMES = {"colors.json", "style.json"}
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
 PLACEHOLDER_RE = re.compile(r"^[A-Z]{1,2}X{2,3}$")
 AIRPORT_RE = re.compile(r"^[A-Z0-9]{4}$")
@@ -336,7 +336,7 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
 def collect_findings(root: Path = ROOT, registry_path: Path | None = None) -> list[Finding]:
     registry = load_registry(registry_path or (root / REGISTRY_RELATIVE))
     findings = [Finding(message) for message in _validate_registry(registry)]
-    ignored_parts = {".git", ".voiceatc", "node_modules", "SKINS"}
+    ignored_parts = {".git", ".voiceatc", "node_modules"}
     paths = sorted(
         path
         for path in root.rglob("*.json")

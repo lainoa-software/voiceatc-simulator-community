@@ -48,8 +48,6 @@ Community publication does not require a simulator-channel promotion once the ge
 | `misc_drawings.json` | Terminal-area folder |
 | `sector_configs.json`, `sector_definitions.json`, `sector_influence.json` | Terminal-area folder as one bundle |
 | `colors.json`, `style.json` | Region, nationality, FIR/ARTCC, ACC, or terminal folder |
-| `panels.json` | Beside a `colors.json`, see [session skins](session-skins-panels-json.md) |
-| `SKINS/<id>/panels.json` | The catalog at the repository root, not a content scope, see [skins catalog](skins-catalog.md) |
 
 Terminal-area data can reference several airports, but each referenced airport must be registered in that terminal scope. Do not place terminal data inside an airport folder.
 
