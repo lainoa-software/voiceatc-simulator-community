@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "UMKK",
+  "dest": "LTAI",
+  "routes": [
+    {
+      "id": "8cb60faf",
+      "route": "UMKK DCT GOMED M994 NIKMI N191 GRUDA N133 LENOV DUFES KENIN KARIL APROB ADORU UN739 EKI UL606 CRD UL854 KOZLU DCT LTAI",
+      "created_at": "2026-10-07T09:15:58Z",
+      "creation_airac": "2610"
+    }
+  ]
+}
