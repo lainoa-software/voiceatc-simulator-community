@@ -80,27 +80,29 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
         self.assertEqual("BADDN", mount_variant["legs"][-1]["id"])
         self.assertNotIn("POTOMAC_RIVER_NORTH_TRACE", mount_legs)
 
-    def test_sweetwater_east_branch_runs_east_to_west(self) -> None:
+    def test_sweetwater_branch_flies_the_charted_downwind_base_and_final(self) -> None:
+        # The plate's arrows run from STEPN east past KLOMN, turn base south after
+        # State Route 125, then join the 275 final; PR #131 had reversed this.
         procedure = airport_file("KSAN")["procedures"][0]
         variants = {variant["id"]: variant for variant in procedure["variants"]}
-        east = variants["MZB_R084_EAST_BRANCH"]["legs"]
+        branch = variants["MZB_R084_EAST_BRANCH"]
+        legs = branch["legs"]
         self.assertEqual(
             [
-                "MZB_R084_EAST_TRACE",
-                "MOUNT_HELIX_TRACE",
-                "SR125_BASE_TRACE",
-                "KLOMN",
-                "STADIUM_TRACE",
                 "STEPN",
+                "KLOMN",
+                "SR125_BASE_TRACE",
+                "MZB_R084_EAST_TRACE",
+                "SWEETWATER_FINAL_TRACE",
+                "CIJHI",
             ],
-            [leg["id"] for leg in east],
+            [leg["id"] for leg in legs],
         )
-        self.assertTrue(
-            all(
-                east[index]["longitude"] > east[index + 1]["longitude"]
-                for index in range(len(east) - 1)
-            )
-        )
+        self.assertEqual("STEPN", branch["entry_point_id"])
+        downwind, base, final = legs[0:3], legs[2:5], legs[4:6]
+        self.assertTrue(all(a["longitude"] < b["longitude"] for a, b in zip(downwind, downwind[1:])))
+        self.assertTrue(all(a["latitude"] > b["latitude"] for a, b in zip(base, base[1:])))
+        self.assertTrue(all(a["longitude"] > b["longitude"] for a, b in zip(final, final[1:])))
         self.assertEqual(
             ["OKAIN", "CIJHI"],
             [leg["id"] for leg in variants["OKAIN_ENTRY"]["legs"]],

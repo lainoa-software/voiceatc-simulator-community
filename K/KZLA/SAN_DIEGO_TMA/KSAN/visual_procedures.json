@@ -5,70 +5,28 @@
     {
       "id": "SWEETWATER_VISUAL_27",
       "name": "Sweetwater Visual RWY 27",
-      "aliases": ["sweetwater visual", "sweetwater"],
+      "aliases": [
+        "sweetwater visual",
+        "sweetwater"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
         "authority": "FAA",
         "chart_title": "SWEETWATER VISUAL RWY 27",
-        "url": "https://aeronav.faa.gov/d-tpp/2608/00373SWEETWATER_VIS27.PDF",
-        "effective_date": "2026-08-06",
-        "airac": "2608",
-        "checked_date": "2026-08-24"
+        "url": "https://aeronav.faa.gov/d-tpp/2610/00373SWEETWATER_VIS27.PDF",
+        "effective_date": "2026-10-01",
+        "airac": "2610",
+        "checked_date": "2026-10-08"
       },
       "variants": [
         {
           "id": "MZB_R084_EAST_BRANCH",
           "runway": "27",
           "clearance_name": "Sweetwater Visual",
-          "entry_point_id": "MZB_R084_EAST_TRACE",
+          "entry_point_id": "STEPN",
           "sight_reference_point_id": "STEPN",
           "legs": [
-            {
-              "id": "MZB_R084_EAST_TRACE",
-              "name": "MZB R-084 east-of-field entry (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.76,
-              "longitude": -116.96,
-              "fly_over": false,
-              "altitude": {
-                "value_ft": 4800,
-                "status": "required",
-                "kind": "at_or_above"
-              }
-            },
-            {
-              "id": "MOUNT_HELIX_TRACE",
-              "name": "Mount Helix (chart-traced cue)",
-              "path_term": "TF",
-              "latitude": 32.78,
-              "longitude": -116.98,
-              "fly_over": false
-            },
-            {
-              "id": "SR125_BASE_TRACE",
-              "name": "After passing State Route 125 / base turn (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.75,
-              "longitude": -117.015,
-              "fly_over": false
-            },
-            {
-              "id": "KLOMN",
-              "name": "KLOMN / Lake Murray",
-              "path_term": "TF",
-              "latitude": 32.7788722222,
-              "longitude": -117.0643972222,
-              "fly_over": true
-            },
-            {
-              "id": "STADIUM_TRACE",
-              "name": "Stadium (chart-traced)",
-              "path_term": "TF",
-              "latitude": 32.7831122,
-              "longitude": -117.1195716,
-              "fly_over": false
-            },
             {
               "id": "STEPN",
               "name": "STEPN",
@@ -80,6 +38,58 @@
                 "value_ft": 5000,
                 "status": "recommended",
                 "kind": "at"
+              }
+            },
+            {
+              "id": "KLOMN",
+              "name": "KLOMN / Lake Murray",
+              "path_term": "TF",
+              "latitude": 32.7788722222,
+              "longitude": -117.0643972222,
+              "fly_over": false
+            },
+            {
+              "id": "SR125_BASE_TRACE",
+              "name": "Base turn after passing State Route 125 (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.75936,
+              "longitude": -116.98213,
+              "fly_over": false
+            },
+            {
+              "id": "MZB_R084_EAST_TRACE",
+              "name": "MZB R-084 crossing on base (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.75018,
+              "longitude": -116.98502,
+              "fly_over": false,
+              "altitude": {
+                "value_ft": 4800,
+                "status": "required",
+                "kind": "at_or_above"
+              }
+            },
+            {
+              "id": "SWEETWATER_FINAL_TRACE",
+              "name": "Final turn at Sweetwater Reservoir (chart-traced)",
+              "path_term": "TF",
+              "latitude": 32.68847,
+              "longitude": -117.00438,
+              "fly_over": false
+            },
+            {
+              "id": "CIJHI",
+              "name": "CIJHI / I-UBR 8.7 DME",
+              "path_term": "CF",
+              "latitude": 32.6972027778,
+              "longitude": -117.0401333333,
+              "fly_over": false,
+              "course_deg": 275,
+              "reference": "I-UBR 275°",
+              "altitude": {
+                "value_ft": 2500,
+                "status": "required",
+                "kind": "at_or_above"
               }
             }
           ],

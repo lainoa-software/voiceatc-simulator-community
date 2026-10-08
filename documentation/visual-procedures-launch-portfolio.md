@@ -96,8 +96,8 @@ source.
 | KLSV | [Sin City RWY 03L/R](https://aeronav.faa.gov/d-tpp/2608/00227SINCITY_VIS3LR.PDF) | Pass: AF arc and speed. |
 | KPDX | [Columbia RWY 10L/R](https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF) | Pass: four variants. |
 | KPHL | [River RWY 09L/R](https://aeronav.faa.gov/d-tpp/2608/00320RIVER_VIS9LR.PDF) | Pass. |
-| KSAN | [Sweetwater RWY 27](https://aeronav.faa.gov/d-tpp/2608/00373SWEETWATER_VIS27.PDF) | Corrected east-to-west branch; OKAIN retained. |
-| KSEA | [Bay RWY 16R/C/L](https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF) | Pass: three runways. |
+| KSAN | [Sweetwater RWY 27](https://aeronav.faa.gov/d-tpp/2610/00373SWEETWATER_VIS27.PDF) | Rechecked 8 Oct 2026: the branch flies the chart's direction, STEPN, KLOMN, base after State Route 125 (MZB R-084 at 4800), final 275 to CIJHI. The earlier east-to-west "correction" reversed it. OKAIN retained. |
+| KSEA | [Bay RWY 16R/C/L](https://aeronav.faa.gov/d-tpp/2610/00582BAY_VIS16RCL.PDF) | Rechecked 8 Oct 2026: SEA 8 and SEA 6 sit on each runway's centreline at their DME, and 3000 ft is mid-Elliott Bay on SEA R-329. The Alki Point leg belonged to the unauthored Commencement Bay branch. |
 | KSFO | [Quiet Bridge RWY 28R](https://aeronav.faa.gov/d-tpp/2608/00375QUIETBRIDGE_VIS28R.PDF) | Pass; parallel-arrival geometry verified. |
 | KSFO | [Tipp Toe RWY 28L/R](https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF) | Pass; Class B profile retained. |
 | LCLK | [ADLAS RWY 22](https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement) | Pass. |
