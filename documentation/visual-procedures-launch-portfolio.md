@@ -102,7 +102,7 @@ source.
 | KSFO | [Tipp Toe RWY 28L/R](https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF) | Pass; Class B profile retained. |
 | LCLK | [ADLAS RWY 22](https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement) | Pass. |
 | LCPH | [ESERI RWY 29](https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement) | Pass. |
-| LFMN | [Environment RWY 04](https://www.sia.aviation-civile.gouv.fr/media/dvd/eAIP_06_AUG_2026/FRANCE/AIRAC-2026-08-06/html/eAIP/Cartes/LFMN/AD_2_LFMN_ENV_01.pdf) | Corrected MN04A/QFU and DME restrictions. |
+| LFMN | [Environment RWY 04](https://www.sia.aviation-civile.gouv.fr/media/dvd/eAIP_01_OCT_2026/FRANCE/AIRAC-2026-10-01/html/eAIP/Cartes/LFMN/AD_2_LFMN_ENV_01.pdf) | Corrected MN04A/QFU and DME restrictions. Rechecked 8 Oct 2026: the chart publishes no altitude at MN04A; its 5000 ft is the minimum height over land (ASFC), so the offshore point carries none. |
 | LLBG | [GAVRI RWY 30](https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-2_V1_en.pdf) | Pass. |
 | LLBG | [NAMIM RWY 21](https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_21NAMIM_V1_en.pdf) | Corrected TADOV/GINTU windows. |
 | LLBG | [ROMIE RWY 30](https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-3_v1_en.pdf) | Corrected BG303 window. |

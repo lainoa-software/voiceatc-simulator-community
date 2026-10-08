@@ -11,9 +11,9 @@
       "source": {
         "authority": "France SIA",
         "chart_title": "ENVIRONNEMENT APPROCHE A VUE / Environment visual approach",
-        "url": "https://www.sia.aviation-civile.gouv.fr/media/dvd/eAIP_06_AUG_2026/FRANCE/AIRAC-2026-08-06/html/eAIP/Cartes/LFMN/AD_2_LFMN_ENV_01.pdf",
-        "effective_date": "2026-08-06",
-        "checked_date": "2026-08-24"
+        "url": "https://www.sia.aviation-civile.gouv.fr/media/dvd/eAIP_01_OCT_2026/FRANCE/AIRAC-2026-10-01/html/eAIP/Cartes/LFMN/AD_2_LFMN_ENV_01.pdf",
+        "effective_date": "2026-10-01",
+        "checked_date": "2026-10-08"
       },
       "variants": [
         {
@@ -29,12 +29,7 @@
               "path_term": "TF",
               "latitude": 43.5621111111,
               "longitude": 7.1538888889,
-              "fly_over": false,
-              "altitude": {
-                "value_ft": 5000,
-                "status": "required",
-                "kind": "at_or_above"
-              }
+              "fly_over": false
             }
           ],
           "final": {
@@ -54,12 +49,7 @@
               "path_term": "TF",
               "latitude": 43.5621111111,
               "longitude": 7.1538888889,
-              "fly_over": false,
-              "altitude": {
-                "value_ft": 5000,
-                "status": "required",
-                "kind": "at_or_above"
-              }
+              "fly_over": false
             }
           ],
           "final": {
