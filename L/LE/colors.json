@@ -7,13 +7,15 @@
   "dragging_tfc_color": "f79621",
   "alien_tfc_color": "888b90",
   "alien_cs_color": "888b90",
-  "released_tfc_color": "85858e",
-  "released_cs_color": "85858e",
+  "of_interest_tfc_color": "5ec4cf",
+  "of_interest_cs_color": "5ec4cf",
+  "released_tfc_color": "2f7048",
+  "released_cs_color": "2f7048",
 
   "wake_light_color": "6b6e6b",
   "wake_medium_color": "3bf451",
   "wake_heavy_color": "f0e12a",
-  "wake_super_color": "c00000",
+  "wake_super_color": "f0e12a",
 
   "geo_color": "3c3c3c",
   "sid_color": "7c7c7c",
