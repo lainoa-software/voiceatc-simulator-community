@@ -1,0 +1,23 @@
+{
+  "airport": "UMKK",
+  "runway_configs": [
+    {
+      "id": "RWY_06",
+      "name": "RWY 06",
+      "arr": "06",
+      "dep": "06"
+    },
+    {
+      "id": "RWY_24",
+      "name": "RWY 24",
+      "arr": "24",
+      "dep": "24"
+    },
+    {
+      "id": "RWY_24_RWY_06",
+      "name": "RWY 24 / RWY 06",
+      "arr": "24",
+      "dep": "06"
+    }
+  ]
+}
