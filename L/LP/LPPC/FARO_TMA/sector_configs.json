@@ -1,0 +1,17 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "FARO_TMA_SPLIT",
+      "runway_configs": [
+        "LPFR_10",
+        "LPFR_28"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "FRTMA",
+          "frequency": "119.405"
+        }
+      ]
+    }
+  ]
+}

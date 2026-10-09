@@ -1,0 +1,17 @@
+{
+  "airport": "LPMA",
+  "runway_configs": [
+    {
+      "id": "LPMA_05",
+      "name": "05",
+      "arr": "05",
+      "dep": "05"
+    },
+    {
+      "id": "LPMA_23",
+      "name": "23",
+      "arr": "23",
+      "dep": "23"
+    }
+  ]
+}

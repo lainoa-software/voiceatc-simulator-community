@@ -1,0 +1,19 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "FLORES_TMA_SPLIT",
+      "runway_configs": [
+        "LPFL_18",
+        "LPFL_36",
+        "LPCR_11",
+        "LPCR_29"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "FLA",
+          "frequency": "118.800"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "MADEIRA_TMA_SPLIT",
+      "runway_configs": [
+        "LPMA_05",
+        "LPMA_23",
+        "LPPS_18",
+        "LPPS_36"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "MATMA",
+          "frequency": "119.605"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "HRA",
+      "airports": [
+        "LPHR",
+        "LPPI",
+        "LPSJ"
+      ]
+    }
+  ]
+}

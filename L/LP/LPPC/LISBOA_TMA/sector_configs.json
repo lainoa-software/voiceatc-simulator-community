@@ -1,0 +1,84 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "LISBOA_TMA_SPLIT_02",
+      "runway_configs": [
+        "LPPT_02",
+        "LPCS_17",
+        "LPCS_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "ATME_RWY02",
+          "frequency": "119.105"
+        },
+        {
+          "sector_ids": "ATMO_RWY02",
+          "frequency": "123.980"
+        },
+        {
+          "sector_ids": "ARRLI_RWY02",
+          "frequency": "125.130"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "LISBOA_TMA_COMBINED_02",
+      "runway_configs": [
+        "LPPT_02",
+        "LPCS_17",
+        "LPCS_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": [
+            "ATME_RWY02",
+            "ATMO_RWY02",
+            "ARRLI_RWY02"
+          ],
+          "frequency": "119.105"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "LISBOA_TMA_SPLIT_20",
+      "runway_configs": [
+        "LPPT_20",
+        "LPCS_17",
+        "LPCS_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "ATME_RWY20",
+          "frequency": "119.105"
+        },
+        {
+          "sector_ids": "ATMO_RWY20",
+          "frequency": "123.980"
+        },
+        {
+          "sector_ids": "ARRLI_RWY20",
+          "frequency": "125.130"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "LISBOA_TMA_COMBINED_20",
+      "runway_configs": [
+        "LPPT_20",
+        "LPCS_17",
+        "LPCS_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": [
+            "ATME_RWY20",
+            "ATMO_RWY20",
+            "ARRLI_RWY20"
+          ],
+          "frequency": "119.105"
+        }
+      ]
+    }
+  ]
+}

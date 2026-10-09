@@ -1,0 +1,21 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "HORTA_TMA_SPLIT",
+      "runway_configs": [
+        "LPHR_10",
+        "LPHR_28",
+        "LPPI_09",
+        "LPPI_27",
+        "LPSJ_13",
+        "LPSJ_31"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "HRA",
+          "frequency": "120.600"
+        }
+      ]
+    }
+  ]
+}

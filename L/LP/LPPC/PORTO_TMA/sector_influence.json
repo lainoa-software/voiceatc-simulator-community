@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "PRAPP",
+      "airports": [
+        "LPPR"
+      ]
+    },
+    {
+      "sector_id": "PRTMA",
+      "airports": [
+        "LPPR"
+      ]
+    }
+  ]
+}

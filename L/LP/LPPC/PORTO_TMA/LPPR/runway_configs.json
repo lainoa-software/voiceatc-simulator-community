@@ -1,0 +1,17 @@
+{
+  "airport": "LPPR",
+  "runway_configs": [
+    {
+      "id": "LPPR_17",
+      "name": "17",
+      "arr": "17",
+      "dep": "17"
+    },
+    {
+      "id": "LPPR_35",
+      "name": "35",
+      "arr": "35",
+      "dep": "35"
+    }
+  ]
+}

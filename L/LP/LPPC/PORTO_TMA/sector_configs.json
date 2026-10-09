@@ -1,0 +1,37 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "PORTO_TMA_SPLIT",
+      "runway_configs": [
+        "LPPR_17",
+        "LPPR_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "PRAPP",
+          "frequency": "120.910"
+        },
+        {
+          "sector_ids": "PRTMA",
+          "frequency": "120.430"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "PORTO_TMA_COMBINED",
+      "runway_configs": [
+        "LPPR_17",
+        "LPPR_35"
+      ],
+      "sectors": [
+        {
+          "sector_ids": [
+            "PRAPP",
+            "PRTMA"
+          ],
+          "frequency": "120.910"
+        }
+      ]
+    }
+  ]
+}

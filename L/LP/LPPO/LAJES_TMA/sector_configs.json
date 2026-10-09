@@ -1,0 +1,19 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "LAJES_TMA_SPLIT",
+      "runway_configs": [
+        "LPLA_15",
+        "LPLA_33",
+        "LPGR_09",
+        "LPGR_27"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "LAA",
+          "frequency": "135.000"
+        }
+      ]
+    }
+  ]
+}

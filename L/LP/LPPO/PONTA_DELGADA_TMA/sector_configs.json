@@ -1,0 +1,19 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "PONTA_DELGADA_TMA_SPLIT",
+      "runway_configs": [
+        "LPPD_12",
+        "LPPD_30",
+        "LPAZ_18",
+        "LPAZ_36"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "PDA",
+          "frequency": "119.400"
+        }
+      ]
+    }
+  ]
+}
