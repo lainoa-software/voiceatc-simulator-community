@@ -5,7 +5,9 @@ A procedure_options.json file carries per-procedure attributes for an airport,
 keyed by procedure ident inside `stars` / `sids` / `iaps` buckets. The attribute
 consumed by the simulator are `spawn_enabled` (whether auto-traffic may be
 assigned the procedure) and `init_climb` (the initial cleared altitude in feet
-for a generated departure). The per-procedure object remains open for future
+for a generated departure). A STAR entry may also carry `join_from`, the fixes
+whose arrivals join that STAR although it does not start there. The
+per-procedure object remains open for future
 attributes without changing this tool or the file's distribution.
 
 An optional top-level `runways` object lets a curator override the per-procedure
@@ -253,6 +255,7 @@ def _validate_option_entry(
     where: str,
     path: Path,
     allow_climb_variants: bool = False,
+    allow_join_from: bool = False,
 ) -> None:
     if not isinstance(container, dict):
         raise ValueError(f"{path}: {where} must be a JSON object")
@@ -266,6 +269,14 @@ def _validate_option_entry(
         if not allow_climb_variants:
             raise ValueError(f"{path}: {where}.climb_variants is only supported on SID entries")
         _validate_climb_variants(container["climb_variants"], f"{where}.climb_variants", path)
+    if "join_from" in container:
+        if not allow_join_from:
+            raise ValueError(f"{path}: {where}.join_from is only supported on STAR entries")
+        join_from = container["join_from"]
+        if not isinstance(join_from, list) or not all(
+            isinstance(fix, str) and fix.strip() for fix in join_from
+        ):
+            raise ValueError(f"{path}: {where}.join_from must be an array of fix idents")
 
 
 def _validate_transitions(container: object, where: str, path: Path) -> None:
@@ -295,6 +306,7 @@ def _validate_buckets(payload: dict[str, object], prefix: str, path: Path) -> No
                 f"{prefix}{bucket}.{proc_ident}",
                 path,
                 allow_climb_variants=bucket == "sids",
+                allow_join_from=bucket == "stars",
             )
 
 

@@ -261,6 +261,42 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "init_climb must be a positive integer"):
                 MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
 
+    def test_build_manifest_accepts_star_join_from(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["stars"]["TEST1A"]["join_from"] = ["ARAMA"]
+            payload["runways"] = {"20": {"stars": {"TEST1A": {"join_from": []}}}}
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
+            self.assertIn("RCTP", manifest["airports"])
+
+    def test_build_manifest_rejects_join_from_outside_stars(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["sids"]["CHAL1A"] = {"join_from": ["ARAMA"]}
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "join_from is only supported on STAR entries"):
+                MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
+    def test_build_manifest_rejects_non_list_join_from(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["stars"]["TEST1A"]["join_from"] = "ARAMA"
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "join_from must be an array of fix idents"):
+                MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
     def test_build_manifest_accepts_runways_overrides(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
