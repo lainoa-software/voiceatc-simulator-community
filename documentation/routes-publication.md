@@ -13,6 +13,16 @@ cycle every night, with stale routes marked deprecated in
 single writer of this tree; regeneration and releases only read it. Contract
 and lifecycle: [`ROUTES/player/README.md`](../ROUTES/player/README.md).
 
+## Contributor route rules (`ROUTES/rules/`)
+
+Rules from the website's closed-beta tester lane, one file per rule:
+`ROUTES/rules/<ICAO>/<id>.json`. They do not edit any route table and nothing
+in the daily release reads them. The Routes-repo compile job turns accepted
+rules into builder facts and publishes the rebuilt routes as a route overlay
+gated to the `closed-beta` channel. `tools/route_rules_check.py` validates the
+shape in every pull request and release. Contract:
+[`ROUTES/rules/README.md`](../ROUTES/rules/README.md).
+
 ## Publication compatibility
 
 The migration and contribution checker resolve US local FAA identifiers with a

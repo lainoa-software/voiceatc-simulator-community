@@ -53,6 +53,8 @@ jobs:
         run: python tools/visual_sight_references_manifest.py --validate-sources
       - name: Validate player route files
         run: python tools/player_routes_manifest.py --validate-only
+      - name: Validate route rule files
+        run: python tools/route_rules_check.py --validate-only
       - name: Validate channel gates
         run: python tools/release_gates.py --validate-only
       - name: Validate gated route overlays
