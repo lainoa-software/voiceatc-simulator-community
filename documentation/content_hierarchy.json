@@ -21,6 +21,7 @@
     "P": ["PA", "PG", "PH"],
     "R": ["RC", "RK"],
     "T": ["TJ"],
+    "U": ["UM"],
     "V": ["VA", "VH", "VT"],
     "W": ["WS"]
   },
@@ -110,6 +111,7 @@
     "RCAA": { "authority": "navigraph_2607", "kind": "fir" },
     "RKRR": { "authority": "navigraph_2607", "kind": "fir" },
     "TJZS": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
+    "UMKK": { "authority": "navigraph_2607", "kind": "fir" },
     "VABF": { "authority": "navigraph_2607", "kind": "fir" },
     "VHHK": { "authority": "navigraph_2607", "kind": "fir" },
     "VTBB": { "authority": "navigraph_2607", "kind": "fir" },
@@ -251,6 +253,7 @@
     "R/RC/RCAA/TAIPEI_TMA": ["RCMQ", "RCSS", "RCTP"],
     "R/RK/RKRR/INCHEON_TMA": ["RKSI", "RKSS"],
     "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
+    "U/UM/UMKK/KALININGRAD_TMA": ["UMKK"],
     "V/VH/VHHK/HONGKONG_TMA": [],
     "V/VA/VABF/MUMBAI_TMA": ["VABB"],
     "V/VT/VTBB/Bangkok_TMA": ["VTBD", "VTBS"],
