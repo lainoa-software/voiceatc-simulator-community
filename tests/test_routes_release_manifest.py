@@ -65,6 +65,26 @@ class RoutesReleaseManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "legacy route contains rich token"):
                 MODULE.validate_routes_distribution(root)
 
+    def test_dual_distribution_rejects_unprojected_non_kjfk_change(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            routes_dir = root / "ROUTES"
+            routes_dir.mkdir(parents=True)
+            header = "airac 2610\nORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+            rows = (
+                "KJFK\tEGLL\tKJFK DCT 5100N05000W DCT EGLL\t2610\tTest\n"
+                "WMKK\tWSSS\tWMKK DCT ARAMA DCT TEBUN DCT WSSS\t2610\tTest\n"
+            )
+            (routes_dir / "routes.tsv").write_text(header + rows, encoding="utf-8")
+            legacy = rows.replace("KJFK DCT 5100N05000W DCT EGLL", "KJFK DCT EGLL")
+            (routes_dir / "routes_legacy.tsv").write_text(header + legacy, encoding="utf-8")
+            MODULE.validate_routes_distribution(root)
+
+            stale = legacy.replace("ARAMA DCT TEBUN", "ARAMA A464 TEBUN")
+            (routes_dir / "routes_legacy.tsv").write_text(header + stale, encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "routes_legacy.tsv:4: .*outside the KJFK scope"):
+                MODULE.validate_routes_distribution(root)
+
     def test_build_routes_manifest_accepts_valid_routes_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)

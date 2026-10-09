@@ -303,6 +303,21 @@ def _validate_projection_pair(
             raise ValueError(
                 f"{legacy_path}: legacy projection {field} differs from {rich_path}"
             )
+    # The projection rewrites only KJFK rows and copies every other line byte for
+    # byte, so a routes.tsv edit without re-projection (#238) shows up here.
+    rich_lines = rich_path.read_bytes().splitlines(keepends=True)
+    legacy_lines = legacy_path.read_bytes().splitlines(keepends=True)
+    for line_number, (rich_line, legacy_line) in enumerate(zip(rich_lines, legacy_lines), start=1):
+        columns = rich_line.split(b"\t", 2)
+        scoped = line_number > 2 and len(columns) > 1 and b"KJFK" in {
+            columns[0].strip().upper(), columns[1].strip().upper()
+        }
+        if not scoped and rich_line != legacy_line:
+            raise ValueError(
+                f"{legacy_path}:{line_number}: legacy projection differs from {rich_path} "
+                "outside the KJFK scope; re-project it with Project-Emerald-Upgrade-Routes "
+                "tools/build_route_distribution.py"
+            )
     coordinate_pattern = re.compile(
         r"^(?:\d{2}(?:\d{2}(?:\d{2})?)?[NS]"
         r"\d{3}(?:\d{2}(?:\d{2})?)?[EW]|NAT[A-Z])$"
