@@ -38,7 +38,7 @@
         "row": 1,
         "col": 2,
         "content_source": "flight.afl",
-        "action": "open_afl_menu",
+        "action": "open_level_panel",
         "gap_before_em": -0.06
       },
       { "id": "GS", "row": 2, "col": 0, "content_source": "flight.gs" },
