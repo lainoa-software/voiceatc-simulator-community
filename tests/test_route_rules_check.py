@@ -93,6 +93,12 @@ class RouteRulesCheckTests(unittest.TestCase):
         self.assertIn("only arrivals have origins", found)
         self.assertIn("only arrivals have entry fixes", found)
 
+    def test_direct_is_for_arrivals_only(self) -> None:
+        rule = copy.deepcopy(WSSS)
+        del rule["star_from"]
+        rule.update(flights="departures")
+        self.assertIn("only arrivals have a direct rule", errors(with_id(rule)))
+
     def test_values_are_normalized(self) -> None:
         rule = copy.deepcopy(WSSS)
         rule["at_fix"] = "arama"

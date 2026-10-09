@@ -11,7 +11,9 @@ The website is the only writer of this tree, and every rule reaches `main`
 through maintainer review. Nothing in the daily release reads these files: the
 Routes-repo compile job turns accepted rules into builder facts, rebuilds only
 the routes they touch, and publishes the result as a route overlay that only
-the closed-beta channel receives. The generated tables are never edited.
+the closed-beta channel receives: `ROUTES/full/route_rules.tsv`, gated by
+`routes.route_rules` and `channels: ["closed-beta"]` in `.voiceatc/gates.json`. The
+generated tables are never edited.
 
 ## Layout
 
@@ -49,7 +51,7 @@ removing a rule deletes its file.
 | `flights` | `arrivals` into `airport`, `departures` from it, or `between` `airport` and `other_airport` (both directions) |
 | `origins` / `destinations` | Arrivals / departures only. Space-separated ICAOs. Absent means all |
 | `on_airway`, `at_fix` | The flights are on this airway at this fix. Both or neither |
-| `action` | `direct` (one fix), `use` (a `FIX AIRWAY FIX …` sequence), `entry` / `exit` (fix lists, arrivals / departures) are **must** rules. `prefer` (a sequence) is a **should** rule |
+| `action` | `direct` (one fix, arrivals only), `use` (a `FIX AIRWAY FIX …` sequence), `entry` / `exit` (fix lists, arrivals / departures) are **must** rules. `prefer` (a sequence) is a **should** rule |
 | `star_from` | Arrivals: the STAR that starts at this fix. STARs are named by entry fix, so a renumbered STAR still matches |
 | `sid_to` | Departures: the SID to this fix |
 | `source` | Required for every must rule: the document, an https link, and the quoted instruction |

@@ -4,6 +4,12 @@
       "dataset": "routes",
       "path": "ROUTES/full/starless_arrivals.tsv",
       "requires": ["routes.starless_arrivals"]
+    },
+    {
+      "dataset": "routes",
+      "path": "ROUTES/full/route_rules.tsv",
+      "requires": ["routes.route_rules"],
+      "channels": ["closed-beta"]
     }
   ]
 }

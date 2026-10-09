@@ -274,11 +274,19 @@ def build_full_routes(
     return entries, assets
 
 
-def validate_feed(root: Path = ROOT) -> list[dict[str, object]]:
-    """Strict check for pull requests: everything ``load_overlays`` checks, and the cycle must match."""
+def validate_feed(root: Path = ROOT, *, allow_stale: bool = False) -> list[dict[str, object]]:
+    """Everything ``load_overlays`` checks, and the cycle must match.
+
+    With ``allow_stale`` an overlay for another cycle is a notice instead of a failure:
+    the release leaves it out (``build_variants``) until it is regenerated. The release
+    and the pull-request check both pass it, because an AIRAC rollover changes
+    ``routes.tsv`` in one pull request and the overlays only after it (creator decision
+    2026-10-09). Without it a hand-made overlay blocks the automated cycle pull request.
+    """
     overlays = load_overlays(root)
     stale = [overlay for overlay in overlays if overlay["stale"]]
-    if stale:
+    # With allow_stale, build_variants below prints the notice for each stale overlay.
+    if stale and not allow_stale:
         base_airac = _split_table((root / BASE_PATH).read_bytes(), BASE_PATH.as_posix())[0]
         raise StaleOverlay(
             "Route overlays failed validation:\n"
@@ -295,10 +303,14 @@ def validate_feed(root: Path = ROOT) -> list[dict[str, object]]:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate the gated route overlays under ROUTES/full/.")
     parser.add_argument("--validate-only", action="store_true", help="Validate overlays and gates (the default action)")
+    parser.add_argument(
+        "--allow-stale",
+        action="store_true",
+        help="Report an overlay for another AIRAC cycle as a notice instead of failing",
+    )
     args = parser.parse_args()
-    del args
     try:
-        overlays = validate_feed(ROOT)
+        overlays = validate_feed(ROOT, allow_stale=args.allow_stale)
     except Exception as exc:
         print(str(exc), file=sys.stderr)
         return 1

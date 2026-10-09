@@ -61,6 +61,7 @@ only. The release never reads that column.
 |---|---|---|
 | `community.full_feed` | Reads the full manifests under `.voiceatc/full/` and filters entries by `requires` and `channels`. | closed beta (0.6.2 line) |
 | `routes.starless_arrivals` | Flies an arrival filed to an approach transition's first fix (no STAR) and reads `.voiceatc/full/routes_manifest.json`. | closed beta (0.6.2 line) |
+| `routes.route_rules` | Reads the contributor route rules overlay `ROUTES/full/route_rules.tsv` (rows rebuilt from `ROUTES/rules/`). Its gate is `closed-beta` only and comes after the starless gate, so the starless-only variant stays open to every channel. | closed beta (0.6.3 line) |
 
 To add a capability, add a row here in the same pull request that adds the gate or the game
 code that uses it. Names are permanent: never rename one, add a new name instead.
@@ -115,7 +116,10 @@ listed in `.voiceatc/full/routes_manifest.json`:
 A build keeps the first entry whose gate it passes and whose `airac` equals its target cycle;
 otherwise it reads the default routes manifest. The default tables, manifests, release manifest
 and R2 mirror never change because of an overlay. At release time an overlay for another cycle
-is left out with a notice; in a pull request it fails validation.
+is left out with a notice, in the release and in pull requests (`routes_full_feed.py --allow-stale`).
+An AIRAC rollover changes `routes.tsv` in one pull request and the overlays only later, so a
+strict check would block the automated cycle pull request (creator decision, 2026-10-09).
+Without `--allow-stale` the tool stays strict, for a local check.
 
 Before anything is published, `tools/stable_contract_guard.py` replays the stable 0.6.1.24
 parser rules on every default manifest and zip (schema 2, exact top-level and entry keys,

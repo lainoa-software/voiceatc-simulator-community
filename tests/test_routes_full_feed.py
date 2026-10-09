@@ -110,6 +110,44 @@ class SpliceTests(unittest.TestCase):
         self.assertNotIn(b"OTHER", least["data"])
 
 
+class ChannelOrderTests(unittest.TestCase):
+    def test_a_closed_beta_overlay_after_starless_keeps_starless_for_everyone(self) -> None:
+        # The route rules overlay is closed-beta only. Gated after starless, the most
+        # capable variant carries the channel and the starless-only variant does not,
+        # so an open-beta build with both capabilities still gets starless arrivals.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_repo(root)
+            write_gates(
+                root,
+                [
+                    STARLESS_GATE,
+                    {
+                        "dataset": "routes",
+                        "path": "ROUTES/full/route_rules.tsv",
+                        "requires": ["routes.route_rules"],
+                        "channels": ["closed-beta"],
+                    },
+                ],
+            )
+            write_overlay(root, "starless_arrivals.tsv", ["LEMD\tLEPA\tLEMD DCT APPIAF DCT LEPA\t2602\tLainoaSoftware"])
+            write_overlay(root, "route_rules.tsv", ["LEBL\tLEMD\tLEBL DCT RULE DCT LEMD\t2602\tLainoaSoftware"])
+            most, least = FEED.build_variants(root)
+        self.assertEqual(most["id"], "route_rules")
+        self.assertEqual(most["channels"], ["closed-beta"])
+        self.assertEqual(most["requires"], ["routes.starless_arrivals", "routes.route_rules"])
+        self.assertEqual(least["id"], "starless_arrivals")
+        self.assertNotIn("channels", least)
+
+    def test_the_committed_gates_keep_route_rules_last_and_closed_beta(self) -> None:
+        import json
+
+        gates = json.loads((REPO_ROOT / ".voiceatc" / "gates.json").read_text(encoding="utf-8"))["gates"]
+        overlay_paths = [gate["path"] for gate in gates if gate.get("dataset") == "routes"]
+        self.assertEqual(overlay_paths[-1], "ROUTES/full/route_rules.tsv")
+        self.assertEqual(gates[-1]["channels"], ["closed-beta"])
+
+
 class OverlayValidationTests(unittest.TestCase):
     def _assert_rejected(self, root: Path, fragment: str) -> None:
         with self.assertRaises(ValueError) as caught:
@@ -126,6 +164,31 @@ class OverlayValidationTests(unittest.TestCase):
             self.assertEqual(FEED.build_variants(root, notices=notices), [])
             self.assertEqual(len(notices), 1)
             self.assertIn("starless_arrivals.tsv", notices[0])
+
+    def test_allow_stale_reports_a_notice_and_passes(self) -> None:
+        # An AIRAC rollover changes routes.tsv before any overlay is regenerated; the
+        # release and the pull-request check must not stop on that (creator, 2026-10-09).
+        import contextlib
+        import io
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_repo(root)
+            starless_overlay(root, airac="2601")
+            errors = io.StringIO()
+            with contextlib.redirect_stderr(errors):
+                overlays = FEED.validate_feed(root, allow_stale=True)
+        self.assertEqual([overlay["repo_path"] for overlay in overlays], ["ROUTES/full/starless_arrivals.tsv"])
+        self.assertIn("starless_arrivals.tsv: airac 2601 differs", errors.getvalue())
+
+    def test_allow_stale_still_rejects_a_broken_overlay(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_repo(root)
+            write_gates(root, [STARLESS_GATE])
+            write_overlay(root, "starless_arrivals.tsv", ["LEMD\tLEPA\tLEMD DCT APPIAF DCT LEPA\t2602\tLainoaSoftware"], columns="WRONG")
+            with self.assertRaises(ValueError):
+                FEED.validate_feed(root, allow_stale=True)
 
     def test_unknown_pair_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

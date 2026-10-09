@@ -74,7 +74,7 @@ jobs:
       - name: Validate channel gates
         run: python tools/release_gates.py --validate-only
       - name: Validate gated route overlays
-        run: python tools/routes_full_feed.py --validate-only
+        run: python tools/routes_full_feed.py --validate-only --allow-stale
       - name: Compute route lane cycles
         id: lanes
         shell: bash

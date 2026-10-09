@@ -197,7 +197,9 @@ def validate_rule(rule: object, folder_icao: str, file_stem: str) -> list[str]:
     elif not value:
         errors.append("value is required")
     elif action == "direct":
-        if not FIX_RE.fullmatch(value):
+        if flights != "arrivals":
+            errors.append("only arrivals have a direct rule")
+        elif not FIX_RE.fullmatch(value):
             errors.append(f"'{value}' is not a fix")
         elif value == at_fix:
             errors.append("the direct fix must be different from at_fix")

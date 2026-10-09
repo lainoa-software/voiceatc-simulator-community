@@ -58,7 +58,7 @@ jobs:
       - name: Validate channel gates
         run: python tools/release_gates.py --validate-only
       - name: Validate gated route overlays
-        run: python tools/routes_full_feed.py --validate-only
+        run: python tools/routes_full_feed.py --validate-only --allow-stale
       # Builds the release locally (nothing is published) and replays the stable
       # 0.6.1.24 rules on the default output, so a pull request that adds a new
       # file kind or field without a gate fails here instead of breaking players.
