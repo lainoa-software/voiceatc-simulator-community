@@ -1,8 +1,8 @@
 {
   "asset_name": "color-profiles-2610.zip",
-  "commit_sha": "439484d08d1d6ebde7111e32ee06b7d3d9b661e6",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10/color-profiles-2610.zip",
-  "profile_count": 44,
+  "commit_sha": "67df2f64be189defc19beda4f0eedf062ca0a5a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10-b/color-profiles-2610.zip",
+  "profile_count": 46,
   "profiles": {
     "E/ED/EDGG": {
       "files": {
@@ -66,6 +66,20 @@
           "repo_path": "E/EH/colors.json",
           "sha256": "96e8d4781172f6de6238e95e9dc0d9299b7af1ae1ad617c4ae143590e8e01b5b",
           "size_bytes": 1001
+        }
+      }
+    },
+    "E/EK": {
+      "files": {
+        "colors": {
+          "repo_path": "E/EK/colors.json",
+          "sha256": "75b8e526cceef30ae836f377788eeede1851b394d07d593c5462d340af212b1e",
+          "size_bytes": 1040
+        },
+        "style": {
+          "repo_path": "E/EK/style.json",
+          "sha256": "32682eec7993e8d618657030bcb37d4e01ae0132f89db284605df3f150370f33",
+          "size_bytes": 781
         }
       }
     },
@@ -489,6 +503,20 @@
         }
       }
     },
+    "L/LO": {
+      "files": {
+        "colors": {
+          "repo_path": "L/LO/colors.json",
+          "sha256": "79041a35bfbd63403a8b2ad575d77355b098c8fbc063d89f06e206974809b4eb",
+          "size_bytes": 1040
+        },
+        "style": {
+          "repo_path": "L/LO/style.json",
+          "sha256": "c00495e3fb16d84b7359bf0b50b52c803236fc20888c707d1084118b483e50d3",
+          "size_bytes": 7986
+        }
+      }
+    },
     "L/LP": {
       "files": {
         "colors": {
@@ -616,10 +644,10 @@
       }
     }
   },
-  "published_at": "2026-10-10T07:03:28Z",
-  "release_tag": "daily-2026-10-10",
+  "published_at": "2026-10-10T20:44:29Z",
+  "release_tag": "daily-2026-10-10-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "30a7de44dc50ad727f1bfae21b264fa2d007511cdd669f6d1809012573510cde",
-  "size_bytes": 44212
+  "sha256": "24d9b081d0028bef16f44e36340ad9b31e242ab216af3470088af27d83cafc5b",
+  "size_bytes": 46533
 }

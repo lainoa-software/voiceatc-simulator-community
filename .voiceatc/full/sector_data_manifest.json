@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2610-full.zip",
-  "commit_sha": "439484d08d1d6ebde7111e32ee06b7d3d9b661e6",
+  "commit_sha": "67df2f64be189defc19beda4f0eedf062ca0a5a9",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10/sector-data-2610-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10-b/sector-data-2610-full.zip",
   "entries": [
     {
       "files": {
@@ -143,6 +143,146 @@
         }
       },
       "id": "E/EG/EGTT/LONDON_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/AALBORG_TMA/sector_configs.json",
+          "sha256": "07b054752998d3492599a2f38c7375be7761dca5e77e655ba00f95624ec0c1d9",
+          "size_bytes": 290
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/AALBORG_TMA/sector_definitions.json",
+          "sha256": "68a4ca6473c5fb4743fea341033a4dd993cac97f844315f7505899a409d0199f",
+          "size_bytes": 2258
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/AALBORG_TMA/sector_influence.json",
+          "sha256": "36e9538631687c939baf95a23d9a7eacc0bdeb9444a7bc41b36ff92470db1308",
+          "size_bytes": 110
+        }
+      },
+      "id": "E/EK/EKDK/AALBORG_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/AARHUS_TMA/sector_configs.json",
+          "sha256": "04a0072db0296ad1534abd701284799ff0490845761779c5fb18cb7e3733f12a",
+          "size_bytes": 288
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/AARHUS_TMA/sector_definitions.json",
+          "sha256": "e9ee71b0e1296fa7beb39c712026dd891c772568f7944083bffbc8dc5dba7428",
+          "size_bytes": 1802
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/AARHUS_TMA/sector_influence.json",
+          "sha256": "10af1fae2f0c5b07801cabf2a4a6ec84d83e51b6481450145b10f6088ea252ac",
+          "size_bytes": 109
+        }
+      },
+      "id": "E/EK/EKDK/AARHUS_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/BILLUND_TMA/sector_configs.json",
+          "sha256": "d8f4c705b9c8f319d7cf13b902ee77af51f75f6a78d37fd5d6ba06983f38ad53",
+          "size_bytes": 364
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/BILLUND_TMA/sector_definitions.json",
+          "sha256": "0907adb88c0dda8e8eed7aebefe251d06b846a666e66aa3befd740e61f0a6e61",
+          "size_bytes": 5180
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/BILLUND_TMA/sector_influence.json",
+          "sha256": "06aba17767245026e7dee2f4ed8358a37dfcd64344380f9adf78678c241dab85",
+          "size_bytes": 110
+        }
+      },
+      "id": "E/EK/EKDK/BILLUND_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/BORNHOLM_TMA/sector_configs.json",
+          "sha256": "8951f9eba10555b35c3290bc9f749fbd79d3abe49f8bca8fe171b2dfe563c800",
+          "size_bytes": 266
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/BORNHOLM_TMA/sector_definitions.json",
+          "sha256": "4f3e5808d5d853a98bfa19080f4e42527c14605a60e4bb105b8d7b27549adf38",
+          "size_bytes": 11488
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/BORNHOLM_TMA/sector_influence.json",
+          "sha256": "24f00ea2234c743640a3c61a31accda093f674abc12061ffc9574ad2a5a1065d",
+          "size_bytes": 111
+        }
+      },
+      "id": "E/EK/EKDK/BORNHOLM_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/sector_configs.json",
+          "sha256": "1284e344935110aabd3965a34696dc730de79d92d2581f14443c427bfed36eab",
+          "size_bytes": 1183
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/sector_definitions.json",
+          "sha256": "995f7b031fb9d9279658bf05279c09e4b9fce99a7bdb8cb8f5773d1b2e836e7e",
+          "size_bytes": 37317
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/sector_influence.json",
+          "sha256": "a9e25ddfafca5eb31205cff5256f18314c516535beb1736f0ba8b6d05b3c2fd3",
+          "size_bytes": 352
+        }
+      },
+      "id": "E/EK/EKDK/COPENHAGEN_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/KARUP_TMA/sector_configs.json",
+          "sha256": "ce1b3aecb258fb05ae8f9b530d8e737e6a66f61384c88eba6a547bfc42ad8209",
+          "size_bytes": 286
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/KARUP_TMA/sector_definitions.json",
+          "sha256": "65c8ca06009cbe735003a2c30949bf6279db408309c844557f34688d7412980b",
+          "size_bytes": 1639
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/KARUP_TMA/sector_influence.json",
+          "sha256": "7f8c0ccf07be9bf777ca1aa32b5af9c2a1757ae5ddf8a8f5b0a4abbdbfc729e4",
+          "size_bytes": 108
+        }
+      },
+      "id": "E/EK/EKDK/KARUP_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EK/EKDK/SKRYDSTRUP_TMA/sector_configs.json",
+          "sha256": "b16e4fdce391586b52fbec2ef9ac858280441533dddefe820e85f5711282b472",
+          "size_bytes": 374
+        },
+        "definitions": {
+          "repo_path": "E/EK/EKDK/SKRYDSTRUP_TMA/sector_definitions.json",
+          "sha256": "eda91095fcdfe7c3c83a8f363f579c8d21bf46e11edb8c1f15af7bb3613862b7",
+          "size_bytes": 2888
+        },
+        "influence": {
+          "repo_path": "E/EK/EKDK/SKRYDSTRUP_TMA/sector_influence.json",
+          "sha256": "c54e125b1fc3801776b72da981f5c00d5e5993d2e0457b508d7d1f2a24d058dc",
+          "size_bytes": 113
+        }
+      },
+      "id": "E/EK/EKDK/SKRYDSTRUP_TMA"
     },
     {
       "files": {
@@ -367,6 +507,26 @@
     {
       "files": {
         "configs": {
+          "repo_path": "L/LE/LECM/LECM_R1/ASTURIAS_TMA/sector_configs.json",
+          "sha256": "aa9d7f38eb91a958d332ef4a0538caabdd1647fe0bb315fb9b8f8d2a03a7d661",
+          "size_bytes": 190
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECM_R1/ASTURIAS_TMA/sector_definitions.json",
+          "sha256": "0a11b5ffb1290ac12bc39592f5e96511e49ce415030cd0907cd6e041761aa24d",
+          "size_bytes": 8547
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECM_R1/ASTURIAS_TMA/sector_influence.json",
+          "sha256": "5dc4e2ba2c46460018c1da06604b9f47ebd946ad63152576911f7a90066db735",
+          "size_bytes": 102
+        }
+      },
+      "id": "L/LE/LECM/LECM_R1/ASTURIAS_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/sector_configs.json",
           "sha256": "6ee55086c5cd393dc9e8a60da5e2ae1775dd8de2bc02ca64dd649c54383a8bb2",
           "size_bytes": 230
@@ -427,6 +587,26 @@
     {
       "files": {
         "configs": {
+          "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/sector_configs.json",
+          "sha256": "d795c1415c5f14fb5b26f1cf11e53768de337c2f9e62d763cb88a9544855659c",
+          "size_bytes": 190
+        },
+        "definitions": {
+          "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/sector_definitions.json",
+          "sha256": "135f44a6dfa6bf4371b0117aa74236877c6858d7328e156bc8ba5facfb536e01",
+          "size_bytes": 3163
+        },
+        "influence": {
+          "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/sector_influence.json",
+          "sha256": "f080ad9755d1897ed484283cf7741b02a4e12694c75e1b64e56bc864dc0db772",
+          "size_bytes": 110
+        }
+      },
+      "id": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/sector_configs.json",
           "sha256": "f90f4d3b657a2089c6134832179d32f97eee39b93773fef1edeed3dfa7bb906e",
           "size_bytes": 232
@@ -463,6 +643,166 @@
         }
       },
       "id": "L/LE/LECM/LECS/SEVILLA_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/GRAZ_TMA/sector_configs.json",
+          "sha256": "4c967c1aa5e53fd95f427d2931eaae5986dfc8733e57e590fb8ddd1ea68fbc8c",
+          "size_bytes": 487
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/GRAZ_TMA/sector_definitions.json",
+          "sha256": "0ff369a9aba9b01c706052035919f9d160b695a0d978cf74aac42fc234715359",
+          "size_bytes": 13369
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/GRAZ_TMA/sector_influence.json",
+          "sha256": "9b4dd0679539bb17191540b1007667a99e76995f156ecdea865cc5bd2646080a",
+          "size_bytes": 192
+        }
+      },
+      "id": "L/LO/LOVV/GRAZ_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/INNSBRUCK_TMA/sector_configs.json",
+          "sha256": "be4c10708163b14fa2729d16ef129ab980257c0302368a1d8791cd30768022a2",
+          "size_bytes": 501
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/INNSBRUCK_TMA/sector_definitions.json",
+          "sha256": "5c52428114189c8f18b6f3d754ddf7b033e91ac3a9ba06fe2216e57e4ee8b18d",
+          "size_bytes": 7945
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/INNSBRUCK_TMA/sector_influence.json",
+          "sha256": "98797d379d1f7eed874dc6a5edb26fa10a84bec333a997ddf885ab816411c2a1",
+          "size_bytes": 200
+        }
+      },
+      "id": "L/LO/LOVV/INNSBRUCK_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/KLAGENFURT_TMA/sector_configs.json",
+          "sha256": "a7535a5c21792a9db54c181806fa3cdb65c14e51041d183837bf380346629337",
+          "size_bytes": 511
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/KLAGENFURT_TMA/sector_definitions.json",
+          "sha256": "e4cc35efd6be47610f83311554357a531c731b5bbf5f89876f66005448843eb8",
+          "size_bytes": 8359
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/KLAGENFURT_TMA/sector_influence.json",
+          "sha256": "f1add72adfb0b07c24e1f147819385e53f586f217fcce8a80bac11b13ea8328a",
+          "size_bytes": 204
+        }
+      },
+      "id": "L/LO/LOVV/KLAGENFURT_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/LINZ_TMA/sector_configs.json",
+          "sha256": "0ab6f297f4b6fe857c9c4181dce721efa8df63856c13a7bc97f7f498061b6332",
+          "size_bytes": 481
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/LINZ_TMA/sector_definitions.json",
+          "sha256": "5a2362ddfe0a63a44c23566a3f52b577dbe94a2cb854134e1d8f0c687123b899",
+          "size_bytes": 4037
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/LINZ_TMA/sector_influence.json",
+          "sha256": "7d7cf8e9e560315ec2d9b64d01dcb3962a4d874eb4c1590bdaf0c83d872334bb",
+          "size_bytes": 190
+        }
+      },
+      "id": "L/LO/LOVV/LINZ_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/SALZBURG_TMA/sector_configs.json",
+          "sha256": "52a6c2e73680e1c4108c220c452d08a257a5cfd6818b73569c0f547f59f904bd",
+          "size_bytes": 497
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/SALZBURG_TMA/sector_definitions.json",
+          "sha256": "546d6e20fde8427b5b356467803398423f91233660c2559077a7d75a35c665d5",
+          "size_bytes": 1949
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/SALZBURG_TMA/sector_influence.json",
+          "sha256": "efd12075e3b52b7f09676d9dd8ff66079999967ee22402fde071394faa0df9fc",
+          "size_bytes": 198
+        }
+      },
+      "id": "L/LO/LOVV/SALZBURG_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/TULLN_TMA/sector_configs.json",
+          "sha256": "4920412c116dfadf3fa731837ad49847ea7ad3518a8f5b64b13351f4449e9e42",
+          "size_bytes": 1403
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/TULLN_TMA/sector_definitions.json",
+          "sha256": "2e9118ad81eba39eb2bf83fbebe2b3d1b07ee5458c2e67004eed7ca03ee06ccd",
+          "size_bytes": 12813
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/TULLN_TMA/sector_influence.json",
+          "sha256": "6f1de8973522e1f0d7e5a3afbd94cfe8b6dd7c222627445bd7c32a3bcf71f43e",
+          "size_bytes": 514
+        }
+      },
+      "id": "L/LO/LOVV/TULLN_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_configs.json",
+          "sha256": "c3174db5fc0fdf0624fccc67524f97c711c2b3aef4790c3cf8ce190bbdb7bea9",
+          "size_bytes": 713
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_definitions.json",
+          "sha256": "b8b32824e71b624a713572e78c638af682b72447d88b93650ef6d4fdff99ed2d",
+          "size_bytes": 35722
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_influence.json",
+          "sha256": "22b140dd5b94e43638b3861e02eabaf5e27f9942cbf15418e2aa2caa1b5bdb1f",
+          "size_bytes": 273
+        }
+      },
+      "id": "L/LO/LOVV/VIENNA_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LO/LOVV/ZELTWEG_TMA/sector_configs.json",
+          "sha256": "d6556f988cd1b6d3c1b1a8a0b3909c466d3a49934f4a87dfdcff56f9f5647a20",
+          "size_bytes": 1433
+        },
+        "definitions": {
+          "repo_path": "L/LO/LOVV/ZELTWEG_TMA/sector_definitions.json",
+          "sha256": "2fbc1e86c73ea95e1576b8f93fcd06fc725ae16c67f303c5b638b69940cf9202",
+          "size_bytes": 7639
+        },
+        "influence": {
+          "repo_path": "L/LO/LOVV/ZELTWEG_TMA/sector_influence.json",
+          "sha256": "68a6a5435f17ac7abd2f6b006b4171db21fee643a89946e38604be625d501a71",
+          "size_bytes": 528
+        }
+      },
+      "id": "L/LO/LOVV/ZELTWEG_TMA"
     },
     {
       "files": {
@@ -725,11 +1065,11 @@
       "id": "V/VT/VTBB/Bangkok_TMA"
     }
   ],
-  "entry_count": 36,
-  "generated_at": "2026-10-10T07:03:28Z",
-  "published_at": "2026-10-10T07:03:28Z",
-  "release_tag": "daily-2026-10-10",
+  "entry_count": 53,
+  "generated_at": "2026-10-10T20:44:29Z",
+  "published_at": "2026-10-10T20:44:29Z",
+  "release_tag": "daily-2026-10-10-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "801154c08cc4d87c805398a6505146c5e9e110f13fa2ace4fd2c0bc875fcef4b",
-  "size_bytes": 117826
+  "sha256": "efad6f47b1e2f991b12dece26cf177973fe24ee6b81edf11736d831b6af18403",
+  "size_bytes": 143944
 }

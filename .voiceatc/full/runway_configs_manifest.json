@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2610-full.zip",
-  "commit_sha": "439484d08d1d6ebde7111e32ee06b7d3d9b661e6",
+  "commit_sha": "67df2f64be189defc19beda4f0eedf062ca0a5a9",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10/runway-configs-2610-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10-b/runway-configs-2610-full.zip",
   "entries": [
     {
       "id": "EBBR",
@@ -149,10 +149,40 @@
       "size_bytes": 258
     },
     {
-      "id": "EKCH",
-      "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/EKCH/runway_configs.json",
-      "sha256": "06a8d308c1a7e9ee0dfc6170589dba45d13da827ab24b31305715c776fab99a2",
-      "size_bytes": 375
+      "id": "EKAH",
+      "repo_path": "E/EK/EKDK/AARHUS_TMA/EKAH/runway_configs.json",
+      "sha256": "8fd95303aa97f51fef2c97001bdbd0689d91c27fd9ff6e1ed0b592991d805451",
+      "size_bytes": 438
+    },
+    {
+      "id": "EKBI",
+      "repo_path": "E/EK/EKDK/BILLUND_TMA/EKBI/runway_configs.json",
+      "sha256": "f37bd5ca0e5b3b9a26919f6fa3233860402de66c32dc1ab6c90ea94ae8c51b8e",
+      "size_bytes": 236
+    },
+    {
+      "id": "EKKA",
+      "repo_path": "E/EK/EKDK/KARUP_TMA/EKKA/runway_configs.json",
+      "sha256": "0a21c4aa3ee19e9913a6b49e7f387ef24cd4cd2c9a0c1cde4bcb773d47551c03",
+      "size_bytes": 438
+    },
+    {
+      "id": "EKRN",
+      "repo_path": "E/EK/EKDK/BORNHOLM_TMA/EKRN/runway_configs.json",
+      "sha256": "257802cbcaefd9b25ab5485d1662517fc1ebb8fdda2bcb2bd860d4598ccaa69f",
+      "size_bytes": 236
+    },
+    {
+      "id": "EKSP",
+      "repo_path": "E/EK/EKDK/SKRYDSTRUP_TMA/EKSP/runway_configs.json",
+      "sha256": "ff2cc844c13b6a6a0b51515184b80a4d8244b037177e35a699c04131dc8974a9",
+      "size_bytes": 438
+    },
+    {
+      "id": "EKYT",
+      "repo_path": "E/EK/EKDK/AALBORG_TMA/EKYT/runway_configs.json",
+      "sha256": "7ccf1232581cd48295831fbbe34c87bab9bc3dc9d9c3a13719bec458b14c19e8",
+      "size_bytes": 438
     },
     {
       "id": "ENGM",
@@ -773,10 +803,52 @@
       "size_bytes": 266
     },
     {
+      "id": "LOWG",
+      "repo_path": "L/LO/LOVV/GRAZ_TMA/LOWG/runway_configs.json",
+      "sha256": "1b4ff8255075a3cb3e273ad2b3627499d23730e648cb79a405f3062ebc122239",
+      "size_bytes": 244
+    },
+    {
+      "id": "LOWI",
+      "repo_path": "L/LO/LOVV/INNSBRUCK_TMA/LOWI/runway_configs.json",
+      "sha256": "e96420e48d41be3fb9462f084a12700de23c1b24428feb7ea00a9386bc990017",
+      "size_bytes": 236
+    },
+    {
+      "id": "LOWK",
+      "repo_path": "L/LO/LOVV/KLAGENFURT_TMA/LOWK/runway_configs.json",
+      "sha256": "2e156dbe808c95d00dcf54257c86b17ac586fbeeb7b52a28ec8bb4c096b735e7",
+      "size_bytes": 244
+    },
+    {
+      "id": "LOWL",
+      "repo_path": "L/LO/LOVV/LINZ_TMA/LOWL/runway_configs.json",
+      "sha256": "feebee23db943a4b6ae5d0cd4bf8c3c9cd4e183a3bbe0787acf5b297cccb1220",
+      "size_bytes": 236
+    },
+    {
+      "id": "LOWS",
+      "repo_path": "L/LO/LOVV/SALZBURG_TMA/LOWS/runway_configs.json",
+      "sha256": "c9889c72a2f04e0a4295661f0348a25dace3c84ded3dd445c656b2578e851f25",
+      "size_bytes": 236
+    },
+    {
       "id": "LOWW",
       "repo_path": "L/LO/LOVV/VIENNA_TMA/LOWW/runway_configs.json",
       "sha256": "6d0abf31d2fa5b196223618a59dc7835cc8d1430b48a5bad6d1e471ad0526efe",
       "size_bytes": 368
+    },
+    {
+      "id": "LOXT",
+      "repo_path": "L/LO/LOVV/TULLN_TMA/LOXT/runway_configs.json",
+      "sha256": "4fced5aedcb3276770e4ae515a8be375ddae0c618c62baf8b14ada2e32d016d4",
+      "size_bytes": 616
+    },
+    {
+      "id": "LOXZ",
+      "repo_path": "L/LO/LOVV/ZELTWEG_TMA/LOXZ/runway_configs.json",
+      "sha256": "e4df8cd7338c6544167cb03249f2052b1147a1ad658ed012c0eabb448aa63128",
+      "size_bytes": 624
     },
     {
       "id": "LPAZ",
@@ -971,11 +1043,11 @@
       "size_bytes": 266
     }
   ],
-  "entry_count": 161,
-  "generated_at": "2026-10-10T07:03:28Z",
-  "published_at": "2026-10-10T07:03:28Z",
-  "release_tag": "daily-2026-10-10",
+  "entry_count": 173,
+  "generated_at": "2026-10-10T20:44:29Z",
+  "published_at": "2026-10-10T20:44:29Z",
+  "release_tag": "daily-2026-10-10-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "135178dafbbd903a5096c9e06df03004f2b60a0936420368859ecc18f3c3f26c",
-  "size_bytes": 50032
+  "sha256": "a46dfd660c6184c347e46c6aad21ed4557717bf46c651d3801ee66d982beb79b",
+  "size_bytes": 53532
 }

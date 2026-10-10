@@ -1,5 +1,5 @@
 {
-  "airport_count": 23,
+  "airport_count": 25,
   "airports": {
     "EHAM": {
       "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/mva.json",
@@ -46,6 +46,11 @@
       "sha256": "30e9573cbac5d8b3a328e79ceb7bc84f2e85c199921d231287e241f43353dae3",
       "size_bytes": 29103
     },
+    "LEAM": {
+      "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/mva.json",
+      "sha256": "c126f5efd3e3e586642dcf6aac727496373dad5f0ca9b2a252e752db4e0c8cb0",
+      "size_bytes": 38465
+    },
     "LEBB": {
       "repo_path": "L/LE/LECM/LECM_R1/BILBAO_TMA/mva.json",
       "sha256": "2ff258e09ebbc0872e2b5ad5ddb36426a04225c8f490dbf6545ce59ae3336e42",
@@ -73,8 +78,8 @@
     },
     "LEMG": {
       "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/mva.json",
-      "sha256": "106cd782ccb2a7c5eeadf1bf6bddc94afdfe1e78cb3be898262ea84325c220e8",
-      "size_bytes": 18750
+      "sha256": "c126f5efd3e3e586642dcf6aac727496373dad5f0ca9b2a252e752db4e0c8cb0",
+      "size_bytes": 38465
     },
     "LEMH": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
@@ -85,6 +90,11 @@
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
       "sha256": "a6b885eaedf2bb86345a20ce9dc5127d88df3a7edbc245178ba9818bb4f19704",
       "size_bytes": 41095
+    },
+    "LEST": {
+      "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/mva.json",
+      "sha256": "8b918c3c11f61ddfacfea42f7544dc65760281b4810c7499ea6a17a109e0bba8",
+      "size_bytes": 98681
     },
     "LEVC": {
       "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
@@ -118,12 +128,12 @@
     }
   },
   "asset_name": "mva-2610.zip",
-  "commit_sha": "439484d08d1d6ebde7111e32ee06b7d3d9b661e6",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10/mva-2610.zip",
-  "published_at": "2026-10-10T07:03:28Z",
-  "release_tag": "daily-2026-10-10",
+  "commit_sha": "67df2f64be189defc19beda4f0eedf062ca0a5a9",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-10-b/mva-2610.zip",
+  "published_at": "2026-10-10T20:44:29Z",
+  "release_tag": "daily-2026-10-10-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "c2ca4713364abb7ba758be142fc8d9a6d5a62410a752a7341bb53b1473592d2c",
-  "size_bytes": 239743
+  "sha256": "1eeccccfdb2acbcaf235fcca7c3e4f1e12cee8f4037491ee8de29a00993e3087",
+  "size_bytes": 265225
 }
