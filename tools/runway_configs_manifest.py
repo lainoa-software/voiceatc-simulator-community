@@ -5,6 +5,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -40,10 +49,7 @@ RUNWAY_FIELD_SEPARATORS = re.compile(r"[,;|+\\/\t ]+")
 
 
 def _tracked_runway_files(root: Path, filename: str) -> list[Path]:
-    return sorted(
-        path for path in root.rglob(filename)
-        if ".git" not in path.parts and ".voiceatc" not in path.parts
-    )
+    return content_files(root, filename)
 
 
 def legacy_runway_files(root: Path = ROOT) -> list[Path]:

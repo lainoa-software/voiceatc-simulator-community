@@ -27,6 +27,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -52,16 +61,6 @@ CLIMB_RULE_KINDS = ("route_contains", "aircraft_type", "utc_window", "fallback")
 CLIMB_PATH_TERMS = ("IF", "TF", "DF", "CF", "CA", "VA", "VM", "FM")
 RUNWAY_TOKEN_RE = re.compile(r"^[0-9]{1,2}[LRCB]?$")
 NAVAID_IDENT_RE = re.compile(r"^[A-Z0-9]{2,8}$")
-IGNORED_PARTS = {
-    ".git",
-    ".voiceatc",
-    "node_modules",
-    ".venv",
-    "Backups",
-    "Releases",
-    ".codex",
-    "logs",
-}
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
@@ -71,11 +70,7 @@ VALIDATION_REPAIR_HINT = (
 
 
 def options_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path
-        for path in root.rglob(OPTIONS_FILENAME)
-        if not any(part in IGNORED_PARTS for part in path.parts)
-    )
+    return content_files(root, OPTIONS_FILENAME)
 
 
 def ensure_text_field(value: object, label: str, path: Path) -> str:

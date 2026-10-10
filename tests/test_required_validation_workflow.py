@@ -69,6 +69,15 @@ class RequiredValidationWorkflowTests(unittest.TestCase):
         self.assertGreaterEqual(len(release_commands), 11)
         self.assertEqual(set(), release_commands - required_commands)
 
+    def test_validate_all_runs_every_required_python_step(self) -> None:
+        from tools import validate_all
+
+        required = REQUIRED_WORKFLOW.read_text(encoding="utf-8")
+        python_steps = {command for command in inline_run_commands(required) if command.startswith("python ")}
+        commands = validate_all.workflow_commands()
+        self.assertGreaterEqual(len(commands), 18)
+        self.assertEqual(python_steps, set(commands))
+
 
 if __name__ == "__main__":
     unittest.main()

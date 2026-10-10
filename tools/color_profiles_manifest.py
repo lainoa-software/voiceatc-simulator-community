@@ -1,6 +1,16 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
+
 import argparse
 import hashlib
 import json
@@ -36,12 +46,7 @@ ALLOWED_NUMERIC_KEYS = {"symbol_size", "traildot_size", "symbol_line_width"}
 def _tracked_profile_files(root: Path) -> list[Path]:
     paths: list[Path] = []
     for file_name in PROFILE_FILE_NAMES.values():
-        paths.extend(
-            path
-            for path in root.rglob(file_name)
-            if ".git" not in path.parts
-            and ".voiceatc" not in path.parts
-        )
+        paths.extend(content_files(root, file_name))
     return sorted(paths)
 
 

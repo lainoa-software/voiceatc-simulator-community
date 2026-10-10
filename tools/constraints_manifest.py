@@ -5,6 +5,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -24,16 +33,6 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / ".voiceatc" / "constraints_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 CONSTRAINTS_FILENAME = "constraints.json"
-IGNORED_PARTS = {
-    ".git",
-    ".voiceatc",
-    "node_modules",
-    ".venv",
-    "Backups",
-    "Releases",
-    ".codex",
-    "logs",
-}
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
@@ -43,11 +42,7 @@ VALIDATION_REPAIR_HINT = (
 
 
 def constraints_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path
-        for path in root.rglob(CONSTRAINTS_FILENAME)
-        if not any(part in IGNORED_PARTS for part in path.parts)
-    )
+    return content_files(root, CONSTRAINTS_FILENAME)
 
 
 def ensure_text_field(value: object, label: str, path: Path) -> str:

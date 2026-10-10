@@ -25,6 +25,16 @@ engine's (1), the same value constraints and procedure options use.
 """
 from __future__ import annotations
 
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
+
 import argparse
 import hashlib
 import json
@@ -51,17 +61,6 @@ LAYER_NAMES = (
 )
 LAYERS_BY_UPPER = {name.upper(): name for name in LAYER_NAMES}
 IDENT_RE = re.compile(r"^[A-Z0-9]{1,8}$")
-IGNORED_PARTS = {
-    ".git",
-    ".voiceatc",
-    "node_modules",
-    ".venv",
-    "Backups",
-    "Releases",
-    ".codex",
-    ".claude",
-    "logs",
-}
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
@@ -71,11 +70,7 @@ VALIDATION_REPAIR_HINT = (
 
 
 def display_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path
-        for path in root.rglob(DISPLAY_FILENAME)
-        if not any(part in IGNORED_PARTS for part in path.relative_to(root).parts)
-    )
+    return content_files(root, DISPLAY_FILENAME)
 
 
 def ensure_text_field(value: object, label: str, path: Path) -> str:

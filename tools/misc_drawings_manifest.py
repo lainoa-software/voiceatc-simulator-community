@@ -5,6 +5,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -24,11 +33,7 @@ MISC_DRAWINGS_FILENAME = "misc_drawings.json"
 
 
 def misc_drawings_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path
-        for path in root.rglob(MISC_DRAWINGS_FILENAME)
-        if ".git" not in path.parts and ".voiceatc" not in path.parts
-    )
+    return content_files(root, MISC_DRAWINGS_FILENAME)
 
 
 def ensure_text_field(value: object, label: str, path: Path) -> str:

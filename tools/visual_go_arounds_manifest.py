@@ -6,6 +6,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -55,14 +64,10 @@ LEG_KEYS = {
 }
 MANIFEST_KEYS = {"schema_version", "repo", "airports", "published_at"}
 MANIFEST_ENTRY_KEYS = {"repo_path", "sha256", "size_bytes"}
-IGNORED_PARTS = {".git", ".voiceatc", "node_modules", ".venv", "Backups", "Releases"}
 
 
 def go_around_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path for path in root.rglob("visual_go_arounds.json")
-        if not IGNORED_PARTS.intersection(path.parts)
-    )
+    return content_files(root, "visual_go_arounds.json")
 
 
 def _canonical_repo_bytes(raw_bytes: bytes) -> bytes:

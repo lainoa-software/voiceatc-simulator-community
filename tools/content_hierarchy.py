@@ -2,6 +2,16 @@
 """Validate community content placement against the canonical hierarchy registry."""
 from __future__ import annotations
 
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
+
 import argparse
 import json
 import re
@@ -337,12 +347,7 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
 def collect_findings(root: Path = ROOT, registry_path: Path | None = None) -> list[Finding]:
     registry = load_registry(registry_path or (root / REGISTRY_RELATIVE))
     findings = [Finding(message) for message in _validate_registry(registry)]
-    ignored_parts = {".git", ".voiceatc", "node_modules"}
-    paths = sorted(
-        path
-        for path in root.rglob("*.json")
-        if path.name in CONTENT_FILE_NAMES and not ignored_parts.intersection(path.parts)
-    )
+    paths = [path for path in content_files(root, "*.json") if path.name in CONTENT_FILE_NAMES]
     for path in paths:
         findings.extend(_validate_content_file(path, root, registry))
     compatibility = registry.get("release_compatibility", {})

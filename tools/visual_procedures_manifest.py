@@ -6,6 +6,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -63,21 +72,10 @@ CONSTRAINT_KEYS = {"value_ft", "value2_ft", "value_kt", "status", "kind"}
 FINAL_KEYS = {"course_deg", "glidepath_deg"}
 MANIFEST_KEYS = {"schema_version", "repo", "airports", "published_at"}
 MANIFEST_ENTRY_KEYS = {"repo_path", "sha256", "size_bytes"}
-IGNORED_PARTS = {
-    ".git",
-    ".voiceatc",
-    "node_modules",
-    ".venv",
-    "Backups",
-    "Releases",
-}
 
 
 def visual_files(root: Path = ROOT) -> list[Path]:
-    return sorted(
-        path for path in root.rglob("visual_procedures.json")
-        if not IGNORED_PARTS.intersection(path.parts)
-    )
+    return content_files(root, "visual_procedures.json")
 
 
 def _canonical_repo_bytes(raw_bytes: bytes) -> bytes:

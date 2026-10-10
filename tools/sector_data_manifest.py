@@ -5,6 +5,15 @@ try:
     from . import airac_overrides
 except ImportError:
     import airac_overrides
+try:
+    from .content_files import content_files
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from content_files import content_files
 
 import argparse
 import hashlib
@@ -32,11 +41,7 @@ FILE_KIND_ORDER = ("configs", "definitions", "influence")
 def _tracked_sector_files(root: Path) -> list[Path]:
     paths: list[Path] = []
     for file_name in SECTOR_FILE_NAMES.values():
-        paths.extend(
-            path
-            for path in root.rglob(file_name)
-            if ".git" not in path.parts and ".voiceatc" not in path.parts
-        )
+        paths.extend(content_files(root, file_name))
     return sorted(paths)
 
 
