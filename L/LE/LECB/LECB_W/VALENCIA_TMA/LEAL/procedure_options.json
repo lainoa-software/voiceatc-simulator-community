@@ -1,0 +1,87 @@
+{
+  "airport": "LEAL",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "10": {
+      "sids": {
+        "VLC4A": {
+          "init_climb": 6000
+        },
+        "ASTRO4A": {
+          "init_climb": 6000
+        },
+        "ASTR4A": {
+          "init_climb": 6000
+        },
+        "CATO4A": {
+          "init_climb": 6000
+        },
+        "CATON4A": {
+          "init_climb": 6000
+        },
+        "MAGAL3A": {
+          "init_climb": 6000
+        },
+        "MAGA3A": {
+          "init_climb": 6000
+        },
+        "MITO3A": {
+          "init_climb": 6000
+        },
+        "MITOS3A": {
+          "init_climb": 6000
+        },
+        "RESTU3A": {
+          "init_climb": 6000
+        },
+        "REST3A": {
+          "init_climb": 6000
+        },
+        "YES4A": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "28": {
+      "sids": {
+        "VLC4D": {
+          "init_climb": 6000
+        },
+        "ASTRO5D": {
+          "init_climb": 6000
+        },
+        "ASTR5D": {
+          "init_climb": 6000
+        },
+        "CATO4C": {
+          "init_climb": 6000
+        },
+        "CATON4C": {
+          "init_climb": 6000
+        },
+        "MAGA2D": {
+          "init_climb": 6000
+        },
+        "MAGAL2D": {
+          "init_climb": 6000
+        },
+        "MITO2C": {
+          "init_climb": 6000
+        },
+        "MITOS2C": {
+          "init_climb": 6000
+        },
+        "REST3B": {
+          "init_climb": 6000
+        },
+        "RESTU3B": {
+          "init_climb": 6000
+        },
+        "YES3D": {
+          "init_climb": 6000
+        }
+      }
+    }
+  }
+}

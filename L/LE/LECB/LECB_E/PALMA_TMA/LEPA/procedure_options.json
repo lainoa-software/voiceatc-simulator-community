@@ -1,0 +1,323 @@
+{
+  "airport": "LEPA",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "24L": {
+      "sids": {
+        "BAVE3Z": {
+          "init_climb": 4000
+        },
+        "BAVER3Z": {
+          "init_climb": 4000
+        },
+        "EPAMA3Z": {
+          "init_climb": 4000
+        },
+        "EPAM3Z": {
+          "init_climb": 4000
+        },
+        "MEBU4G": {
+          "init_climb": 4000
+        },
+        "MEBUT4G": {
+          "init_climb": 4000
+        },
+        "NELU3Z": {
+          "init_climb": 4000
+        },
+        "NELUX3Z": {
+          "init_climb": 4000
+        },
+        "OSGA4G": {
+          "init_climb": 4000
+        },
+        "OSGAL4G": {
+          "init_climb": 4000
+        },
+        "ISTER3G": {
+          "init_climb": 5000
+        },
+        "ISTE3G": {
+          "init_climb": 5000
+        },
+        "MERO4G": {
+          "init_climb": 5000
+        },
+        "MEROS4G": {
+          "init_climb": 5000
+        },
+        "MORSS4G": {
+          "init_climb": 5000
+        },
+        "MORS4G": {
+          "init_climb": 5000
+        },
+        "PTC4G": {
+          "init_climb": 5000
+        },
+        "DRAGO3Z": {
+          "init_climb": 6000
+        },
+        "DRAG3Z": {
+          "init_climb": 6000
+        },
+        "ESPO3Z": {
+          "init_climb": 6000
+        },
+        "ESPOR3Z": {
+          "init_climb": 6000
+        },
+        "GALAT3Z": {
+          "init_climb": 6000
+        },
+        "GALA3Z": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "24R": {
+      "sids": {
+        "BAVE5A": {
+          "init_climb": 4000
+        },
+        "BAVER5A": {
+          "init_climb": 4000
+        },
+        "EPAMA4A": {
+          "init_climb": 4000
+        },
+        "EPAM4A": {
+          "init_climb": 4000
+        },
+        "MEBU6A": {
+          "init_climb": 4000
+        },
+        "MEBUT6A": {
+          "init_climb": 4000
+        },
+        "NELUX3A": {
+          "init_climb": 4000
+        },
+        "NELU3A": {
+          "init_climb": 4000
+        },
+        "OSGA6A": {
+          "init_climb": 4000
+        },
+        "OSGAL6A": {
+          "init_climb": 4000
+        },
+        "ISTER5A": {
+          "init_climb": 5000
+        },
+        "ISTE5A": {
+          "init_climb": 5000
+        },
+        "MEROS6A": {
+          "init_climb": 5000
+        },
+        "MERO6A": {
+          "init_climb": 5000
+        },
+        "MORSS6A": {
+          "init_climb": 5000
+        },
+        "MORS6A": {
+          "init_climb": 5000
+        },
+        "PTC5A": {
+          "init_climb": 5000
+        },
+        "DRAGO5A": {
+          "init_climb": 6000
+        },
+        "DRAG5A": {
+          "init_climb": 6000
+        },
+        "ESPO5A": {
+          "init_climb": 6000
+        },
+        "ESPOR5A": {
+          "init_climb": 6000
+        },
+        "GALA5A": {
+          "init_climb": 6000
+        },
+        "GALAT5A": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "06L": {
+      "sids": {
+        "CDP2L": {
+          "init_climb": 4000
+        },
+        "ISTER3L": {
+          "init_climb": 4000
+        },
+        "ISTE3L": {
+          "init_climb": 4000
+        },
+        "MEBU6L": {
+          "init_climb": 4000
+        },
+        "MEBUT6L": {
+          "init_climb": 4000
+        },
+        "MEROS4L": {
+          "init_climb": 4000
+        },
+        "MERO4L": {
+          "init_climb": 4000
+        },
+        "MORS4L": {
+          "init_climb": 4000
+        },
+        "MORSS4L": {
+          "init_climb": 4000
+        },
+        "NELUX4L": {
+          "init_climb": 4000
+        },
+        "NELU4L": {
+          "init_climb": 4000
+        },
+        "OSGA6L": {
+          "init_climb": 4000
+        },
+        "OSGAL6L": {
+          "init_climb": 4000
+        },
+        "TONIS3L": {
+          "init_climb": 4000
+        },
+        "TONI3L": {
+          "init_climb": 4000
+        },
+        "DRAGO5N": {
+          "init_climb": 6000
+        },
+        "DRAG5N": {
+          "init_climb": 6000
+        },
+        "DRAGO4L": {
+          "init_climb": 6000
+        },
+        "DRAG4L": {
+          "init_climb": 6000
+        },
+        "ESPO5N": {
+          "init_climb": 6000
+        },
+        "ESPOR5N": {
+          "init_climb": 6000
+        },
+        "ESPOR4L": {
+          "init_climb": 6000
+        },
+        "ESPO4L": {
+          "init_climb": 6000
+        },
+        "GALAT5N": {
+          "init_climb": 6000
+        },
+        "GALA5N": {
+          "init_climb": 6000
+        },
+        "GALA4L": {
+          "init_climb": 6000
+        },
+        "GALAT4L": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "06R": {
+      "sids": {
+        "CDP2E": {
+          "init_climb": 4000
+        },
+        "ISTER6B": {
+          "init_climb": 4000
+        },
+        "ISTE6B": {
+          "init_climb": 4000
+        },
+        "MEBU6B": {
+          "init_climb": 4000
+        },
+        "MEBUT6B": {
+          "init_climb": 4000
+        },
+        "MEROS9B": {
+          "init_climb": 4000
+        },
+        "MERO9B": {
+          "init_climb": 4000
+        },
+        "MORS7E": {
+          "init_climb": 4000
+        },
+        "MORSS7E": {
+          "init_climb": 4000
+        },
+        "NELUX4B": {
+          "init_climb": 4000
+        },
+        "NELU4B": {
+          "init_climb": 4000
+        },
+        "OSGA6B": {
+          "init_climb": 4000
+        },
+        "OSGAL6B": {
+          "init_climb": 4000
+        },
+        "TONIS5E": {
+          "init_climb": 4000
+        },
+        "TONI5E": {
+          "init_climb": 4000
+        },
+        "DRAG5R": {
+          "init_climb": 6000
+        },
+        "DRAGO5R": {
+          "init_climb": 6000
+        },
+        "DRAGO5B": {
+          "init_climb": 6000
+        },
+        "DRAG5B": {
+          "init_climb": 6000
+        },
+        "ESPOR5R": {
+          "init_climb": 6000
+        },
+        "ESPO5R": {
+          "init_climb": 6000
+        },
+        "ESPOR5B": {
+          "init_climb": 6000
+        },
+        "ESPO5B": {
+          "init_climb": 6000
+        },
+        "GALA5R": {
+          "init_climb": 6000
+        },
+        "GALAT5R": {
+          "init_climb": 6000
+        },
+        "GALAT5B": {
+          "init_climb": 6000
+        },
+        "GALA5B": {
+          "init_climb": 6000
+        }
+      }
+    }
+  }
+}
