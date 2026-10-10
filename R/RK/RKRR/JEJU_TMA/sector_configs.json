@@ -1,0 +1,13 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "sectors": [
+        {
+          "sector_ids": ["RKPC_APP"],
+          "frequency": "121.200"
+        }
+      ]
+    }
+  ]
+}
