@@ -1,0 +1,93 @@
+{
+  "airport": "LEIB",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "06": {
+      "sids": {
+        "BAVE5R": {
+          "init_climb": 4000
+        },
+        "BAVER5R": {
+          "init_climb": 4000
+        },
+        "INSUB4F": {
+          "init_climb": 4000
+        },
+        "INSU4F": {
+          "init_climb": 4000
+        },
+        "EPAMA4F": {
+          "init_climb": 6000
+        },
+        "EPAM4F": {
+          "init_climb": 6000
+        },
+        "KABR4R": {
+          "init_climb": 6000
+        },
+        "KABRE4R": {
+          "init_climb": 6000
+        },
+        "LAMPA4F": {
+          "init_climb": 6000
+        },
+        "LAMP4F": {
+          "init_climb": 6000
+        },
+        "MHN7F": {
+          "init_climb": 6000
+        },
+        "XOST5F": {
+          "init_climb": 6000
+        },
+        "XOSTA5F": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "24": {
+      "sids": {
+        "BAVER5E": {
+          "init_climb": 6000
+        },
+        "BAVE5E": {
+          "init_climb": 6000
+        },
+        "EPAM4E": {
+          "init_climb": 6000
+        },
+        "EPAMA4E": {
+          "init_climb": 6000
+        },
+        "INSU4E": {
+          "init_climb": 6000
+        },
+        "INSUB4E": {
+          "init_climb": 6000
+        },
+        "KABRE4E": {
+          "init_climb": 6000
+        },
+        "KABR4E": {
+          "init_climb": 6000
+        },
+        "LAMPA4E": {
+          "init_climb": 6000
+        },
+        "LAMP4E": {
+          "init_climb": 6000
+        },
+        "MHN7E": {
+          "init_climb": 6000
+        },
+        "XOST5E": {
+          "init_climb": 6000
+        },
+        "XOSTA5E": {
+          "init_climb": 6000
+        }
+      }
+    }
+  }
+}

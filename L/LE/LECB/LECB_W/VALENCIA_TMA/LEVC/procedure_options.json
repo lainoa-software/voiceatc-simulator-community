@@ -1,0 +1,135 @@
+{
+  "airport": "LEVC",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "12": {
+      "sids": {
+        "ALT5B": {
+          "init_climb": 6000
+        },
+        "ASTR6G": {
+          "init_climb": 6000
+        },
+        "ASTRO6G": {
+          "init_climb": 6000
+        },
+        "CENTA8G": {
+          "init_climb": 6000
+        },
+        "CENT8G": {
+          "init_climb": 6000
+        },
+        "MANDY7G": {
+          "init_climb": 6000
+        },
+        "MAND7G": {
+          "init_climb": 6000
+        },
+        "NARG4B": {
+          "init_climb": 6000
+        },
+        "NARGO4B": {
+          "init_climb": 6000
+        },
+        "ODSEN1B": {
+          "init_climb": 6000
+        },
+        "ODSE1B": {
+          "init_climb": 6000
+        },
+        "ORVU2B": {
+          "init_climb": 6000
+        },
+        "ORVUS2B": {
+          "init_climb": 6000
+        },
+        "ORVU1G": {
+          "init_climb": 6000
+        },
+        "ORVUS1G": {
+          "init_climb": 6000
+        },
+        "SOPE5B": {
+          "init_climb": 6000
+        },
+        "SOPET5B": {
+          "init_climb": 6000
+        },
+        "TATO5B": {
+          "init_climb": 6000
+        },
+        "TATOS5B": {
+          "init_climb": 6000
+        }
+      }
+    },
+    "30": {
+      "sids": {
+        "ALT6A": {
+          "init_climb": 6000
+        },
+        "ASTRO6F": {
+          "init_climb": 6000
+        },
+        "ASTR6F": {
+          "init_climb": 6000
+        },
+        "CENTA8A": {
+          "init_climb": 6000
+        },
+        "CENT8A": {
+          "init_climb": 6000
+        },
+        "MAND8A": {
+          "init_climb": 6000
+        },
+        "MANDY8A": {
+          "init_climb": 6000
+        },
+        "NARG4A": {
+          "init_climb": 6000
+        },
+        "NARGO4A": {
+          "init_climb": 6000
+        },
+        "ODSE2A": {
+          "init_climb": 6000
+        },
+        "ODSEN2A": {
+          "init_climb": 6000
+        },
+        "ODSEN2H": {
+          "init_climb": 6000
+        },
+        "ODSE2H": {
+          "init_climb": 6000
+        },
+        "ORVU2A": {
+          "init_climb": 6000
+        },
+        "ORVUS2A": {
+          "init_climb": 6000
+        },
+        "ORVU2H": {
+          "init_climb": 6000
+        },
+        "ORVUS2H": {
+          "init_climb": 6000
+        },
+        "SOPET6A": {
+          "init_climb": 6000
+        },
+        "SOPE6A": {
+          "init_climb": 6000
+        },
+        "TATOS7A": {
+          "init_climb": 6000
+        },
+        "TATO7A": {
+          "init_climb": 6000
+        }
+      }
+    }
+  }
+}
