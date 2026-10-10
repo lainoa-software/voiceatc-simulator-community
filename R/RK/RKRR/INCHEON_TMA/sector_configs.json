@@ -1,0 +1,17 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "sectors": [
+        {
+          "sector_ids": ["RKSI_APP"],
+          "frequency": "119.750"
+        },
+        {
+          "sector_ids": ["RKSS_APP"],
+          "frequency": "119.100"
+        }
+      ]
+    }
+  ]
+}
