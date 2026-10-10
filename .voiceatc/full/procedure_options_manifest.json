@@ -85,10 +85,30 @@
       "sha256": "0b8114051ccbaa22c403b01560228b156d99ad8b09a398d71347340d4eeb624d",
       "size_bytes": 266
     },
+    "LEAL": {
+      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEAL/procedure_options.json",
+      "sha256": "bb9cd4b4d11bf7badebe0734e7e466ce296765b40a7091674c773f2e43c6b116",
+      "size_bytes": 1617
+    },
     "LEBL": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_options.json",
       "sha256": "c87a0b08b48731df057a28c4a85e8429b8f06c51596e7d7354484b7c426b7e15",
       "size_bytes": 1379
+    },
+    "LEIB": {
+      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/procedure_options.json",
+      "sha256": "beba4ecc8ca20a836581a7f43fc15fc9a913ab8b89d53d306ce476d2fb055326",
+      "size_bytes": 1741
+    },
+    "LEPA": {
+      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEPA/procedure_options.json",
+      "sha256": "b740d876aa882fd75e619bfa23da95a8a029cfe54f15ba07d6226cb8dd179f6d",
+      "size_bytes": 6303
+    },
+    "LEVC": {
+      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEVC/procedure_options.json",
+      "sha256": "98adddf6fd7f5f2a3f36431070711cf672d1e4e9425a5189907ea843468195ec",
+      "size_bytes": 2588
     },
     "LPPR": {
       "repo_path": "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json",
