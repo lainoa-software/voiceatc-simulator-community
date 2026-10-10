@@ -110,6 +110,11 @@
       "sha256": "98adddf6fd7f5f2a3f36431070711cf672d1e4e9425a5189907ea843468195ec",
       "size_bytes": 2588
     },
+    "LEZL": {
+      "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/LEZL/procedure_options.json",
+      "sha256": "964c08af900b6647d58eeadda1cfcd6d2f7ffb3af074adcdb3a12cdec2ca1ce6",
+      "size_bytes": 2033
+    },
     "LPPR": {
       "repo_path": "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json",
       "sha256": "6c9591208b4f732df09d67a66778a059e80657020d38e1241f83c945d83d77f8",

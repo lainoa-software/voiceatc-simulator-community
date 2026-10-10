@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "LEASAPP",
-      "airports": [
-        "LEAS"
-      ]
+      "airports": ["LEAS"]
     }
   ]
 }

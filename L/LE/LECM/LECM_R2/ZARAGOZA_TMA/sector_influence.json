@@ -2,10 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "LEZGAPP",
-      "airports": [
-        "LEZG",
-        "LEHC"
-      ]
+      "airports": ["LEZG", "LEHC"]
     }
   ]
 }
