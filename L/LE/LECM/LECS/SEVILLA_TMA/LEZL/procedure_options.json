@@ -1,0 +1,108 @@
+{
+  "airport": "LEZL",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "09": {
+      "sids": {
+        "BUDI3R": {
+          "init_climb": 8000
+        },
+        "BUDIT3R": {
+          "init_climb": 8000
+        },
+        "HIJ3R": {
+          "init_climb": 8000
+        },
+        "SANT4R": {
+          "init_climb": 8000
+        },
+        "SANTA4R": {
+          "init_climb": 8000
+        },
+        "CLANA4R": {
+          "init_climb": 9000
+        },
+        "CLAN4R": {
+          "init_climb": 9000
+        },
+        "JRZ3R": {
+          "init_climb": 9000
+        },
+        "MAR4R": {
+          "init_climb": 9000
+        },
+        "ONUBA5R": {
+          "init_climb": 9000
+        },
+        "ONUB5R": {
+          "init_climb": 9000
+        },
+        "VIBA3R": {
+          "init_climb": 9000
+        },
+        "VIBAS3R": {
+          "init_climb": 9000
+        },
+        "VJF4R": {
+          "init_climb": 9000
+        }
+      }
+    },
+    "27": {
+      "sids": {
+        "HIJ2P": {
+          "init_climb": 8000
+        },
+        "SANT3P": {
+          "init_climb": 8000
+        },
+        "SANTA3P": {
+          "init_climb": 8000
+        },
+        "BUDIT4G": {
+          "init_climb": 8000
+        },
+        "BUDI4G": {
+          "init_climb": 8000
+        },
+        "HIJ5G": {
+          "init_climb": 8000
+        },
+        "SANT5G": {
+          "init_climb": 8000
+        },
+        "SANTA5G": {
+          "init_climb": 8000
+        },
+        "CLAN4G": {
+          "init_climb": 9000
+        },
+        "CLANA4G": {
+          "init_climb": 9000
+        },
+        "JRZ3G": {
+          "init_climb": 9000
+        },
+        "MAR4G": {
+          "init_climb": 9000
+        },
+        "ONUB3G": {
+          "init_climb": 9000
+        },
+        "ONUBA3G": {
+          "init_climb": 9000
+        },
+        "VIBAS4G": {
+          "init_climb": 9000
+        },
+        "VIBA4G": {
+          "init_climb": 9000
+        },
+        "VJF3G": {
+          "init_climb": 9000
+        }
+      }
+    }
+  }
+}
