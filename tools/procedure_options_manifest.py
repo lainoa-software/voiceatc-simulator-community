@@ -25,9 +25,6 @@ from __future__ import annotations
 
 try:
     from . import airac_overrides
-except ImportError:
-    import airac_overrides
-try:
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -35,6 +32,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
 
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import airac_overrides
     from content_files import content_files
 
 import argparse

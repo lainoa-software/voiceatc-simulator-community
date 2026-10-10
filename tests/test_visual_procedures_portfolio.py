@@ -2,12 +2,14 @@ import json
 import unittest
 from pathlib import Path
 
+from tools.content_files import content_files
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def airport_file(icao: str) -> dict[str, object]:
-    matches = list(ROOT.glob(f"**/{icao}/visual_procedures.json"))
+    matches = [path for path in content_files(ROOT, "visual_procedures.json") if path.parent.name == icao]
     if len(matches) != 1:
         raise AssertionError(f"expected one {icao} visual file, found {len(matches)}")
     return json.loads(matches[0].read_text(encoding="utf-8"))
@@ -15,7 +17,7 @@ def airport_file(icao: str) -> dict[str, object]:
 
 class VisualProceduresPortfolioTests(unittest.TestCase):
     def test_launch_portfolio_counts_are_stable(self) -> None:
-        files = list(ROOT.glob("**/visual_procedures.json"))
+        files = content_files(ROOT, "visual_procedures.json")
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in files]
         procedures = [procedure for payload in payloads for procedure in payload["procedures"]]
         variants = [variant for procedure in procedures for variant in procedure["variants"]]
@@ -24,7 +26,7 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
         self.assertEqual(54, len(variants))
 
     def test_published_procedures_omit_retired_availability_data(self) -> None:
-        files = list(ROOT.glob("**/visual_procedures.json"))
+        files = content_files(ROOT, "visual_procedures.json")
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in files]
         procedures = [procedure for payload in payloads for procedure in payload["procedures"]]
         self.assertTrue(procedures)
