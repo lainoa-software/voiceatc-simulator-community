@@ -131,6 +131,19 @@ class ContentHierarchyTests(unittest.TestCase):
             any("nationality area 'LF' belongs under region 'L'" in error for error in self.errors())
         )
 
+    def test_rejects_fir_filed_under_another_nationality(self) -> None:
+        # The website derives a new country from its FIR's first two letters, so a
+        # hand edit that files a FIR under another country must not pass.
+        registry = fixture_registry()
+        registry["terminal_scopes"]["E/ED/ESAA/MALMO_TMA"] = ["ESMS"]
+        self.write_registry(registry)
+        self.assertTrue(
+            any(
+                "FIR/ARTCC 'ESAA' does not belong to nationality area 'ED'" in error
+                for error in self.errors()
+            )
+        )
+
     def test_rejects_malformed_nationality_area(self) -> None:
         registry = fixture_registry()
         registry["nationality_areas"]["E"] = ["ED", "EDGG"]

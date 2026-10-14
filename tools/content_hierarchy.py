@@ -116,6 +116,10 @@ def _parse_scope(scope: str, registry: dict[str, Any], *, allow_shallow: bool) -
     operational_ident = parts[operational_index]
     if operational_ident not in operational:
         errors.append(f"unknown operational identifier '{operational_ident}'")
+    # A nationality area is the first two letters of its FIR code; the website
+    # derives a new country from its FIR, so the two must always agree.
+    if operational_index == 2 and not operational_ident.startswith(parts[1]):
+        errors.append(f"FIR/ARTCC '{operational_ident}' does not belong to nationality area '{parts[1]}'")
     trailing = parts[operational_index + 1 :]
     if len(trailing) > 2:
         errors.append("more than one ACC grouping appears between FIR/ARTCC and terminal area")
