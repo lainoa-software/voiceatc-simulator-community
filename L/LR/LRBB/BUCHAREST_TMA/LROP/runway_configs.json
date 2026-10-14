@@ -1,0 +1,41 @@
+{
+  "airport": "LROP",
+  "runway_configs": [
+    {
+      "id": "08_OPS",
+      "name": "08 OPS",
+      "arr": "08R",
+      "dep": "08L"
+    },
+    {
+      "id": "08R_SRO",
+      "name": "08R SRO",
+      "arr": "08R",
+      "dep": "08R"
+    },
+    {
+      "id": "08L_SRO",
+      "name": "08L SRO",
+      "arr": "08L",
+      "dep": "08L"
+    },
+    {
+      "id": "26_OPS",
+      "name": "26 OPS",
+      "arr": "26L",
+      "dep": "26R"
+    },
+    {
+      "id": "26R_SRO",
+      "name": "26R SRO",
+      "arr": "26R",
+      "dep": "26R"
+    },
+    {
+      "id": "26L_SRO",
+      "name": "26L SRO",
+      "arr": "26L",
+      "dep": "26L"
+    }
+  ]
+}
