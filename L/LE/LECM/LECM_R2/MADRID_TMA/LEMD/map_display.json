@@ -1,0 +1,19 @@
+{
+  "airport": "LEMD",
+  "schema": 1,
+  "notes": "Opening drawing set by the maintainer (2026-10-21): MRVA with its levels and MISC on; fixes, VORs and NDBs off; ILS lines 25 NM.",
+  "layers": {
+    "VOR": false,
+    "VOR Labels": false,
+    "NDB": false,
+    "NDB Labels": false,
+    "FIX": false,
+    "FIX Labels": false,
+    "MRVA": true,
+    "MRVA Labels": true,
+    "MISC": true,
+    "MISC Labels": true,
+    "ILS": true
+  },
+  "ils_length_nm": 25
+}
