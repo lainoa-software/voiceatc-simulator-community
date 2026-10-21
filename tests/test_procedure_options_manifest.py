@@ -297,6 +297,31 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "join_from must be an array of fix idents"):
                 MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
 
+    def _build_with(self, mutate) -> dict:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            mutate(payload)
+            path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            return MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
+    def test_build_manifest_accepts_sid_aircraft_types(self) -> None:
+        manifest = self._build_with(lambda p: p["sids"].update({"CHAL1X": {"aircraft_types": ["A388", "B744"]}}))
+        self.assertIn("RCTP", manifest["airports"])
+
+    def test_build_manifest_rejects_aircraft_types_outside_top_level_sids(self) -> None:
+        with self.assertRaisesRegex(ValueError, "aircraft_types is only supported on top-level SID entries"):
+            self._build_with(lambda p: p.update({"runways": {"05R": {"sids": {"CHAL1X": {"aircraft_types": ["A388"]}}}}}))
+        with self.assertRaisesRegex(ValueError, "aircraft_types is only supported on top-level SID entries"):
+            self._build_with(lambda p: p["stars"]["TEST1A"].update({"aircraft_types": ["A388"]}))
+
+    def test_build_manifest_rejects_empty_or_non_list_aircraft_types(self) -> None:
+        for value in ([], "A388", [""]):
+            with self.assertRaisesRegex(ValueError, "aircraft_types must be a non-empty array of ICAO type codes"):
+                self._build_with(lambda p, v=value: p["sids"].update({"CHAL1X": {"aircraft_types": v}}))
+
     def test_build_manifest_accepts_runways_overrides(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
