@@ -7,6 +7,11 @@
     },
     {
       "dataset": "routes",
+      "path": "ROUTES/full/short_hop_direct.tsv",
+      "requires": ["routes.short_hop_direct"]
+    },
+    {
+      "dataset": "routes",
       "path": "ROUTES/full/route_rules.tsv",
       "requires": ["routes.route_rules"],
       "channels": ["closed-beta"]
