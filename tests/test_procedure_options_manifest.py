@@ -113,6 +113,30 @@ class ProcedureOptionsManifestTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(lf_bytes).hexdigest(), entry["sha256"])
             self.assertEqual(len(lf_bytes), entry["size_bytes"])
 
+    def _write_payload(self, root: Path, payload: dict) -> None:
+        path = root / "R" / "RC" / "RCAA" / "TAIPEI_TMA" / "RCTP" / "procedure_options.json"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(payload), encoding="utf-8")
+
+    def test_route_keys_are_accepted_inside_both_tiers(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            tier = valid_payload("RCTP")
+            tier["runways"] = {"05L": {"sids": {"MARUN.E": {"spawn_enabled": True}}}}
+            payload = {**valid_payload("RCTP"), "airac_overrides": {"bundled": tier, "latest": tier}}
+            self._write_payload(root, payload)
+            manifest = MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+            self.assertIn("RCTP", manifest["airports"])
+
+    def test_route_keys_are_rejected_at_the_top_level(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = valid_payload("RCTP")
+            payload["configs"] = {"05": {"stars": {"DIXAT.A": {"spawn_enabled": True}}}}
+            self._write_payload(root, payload)
+            with self.assertRaisesRegex(ValueError, "configs.05.stars.DIXAT.A is a digit-free key"):
+                MODULE.build_manifest(root, published_at="2026-04-21T00:00:00Z")
+
     def test_build_manifest_rejects_duplicate_airports(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)

@@ -19,6 +19,12 @@ flag for a specific landing/departure direction: each key is a bare runway token
 shape. The simulator resolves per-runway override → global per-procedure value →
 the matching default → the built-in fallback.
 
+A `sids` or `stars` key may leave out the AIRAC revision digit: `MARUN.E` is the
+basic indicator MARUN with route letter E, which the simulator resolves to the loaded
+navdata's MARU5E or MARU6E. Builds before `community.procedure_route_keys` read such a
+key as a literal name, so it is allowed only inside `airac_overrides` tiers; the
+top-level document keeps exact names, and the full manifest requires the capability.
+
 Validation here is structural only (the same scope as constraints_manifest.py):
 JSON shape, airport==folder, bucket/entry types, boolean flags. Procedure idents
 are NOT cross-checked against navdata (none ships in this repo); a mistyped ident
@@ -62,6 +68,8 @@ CLIMB_RULE_KINDS = ("route_contains", "aircraft_type", "utc_window", "fallback")
 CLIMB_PATH_TERMS = ("IF", "TF", "DF", "CF", "CA", "VA", "VM", "FM")
 RUNWAY_TOKEN_RE = re.compile(r"^[0-9]{1,2}[LRCB]?$")
 NAVAID_IDENT_RE = re.compile(r"^[A-Z0-9]{2,8}$")
+ROUTE_KEY_RE = re.compile(r"^[A-Z0-9]{2,5}\.[A-Z]$")
+ROUTE_KEYS_CAPABILITY = "community.procedure_route_keys"
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
@@ -365,8 +373,25 @@ def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     for tier, document in airac_overrides.documents(payload):
         checked = _validate_options_document(document, path, root, raw_bytes, tier)
         if not tier:
+            _reject_route_keys(document, path)
             result = checked
     return result
+
+
+def _reject_route_keys(document: dict, path: Path) -> None:
+    payloads = [("", document)]
+    for axis in ("runways", "configs"):
+        for name, payload in (document.get(axis) or {}).items():
+            payloads.append((f"{axis}.{name}.", payload))
+    for prefix, payload in payloads:
+        for bucket in ("sids", "stars"):
+            for key in payload.get(bucket) or {}:
+                if ROUTE_KEY_RE.fullmatch(str(key).strip().upper()):
+                    raise ValueError(
+                        f"{path}: {prefix}{bucket}.{key} is a digit-free key, which older builds read "
+                        "as a literal name; put it in both airac_overrides tiers and keep exact names "
+                        "at the top level"
+                    )
 
 
 def _validate_options_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
@@ -544,7 +569,8 @@ def main() -> int:
         return 1
 
     if args.write:
-        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
+        manifest = airac_overrides.publish_raw_manifest(
+            ROOT, MANIFEST_PATH, manifest, requires=(ROUTE_KEYS_CAPABILITY,))
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         print(f"Wrote {MANIFEST_PATH.relative_to(ROOT).as_posix()}")

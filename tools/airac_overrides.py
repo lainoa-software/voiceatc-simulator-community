@@ -121,10 +121,12 @@ def project_feed(root: Path, gated: dict) -> None:
     gated["full_entries"] = entries
 
 
-def publish_raw_manifest(root: Path, manifest_path: Path, manifest: dict) -> dict:
+def publish_raw_manifest(root: Path, manifest_path: Path, manifest: dict, requires: tuple[str, ...] = ()) -> dict:
+    """``requires`` names capabilities the full feed's documents need beyond the tiers."""
     full_path = root / ".voiceatc/full" / manifest_path.name
     full_path.parent.mkdir(parents=True, exist_ok=True)
-    full_path.write_text(json.dumps({**manifest, "requires": [CAPABILITY]}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    full = {**manifest, "requires": sorted({CAPABILITY, *requires})}
+    full_path.write_text(json.dumps(full, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {**manifest, "airports": {key: default_entry(root, entry) for key, entry in manifest["airports"].items()}}
 
 

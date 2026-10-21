@@ -2,60 +2,330 @@
   "airport": "EDDF",
   "schema_version": 1,
   "airac_min": 2606,
-  "defaults": { "spawn_enabled": false },
+  "defaults": {
+    "spawn_enabled": false
+  },
   "stars": {},
   "sids": {},
   "iaps": {},
   "runways": {
     "25C": {
       "sids": {
-        "MARU3W": { "spawn_enabled": true },
-        "OBOK3W": { "spawn_enabled": true },
-        "TOBA3W": { "spawn_enabled": true }
+        "MARU3W": {
+          "spawn_enabled": true
+        },
+        "OBOK3W": {
+          "spawn_enabled": true
+        },
+        "TOBA3W": {
+          "spawn_enabled": true
+        }
       }
     },
     "07C": {
       "sids": {
-        "MARU6E": { "spawn_enabled": true },
-        "OBOK2E": { "spawn_enabled": true },
-        "TOBA2D": { "spawn_enabled": true }
+        "MARU6E": {
+          "spawn_enabled": true
+        },
+        "OBOK2E": {
+          "spawn_enabled": true
+        },
+        "TOBA2D": {
+          "spawn_enabled": true
+        }
       }
     },
     "18": {
       "sids": {
-        "ANEK2L": { "spawn_enabled": true },
-        "CIND8S": { "spawn_enabled": true },
-        "SOBR2L": { "spawn_enabled": true }
+        "ANEK2L": {
+          "spawn_enabled": true
+        },
+        "CIND8S": {
+          "spawn_enabled": true
+        },
+        "SOBR2L": {
+          "spawn_enabled": true
+        }
       }
     }
   },
   "configs": {
     "25": {
       "sids": {
-        "SULU4D": { "spawn_enabled": true }
+        "SULU4D": {
+          "spawn_enabled": true
+        }
       },
       "stars": {
-        "DIXA1A": { "spawn_enabled": true },
-        "IMCO1A": { "spawn_enabled": true },
-        "DEBH1B": { "spawn_enabled": true },
-        "EMPA5B": { "spawn_enabled": true },
-        "KERA5A": { "spawn_enabled": true },
-        "RASV1A": { "spawn_enabled": true },
-        "ROLI5A": { "spawn_enabled": true }
+        "DIXA1A": {
+          "spawn_enabled": true
+        },
+        "IMCO1A": {
+          "spawn_enabled": true
+        },
+        "DEBH1B": {
+          "spawn_enabled": true
+        },
+        "EMPA5B": {
+          "spawn_enabled": true
+        },
+        "KERA5A": {
+          "spawn_enabled": true
+        },
+        "RASV1A": {
+          "spawn_enabled": true
+        },
+        "ROLI5A": {
+          "spawn_enabled": true
+        }
       }
     },
     "07": {
       "sids": {
-        "SULU7S": { "spawn_enabled": true }
+        "SULU7S": {
+          "spawn_enabled": true
+        }
       },
       "stars": {
-        "DIXA1D": { "spawn_enabled": true },
-        "IMCO1D": { "spawn_enabled": true },
-        "DEBH1C": { "spawn_enabled": true },
-        "EMPA5C": { "spawn_enabled": true },
-        "KERA5D": { "spawn_enabled": true },
-        "RASV1D": { "spawn_enabled": true },
-        "ROLI5D": { "spawn_enabled": true }
+        "DIXA1D": {
+          "spawn_enabled": true
+        },
+        "IMCO1D": {
+          "spawn_enabled": true
+        },
+        "DEBH1C": {
+          "spawn_enabled": true
+        },
+        "EMPA5C": {
+          "spawn_enabled": true
+        },
+        "KERA5D": {
+          "spawn_enabled": true
+        },
+        "RASV1D": {
+          "spawn_enabled": true
+        },
+        "ROLI5D": {
+          "spawn_enabled": true
+        }
+      }
+    }
+  },
+  "airac_overrides": {
+    "bundled": {
+      "airport": "EDDF",
+      "schema_version": 1,
+      "defaults": {
+        "spawn_enabled": false
+      },
+      "stars": {},
+      "sids": {},
+      "iaps": {},
+      "runways": {
+        "25C": {
+          "sids": {
+            "MARUN.W": {
+              "spawn_enabled": true
+            },
+            "OBOKA.W": {
+              "spawn_enabled": true
+            },
+            "TOBAK.W": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "07C": {
+          "sids": {
+            "MARUN.E": {
+              "spawn_enabled": true
+            },
+            "OBOKA.E": {
+              "spawn_enabled": true
+            },
+            "TOBAK.D": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "18": {
+          "sids": {
+            "ANEKI.L": {
+              "spawn_enabled": true
+            },
+            "CINDY.S": {
+              "spawn_enabled": true
+            },
+            "SOBRA.L": {
+              "spawn_enabled": true
+            }
+          }
+        }
+      },
+      "configs": {
+        "25": {
+          "stars": {
+            "DIXAT.A": {
+              "spawn_enabled": true
+            },
+            "IMCOM.A": {
+              "spawn_enabled": true
+            },
+            "DEBHI.B": {
+              "spawn_enabled": true
+            },
+            "EMPAX.B": {
+              "spawn_enabled": true
+            },
+            "KERAX.A": {
+              "spawn_enabled": true
+            },
+            "RASVO.A": {
+              "spawn_enabled": true
+            },
+            "ROLIS.A": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "07": {
+          "sids": {
+            "SULUS.S": {
+              "spawn_enabled": true
+            }
+          },
+          "stars": {
+            "DIXAT.D": {
+              "spawn_enabled": true
+            },
+            "IMCOM.D": {
+              "spawn_enabled": true
+            },
+            "DEBHI.C": {
+              "spawn_enabled": true
+            },
+            "EMPAX.C": {
+              "spawn_enabled": true
+            },
+            "KERAX.D": {
+              "spawn_enabled": true
+            },
+            "RASVO.D": {
+              "spawn_enabled": true
+            },
+            "ROLIS.D": {
+              "spawn_enabled": true
+            }
+          }
+        }
+      }
+    },
+    "latest": {
+      "airport": "EDDF",
+      "schema_version": 1,
+      "defaults": {
+        "spawn_enabled": false
+      },
+      "stars": {},
+      "sids": {},
+      "iaps": {},
+      "runways": {
+        "25C": {
+          "sids": {
+            "MARUN.W": {
+              "spawn_enabled": true
+            },
+            "OBOKA.W": {
+              "spawn_enabled": true
+            },
+            "TOBAK.W": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "07C": {
+          "sids": {
+            "MARUN.E": {
+              "spawn_enabled": true
+            },
+            "OBOKA.E": {
+              "spawn_enabled": true
+            },
+            "TOBAK.D": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "18": {
+          "sids": {
+            "ANEKI.L": {
+              "spawn_enabled": true
+            },
+            "CINDY.S": {
+              "spawn_enabled": true
+            },
+            "SOBRA.L": {
+              "spawn_enabled": true
+            }
+          }
+        }
+      },
+      "configs": {
+        "25": {
+          "stars": {
+            "DIXAT.A": {
+              "spawn_enabled": true
+            },
+            "IMCOM.A": {
+              "spawn_enabled": true
+            },
+            "DEBHI.B": {
+              "spawn_enabled": true
+            },
+            "EMPAX.B": {
+              "spawn_enabled": true
+            },
+            "KERAX.A": {
+              "spawn_enabled": true
+            },
+            "RASVO.A": {
+              "spawn_enabled": true
+            },
+            "ROLIS.A": {
+              "spawn_enabled": true
+            }
+          }
+        },
+        "07": {
+          "sids": {
+            "SULUS.S": {
+              "spawn_enabled": true
+            }
+          },
+          "stars": {
+            "DIXAT.D": {
+              "spawn_enabled": true
+            },
+            "IMCOM.D": {
+              "spawn_enabled": true
+            },
+            "DEBHI.C": {
+              "spawn_enabled": true
+            },
+            "EMPAX.C": {
+              "spawn_enabled": true
+            },
+            "KERAX.D": {
+              "spawn_enabled": true
+            },
+            "RASVO.D": {
+              "spawn_enabled": true
+            },
+            "ROLIS.D": {
+              "spawn_enabled": true
+            }
+          }
+        }
       }
     }
   }
