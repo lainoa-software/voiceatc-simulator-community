@@ -316,6 +316,12 @@
             },
             "TUTOV.D": {
               "spawn_enabled": true
+            },
+            "SPESA.D": {
+              "spawn_enabled": true,
+              "join_from": [
+                "MAMBU"
+              ]
             }
           }
         }
