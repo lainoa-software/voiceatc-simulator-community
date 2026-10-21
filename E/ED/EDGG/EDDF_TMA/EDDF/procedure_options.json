@@ -158,6 +158,9 @@
             },
             "SOBRA.L": {
               "spawn_enabled": true
+            },
+            "SULUS.S": {
+              "spawn_enabled": true
             }
           }
         }
@@ -189,11 +192,6 @@
           }
         },
         "07": {
-          "sids": {
-            "SULUS.S": {
-              "spawn_enabled": true
-            }
-          },
           "stars": {
             "DIXAT.D": {
               "spawn_enabled": true
@@ -266,6 +264,9 @@
             },
             "SOBRA.L": {
               "spawn_enabled": true
+            },
+            "SULUS.S": {
+              "spawn_enabled": true
             }
           }
         }
@@ -274,9 +275,6 @@
         "25": {
           "stars": {
             "DIXAT.A": {
-              "spawn_enabled": true
-            },
-            "IMCOM.A": {
               "spawn_enabled": true
             },
             "DEBHI.B": {
@@ -288,25 +286,20 @@
             "KERAX.A": {
               "spawn_enabled": true
             },
-            "RASVO.A": {
+            "ROLIS.A": {
               "spawn_enabled": true
             },
-            "ROLIS.A": {
+            "TUTOV.A": {
+              "spawn_enabled": true
+            },
+            "MAMBU.A": {
               "spawn_enabled": true
             }
           }
         },
         "07": {
-          "sids": {
-            "SULUS.S": {
-              "spawn_enabled": true
-            }
-          },
           "stars": {
             "DIXAT.D": {
-              "spawn_enabled": true
-            },
-            "IMCOM.D": {
               "spawn_enabled": true
             },
             "DEBHI.C": {
@@ -318,10 +311,10 @@
             "KERAX.D": {
               "spawn_enabled": true
             },
-            "RASVO.D": {
+            "ROLIS.D": {
               "spawn_enabled": true
             },
-            "ROLIS.D": {
+            "TUTOV.D": {
               "spawn_enabled": true
             }
           }
