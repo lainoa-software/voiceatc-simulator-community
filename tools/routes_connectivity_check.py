@@ -12,6 +12,8 @@ from contextlib import closing
 from dataclasses import dataclass
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from coded_route_ends import CodedRouteEnds  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_ROUTES_PATH = ROOT / "ROUTES" / "routes.tsv"
@@ -499,11 +501,17 @@ def validate_routes(
     max_findings: int,
     airport_aliases: dict[str, str] | None = None,
     accept_approach_entries: bool = False,
+    reject_coded_route_ends: bool = False,
 ) -> ValidationSummary:
     """Validate contributed routes the way the game resolves them.
 
     ``accept_approach_entries`` (opt-in, for ``ROUTES/full/*`` overlays only) lets a route
     end at an approach transition's first fix as well as at a STAR entry.
+
+    ``reject_coded_route_ends`` (opt-in, set by the AIRAC migration) rejects a route whose
+    first fix is a coded SID end of the origin (``sid_exit_coded_point``) or whose last fix
+    is a coded STAR start of the destination (``star_entry_coded_point``); see
+    coded_route_ends.py. Player routes and the contribution gate leave it off.
 
     Navdata is the authority: the game expands a contributed route by name against
     tbl_er_enroute_airways, never against the compacted graph, which exists for
@@ -517,6 +525,14 @@ def validate_routes(
     # Navdata answers airway questions only when it actually carries the airway
     # table; a navdata file without it must not deprecate every airway hop.
     airway_source = navdata if navdata and navdata.airway_sequences else None
+    coded_ends = (
+        CodedRouteEnds(
+            navdata_db,
+            published=navdata.waypoints | navdata.vhfs | navdata.ndbs | navdata.terminal_ndbs,
+        )
+        if reject_coded_route_ends and navdata
+        else None
+    )
     errors: list[Finding] = []
     warnings: list[Finding] = []
 
@@ -628,16 +644,17 @@ def validate_routes(
                 if len(errors) >= max_findings:
                     break
 
+        last_fix = ""
+        for segment in reversed(segments):
+            if segment.to_token != row.dest:
+                continue
+            candidate = segment.from_token
+            if candidate not in {row.origin, row.dest}:
+                last_fix = candidate
+            break
+
         # STAR entry membership check — requires navdata with tbl_pe_stars
         if navdata and navdata.star_airports:
-            last_fix = ""
-            for segment in reversed(segments):
-                if segment.to_token != row.dest:
-                    continue
-                candidate = segment.from_token
-                if candidate not in {row.origin, row.dest}:
-                    last_fix = candidate
-                break
             if last_fix:
                 if not navdata.is_valid_star_entry_point(
                     row.dest, last_fix, accept_approach_entries=accept_approach_entries
@@ -648,6 +665,23 @@ def validate_routes(
                         f"{row.origin}->{row.dest}: last fix '{last_fix}' is not a published "
                         f"{entry_kind} for {row.dest} — possible proximity substitution",
                     ))
+
+        if coded_ends:
+            first_fix = segments[0].to_token if segments[0].to_token not in {row.origin, row.dest} else ""
+            origin = navdata.airport_aliases.get(row.origin, row.origin)
+            dest = navdata.airport_aliases.get(row.dest, row.dest)
+            if first_fix and coded_ends.is_coded_sid_end(origin, first_fix):
+                errors.append(Finding(
+                    row.line_number, "error", "sid_exit_coded_point",
+                    f"{row.origin}->{row.dest}: first fix '{first_fix}' is a coded SID end of "
+                    f"{row.origin}; start at a published SID point",
+                ))
+            if last_fix and coded_ends.is_coded_star_start(dest, last_fix):
+                errors.append(Finding(
+                    row.line_number, "error", "star_entry_coded_point",
+                    f"{row.origin}->{row.dest}: last fix '{last_fix}' is a coded STAR start of "
+                    f"{row.dest}; end at a published STAR point",
+                ))
 
         if len(errors) >= max_findings:
             break
@@ -677,6 +711,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help="Also accept an approach transition's first fix as the arrival end (ROUTES/full/* overlays only)",
     )
+    parser.add_argument(
+        "--reject-coded-route-ends",
+        action="store_true",
+        help="Reject a route starting at a coded SID end or ending at a coded STAR start (AIRAC migration rule)",
+    )
     return parser.parse_args(argv)
 
 
@@ -701,6 +740,7 @@ def main() -> int:
             max_findings=max(1, int(args.max_findings)),
             airport_aliases=load_airport_aliases(args.airport_aliases, airac),
             accept_approach_entries=bool(args.accept_approach_entries),
+            reject_coded_route_ends=bool(args.reject_coded_route_ends),
         )
     except Exception as exc:
         print(str(exc), file=sys.stderr)
