@@ -15,7 +15,7 @@ cumulative variants, most capable first: variant k is the base table with overla
 A build keeps the first entry it can use and otherwise reads the default manifest.
 
 Overlay format: the same header as ``routes.tsv`` (``airac <cycle>`` then the column
-line) and the same five columns. Contracts here carry no version keys.
+line) and the same columns, five or six with ``FL_WINDOW``. Contracts here carry no version keys.
 """
 from __future__ import annotations
 

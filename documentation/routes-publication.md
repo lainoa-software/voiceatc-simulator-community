@@ -49,7 +49,8 @@ Some generated routes only suit builds that have a capability. The first is
 generator files the arrival to an approach transition's first fix instead, and only builds
 that fly that fix as the clearance limit may receive it. Such rows never enter
 `routes.tsv`; they go in an overlay, `ROUTES/full/<id>.tsv`, that holds only the replacement
-rows (same header, `airac` and five columns as `routes.tsv`) and is gated in
+rows (same header, `airac` and columns as `routes.tsv`, so six once it carries
+`FL_WINDOW`) and is gated in
 `.voiceatc/gates.json` with `requires`.
 
 - `python tools/routes_full_feed.py --validate-only` checks the overlays (it runs in the
@@ -72,7 +73,7 @@ Contract, variants and the manifest shape: [`channel-gates.md`](channel-gates.md
 ## Generated-route evidence boundary
 
 The private generator may use licensed-planner comparisons to correct its
-`LainoaSoftware` base rows. Only the final accepted five-column Generated rows and
+`LainoaSoftware` base rows. Only the final accepted Generated rows (five columns, or six with `FL_WINDOW`) and
 their normal projection/release artifacts belong in this repository. Capture
 journals, written-authorization records, account details, source-record ids,
 inferred-policy files, exception proofs, and private conformance certificates must
