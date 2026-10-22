@@ -128,6 +128,26 @@ class VisualGoAroundManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "coordinates are required"):
                 MODULE.validate_go_around_schema(payload, path)
 
+    def test_final_leg_term_selects_the_terminal_policy(self) -> None:
+        cases = {
+            "CF": ("HOLD_AT_LAST_FIX", "REQUEST_INSTRUCTIONS"),
+            "AF": ("HOLD_AT_LAST_FIX", "REQUEST_INSTRUCTIONS"),
+            "RF": ("HOLD_AT_LAST_FIX", "REQUEST_INSTRUCTIONS"),
+            "VA": ("REQUEST_INSTRUCTIONS", "HOLD_AT_LAST_FIX"),
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            path = self._write(Path(temporary))
+            for term, (accepted, rejected) in cases.items():
+                with self.subTest(term=term):
+                    payload = json.loads(path.read_text(encoding="utf-8"))
+                    entry = payload["go_arounds"][0]
+                    entry["legs"][-1]["path_term"] = term
+                    entry["terminal_policy"] = accepted
+                    MODULE.validate_go_around_schema(payload, path)
+                    entry["terminal_policy"] = rejected
+                    with self.assertRaisesRegex(ValueError, "terminal_policy"):
+                        MODULE.validate_go_around_schema(payload, path)
+
     def test_rejects_reversed_windows_and_missing_provenance(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             path = self._write(Path(temporary))

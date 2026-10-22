@@ -185,7 +185,9 @@ is valid—the presence of the two keys, not a zero-value sentinel, determines
 whether a leg has coordinates.
 
 The final term determines the terminal policy. `HM` requires
-`HOLD_INDEFINITE`, `HF` requires `HOLD_ONCE`, and every other final term uses
+`HOLD_INDEFINITE`, `HF` requires `HOLD_ONCE`, and a fix-terminated or arc
+final leg (`CF`, `DF`, `TF`, `AF`, or `RF`) requires `HOLD_AT_LAST_FIX`, so the
+aircraft holds at that leg's fix. Every other final term uses
 `REQUEST_INSTRUCTIONS`. Never synthesize a hold when the chart ends on a
 course or manual terminator.
 
