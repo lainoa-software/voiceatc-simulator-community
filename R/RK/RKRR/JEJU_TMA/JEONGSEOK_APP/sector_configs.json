@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "JEONGSEOK",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKPD_APP"
+          ],
+          "frequency": "121.200"
+        }
+      ]
+    }
+  ]
+}

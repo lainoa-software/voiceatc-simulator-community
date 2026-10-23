@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "MANILA",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPLL_APP"
+          ],
+          "frequency": "119.900"
+        }
+      ]
+    }
+  ]
+}

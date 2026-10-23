@@ -1,6 +1,137 @@
 {
   "airport": "VHHH",
   "schema_version": 1,
-  "airac_min": 2503,
-  "defaults": { "spawn_enabled": true, "init_climb": 5000 }
+  "airac_min": 2610,
+  "defaults": {
+    "init_climb": 5000
+  },
+  "sids": {
+    "BEKO5A": {
+      "spawn_enabled": false
+    },
+    "BEKO1C": {
+      "spawn_enabled": false
+    },
+    "BEKO2E": {
+      "spawn_enabled": false
+    },
+    "DALO1A": {
+      "spawn_enabled": false
+    },
+    "DALO1C": {
+      "spawn_enabled": false
+    },
+    "DALO1E": {
+      "spawn_enabled": false
+    },
+    "LEKE1A": {
+      "spawn_enabled": false
+    },
+    "LEKE1C": {
+      "spawn_enabled": false
+    },
+    "LEKE1E": {
+      "spawn_enabled": false
+    },
+    "PECA3A": {
+      "spawn_enabled": false
+    },
+    "PECA1C": {
+      "spawn_enabled": false
+    },
+    "PECA2E": {
+      "spawn_enabled": false
+    },
+    "RAME1C": {
+      "spawn_enabled": false
+    },
+    "RAME1E": {
+      "spawn_enabled": false
+    },
+    "RAME2A": {
+      "spawn_enabled": false
+    },
+    "RUMS1D": {
+      "spawn_enabled": false
+    },
+    "RUMS1F": {
+      "spawn_enabled": false
+    },
+    "RUMS2B": {
+      "spawn_enabled": false
+    }
+  },
+  "configs": {
+    "07": {
+      "sids": {
+        "BEKO1Y": {
+          "spawn_enabled": false
+        },
+        "DALO1Y": {
+          "spawn_enabled": false
+        },
+        "LEKE1Y": {
+          "spawn_enabled": false
+        },
+        "PECA1Y": {
+          "spawn_enabled": false
+        },
+        "BEKO1X": {
+          "spawn_enabled": false
+        },
+        "LEKE1X": {
+          "spawn_enabled": false
+        }
+      }
+    },
+    "25": {
+      "sids": {
+        "BEKO1D": {
+          "spawn_enabled": false
+        },
+        "LEKE1D": {
+          "spawn_enabled": false
+        },
+        "DALO1B": {
+          "spawn_enabled": false
+        },
+        "PECA2B": {
+          "spawn_enabled": false
+        }
+      },
+      "stars": {
+        "ABEY2G": {
+          "spawn_enabled": false
+        },
+        "BETY2G": {
+          "spawn_enabled": false
+        },
+        "CANT2G": {
+          "spawn_enabled": false
+        },
+        "SIER2G": {
+          "spawn_enabled": false
+        }
+      }
+    },
+    "07C_ONLY": {
+      "sids": {
+        "ADLA1T": {
+          "spawn_enabled": false
+        },
+        "DUME1T": {
+          "spawn_enabled": false
+        },
+        "LARI1T": {
+          "spawn_enabled": false
+        },
+        "SOSL1T": {
+          "spawn_enabled": false
+        },
+        "XEME1T": {
+          "spawn_enabled": false
+        }
+      }
+    }
+  }
 }

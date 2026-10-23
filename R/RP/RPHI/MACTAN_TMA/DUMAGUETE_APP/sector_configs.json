@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "DUMAGUETE",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPVD_APP"
+          ],
+          "frequency": "124.700"
+        }
+      ]
+    }
+  ]
+}

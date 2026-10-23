@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "GIMPO",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKSS_APP"
+          ],
+          "frequency": "119.100"
+        }
+      ]
+    }
+  ]
+}

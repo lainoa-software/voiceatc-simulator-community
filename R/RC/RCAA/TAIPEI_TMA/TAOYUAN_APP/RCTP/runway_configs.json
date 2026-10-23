@@ -1,0 +1,17 @@
+{
+  "airport": "RCTP",
+  "runway_configs": [
+    {
+      "id": "05",
+      "name": "RWY 05L/05R",
+      "arr": "05L 05R",
+      "dep": "05L 05R"
+    },
+    {
+      "id": "23",
+      "name": "RWY 23L/23R",
+      "arr": "23L 23R",
+      "dep": "23L 23R"
+    }
+  ]
+}

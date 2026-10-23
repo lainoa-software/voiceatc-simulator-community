@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "TAICHUNG",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCMQ_APP"
+          ],
+          "frequency": "130.100"
+        }
+      ]
+    }
+  ]
+}

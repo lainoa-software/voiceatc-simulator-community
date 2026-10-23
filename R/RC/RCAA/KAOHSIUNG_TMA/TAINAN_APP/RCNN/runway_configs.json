@@ -1,0 +1,17 @@
+{
+  "airport": "RCNN",
+  "runway_configs": [
+    {
+      "id": "18L",
+      "name": "RWY 18L",
+      "arr": "18L",
+      "dep": "18L"
+    },
+    {
+      "id": "36R",
+      "name": "RWY 36R",
+      "arr": "36R",
+      "dep": "36R"
+    }
+  ]
+}

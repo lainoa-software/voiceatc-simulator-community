@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "BEIGAN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCFG_APP"
+          ],
+          "frequency": "121.000"
+        }
+      ]
+    }
+  ]
+}

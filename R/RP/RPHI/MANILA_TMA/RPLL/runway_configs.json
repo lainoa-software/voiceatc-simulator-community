@@ -1,0 +1,29 @@
+{
+  "airport": "RPLL",
+  "runway_configs": [
+    {
+      "id": "06",
+      "name": "RWY 06",
+      "arr": "06",
+      "dep": "06"
+    },
+    {
+      "id": "24",
+      "name": "RWY 24",
+      "arr": "24",
+      "dep": "24"
+    },
+    {
+      "id": "06_13",
+      "name": "RWY 06 + RWY 13 DEP (CODE C AND BELOW)",
+      "arr": "06",
+      "dep": "06 13"
+    },
+    {
+      "id": "24_13",
+      "name": "RWY 24 + RWY 13 DEP (CODE C AND BELOW)",
+      "arr": "24",
+      "dep": "24 13"
+    }
+  ]
+}

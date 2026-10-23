@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "POHANG",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKTH_APP"
+          ],
+          "frequency": "124.250"
+        }
+      ]
+    }
+  ]
+}

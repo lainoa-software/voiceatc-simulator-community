@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "CHIAYI",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCKU_APP"
+          ],
+          "frequency": "120.600"
+        }
+      ]
+    }
+  ]
+}

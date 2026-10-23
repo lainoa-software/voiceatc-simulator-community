@@ -1,0 +1,10 @@
+{
+  "airport": "RKJJ",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "sids": {
+    "KWA5": {
+      "init_climb": 8000
+    }
+  }
+}

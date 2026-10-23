@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "YEOSU",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKJY_APP"
+          ],
+          "frequency": "135.400"
+        }
+      ]
+    }
+  ]
+}

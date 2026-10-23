@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "SONGSHAN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCSS_APP"
+          ],
+          "frequency": "119.700"
+        }
+      ]
+    }
+  ]
+}
