@@ -1,0 +1,144 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDB_N_APP_06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN3"],
+          "frequency": "119.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_N_APP_24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN2"],
+          "frequency": "119.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_S_APP_06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAS1", "DBAS3", "DBAS4"],
+          "frequency": "126.425"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_S_APP_24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAS1", "DBAS2"],
+          "frequency": "126.425"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_N_DEP_06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDN1-06", "DBDN2-06"],
+          "frequency": "120.340"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_N_DEP_24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDN1-24", "DBDN2-24"],
+          "frequency": "120.340"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_S_DEP_06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDS1-06", "DBDS2-06", "DBDS3-06"],
+          "frequency": "120.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_S_DEP_24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDS1-24", "DBDS2-24"],
+          "frequency": "120.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_FULL_APP-06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN3", "DBAS1", "DBAS3", "DBAS4", "DBDN1-06", "DBDN2-06", "DBDS1-06", "DBDS2-06", "DBDS3-06"],
+          "frequency": "119.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_FULL_APP-24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN2", "DBAS1", "DBAS2", "DBDN1-24", "DBDN2-24", "DBDS1-24", "DBDS2-24"],
+          "frequency": "119.630"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_A_APP-06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN3", "DBAS3", "DBAS4", "DBAS1"],
+          "frequency": "121.130" 
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_A_APP-24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBAN1", "DBAN2", "DBAS2", "DBAS1"],
+          "frequency": "121.130" 
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_DEP-06",
+      "runway_configs": ["06"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDN1-06", "DBDN2-06", "DBDS1-06", "DBDS2-06", "DBDS3-06"],
+          "frequency": "120.340"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDB_DEP-24",
+      "runway_configs": ["24"],
+      "sectors": [
+        {
+          "sector_ids": ["DBDN1-24", "DBDN2-24", "DBDS1-24", "DBDS2-24"],
+          "frequency": "120.340"
+        }
+      ]
+    }
+  ]
+}
