@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "GUNSAN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKJK_APP"
+          ],
+          "frequency": "124.100"
+        }
+      ]
+    }
+  ]
+}

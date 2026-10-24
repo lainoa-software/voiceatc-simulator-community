@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "KINMEN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCBS_APP"
+          ],
+          "frequency": "124.600"
+        }
+      ]
+    }
+  ]
+}

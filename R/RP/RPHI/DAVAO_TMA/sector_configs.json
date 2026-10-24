@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "DAVAO",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPMD_APP"
+          ],
+          "frequency": "122.400"
+        }
+      ]
+    }
+  ]
+}

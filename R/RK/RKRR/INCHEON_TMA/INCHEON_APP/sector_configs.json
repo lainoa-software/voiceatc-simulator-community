@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "INCHEON",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKSI_APP"
+          ],
+          "frequency": "119.750"
+        }
+      ]
+    }
+  ]
+}

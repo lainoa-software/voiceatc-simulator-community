@@ -1,0 +1,23 @@
+{
+  "airport": "RKPC",
+  "runway_configs": [
+    {
+      "id": "07",
+      "name": "RWY 07",
+      "arr": "07",
+      "dep": "07"
+    },
+    {
+      "id": "25",
+      "name": "RWY 25",
+      "arr": "25",
+      "dep": "25"
+    },
+    {
+      "id": "25_31",
+      "name": "RWY 25 + RWY 31 DEP (WINTER, WINGSPAN <36M)",
+      "arr": "25",
+      "dep": "25 31"
+    }
+  ]
+}

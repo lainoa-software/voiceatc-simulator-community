@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "RCYU_APP",
+      "airports": [
+        "RCYU"
+      ]
+    }
+  ]
+}

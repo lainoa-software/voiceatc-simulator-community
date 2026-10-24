@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "JEJU",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKPC_APP"
+          ],
+          "frequency": "121.200"
+        }
+      ]
+    }
+  ]
+}

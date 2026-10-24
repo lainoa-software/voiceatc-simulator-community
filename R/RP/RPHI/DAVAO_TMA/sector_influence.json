@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "RPMD_APP",
+      "airports": [
+        "RPMD"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "GWANGJU",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKJJ_APP"
+          ],
+          "frequency": "130.000"
+        }
+      ]
+    }
+  ]
+}

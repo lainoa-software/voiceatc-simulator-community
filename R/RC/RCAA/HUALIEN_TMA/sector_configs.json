@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "HUALIEN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RCYU_APP"
+          ],
+          "frequency": "124.000"
+        }
+      ]
+    }
+  ]
+}

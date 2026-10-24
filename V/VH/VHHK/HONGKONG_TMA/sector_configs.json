@@ -1,0 +1,25 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "HONGKONG",
+      "runway_configs": [
+        "07",
+        "25",
+        "07_SEG",
+        "25_SEG",
+        "07L_ONLY",
+        "07C_ONLY",
+        "25R_ONLY",
+        "25C_ONLY"
+      ],
+      "sectors": [
+        {
+          "sector_ids": [
+            "VHHH_APP"
+          ],
+          "frequency": "119.100"
+        }
+      ]
+    }
+  ]
+}

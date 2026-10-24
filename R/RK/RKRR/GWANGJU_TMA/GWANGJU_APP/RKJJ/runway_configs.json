@@ -1,0 +1,17 @@
+{
+  "airport": "RKJJ",
+  "runway_configs": [
+    {
+      "id": "04",
+      "name": "RWY 04R",
+      "arr": "04R",
+      "dep": "04R"
+    },
+    {
+      "id": "22",
+      "name": "RWY 22L",
+      "arr": "22L",
+      "dep": "22L"
+    }
+  ]
+}

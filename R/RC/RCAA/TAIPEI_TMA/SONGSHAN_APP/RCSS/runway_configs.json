@@ -1,0 +1,17 @@
+{
+  "airport": "RCSS",
+  "runway_configs": [
+    {
+      "id": "10",
+      "name": "RWY 10",
+      "arr": "10",
+      "dep": "10"
+    },
+    {
+      "id": "28",
+      "name": "RWY 28",
+      "arr": "28",
+      "dep": "28"
+    }
+  ]
+}

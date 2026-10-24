@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "RPVR_APP",
+      "airports": [
+        "RPVR"
+      ]
+    }
+  ]
+}

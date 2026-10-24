@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "CATICLAN",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPVE_APP"
+          ],
+          "frequency": "120.400"
+        }
+      ]
+    }
+  ]
+}

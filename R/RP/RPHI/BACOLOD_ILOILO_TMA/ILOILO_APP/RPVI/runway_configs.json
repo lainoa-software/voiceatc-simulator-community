@@ -1,0 +1,17 @@
+{
+  "airport": "RPVI",
+  "runway_configs": [
+    {
+      "id": "02",
+      "name": "RWY 02",
+      "arr": "02",
+      "dep": "02"
+    },
+    {
+      "id": "20",
+      "name": "RWY 20",
+      "arr": "20",
+      "dep": "20"
+    }
+  ]
+}

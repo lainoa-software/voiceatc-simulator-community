@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "GANGNEUNG",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKNY_APP"
+          ],
+          "frequency": "124.600"
+        }
+      ]
+    }
+  ]
+}
