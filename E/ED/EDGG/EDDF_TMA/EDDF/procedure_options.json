@@ -19,6 +19,15 @@
         },
         "TOBA3W": {
           "spawn_enabled": true
+        },
+        "MARU4W": {
+          "spawn_enabled": true
+        },
+        "OBOK4W": {
+          "spawn_enabled": true
+        },
+        "TOBA4W": {
+          "spawn_enabled": true
         }
       }
     },
@@ -32,6 +41,15 @@
         },
         "TOBA2D": {
           "spawn_enabled": true
+        },
+        "MARU5E": {
+          "spawn_enabled": true
+        },
+        "OBOK1E": {
+          "spawn_enabled": true
+        },
+        "TOBA1D": {
+          "spawn_enabled": true
         }
       }
     },
@@ -44,6 +62,18 @@
           "spawn_enabled": true
         },
         "SOBR2L": {
+          "spawn_enabled": true
+        },
+        "ANEK3L": {
+          "spawn_enabled": true
+        },
+        "CIND7S": {
+          "spawn_enabled": true
+        },
+        "SOBR3L": {
+          "spawn_enabled": true
+        },
+        "SULU6S": {
           "spawn_enabled": true
         }
       }
@@ -77,6 +107,27 @@
         },
         "ROLI5A": {
           "spawn_enabled": true
+        },
+        "DIXA2A": {
+          "spawn_enabled": true
+        },
+        "DEBH2B": {
+          "spawn_enabled": true
+        },
+        "EMPA6B": {
+          "spawn_enabled": true
+        },
+        "KERA6A": {
+          "spawn_enabled": true
+        },
+        "ROLI6A": {
+          "spawn_enabled": true
+        },
+        "TUTO1A": {
+          "spawn_enabled": true
+        },
+        "MAMB2A": {
+          "spawn_enabled": true
         }
       }
     },
@@ -107,6 +158,28 @@
         },
         "ROLI5D": {
           "spawn_enabled": true
+        },
+        "DIXA2D": {
+          "spawn_enabled": true
+        },
+        "DEBH2C": {
+          "spawn_enabled": true
+        },
+        "EMPA6C": {
+          "spawn_enabled": true
+        },
+        "KERA6D": {
+          "spawn_enabled": true
+        },
+        "ROLI6D": {
+          "spawn_enabled": true
+        },
+        "TUTO1D": {
+          "spawn_enabled": true
+        },
+        "SPES6D": {
+          "spawn_enabled": true,
+          "join_from": ["MAMBU"]
         }
       }
     }
