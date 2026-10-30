@@ -1,5 +1,5 @@
 {
-  "airport_count": 179,
+  "airport_count": 180,
   "airports": {
     "EBBR": {
       "repo_path": "E/EB/EBBU/BRUSSELS_TMA/EBBR/runway_configs.json",
@@ -661,6 +661,11 @@
       "sha256": "95d3160e657c69becab014ba829379b7dc935233d003a891220073fc92da9afe",
       "size_bytes": 269
     },
+    "LHBP": {
+      "repo_path": "L/LH/LHCC/BUDAPEST_TMA/LHBP/runway_configs.json",
+      "sha256": "1d1cf3848060b9e556bbfa2143ac15c6c419277361852be7fda52b5b33b6b1af",
+      "size_bytes": 270
+    },
     "LIMC": {
       "repo_path": "L/LI/LIMM/MILAN_TMA/LIMC/runway_configs.json",
       "sha256": "58666385bf38a2abb5aae824bb83e35575e1ea0b0818ba12fed6a44ed7f97c59",
@@ -898,12 +903,12 @@
     }
   },
   "asset_name": "runway-configs-2610.zip",
-  "commit_sha": "6d572699b602630a2770714f3cf51214b5960fe0",
+  "commit_sha": "794541cc8f5ffe9d1aaa06e9b4003e7cbb28a7ae",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-30/runway-configs-2610.zip",
-  "published_at": "2026-10-30T07:04:01Z",
+  "published_at": "2026-10-30T14:10:56Z",
   "release_tag": "daily-2026-10-30",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "5e1906a16554e07668c7d0b3fdf0a6fdd1d5be8e207927a15798dfdfdf4c4236",
-  "size_bytes": 55496
+  "sha256": "8c23d89d5bf58ebfbba22f48feb634c14be4ce9bfde02c58c3f0bb0db7daaa16",
+  "size_bytes": 55805
 }
