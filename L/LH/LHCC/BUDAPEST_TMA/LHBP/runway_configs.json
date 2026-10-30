@@ -1,0 +1,17 @@
+{
+  "airport": "LHBP",
+  "runway_configs": [
+    {
+      "id": "NORTH_FLOW",
+      "name": "North Flow",
+      "arr": "31L 31R",
+      "dep": "31L"
+    },
+    {
+      "id": "SOUTH_FLOW",
+      "name": "South Flow",
+      "arr": "13R",
+      "dep": "13L 13R"
+    }
+  ]
+}
