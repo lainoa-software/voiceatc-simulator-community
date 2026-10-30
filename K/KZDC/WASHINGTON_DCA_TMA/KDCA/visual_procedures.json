@@ -5,16 +5,19 @@
     {
       "id": "MOUNT_VERNON_VISUAL_01",
       "name": "Mount Vernon Visual RWY 01",
-      "aliases": ["mount vernon visual", "mount vernon"],
+      "aliases": [
+        "mount vernon visual",
+        "mount vernon"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
         "authority": "FAA",
         "chart_title": "MOUNT VERNON VISUAL RWY 01",
         "url": "https://aeronav.faa.gov/d-tpp/2608/00443MOUNTVERNON_VIS1.PDF",
+        "checked_date": "2026-08-24",
         "effective_date": "2026-08-06",
-        "airac": "2608",
-        "checked_date": "2026-08-24"
+        "airac": "2608"
       },
       "variants": [
         {
@@ -26,7 +29,9 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": ["river"],
+            "aliases": [
+              "river"
+            ],
             "scope": "route"
           },
           "legs": [
@@ -34,9 +39,9 @@
               "id": "KATRN",
               "name": "KATRN (I-DCA 10.7 DME)",
               "path_term": "CF",
+              "fly_over": true,
               "latitude": 38.6816388889,
               "longitude": -77.0206583333,
-              "fly_over": true,
               "course_deg": 5,
               "reference": "DCA R-185 inbound",
               "altitude": {
@@ -49,17 +54,17 @@
               "id": "MOUNT_VERNON_ABEAM_TRACE",
               "name": "Mount Vernon abeam / Potomac River (chart-traced)",
               "path_term": "TF",
+              "fly_over": false,
               "latitude": 38.721,
-              "longitude": -77.06,
-              "fly_over": false
+              "longitude": -77.06
             },
             {
               "id": "BADDN",
               "name": "BADDN (I-DCA 5.9 DME)",
               "path_term": "TF",
-              "latitude": 38.7614027778,
-              "longitude": -77.0286722222,
               "fly_over": true,
+              "latitude": 38.7744578126,
+              "longitude": -77.0263256693,
               "altitude": {
                 "value_ft": 1600,
                 "status": "recommended",
@@ -76,16 +81,19 @@
     {
       "id": "RIVER_VISUAL_19",
       "name": "River Visual RWY 19",
-      "aliases": ["river visual", "river visual nineteen"],
+      "aliases": [
+        "river visual",
+        "river visual nineteen"
+      ],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
         "authority": "FAA",
         "chart_title": "RIVER VISUAL RWY 19",
         "url": "https://aeronav.faa.gov/d-tpp/2608/00443RIVER_VIS19.PDF",
+        "checked_date": "2026-08-24",
         "effective_date": "2026-08-06",
-        "airac": "2608",
-        "checked_date": "2026-08-24"
+        "airac": "2608"
       },
       "variants": [
         {
@@ -97,7 +105,9 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": ["river"],
+            "aliases": [
+              "river"
+            ],
             "scope": "route"
           },
           "legs": [
@@ -105,9 +115,9 @@
               "id": "AMERICAN_LEGION_DAVID_TAYLOR_TRACE",
               "name": "American Legion Memorial Bridge / David W. Taylor area (chart-traced)",
               "path_term": "TF",
+              "fly_over": false,
               "latitude": 38.982,
               "longitude": -77.17,
-              "fly_over": false,
               "altitude": {
                 "value_ft": 3000,
                 "status": "recommended",
@@ -118,17 +128,17 @@
               "id": "DARIC",
               "name": "DARIC",
               "path_term": "TF",
+              "fly_over": false,
               "latitude": 38.9650138889,
-              "longitude": -77.1531888889,
-              "fly_over": false
+              "longitude": -77.1531888889
             },
             {
               "id": "CHAIN_BRIDGE_TRACE",
               "name": "Chain Bridge (chart-traced)",
               "path_term": "TF",
+              "fly_over": true,
               "latitude": 38.9299243354,
               "longitude": -77.1141640781,
-              "fly_over": true,
               "altitude": {
                 "value_ft": 1800,
                 "status": "recommended",
@@ -139,17 +149,17 @@
               "id": "GREYZ",
               "name": "GREYZ / river trace",
               "path_term": "TF",
+              "fly_over": false,
               "latitude": 38.9182,
-              "longitude": -77.1084055556,
-              "fly_over": false
+              "longitude": -77.1084055556
             },
             {
               "id": "RORRK",
               "name": "RORRK / river trace",
               "path_term": "TF",
+              "fly_over": true,
               "latitude": 38.9098472222,
               "longitude": -77.0988944444,
-              "fly_over": true,
               "altitude": {
                 "value_ft": 1500,
                 "status": "recommended",
@@ -160,9 +170,9 @@
               "id": "KEY_BRIDGE_TRACE",
               "name": "Key Bridge (chart-traced)",
               "path_term": "TF",
+              "fly_over": true,
               "latitude": 38.902830691,
               "longitude": -77.0697196772,
-              "fly_over": true,
               "altitude": {
                 "value_ft": 900,
                 "status": "recommended",
@@ -173,25 +183,25 @@
               "id": "ROOSEVELT_BRIDGE_TRACE",
               "name": "Theodore Roosevelt Bridge (chart-traced)",
               "path_term": "TF",
+              "fly_over": true,
               "latitude": 38.8926968089,
-              "longitude": -77.0577358494,
-              "fly_over": true
+              "longitude": -77.0577358494
             },
             {
               "id": "MEMORIAL_BRIDGE_TRACE",
               "name": "Arlington Memorial Bridge (chart-traced)",
               "path_term": "TF",
+              "fly_over": true,
               "latitude": 38.8873358946,
-              "longitude": -77.0553832781,
-              "fly_over": true
+              "longitude": -77.0553832781
             },
             {
               "id": "ROCHAMBEAU_BRIDGE_TRACE",
               "name": "Rochambeau Bridge (chart-traced)",
               "path_term": "TF",
+              "fly_over": false,
               "latitude": 38.8764601507,
-              "longitude": -77.0413292679,
-              "fly_over": false
+              "longitude": -77.0413292679
             }
           ],
           "final": {
