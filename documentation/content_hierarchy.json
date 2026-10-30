@@ -6,6 +6,11 @@
       "scope": "United States ARTCC and control-area assignments",
       "source": "https://www.faa.gov/air_traffic/flight_info/aeronav/Aero_Data/NASR_Subscription/"
     },
+    "navigraph_2503": {
+      "airac_cycle": "2503",
+      "scope": "Non-United States FIR and terminal assignments",
+      "source": "Navigraph AIRAC 2503"
+    },
     "navigraph_2607": {
       "airac_cycle": "2607",
       "scope": "Non-United States FIR and terminal assignments",
@@ -16,7 +21,20 @@
     "E": ["EB", "ED", "EF", "EG", "EH", "EI", "EK", "EN", "EP", "ES"],
     "G": ["GC"],
     "K": [],
-    "L": ["LC", "LE", "LF", "LG", "LI", "LL", "LO", "LP", "LR", "LS", "LT"],
+    "L": [
+      "LC",
+      "LE",
+      "LF",
+      "LG",
+      "LH",
+      "LI",
+      "LL",
+      "LO",
+      "LP",
+      "LR",
+      "LS",
+      "LT"
+    ],
     "O": ["OM"],
     "P": ["PA", "PG", "PH"],
     "R": ["RC", "RK", "RJ"],
@@ -98,6 +116,7 @@
     "LFMM": { "authority": "navigraph_2607", "kind": "fir" },
     "LFFF": { "authority": "navigraph_2607", "kind": "fir" },
     "LGGG": { "authority": "navigraph_2607", "kind": "fir" },
+    "LHCC": { "authority": "navigraph_2503", "kind": "fir" },
     "LIMM": { "authority": "navigraph_2607", "kind": "fir" },
     "LIRR": { "authority": "navigraph_2607", "kind": "fir" },
     "LLLL": { "authority": "navigraph_2607", "kind": "fir" },
@@ -271,6 +290,7 @@
     "L/LR/LRBB/BUCHAREST_TMA": ["LROP"],
     "L/LS/LSAS/ZURICH_TMA": ["LSZH"],
     "L/LT/LTBB/ISTANBUL_TMA": ["LTBA", "LTFJ", "LTFM"],
+    "L/LH/LHCC/BUDAPEST_TMA": ["LHBP"],
     "O/OM/OMAE/DUBAI_TERMINAL": ["OMDB", "OMDW", "OMSJ"],
     "P/PA/PAZA/ANCHORAGE_TMA": ["PANC"],
     "P/PH/PHZH/MAUI_TMA": ["PHOG"],
