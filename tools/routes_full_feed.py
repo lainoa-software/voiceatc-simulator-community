@@ -106,13 +106,14 @@ def load_overlays(root: Path = ROOT, gates: list[dict[str, object]] | None = Non
             problems.append(f"{repo_path}: its routes gate needs requires")
             continue
         airac, columns, rows = _split_table((root / repo_path).read_bytes(), repo_path)
-        if columns != base_columns:
+        # A stale overlay (another cycle) fails validate_feed and is skipped at release
+        # time, so neither its header nor its rows are held against this cycle's table:
+        # the rollover that makes it stale may also widen routes.tsv to FL_WINDOW.
+        stale = airac != base_airac
+        if not stale and columns != base_columns:
             problems.append(f"{repo_path}: column header {columns!r} differs from {BASE_PATH.as_posix()}")
             continue
         replacements: dict[tuple[str, str], str] = {}
-        # A stale overlay (another cycle) fails validate_feed and is skipped at release
-        # time, so its rows are not held against this cycle's pairs.
-        stale = airac != base_airac
         for line_number, (origin, dest, body, _) in enumerate(rows, start=3):
             if stale or not body.strip():
                 continue

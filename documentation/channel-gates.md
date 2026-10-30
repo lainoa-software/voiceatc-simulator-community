@@ -118,7 +118,9 @@ otherwise it reads the default routes manifest. The default tables, manifests, r
 and R2 mirror never change because of an overlay. At release time an overlay for another cycle
 is left out with a notice, in the release and in pull requests (`routes_full_feed.py --allow-stale`).
 An AIRAC rollover changes `routes.tsv` in one pull request and the overlays only later, so a
-strict check would block the automated cycle pull request (creator decision, 2026-10-09).
+strict check would block the automated cycle pull request (creator decision, 2026-10-09). The
+same rollover may widen `routes.tsv` to six columns, so a stale overlay's column header is not
+compared either (AIRAC 2611 was the first six-column table).
 Without `--allow-stale` the tool stays strict, for a local check.
 
 Before anything is published, `tools/stable_contract_guard.py` replays the stable 0.6.1.24

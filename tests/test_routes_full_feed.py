@@ -197,6 +197,22 @@ class OverlayValidationTests(unittest.TestCase):
         self.assertEqual([overlay["repo_path"] for overlay in overlays], ["ROUTES/full/starless_arrivals.tsv"])
         self.assertIn("starless_arrivals.tsv: airac 2601 differs", errors.getvalue())
 
+    def test_a_stale_five_column_overlay_passes_a_rollover_that_adds_fl_window(self) -> None:
+        # AIRAC 2611's rollover pull request was the first six-column routes.tsv while the
+        # 2610 overlays still had five columns.
+        import contextlib
+        import io
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_repo(root)
+            base = BASE_TSV.replace(COLUMNS, f"{COLUMNS}\tFL_WINDOW").replace("\r\n", "\t\r\n")
+            (root / "ROUTES" / "routes.tsv").write_bytes(base.encode("utf-8"))
+            starless_overlay(root, airac="2601")
+            with contextlib.redirect_stderr(io.StringIO()):
+                FEED.validate_feed(root, allow_stale=True)
+                self.assertEqual(FEED.build_variants(root), [])
+
     def test_allow_stale_still_rejects_a_broken_overlay(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
