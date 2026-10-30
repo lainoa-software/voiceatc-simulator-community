@@ -1,589 +1,595 @@
 {
   "current": {
-    "airac": "2610",
+    "airac": "2611",
     "deep_validation": true,
     "pairs": {
       "BIKF_ESSA": {
         "1e58e5cd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "CYVR_RKSI": {
         "3be16e86": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "CYYZ_RKSI": {
         "5c674c02": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EBBR_RKSI": {
         "fd06b867": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDF_LIPZ": {
         "36753612": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDF_RKSI": {
         "948a9e66": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDH_EDDM": {
         "17d0115f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDM_EDDH": {
         "7afb1f0e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDM_RKSI": {
         "1babfcf5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EDDP_RKSI": {
         "7a6621d5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EFHK_RKSI": {
         "68a6bb4e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EGLL_RKSI": {
         "b6d322a4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EHAM_RKSI": {
         "e1288fda": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EHBK_RKSI": {
         "d60bceb1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EKCH_RKSI": {
         "127b0d2f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ENGM_RKSI": {
         "a421527e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EPWA_RKSI": {
         "3a04cc60": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EPWR_RKSI": {
         "6c014be6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESGG_ESSA": {
         "d28052d8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_BIKF": {
         "ea112d55": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_ESGG": {
         "4dc4af1b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_HAAB": {
         "8384f0e8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_OMDB": {
         "51ea0d3a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_OTHH": {
         "25fe14be": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_RJTT": {
         "fbd9ee94": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_RKSI": {
         "9755b904": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_VTBS": {
         "ffc8ba5d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_ZBAA": {
         "4e648da4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ESSA_ZSPD": {
         "666e8b0d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "EVRA_LOWW": {
         "4fc250e2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "611d6aa5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "7a0d18a1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "7ab38f0e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "92f90a97": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "GCXO_LEZL": {
         "07384f7d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "HAAB_ESSA": {
         "c03a9038": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "HAAB_RKSI": {
         "12b54c6d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "HESH_UMKK": {
         "1cb8a7f4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KATL_RKSI": {
         "c97b3b63": {
-          "checked_airac": "2610",
-          "reasons": [],
-          "status": "ok"
+          "checked_airac": "2611",
+          "reasons": [
+            "point_missing: KATL->RKSI: point ARISE missing from navdata"
+          ],
+          "status": "deprecated"
         }
       },
       "KBOS_RKSI": {
         "5b2f2c14": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KCLE_KMKE": {
         "b32ec64a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KCVG_RKSI": {
         "c590e40b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KDFW_RKSI": {
         "721e3482": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KDTW_RKSI": {
         "6afae0be": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KEWR_RKSI": {
         "e972a243": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KIAD_RKSI": {
         "01a07f00": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KJFK_RKSI": {
         "87df4c0e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KLAS_RKSI": {
         "a7f10f0a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KLAX_RKSI": {
         "e3f76615": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KMSP_KMKE": {
         "9927acb2": {
-          "checked_airac": "2610",
-          "reasons": [],
-          "status": "ok"
+          "checked_airac": "2611",
+          "reasons": [
+            "point_missing: KMSP->KMKE: point LMFRY missing from navdata"
+          ],
+          "status": "deprecated"
         }
       },
       "KMSP_RKSI": {
         "5a1d613f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KORD_KMKE": {
         "2a2da2c0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KORD_RKSI": {
         "908ca750": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KSEA_RKSI": {
         "457b8dc7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KSFO_RKSI": {
         "2b9e514f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "KSLC_RKSI": {
         "cb049848": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LEBL_RKSI": {
         "51a2f79b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LEMD_LBSF": {
         "39d5b330": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LEMD_RKSI": {
         "9e908401": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LEMH_LEZL": {
         "a0516adf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LFPG_RKSI": {
         "4ba49916": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LHBP_RKSI": {
         "8ca83949": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LIMC_RKSI": {
         "909c0030": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LIRF_RKSI": {
         "eb594855": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LKPR_RKSI": {
         "af3bc9cc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LLBG_LLER": {
         "de7153d9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LOWW_RKSI": {
         "86c726e5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LPPT_RKSI": {
         "2effd796": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LSZH_RKSI": {
         "de213cfb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LSZH_VHHH": {
         "43847ec9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "d17a3ca0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LTAI_UMKK": {
         "059ce609": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "LTFM_RKSI": {
         "913b952a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "NZAA_RKSI": {
         "d15b211b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "OMAA_RKSI": {
         "0581853e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "OMDB_ESSA": {
         "3a2bfca2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "OMDB_RKSI": {
         "83e9ca43": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "OTHH_ESSA": {
         "0ee4ef2c": {
-          "checked_airac": "2610",
-          "reasons": [],
-          "status": "ok"
+          "checked_airac": "2611",
+          "reasons": [
+            "point_missing: OTHH->ESSA: point PEXAL missing from navdata"
+          ],
+          "status": "deprecated"
         }
       },
       "OTHH_RKSI": {
         "8c20ca46": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "PANC_RKSI": {
         "a5ac5008": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "PGSN_RKSI": {
         "1318ab1c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "PGUM_RKPK": {
         "b41fe77c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "PGUM_RKSI": {
         "0267c5ab": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "PHNL_PHTO": {
         "893a4c59": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [
             "point_missing: PHNL->PHTO: point MKK5 missing from navdata"
           ],
           "status": "deprecated"
         },
         "eee97bdc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [
             "point_missing: PHNL->PHTO: point DCT missing from navdata",
             "point_missing: PHNL->PHTO: point MKK5 missing from navdata",
@@ -592,7 +598,7 @@
           "status": "deprecated"
         },
         "f6eeb090": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [
             "point_missing: PHNL->PHTO: point LYCHI1 missing from navdata",
             "point_missing: PHNL->PHTO: point MKK5 missing from navdata"
@@ -602,2640 +608,2640 @@
       },
       "PHNL_RKSI": {
         "611ecabc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCKH_RKPC": {
         "932e8dbe": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCKH_RKPK": {
         "8253d36b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCKH_RKSI": {
         "220178cb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCKH_RKSS": {
         "fc150b34": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCMQ_RKPC": {
         "5654c0b4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCMQ_RKPK": {
         "1c124174": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCMQ_RKSI": {
         "9f30e5a0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCSS_RKSI": {
         "0a422d48": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCSS_RKSS": {
         "06941399": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCTP_RKPC": {
         "05a03f3b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCTP_RKPK": {
         "5a1798db": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCTP_RKSI": {
         "87570fd9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCTP_RKTU": {
         "e22d2c46": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RCYU_RKSI": {
         "d1528909": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAA_RKPC": {
         "5d3e126b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAA_RKPK": {
         "e8d8fa70": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAA_RKSI": {
         "1c1bdde4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAA_RKTU": {
         "d0b33de6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAH_RKSI": {
         "ab5fc63d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJAH_RKTU": {
         "6da00a6e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBB_RKPC": {
         "3057b3f4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBB_RKPK": {
         "d1a96147": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBB_RKSI": {
         "17dc7cd3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBB_RKSS": {
         "2f00bb0c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBB_RKTU": {
         "4126f9bb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJBE_RKSI": {
         "91a5b03e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJCC_RKPK": {
         "4dd44a2b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJCC_RKSI": {
         "c1e0df32": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJCC_RKTU": {
         "fdf36e23": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFF_RKPC": {
         "6edfc330": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFF_RKSI": {
         "628267cd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFF_RKTU": {
         "43e2cf49": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFK_RKSI": {
         "18c41d52": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFM_RKSI": {
         "3e65dcb0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFO_RKSI": {
         "d24e8a39": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFR_RKSI": {
         "fbbfdf04": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFR_RKTU": {
         "a59ab291": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFS_RKSI": {
         "5c465c22": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFT_RKPK": {
         "10eff672": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFT_RKSI": {
         "d12a2b86": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJFU_RKSI": {
         "f25754e8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJGG_RKPK": {
         "66c5bd53": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJGG_RKSI": {
         "e1826ad3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJGG_RKSS": {
         "f4797b5b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJGG_RKTU": {
         "4218d178": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJNK_RKSI": {
         "1b526770": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJNS_RKPK": {
         "e277ad79": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJNS_RKSI": {
         "234d7c8e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOA_RKSI": {
         "232a297f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOA_RKTU": {
         "7bde5e5f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOB_RKSI": {
         "bfb38e3a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOH_RKSI": {
         "5b840b97": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOM_RKPK": {
         "af828bee": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOM_RKSI": {
         "57fd87c6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOS_RKSI": {
         "4da3241a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOT_RKPK": {
         "9effefa9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJOT_RKSI": {
         "bcbe4269": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJSA_RKSI": {
         "43aee09f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJSN_RKSI": {
         "66f297d9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJSS_RKSI": {
         "0a8e993e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJTT_ESSA": {
         "ec2ee2a8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJTT_RKSI": {
         "7dc6cc78": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RJTT_RKSS": {
         "edce997a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKJJ_RKPC": {
         "3fd29297": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKJJ_RKSS": {
         "35f5548d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKJK_RKPC": {
         "d1364ee2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKJY_RKPC": {
         "89097a38": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKJY_RKSS": {
         "b0808c11": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKNW_RKPC": {
         "ae2d88cf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKNY_RKPC": {
         "3c854421": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RCKH": {
         "0bc9950f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RCMQ": {
         "9cdb7fd6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RCTP": {
         "fcf52646": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RJAA": {
         "174f3865": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RJBB": {
         "b7647d5d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RJFF": {
         "f943f9d1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKJJ": {
         "4449f7cf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKJK": {
         "3b5cf6ec": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKJY": {
         "54d0bc77": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKNW": {
         "bece44bd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKNY": {
         "a1bfee92": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKPK": {
         "f5431ccc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKPS": {
         "2c855b74": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKPU": {
         "60b3bced": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKSI": {
         "9834af70": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKSS": {
         "48569834": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKTH": {
         "17ceb091": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKTN": {
         "0a8930d1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_RKTU": {
         "596d044f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_VHHH": {
         "8f9b210e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_WSSS": {
         "34c45255": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZBAA": {
         "4991a3a2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZBAD": {
         "f9c4297d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZGGG": {
         "d4a43ae3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZGSZ": {
         "75726dd0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZSHC": {
         "4fcfae0f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZSNB": {
         "0436a280": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZSNJ": {
         "535acb87": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZSPD": {
         "0c8ce8b7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZSWX": {
         "f2346963": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPC_ZYTX": {
         "fa0c27cd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_PGUM": {
         "29066a64": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RCKH": {
         "a6ab97d0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RCMQ": {
         "d9afd23f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RCTP": {
         "e7cc2ef9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJAA": {
         "e16527dc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJBB": {
         "587b3e86": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJCC": {
         "0dadb218": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJFF": {
         "7f631eb8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJFT": {
         "110d657b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJGG": {
         "2bb1cc5d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJNS": {
         "34b42792": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJOM": {
         "fdf0124c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RJOT": {
         "63718079": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RKPC": {
         "07367265": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RKSI": {
         "156958b6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RKSS": {
         "6fbb039f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ROAH": {
         "9d711429": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RORS": {
         "6ce6ddb2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RPLC": {
         "803edd70": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RPLL": {
         "28b3d795": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RPSP": {
         "3fc8ad5c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_RPVM": {
         "37645487": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_UAAA": {
         "2a599d9f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VHHH": {
         "22b265ff": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VMMC": {
         "2ce9163a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VTBS": {
         "4175afa8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VTCC": {
         "de1ad33f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VVCR": {
         "ed69823b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VVDN": {
         "ab6a7a00": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VVNB": {
         "7df97763": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VVPQ": {
         "dc41a3db": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_VVTS": {
         "805e5147": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_WADD": {
         "bb62cec2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_WBKK": {
         "a65b2eff": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_WSSS": {
         "ca7d04aa": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZBAA": {
         "7719044a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZBHH": {
         "545474c0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZBSJ": {
         "65151f02": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZGDY": {
         "62054f6d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZLXY": {
         "682ebc48": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZMCK": {
         "e2a0359b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZSHC": {
         "d8523128": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZSNJ": {
         "b06d83c3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZSPD": {
         "c7186f3f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZSQD": {
         "56d5be4e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZYTX": {
         "45b7a585": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPK_ZYYJ": {
         "312ca579": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPS_RKPC": {
         "3d0380b8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPS_RKSS": {
         "217711bb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "e17f08bb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPU_RKPC": {
         "b6ad97a9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKPU_RKSS": {
         "8a0253a7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_CYVR": {
         "31b353cb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_CYYZ": {
         "19a8d738": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EDDF": {
         "1176bcd8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EDDM": {
         "bb3952f5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EFHK": {
         "8a857b49": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EGLL": {
         "c0d121cf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EHAM": {
         "30937dc2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EKCH": {
         "043dbabd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EPWA": {
         "f4a7a5c8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_EPWR": {
         "ff9bd62d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ESSA": {
         "63bc1b50": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_HAAB": {
         "1f8a702d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KATL": {
         "0a0a854d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KBOS": {
         "1e294c21": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KCVG": {
         "14442d2e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KDFW": {
         "b8510828": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KDTW": {
         "30fa9d82": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KEWR": {
         "640c8046": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KIAD": {
         "6f5f18fa": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KJFK": {
         "b9fd4fcf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KLAS": {
         "8d2f5667": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KLAX": {
         "78af57f5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KMSP": {
         "d16429f9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KORD": {
         "62c40214": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KSEA": {
         "c12ed9fc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KSFO": {
         "bf87fe4a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_KSLC": {
         "95f36e3f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LEBL": {
         "a9be92a3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LEMD": {
         "4cba3665": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LFPG": {
         "8cc901c6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LHBP": {
         "21c844b6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LIMC": {
         "e3c9ea12": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LIRF": {
         "4d372bb3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LKPR": {
         "eea2f3c7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LOWW": {
         "3a39c723": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LPPT": {
         "ceb78867": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_LTFM": {
         "536e7175": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_MMMX": {
         "387fa64f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_NZAA": {
         "0dda42ea": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_OMAA": {
         "57ccbbec": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_OMDB": {
         "9f28d2c1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_OTHH": {
         "213fe1fd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_PANC": {
         "1311c9cc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_PGSN": {
         "4b2b8422": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_PGUM": {
         "75b8d079": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_PHNL": {
         "bb9e946c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RCKH": {
         "bec060c2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RCMQ": {
         "619ab334": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RCSS": {
         "fcd6f795": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RCTP": {
         "17ca63f8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RCYU": {
         "4dc713e8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJAA": {
         "63e529e1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJAH": {
         "b82eb17b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJBB": {
         "0f6ac667": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJBE": {
         "672e2b5a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJCC": {
         "b27064f1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFF": {
         "1c55932a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFK": {
         "010ee0ea": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFM": {
         "6280f55a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFO": {
         "ac72eaab": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFR": {
         "dab5428b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFS": {
         "3addfe35": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFT": {
         "c7c3c631": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJFU": {
         "96c19f4c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJGG": {
         "bb338d2c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJNK": {
         "a3bcd92e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJNS": {
         "b4a17baf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOA": {
         "0705572a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOB": {
         "166fa11f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOH": {
         "3325cc25": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOM": {
         "b61abf63": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOS": {
         "b68bd8c2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJOT": {
         "d4fdff99": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJSA": {
         "7e3c8221": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJSN": {
         "00bedde9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJSS": {
         "bf3de0a5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RJTT": {
         "2d1f7d93": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RKPC": {
         "7a5f19cb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RKPK": {
         "b0d9e7d9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RKSS": {
         "6987cd63": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RKTN": {
         "706a9dcb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RKTU": {
         "2721a29f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ROAH": {
         "eaaa273c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ROIG": {
         "194f98ed": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RORS": {
         "8dc1d4ac": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RPLC": {
         "fd88b8bb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RPLL": {
         "c8cff27b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RPSP": {
         "edc5d265": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RPVK": {
         "772c07b8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_RPVM": {
         "d8abab3c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UAAA": {
         "f6de2591": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UACC": {
         "e57abc95": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UAII": {
         "3dbc6a6d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UBBB": {
         "0ea219fd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UCFM": {
         "40ddaec0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UTAA": {
         "6d4e4188": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_UZTT": {
         "6e161a75": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VCBI": {
         "c8a7e5bf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VDTI": {
         "33ecd080": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VHHH": {
         "eb446b1b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VIDP": {
         "260ed36e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VLVT": {
         "7268ef5e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VMMC": {
         "3ac073af": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VNKT": {
         "15bd0c0a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VTBD": {
         "777af2dd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VTBS": {
         "cee5ba30": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VTCC": {
         "00f1f811": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VTSP": {
         "73261029": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVCI": {
         "fa84fc62": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVCR": {
         "62804b74": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVDN": {
         "fe0fac9e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVNB": {
         "fd7f6a30": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVPQ": {
         "16c1f6e3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VVTS": {
         "4ea02a24": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_VYYY": {
         "c4e9a803": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WADD": {
         "58c06c57": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WAMM": {
         "2e366636": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WBKK": {
         "b75ceb78": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WIII": {
         "366c1413": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WMKK": {
         "1c58e926": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WMKP": {
         "46a2fa26": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_WSSS": {
         "64438522": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_YBBN": {
         "60ffd888": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_YSSY": {
         "3de4e86b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZBAA": {
         "0fea77f9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZBAD": {
         "2fd8e018": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZBSJ": {
         "fd502484": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZBTJ": {
         "e5aa3161": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZGDY": {
         "4e71ef5f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZGGG": {
         "87a5cc0f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZGHA": {
         "05564e30": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZGSZ": {
         "20524250": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZHCC": {
         "9343137f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZHEC": {
         "0741fc0a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZHHH": {
         "01a929e8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZJHK": {
         "a06c8105": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZJSY": {
         "2de50b6b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZLXY": {
         "f5f6942b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZMCK": {
         "30dab905": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZPPP": {
         "dd15ebeb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSAM": {
         "e5ce3617": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSFZ": {
         "fadd68d7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSHC": {
         "273dba99": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSJN": {
         "fb824017": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSNJ": {
         "71c9b8b0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSOF": {
         "f3b97b07": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSPD": {
         "52c88483": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSQD": {
         "12805412": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSWH": {
         "d9aca894": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSWX": {
         "0cccf66b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSWZ": {
         "377453d1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSYA": {
         "887b768a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSYN": {
         "d132fea2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZSYT": {
         "d34482ab": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZUCK": {
         "80db0b6b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZUTF": {
         "d6649090": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZUUU": {
         "a7b3a709": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYCC": {
         "7f2bdf3a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYHB": {
         "b2942108": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYJM": {
         "24b7e1de": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYTL": {
         "f574c947": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYTX": {
         "563f099a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSI_ZYYJ": {
         "344e45a4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RCKH": {
         "089acbee": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RCSS": {
         "5c5ad15c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RJBB": {
         "2fb50693": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RJGG": {
         "8b050f7a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RJTT": {
         "1d82d3c5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKJJ": {
         "551c6b46": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKJY": {
         "d8b2d2b1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKPC": {
         "add02cc6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKPK": {
         "bcc02002": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKPS": {
         "42121744": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "a591c164": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKPU": {
         "52447cb5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKSI": {
         "d2206d0e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_RKTH": {
         "f03257ce": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_ZBAA": {
         "b996cace": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_ZBAD": {
         "68b25518": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKSS_ZSSS": {
         "53a20ab3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTH_RKPC": {
         "bd6670d4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTH_RKSS": {
         "924eb2eb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTN_RKPC": {
         "d333b36f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTN_RKSI": {
         "d4f9a2a9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RCTP": {
         "361b6346": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJAA": {
         "87c72f7b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJAH": {
         "1b0c95b1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJBB": {
         "70f3c104": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJCC": {
         "81823f93": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJFF": {
         "858d0c08": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJFR": {
         "5edc7042": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJGG": {
         "4d42f20b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RJOA": {
         "dac130a5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RKPC": {
         "30fb7eb5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_ROAH": {
         "b575ea85": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_RPLC": {
         "980a2843": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_VVCR": {
         "be47d86c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_VVDN": {
         "1d591a46": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_WADD": {
         "9f7ac344": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RKTU_ZSQD": {
         "b15a1010": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ROAH_RKPK": {
         "58e6543e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ROAH_RKSI": {
         "de99deef": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ROAH_RKTU": {
         "02cd24ed": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ROIG_RKSI": {
         "62e8da03": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RORS_RKPK": {
         "65708afc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RORS_RKSI": {
         "b20d971a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPLC_RKPK": {
         "f137489a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPLC_RKSI": {
         "1edf8ec0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPLC_RKTU": {
         "3b1611a4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPLL_RKPK": {
         "f9bf540c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPLL_RKSI": {
         "e525f923": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPSP_RKPK": {
         "46ca1f55": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPSP_RKSI": {
         "d2b52b77": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPVK_RKSI": {
         "089ba7c4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPVM_RKPK": {
         "0acc0178": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "RPVM_RKSI": {
         "d0c0dae5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UAAA_RKPK": {
         "a4fab81f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UAAA_RKSI": {
         "397e865b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UACC_RKSI": {
         "a9080b9b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UAII_RKSI": {
         "b41c7feb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UBBB_RKSI": {
         "1f39e197": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UCFM_RKSI": {
         "19e2cb09": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UDYZ_UMKK": {
         "6b58b293": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "7fb63b8f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [
             "point_missing: UDYZ->UMKK: point T924 missing from navdata"
           ],
@@ -3244,1188 +3250,1188 @@
       },
       "ULAA_UMKK": {
         "a8c8f39e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ULLI_UMKK": {
         "e3af7eeb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ULMM_UMKK": {
         "609040e1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ULOO_UMKK": {
         "68a5df21": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ULPB_UMKK": {
         "36be8634": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ULWC_UMKK": {
         "6f3ee1ca": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_HESH": {
         "048ebc0e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_LTAI": {
         "8cb60faf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UDYZ": {
         "bc96afc2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULAA": {
         "e8407aa7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULLI": {
         "6e4661e5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULMM": {
         "9fa2d48b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULOO": {
         "5a2a06f3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULPB": {
         "bf5d3f02": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_ULWC": {
         "20dff338": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UMMS": {
         "b505d838": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UNNT": {
         "931c9785": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_URWW": {
         "0338e7b3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USCC": {
         "3857acfc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USII": {
         "36a1d92f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USKK": {
         "1b69edf1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USPP": {
         "be0cf380": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USSS": {
         "594634ee": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_USTR": {
         "0617c0c9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UUBC": {
         "65db43a1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UUBI": {
         "2ccadf94": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UUDD": {
         "96b5f915": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UUEE": {
         "435ca79a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UUWW": {
         "ea3f7f12": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UWGG": {
         "c2f7e802": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UWKD": {
         "e11df6b2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UWSG": {
         "4ae1425e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMKK_UWWW": {
         "c38b4773": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UMMS_UMKK": {
         "a2c219cb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UNNT_UMKK": {
         "9c09799a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "URWW_UMKK": {
         "f7225b44": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USCC_UMKK": {
         "ec5bb1a7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USII_UMKK": {
         "af2c5fd0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USKK_UMKK": {
         "bc361515": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USPP_UMKK": {
         "f1992e85": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USSS_UMKK": {
         "e1b8e6b6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "USTR_UMKK": {
         "b56c723a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UTAA_RKSI": {
         "e5ea62dd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UUBC_UMKK": {
         "4030fd93": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UUBI_UMKK": {
         "1fec2052": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UUDD_UMKK": {
         "1c9dbea8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         },
         "237e2aae": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UUEE_UMKK": {
         "5594cb9e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UUWW_UMKK": {
         "f96cd0eb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UWGG_UMKK": {
         "eca2d307": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UWKD_UMKK": {
         "185857c5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UWSG_UMKK": {
         "a0e8ca85": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UWUU_UMKK": {
         "7aca1e74": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UWWW_UMKK": {
         "205fc2bb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "UZTT_RKSI": {
         "52117dab": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VCBI_RKSI": {
         "485b3a5c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VDTI_RKSI": {
         "d99b6136": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VHHH_RKPC": {
         "3661c840": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VHHH_RKPK": {
         "3c894029": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VHHH_RKSI": {
         "f5227c3e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VIDP_RKSI": {
         "04274444": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VLVT_RKSI": {
         "916dc953": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VMMC_RKPK": {
         "4041160b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VMMC_RKSI": {
         "cd075ddb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VNKT_RKSI": {
         "f0280d79": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTBD_RKSI": {
         "56ceba3a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTBS_ESSA": {
         "30d663df": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTBS_RKPK": {
         "0656db2f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTBS_RKSI": {
         "a7997edd": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTCC_RKPK": {
         "4a7e1bf5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTCC_RKSI": {
         "bc7af0f0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTCC_VTBD": {
         "d738b9d7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTCL_VTBD": {
         "c2759ff6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTCT_VTBD": {
         "1ed88de9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTSP_RKSI": {
         "3fc9f776": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTSP_VTBD": {
         "d3108f4c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VTUD_VTBD": {
         "7d980b47": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVCI_RKSI": {
         "95a84389": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVCR_RKPK": {
         "7fbabca7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVCR_RKSI": {
         "b3f2d926": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVCR_RKTU": {
         "dd4fb96b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVDN_RKPK": {
         "5094b08c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVDN_RKSI": {
         "c415d31f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVDN_RKTU": {
         "d40d26f6": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVNB_RKPK": {
         "b24f2b19": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVNB_RKSI": {
         "fda0bb8e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVPQ_RKPK": {
         "e69fdc00": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVPQ_RKSI": {
         "85175afa": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVTS_RKPK": {
         "080dbe1b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VVTS_RKSI": {
         "1d34ad8c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "VYYY_RKSI": {
         "f7dfde0f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WADD_RKPK": {
         "0a01e009": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WADD_RKSI": {
         "3e440409": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WADD_RKTU": {
         "23015955": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WAMM_RKSI": {
         "dea2aec7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WBKK_RKPK": {
         "3d07b911": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WBKK_RKSI": {
         "7fcf7c10": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WIII_RKSI": {
         "fc882f0b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WMKK_RKSI": {
         "086015f0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WMKP_RKSI": {
         "16f9a4a3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WSSS_RKPC": {
         "76638567": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WSSS_RKPK": {
         "b58752e5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "WSSS_RKSI": {
         "4b572b85": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "YBBN_RKSI": {
         "cb716703": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "YSSY_RKSI": {
         "bc299822": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": ["airway_disconnect: YSSY->RKSI: RIC not on airway H530"],
           "status": "deprecated"
         }
       },
       "ZBAA_ESSA": {
         "f2b8da9b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAA_RKPC": {
         "bf829c46": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAA_RKPK": {
         "abe2c7b0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAA_RKSI": {
         "b007bb80": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAA_RKSS": {
         "573aff7d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAD_RKPC": {
         "a13ce87d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAD_RKSI": {
         "6e31fbac": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBAD_RKSS": {
         "39eb019c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBHH_RKPK": {
         "5a0889f7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBSJ_RKPK": {
         "aeb36034": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBSJ_RKSI": {
         "51ff0d7c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZBTJ_RKSI": {
         "2e1124ea": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGDY_RKPK": {
         "f9ce22a8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGDY_RKSI": {
         "5833ce29": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGGG_RKPC": {
         "09fb2fc5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGGG_RKSI": {
         "428450a8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGHA_RKSI": {
         "19ddf82f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGSZ_RKPC": {
         "8a498630": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZGSZ_RKSI": {
         "1dcdc29d": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZHCC_RKSI": {
         "8b4b546b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZHEC_RKSI": {
         "45bc9f9e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZHHH_RKSI": {
         "bfc6afca": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZJHK_RKSI": {
         "12a1cc80": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZJSY_RKSI": {
         "8ebe79bc": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZLXY_RKPK": {
         "cea20740": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZLXY_RKSI": {
         "c2a17f92": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZMCK_RKPK": {
         "2a23da00": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZMCK_RKSI": {
         "afd6cfb0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZPPP_RKSI": {
         "e60c77e4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSAM_RKSI": {
         "59b312f1": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSFZ_RKSI": {
         "c68dcffa": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSHC_RKPC": {
         "a17a5688": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSHC_RKPK": {
         "02e3eabf": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSHC_RKSI": {
         "7c617e58": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSJN_RKSI": {
         "c8f94a78": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSNB_RKPC": {
         "ebe7e9b4": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSNB_RKSI": {
         "9b5455b0": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSNJ_RKPC": {
         "16058d1a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSNJ_RKPK": {
         "d8e99511": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSNJ_RKSI": {
         "2f8a4d4a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSOF_RKSI": {
         "ad0f34b8": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSPD_ESSA": {
         "c13a6931": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSPD_RKPC": {
         "75459f1e": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSPD_RKPK": {
         "f2343f30": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSPD_RKSI": {
         "f16d4c1b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSQD_RKPK": {
         "aa527775": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSQD_RKSI": {
         "3ac9c409": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSQD_RKTU": {
         "2d3a74f2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSSS_RKSS": {
         "35526e02": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSWH_RKSI": {
         "f0f44fc2": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSWX_RKPC": {
         "ba40c1d5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSWX_RKSI": {
         "35bae02b": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSWZ_RKSI": {
         "5852adbb": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSYA_RKSI": {
         "7a5553b9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSYN_RKSI": {
         "5efd11a7": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZSYT_RKSI": {
         "5af87938": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZUCK_RKSI": {
         "a2cb2bf5": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZUTF_RKSI": {
         "24689c5c": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZUUU_RKSI": {
         "38817308": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYCC_RKSI": {
         "ed5ecb1a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYHB_RKSI": {
         "6586cd9a": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYJM_RKSI": {
         "421f6d35": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYTL_RKSI": {
         "dc71817f": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYTX_RKPC": {
         "873e8172": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYTX_RKPK": {
         "d54635c3": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [
             "airway_disconnect: ZYTX->RKPK: DDG and DONVO not on airway H114"
           ],
@@ -4434,21 +4440,21 @@
       },
       "ZYTX_RKSI": {
         "a4804179": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYYJ_RKPK": {
         "b0c98a51": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
       },
       "ZYYJ_RKSI": {
         "7d2215a9": {
-          "checked_airac": "2610",
+          "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
         }
@@ -4460,7 +4466,7 @@
     "deep_validation": false,
     "pairs": {}
   },
-  "generated_at": "2026-10-30T14:10:56Z",
+  "generated_at": "2026-10-30T15:57:40Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
