@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "3f7f08083dda1237fde837eea36d56a5ea6a113a",
+  "commit_sha": "e3b5e6f63997b728000adeb3480700693505954d",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-31/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-31-b/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "EBBR",
@@ -195,6 +195,19 @@
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/runway_configs.json",
       "sha256": "c5430d06e52c94b2ce5e1f9616d84bbfe18c960e17633d2bfabd0063be9da3ba",
       "size_bytes": 284
+    },
+    {
+      "id": "EPKK",
+      "repo_path": ".voiceatc/defaults/E/EP/EPWW/KRAKOW_TMA/EPKK/runway_configs.json",
+      "sha256": "4308176fe15c4fe67e90e6418bc3542def6497fe4608fd7fbc1f1d8c864597da",
+      "size_bytes": 318
+    },
+    {
+      "id": "EPKK",
+      "repo_path": "E/EP/EPWW/KRAKOW_TMA/EPKK/runway_configs.json",
+      "requires": ["community.airac_overrides"],
+      "sha256": "0651cfbf76f5f272a0724cd743bc72568cfa2e7a0b9808ec19d22079a295cf0a",
+      "size_bytes": 742
     },
     {
       "id": "EPWA",
@@ -1397,11 +1410,11 @@
       "size_bytes": 266
     }
   ],
-  "entry_count": 232,
-  "generated_at": "2026-10-31T12:41:00Z",
-  "published_at": "2026-10-31T12:41:00Z",
-  "release_tag": "daily-2026-10-31",
+  "entry_count": 234,
+  "generated_at": "2026-10-31T14:45:57Z",
+  "published_at": "2026-10-31T14:45:57Z",
+  "release_tag": "daily-2026-10-31-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "6425c3c63b8baafbd2c624944469a31b7d73b1665923751a0d0fa044677f2df7",
-  "size_bytes": 71412
+  "sha256": "7f7b166c273c79c35f143b44253975da28f39e4e194e9b6af653cdd682f44d59",
+  "size_bytes": 72220
 }
