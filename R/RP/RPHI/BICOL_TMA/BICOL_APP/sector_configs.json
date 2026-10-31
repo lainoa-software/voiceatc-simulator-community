@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "BICOL",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPLK_APP"
+          ],
+          "frequency": "120.200"
+        }
+      ]
+    }
+  ]
+}

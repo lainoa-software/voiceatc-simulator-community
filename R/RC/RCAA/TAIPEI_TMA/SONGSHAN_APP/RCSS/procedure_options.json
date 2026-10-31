@@ -1,0 +1,16 @@
+{
+  "airport": "RCSS",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "defaults": {
+    "init_climb": 5000
+  },
+  "sids": {
+    "RONE1A": {
+      "spawn_enabled": false
+    },
+    "XEBE1A": {
+      "spawn_enabled": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "ROXAS",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPVR_APP"
+          ],
+          "frequency": "120.400"
+        }
+      ]
+    }
+  ]
+}

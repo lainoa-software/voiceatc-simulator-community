@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "LAOAG",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPLI_APP"
+          ],
+          "frequency": "122.300"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "airport": "RKSI",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "defaults": {
+    "init_climb": 7000
+  },
+  "sids": {
+    "RADA3A": {
+      "init_climb": 3000
+    },
+    "RADA3D": {
+      "init_climb": 3000
+    }
+  }
+}

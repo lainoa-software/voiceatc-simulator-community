@@ -1,0 +1,17 @@
+{
+  "airport": "RKSO",
+  "runway_configs": [
+    {
+      "id": "27",
+      "name": "RWY 27L/27R",
+      "arr": "27L 27R",
+      "dep": "27L 27R"
+    },
+    {
+      "id": "09",
+      "name": "RWY 09L/09R",
+      "arr": "09L 09R",
+      "dep": "09L 09R"
+    }
+  ]
+}

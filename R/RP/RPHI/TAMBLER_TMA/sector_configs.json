@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "TAMBLER",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RPMR_APP"
+          ],
+          "frequency": "119.100"
+        }
+      ]
+    }
+  ]
+}

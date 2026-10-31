@@ -2,16 +2,52 @@
   "airport": "VHHH",
   "runway_configs": [
     {
-      "id": "MAIN_07",
-      "name": "Main 07",
+      "id": "07",
+      "name": "3RS RWY 07: 07L ARR, 07C DEP, 07R MIXED",
       "arr": "07L 07R",
       "dep": "07C 07R"
     },
     {
-      "id": "25_CONFIG",
-      "name": "25 Config",
+      "id": "25",
+      "name": "3RS RWY 25: 25R ARR, 25C DEP, 25L MIXED",
       "arr": "25R 25L",
       "dep": "25C 25L"
+    },
+    {
+      "id": "07_SEG",
+      "name": "NIGHT 1500-1759Z: 07C ARR, 07R DEP",
+      "arr": "07C",
+      "dep": "07R"
+    },
+    {
+      "id": "25_SEG",
+      "name": "NIGHT 1500-1759Z: 25C ARR, 25L DEP",
+      "arr": "25C",
+      "dep": "25L"
+    },
+    {
+      "id": "07L_ONLY",
+      "name": "NIGHT 1800-2259Z: 07L MIXED",
+      "arr": "07L",
+      "dep": "07L"
+    },
+    {
+      "id": "07C_ONLY",
+      "name": "NIGHT 1800-2259Z: 07C MIXED",
+      "arr": "07C",
+      "dep": "07C"
+    },
+    {
+      "id": "25R_ONLY",
+      "name": "NIGHT 1800-2259Z: 25R MIXED",
+      "arr": "25R",
+      "dep": "25R"
+    },
+    {
+      "id": "25C_ONLY",
+      "name": "NIGHT 1800-2259Z: 25C MIXED",
+      "arr": "25C",
+      "dep": "25C"
     }
   ]
 }

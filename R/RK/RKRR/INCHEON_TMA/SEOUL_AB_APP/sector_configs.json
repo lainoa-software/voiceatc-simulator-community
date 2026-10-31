@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "SEOUL_AB",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKSM_APP"
+          ],
+          "frequency": "123.800"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "airport": "RKSG",
+  "runway_configs": [
+    {
+      "id": "32",
+      "name": "RWY 32",
+      "arr": "32",
+      "dep": "32"
+    },
+    {
+      "id": "14",
+      "name": "RWY 14",
+      "arr": "14",
+      "dep": "14"
+    }
+  ]
+}

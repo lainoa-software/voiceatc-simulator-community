@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "RCMQ_APP",
+      "airports": [
+        "RCMQ"
+      ]
+    }
+  ]
+}

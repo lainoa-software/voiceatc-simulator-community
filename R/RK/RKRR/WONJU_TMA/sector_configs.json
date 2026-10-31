@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "WONJU",
+      "sectors": [
+        {
+          "sector_ids": [
+            "RKNW_APP"
+          ],
+          "frequency": "130.200"
+        }
+      ]
+    }
+  ]
+}
