@@ -1,6 +1,6 @@
 {
   "asset_name": "mva-2611-full.zip",
-  "commit_sha": "ea54ac53b0ffbf9491564f18835025c1f8caff02",
+  "commit_sha": "3f7f08083dda1237fde837eea36d56a5ea6a113a",
   "dataset": "mva",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-31/mva-2611-full.zip",
   "entries": [
@@ -137,23 +137,209 @@
       "size_bytes": 8558
     },
     {
+      "id": "RCBS",
+      "repo_path": "R/RC/RCAA/KINMEN_TMA/mva.json",
+      "sha256": "0e720d3a07cc8750404113d46d67bc236357d3ac1d53b7117e536141be8500cf",
+      "size_bytes": 2319
+    },
+    {
+      "id": "RCDC",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/mva.json",
+      "sha256": "61dc275a41ef8da52e249da3a4cf49816021cd6ae35637ea182f1ef606c2a836",
+      "size_bytes": 43896
+    },
+    {
+      "id": "RCFN",
+      "repo_path": "R/RC/RCAA/TAITUNG_TMA/mva.json",
+      "sha256": "bb9c6d49960050c1fda09158af61ce697c306f7152510e47cc81f6ad5bd75020",
+      "size_bytes": 42549
+    },
+    {
+      "id": "RCKH",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/mva.json",
+      "sha256": "12556ca1837b5ee96505342790336779fac7b7abb661c5421203191b69fd9146",
+      "size_bytes": 43896
+    },
+    {
+      "id": "RCKU",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/mva.json",
+      "sha256": "7e7d4ae755974882c549dcfbd642b1507a55d5f35fd8ce726187071a8bdb54d9",
+      "size_bytes": 16039
+    },
+    {
+      "id": "RCMQ",
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/mva.json",
+      "sha256": "3308296bfd76794e0615a76582b3f42e07c6a41d919ed61db88ffdfd08b095e0",
+      "size_bytes": 42897
+    },
+    {
+      "id": "RCNN",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/mva.json",
+      "sha256": "54b202299690e5485b2cc84e7a32e07022f67515eb46e92b74d7165db79c61ca",
+      "size_bytes": 43896
+    },
+    {
+      "id": "RCQC",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/mva.json",
+      "sha256": "a67200881619010407b3e43ba41187eaf8ef89a581d39ac43908d337c5050c76",
+      "size_bytes": 16039
+    },
+    {
+      "id": "RCSS",
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/mva.json",
+      "sha256": "1e3755a3bf354616e26a73a527d9fee5b77ab2ab5aed6d57425a09221aa1eb06",
+      "size_bytes": 58114
+    },
+    {
       "id": "RCTP",
-      "repo_path": "R/RC/RCAA/TAIPEI_TMA/mva.json",
-      "sha256": "acc80c8f6960033be4eb4bfa81abc60351a2002c3178230055df3514d8201e87",
-      "size_bytes": 162875
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/mva.json",
+      "sha256": "20d7410e6723e492107ee42925b496935e1755c1926caf7350a1a2216d6a0b1f",
+      "size_bytes": 47502
+    },
+    {
+      "id": "RCYU",
+      "repo_path": "R/RC/RCAA/HUALIEN_TMA/mva.json",
+      "sha256": "99ac7b7e52fbd684689e09546d79866c78249c69a9a9d476e8883e29d5705cd0",
+      "size_bytes": 46152
+    },
+    {
+      "id": "RKJB",
+      "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/mva.json",
+      "sha256": "19e2a960e028790449b040750fd2aa58328db96dfc1330643ca3a01d15e53f45",
+      "size_bytes": 97349
+    },
+    {
+      "id": "RKJJ",
+      "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/mva.json",
+      "sha256": "74cd52433f29d66f7e4760d7f6b94dcb40786aa5fb12478109348033b08bc5f2",
+      "size_bytes": 58536
+    },
+    {
+      "id": "RKJK",
+      "repo_path": "R/RK/RKRR/GUNSAN_TMA/mva.json",
+      "sha256": "f88f64870b18e2ebf0ad9d14dacf98df90760e5ed1982d458bef878602d50de7",
+      "size_bytes": 58536
+    },
+    {
+      "id": "RKJY",
+      "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/mva.json",
+      "sha256": "5c786882c43745291d5fcc98495c25c272cb178ab0f865e4b85ee31c18ec60dc",
+      "size_bytes": 48484
+    },
+    {
+      "id": "RKNW",
+      "repo_path": "R/RK/RKRR/WONJU_TMA/mva.json",
+      "sha256": "d36b465eca5555bd205709a231cb049d450d3ec978d7e5762c392a3bfae22195",
+      "size_bytes": 8597
+    },
+    {
+      "id": "RKNY",
+      "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/mva.json",
+      "sha256": "924aa20649c669d75112473a1de9e4e22b7eeecaa7d488b299d138b7e1e8c0ed",
+      "size_bytes": 120934
+    },
+    {
+      "id": "RKPC",
+      "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/mva.json",
+      "sha256": "bf91c6a3167c392e563e925b902aec0c67b22f0d966799f6d52198de8fa1f191",
+      "size_bytes": 55438
+    },
+    {
+      "id": "RKPD",
+      "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/mva.json",
+      "sha256": "d4a58803dc9e2dab3ad8208527707c674d8a11991cbe4160dd352f486c238fcd",
+      "size_bytes": 55438
+    },
+    {
+      "id": "RKPK",
+      "repo_path": "R/RK/RKRR/GIMHAE_TMA/mva.json",
+      "sha256": "a9f14633831ba26528d1048c311ba1cc9f1c150632bcf8a71907097b3df61f39",
+      "size_bytes": 178575
+    },
+    {
+      "id": "RKPS",
+      "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/mva.json",
+      "sha256": "99a5eb834b81bd22c613e04eee7113280074dacac5c480b86d5ff57149ee6a3f",
+      "size_bytes": 133813
+    },
+    {
+      "id": "RKPU",
+      "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/mva.json",
+      "sha256": "1fcf9fb84ca06b59762243eb56c82e7329b1ad70d0cfa68c5a382046e0d3666b",
+      "size_bytes": 9236
+    },
+    {
+      "id": "RKSG",
+      "repo_path": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/mva.json",
+      "sha256": "1162c450bf0bd2bcd5745e57fa20c75ab22483bfd0f5e4e1713c2f4299ef55aa",
+      "size_bytes": 151645
+    },
+    {
+      "id": "RKSI",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/mva.json",
+      "sha256": "cd1fcb0db2d00702798d9122f65a7d29034a344be719365a2cbe4d5c183e3a93",
+      "size_bytes": 151645
+    },
+    {
+      "id": "RKSM",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/mva.json",
+      "sha256": "82245302ec77b82998d6250517c900869ae53d69031c9d5d2f3e729117d87f50",
+      "size_bytes": 151645
+    },
+    {
+      "id": "RKSO",
+      "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/mva.json",
+      "sha256": "ef2ae5d7c6e47988e7cf2f25ebb07b0cee449e178d0269f7faca8110202bf333",
+      "size_bytes": 151645
+    },
+    {
+      "id": "RKSS",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/mva.json",
+      "sha256": "6c121f0473942d56fc31139c2eae192fd92ac68d07e285fb49eb49af57528dc7",
+      "size_bytes": 151645
+    },
+    {
+      "id": "RKTH",
+      "repo_path": "R/RK/RKRR/POHANG_TMA/POHANG_APP/mva.json",
+      "sha256": "4fa4187309e814de668d1f6399a3ae48a953a0b2fc583cad2f4a2f746bdbabda",
+      "size_bytes": 9236
+    },
+    {
+      "id": "RKTL",
+      "repo_path": "R/RK/RKRR/ULJIN_TMA/mva.json",
+      "sha256": "87621444d2275066536fd593da00b9fb5045ed2a0f07bb56728427db5af5dc9d",
+      "size_bytes": 9236
+    },
+    {
+      "id": "RKTN",
+      "repo_path": "R/RK/RKRR/DAEGU_TMA/mva.json",
+      "sha256": "f555bca438f84dd0f41bf1dc301acd7a0505da9c72a88e070fc2a7120997ed8a",
+      "size_bytes": 136160
+    },
+    {
+      "id": "RKTU",
+      "repo_path": "R/RK/RKRR/JUNGWON_TMA/mva.json",
+      "sha256": "238cac73f02952fe3b6d1d2c91eb7620269b2a73d23cd1f5521b4215b220a69a",
+      "size_bytes": 8597
     },
     {
       "id": "UUEE",
       "repo_path": "U/UU/UUWV/MOSCOW_TMA/mva.json",
       "sha256": "b18a364e94fdffa16be6af02a55043da5f2526f7443f404a0ef87c19bcc9e04b",
       "size_bytes": 1578
+    },
+    {
+      "id": "VHHH",
+      "repo_path": "V/VH/VHHK/HONGKONG_TMA/mva.json",
+      "sha256": "81fa38fa3dc7235db9ce96601279371d15e0ff6b0e5a73297f6f9f6124d915ca",
+      "size_bytes": 15116
     }
   ],
-  "entry_count": 24,
-  "generated_at": "2026-10-31T06:58:08Z",
-  "published_at": "2026-10-31T06:58:08Z",
+  "entry_count": 55,
+  "generated_at": "2026-10-31T12:41:00Z",
+  "published_at": "2026-10-31T12:41:00Z",
   "release_tag": "daily-2026-10-31",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "28e20980ddb30bbd39f3b97b62e7e31f9bfd15e22d12f3dbf97ee1da75e59598",
-  "size_bytes": 240227
+  "sha256": "fb28a57e8daf0f443fc2d0420ae6870023d3831976b23c4319f0ab0840127c9a",
+  "size_bytes": 723829
 }

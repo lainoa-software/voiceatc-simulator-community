@@ -1,5 +1,5 @@
 {
-  "commit_sha": "ea54ac53b0ffbf9491564f18835025c1f8caff02",
+  "commit_sha": "3f7f08083dda1237fde837eea36d56a5ea6a113a",
   "current": {
     "airac": "2611",
     "asset_name": "player-routes-2611.tsv",
@@ -20,7 +20,7 @@
     "sha256": "cb9534fe6a5d0e9d4599f082bed543ba92e5e86c17fec6fbb6fd65198a0288ed",
     "size_bytes": 51
   },
-  "published_at": "2026-10-31T06:58:08Z",
+  "published_at": "2026-10-31T12:41:00Z",
   "release_tag": "daily-2026-10-31",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1

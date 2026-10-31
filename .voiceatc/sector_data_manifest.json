@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2611.zip",
-  "bundle_count": 58,
+  "bundle_count": 109,
   "bundles": {
     "E/ED/EDGG/EDDF_TMA": {
       "files": {
@@ -971,22 +971,288 @@
         }
       }
     },
-    "R/RC/RCAA/TAIPEI_TMA": {
+    "R/RC/RCAA/HUALIEN_TMA": {
       "files": {
         "configs": {
-          "repo_path": "R/RC/RCAA/TAIPEI_TMA/sector_configs.json",
-          "sha256": "57855f9999c206d3b6f42809cf71f9d7bda9f066516881f2a3095a6731c6de7f",
-          "size_bytes": 228
+          "repo_path": "R/RC/RCAA/HUALIEN_TMA/sector_configs.json",
+          "sha256": "9f0cfd4a29238c12143086d2d9986ffc71c63c0b14af5635c42982c753d593a9",
+          "size_bytes": 197
         },
         "definitions": {
-          "repo_path": "R/RC/RCAA/TAIPEI_TMA/sector_definitions.json",
-          "sha256": "7bb869c087f6ec64b1626d18dc7c1030bb71d0151331a67e757eb1a560af957b",
-          "size_bytes": 849
+          "repo_path": "R/RC/RCAA/HUALIEN_TMA/sector_definitions.json",
+          "sha256": "6e35ab6497de1eb225a29d4d2a4c7c60e495f0e9cc6def0041bbc4ae62721bf9",
+          "size_bytes": 532
         },
         "influence": {
-          "repo_path": "R/RC/RCAA/TAIPEI_TMA/sector_influence.json",
-          "sha256": "2407429e5edf479df44b3612a4ddaa9a023905b6c7b0ae88d0883d954a6642f3",
-          "size_bytes": 114
+          "repo_path": "R/RC/RCAA/HUALIEN_TMA/sector_influence.json",
+          "sha256": "318135416b15a62622f2abd9353fd85490d552e4f6c3e0ed04c184c7b3feda6d",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/sector_configs.json",
+          "sha256": "ea6bd77d3938d65123846f33c50898f2c1d362126ec2460ddd83375ad37ff57b",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/sector_definitions.json",
+          "sha256": "abe12690427488b1c2d3f369048ba8dec14872d83080d45e51587f76483b7f96",
+          "size_bytes": 644
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/sector_influence.json",
+          "sha256": "d9edbdac53db31af1cbffbbe85731e1d0f0c2a3b363b35be2c278189f66403e6",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/sector_configs.json",
+          "sha256": "f396fb6fe8b051dd532e5238eaac02489b2dd717ad265bcef8eaada32585e49c",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/sector_definitions.json",
+          "sha256": "6f7d6bcc106e94495296c63610d935b8a35832814afaefae3f3104a20837f4fe",
+          "size_bytes": 644
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/sector_influence.json",
+          "sha256": "569e0213cc9d8383c191ec8bce3457e53aa7667fd3e2a3096fd09246a84e09ee",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/sector_configs.json",
+          "sha256": "c467705ec002d111ad3956b240cf88a0e489b23e90d611a0eeca43cd27226a0f",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/sector_definitions.json",
+          "sha256": "54ff5e782d7ea9ff3b97f9b650eb2cc79e6e903ab8acc2d280de02f29b611df5",
+          "size_bytes": 644
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/sector_influence.json",
+          "sha256": "da0aad4062d79e77d81a24479075f42dec2b2cea8a8a22fe90ab0d390f902312",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/sector_configs.json",
+          "sha256": "10396ae03bfab51b55dc17c5c15f7484a13b11beb91995d350be2c071b79b793",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/sector_definitions.json",
+          "sha256": "10b3a19f4f01adbb4b2ea24c223e66a807d2cbbc06f8afe74fc282845d60dc04",
+          "size_bytes": 644
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/sector_influence.json",
+          "sha256": "0c3223b150cd734929202576a0edd2056ef098df16c0642c0e7c386a208dd8b3",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/sector_configs.json",
+          "sha256": "0fe77c1920a95b6d7f2052899eaa5f51df6e476849a9dcf2127855ebb7fd454b",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/sector_definitions.json",
+          "sha256": "0d7008c7cc1c966dd2c8379bdada6115f05767d85fda45cb116facbdb17300ab",
+          "size_bytes": 644
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/sector_influence.json",
+          "sha256": "f483e923ce27b4ce072e1fa0b8a1a8b25d9b4f96f65df36761957a2f82f9cd32",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/KINMEN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/KINMEN_TMA/sector_configs.json",
+          "sha256": "1e490abfab1ec630f8be7b68cadc2eee3aead02e74c5456d1fd5d81a1b7cd563",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/KINMEN_TMA/sector_definitions.json",
+          "sha256": "0f5605e2f3e20146e7f8d14de855c0409de4958ad13aef1f8f025a8205b5892f",
+          "size_bytes": 468
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/KINMEN_TMA/sector_influence.json",
+          "sha256": "77c55ba83a681a26de045702c61a66ccb1ad2ee3aa83079c0ee8fbb6c363b9b3",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/MATSU_TMA/BEIGAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/BEIGAN_APP/sector_configs.json",
+          "sha256": "c20507fc26de61d826255abe9aaecd7e6bd6c06e0b6a0a8ba693bb92440f86f4",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/BEIGAN_APP/sector_definitions.json",
+          "sha256": "1b3773217b70c37bd04b8d15dd9c16d1b80d85176a925b48b38c9c1cd80f2d51",
+          "size_bytes": 524
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/BEIGAN_APP/sector_influence.json",
+          "sha256": "a89621ead335d22bf378926ff7b7ce22456e6b7986b8dcdccff50f72cc860ddd",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/MATSU_TMA/NANGAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/NANGAN_APP/sector_configs.json",
+          "sha256": "492e2a7587445df9e1cc5de224279cb766b33b79134b60eff71b6ed83811de50",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/NANGAN_APP/sector_definitions.json",
+          "sha256": "35bf318528f8d6cd94dce19bce57bfd884e9c561b9d821a70469c7fdae2802c7",
+          "size_bytes": 524
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/MATSU_TMA/NANGAN_APP/sector_influence.json",
+          "sha256": "2fd55dda2687b56e6e1a35fedacfbaf54e801ed616b5dd6afbdc8d6a9e91c7ad",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/sector_configs.json",
+          "sha256": "17a22a84827f25f44ba50e115016d7c5a437b090f49bb0a9ccf9e6481b46c332",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/sector_definitions.json",
+          "sha256": "54a925ed33feddf514cc4a386d7ba932abcc9ef9a2cb530cc6a6300d1fcc199c",
+          "size_bytes": 764
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/sector_influence.json",
+          "sha256": "41cb875d4a4a965e8c8e6028b3f858531055af75ccc238ba68e32ebb3c8eb5bc",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/sector_configs.json",
+          "sha256": "72d2d9f1e58b83b85707c15fc0b74d053ea377eefeead7b35e1d14df671f2940",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/sector_definitions.json",
+          "sha256": "1228793d2115421222e3b0eee96d24ae425675a196eaacb07a5ea6ccc96cb45a",
+          "size_bytes": 764
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/sector_influence.json",
+          "sha256": "884c5839806767fea00a7b2cc948ddb615b71342dd33f90be63af24218b81b81",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/sector_configs.json",
+          "sha256": "8fff1e7f203dd011fbb80b18105dc369d0077a76d88b684e717a7f488495a5bc",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/sector_definitions.json",
+          "sha256": "ebee9c67e37fca46ca26659e5d8f9920be855d31bd894a33d29c8fdda1760e4d",
+          "size_bytes": 764
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/sector_influence.json",
+          "sha256": "dd98da5cb900de4fc477b1becf9f8f0aa36e52660ca19e1cde1cf98dbb8afa42",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RC/RCAA/TAITUNG_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RC/RCAA/TAITUNG_TMA/sector_configs.json",
+          "sha256": "c1622b8ee1a2014c20353a2da42354541d34d1192437861550c7bcf5a469cf54",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RC/RCAA/TAITUNG_TMA/sector_definitions.json",
+          "sha256": "3ecb65bf0514fa7d44305f4cf0eab3269756c077d0f16303b9a164591f727154",
+          "size_bytes": 567
+        },
+        "influence": {
+          "repo_path": "R/RC/RCAA/TAITUNG_TMA/sector_influence.json",
+          "sha256": "1eabbd339ec5e4df785aa2d68b0662278debb18b497c1ecfef0c15472611ac68",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/DAEGU_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/DAEGU_TMA/sector_configs.json",
+          "sha256": "bf4fe13569ef99bc9359e382f11f24a271c4ca8f56735bf9f01d2ef6a6cd25af",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/DAEGU_TMA/sector_definitions.json",
+          "sha256": "fefaa8ae5886d834b3875e0979ec47a32a153f47c9dbb6e85e31319bdce30d5d",
+          "size_bytes": 796
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/DAEGU_TMA/sector_influence.json",
+          "sha256": "d7bc9245c53143e962865d2c2be371d22878d5b0126c2d51be479a5c3a758802",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/GANGNEUNG_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/sector_configs.json",
+          "sha256": "4fde641ec60be192a58028c6961f9dfd0e23c7a86b9881a5f20251264881d850",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/sector_definitions.json",
+          "sha256": "a394d365d3b2d8b5f8b0f6e355c64e14cdd9fd1f36060364db8a9d343af23a86",
+          "size_bytes": 524
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/sector_influence.json",
+          "sha256": "7375d98c81dfdaf2c0b032dc5f634686fe941cf9dad00c987609a4f76c9df413",
+          "size_bytes": 103
         }
       }
     },
@@ -994,13 +1260,13 @@
       "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/GIMHAE_TMA/sector_configs.json",
-          "sha256": "f62db19bdf0c7b658274fd510d337ac6a5a9f12f72ca7d5a5e0c50614aeaebaf",
-          "size_bytes": 191
+          "sha256": "543bfd44814b3b55f8adfd1ddfa369722f4131e22082a4ac64c309ef8d93eba9",
+          "size_bytes": 196
         },
         "definitions": {
           "repo_path": "R/RK/RKRR/GIMHAE_TMA/sector_definitions.json",
-          "sha256": "f0f5ef8a364b42af99b4dd1d94376b01d4e8a5c843a291f2cf64e434fc1f259b",
-          "size_bytes": 486
+          "sha256": "00f6a340fed98ec1ea409ccf2528a7f8592227f8414d21159d48203f969f7b22",
+          "size_bytes": 546
         },
         "influence": {
           "repo_path": "R/RK/RKRR/GIMHAE_TMA/sector_influence.json",
@@ -1009,40 +1275,705 @@
         }
       }
     },
-    "R/RK/RKRR/INCHEON_TMA": {
+    "R/RK/RKRR/GUNSAN_TMA": {
       "files": {
         "configs": {
-          "repo_path": "R/RK/RKRR/INCHEON_TMA/sector_configs.json",
-          "sha256": "5c81f7bae9203f6e64bda5b59c04d5ff51563b8bbd4b8ec29e9e61e07673b27f",
-          "size_bytes": 283
+          "repo_path": "R/RK/RKRR/GUNSAN_TMA/sector_configs.json",
+          "sha256": "6c71fd270b1482f538d8dcd4205a2c9f1e8b5b15003073d0af172b840012bb46",
+          "size_bytes": 196
         },
         "definitions": {
-          "repo_path": "R/RK/RKRR/INCHEON_TMA/sector_definitions.json",
-          "sha256": "f1b6cda3456d863b471e53b517f73e330cb874539115d8d98ceee8c5d5d1cabc",
-          "size_bytes": 4205
+          "repo_path": "R/RK/RKRR/GUNSAN_TMA/sector_definitions.json",
+          "sha256": "fe6565aae9dbac2d8a36fefc9334ae78e254eb3a7d8d5052b8077a858e6d58e9",
+          "size_bytes": 546
         },
         "influence": {
-          "repo_path": "R/RK/RKRR/INCHEON_TMA/sector_influence.json",
-          "sha256": "fddcbed4373896892de8a4acd40e3b18d3118a0f4ac5fcd0933f79918cf63130",
-          "size_bytes": 174
+          "repo_path": "R/RK/RKRR/GUNSAN_TMA/sector_influence.json",
+          "sha256": "232301c065de70c58dccb1e54608683c5f3178e8d8c81e7bffe7d355105ebd81",
+          "size_bytes": 103
         }
       }
     },
-    "R/RK/RKRR/JEJU_TMA": {
+    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP": {
       "files": {
         "configs": {
-          "repo_path": "R/RK/RKRR/JEJU_TMA/sector_configs.json",
-          "sha256": "d7167a38ad919fb64ad1e3a5496f7dacca2ee698902fb5c0deeb0414cedb154e",
-          "size_bytes": 191
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/sector_configs.json",
+          "sha256": "f5530de4eeca8aed402d362fb0f45733d2b049876e91bdb3177a7f8c138ef8c8",
+          "size_bytes": 197
         },
         "definitions": {
-          "repo_path": "R/RK/RKRR/JEJU_TMA/sector_definitions.json",
-          "sha256": "46d814ab4e7b3a6861a5be631e469674997ed6422ab681003e1e5113d5721d2d",
-          "size_bytes": 426
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/sector_definitions.json",
+          "sha256": "8a24bfcd491983bb193c2f28e6ba95c8d26d117cb8d34d091852b826fbc7d318",
+          "size_bytes": 468
         },
         "influence": {
-          "repo_path": "R/RK/RKRR/JEJU_TMA/sector_influence.json",
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/sector_influence.json",
+          "sha256": "143724697e57dc37cbad3b71ff0908ca3d01d7fe37998959c0c23cc089009c59",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/GWANGJU_TMA/MUAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/sector_configs.json",
+          "sha256": "363ce50bc36ec762cd526e8e94d4c372816901d9d7cc7a90b71bd4405c84f9c7",
+          "size_bytes": 194
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/sector_definitions.json",
+          "sha256": "dc53df2a633897575766584901643380c87d8831e6a3390d4641e30854131159",
+          "size_bytes": 468
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/sector_influence.json",
+          "sha256": "b7b30171570c1f117b19d35ccb6733139e01eac4d172c7ceb449e72759bcbb01",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/GIMPO_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/sector_configs.json",
+          "sha256": "a25c2f489947a37bcf6e7a559ca7eeebe264a8c6b38ee3a87af4d65b8bc90446",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/sector_definitions.json",
+          "sha256": "5afbf9bec746034481804bc82573978d7a7d2718a3a0fc4d0a6b38964f118f3a",
+          "size_bytes": 2175
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/sector_influence.json",
+          "sha256": "d6c14fa87faaa6a81d4a3ba6c3ffcbcf11b237bc41322a0048b768a454d9e693",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/sector_configs.json",
+          "sha256": "27e0dd8f1b98ef203cbd67bb6a7a673dc1a0a955c8572066ed815190a23d042d",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/sector_definitions.json",
+          "sha256": "56d4ae66d141ae78b6adb4e56b74ef34a07c3b317b9a34977d6b0cdce52505e6",
+          "size_bytes": 2175
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/sector_influence.json",
+          "sha256": "5b00bcff04575b4f61961bb5790186822e21e25d68409f34043025e219fa6425",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/sector_configs.json",
+          "sha256": "1dcabf94cb9eeb4f37188086af083ccb44248ddeda01ffa16611d85680850eb8",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/sector_definitions.json",
+          "sha256": "fb580c7bc12e99d785efd7c854091f1eb4802cd7829e012845a98c499621d164",
+          "size_bytes": 2175
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/sector_influence.json",
+          "sha256": "da8a5e16572a552361c59f35e32dee709159fe96159d31e6cb1b32e98de01707",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/JEJU_TMA/JEJU_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/sector_configs.json",
+          "sha256": "35468a80cd4a2bb3fd6db11d7c9556426a5637f0ac9cf96102e8f44e18cf3cbf",
+          "size_bytes": 194
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/sector_definitions.json",
+          "sha256": "97d71dbaab33b0625405622a226d51b3d8834059c9303a008618621d8b608fce",
+          "size_bytes": 704
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/sector_influence.json",
           "sha256": "82d703cae360e8e543dfbcaea6d3cd480b26986c9d4a50bc50f9fe101020760e",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/sector_configs.json",
+          "sha256": "a2ad4595d3688ca5b7fa4188760819280d6ed2f69492531631d5181abccae96f",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/sector_definitions.json",
+          "sha256": "72b6ffc8d0b014adb85181704498bca87d935896ffbc0ce139d79eb7f39a27e0",
+          "size_bytes": 704
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/sector_influence.json",
+          "sha256": "4f898b4e832221f1e2451b32fbf71345b7a86c43d22c1dbef3af812698a73d15",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/JUNGWON_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/JUNGWON_TMA/sector_configs.json",
+          "sha256": "0fc7b2c078f68aa7677f8fd607ee3a87ea874837b68713590441630d7d9eaf0d",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/JUNGWON_TMA/sector_definitions.json",
+          "sha256": "d4480bf0155a1273f6868e1dacb1843f6e94e6cc002352041959c4bf3fac03b5",
+          "size_bytes": 1594
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/JUNGWON_TMA/sector_influence.json",
+          "sha256": "a18d06c5846e7decec2ff9ab320d17ce83dc06559156c9d1b5e76f25f25f791a",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/sector_configs.json",
+          "sha256": "41712c43b2dc8d3f0e995cc30142ab5b31b7376d4dbb0d22391d462470871049",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/sector_definitions.json",
+          "sha256": "64a11f662ab55322a930f8423734abf64271efbf28049b46d97b525fd06af19d",
+          "size_bytes": 1902
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/sector_influence.json",
+          "sha256": "8e7d6fb0bc20ac4c14cd43b49302eda1fce16298209c7a74c223c163ca47ed8d",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/OSAN_TMA/OSAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/sector_configs.json",
+          "sha256": "c95c591afe1bc7a48a6ed67738f339c329c68ba3a30e4e8e4b252eaefbbfcb3d",
+          "size_bytes": 194
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/sector_definitions.json",
+          "sha256": "61e1de74aa1ba31fa5bbe4d8cf22f58cd4a00711b51c0e4da978016c656bb173",
+          "size_bytes": 1902
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/sector_influence.json",
+          "sha256": "1dc76bc16ca72943d9f30ba2c6d4390eed15ccb39243f55377e2b9a9b136bc8f",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/POHANG_TMA/POHANG_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/POHANG_APP/sector_configs.json",
+          "sha256": "01036a4ec6b7f618e8e26fa556967115961e5e7f84c9ca97c0ec48277fe005ed",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/POHANG_APP/sector_definitions.json",
+          "sha256": "be772cd3f0541b3022e3e35ba75c871b1a7e021ad40c1b153c73b6a106e1fb3d",
+          "size_bytes": 715
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/POHANG_APP/sector_influence.json",
+          "sha256": "6ea2b2ad8429ad9cfe37b41e99a25b2e8648efc17aca1296f4feeac3cef07f50",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/POHANG_TMA/ULSAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/sector_configs.json",
+          "sha256": "986bc00c007f903c44b5a8384100e6927334c20ebb736562218bdaa598aa85f7",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/sector_definitions.json",
+          "sha256": "569259ca58b979d9c358e5b9292377eef8a65712b1ef1b20f7553491ea8d7948",
+          "size_bytes": 715
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/sector_influence.json",
+          "sha256": "0682f6750f45aad8c1a1f7415291a4ae5241a109d3660b44d4959572e97f580d",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/sector_configs.json",
+          "sha256": "931d5fa57fe9b042b725fc94c10f838c7d516f2d10b6923677ae783ed34ba165",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/sector_definitions.json",
+          "sha256": "4b1bf88c00c8ea15c2c3ab6a38abe39373ddb44957924566fd41b0312b6f3b64",
+          "size_bytes": 468
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/sector_influence.json",
+          "sha256": "63db89b387fb947e7bb6341e6a45224a359572f3fcb15a7ec36bda43d95ae2e6",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/SACHEON_TMA/YEOSU_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/sector_configs.json",
+          "sha256": "50982be87a9c5f626194f77e917b23b0fa2bc5b91778d2f437c11675d525ed7d",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/sector_definitions.json",
+          "sha256": "6b5e779f4e4f95f384b5ff6614df260af8ad44e115b092bed10893bd26a2f571",
+          "size_bytes": 468
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/sector_influence.json",
+          "sha256": "ecae75d67dd807bf4192e63b598c6afe6dc41114beddf8960dae08250c8178a4",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RK/RKRR/WONJU_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RK/RKRR/WONJU_TMA/sector_configs.json",
+          "sha256": "5d687c6f329339e7449ddf27918367ba910cbd7732876d29cc94eb3fd1df7bd3",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RK/RKRR/WONJU_TMA/sector_definitions.json",
+          "sha256": "511af4dd3e3d254d3b9a0087f2d19eb5e387df6b7bdb30e456ba6a038479765e",
+          "size_bytes": 546
+        },
+        "influence": {
+          "repo_path": "R/RK/RKRR/WONJU_TMA/sector_influence.json",
+          "sha256": "843250ac87f14f1232a4aa52c7a6450558ff9718dec1c9fad6a7b8f5a4ea6ae7",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/sector_configs.json",
+          "sha256": "3bba741fcd130f808f861fd3c4e4ec5b716b73cab32c223a3704e438b9d84e49",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/sector_definitions.json",
+          "sha256": "7c0563cf1f7baea531078b663335d96b34abd1a18270f8f4780dce0ef6a06880",
+          "size_bytes": 1146
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/sector_influence.json",
+          "sha256": "ddc48071ff9b8f767d390355b745a22ba82fe385557b3b39a635d6469218a820",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/sector_configs.json",
+          "sha256": "6f2308800ccae0271683cbcb1ea4f4cfb26c0cc8c4196f0846c469c08f8d763d",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/sector_definitions.json",
+          "sha256": "b756a33d00f82cc52e81d59e0552d5e1f01efe47ced67b97d63adc3f53bc368f",
+          "size_bytes": 1146
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/sector_influence.json",
+          "sha256": "8c3b494417fcc749bdd9cac375086cd794438ffc3ff0fc345d008038e1c75337",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/BICOL_TMA/BICOL_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/BICOL_APP/sector_configs.json",
+          "sha256": "5ad5a0974b2f931811992d1b0772c69d32d4508310f780c87044aa12862b41cf",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/BICOL_APP/sector_definitions.json",
+          "sha256": "280691680fff05b969238d008c9b495eceec6d5ef20ad00ba07d2f8d3cea90e1",
+          "size_bytes": 390
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/BICOL_APP/sector_influence.json",
+          "sha256": "e0b84659815b39190d4e0f14ec7ba74fbaf42eb90c8b890dca0b260744c3cd24",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/BICOL_TMA/NAGA_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/NAGA_APP/sector_configs.json",
+          "sha256": "ae5f8ecd1c4d89104bc35771a9573a9420089a0ef5d1262012865618ec0bc9f4",
+          "size_bytes": 194
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/NAGA_APP/sector_definitions.json",
+          "sha256": "07a0062e659fec180b11037712e4dca293d6fb5414e6020c0d73da326e840429",
+          "size_bytes": 390
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/BICOL_TMA/NAGA_APP/sector_influence.json",
+          "sha256": "17cdc6d8648cd5be4ad2498a38777817dcc5a9c3d36f3ec9b13c5b4dda47f461",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/BUTUAN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/BUTUAN_TMA/sector_configs.json",
+          "sha256": "535c5526bcc3103385c49405a281f7288dcf61590bcbf361ad060e76c71279d8",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/BUTUAN_TMA/sector_definitions.json",
+          "sha256": "c9502d82ba7f647072e32f5b7e030a017b7b8f7e783dda754689493694b50d36",
+          "size_bytes": 1029
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/BUTUAN_TMA/sector_influence.json",
+          "sha256": "598bc1bcf739ce31e56a3c26ac2e402b0c36a9eb03d8f3ad1775dd78f98b0e01",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/CLARK_TMA/CLARK_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/CLARK_APP/sector_configs.json",
+          "sha256": "8da0ac586d343f7290fb8868424db39f8ebabcc1dc17f3c10b0f3d6bdb0209eb",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/CLARK_APP/sector_definitions.json",
+          "sha256": "c2c131d70a7fc2e99ac3fdf0371083cd28ea7c8eb13ce1c583f3cb39919069db",
+          "size_bytes": 765
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/CLARK_APP/sector_influence.json",
+          "sha256": "bd7e03628e7a40f2de5861231d49795e4b2924f1f2dd3a5c84edb84e629c616f",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/CLARK_TMA/SUBIC_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/SUBIC_APP/sector_configs.json",
+          "sha256": "c47b9100caeb4c00252054f478f82453015fbd5c9b25315092e50f95e7e5dd0b",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/SUBIC_APP/sector_definitions.json",
+          "sha256": "fa4c6af9440342484574231d9ed2749711a16f382c5e8918bb8c62fee3f5eb6b",
+          "size_bytes": 765
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/CLARK_TMA/SUBIC_APP/sector_influence.json",
+          "sha256": "3f0c54d087028747ee667e46635eabf9737b301920b60b684171e00696ded2db",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/DAVAO_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/DAVAO_TMA/sector_configs.json",
+          "sha256": "e13cf8e1c0931b6e71124dd8a93e625b779e53bf81c954f12572cbbdcb11ba86",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/DAVAO_TMA/sector_definitions.json",
+          "sha256": "d382c784dce007ab3599e240849dbf6ba04d2fbb3450b2b9ca17ad694fc068c4",
+          "size_bytes": 455
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/DAVAO_TMA/sector_influence.json",
+          "sha256": "f58879746b48c98653270b8d7200de5755acd4eae711dfc74dafa7501faa6c79",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/sector_configs.json",
+          "sha256": "7bce2f43ca54c28a42be7476f0493340005d51aaed1655df40f5a6e985b36fac",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/sector_definitions.json",
+          "sha256": "659fa208cf75ce3a2115178ac6e850d1503e07d3a5777ea59268dc6dfbe7f194",
+          "size_bytes": 372
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/sector_influence.json",
+          "sha256": "0ae9723127d7bd8db35c073aa46f78ca01bd615344e27ba9c44f92c5730f382c",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/KALIBO_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/KALIBO_APP/sector_configs.json",
+          "sha256": "7b8e75fde89731f39fa3f7bbc9d45e540cd3a22b272f11619a9337016511b40f",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/KALIBO_APP/sector_definitions.json",
+          "sha256": "fbefcd57985cdf4a14f3ef0775968b6bed8d61ec920e593d3af36e7aff5a93fc",
+          "size_bytes": 372
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/KALIBO_APP/sector_influence.json",
+          "sha256": "70aa6af586115fdeb641c719973b9cf00d4312138b8e2b53db7045a92e383dd9",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/ROXAS_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP/sector_configs.json",
+          "sha256": "f3db383ce1baa51ea2af88d325052a7a388ae36bb4ec2b0fccb35c87910009c4",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP/sector_definitions.json",
+          "sha256": "f08a7df3ea604a5411cd29c67a31f9a20abee3dda861c8ee6248192946ac60da",
+          "size_bytes": 372
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP/sector_influence.json",
+          "sha256": "1f5018d96cf7670c7f80823c5e2382853407bb8e471d2cf9b545632f6286dbc7",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/LAGUINDINGAN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/LAGUINDINGAN_TMA/sector_configs.json",
+          "sha256": "e0dfc1105ddf311557b0a2a7673dd30237a3341ebd46df42487fe5babdf1503c",
+          "size_bytes": 202
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/LAGUINDINGAN_TMA/sector_definitions.json",
+          "sha256": "d55782b7d8426bcf1a55f22cb896213d9ea9b5eb4d63eb9c6c9d4acbaa05605f",
+          "size_bytes": 384
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/LAGUINDINGAN_TMA/sector_influence.json",
+          "sha256": "90e1bd18c5708a729c67d50ce786a16e56b22db0c4cad24f9bed1a034bf3d222",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/LAOAG_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/LAOAG_TMA/sector_configs.json",
+          "sha256": "3036317d200623b4fbca315c2a9eb3d74f7e0560ad7049d236ba7c7a15ea01d8",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/LAOAG_TMA/sector_definitions.json",
+          "sha256": "0cab641f38fe8defb23da8c74b32a6661805995b2ecd06aef6c7c3d1f0eab705",
+          "size_bytes": 4741
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/LAOAG_TMA/sector_influence.json",
+          "sha256": "7eccf3f0cdbc3e844d233207418be42d62d7f2d3c393ca067ffa134304abee5d",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/BOHOL_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/BOHOL_APP/sector_configs.json",
+          "sha256": "1f81484eae838297123d3f888ac036897cef8449bce155da67e04f7ca67c02ac",
+          "size_bytes": 195
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/BOHOL_APP/sector_definitions.json",
+          "sha256": "dff5d1d28f65780a86af1c631f2b4a89a0749aecdf00f251f0e18881fc14ddb7",
+          "size_bytes": 3885
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/BOHOL_APP/sector_influence.json",
+          "sha256": "a138ca9a559c225cd7ec6cd0a9ccb238b8dc057a1eadc256e606e6bcd74fabd3",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/sector_configs.json",
+          "sha256": "ea23199f8661fc2d0358ffef623be52db821e9264bc2cf0208cc7d743273aca1",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/sector_definitions.json",
+          "sha256": "37d0635df9d9b7276d50c61c34297780c69da02101a7597378edd6c730023704",
+          "size_bytes": 3885
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/sector_influence.json",
+          "sha256": "67093bc908407d5d155ab09938b23af32aa1e0b1ca1975c7e3fceeb7284c777d",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/MACTAN_APP": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/MACTAN_APP/sector_configs.json",
+          "sha256": "e8a23b4963a18ca68c85821fa9dddfb8d69ff5e458a140a541d126be1f66906b",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/MACTAN_APP/sector_definitions.json",
+          "sha256": "ef389aa472cf0f3b9446a77e85711665419725a0fead80bb679728177304a761",
+          "size_bytes": 3885
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/MACTAN_TMA/MACTAN_APP/sector_influence.json",
+          "sha256": "62572842391f8567ce7732101bdd9f2ac7f82cb5a0e6401560161501ced734ac",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/MANILA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/MANILA_TMA/sector_configs.json",
+          "sha256": "8bd1cdc48a0fd6f60ca652347aebfcf4dd6412d894bfb35edee2ed3be770a767",
+          "size_bytes": 196
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/MANILA_TMA/sector_definitions.json",
+          "sha256": "88abca4837ec7dccd15fdc71b79675af7a8daa6c4e01fe31febfd860c05c73c7",
+          "size_bytes": 3203
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/MANILA_TMA/sector_influence.json",
+          "sha256": "3d766238bb41401981f87066a4e583acd318d87c069473071b87a955456eb2ef",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/PUERTO_PRINCESA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/PUERTO_PRINCESA_TMA/sector_configs.json",
+          "sha256": "63f15b8f88886f6cde25332c222142aad351674caf8f7132dcd111dc1fbe03dd",
+          "size_bytes": 205
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/PUERTO_PRINCESA_TMA/sector_definitions.json",
+          "sha256": "b1513133b248956b060ef6bf078eae479ef9482826f4c44a7fbf3d37f2ff3bd2",
+          "size_bytes": 4995
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/PUERTO_PRINCESA_TMA/sector_influence.json",
+          "sha256": "a617ad0e147a3e5abe9391febba1374b7422c1213f36fc0d1aa8bddaf79f89f9",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/TACLOBAN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/TACLOBAN_TMA/sector_configs.json",
+          "sha256": "7b338901550599178fc2d0c48009b94a159fda8fa1a979ebf91c7e42c735387b",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/TACLOBAN_TMA/sector_definitions.json",
+          "sha256": "f7d655d51c28e1bfc7acddf0fc4c9813b00cb77b2ab07391cd2db8dba826a52f",
+          "size_bytes": 925
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/TACLOBAN_TMA/sector_influence.json",
+          "sha256": "538e5f16e0b69f278fcd81feccdbbbf3eadb9836173323cc324f8ed8c0f6aefd",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/TAMBLER_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/TAMBLER_TMA/sector_configs.json",
+          "sha256": "553f3af73ed4428ce49dafbf57d37ee5e60447fff80acdb1d97edb171dcc745e",
+          "size_bytes": 197
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/TAMBLER_TMA/sector_definitions.json",
+          "sha256": "98e561bb0074f72bddd2a19c8c83fd91517ec336eb568727153886688bd29f03",
+          "size_bytes": 401
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/TAMBLER_TMA/sector_influence.json",
+          "sha256": "bc294a68e9a7749b1e4b64e23a19aef16b28e7146189538d3c78224dfd9a30e8",
+          "size_bytes": 103
+        }
+      }
+    },
+    "R/RP/RPHI/ZAMBOANGA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "R/RP/RPHI/ZAMBOANGA_TMA/sector_configs.json",
+          "sha256": "679c01ee08085f5f4f6738059b261b3e1a87c7c8d2353d49a60fa5f9becba26e",
+          "size_bytes": 199
+        },
+        "definitions": {
+          "repo_path": "R/RP/RPHI/ZAMBOANGA_TMA/sector_definitions.json",
+          "sha256": "ceda90d716aab5c185e1b33d0b164a77c0e4b3db5763bc427567dcff96046fe4",
+          "size_bytes": 2913
+        },
+        "influence": {
+          "repo_path": "R/RP/RPHI/ZAMBOANGA_TMA/sector_influence.json",
+          "sha256": "443c4fcaee561f35f24ad0776e8d1354e0c12ab5ef5dd90454f5dadf2fd499fd",
           "size_bytes": 103
         }
       }
@@ -1085,6 +2016,25 @@
         }
       }
     },
+    "V/VH/VHHK/HONGKONG_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "V/VH/VHHK/HONGKONG_TMA/sector_configs.json",
+          "sha256": "e76d38844834aec9f7aaba3b077651467a54db425852766b3c3afc38fc3e0901",
+          "size_bytes": 376
+        },
+        "definitions": {
+          "repo_path": "V/VH/VHHK/HONGKONG_TMA/sector_definitions.json",
+          "sha256": "00289f43f3a638bc5f6e15bc3186cd1890e4f8128148c13e39034867c7a5c2ad",
+          "size_bytes": 3170
+        },
+        "influence": {
+          "repo_path": "V/VH/VHHK/HONGKONG_TMA/sector_influence.json",
+          "sha256": "839cb80484a18f3a90139dfd9d245c7e6f3a3ba0d229cacbf1a17bc7c1e57bd3",
+          "size_bytes": 103
+        }
+      }
+    },
     "V/VT/VTBB/Bangkok_TMA": {
       "files": {
         "configs": {
@@ -1103,14 +2053,33 @@
           "size_bytes": 172
         }
       }
+    },
+    "Z/ZG/ZGZU/ZHUHAI_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "Z/ZG/ZGZU/ZHUHAI_TMA/sector_configs.json",
+          "sha256": "49dfe88d1edb145548f4f76ecbf7aed65db0987112e1c3d86ea98102e23e9924",
+          "size_bytes": 445
+        },
+        "definitions": {
+          "repo_path": "Z/ZG/ZGZU/ZHUHAI_TMA/sector_definitions.json",
+          "sha256": "b4981c3e261b1d21919b3d9d52bab5c09805663a7377b0f4d86bb6f6cc0c4ef4",
+          "size_bytes": 4881
+        },
+        "influence": {
+          "repo_path": "Z/ZG/ZGZU/ZHUHAI_TMA/sector_influence.json",
+          "sha256": "ad69e9ee4aeaa525f0aed43c64c02f5f846d48e1e93dca71ec0c75ce6a14618d",
+          "size_bytes": 103
+        }
+      }
     }
   },
-  "commit_sha": "ea54ac53b0ffbf9491564f18835025c1f8caff02",
+  "commit_sha": "3f7f08083dda1237fde837eea36d56a5ea6a113a",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-31/sector-data-2611.zip",
-  "published_at": "2026-10-31T06:58:08Z",
+  "published_at": "2026-10-31T12:41:00Z",
   "release_tag": "daily-2026-10-31",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f3f981d3fb4a576ac6ee734591a2403a3d2b2102fce52b2f626afb5a57c355c6",
-  "size_bytes": 148962
+  "sha256": "2edae67b141a687c0ec095ca225ba95c059371b46cb172673388e4dfb4898428",
+  "size_bytes": 208869
 }
