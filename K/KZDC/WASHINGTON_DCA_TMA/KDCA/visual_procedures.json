@@ -5,10 +5,7 @@
     {
       "id": "MOUNT_VERNON_VISUAL_01",
       "name": "Mount Vernon Visual RWY 01",
-      "aliases": [
-        "mount vernon visual",
-        "mount vernon"
-      ],
+      "aliases": ["mount vernon visual", "mount vernon"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -29,9 +26,7 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": [
-              "river"
-            ],
+            "aliases": ["river"],
             "scope": "route"
           },
           "legs": [
@@ -81,10 +76,7 @@
     {
       "id": "RIVER_VISUAL_19",
       "name": "River Visual RWY 19",
-      "aliases": [
-        "river visual",
-        "river visual nineteen"
-      ],
+      "aliases": ["river visual", "river visual nineteen"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -105,9 +97,7 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": [
-              "river"
-            ],
+            "aliases": ["river"],
             "scope": "route"
           },
           "legs": [
