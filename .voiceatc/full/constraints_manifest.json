@@ -1,9 +1,39 @@
 {
   "airports": {
+    "RCDC": {
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/RCDC/constraints.json",
+      "sha256": "b6500e5219e54b3bc48e46fa700d1857e292d7f802fd59dc4ef2f0dd7fea7f1e",
+      "size_bytes": 193
+    },
+    "RCKH": {
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/RCKH/constraints.json",
+      "sha256": "b1a5d50be8dd28889ab544360def518e76c911c384e3153abf47fb87fdb351e3",
+      "size_bytes": 1643
+    },
+    "RCSS": {
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/constraints.json",
+      "sha256": "97a91d4d4c6739ea58f502b1b39c622af08b7ebc3e06603438100e4e201bfa2b",
+      "size_bytes": 4037
+    },
     "RCTP": {
-      "repo_path": "R/RC/RCAA/TAIPEI_TMA/RCTP/constraints.json",
-      "sha256": "c7bd589d0c58f0bb9cffd99ab11d99339664b57cf20b1ea316a3728487fccad7",
-      "size_bytes": 1070
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/constraints.json",
+      "sha256": "1c23986b93c83f83e596e1ff1a67c9b3b3503a42c7d50b4c2d8b03efbad27899",
+      "size_bytes": 6380
+    },
+    "RCYU": {
+      "repo_path": "R/RC/RCAA/HUALIEN_TMA/RCYU/constraints.json",
+      "sha256": "07fbfde09afac999daeebd770bae0c6cabc09573334d8841897d87bade42dd71",
+      "size_bytes": 1046
+    },
+    "RKPD": {
+      "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/constraints.json",
+      "sha256": "74755383577c38afc63386a827f25d1e31705b5206682aa0401e40a40244ff3d",
+      "size_bytes": 381
+    },
+    "RKTU": {
+      "repo_path": "R/RK/RKRR/JUNGWON_TMA/RKTU/constraints.json",
+      "sha256": "156aa8176f3434e4d275190561797b3302d1d35c5b8779acf708986a603b936c",
+      "size_bytes": 186
     }
   },
   "published_at": "2026-10-31T06:58:17Z",

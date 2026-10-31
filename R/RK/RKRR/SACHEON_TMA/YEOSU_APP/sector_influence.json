@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RKJY_APP",
-      "airports": [
-        "RKJY"
-      ]
+      "airports": ["RKJY"]
     }
   ]
 }

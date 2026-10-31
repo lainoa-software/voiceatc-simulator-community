@@ -4,9 +4,7 @@
       "sector_config_id": "TACLOBAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVA_APP"
-          ],
+          "sector_ids": ["RPVA_APP"],
           "frequency": "120.800"
         }
       ]

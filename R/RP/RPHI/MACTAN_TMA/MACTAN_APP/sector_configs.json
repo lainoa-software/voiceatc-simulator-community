@@ -4,9 +4,7 @@
       "sector_config_id": "MACTAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVM_APP"
-          ],
+          "sector_ids": ["RPVM_APP"],
           "frequency": "124.700"
         }
       ]

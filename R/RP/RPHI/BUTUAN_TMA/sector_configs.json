@@ -4,9 +4,7 @@
       "sector_config_id": "BUTUAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RPME_APP"
-          ],
+          "sector_ids": ["RPME_APP"],
           "frequency": "121.300"
         }
       ]

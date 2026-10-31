@@ -2,28 +2,20 @@
   "sector_configs": [
     {
       "sector_config_id": "ZHUHAI_APPROACH",
-      "runway_configs": [
-        "16"
-      ],
+      "runway_configs": ["16"],
       "sectors": [
         {
-          "sector_ids": [
-            "VMMC_APP"
-          ],
+          "sector_ids": ["VMMC_APP"],
           "frequency": "119.025"
         }
       ]
     },
     {
       "sector_config_id": "HONG_KONG_RADAR",
-      "runway_configs": [
-        "34"
-      ],
+      "runway_configs": ["34"],
       "sectors": [
         {
-          "sector_ids": [
-            "VMMC_APP"
-          ],
+          "sector_ids": ["VMMC_APP"],
           "frequency": "123.950"
         }
       ]

@@ -14,9 +14,7 @@
       ],
       "sectors": [
         {
-          "sector_ids": [
-            "VHHH_APP"
-          ],
+          "sector_ids": ["VHHH_APP"],
           "frequency": "119.100"
         }
       ]

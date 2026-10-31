@@ -4,9 +4,7 @@
       "sector_config_id": "ILOILO",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVI_APP"
-          ],
+          "sector_ids": ["RPVI_APP"],
           "frequency": "121.000"
         }
       ]

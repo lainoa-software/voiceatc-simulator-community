@@ -4,9 +4,7 @@
       "sector_config_id": "OSAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RKSO_APP"
-          ],
+          "sector_ids": ["RKSO_APP"],
           "frequency": "127.900"
         }
       ]

@@ -4,9 +4,7 @@
       "sector_config_id": "PINGTUNG",
       "sectors": [
         {
-          "sector_ids": [
-            "RCDC_APP"
-          ],
+          "sector_ids": ["RCDC_APP"],
           "frequency": "124.700"
         }
       ]

@@ -4,9 +4,7 @@
       "sector_config_id": "KAOHSIUNG",
       "sectors": [
         {
-          "sector_ids": [
-            "RCKH_APP"
-          ],
+          "sector_ids": ["RCKH_APP"],
           "frequency": "124.700"
         }
       ]

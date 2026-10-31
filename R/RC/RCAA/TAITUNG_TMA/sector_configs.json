@@ -4,9 +4,7 @@
       "sector_config_id": "TAITUNG",
       "sectors": [
         {
-          "sector_ids": [
-            "RCFN_APP"
-          ],
+          "sector_ids": ["RCFN_APP"],
           "frequency": "119.400"
         }
       ]

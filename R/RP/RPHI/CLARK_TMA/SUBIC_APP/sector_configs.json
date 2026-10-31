@@ -4,9 +4,7 @@
       "sector_config_id": "SUBIC",
       "sectors": [
         {
-          "sector_ids": [
-            "RPLB_APP"
-          ],
+          "sector_ids": ["RPLB_APP"],
           "frequency": "119.200"
         }
       ]

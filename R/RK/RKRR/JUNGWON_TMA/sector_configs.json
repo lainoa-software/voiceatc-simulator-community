@@ -4,9 +4,7 @@
       "sector_config_id": "JUNGWON",
       "sectors": [
         {
-          "sector_ids": [
-            "RKTU_APP"
-          ],
+          "sector_ids": ["RKTU_APP"],
           "frequency": "134.000"
         }
       ]

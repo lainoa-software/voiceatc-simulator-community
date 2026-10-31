@@ -4,9 +4,7 @@
       "sector_config_id": "PUERTO_PRINCESA",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVP_APP"
-          ],
+          "sector_ids": ["RPVP_APP"],
           "frequency": "122.000"
         }
       ]

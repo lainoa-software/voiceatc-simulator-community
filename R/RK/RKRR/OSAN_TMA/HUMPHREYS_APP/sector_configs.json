@@ -4,9 +4,7 @@
       "sector_config_id": "HUMPHREYS",
       "sectors": [
         {
-          "sector_ids": [
-            "RKSG_APP"
-          ],
+          "sector_ids": ["RKSG_APP"],
           "frequency": "127.900"
         }
       ]

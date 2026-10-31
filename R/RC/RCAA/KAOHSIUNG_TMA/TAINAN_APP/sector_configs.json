@@ -4,9 +4,7 @@
       "sector_config_id": "TAINAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RCNN_APP"
-          ],
+          "sector_ids": ["RCNN_APP"],
           "frequency": "121.100"
         }
       ]

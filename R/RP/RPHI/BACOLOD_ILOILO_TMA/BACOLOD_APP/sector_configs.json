@@ -4,9 +4,7 @@
       "sector_config_id": "BACOLOD",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVB_APP"
-          ],
+          "sector_ids": ["RPVB_APP"],
           "frequency": "121.000"
         }
       ]

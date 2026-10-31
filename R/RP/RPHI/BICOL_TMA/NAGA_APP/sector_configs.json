@@ -4,9 +4,7 @@
       "sector_config_id": "NAGA",
       "sectors": [
         {
-          "sector_ids": [
-            "RPUN_APP"
-          ],
+          "sector_ids": ["RPUN_APP"],
           "frequency": "120.200"
         }
       ]

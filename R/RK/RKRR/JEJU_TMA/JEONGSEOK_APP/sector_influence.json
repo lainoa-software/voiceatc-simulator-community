@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RKPD_APP",
-      "airports": [
-        "RKPD"
-      ]
+      "airports": ["RKPD"]
     }
   ]
 }

@@ -4,9 +4,7 @@
       "sector_config_id": "ZAMBOANGA",
       "sectors": [
         {
-          "sector_ids": [
-            "RPMZ_APP"
-          ],
+          "sector_ids": ["RPMZ_APP"],
           "frequency": "122.700"
         }
       ]

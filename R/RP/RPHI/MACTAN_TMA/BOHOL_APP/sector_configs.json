@@ -4,9 +4,7 @@
       "sector_config_id": "BOHOL",
       "sectors": [
         {
-          "sector_ids": [
-            "RPSP_APP"
-          ],
+          "sector_ids": ["RPSP_APP"],
           "frequency": "124.700"
         }
       ]

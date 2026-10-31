@@ -4,9 +4,7 @@
       "sector_config_id": "NANGAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RCMT_APP"
-          ],
+          "sector_ids": ["RCMT_APP"],
           "frequency": "121.000"
         }
       ]

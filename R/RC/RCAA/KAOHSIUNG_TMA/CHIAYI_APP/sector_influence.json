@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RCKU_APP",
-      "airports": [
-        "RCKU"
-      ]
+      "airports": ["RCKU"]
     }
   ]
 }

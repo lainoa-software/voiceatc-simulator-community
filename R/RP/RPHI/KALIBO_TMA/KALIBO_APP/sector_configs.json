@@ -4,9 +4,7 @@
       "sector_config_id": "KALIBO",
       "sectors": [
         {
-          "sector_ids": [
-            "RPVK_APP"
-          ],
+          "sector_ids": ["RPVK_APP"],
           "frequency": "120.400"
         }
       ]

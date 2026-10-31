@@ -4,9 +4,7 @@
       "sector_config_id": "MUAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RKJB_APP"
-          ],
+          "sector_ids": ["RKJB_APP"],
           "frequency": "120.475"
         }
       ]

@@ -4,9 +4,7 @@
       "sector_config_id": "CLARK",
       "sectors": [
         {
-          "sector_ids": [
-            "RPLC_APP"
-          ],
+          "sector_ids": ["RPLC_APP"],
           "frequency": "119.200"
         }
       ]

@@ -4,9 +4,7 @@
       "sector_config_id": "ULSAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RKPU_APP"
-          ],
+          "sector_ids": ["RKPU_APP"],
           "frequency": "124.250"
         }
       ]

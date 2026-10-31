@@ -4,9 +4,7 @@
       "sector_config_id": "DAEGU",
       "sectors": [
         {
-          "sector_ids": [
-            "RKTN_APP"
-          ],
+          "sector_ids": ["RKTN_APP"],
           "frequency": "135.900"
         }
       ]

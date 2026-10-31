@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RCDC_APP",
-      "airports": [
-        "RCDC"
-      ]
+      "airports": ["RCDC"]
     }
   ]
 }

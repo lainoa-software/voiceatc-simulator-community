@@ -4,9 +4,7 @@
       "sector_config_id": "LAGUINDINGAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RPMY_APP"
-          ],
+          "sector_ids": ["RPMY_APP"],
           "frequency": "125.500"
         }
       ]

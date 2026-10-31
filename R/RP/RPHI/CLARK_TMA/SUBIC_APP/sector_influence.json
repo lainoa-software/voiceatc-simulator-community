@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RPLB_APP",
-      "airports": [
-        "RPLB"
-      ]
+      "airports": ["RPLB"]
     }
   ]
 }

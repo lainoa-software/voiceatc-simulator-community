@@ -4,9 +4,7 @@
       "sector_config_id": "MAGONG",
       "sectors": [
         {
-          "sector_ids": [
-            "RCQC_APP"
-          ],
+          "sector_ids": ["RCQC_APP"],
           "frequency": "128.100"
         }
       ]

@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RCFN_APP",
-      "airports": [
-        "RCFN"
-      ]
+      "airports": ["RCFN"]
     }
   ]
 }

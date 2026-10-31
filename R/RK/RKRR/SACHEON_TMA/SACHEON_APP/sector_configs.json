@@ -4,9 +4,7 @@
       "sector_config_id": "SACHEON",
       "sectors": [
         {
-          "sector_ids": [
-            "RKPS_APP"
-          ],
+          "sector_ids": ["RKPS_APP"],
           "frequency": "135.400"
         }
       ]

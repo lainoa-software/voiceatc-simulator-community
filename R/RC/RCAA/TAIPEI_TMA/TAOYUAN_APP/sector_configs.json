@@ -4,9 +4,7 @@
       "sector_config_id": "TAOYUAN",
       "sectors": [
         {
-          "sector_ids": [
-            "RCTP_APP"
-          ],
+          "sector_ids": ["RCTP_APP"],
           "frequency": "125.100"
         }
       ]

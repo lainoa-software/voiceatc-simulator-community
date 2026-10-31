@@ -2,9 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "RPVA_APP",
-      "airports": [
-        "RPVA"
-      ]
+      "airports": ["RPVA"]
     }
   ]
 }
