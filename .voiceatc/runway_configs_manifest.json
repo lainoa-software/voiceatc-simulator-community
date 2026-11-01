@@ -1,5 +1,5 @@
 {
-  "airport_count": 234,
+  "airport_count": 235,
   "airports": {
     "EBBR": {
       "repo_path": "E/EB/EBBU/BRUSSELS_TMA/EBBR/runway_configs.json",
@@ -808,7 +808,7 @@
     },
     "LROP": {
       "repo_path": "L/LR/LRBB/BUCHAREST_TMA/LROP/runway_configs.json",
-      "sha256": "680d9f77c0666afdb91f5ead14066449f933652497948e09f41d984a5ff0b00c",
+      "sha256": "4bf94a2c15967cbd59803bd858917b4e7c6867fb8b1aa01c7c32096f0fc789f4",
       "size_bytes": 646
     },
     "LSZH": {
@@ -1126,6 +1126,11 @@
       "sha256": "94269b4c49a0b32301dc3b3438070fee1a38e47858c61b5799b1af71a4565666",
       "size_bytes": 242
     },
+    "ULLI": {
+      "repo_path": ".voiceatc/defaults/U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
+      "sha256": "e213f129b26091429267055ed4cfcfad8df2fe9d2168633ce28569d93df54f4e",
+      "size_bytes": 242
+    },
     "UMKK": {
       "repo_path": "U/UM/UMKK/KALININGRAD_TMA/UMKK/runway_configs.json",
       "sha256": "3330fb97e9593d34d72d0042852fccec89e6cd5d311429f35dd02386626d5b9a",
@@ -1173,12 +1178,12 @@
     }
   },
   "asset_name": "runway-configs-2611.zip",
-  "commit_sha": "6587c06d7f0c22a0a2cc9812ec8b34b273f6f4fc",
+  "commit_sha": "5ff1db3d8799ae45346b73292a9399b4bc486bbd",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-01/runway-configs-2611.zip",
-  "published_at": "2026-11-01T07:29:42Z",
+  "published_at": "2026-11-01T20:55:56Z",
   "release_tag": "daily-2026-11-01",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "36342332c0cd5cb116c847a8300a5bbfca267f93082d5f791de4e60391aac726",
-  "size_bytes": 72102
+  "sha256": "d2e91cf35d9a5f0b60d590ae7b196d34395079e2f2c28074e31d36c54c99754b",
+  "size_bytes": 72437
 }

@@ -1,6 +1,6 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "6587c06d7f0c22a0a2cc9812ec8b34b273f6f4fc",
+  "commit_sha": "5ff1db3d8799ae45346b73292a9399b4bc486bbd",
   "dataset": "runway_configs",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-01/runway-configs-2611-full.zip",
   "entries": [
@@ -980,7 +980,7 @@
     {
       "id": "LROP",
       "repo_path": "L/LR/LRBB/BUCHAREST_TMA/LROP/runway_configs.json",
-      "sha256": "680d9f77c0666afdb91f5ead14066449f933652497948e09f41d984a5ff0b00c",
+      "sha256": "4bf94a2c15967cbd59803bd858917b4e7c6867fb8b1aa01c7c32096f0fc789f4",
       "size_bytes": 646
     },
     {
@@ -1362,6 +1362,19 @@
       "size_bytes": 242
     },
     {
+      "id": "ULLI",
+      "repo_path": ".voiceatc/defaults/U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
+      "sha256": "e213f129b26091429267055ed4cfcfad8df2fe9d2168633ce28569d93df54f4e",
+      "size_bytes": 242
+    },
+    {
+      "id": "ULLI",
+      "repo_path": "U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
+      "requires": ["community.airac_overrides"],
+      "sha256": "9456854ece7368dffe4c99239372142427b647f07e1809980fc2f51aae5f4c3f",
+      "size_bytes": 590
+    },
+    {
       "id": "UMKK",
       "repo_path": "U/UM/UMKK/KALININGRAD_TMA/UMKK/runway_configs.json",
       "sha256": "3330fb97e9593d34d72d0042852fccec89e6cd5d311429f35dd02386626d5b9a",
@@ -1416,11 +1429,11 @@
       "size_bytes": 266
     }
   ],
-  "entry_count": 235,
-  "generated_at": "2026-11-01T07:29:42Z",
-  "published_at": "2026-11-01T07:29:42Z",
+  "entry_count": 237,
+  "generated_at": "2026-11-01T20:55:56Z",
+  "published_at": "2026-11-01T20:55:56Z",
   "release_tag": "daily-2026-11-01",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "40f1d23d3343dd9c82903c1ef19a58bd16884bb8b4992b5bc49c5e8ad7fd1f58",
-  "size_bytes": 72522
+  "sha256": "dc13b374b72d7d72acf08882761844ebc4b7a60faa7f1ca65b141b0e510b1581",
+  "size_bytes": 73221
 }

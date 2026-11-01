@@ -1,0 +1,17 @@
+{
+  "airport": "ULLI",
+  "runway_configs": [
+    {
+      "id": "RWY28",
+      "name": "RWY28",
+      "arr": "28L",
+      "dep": "28R"
+    },
+    {
+      "id": "RWY10",
+      "name": "RWY10",
+      "arr": "10L",
+      "dep": "10R"
+    }
+  ]
+}
