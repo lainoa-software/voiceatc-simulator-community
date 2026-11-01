@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "ULLI",
+  "dest": "ULAA",
+  "routes": [
+    {
+      "id": "47649c39",
+      "route": "ULLI DCT RELNI T693 DISUP T821 MAKOG DCT ULAA",
+      "created_at": "2026-11-01T17:11:44Z",
+      "creation_airac": "2611"
+    }
+  ]
+}
