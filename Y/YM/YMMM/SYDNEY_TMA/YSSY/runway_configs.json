@@ -1,0 +1,59 @@
+{
+  "airport": "YSSY",
+  "runway_configs": [
+    {
+      "id": "34_PROPS",
+      "name": "34 PROPS: 34L/34R ARR, 34L/34R DEP",
+      "arr": "34L 34R",
+      "dep": "34L 34R"
+    },
+    {
+      "id": "16_PROPS",
+      "name": "16 PROPS: 16L/16R ARR, 16L/16R DEP",
+      "arr": "16L 16R",
+      "dep": "16L 16R"
+    },
+    {
+      "id": "SODPROPS",
+      "name": "SODPROPS (NAP pref 1): 34L ARR, 16L DEP",
+      "arr": "34L",
+      "dep": "16L"
+    },
+    {
+      "id": "16_DEP_07_ARR",
+      "name": "07 ARR, 16L/16R DEP",
+      "arr": "07",
+      "dep": "16L 16R"
+    },
+    {
+      "id": "16_DEP_25_ARR",
+      "name": "25 ARR, 16L/16R DEP",
+      "arr": "25",
+      "dep": "16L 16R"
+    },
+    {
+      "id": "25_DEP_34_ARR",
+      "name": "34L/34R ARR, 25 DEP",
+      "arr": "34L 34R",
+      "dep": "25"
+    },
+    {
+      "id": "07",
+      "name": "07 ARR, 07 DEP",
+      "arr": "07",
+      "dep": "07"
+    },
+    {
+      "id": "25",
+      "name": "25 ARR, 25 DEP",
+      "arr": "25",
+      "dep": "25"
+    },
+    {
+      "id": "CURFEW",
+      "name": "Curfew 2300-0600 local: 34L ARR, 16R DEP",
+      "arr": "34L",
+      "dep": "16R"
+    }
+  ]
+}

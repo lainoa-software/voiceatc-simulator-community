@@ -1,0 +1,26 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "SYDNEY_APP",
+      "sectors": [
+        {
+          "sector_ids": ["YSSY_APP"],
+          "frequency": "124.400"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "SYDNEY_APP_NORTH_SOUTH",
+      "sectors": [
+        {
+          "sector_ids": ["YSSY_N_APP"],
+          "frequency": "124.400"
+        },
+        {
+          "sector_ids": ["YSSY_S_APP"],
+          "frequency": "128.300"
+        }
+      ]
+    }
+  ]
+}
