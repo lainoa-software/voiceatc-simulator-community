@@ -42,6 +42,7 @@
     "U": ["UL", "UM", "UU"],
     "V": ["VA", "VH", "VT"],
     "W": ["WS", "WM"],
+    "Y": ["YM"],
     "Z": ["ZG"]
   },
   "release_compatibility": {
@@ -143,6 +144,7 @@
     "VTBB": { "authority": "navigraph_2607", "kind": "fir" },
     "WSJC": { "authority": "navigraph_2607", "kind": "fir" },
     "WMFC": { "authority": "navigraph_2607", "kind": "fir" },
+    "YMMM": { "authority": "navigraph_2607", "kind": "fir" },
     "ZGZU": { "authority": "navigraph_2607", "kind": "fir" }
   },
   "terminal_scopes": {
@@ -366,6 +368,7 @@
     "R/RP/RPHI/TUGUEGARAO_TMA": ["RPUT"],
     "W/WS/WSJC/Singapore_TMA": ["WSSS"],
     "W/WM/WMFC/Kuala_Lumpur_TMA": ["WMKK"],
+    "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
     "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"]
   }
 }
