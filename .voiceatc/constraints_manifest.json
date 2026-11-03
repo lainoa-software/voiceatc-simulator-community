@@ -34,6 +34,11 @@
       "repo_path": "R/RK/RKRR/JUNGWON_TMA/RKTU/constraints.json",
       "sha256": "156aa8176f3434e4d275190561797b3302d1d35c5b8779acf708986a603b936c",
       "size_bytes": 186
+    },
+    "YSSY": {
+      "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/constraints.json",
+      "sha256": "7f5071be830e9d7d0ae770a95824f34692fd65f44dde823d6a4331f64c2a9ca1",
+      "size_bytes": 223
     }
   },
   "published_at": "2026-11-03T16:58:27Z",

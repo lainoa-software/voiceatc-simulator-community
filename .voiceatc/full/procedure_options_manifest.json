@@ -234,6 +234,11 @@
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json",
       "sha256": "db318558406286f9ca03729a5db00443d1f41eda3e4d3f6af9dcdeb0101892df",
       "size_bytes": 456
+    },
+    "YSSY": {
+      "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/procedure_options.json",
+      "sha256": "3fe168752be7b7a6ab97eeccd45378f8b6fa7324dfe1f0471652ecbcce39cd37",
+      "size_bytes": 129
     }
   },
   "published_at": "2026-11-03T16:58:27Z",
