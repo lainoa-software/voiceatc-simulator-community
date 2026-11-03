@@ -1,12 +1,36 @@
 {
   "sector_influences": [
     {
-      "sector_id": "VTBDAPP",
-      "airports": ["VTBD"]
+      "sector_id": "VTBB_APP",
+      "airports": ["VTBD", "VTBS"]
     },
     {
-      "sector_id": "VTBBAPP",
+      "sector_id": "VTBS_APP",
       "airports": ["VTBS"]
+    },
+    {
+      "sector_id": "VTBS_DEP_S",
+      "airports": ["VTBS"]
+    },
+    {
+      "sector_id": "VTBS_ARR_S",
+      "airports": ["VTBS"]
+    },
+    {
+      "sector_id": "VTBB_APP_S",
+      "airports": ["VTBD", "VTBS"]
+    },
+    {
+      "sector_id": "VTBS_DEP_N",
+      "airports": ["VTBS"]
+    },
+    {
+      "sector_id": "VTBS_ARR_N",
+      "airports": ["VTBS"]
+    },
+    {
+      "sector_id": "VTBB_APP_N",
+      "airports": ["VTBD", "VTBS"]
     }
   ]
 }

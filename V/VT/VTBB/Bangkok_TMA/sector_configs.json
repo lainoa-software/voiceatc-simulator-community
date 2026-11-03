@@ -1,14 +1,55 @@
 {
   "sector_configs": [
     {
-      "sector_config_id": "1",
+      "sector_config_id": "BANGKOK_APP",
       "sectors": [
         {
-          "sector_ids": ["VTBDAPP"],
-          "frequency": "119.400"
+          "sector_ids": ["VTBB_APP"],
+          "frequency": "125.200"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "BANGKOK_APP_VTBS_ONLY",
+      "sectors": [
+        {
+          "sector_ids": ["VTBS_APP"],
+          "frequency": "125.200"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "BANGKOK_SPLIT_SOUTH",
+      "runway_configs": ["19_20", "21"],
+      "sectors": [
+        {
+          "sector_ids": ["VTBS_DEP_S"],
+          "frequency": "119.250"
         },
         {
-          "sector_ids": ["VTBBAPP"],
+          "sector_ids": ["VTBS_ARR_S"],
+          "frequency": "121.100"
+        },
+        {
+          "sector_ids": ["VTBB_APP_S"],
+          "frequency": "125.200"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "BANGKOK_SPLIT_NORTH",
+      "runway_configs": ["01_02", "03"],
+      "sectors": [
+        {
+          "sector_ids": ["VTBS_DEP_N"],
+          "frequency": "119.250"
+        },
+        {
+          "sector_ids": ["VTBS_ARR_N"],
+          "frequency": "121.100"
+        },
+        {
+          "sector_ids": ["VTBB_APP_N"],
           "frequency": "125.200"
         }
       ]
