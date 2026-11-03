@@ -3,14 +3,26 @@
   "runway_configs": [
     {
       "id": "20_CONFIG",
-      "name": "20 Config",
+      "name": "20 Config 0000-1500Z: 20R/20C ARR (SIPA), 20C DEP",
       "arr": "20R 20C",
       "dep": "20C"
     },
     {
       "id": "02_CONFIG",
-      "name": "02 Config",
+      "name": "02 Config 0000-1500Z: 02L/02C ARR (SIPA), 02C DEP",
       "arr": "02L 02C",
+      "dep": "02C"
+    },
+    {
+      "id": "20_NIGHT",
+      "name": "20 Night 1500-0000Z: 20R ARR, 20C DEP",
+      "arr": "20R",
+      "dep": "20C"
+    },
+    {
+      "id": "02_NIGHT",
+      "name": "02 Night 1500-0000Z: 02L ARR, 02C DEP",
+      "arr": "02L",
       "dep": "02C"
     }
   ]
