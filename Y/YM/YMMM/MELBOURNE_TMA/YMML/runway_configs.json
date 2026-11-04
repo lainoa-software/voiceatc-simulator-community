@@ -1,0 +1,53 @@
+{
+  "airport": "YMML",
+  "runway_configs": [
+    {
+      "id": "16_ARR_27_DEP",
+      "name": "NAP pref 1: 16 ARR, 27 DEP",
+      "arr": "16",
+      "dep": "27"
+    },
+    {
+      "id": "27_ARR_27_34_DEP",
+      "name": "NAP pref 1: 27 ARR, 27/34 DEP",
+      "arr": "27",
+      "dep": "27 34"
+    },
+    {
+      "id": "27_34_LAHSO",
+      "name": "High capacity: 27/34 ARR (LAHSO), 27 DEP",
+      "arr": "27 34",
+      "dep": "27"
+    },
+    {
+      "id": "09_ARR_16_DEP",
+      "name": "NAP pref 2 (day only): 09 ARR, 16 DEP",
+      "arr": "09",
+      "dep": "16"
+    },
+    {
+      "id": "27",
+      "name": "27 ARR, 27 DEP",
+      "arr": "27",
+      "dep": "27"
+    },
+    {
+      "id": "34",
+      "name": "34 ARR, 34 DEP",
+      "arr": "34",
+      "dep": "34"
+    },
+    {
+      "id": "16",
+      "name": "16 ARR, 16 DEP",
+      "arr": "16",
+      "dep": "16"
+    },
+    {
+      "id": "09",
+      "name": "09 ARR, 09 DEP",
+      "arr": "09",
+      "dep": "09"
+    }
+  ]
+}
