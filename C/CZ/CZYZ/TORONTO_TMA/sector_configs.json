@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "TORONTO_APP",
+      "sectors": [
+        {
+          "sector_ids": [
+            "CYYZ_APP"
+          ],
+          "frequency": "124.475"
+        }
+      ]
+    }
+  ]
+}

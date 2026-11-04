@@ -18,6 +18,7 @@
     }
   },
   "nationality_areas": {
+    "C": ["CZ"],
     "E": ["EB", "ED", "EF", "EG", "EH", "EI", "EK", "EN", "EP", "ES"],
     "G": ["GC"],
     "K": [],
@@ -79,6 +80,9 @@
     "retention": "until_explicit_deprecation"
   },
   "operational_areas": {
+    "CZUL": { "authority": "navigraph_2607", "kind": "fir" },
+    "CZVR": { "authority": "navigraph_2607", "kind": "fir" },
+    "CZYZ": { "authority": "navigraph_2607", "kind": "fir" },
     "EBBU": { "authority": "navigraph_2607", "kind": "fir" },
     "EDGG": { "authority": "navigraph_2607", "kind": "fir" },
     "EDMM": { "authority": "navigraph_2607", "kind": "fir" },
@@ -148,6 +152,9 @@
     "ZGZU": { "authority": "navigraph_2607", "kind": "fir" }
   },
   "terminal_scopes": {
+    "C/CZ/CZUL/MONTREAL_TMA": ["CYUL"],
+    "C/CZ/CZVR/VANCOUVER_TMA": ["CYVR"],
+    "C/CZ/CZYZ/TORONTO_TMA": ["CYYZ"],
     "E/EB/EBBU/BRUSSELS_TMA": ["EBBR"],
     "E/ED/EDGG/DUSSELDORF_TMA": ["EDDL"],
     "E/ED/EDGG/DORTMUND_TMA": ["EDLW"],
