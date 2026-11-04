@@ -1,0 +1,17 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "sectors": [
+        {
+          "sector_ids": "MSK_APP",
+          "frequency": "134.000"
+        },
+        {
+          "sector_ids": "UUEE_APP",
+          "frequency": "122.700"
+        }
+      ]
+    }
+  ]
+}

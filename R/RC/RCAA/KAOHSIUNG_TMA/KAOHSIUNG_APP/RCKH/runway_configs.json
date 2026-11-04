@@ -1,0 +1,17 @@
+{
+  "airport": "RCKH",
+  "runway_configs": [
+    {
+      "id": "09",
+      "name": "RWY 09",
+      "arr": "09",
+      "dep": "09"
+    },
+    {
+      "id": "27",
+      "name": "RWY 27",
+      "arr": "27",
+      "dep": "27"
+    }
+  ]
+}

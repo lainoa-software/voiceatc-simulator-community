@@ -1,0 +1,17 @@
+{
+  "airport": "KAVP",
+  "runway_configs": [
+    {
+      "id": "SOUTH_FLOW",
+      "name": "South Flow",
+      "arr": "22",
+      "dep": "22"
+    },
+    {
+      "id": "NORTH_FLOW",
+      "name": "North Flow",
+      "arr": "04",
+      "dep": "04"
+    }
+  ]
+}

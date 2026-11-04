@@ -1,0 +1,17 @@
+{
+  "airport": "EGGP",
+  "runway_configs": [
+    {
+      "id": "PREFERENTIAL",
+      "name": "Preferential",
+      "arr": "27",
+      "dep": "27"
+    },
+    {
+      "id": "NON_PREFERENTIAL",
+      "name": "Non-Preferential",
+      "arr": "09",
+      "dep": "09"
+    }
+  ]
+}

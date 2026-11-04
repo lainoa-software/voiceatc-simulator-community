@@ -153,7 +153,7 @@ def _write_migration_tsv(
     Write migration_ready.tsv.
 
     - Header line changed to `airac <target_airac>`.
-    - Rows whose (origin, dest) is in blank_keys get their route column cleared.
+    - Rows whose (origin, dest) is in blank_keys keep only the pair, at the row's own width.
     - All other rows written verbatim.
     """
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -186,8 +186,8 @@ def _write_migration_tsv(
             dest = parts[1].strip().upper()
 
             if (origin, dest) in blank_keys:
-                # Blank the route / creation_airac / author columns
-                fh.write(f"{origin}\t{dest}\t\t\t\n")
+                # Blank every column after the pair, keeping the row's width (5, or 6 with FL_WINDOW)
+                fh.write("\t".join([origin, dest] + [""] * (max(len(parts), 5) - 2)) + "\n")
             else:
                 fh.write(raw_line if raw_line.endswith(("\n", "\r")) else raw_line + "\n")
 

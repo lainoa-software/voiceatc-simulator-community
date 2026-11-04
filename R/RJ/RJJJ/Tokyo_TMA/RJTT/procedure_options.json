@@ -5,5 +5,31 @@
   "defaults": {
     "spawn_enabled": true,
     "init_climb": 20000
+  },
+  "sids": {
+    "ROVE3A": { "init_climb": 17000 },
+    "ROVE4B": { "init_climb": 17000 },
+    "ROVE4C": { "init_climb": 17000 },
+    "VAMOS4": { "init_climb": 23000 }
+  },
+  "stars": {
+    "AKSELV": { "spawn_enabled": false },
+    "AROSAV": { "spawn_enabled": false },
+    "MESSEV": { "spawn_enabled": false },
+    "XACV": { "spawn_enabled": false },
+    "AKSELN": { "spawn_enabled": false },
+    "AROSAN": { "spawn_enabled": false },
+    "MESSEN": { "spawn_enabled": false },
+    "XACN": { "spawn_enabled": false },
+    "AKSE2B": { "spawn_enabled": false },
+    "AROS2B": { "spawn_enabled": false },
+    "MESS2B": { "spawn_enabled": false },
+    "XAC2B": { "spawn_enabled": false },
+    "AKSE2N": { "spawn_enabled": false },
+    "AROS2N": { "spawn_enabled": false },
+    "MESS2N": { "spawn_enabled": false },
+    "XAC2N": { "spawn_enabled": false },
+    "SULP1D": { "spawn_enabled": false },
+    "SULP1S": { "spawn_enabled": false }
   }
 }

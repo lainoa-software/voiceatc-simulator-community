@@ -1,0 +1,8 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "RKPS_APP",
+      "airports": ["RKPS"]
+    }
+  ]
+}

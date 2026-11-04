@@ -42,6 +42,7 @@ class RoutesAiracMigrationTests(unittest.TestCase):
         target_airac: str = "2609",
         with_navdata: bool = True,
         aliases: dict | None = None,
+        columns: str = "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR",
     ) -> tuple[int, list[str], dict]:
         """Run the migration end to end; return (exit_code, output_lines, report)."""
         routes_path = root / "routes.tsv"
@@ -50,8 +51,7 @@ class RoutesAiracMigrationTests(unittest.TestCase):
         CONNECTIVITY_TESTS.create_graph_db(graph_db)
         CONNECTIVITY_TESTS.create_navdata_db(navdata_db)
         routes_path.write_text(
-            "airac 2608\n"
-            "ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\n"
+            f"airac 2608\n{columns}\n"
             + "".join(f"{row}\n" for row in rows),
             encoding="utf-8",
         )
@@ -133,6 +133,17 @@ class RoutesAiracMigrationTests(unittest.TestCase):
             self.assertEqual("KAAA CCC V2 AAA KDDD", entry["old_route"])
             self.assertEqual(["airway_disconnect"], [e["code"] for e in entry["errors"]])
             self.assertIn("KAAA\tKDDD\t\t\t", output_lines)
+
+    def test_a_blanked_six_column_row_stays_six_cells_wide(self) -> None:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            exit_code, output_lines, _ = self._run(
+                Path(tmp_dir),
+                [f"KAAA\tKDDD\tKAAA CCC V2 AAA KDDD\t2608\t{LAINOA}\tFL000-FL305"],
+                columns="ORIGIN\tDEST\tROUTE\tCREATION_AIRAC\tAUTHOR\tFL_WINDOW",
+            )
+
+            self.assertEqual(0, exit_code)
+            self.assertIn("KAAA\tKDDD\t\t\t\t", output_lines)
 
     def test_community_route_is_flagged_but_left_intact(self) -> None:
         with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:

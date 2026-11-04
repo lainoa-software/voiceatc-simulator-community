@@ -1,0 +1,17 @@
+{
+  "airport": "RKTL",
+  "runway_configs": [
+    {
+      "id": "35",
+      "name": "RWY 35",
+      "arr": "35",
+      "dep": "35"
+    },
+    {
+      "id": "17",
+      "name": "RWY 17",
+      "arr": "17",
+      "dep": "17"
+    }
+  ]
+}

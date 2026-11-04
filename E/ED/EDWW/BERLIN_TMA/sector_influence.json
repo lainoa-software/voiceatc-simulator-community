@@ -1,0 +1,84 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "DBAN1",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAN2",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAN3",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAS1",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAS2",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAS3",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBAS4",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN1",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN2",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS1",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS2",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN1-06",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN1-24",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN2-06",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDN2-24",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS1-06",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS1-24",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS2-06",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS2-24",
+      "airports": ["EDDB"]
+    },
+    {
+      "sector_id": "DBDS3-06",
+      "airports": ["EDDB"]
+    }
+  ]
+}

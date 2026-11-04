@@ -1,0 +1,17 @@
+{
+  "airport": "RKNY",
+  "runway_configs": [
+    {
+      "id": "33",
+      "name": "RWY 33",
+      "arr": "33",
+      "dep": "33"
+    },
+    {
+      "id": "15",
+      "name": "RWY 15",
+      "arr": "15",
+      "dep": "15"
+    }
+  ]
+}

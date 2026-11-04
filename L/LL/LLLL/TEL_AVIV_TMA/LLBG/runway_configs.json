@@ -1,0 +1,35 @@
+{
+  "airport": "LLBG",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "West",
+      "arr": "30",
+      "dep": "26"
+    },
+    {
+      "id": "DAY",
+      "name": "Day",
+      "arr": "21",
+      "dep": "26"
+    },
+    {
+      "id": "NIGHT_SHABBAT",
+      "name": "Night Shabbat",
+      "arr": "12",
+      "dep": "26"
+    },
+    {
+      "id": "EAST_FLOW",
+      "name": "East flow",
+      "arr": "12",
+      "dep": "08"
+    },
+    {
+      "id": "SINGLE_RUNWAY",
+      "name": "Single runway",
+      "arr": "26",
+      "dep": "26"
+    }
+  ]
+}

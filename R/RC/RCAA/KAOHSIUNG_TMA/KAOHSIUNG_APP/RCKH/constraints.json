@@ -1,0 +1,96 @@
+{
+  "airport": "RCKH",
+  "airac_min": 2610,
+  "stars": {
+    "HCN1G": {
+      "OASIS": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "ORION": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "KIZIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3000
+        }
+      }
+    },
+    "HCN1H": {
+      "ROTOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "FORKY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      }
+    },
+    "PARP1C": {
+      "ORION": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "KIZIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3000
+        }
+      }
+    },
+    "PORC1A": {
+      "ORION": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "KIZIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3000
+        }
+      }
+    },
+    "TNN1J": {
+      "NUMEL": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "KIZIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3000
+        }
+      }
+    },
+    "TNN1M": {
+      "SK": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "FORKY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      }
+    }
+  }
+}

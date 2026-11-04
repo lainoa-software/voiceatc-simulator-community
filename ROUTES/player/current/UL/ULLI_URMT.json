@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "ULLI",
+  "dest": "URMT",
+  "routes": [
+    {
+      "id": "8b1e966c",
+      "route": "ULLI DCT SUGIN T873 NIRGI T73 DESUD T834 BEKIP T873 IRDEK L4 EKTUT N72 UMSIS N166 ABLOG A902 PARAT DCT URMT",
+      "created_at": "2026-11-01T17:11:44Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

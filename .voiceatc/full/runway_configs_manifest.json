@@ -1,8 +1,8 @@
 {
-  "asset_name": "runway-configs-2610-full.zip",
-  "commit_sha": "5d74529e0f3308295166a8fda86faccfe8815a04",
+  "asset_name": "runway-configs-2611-full.zip",
+  "commit_sha": "6a7f6d3fa873d9cafdb30a3365a629171c36829b",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-10-14-b/runway-configs-2610-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-04/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "EBBR",
@@ -61,14 +61,14 @@
     {
       "id": "EDDV",
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDDV/runway_configs.json",
-      "sha256": "091797c50134ecae3f4aee9b047b7ebe7c03a34a1827af687790641c689ea2d7",
-      "size_bytes": 232
+      "sha256": "082fe9f2d81117851030c5278f3a38bb66846c7b5bb6e2340df7a50900507623",
+      "size_bytes": 248
     },
     {
       "id": "EDDW",
       "repo_path": "E/ED/EDWW/BREMEN_TMA/EDDW/runway_configs.json",
-      "sha256": "26b21a25c42de37b1ec6754ac0812559c484e4fd6429f40d0262bd65fe7960bc",
-      "size_bytes": 226
+      "sha256": "ccebebed1f73158abeddf7e79bd6dc6ad3e7202e8dc7d2d473e05555c326e0ee",
+      "size_bytes": 228
     },
     {
       "id": "EDFH",
@@ -97,8 +97,8 @@
     {
       "id": "EDVE",
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDVE/runway_configs.json",
-      "sha256": "854ad5af0981499d6e94dca8c970625e682f294a8c407e56fa70011acfc6db1e",
-      "size_bytes": 226
+      "sha256": "0b46cc986926f28935a520d492ed2d03365ac170ebd32d08fda32c84a0ef82c8",
+      "size_bytes": 228
     },
     {
       "id": "EDXW",
@@ -117,6 +117,12 @@
       "repo_path": "E/EG/EGTT/MANCHESTER_TMA/EGCC/runway_configs.json",
       "sha256": "3b3722ce033d6312827a7d94fccec51108b59d7d190a61ea2a9ee611d3a333c2",
       "size_bytes": 374
+    },
+    {
+      "id": "EGGP",
+      "repo_path": "E/EG/EGTT/MANCHESTER_TMA/EGGP/runway_configs.json",
+      "sha256": "205486ca029de924a790bc6b6662dff71a61f5c8c698dd389a48f2201470f8ff",
+      "size_bytes": 274
     },
     {
       "id": "EGKK",
@@ -189,6 +195,19 @@
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/runway_configs.json",
       "sha256": "c5430d06e52c94b2ce5e1f9616d84bbfe18c960e17633d2bfabd0063be9da3ba",
       "size_bytes": 284
+    },
+    {
+      "id": "EPKK",
+      "repo_path": ".voiceatc/defaults/E/EP/EPWW/KRAKOW_TMA/EPKK/runway_configs.json",
+      "sha256": "4308176fe15c4fe67e90e6418bc3542def6497fe4608fd7fbc1f1d8c864597da",
+      "size_bytes": 318
+    },
+    {
+      "id": "EPKK",
+      "repo_path": "E/EP/EPWW/KRAKOW_TMA/EPKK/runway_configs.json",
+      "requires": ["community.airac_overrides"],
+      "sha256": "0651cfbf76f5f272a0724cd743bc72568cfa2e7a0b9808ec19d22079a295cf0a",
+      "size_bytes": 742
     },
     {
       "id": "EPWA",
@@ -285,6 +304,12 @@
       "repo_path": "K/KZHU/AUSTIN_TMA/KAUS/runway_configs.json",
       "sha256": "65aada2717cd9114ff6829e5b00a21073e3007423f5308759bffb7454a6d0c25",
       "size_bytes": 386
+    },
+    {
+      "id": "KAVP",
+      "repo_path": "K/KZNY/WILKES_BARRE_TMA/KAVP/runway_configs.json",
+      "sha256": "b71b25a0c499bb627868d3dae34c3e3d51e8902db2f8a5edb151126cbbf67632",
+      "size_bytes": 258
     },
     {
       "id": "KBNA",
@@ -763,7 +788,7 @@
     {
       "id": "LEZG",
       "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/runway_configs.json",
-      "sha256": "4d5507c5b33f6f3f04fa26dfa20606ebfa52723e5c1b8d8b77402a364fb91c16",
+      "sha256": "db2a4c3e373d27c6668f56e783c0eaa13b54ba65e4574856d71a3a4479254955",
       "size_bytes": 258
     },
     {
@@ -791,6 +816,12 @@
       "size_bytes": 269
     },
     {
+      "id": "LHBP",
+      "repo_path": "L/LH/LHCC/BUDAPEST_TMA/LHBP/runway_configs.json",
+      "sha256": "1d1cf3848060b9e556bbfa2143ac15c6c419277361852be7fda52b5b33b6b1af",
+      "size_bytes": 270
+    },
+    {
       "id": "LIMC",
       "repo_path": "L/LI/LIMM/MILAN_TMA/LIMC/runway_configs.json",
       "sha256": "58666385bf38a2abb5aae824bb83e35575e1ea0b0818ba12fed6a44ed7f97c59",
@@ -801,6 +832,12 @@
       "repo_path": "L/LI/LIRR/ROME_TMA/LIRF/runway_configs.json",
       "sha256": "13c2b6be172e44dbbe088b59dd20ebc09ee46307a7b606a8ecfd0895721f3e99",
       "size_bytes": 266
+    },
+    {
+      "id": "LLBG",
+      "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/runway_configs.json",
+      "sha256": "57443ceb881dd3a30005be18c19b074cbfce2b2b91f200ae97222d1aa37e6b47",
+      "size_bytes": 554
     },
     {
       "id": "LOWG",
@@ -943,7 +980,7 @@
     {
       "id": "LROP",
       "repo_path": "L/LR/LRBB/BUCHAREST_TMA/LROP/runway_configs.json",
-      "sha256": "680d9f77c0666afdb91f5ead14066449f933652497948e09f41d984a5ff0b00c",
+      "sha256": "4bf94a2c15967cbd59803bd858917b4e7c6867fb8b1aa01c7c32096f0fc789f4",
       "size_bytes": 646
     },
     {
@@ -983,16 +1020,136 @@
       "size_bytes": 396
     },
     {
+      "id": "RCBS",
+      "repo_path": "R/RC/RCAA/KINMEN_TMA/RCBS/runway_configs.json",
+      "sha256": "79f181cc1235281004551963ccd71edd3825c643a07080837d4d23584d375397",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCDC",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/RCDC/runway_configs.json",
+      "sha256": "bce4a36dae42bcf48fb78ccc25d4466298ce4bdb3fb4d3a0d295d78264d11fa1",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCFG",
+      "repo_path": "R/RC/RCAA/MATSU_TMA/BEIGAN_APP/RCFG/runway_configs.json",
+      "sha256": "ed021f816903b02aa04366d531321f3b5714dae3a7ded56c5f1f2c7c998d8a79",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCFN",
+      "repo_path": "R/RC/RCAA/TAITUNG_TMA/RCFN/runway_configs.json",
+      "sha256": "59f775c99ed622914051f889129111aa46f9da7c73bf6ddc836c37b18feb4ab1",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCKH",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/RCKH/runway_configs.json",
+      "sha256": "ace665e4008a5cce306abe6b2ca4c6569d17e02f352418d2341883c577c67f7c",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCKU",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/RCKU/runway_configs.json",
+      "sha256": "6c0b9ee702456a8a68450f79e038cd9bd190a7e420fc9de42a633804faa4ef50",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCMQ",
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/RCMQ/runway_configs.json",
+      "sha256": "98a2a1f2bbc1a7f3c9257372841692ac90cd18059535927cce86813c4798cc87",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCMT",
+      "repo_path": "R/RC/RCAA/MATSU_TMA/NANGAN_APP/RCMT/runway_configs.json",
+      "sha256": "6b388861affe9ef4b1a5a797463f4b0e7413ea12f538920a44cc5a949c123a54",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCNN",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/RCNN/runway_configs.json",
+      "sha256": "699625e788fecb3d5ef706f03a397a33f9b4ba48ce4fcde9ba0ba2b820693b93",
+      "size_bytes": 242
+    },
+    {
+      "id": "RCQC",
+      "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/RCQC/runway_configs.json",
+      "sha256": "9e9656c2e191682827322d86a0050816e5bc4ec5f4c9bb42999a0e543a48f022",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCSS",
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/runway_configs.json",
+      "sha256": "e806db908910e493779c3186249b322dcb423d41ca48895c2df83656e8081750",
+      "size_bytes": 234
+    },
+    {
+      "id": "RCTP",
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/runway_configs.json",
+      "sha256": "08afa71642ec40a703b30a864461d916e660e9dfcca7c33397e3466c7452ae93",
+      "size_bytes": 264
+    },
+    {
+      "id": "RCYU",
+      "repo_path": "R/RC/RCAA/HUALIEN_TMA/RCYU/runway_configs.json",
+      "sha256": "08a6e69b068a77b8884503b3aab10c46bb7ce6920b580a8aaacc056d41708b20",
+      "size_bytes": 234
+    },
+    {
       "id": "RJTT",
       "repo_path": "R/RJ/RJJJ/Tokyo_TMA/RJTT/runway_configs.json",
       "sha256": "b42fbdefac45697c82686eeb886f6506095c9e7404a132e883170e6a185909bb",
       "size_bytes": 621
     },
     {
+      "id": "RKJB",
+      "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/RKJB/runway_configs.json",
+      "sha256": "5702c861bfcca176fa7f9cd5a6c5a96d7526ad26dfdf2f9c339e6e783239a341",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKJJ",
+      "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/RKJJ/runway_configs.json",
+      "sha256": "a1ae33220bc234ff2d8a8f544a93af3bd1352abe6faaf5249fc1b9b32531a34c",
+      "size_bytes": 240
+    },
+    {
+      "id": "RKJK",
+      "repo_path": "R/RK/RKRR/GUNSAN_TMA/RKJK/runway_configs.json",
+      "sha256": "6591f05a4eb757a0a831435756f5a0bdbe7b0e05d4dc9d3a2afd9333f10044fb",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKJY",
+      "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/RKJY/runway_configs.json",
+      "sha256": "d530b7ad82b2a15de6a3f2fbccc933d683bcc8dc9a8a64345035f9de9313bbc7",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKNW",
+      "repo_path": "R/RK/RKRR/WONJU_TMA/RKNW/runway_configs.json",
+      "sha256": "e9f389e20ea3df5c7cd40112c83203ef4ca4d43589cfe38fd63357afb33dfc77",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKNY",
+      "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/RKNY/runway_configs.json",
+      "sha256": "3f532717cb52130c2112f9b9b17dbeb13c0596bdcca6adedf86e1c45cb8727ef",
+      "size_bytes": 234
+    },
+    {
       "id": "RKPC",
-      "repo_path": "R/RK/RKRR/JEJU_TMA/RKPC/runway_configs.json",
-      "sha256": "33068c0e3754f97c8b654ed645392dc3de33cf0525673755b3984b88822aebbc",
-      "size_bytes": 258
+      "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/RKPC/runway_configs.json",
+      "sha256": "60f5d996df9509875838e2f088ecc94f87cd997f0debea1f61a13f66243e1e3b",
+      "size_bytes": 369
+    },
+    {
+      "id": "RKPD",
+      "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/runway_configs.json",
+      "sha256": "1cba89fcacb3cef52ef9ffadc0b15fc639e04fe911f048c0a7432f6cf58d1ffb",
+      "size_bytes": 234
     },
     {
       "id": "RKPK",
@@ -1001,16 +1158,202 @@
       "size_bytes": 256
     },
     {
+      "id": "RKPS",
+      "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/RKPS/runway_configs.json",
+      "sha256": "e30a1199bf5155f30d1eedab56b8b042a456392b4541bec322c33937d672dcfc",
+      "size_bytes": 240
+    },
+    {
+      "id": "RKPU",
+      "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/RKPU/runway_configs.json",
+      "sha256": "59f38d3603153a41fab6c71d4a065ab26f766c991a8e7e75ed677ecf42a22cec",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKSG",
+      "repo_path": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/RKSG/runway_configs.json",
+      "sha256": "d6a11d1342b16705d7b6c06cd3c074e4d6eadc150a16871960317244b11484da",
+      "size_bytes": 234
+    },
+    {
       "id": "RKSI",
-      "repo_path": "R/RK/RKRR/INCHEON_TMA/RKSI/runway_configs.json",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/RKSI/runway_configs.json",
       "sha256": "7f354f6d067cf1c84651cf38f4775e0251375109e89f3c4dba6c9a9b37228a22",
       "size_bytes": 278
     },
     {
+      "id": "RKSM",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/RKSM/runway_configs.json",
+      "sha256": "533fd025528278940048f984259fe78795152a6f9bf1e85304afc33bcec8acaa",
+      "size_bytes": 454
+    },
+    {
+      "id": "RKSO",
+      "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/RKSO/runway_configs.json",
+      "sha256": "1dba55c6b02ca7ea3ce205c4ed60d9e743d169e554e7992a084e8ddc7c55a900",
+      "size_bytes": 264
+    },
+    {
       "id": "RKSS",
-      "repo_path": "R/RK/RKRR/INCHEON_TMA/RKSS/runway_configs.json",
+      "repo_path": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/RKSS/runway_configs.json",
       "sha256": "4d8cf4e614c182d4ce1f4abd19401c2f75c8823fcab255ccec6f0be00130bfaf",
       "size_bytes": 372
+    },
+    {
+      "id": "RKTH",
+      "repo_path": "R/RK/RKRR/POHANG_TMA/POHANG_APP/RKTH/runway_configs.json",
+      "sha256": "507727fe63b145e03c139053b4e67e044a823b84cdbd116e45d1af59965e59d0",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKTL",
+      "repo_path": "R/RK/RKRR/ULJIN_TMA/RKTL/runway_configs.json",
+      "sha256": "7c94ee05ea4b8078c01de5567a25bed4e0637a1f5afa3ff886eb4e902613ea89",
+      "size_bytes": 234
+    },
+    {
+      "id": "RKTN",
+      "repo_path": "R/RK/RKRR/DAEGU_TMA/RKTN/runway_configs.json",
+      "sha256": "c849dcb6bb5bca6221f37748e381c29c8fdeb284f6f543d02b0dd9f22c7c06c0",
+      "size_bytes": 240
+    },
+    {
+      "id": "RKTU",
+      "repo_path": "R/RK/RKRR/JUNGWON_TMA/RKTU/runway_configs.json",
+      "sha256": "0e07e66b7388d4ae99fb34e5282e7c3c74c8e2ab2a3c324fa83e1bab1218cf50",
+      "size_bytes": 240
+    },
+    {
+      "id": "RPLB",
+      "repo_path": "R/RP/RPHI/CLARK_TMA/SUBIC_APP/RPLB/runway_configs.json",
+      "sha256": "d5e5d563ba3059704a67684857d9716ea2cd9284953b16a30db6b28f153ef77a",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPLC",
+      "repo_path": "R/RP/RPHI/CLARK_TMA/CLARK_APP/RPLC/runway_configs.json",
+      "sha256": "83d04f86119df11abaa7e90e0dc7508a309e49106272f5fa5b58fad99ca867f2",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPLI",
+      "repo_path": "R/RP/RPHI/LAOAG_TMA/RPLI/runway_configs.json",
+      "sha256": "044d5818243f1d6640e89487ec32930603ab8bf0a40f67915fe0fb5957c43a40",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPLK",
+      "repo_path": "R/RP/RPHI/BICOL_TMA/BICOL_APP/RPLK/runway_configs.json",
+      "sha256": "8a29134913062ed48eab97746c3f7416443efab9e18f85d4f1e594b407d080ff",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPLL",
+      "repo_path": "R/RP/RPHI/MANILA_TMA/RPLL/runway_configs.json",
+      "sha256": "8ad121c0688550db70f5e2146b2381170870ae074b75d2f32eb9adacd4dbc9ab",
+      "size_bytes": 494
+    },
+    {
+      "id": "RPMD",
+      "repo_path": "R/RP/RPHI/DAVAO_TMA/RPMD/runway_configs.json",
+      "sha256": "c76de39fae87b46c278263196581a33313868d7fdb1e3074d9d164aa1a62a440",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPME",
+      "repo_path": "R/RP/RPHI/BUTUAN_TMA/RPME/runway_configs.json",
+      "sha256": "106ce56f559ff07be6799be4ddab95efa59ecf8a18e48feb257a40e58176db42",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPMR",
+      "repo_path": "R/RP/RPHI/TAMBLER_TMA/RPMR/runway_configs.json",
+      "sha256": "d60574b10b22c5df656e0c7901eeb7a5c33290dc8ce9946d5330d1c6fd042990",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPMY",
+      "repo_path": "R/RP/RPHI/LAGUINDINGAN_TMA/RPMY/runway_configs.json",
+      "sha256": "185eef36ad9b4bac2c734000380dc6c71d027d0d987a7973b8088739538646dd",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPMZ",
+      "repo_path": "R/RP/RPHI/ZAMBOANGA_TMA/RPMZ/runway_configs.json",
+      "sha256": "20d27c28a93069e3ecd1b64608e275a43141f963c206555873fdc2bea5d61d2a",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPSP",
+      "repo_path": "R/RP/RPHI/MACTAN_TMA/BOHOL_APP/RPSP/runway_configs.json",
+      "sha256": "371a3b4ad2834b09d5e0e8a39f25dd1a22429730a0a48607765c51eed06da961",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPUN",
+      "repo_path": "R/RP/RPHI/BICOL_TMA/NAGA_APP/RPUN/runway_configs.json",
+      "sha256": "af8d9fe502892139dcd4d28abe322ad97c67c93ae8ad1bd617636a95a1775861",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPUT",
+      "repo_path": "R/RP/RPHI/TUGUEGARAO_TMA/RPUT/runway_configs.json",
+      "sha256": "a48b3a5f1ce5d839de97caa6310bed1509812df295610a257df994fb179f694b",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVA",
+      "repo_path": "R/RP/RPHI/TACLOBAN_TMA/RPVA/runway_configs.json",
+      "sha256": "fdacf9318da18887a874a9d679833aa4b2eba3b62cf4d9b7949d3bf02dcf8c01",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVB",
+      "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/RPVB/runway_configs.json",
+      "sha256": "fc109cca7f284371fc623d8b69a57aba4753bc05d2122bf1fc01627476490246",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVD",
+      "repo_path": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/RPVD/runway_configs.json",
+      "sha256": "1f811b14f51f431cc3e6639156b8765d054e6cc9df86836c77d394b01aadde6f",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVE",
+      "repo_path": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/RPVE/runway_configs.json",
+      "sha256": "031da73ccddd49caa41b8dc33098ed1c170811a3a3cecdedb00edb943dd093f7",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVI",
+      "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/RPVI/runway_configs.json",
+      "sha256": "c1f36121a69921b8c3ca782d5f016f22655baec14fe01e5ddfada6606d85f354",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVK",
+      "repo_path": "R/RP/RPHI/KALIBO_TMA/KALIBO_APP/RPVK/runway_configs.json",
+      "sha256": "d42bbcb3f5dbedb988cfcd4b63459fd67b00de6c7d37cff7f7046d68dd0c988b",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVM",
+      "repo_path": "R/RP/RPHI/MACTAN_TMA/MACTAN_APP/RPVM/runway_configs.json",
+      "sha256": "046477477a974f798e7036856b81160a75ddd66c3bd4ade4402731e6bd45b5f3",
+      "size_bytes": 432
+    },
+    {
+      "id": "RPVP",
+      "repo_path": "R/RP/RPHI/PUERTO_PRINCESA_TMA/RPVP/runway_configs.json",
+      "sha256": "f6b6ada879c3ab8ab13a6c48f309c58ef1f78eab4c832ca6fbf0a6da1e913a48",
+      "size_bytes": 234
+    },
+    {
+      "id": "RPVR",
+      "repo_path": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP/RPVR/runway_configs.json",
+      "sha256": "9b36ec2aeb10fbbbd70b58b97ce7d6feaa0cd8a0f2ce91d40078bc01f77424ef",
+      "size_bytes": 234
     },
     {
       "id": "TJSJ",
@@ -1019,16 +1362,47 @@
       "size_bytes": 242
     },
     {
+      "id": "ULLI",
+      "repo_path": ".voiceatc/defaults/U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
+      "sha256": "e213f129b26091429267055ed4cfcfad8df2fe9d2168633ce28569d93df54f4e",
+      "size_bytes": 242
+    },
+    {
+      "id": "ULLI",
+      "repo_path": "U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
+      "requires": ["community.airac_overrides"],
+      "sha256": "9456854ece7368dffe4c99239372142427b647f07e1809980fc2f51aae5f4c3f",
+      "size_bytes": 590
+    },
+    {
       "id": "UMKK",
       "repo_path": "U/UM/UMKK/KALININGRAD_TMA/UMKK/runway_configs.json",
       "sha256": "3330fb97e9593d34d72d0042852fccec89e6cd5d311429f35dd02386626d5b9a",
       "size_bytes": 354
     },
     {
+      "id": "UUEE",
+      "repo_path": "U/UU/UUWV/MOSCOW_TMA/UUEE/runway_configs.json",
+      "sha256": "c43b74c05fe21cef142ba676d47dce71c9a718813b6ff233989ee45ce9e640a6",
+      "size_bytes": 266
+    },
+    {
       "id": "VABB",
       "repo_path": "V/VA/VABF/MUMBAI_TMA/VABB/runway_configs.json",
       "sha256": "e3bf07bbb18c5229e9f4abcf048c08b0cdbfa70a7275ce0402a02a57e6427c87",
       "size_bytes": 450
+    },
+    {
+      "id": "VHHH",
+      "repo_path": "V/VH/VHHK/HONGKONG_TMA/VHHH/runway_configs.json",
+      "sha256": "7c5c9f541fb990fb17b8d59e17d2970c426dc16f0058a12547b0bdeb1f4e04f1",
+      "size_bytes": 1056
+    },
+    {
+      "id": "VMMC",
+      "repo_path": "Z/ZG/ZGZU/ZHUHAI_TMA/VMMC/runway_configs.json",
+      "sha256": "563a826a3ce3b5a5691bba4266cca24928ef787ee0eb9c684ff7d11b672ec47f",
+      "size_bytes": 234
     },
     {
       "id": "VTBD",
@@ -1043,17 +1417,29 @@
       "size_bytes": 254
     },
     {
+      "id": "WMKK",
+      "repo_path": "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/runway_configs.json",
+      "sha256": "eb726bed1f8146b8bd60ab046dfd1665b46eb0f48258f5a87397c2f4d29b6553",
+      "size_bytes": 258
+    },
+    {
       "id": "WSSS",
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/runway_configs.json",
-      "sha256": "990a71363508ee7afe6afa99a028bec5ed53d281e3a7786e3c82311ed54103a2",
-      "size_bytes": 266
+      "sha256": "517fcc7639a9b5382fb3b7e98a6359de6ef376340b604574f56b633e0a86b346",
+      "size_bytes": 608
+    },
+    {
+      "id": "YSSY",
+      "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/runway_configs.json",
+      "sha256": "98cc5473c77a82e980d72348cb111e7f957d81ed278f93e404ef8ca573c22162",
+      "size_bytes": 1150
     }
   ],
-  "entry_count": 174,
-  "generated_at": "2026-10-14T11:41:00Z",
-  "published_at": "2026-10-14T11:41:00Z",
-  "release_tag": "daily-2026-10-14-b",
+  "entry_count": 238,
+  "generated_at": "2026-11-04T07:28:24Z",
+  "published_at": "2026-11-04T07:28:24Z",
+  "release_tag": "daily-2026-11-04",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "b19fb0534e754c8b6f88dac9b26305979b6306c7d9b2fb04b1a5d82d3d36a376",
-  "size_bytes": 53873
+  "sha256": "e5af5816edd7f0234ae03e018f628f0476074e807318e66ba78bb6dd508d533e",
+  "size_bytes": 73775
 }

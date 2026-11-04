@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LLBG",
+  "dest": "LLER",
+  "routes": [
+    {
+      "id": "de7153d9",
+      "route": "LLBG DCT TOMAL J10 NURIT DCT LLER",
+      "created_at": "2026-10-16T19:42:20Z",
+      "creation_airac": "2610"
+    }
+  ]
+}

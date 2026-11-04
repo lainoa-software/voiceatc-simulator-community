@@ -9,7 +9,7 @@ row on CUR, and the player can switch to ALL or hide and show single points.
     {"airport": "LEBL", "schema": 1,
      "layers": {"VOR": true, "Low Airways": false},
      "fixes": ["SLL", {"ident": "RULOS", "lat": 41.2, "lon": 2.1}],
-     "vors": ["BCN"], "ndbs": []}
+     "vors": ["BCN"], "ndbs": [], "ils_length_nm": 25}
 
 A bare ident resolves in-game to the occurrence nearest the airport; an object with
 lat/lon resolves to the occurrence nearest that position. An omitted list leaves that
@@ -52,7 +52,11 @@ DISPLAY_FILENAME = "map_display.json"
 MANIFEST_SCHEMA_VERSION = 1
 FILE_SCHEMA_VERSION = 1
 LIST_KEYS = ("fixes", "vors", "ndbs")
-TOP_LEVEL_KEYS = {"airport", "schema", "layers", "notes", *LIST_KEYS}
+ILS_LENGTH_KEY = "ils_length_nm"
+# The game's ILS line length range (MIN/MAX_ILS_TICK_NM in scripts/world/levels/ils_spawner.gd).
+ILS_LENGTH_RANGE = (1, 50)
+SETTING_KEYS = ("layers", ILS_LENGTH_KEY, *LIST_KEYS)
+TOP_LEVEL_KEYS = {"airport", "schema", "notes", *SETTING_KEYS}
 # The game's MAPS layer names (LAYERS in scripts/ui/pref_bar/map_layer_menu_button_base.gd).
 LAYER_NAMES = (
     "VOR", "VOR Labels", "NDB", "NDB Labels", "FIX", "FIX Labels",
@@ -159,11 +163,16 @@ def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
         ensure_text_field(payload["notes"], "notes", path)
     if "layers" in payload:
         _validate_layers(payload["layers"], path)
+    if ILS_LENGTH_KEY in payload:
+        low, high = ILS_LENGTH_RANGE
+        value = payload[ILS_LENGTH_KEY]
+        if isinstance(value, bool) or not isinstance(value, int) or not low <= value <= high:
+            raise ValueError(f"{path}: '{ILS_LENGTH_KEY}' must be a whole number from {low} to {high}")
     for key in LIST_KEYS:
         if key in payload:
             _validate_list(payload[key], key, path)
-    if "layers" not in payload and not any(key in payload for key in LIST_KEYS):
-        raise ValueError(f"{path}: needs 'layers' or at least one of {', '.join(LIST_KEYS)}")
+    if not any(key in payload for key in SETTING_KEYS):
+        raise ValueError(f"{path}: needs at least one of {', '.join(SETTING_KEYS)}")
 
     canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {

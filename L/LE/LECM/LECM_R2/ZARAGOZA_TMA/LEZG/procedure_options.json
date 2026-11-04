@@ -1,0 +1,102 @@
+{
+  "airport": "LEZG",
+  "schema_version": 1,
+  "airac_min": 2503,
+  "defaults": {
+    "spawn_enabled": true
+  },
+  "stars": {
+    "AL2DCA": {
+      "spawn_enabled": false
+    },
+    "ALEP1G": {
+      "spawn_enabled": false
+    },
+    "CM2DCA": {
+      "spawn_enabled": false
+    },
+    "CM2DCB": {
+      "spawn_enabled": false
+    },
+    "CMA1G": {
+      "spawn_enabled": false
+    },
+    "CMA1X": {
+      "spawn_enabled": false
+    },
+    "GR1DCA": {
+      "spawn_enabled": false
+    },
+    "GR1DCB": {
+      "spawn_enabled": false
+    },
+    "GRAU1G": {
+      "spawn_enabled": false
+    },
+    "GRAU1X": {
+      "spawn_enabled": false
+    },
+    "LO1DCA": {
+      "spawn_enabled": false
+    },
+    "LO1DCB": {
+      "spawn_enabled": false
+    },
+    "LOBA1G": {
+      "spawn_enabled": false
+    },
+    "LOBA1X": {
+      "spawn_enabled": false
+    },
+    "ML1DCA": {
+      "spawn_enabled": false
+    },
+    "ML2DCB": {
+      "spawn_enabled": false
+    },
+    "MLA1G": {
+      "spawn_enabled": false
+    },
+    "MLA1X": {
+      "spawn_enabled": false
+    },
+    "RO1DCA": {
+      "spawn_enabled": false
+    },
+    "RO1DCB": {
+      "spawn_enabled": false
+    },
+    "RONK1G": {
+      "spawn_enabled": false
+    },
+    "RONK1X": {
+      "spawn_enabled": false
+    },
+    "SU1DCA": {
+      "spawn_enabled": false
+    },
+    "SU1DCB": {
+      "spawn_enabled": false
+    },
+    "SURC1G": {
+      "spawn_enabled": false
+    },
+    "SURC1X": {
+      "spawn_enabled": false
+    },
+    "XE1DCA": {
+      "spawn_enabled": false
+    },
+    "XE1DCB": {
+      "spawn_enabled": false
+    },
+    "XEMI1G": {
+      "spawn_enabled": false
+    },
+    "XEMI1X": {
+      "spawn_enabled": false
+    }
+  },
+  "sids": {},
+  "iaps": {}
+}

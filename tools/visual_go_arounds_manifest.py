@@ -45,6 +45,15 @@ SUPPORTED_TERMS = {
     "AF", "CA", "CD", "CF", "CI", "CR", "DF", "FA", "FC", "FD", "HF",
     "HM", "RF", "TF", "VA", "VD", "VI", "VM", "FM", "VR",
 }
+TERMINAL_POLICIES = {
+    "HM": "HOLD_INDEFINITE",
+    "HF": "HOLD_ONCE",
+    "CF": "HOLD_AT_LAST_FIX",
+    "DF": "HOLD_AT_LAST_FIX",
+    "TF": "HOLD_AT_LAST_FIX",
+    "AF": "HOLD_AT_LAST_FIX",
+    "RF": "HOLD_AT_LAST_FIX",
+}
 COORDINATE_TERMS = {"AF", "CF", "DF", "FA", "FC", "HF", "HM", "RF", "TF"}
 COURSE_TERMS = {
     "AF", "CA", "CF", "CI", "CR", "FA", "FC", "HF", "HM", "RF", "VA",
@@ -268,11 +277,7 @@ def validate_go_around_schema(payload: dict[str, Any], path: Path, tier: str = "
         for leg_index, leg in enumerate(legs):
             prior_sequence = _validate_leg(leg, f"{where}.legs[{leg_index}]", path, prior_sequence)
         terminal_term = str(legs[-1].get("path_term", "")).upper()
-        expected_policy = (
-            "HOLD_INDEFINITE" if terminal_term == "HM"
-            else "HOLD_ONCE" if terminal_term == "HF"
-            else "REQUEST_INSTRUCTIONS"
-        )
+        expected_policy = TERMINAL_POLICIES.get(terminal_term, "REQUEST_INSTRUCTIONS")
         if entry.get("terminal_policy") != expected_policy:
             raise ValueError(f"{path}: {where}.terminal_policy does not match its final leg")
 

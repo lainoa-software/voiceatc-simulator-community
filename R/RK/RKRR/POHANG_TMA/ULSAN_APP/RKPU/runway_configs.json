@@ -1,0 +1,17 @@
+{
+  "airport": "RKPU",
+  "runway_configs": [
+    {
+      "id": "36",
+      "name": "RWY 36",
+      "arr": "36",
+      "dep": "36"
+    },
+    {
+      "id": "18",
+      "name": "RWY 18",
+      "arr": "18",
+      "dep": "18"
+    }
+  ]
+}

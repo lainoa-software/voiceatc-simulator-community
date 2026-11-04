@@ -1,0 +1,17 @@
+{
+  "airport": "EPKK",
+  "runway_configs": [
+    {
+      "id": "ILS_RWY_25_DEFAULT",
+      "name": "ILS RWY 25 - default",
+      "arr": "25",
+      "dep": "25"
+    },
+    {
+      "id": "RNAV_RWY_07_EAST_WIND_CO",
+      "name": "RNAV RWY  07 - east wind configuration",
+      "arr": "07",
+      "dep": "07"
+    }
+  ]
+}

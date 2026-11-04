@@ -1,0 +1,23 @@
+{
+  "airport": "EDDB",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
+  "sids": {
+    "ARSA3M": { "spawn_enabled": false },
+    "BIKP1M": { "spawn_enabled": false },
+    "LURO3M": { "spawn_enabled": false },
+    "KISU1K": { "spawn_enabled": false },
+    "SUKI4K": { "spawn_enabled": false },
+    "ARSA3Z": { "spawn_enabled": false },
+    "GERG3Z": { "spawn_enabled": false },
+    "KISU1Z": { "spawn_enabled": false },
+    "LURO3Z": { "spawn_enabled": false },
+    "SUKI4Z": { "spawn_enabled": false },
+    "KISU1Q": { "init_climb": 8000 },
+    "SUKI3Q": { "init_climb": 8000 }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}

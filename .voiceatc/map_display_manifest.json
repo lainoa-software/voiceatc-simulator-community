@@ -4,9 +4,14 @@
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json",
       "sha256": "93693d7504edea0aaf86f636d0cb5de5a277babc1a69deae81b984221e883512",
       "size_bytes": 1149
+    },
+    "LEMD": {
+      "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/map_display.json",
+      "sha256": "99983088ec14c5f88bf6e25c0749b5759b158a32dac3d213ccdd80182fc86ec6",
+      "size_bytes": 455
     }
   },
-  "published_at": "2026-10-14T11:41:24Z",
+  "published_at": "2026-11-04T07:28:43Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

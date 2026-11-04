@@ -1,0 +1,14 @@
+{
+  "airport": "EDDW",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 4000 },
+  "sids": {
+    "GEST2Z": { "spawn_enabled": false },
+    "NIE7Z": { "spawn_enabled": false },
+    "WIMC2Z": { "spawn_enabled": false }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}

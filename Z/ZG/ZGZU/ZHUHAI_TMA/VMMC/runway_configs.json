@@ -1,0 +1,17 @@
+{
+  "airport": "VMMC",
+  "runway_configs": [
+    {
+      "id": "16",
+      "name": "RWY 16",
+      "arr": "16",
+      "dep": "16"
+    },
+    {
+      "id": "34",
+      "name": "RWY 34",
+      "arr": "34",
+      "dep": "34"
+    }
+  ]
+}

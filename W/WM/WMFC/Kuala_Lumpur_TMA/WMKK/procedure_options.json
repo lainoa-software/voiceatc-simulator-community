@@ -3,11 +3,11 @@
   "schema_version": 1,
   "airac_min": 2503,
   "defaults": { "spawn_enabled": true, "init_climb": 5000 },
-  "runways": { 
+  "runways": {
     "32L": { "init_climb": 7000 },
-    "33": { "init_climb": 6000},
-    "14R": { "init_climb": 6000},
-    "15": { "init_climb": 5000}
+    "33": { "init_climb": 6000 },
+    "14R": { "init_climb": 6000 },
+    "15": { "init_climb": 5000 }
   },
   "stars": {
     "GUPT3J": { "spawn_enabled": false },

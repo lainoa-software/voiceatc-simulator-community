@@ -1,0 +1,10 @@
+{
+  "airport": "RKNW",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "sids": {
+    "HGS1D": {
+      "init_climb": 7000
+    }
+  }
+}

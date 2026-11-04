@@ -1,0 +1,17 @@
+{
+  "airport": "RPMY",
+  "runway_configs": [
+    {
+      "id": "27",
+      "name": "RWY 27",
+      "arr": "27",
+      "dep": "27"
+    },
+    {
+      "id": "09",
+      "name": "RWY 09",
+      "arr": "09",
+      "dep": "09"
+    }
+  ]
+}

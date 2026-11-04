@@ -1,0 +1,17 @@
+{
+  "airport": "RPVE",
+  "runway_configs": [
+    {
+      "id": "06",
+      "name": "RWY 06",
+      "arr": "06",
+      "dep": "06"
+    },
+    {
+      "id": "24",
+      "name": "RWY 24",
+      "arr": "24",
+      "dep": "24"
+    }
+  ]
+}

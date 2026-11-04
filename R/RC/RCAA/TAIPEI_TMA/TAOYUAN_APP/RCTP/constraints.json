@@ -1,0 +1,354 @@
+{
+  "airport": "RCTP",
+  "airac_min": 2610,
+  "stars": {
+    "BAKE1A": {
+      "BAKER": {
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "APRIL": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "MARCH": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "FETUS": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      }
+    },
+    "BAKE1B": {
+      "BAKER": {
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "DRAK1A": {
+      "DRAKE": {
+        "altitude": {
+          "type": "at",
+          "ft": 20000
+        },
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "APRIL": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "MARCH": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "FETUS": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      }
+    },
+    "DRAK1B": {
+      "DRAKE": {
+        "altitude": {
+          "type": "at",
+          "ft": 14000
+        },
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "GRAC1A": {
+      "GRACE": {
+        "altitude": {
+          "type": "at",
+          "ft": 20000
+        },
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "APRIL": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "MARCH": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "FETUS": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4000
+        }
+      }
+    },
+    "GRAC1B": {
+      "GRACE": {
+        "altitude": {
+          "type": "at",
+          "ft": 14000
+        },
+        "speed": {
+          "type": "at_or_below",
+          "kt": 280
+        }
+      },
+      "SEPIA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "TNN1A": {
+      "MEICH": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BRAVO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "TNN1B": {
+      "MEICH": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BRAVO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "MAYOR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JUNTA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      },
+      "JUROR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      }
+    },
+    "TONG1A": {
+      "BOCCA": {
+        "altitude": {
+          "type": "at",
+          "ft": 29000
+        }
+      },
+      "ELBER": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BRAVO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "TONG1B": {
+      "BOCCA": {
+        "altitude": {
+          "type": "at",
+          "ft": 29000
+        }
+      },
+      "ELBER": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BRAVO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JAMMY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "MAYOR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "JUNTA": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      },
+      "JUROR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      },
+      "AUGUR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4700
+        }
+      }
+    }
+  }
+}

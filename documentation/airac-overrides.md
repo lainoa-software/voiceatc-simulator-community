@@ -62,3 +62,19 @@ never overwritten by compatibility output.
 Release the simulator readers before enabling website submissions with variants.
 Deploy the website after reader support reaches the selected release channels.
 Use capability names, never fixed game versions, for compatibility.
+
+## Digit-free SID and STAR keys
+
+A `procedure_options.json` key can name a SID or STAR without its revision digit:
+the exit or entry fix as in the AIP, a dot, then the route letter. `MARUN.E` is MARUN
+5E on the bundled database and MARUN 6E on the latest. The simulator also matches the
+six-character coded name (MARU6E). Under `runways`, the procedure must serve that
+runway. The key must match exactly one procedure; with none (the fix was renamed, the
+procedure withdrawn) or several, the simulator logs the key and spawns nothing from it.
+Exact names still work and win over a key that resolves to the same procedure.
+
+Builds without the `community.procedure_route_keys` capability read a digit-free key
+as a literal name. Until every live build has it, put the digit-free document in both
+`bundled` and `latest` and keep exact names in the shared default, which those builds
+receive. The validator rejects digit-free keys in the shared default, and the full
+procedure-options manifest requires the capability. EDDF's file is the example.

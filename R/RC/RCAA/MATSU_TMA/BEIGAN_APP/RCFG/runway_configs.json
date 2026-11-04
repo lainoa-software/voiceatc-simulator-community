@@ -1,0 +1,17 @@
+{
+  "airport": "RCFG",
+  "runway_configs": [
+    {
+      "id": "03",
+      "name": "RWY 03",
+      "arr": "03",
+      "dep": "03"
+    },
+    {
+      "id": "21",
+      "name": "RWY 21",
+      "arr": "21",
+      "dep": "21"
+    }
+  ]
+}

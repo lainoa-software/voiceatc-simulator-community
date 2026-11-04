@@ -1,0 +1,13 @@
+{
+  "airport": "RKTN",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "sids": {
+    "RADA1E": {
+      "init_climb": 8000
+    },
+    "RADA1W": {
+      "init_climb": 8000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "airport": "RKTN",
+  "runway_configs": [
+    {
+      "id": "31",
+      "name": "RWY 31L",
+      "arr": "31L",
+      "dep": "31L"
+    },
+    {
+      "id": "13",
+      "name": "RWY 13R",
+      "arr": "13R",
+      "dep": "13R"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "airport": "UUEE",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "PREFERENTIAL",
+      "arr": "24R 24L",
+      "dep": "24C"
+    },
+    {
+      "id": "EAST",
+      "name": "NON PREFERENTIAL",
+      "arr": "06R 06L",
+      "dep": "06C"
+    }
+  ]
+}

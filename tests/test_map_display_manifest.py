@@ -66,7 +66,8 @@ class MapDisplayManifestTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             for payload in ({"airport": "LEBL", "layers": {"ILS": False}},
-                            {"airport": "LEBL", "fixes": []}):
+                            {"airport": "LEBL", "fixes": []},
+                            {"airport": "LEBL", "ils_length_nm": 25}):
                 path = self._write(root, payload)
                 self.assertEqual("LEBL", MODULE.validate_display_file(path, root)["airport"])
 
@@ -84,7 +85,12 @@ class MapDisplayManifestTests(unittest.TestCase):
             ({**valid_payload(), "fixes": [7]}, "ident string or an object"),
             ({**valid_payload(), "vors": "BCN"}, "must be an array"),
             ({**valid_payload(), "schema": 2}, "'schema' must be 1"),
-            ({"airport": "LEBL"}, "needs 'layers'"),
+            ({**valid_payload(), "ils_length_nm": 0}, "whole number from 1 to 50"),
+            ({**valid_payload(), "ils_length_nm": 51}, "whole number from 1 to 50"),
+            ({**valid_payload(), "ils_length_nm": 25.5}, "whole number from 1 to 50"),
+            ({**valid_payload(), "ils_length_nm": "25"}, "whole number from 1 to 50"),
+            ({**valid_payload(), "ils_length_nm": True}, "whole number from 1 to 50"),
+            ({"airport": "LEBL"}, "needs at least one of"),
             (["LEBL"], "must be a JSON object"),
         ]
         for payload, fragment in cases:
@@ -124,6 +130,7 @@ class MapDisplayManifestTests(unittest.TestCase):
         """Source files only: the manifest is CI-owned (test_contributor_gate_contract.py)."""
         manifest = MODULE.build_manifest(published_at="2026-10-07T00:00:00Z")
         self.assertIn("LEBL", manifest["airports"])
+        self.assertIn("LEMD", manifest["airports"])
 
 
 if __name__ == "__main__":
