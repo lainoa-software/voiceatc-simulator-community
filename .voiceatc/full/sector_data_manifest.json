@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "4102dc33247f6a97e5d606f4cccf7e63fe3507a0",
+  "commit_sha": "6a7f6d3fa873d9cafdb30a3365a629171c36829b",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-03/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-04/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -2148,21 +2148,61 @@
       "files": {
         "configs": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_configs.json",
-          "sha256": "516414707b045e984d6c2d70e8b809b7b7c51ca202d61fb1ca31533f2dcfce04",
-          "size_bytes": 281
+          "sha256": "cd9f8bce770602e76c140a712b767c5b5d3538ccb4064cbbbfbaaa394878c756",
+          "size_bytes": 1205
         },
         "definitions": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_definitions.json",
-          "sha256": "c33fdc00b8a2ed434e21b5583e9b4ad685efd068bbe16d5d14cb72f7e770c598",
-          "size_bytes": 25291
+          "sha256": "cc43d229a0d2df4a4196703e5911e0760085ed800e6d7bf3a21d5e68c21918c5",
+          "size_bytes": 311313
         },
         "influence": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_influence.json",
-          "sha256": "3ce39a416206692f23fe93d10da30eaede915537971dddf966d666f4bafdfb78",
-          "size_bytes": 172
+          "sha256": "9fa9ca58a1c99f3913b6514cfe3af9abbc0e0cf0746be8df31aad03da2cb4c1a",
+          "size_bytes": 636
         }
       },
       "id": "V/VT/VTBB/Bangkok_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "W/WS/WSJC/Singapore_TMA/sector_configs.json",
+          "sha256": "0134c08446ab3871f51353bffb6380082458bf3b50956df0e26cef31f1df6f90",
+          "size_bytes": 203
+        },
+        "definitions": {
+          "repo_path": "W/WS/WSJC/Singapore_TMA/sector_definitions.json",
+          "sha256": "35f9113b28e26ca085bf1ba09ee70051e8ace5c116f7331bd0244d7cd39199d0",
+          "size_bytes": 12407
+        },
+        "influence": {
+          "repo_path": "W/WS/WSJC/Singapore_TMA/sector_influence.json",
+          "sha256": "242aa4b94d9f99a7c5f6c1550138e568102ca9317115fcf65651984152ee7107",
+          "size_bytes": 103
+        }
+      },
+      "id": "W/WS/WSJC/Singapore_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "Y/YM/YMMM/SYDNEY_TMA/sector_configs.json",
+          "sha256": "550d1487a100e1708a440864184012b19de561835c9a03326f38afcd42b18a6e",
+          "size_bytes": 479
+        },
+        "definitions": {
+          "repo_path": "Y/YM/YMMM/SYDNEY_TMA/sector_definitions.json",
+          "sha256": "4079aa4de577ae4ff345452df701fbfdc8a68da0e87a09617ad5d7d1a8d47e07",
+          "size_bytes": 506568
+        },
+        "influence": {
+          "repo_path": "Y/YM/YMMM/SYDNEY_TMA/sector_influence.json",
+          "sha256": "37ef9188acfb4c20a024ccba3f90075f06fe5e94341391426fcb9c38c17e397e",
+          "size_bytes": 249
+        }
+      },
+      "id": "Y/YM/YMMM/SYDNEY_TMA"
     },
     {
       "files": {
@@ -2185,11 +2225,11 @@
       "id": "Z/ZG/ZGZU/ZHUHAI_TMA"
     }
   ],
-  "entry_count": 109,
-  "generated_at": "2026-11-03T16:57:57Z",
-  "published_at": "2026-11-03T16:57:57Z",
-  "release_tag": "daily-2026-11-03",
+  "entry_count": 111,
+  "generated_at": "2026-11-04T07:28:24Z",
+  "published_at": "2026-11-04T07:28:24Z",
+  "release_tag": "daily-2026-11-04",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "2edae67b141a687c0ec095ca225ba95c059371b46cb172673388e4dfb4898428",
-  "size_bytes": 208869
+  "sha256": "292849257cefe999f567baa4878539a84f966b4394e76936bc1efdf3a67f630c",
+  "size_bytes": 316972
 }

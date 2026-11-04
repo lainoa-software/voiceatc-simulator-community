@@ -1,8 +1,8 @@
 {
   "asset_name": "misc-drawings-2611-full.zip",
-  "commit_sha": "4102dc33247f6a97e5d606f4cccf7e63fe3507a0",
+  "commit_sha": "6a7f6d3fa873d9cafdb30a3365a629171c36829b",
   "dataset": "misc_drawings",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-03/misc-drawings-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-04/misc-drawings-2611-full.zip",
   "entries": [
     {
       "id": "EDDB",
@@ -189,13 +189,37 @@
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
       "size_bytes": 21639
+    },
+    {
+      "id": "VTBD",
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/misc_drawings.json",
+      "sha256": "7b48f4d17555dd0daf6c60c53edf08023272192f828303d4870812251c914cb0",
+      "size_bytes": 41076
+    },
+    {
+      "id": "VTBS",
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/misc_drawings.json",
+      "sha256": "7b48f4d17555dd0daf6c60c53edf08023272192f828303d4870812251c914cb0",
+      "size_bytes": 41076
+    },
+    {
+      "id": "WSSS",
+      "repo_path": "W/WS/WSJC/Singapore_TMA/misc_drawings.json",
+      "sha256": "22ae32f064be1b5629b5e8329fb3b65a2c5a7e1736aa5077188b213d3a962e4c",
+      "size_bytes": 717
+    },
+    {
+      "id": "YSSY",
+      "repo_path": "Y/YM/YMMM/SYDNEY_TMA/misc_drawings.json",
+      "sha256": "d0d8b9f31337e50aa1297a6461b29967986c75b8f036bfafefab94e6a6adc8e4",
+      "size_bytes": 211908
     }
   ],
-  "entry_count": 31,
-  "generated_at": "2026-11-03T16:57:57Z",
-  "published_at": "2026-11-03T16:57:57Z",
-  "release_tag": "daily-2026-11-03",
+  "entry_count": 35,
+  "generated_at": "2026-11-04T07:28:24Z",
+  "published_at": "2026-11-04T07:28:24Z",
+  "release_tag": "daily-2026-11-04",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "383e1f78d4d97f8ad9ecadaa5502144f650309fd9548628ac2b3a77781fc00fd",
-  "size_bytes": 194736
+  "sha256": "ea200345b7d6af12a43d96f30217312d1e471884a7c63b9741ac631b661dbca7",
+  "size_bytes": 239872
 }
