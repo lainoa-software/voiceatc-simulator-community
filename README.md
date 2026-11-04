@@ -20,7 +20,7 @@ walks through choosing a task, editing, local testing, validation and submission
 |---|---|
 | Add airport data or change runway flows | [Airport](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Airport), [Runway Configs](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Runway-Configs) |
 | Select procedures or initial climbs | [Procedure Options](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Procedure-Options) |
-| Choose which fixes the radar map shows | [Map display](documentation/map-display.md) |
+| Choose which fixes the radar map shows | [Map Display](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Map-Display) |
 | Correct STAR restrictions | [Constraints](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Constraints) |
 | Add a charted visual approach | [Visual Procedures](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Visual-Procedures) |
 | Define airspace or radar geometry | [Sector Definitions](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Sector-Definitions), [MVA](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/MVA), [Misc Drawings](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Misc-Drawings) |

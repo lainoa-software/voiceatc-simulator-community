@@ -73,3 +73,11 @@ jobs:
             --published-at 2000-01-01T00:00:00Z \
             --commit-sha "${GITHUB_SHA}" > build/pr-release/summary.json
           python tools/stable_contract_guard.py --summary build/pr-release/summary.json
+      # A multi-line step on purpose: tools/validate_all.py runs the single-line python
+      # steps on contributors' machines, and this one needs the network and git.
+      - name: Check the wiki covers every document and file kind
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 "https://github.com/${GITHUB_REPOSITORY}.wiki.git" build/wiki
+          python tools/wiki_coverage.py --wiki build/wiki
