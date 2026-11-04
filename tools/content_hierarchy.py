@@ -37,6 +37,7 @@ TERMINAL_FILE_NAMES = {
     "sector_configs.json",
     "sector_definitions.json",
     "sector_influence.json",
+    "tma.json",
 }
 PROFILE_FILE_NAMES = {"colors.json", "style.json"}
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
