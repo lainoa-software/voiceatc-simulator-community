@@ -1,13 +1,17 @@
 # Map display (`map_display.json`)
 
+Contributor workflow: [Map Display](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Map-Display).
+This page owns the file contract.
+
 An airport's `map_display.json` picks what its radar map shows: the fixes, VORs and NDBs a
-controller there expects on the scope, and which MAPS layers start on or off. Without one,
-the game draws every waypoint in view.
+controller there expects on the scope, and which MAPS layers start on or off. An airport
+with no file, or a file with no lists, curates the named points its own SIDs, STARs and
+approaches use. Stable builds ignore this file.
 
 ## In the game
 
-On an airport with a file, the MAPS menu's FIX row shows **CUR / ALL**. CUR (the default)
-draws only the listed points, at every zoom level; ALL draws every waypoint, as before. The
+The MAPS menu's FIX row shows **CUR / ALL**. CUR (the default) draws only the curated
+points, at every zoom level; ALL draws every waypoint, as before. The
 VOR and NDB rows follow the same switch when the file lists them. Players can also
 right-click the map to hide a drawn point or show a nearby hidden one; their choices are kept
 per airport. Layer defaults apply until the player changes a MAPS layer at that airport;
