@@ -3,10 +3,10 @@
   "file_name": "tma.json",
   "capability": "community.tma_file",
   "services": {
-    "tower": {"needs_airport": true, "playable": false},
-    "approach_radar": {"needs_airport": false, "playable": true},
-    "approach_conventional": {"needs_airport": false, "playable": false},
-    "center": {"needs_airport": false, "playable": false}
+    "tower": { "needs_airport": true, "playable": false },
+    "approach_radar": { "needs_airport": false, "playable": true },
+    "approach_conventional": { "needs_airport": false, "playable": false },
+    "center": { "needs_airport": false, "playable": false }
   },
   "messages": {
     "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",
