@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "OEJN_APP",
+      "airports": [
+        "OEJN"
+      ]
+    }
+  ]
+}

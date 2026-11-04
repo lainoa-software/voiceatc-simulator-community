@@ -1,0 +1,22 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "OMAA_APP",
+      "airports": [
+        "OMAA"
+      ]
+    },
+    {
+      "sector_id": "OMAA_CW_APP",
+      "airports": [
+        "OMAA"
+      ]
+    },
+    {
+      "sector_id": "OMAA_NE_APP",
+      "airports": [
+        "OMAA"
+      ]
+    }
+  ]
+}

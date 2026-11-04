@@ -1,0 +1,17 @@
+{
+  "airport": "OMAA",
+  "runway_configs": [
+    {
+      "id": "31",
+      "name": "31L/31R ARR, 31L/31R DEP",
+      "arr": "31L 31R",
+      "dep": "31L 31R"
+    },
+    {
+      "id": "13",
+      "name": "13L/13R ARR, 13L/13R DEP",
+      "arr": "13L 13R",
+      "dep": "13L 13R"
+    }
+  ]
+}
