@@ -3,8 +3,21 @@
 check(payload, bundle_key, sector_ids) returns every problem as a Problem(code, where, value,
 expected, allowed), in the order the walk below meets them. Both game and community checkers must
 produce the same (code, where) list for every case in tma_cases/cases.json.
+
+check_bundle(bundle_dir) is the community-only entry point: it reads the bundle's own sector
+definitions and runway presets, so it also catches a runway preset no airport publishes.
 """
 from __future__ import annotations
+
+try:
+    from . import airac_overrides
+except ImportError:  # run as a script, or loaded by file path (tests)
+    import sys
+    from pathlib import Path
+
+    if str(Path(__file__).resolve().parent) not in sys.path:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import airac_overrides
 
 import json
 import re
@@ -333,3 +346,75 @@ def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
                 w.add("TMA_UNIT_UNKNOWN", f"{where}.go_around.to", target)
             if "climb" in go_around:
                 w.level(go_around["climb"], f"{where}.go_around.climb")
+
+
+def check_bundle(bundle_dir: Path) -> list[str]:
+    """Every problem sentence for ``<bundle_dir>/tma.json``, in walk order; empty when absent."""
+    path = bundle_dir / RULES["file_name"]
+    if not path.is_file():
+        return []
+    bundle_key = bundle_dir.name
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return [Problem("TMA_JSON_INVALID", "").message(bundle_key)]
+    problems = check(payload, bundle_key, _sector_ids(bundle_dir))
+    problems.extend(_unknown_runway_presets(payload, bundle_dir))
+    return [problem.message(bundle_key) for problem in problems]
+
+
+def _sector_ids(bundle_dir: Path) -> set[str]:
+    try:
+        document = json.loads((bundle_dir / "sector_definitions.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    if not isinstance(document, dict):
+        return set()
+    definitions = airac_overrides.resolve(document, "")
+    rows = definitions.get("sector_definitions", definitions.get("definitions", definitions.get("sectors", [])))
+    if not isinstance(rows, list):
+        return set()
+    return {_row_value(row).upper() for row in rows if isinstance(row, dict) and _row_value(row)}
+
+
+def _row_value(row: dict) -> str:
+    for key in ("sector_id", "sector", "id", "SECTOR_ID"):
+        if key in row:
+            return str(row[key])
+    return ""
+
+
+def _unknown_runway_presets(payload: object, bundle_dir: Path) -> list[Problem]:
+    """Every runway preset a layout asks for that the airport's runway_configs.json lacks."""
+    if not isinstance(payload, dict) or not isinstance(payload.get("layouts"), list):
+        return []
+    problems: list[Problem] = []
+    for index, layout in enumerate(payload["layouts"]):
+        if not isinstance(layout, dict) or not isinstance(layout.get("runways"), dict):
+            continue
+        layout_id = layout.get("id")
+        where = f'layouts[{index}] "{layout_id}"' if isinstance(layout_id, str) and layout_id else f"layouts[{index}]"
+        for code in sorted(layout["runways"]):
+            presets = layout["runways"][code]
+            if not ICAO_RE.fullmatch(code) or not isinstance(presets, list):
+                continue
+            known = _preset_ids(bundle_dir / code)
+            for preset in presets:
+                if isinstance(preset, str) and preset not in known:
+                    problems.append(
+                        Problem("TMA_RUNWAY_PRESET_UNKNOWN", f"{where}.runways.{code}", preset, expected=code)
+                    )
+    return problems
+
+
+def _preset_ids(airport_dir: Path) -> set[str]:
+    try:
+        document = json.loads((airport_dir / "runway_configs.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    if not isinstance(document, dict):
+        return set()
+    rows = document.get("runway_configs", document.get("runway_configurations", []))
+    if not isinstance(rows, list):
+        return set()
+    return {str(row["id"]) for row in rows if isinstance(row, dict) and "id" in row}
