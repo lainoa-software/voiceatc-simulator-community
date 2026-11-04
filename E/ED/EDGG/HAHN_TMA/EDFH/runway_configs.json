@@ -2,14 +2,14 @@
   "airport": "EDFH",
   "runway_configs": [
     {
-      "id": "21_CONFIG",
-      "name": "21 Config",
+      "id": "21",
+      "name": "21s",
       "arr": "21",
       "dep": "21"
     },
     {
-      "id": "03_CONFIG",
-      "name": "03 Config",
+      "id": "03",
+      "name": "03s",
       "arr": "03",
       "dep": "03"
     }

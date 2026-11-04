@@ -1,0 +1,28 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "HMM1",
+      "airports": ["EDDG", "EDLW"]
+    },
+    {
+      "sector_id": "HMM2",
+      "airports": ["EDDG", "EDLW"]
+    },
+    {
+      "sector_id": "HMM3",
+      "airports": ["EDDG", "EDLW"]
+    },
+    {
+      "sector_id": "HMM4",
+      "airports": ["EDDG", "EDLW"]
+    },
+    {
+      "sector_id": "HMM5",
+      "airports": ["EDDG", "EDLW"]
+    },
+    {
+      "sector_id": "HMM6",
+      "airports": ["EDDG", "EDLW"]
+    }
+  ]
+}

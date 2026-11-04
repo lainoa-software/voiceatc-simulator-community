@@ -1,0 +1,11 @@
+{
+  "airport": "EDLN",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 2000 },
+  "sids": {},
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}
+

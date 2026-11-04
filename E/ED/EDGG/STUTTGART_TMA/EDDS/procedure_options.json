@@ -1,8 +1,8 @@
 {
-  "airport": "edds",
+  "airport": "EDDS",
   "schema_version": 1,
   "airac_min": 2604,
-  "defaults": { "spawn_enabled": true },
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
   "transitions": { "spawn_enabled": false },
   "stars": {
     "reut5a": { "spawn_enabled": false },

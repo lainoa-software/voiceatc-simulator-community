@@ -1,0 +1,17 @@
+{
+  "airport": "EDLP",
+  "runway_configs": [
+    {
+      "id": "23",
+      "name": "23s",
+      "arr": "23",
+      "dep": "23"
+    },
+    {
+      "id": "05",
+      "name": "05s",
+      "arr": "05",
+      "dep": "05"
+    }
+  ]
+}

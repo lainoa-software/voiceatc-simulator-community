@@ -1,0 +1,19 @@
+{
+  "airport": "EDFH",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
+  "sids": {
+    "ABSI4K": { "spawn_enabled": false },
+    "ABSI4L": { "spawn_enabled": false },
+    "GEBD5L": { "init_climb": 6000 },
+    "IDAR9L": { "spawn_enabled": false },
+    "NVO3S": { "spawn_enabled": false },
+    "NVO3G": { "spawn_enabled": false },
+    "OLIV3S": { "spawn_enabled": false },
+    "RUDO1Y": { "spawn_enabled": false }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}

@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "DKA1",
+      "airports": ["EDDK"]
+    },
+    {
+      "sector_id": "DKA2",
+      "airports": ["EDDK"]
+    },
+    {
+      "sector_id": "DKA3",
+      "airports": ["EDDK"]
+    }
+  ]
+}
