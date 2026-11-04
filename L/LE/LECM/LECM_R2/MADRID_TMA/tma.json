@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "MADRID_TMA",
+    "name": "Madrid TMA"
+  },
+  "airports": [
+    "LEMD"
+  ],
+  "units": [
+    {
+      "id": "MAD_APP",
+      "call_sign": "Madrid Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "frequencies": [
+        "136.105"
+      ]
+    },
+    {
+      "id": "BAR_TWR",
+      "call_sign": "Barajas Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LEMD",
+      "frequencies": [
+        "118.080",
+        "118.155",
+        "118.680",
+        "118.980"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1AND",
+      "runways": {
+        "LEMD": [
+          "NORTH"
+        ]
+      },
+      "positions": [
+        {
+          "sector": "LEMDALN",
+          "name": "ALL",
+          "unit": "MAD_APP",
+          "frequency": "136.105",
+          "airports": [
+            "LEMD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1ASD",
+      "runways": {
+        "LEMD": [
+          "SOUTH"
+        ]
+      },
+      "positions": [
+        {
+          "sector": "LEMDALS",
+          "name": "ALL",
+          "unit": "MAD_APP",
+          "frequency": "136.105",
+          "airports": [
+            "LEMD"
+          ]
+        }
+      ]
+    }
+  ]
+}
