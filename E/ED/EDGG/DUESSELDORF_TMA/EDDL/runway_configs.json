@@ -1,0 +1,29 @@
+{
+  "airport": "EDDL",
+  "runway_configs": [
+    {
+      "id": "23",
+      "name": "23 Single",
+      "arr": "23L",
+      "dep": "23L"
+    },
+    {
+      "id": "23d",
+      "name": "23 Dual",
+      "arr": "23R",
+      "dep": "23L"
+    },
+    {
+      "id": "05",
+      "name": "05 Dual",
+      "arr": "05L",
+      "dep": "05R"
+    },
+    {
+      "id": "05d",
+      "name": "05 Dual",
+      "arr": "05R",
+      "dep": "23R"
+    }
+  ]
+}

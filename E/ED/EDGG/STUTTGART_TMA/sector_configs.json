@@ -1,0 +1,44 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDS_FULL_APP",
+      "runway_configs": ["25", "07", "21", "03"],
+      "sectors": [
+        {
+          "sector_ids": ["STG1", "STG2", "STG3", "STG5", "STG6", "REU1", "REU2"],
+          "frequency": "125.050"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDS_APP",
+      "runway_configs": ["25", "07"],
+      "sectors": [
+        {
+          "sector_ids": ["STG1", "STG2", "STG3", "STG5", "STG6", "REU1"],
+          "frequency": "125.050"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDS_N_APP",
+      "runway_configs": ["25", "07"],
+      "sectors": [
+        {
+          "sector_ids": ["STG1", "STG2", "STG3", "STG5", "STG6"],
+          "frequency": "125.050"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "EDDS_S_APP",
+      "runway_configs": ["25", "07", "21", "03"],
+      "sectors": [
+        {
+          "sector_ids": ["REU1", "REU2"],
+          "frequency": "119.200"
+        }
+      ]
+    }
+  ]
+}

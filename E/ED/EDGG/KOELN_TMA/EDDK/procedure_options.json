@@ -1,0 +1,24 @@
+{
+  "airport": "EDDK",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
+  "sids": {
+    "COL4X": { "spawn_enabled": false },
+    "COL1R": { "spawn_enabled": false },
+    "KUMI1R": { "spawn_enabled": false },
+    "NVO3W": { "spawn_enabled": false },
+    "NVO1Y": { "spawn_enabled": false },
+    "NVO1N": { "spawn_enabled": false },
+    "NVO1X": { "spawn_enabled": false },
+    "NVO1U": { "spawn_enabled": false },
+    "NVO3V": { "spawn_enabled": false },
+    "PODI1R": { "spawn_enabled": false },
+    "WIPU1R": { "spawn_enabled": false }
+
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}
+

@@ -1,0 +1,17 @@
+{
+  "airport": "EDDL",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
+  "sids": {
+    "KETE1K": { "spawn_enabled": false },
+    "KETE1U": { "spawn_enabled": false },
+    "KETE1X": { "spawn_enabled": false },
+    "KETE1Y": { "spawn_enabled": false },
+    "MODR2K": { "spawn_enabled": false }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}
+
