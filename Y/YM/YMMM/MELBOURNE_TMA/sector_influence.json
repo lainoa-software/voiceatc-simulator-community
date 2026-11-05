@@ -1,0 +1,10 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "YMML_APP",
+      "airports": [
+        "YMML"
+      ]
+    }
+  ]
+}

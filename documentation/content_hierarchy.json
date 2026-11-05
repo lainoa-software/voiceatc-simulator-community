@@ -381,6 +381,7 @@
     "R/RP/RPHI/TUGUEGARAO_TMA": ["RPUT"],
     "W/WS/WSJC/Singapore_TMA": ["WSSS"],
     "W/WM/WMFC/Kuala_Lumpur_TMA": ["WMKK"],
+    "Y/YM/YMMM/MELBOURNE_TMA": ["YMML"],
     "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
     "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"]
   }
