@@ -4,9 +4,7 @@
       "sector_config_id": "RIYADH_APP",
       "sectors": [
         {
-          "sector_ids": [
-            "OERK_APP"
-          ],
+          "sector_ids": ["OERK_APP"],
           "frequency": "120.000"
         }
       ]
@@ -15,15 +13,11 @@
       "sector_config_id": "RIYADH_EAST_WEST",
       "sectors": [
         {
-          "sector_ids": [
-            "OERK_E_APP"
-          ],
+          "sector_ids": ["OERK_E_APP"],
           "frequency": "120.000"
         },
         {
-          "sector_ids": [
-            "OERK_W_APP"
-          ],
+          "sector_ids": ["OERK_W_APP"],
           "frequency": "128.500"
         }
       ]

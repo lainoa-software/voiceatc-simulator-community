@@ -4,9 +4,7 @@
       "sector_config_id": "DOHA_APP",
       "sectors": [
         {
-          "sector_ids": [
-            "OTHH_APP"
-          ],
+          "sector_ids": ["OTHH_APP"],
           "frequency": "119.725"
         }
       ]

@@ -13,32 +13,17 @@
     "controlled": {
       "type": "filled",
       "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "uncontrolled": {
       "type": "wireframe",
       "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "history": {
       "type": "filled",
       "draw": "M -1 -2 L 1 -2 L 2 -1 L 2 1 L 1 2 L -1 2 L -2 1 L -2 -1 L -1 -2",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     }
   }
 }
