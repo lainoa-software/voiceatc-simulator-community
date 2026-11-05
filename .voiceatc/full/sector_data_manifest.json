@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "6a7f6d3fa873d9cafdb30a3365a629171c36829b",
+  "commit_sha": "2f8553e9f3ef1b2c75f3612f3e22f98c84b04459",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-04/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-05/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -533,13 +533,19 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
-          "sha256": "cc50c66ccbc9daefd77941a7faa026ad0a6456cf1c8277ddaa47c5ffd34afdfa",
-          "size_bytes": 36472
+          "sha256": "54431a9e55c43daa6a862c355936181d98d1cd727330db7413fb08bb750069b3",
+          "size_bytes": 36368
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
           "sha256": "e187e5b1625d6fe195a4a27e36098352b36fd7943ea779f6ff1d970c49749cf4",
           "size_bytes": 283
+        },
+        "tma": {
+          "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "34790a50735d0827e1aea78db03cb76b69e456bc31691db91445df0d75d37050",
+          "size_bytes": 1293
         }
       },
       "id": "L/LE/LECB/LECB_W/BARCELONA_TMA"
@@ -613,13 +619,19 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
-          "sha256": "f488b978398ab5e2e4e91a26d471b6a14455e4e3e0ee44db12518b088cefbc97",
-          "size_bytes": 1125
+          "sha256": "b35ba2d487727bf70c2a674f53ef119ba62896d422a31a6c2501af22bdfb58f8",
+          "size_bytes": 2217
         },
         "influence": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
           "sha256": "060a6b5963d6b2d512954d2757a275700b4ae2beb78737004e7284d792556fa4",
           "size_bytes": 126
+        },
+        "tma": {
+          "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "8d7811eb996f9739a671f8135f3b60804846f11e0c6fa6f85f4a4dc812befa3e",
+          "size_bytes": 1052
         }
       },
       "id": "L/LE/LECM/LECM_R2/MADRID_TMA"
@@ -2226,10 +2238,10 @@
     }
   ],
   "entry_count": 111,
-  "generated_at": "2026-11-04T07:28:24Z",
-  "published_at": "2026-11-04T07:28:24Z",
-  "release_tag": "daily-2026-11-04",
+  "generated_at": "2026-11-05T07:53:37Z",
+  "published_at": "2026-11-05T07:53:37Z",
+  "release_tag": "daily-2026-11-05",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "292849257cefe999f567baa4878539a84f966b4394e76936bc1efdf3a67f630c",
-  "size_bytes": 316972
+  "sha256": "7bbf1d64b2a92fa91367b5cc06aeecf3e28ef666a1a91c6696f655c72b75e473",
+  "size_bytes": 318003
 }
