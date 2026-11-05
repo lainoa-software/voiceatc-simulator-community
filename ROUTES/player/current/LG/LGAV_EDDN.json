@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LGAV",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "5ba3c223",
+      "route": "LGAV DCT KOR L53 ENOXA Q920 VIE L612 CHI Z906 ROKIB Z468 BRENO M726 MAH DCT ROKIL DCT ERNAS M726 UPALA DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

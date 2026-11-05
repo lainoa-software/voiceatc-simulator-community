@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EHAM",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "bf19e101",
+      "route": "EHAM DCT ARNEM T196 TEBRO DCT BOTTA DCT ONUNE DCT GMH DCT ARPEG Z52 MASEK L604 GASKA DCT BOREP DCT DODAS DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LYBE",
+  "routes": [
+    {
+      "id": "9b78fc04",
+      "route": "EDDN DCT NUB DCT EXITI DCT TIVDA DCT PEPIK DCT BERVA P974 TABIN L616 ALAMU DCT KEROP P192 TISAK DCT LYBE",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

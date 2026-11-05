@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LFPG",
+  "routes": [
+    {
+      "id": "290d3960",
+      "route": "EDDN DCT SUKAD DCT COSJE T892 BETEX DCT IDOSA Y180 GEBKI DCT RAPOR Z157 VEDUS DCT LFPG",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EGSS",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "9ef61d98",
+      "route": "EGSS DCT CLN DCT LOGAN DCT SUMUM DCT SASKI L179 NIK M624 REMBA UL607 SPI T180 NIVNU T847 KULZO DCT EMGOD L607 UBIDU L984 RUDUS T109 HAREM DCT DER25 DCT TAKUT DCT LETKU DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

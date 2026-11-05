@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LYBE",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "63067771",
+      "route": "LYBE DCT TADAM M127 LULIK N739 BABIT DCT SOPRO DCT ARSIN DCT SASAL DCT BADIT DCT DOSEL DCT AKINI Z109 UPALA DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

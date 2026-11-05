@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LRCL",
+  "routes": [
+    {
+      "id": "22b8a8e1",
+      "route": "EDDN DCT BOLSI DCT ASPAT DCT ESEGA DCT MAREG L175 ANEXA Q350 ERGOM DCT NARKA Z941 ATSOS DCT LRCL",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}
