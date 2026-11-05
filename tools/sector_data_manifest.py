@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 try:
-    from . import airac_overrides, tma_checker
+    from . import airac_overrides
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -11,7 +11,6 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
-    import tma_checker
     from content_files import content_files
 
 import argparse
@@ -32,7 +31,6 @@ SECTOR_FILE_NAMES = {
     "configs": "sector_configs.json",
     "definitions": "sector_definitions.json",
     "influence": "sector_influence.json",
-    "tma": "tma.json",
 }
 FILE_KIND_BY_NAME = {file_name: kind for kind, file_name in SECTOR_FILE_NAMES.items()}
 FILE_KIND_ORDER = ("configs", "definitions", "influence")
@@ -288,22 +286,7 @@ def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root
         "definitions": validate_sector_definitions_file(bundle_files["definitions"], root),
         "influence": validate_sector_influence_file(bundle_files["influence"], root),
     }
-    if "tma" in bundle_files:
-        problems = tma_checker.check_bundle(bundle_dir)
-        if problems:
-            raise ValueError("\n".join(problems))
-        raw_bytes = bundle_files["tma"].read_bytes()
-        files["tma"] = {
-            "repo_path": safe_repo_path(bundle_files["tma"], root),
-            "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-            "size_bytes": len(raw_bytes),
-            "requires": [tma_checker.RULES["capability"]],
-        }
-    documents = {
-        kind: json.loads(path.read_text(encoding="utf-8"))
-        for kind, path in bundle_files.items()
-        if kind in FILE_KIND_ORDER
-    }
+    documents = {kind: json.loads(path.read_text(encoding="utf-8")) for kind, path in bundle_files.items()}
     if any("airac_overrides" in document for document in documents.values()):
         for tier in ("", *airac_overrides.TIERS):
             resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
