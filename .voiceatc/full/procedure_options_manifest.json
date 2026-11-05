@@ -6,24 +6,44 @@
       "size_bytes": 689
     },
     "EDDF": {
-      "repo_path": "E/ED/EDGG/EDDF_TMA/EDDF/procedure_options.json",
+      "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_options.json",
       "sha256": "c378001d8b245bbddd76c7c6a2f6358978fd21f18643bd52e69c3d695b5efd8b",
       "size_bytes": 8368
+    },
+    "EDDG": {
+      "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_options.json",
+      "sha256": "f8be4a92f410b48cfbab357773a007c8cd4d438315a440d9ae03182ff7c8dd56",
+      "size_bytes": 361
     },
     "EDDH": {
       "repo_path": "E/ED/EDWW/HAMBURG_TMA/EDDH/procedure_options.json",
       "sha256": "0e2ba0c510197009ed0a26f6f6501bc774a59eb95c4161333d73a98465307b0d",
       "size_bytes": 462
     },
+    "EDDK": {
+      "repo_path": "E/ED/EDGG/KOELN_TMA/EDDK/procedure_options.json",
+      "sha256": "8aa351254fc84ff5e3c31679e4542a60e5c8077001f70506c485e31b71ab6923",
+      "size_bytes": 647
+    },
+    "EDDL": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDDL/procedure_options.json",
+      "sha256": "1be18b0051dd4e992f979cdf58e6847f2d380bab59a45dbe082a5f742584adb5",
+      "size_bytes": 403
+    },
     "EDDN": {
       "repo_path": "E/ED/EDMM/EDDN_TMA/EDDN/procedure_options.json",
       "sha256": "ba35756cba73c6194420f80fbe4dc85f73703eab366860dc337d5a9f8edc6e8c",
       "size_bytes": 1868
     },
+    "EDDR": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/EDDR/procedure_options.json",
+      "sha256": "8cd1de4cb291f837a817f87dfcc7114e6ba8a6d51044c6d7c6293aad0525a3b9",
+      "size_bytes": 392
+    },
     "EDDS": {
-      "repo_path": "E/ED/EDGG/EDDS_TMA/EDDS/procedure_options.json",
-      "sha256": "d2c1cd570c31c4198fe063914fa78cec79c68cd5cba1e0d00c79dcd155507802",
-      "size_bytes": 1748
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDDS/procedure_options.json",
+      "sha256": "0bbe27481c3de801a3345e66595c042791c794f59f28ab2121a4ac477734f46e",
+      "size_bytes": 1768
     },
     "EDDV": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDDV/procedure_options.json",
@@ -34,6 +54,41 @@
       "repo_path": "E/ED/EDWW/BREMEN_TMA/EDDW/procedure_options.json",
       "sha256": "f836f8b6743462855544b0773ddf7af063a8ccd52c0c9d38a141017d46b2299c",
       "size_bytes": 318
+    },
+    "EDFH": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/EDFH/procedure_options.json",
+      "sha256": "289909c7dc1d6aa9dec9ad2c9bedc165b1ff88abd684bc8bf503f4006cc2c34e",
+      "size_bytes": 523
+    },
+    "EDLN": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDLN/procedure_options.json",
+      "sha256": "f88cefa5a90085b238f6ee22c055c7a486540baea1535c38add50ff2efa4be95",
+      "size_bytes": 191
+    },
+    "EDLP": {
+      "repo_path": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLP/procedure_options.json",
+      "sha256": "3c392f8531a0fd5f0417568ea28de1a5e159bda0b45b3823b664f950177b8c10",
+      "size_bytes": 191
+    },
+    "EDLV": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDLV/procedure_options.json",
+      "sha256": "c4791624333ddf6cde40ab853a5e900bf4ce660c6ed9799d52b5a4f3817d1e3e",
+      "size_bytes": 191
+    },
+    "EDLW": {
+      "repo_path": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLW/procedure_options.json",
+      "sha256": "63a088289e83cbb69733a65d134139f37d2bbbd2725ed4781fd92e1c98824c65",
+      "size_bytes": 191
+    },
+    "EDSB": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDSB/procedure_options.json",
+      "sha256": "a10b44339c6e45143ea0eccee98e265b6e68c49fa1765fef4aff19560749ad12",
+      "size_bytes": 360
+    },
+    "EDTL": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDTL/procedure_options.json",
+      "sha256": "ea75b5aae9027b408296d99b4188aab695e92373eb0f7ee2843607cb2e8fbf67",
+      "size_bytes": 438
     },
     "EDVE": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDVE/procedure_options.json",
@@ -234,6 +289,11 @@
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json",
       "sha256": "db318558406286f9ca03729a5db00443d1f41eda3e4d3f6af9dcdeb0101892df",
       "size_bytes": 456
+    },
+    "YMML": {
+      "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/YMML/procedure_options.json",
+      "sha256": "91ead0f0ba8a6c9c93666ac3862765a9432c0333a4b7809eb3e7983f73decf5a",
+      "size_bytes": 139
     },
     "YSSY": {
       "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/procedure_options.json",

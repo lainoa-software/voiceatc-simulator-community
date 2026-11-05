@@ -5,7 +5,18 @@
       "runway_configs": ["27", "09", "21", "03"],
       "sectors": [
         {
-          "sector_ids": ["EIF1", "EIF2", "EIF3", "PFA1", "PFA2", "PFA3", "PFA4", "PFA5", "PFA6", "PFA7"],
+          "sector_ids": [
+            "EIF1",
+            "EIF2",
+            "EIF3",
+            "PFA1",
+            "PFA2",
+            "PFA3",
+            "PFA4",
+            "PFA5",
+            "PFA6",
+            "PFA7"
+          ],
           "frequency": "125.600"
         }
       ]
@@ -25,7 +36,15 @@
       "runway_configs": ["27", "09"],
       "sectors": [
         {
-          "sector_ids": ["PFA1", "PFA2", "PFA3", "PFA4", "PFA5", "PFA6", "PFA7"],
+          "sector_ids": [
+            "PFA1",
+            "PFA2",
+            "PFA3",
+            "PFA4",
+            "PFA5",
+            "PFA6",
+            "PFA7"
+          ],
           "frequency": "125.600"
         }
       ]

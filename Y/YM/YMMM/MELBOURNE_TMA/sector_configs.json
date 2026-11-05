@@ -4,9 +4,7 @@
       "sector_config_id": "MELBOURNE_APP",
       "sectors": [
         {
-          "sector_ids": [
-            "YMML_APP"
-          ],
+          "sector_ids": ["YMML_APP"],
           "frequency": "132.000"
         }
       ]

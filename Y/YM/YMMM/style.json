@@ -13,42 +13,22 @@
     "octagon_dot": {
       "type": "wireframe",
       "draw": "M -2 -5 L 2 -5 L 5 -2 L 5 2 L 2 5 L -2 5 L -5 2 L -5 -2 L -2 -5 M -1 0 L 1 0 M 0 -1 L 0 1",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "octagon": {
       "type": "wireframe",
       "draw": "M -2 -5 L 2 -5 L 5 -2 L 5 2 L 2 5 L -2 5 L -5 2 L -5 -2 L -2 -5",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "cross": {
       "type": "wireframe",
       "draw": "M -4 0 L 4 0 M 0 -4 L 0 4",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "history": {
       "type": "filled",
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     }
   }
 }

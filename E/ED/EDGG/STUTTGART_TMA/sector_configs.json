@@ -5,7 +5,15 @@
       "runway_configs": ["25", "07", "21", "03"],
       "sectors": [
         {
-          "sector_ids": ["STG1", "STG2", "STG3", "STG5", "STG6", "REU1", "REU2"],
+          "sector_ids": [
+            "STG1",
+            "STG2",
+            "STG3",
+            "STG5",
+            "STG6",
+            "REU1",
+            "REU2"
+          ],
           "frequency": "125.050"
         }
       ]
