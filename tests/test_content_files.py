@@ -32,7 +32,6 @@ CONTENT_NAMES = (
     "sector_configs.json",
     "sector_definitions.json",
     "sector_influence.json",
-    "tma.json",
     "misc_drawings.json",
     "colors.json",
     "style.json",
