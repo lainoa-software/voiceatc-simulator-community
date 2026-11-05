@@ -1,6 +1,6 @@
 {
-  "airports": ["EDDG", "EDLP", "EDLW"],
-  "runway_configs": ["25", "07", "21", "03", "23", "05"],
+  "airports": ["EDDG"],
+  "runway_configs": ["25", "07"],
   "line_sections": [
     {
       "color": "#8c8c8c",
