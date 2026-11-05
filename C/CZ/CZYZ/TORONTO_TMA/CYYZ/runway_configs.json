@@ -1,0 +1,29 @@
+{
+  "airport": "CYYZ",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "West: 23/24R ARR, 24L DEP",
+      "arr": "23 24R",
+      "dep": "24L"
+    },
+    {
+      "id": "EAST",
+      "name": "East: 05/06L ARR, 06R DEP",
+      "arr": "05 06L",
+      "dep": "06R"
+    },
+    {
+      "id": "NORTH",
+      "name": "North: 33R ARR, 33L DEP",
+      "arr": "33R",
+      "dep": "33L"
+    },
+    {
+      "id": "SOUTH",
+      "name": "South: 15L ARR, 15R DEP",
+      "arr": "15L",
+      "dep": "15R"
+    }
+  ]
+}

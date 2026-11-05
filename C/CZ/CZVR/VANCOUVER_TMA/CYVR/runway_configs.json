@@ -1,0 +1,29 @@
+{
+  "airport": "CYVR",
+  "runway_configs": [
+    {
+      "id": "WEST",
+      "name": "West: 26R ARR, 26L DEP",
+      "arr": "26R",
+      "dep": "26L"
+    },
+    {
+      "id": "EAST",
+      "name": "East: 08L ARR, 08R DEP",
+      "arr": "08L",
+      "dep": "08R"
+    },
+    {
+      "id": "WEST_SINGLE",
+      "name": "West single runway: 26L ARR/DEP",
+      "arr": "26L",
+      "dep": "26L"
+    },
+    {
+      "id": "EAST_SINGLE",
+      "name": "East single runway: 08R ARR/DEP",
+      "arr": "08R",
+      "dep": "08R"
+    }
+  ]
+}
