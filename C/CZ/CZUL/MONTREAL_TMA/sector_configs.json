@@ -4,9 +4,7 @@
       "sector_config_id": "MONTREAL_APP",
       "sectors": [
         {
-          "sector_ids": [
-            "CYUL_APP"
-          ],
+          "sector_ids": ["CYUL_APP"],
           "frequency": "118.900"
         }
       ]

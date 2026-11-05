@@ -4,9 +4,7 @@
       "sector_config_id": "VANCOUVER_APP",
       "sectors": [
         {
-          "sector_ids": [
-            "CYVR_APP"
-          ],
+          "sector_ids": ["CYVR_APP"],
           "frequency": "133.100"
         }
       ]

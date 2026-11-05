@@ -13,42 +13,22 @@
     "diamond_filled": {
       "type": "filled",
       "draw": "M 0 -5 L 5 0 L 0 5 L -5 0 L 0 -5",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "diamond": {
       "type": "wireframe",
       "draw": "M 0 -5 L 5 0 L 0 5 L -5 0 L 0 -5",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "plus": {
       "type": "wireframe",
       "draw": "M -4 0 L 4 0 M 0 -4 L 0 4",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     },
     "history": {
       "type": "filled",
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ]
+      "connection_points": [[0, 0]]
     }
   }
 }
