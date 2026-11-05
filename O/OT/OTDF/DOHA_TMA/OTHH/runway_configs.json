@@ -1,0 +1,17 @@
+{
+  "airport": "OTHH",
+  "runway_configs": [
+    {
+      "id": "34",
+      "name": "34L/34R ARR, 34L/34R DEP",
+      "arr": "34L 34R",
+      "dep": "34L 34R"
+    },
+    {
+      "id": "16",
+      "name": "16L/16R ARR, 16L/16R DEP",
+      "arr": "16L 16R",
+      "dep": "16L 16R"
+    }
+  ]
+}

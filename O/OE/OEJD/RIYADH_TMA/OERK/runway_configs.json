@@ -1,0 +1,17 @@
+{
+  "airport": "OERK",
+  "runway_configs": [
+    {
+      "id": "33",
+      "name": "33L/33R ARR, 33L/33R DEP",
+      "arr": "33L 33R",
+      "dep": "33L 33R"
+    },
+    {
+      "id": "15",
+      "name": "15L/15R ARR, 15L/15R DEP",
+      "arr": "15L 15R",
+      "dep": "15L 15R"
+    }
+  ]
+}

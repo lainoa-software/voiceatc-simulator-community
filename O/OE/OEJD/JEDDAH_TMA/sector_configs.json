@@ -1,0 +1,15 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "JEDDAH_APP",
+      "sectors": [
+        {
+          "sector_ids": [
+            "OEJN_APP"
+          ],
+          "frequency": "124.000"
+        }
+      ]
+    }
+  ]
+}

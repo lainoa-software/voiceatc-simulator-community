@@ -1,0 +1,32 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "ABU_DHABI_APP",
+      "sectors": [
+        {
+          "sector_ids": [
+            "OMAA_APP"
+          ],
+          "frequency": "124.400"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "ABU_DHABI_CENTRAL_WEST_NORTH_EAST",
+      "sectors": [
+        {
+          "sector_ids": [
+            "OMAA_CW_APP"
+          ],
+          "frequency": "124.625"
+        },
+        {
+          "sector_ids": [
+            "OMAA_NE_APP"
+          ],
+          "frequency": "135.350"
+        }
+      ]
+    }
+  ]
+}

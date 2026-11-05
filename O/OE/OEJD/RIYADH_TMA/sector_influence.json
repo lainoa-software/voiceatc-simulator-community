@@ -1,0 +1,22 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "OERK_APP",
+      "airports": [
+        "OERK"
+      ]
+    },
+    {
+      "sector_id": "OERK_E_APP",
+      "airports": [
+        "OERK"
+      ]
+    },
+    {
+      "sector_id": "OERK_W_APP",
+      "airports": [
+        "OERK"
+      ]
+    }
+  ]
+}
