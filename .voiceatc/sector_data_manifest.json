@@ -1,23 +1,175 @@
 {
   "asset_name": "sector-data-2611.zip",
-  "bundle_count": 111,
+  "bundle_count": 124,
   "bundles": {
-    "E/ED/EDGG/EDDF_TMA": {
+    "C/CZ/CZUL/MONTREAL_TMA": {
       "files": {
         "configs": {
-          "repo_path": "E/ED/EDGG/EDDF_TMA/sector_configs.json",
-          "sha256": "58e9891c7f2945a8b2fb84047cd82f5f1268b699e24f97a05f5ff040a71df169",
-          "size_bytes": 225
+          "repo_path": "C/CZ/CZUL/MONTREAL_TMA/sector_configs.json",
+          "sha256": "c93cd7bec4c4d690252dc124daa2abd8fd2a48afd6e5c769ae077622e20d6292",
+          "size_bytes": 202
         },
         "definitions": {
-          "repo_path": "E/ED/EDGG/EDDF_TMA/sector_definitions.json",
+          "repo_path": "C/CZ/CZUL/MONTREAL_TMA/sector_definitions.json",
+          "sha256": "832777d3478bfe80b08b0d8519ed41f8668852b078cad811e02a20b4eba7019e",
+          "size_bytes": 94645
+        },
+        "influence": {
+          "repo_path": "C/CZ/CZUL/MONTREAL_TMA/sector_influence.json",
+          "sha256": "c15826bc1646ea8a9a1d4c0126db7b9a3c195fdb8f6ed7dcd8b5d246e6f350f4",
+          "size_bytes": 103
+        }
+      }
+    },
+    "C/CZ/CZVR/VANCOUVER_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_configs.json",
+          "sha256": "9535e87bd7db22c51bf5875d310377ada9d308e0b94832f40071f6f29653f02d",
+          "size_bytes": 203
+        },
+        "definitions": {
+          "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_definitions.json",
+          "sha256": "ca1a740f6ac0bc97cf10621f79009cd55a4c41249674e75298f94468e93c6ebd",
+          "size_bytes": 433196
+        },
+        "influence": {
+          "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_influence.json",
+          "sha256": "a978babc9a9ccddee569c768bf69c9a2d1240aa84c60a7cc669edddff15a554b",
+          "size_bytes": 103
+        }
+      }
+    },
+    "C/CZ/CZYZ/TORONTO_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "C/CZ/CZYZ/TORONTO_TMA/sector_configs.json",
+          "sha256": "66ecb6f8bdfb3d884dd298f98d3ce86a166db2e6eb508a628cb1e5c3efe63740",
+          "size_bytes": 201
+        },
+        "definitions": {
+          "repo_path": "C/CZ/CZYZ/TORONTO_TMA/sector_definitions.json",
+          "sha256": "ce1cdfe57cfb42b0bfc5f694ba4b91a90695f4e6c1dae10b771ea442432d283e",
+          "size_bytes": 76484
+        },
+        "influence": {
+          "repo_path": "C/CZ/CZYZ/TORONTO_TMA/sector_influence.json",
+          "sha256": "a63a1868632f5f08b19a4ffce740c92326e442265ea9639a35456489df73bcfa",
+          "size_bytes": 103
+        }
+      }
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/sector_configs.json",
+          "sha256": "664a215ab39a251ebab874c7c1c145e7fb319696585814fe2ba66816194f92a8",
+          "size_bytes": 298
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/sector_definitions.json",
+          "sha256": "3d2ab4788e4c7daab6d723790ab198d728f2e247c131fcfa7c454dabf113598a",
+          "size_bytes": 3031
+        },
+        "influence": {
+          "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/sector_influence.json",
+          "sha256": "8f840462320d54d9f7e6f5411637272aab1d44f8a01de5d17225d193a976262d",
+          "size_bytes": 482
+        }
+      }
+    },
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_configs.json",
+          "sha256": "1adeaf8ec7b707373a835fde5ea17e9dc0eed4d24334a9fa9c73640a49073e8e",
+          "size_bytes": 232
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_definitions.json",
           "sha256": "b87efa316a26454d0bdb4e2542d3c1737a48efb2ce96729ea0dd897b8e17b510",
           "size_bytes": 1596
         },
         "influence": {
-          "repo_path": "E/ED/EDGG/EDDF_TMA/sector_influence.json",
-          "sha256": "53c3360c19374bdfe5385012a41fe19c8258867a01f55bacd969ceac947b45bc",
-          "size_bytes": 107
+          "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_influence.json",
+          "sha256": "20f56343f4729eb1159006604a5a7ba2f2822623d29718664473ffaad00162a9",
+          "size_bytes": 99
+        }
+      }
+    },
+    "E/ED/EDGG/HAHN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/HAHN_TMA/sector_configs.json",
+          "sha256": "d9e5a8e62f78e1d468186144eefb1bd203450ad7eb23da6eafe5f2e0133cc725",
+          "size_bytes": 1022
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/HAHN_TMA/sector_definitions.json",
+          "sha256": "db6f342844b9c7e001cb8eed94b11cff3392a53a499c9bbe110a25510863d9cb",
+          "size_bytes": 5859
+        },
+        "influence": {
+          "repo_path": "E/ED/EDGG/HAHN_TMA/sector_influence.json",
+          "sha256": "a8a2382124724a39569af8b48734eda68c84ea723f1206b1dac91ebd3c7c89b7",
+          "size_bytes": 782
+        }
+      }
+    },
+    "E/ED/EDGG/KOELN_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/KOELN_TMA/sector_configs.json",
+          "sha256": "1ce2b03473c61e06abc5ac3944935da41d69b8d1a1acb2348c79b3a3ef2078b2",
+          "size_bytes": 264
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/KOELN_TMA/sector_definitions.json",
+          "sha256": "337cf3f3e2f01db76907bf15445207a8b036c9651f96eec6b20f9477f68e89d4",
+          "size_bytes": 2906
+        },
+        "influence": {
+          "repo_path": "E/ED/EDGG/KOELN_TMA/sector_influence.json",
+          "sha256": "b8f166df112353c9e1f273bc4870f883afffa88371368d3f73e8306a4b2ab9e7",
+          "size_bytes": 233
+        }
+      }
+    },
+    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/sector_configs.json",
+          "sha256": "5b75cbea77e9d453f74f3db6b816c1db18ac8e58847b315bfa7511481d6fb8e3",
+          "size_bytes": 272
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/sector_definitions.json",
+          "sha256": "e00dd37075cd8a0be4b8ce60244b9f48006b707778576ed58fb9f732a60f1058",
+          "size_bytes": 3044
+        },
+        "influence": {
+          "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/sector_influence.json",
+          "sha256": "7bcb72bf3e4f8357b69ef94ecbd0b8e0f4c3da2b555f27620ee0da1308b7cb1e",
+          "size_bytes": 434
+        }
+      }
+    },
+    "E/ED/EDGG/STUTTGART_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "E/ED/EDGG/STUTTGART_TMA/sector_configs.json",
+          "sha256": "ebbf6380d859d4aaf13cd942fefa6385df293cc1d36904bb702d666adafe3956",
+          "size_bytes": 1098
+        },
+        "definitions": {
+          "repo_path": "E/ED/EDGG/STUTTGART_TMA/sector_definitions.json",
+          "sha256": "4c6614a2c8d522b096315624700b41e05dd853409b562e98cd485b3dcf7c3c49",
+          "size_bytes": 4417
+        },
+        "influence": {
+          "repo_path": "E/ED/EDGG/STUTTGART_TMA/sector_influence.json",
+          "sha256": "4525712716a627f9490e1e2a740b404dcbba525dcca93f618589deab43d9f860",
+          "size_bytes": 613
         }
       }
     },
@@ -581,8 +733,8 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
-          "sha256": "b35ba2d487727bf70c2a674f53ef119ba62896d422a31a6c2501af22bdfb58f8",
-          "size_bytes": 2217
+          "sha256": "f488b978398ab5e2e4e91a26d471b6a14455e4e3e0ee44db12518b088cefbc97",
+          "size_bytes": 1125
         },
         "influence": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
@@ -952,6 +1104,63 @@
         }
       }
     },
+    "O/OE/OEJD/JEDDAH_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "O/OE/OEJD/JEDDAH_TMA/sector_configs.json",
+          "sha256": "cbed1e829a4f09a1d0653e4713abe3d16426c8167f0e6531cb19e6ced95b77ba",
+          "size_bytes": 200
+        },
+        "definitions": {
+          "repo_path": "O/OE/OEJD/JEDDAH_TMA/sector_definitions.json",
+          "sha256": "ab94e6c971db499b49503bfc42ec282453d6621e1839ba454b6e99be158a9caa",
+          "size_bytes": 45426
+        },
+        "influence": {
+          "repo_path": "O/OE/OEJD/JEDDAH_TMA/sector_influence.json",
+          "sha256": "e36164af39568f1ea77c03ed230dd627a4ac53db312a817cf863d80a403b9d25",
+          "size_bytes": 103
+        }
+      }
+    },
+    "O/OE/OEJD/RIYADH_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "O/OE/OEJD/RIYADH_TMA/sector_configs.json",
+          "sha256": "009201d7a4f4a94822a19a2ca50f149ac98f04ac4056dce15a4732bd796afdbf",
+          "size_bytes": 473
+        },
+        "definitions": {
+          "repo_path": "O/OE/OEJD/RIYADH_TMA/sector_definitions.json",
+          "sha256": "56ce46b9b296b93f12fff0dab07844db57011bee558d6abd81425fcd872927df",
+          "size_bytes": 282004
+        },
+        "influence": {
+          "repo_path": "O/OE/OEJD/RIYADH_TMA/sector_influence.json",
+          "sha256": "79c40279f3bb1544eead589e996200fdc3dab09604880766aed9e93f4538b39c",
+          "size_bytes": 249
+        }
+      }
+    },
+    "O/OM/OMAE/ABU_DHABI_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/sector_configs.json",
+          "sha256": "228cf840db9fe9b61831fa5c4c5fcaded9e6339e5994a857253807f6e33e1a6f",
+          "size_bytes": 495
+        },
+        "definitions": {
+          "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/sector_definitions.json",
+          "sha256": "4066414f87cf7edbcbeee845550e13ad61cde2ba3ab7c8eba9ba69cd33cc85ea",
+          "size_bytes": 85458
+        },
+        "influence": {
+          "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/sector_influence.json",
+          "sha256": "e4eee987bae50416f8ba61e60f6be432718b80d95e4eb7aafec09300cafa27ce",
+          "size_bytes": 251
+        }
+      }
+    },
     "O/OM/OMAE/DUBAI_TERMINAL": {
       "files": {
         "configs": {
@@ -968,6 +1177,25 @@
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/sector_influence.json",
           "sha256": "0acaea477d1bc2b472f648cbc543ee67831f43d014a145d4de6492e6502e1979",
           "size_bytes": 118
+        }
+      }
+    },
+    "O/OT/OTDF/DOHA_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "O/OT/OTDF/DOHA_TMA/sector_configs.json",
+          "sha256": "08bee641ee912907dcbeda58f6f4506139540ace71c3fe3b880c565053c84030",
+          "size_bytes": 198
+        },
+        "definitions": {
+          "repo_path": "O/OT/OTDF/DOHA_TMA/sector_definitions.json",
+          "sha256": "3954e07e0ef5da002876070904534a094e5df0dfec502eaaea43a31e775706bc",
+          "size_bytes": 18709
+        },
+        "influence": {
+          "repo_path": "O/OT/OTDF/DOHA_TMA/sector_influence.json",
+          "sha256": "eb9356e70fba04715928f1b9a7975c1596da09642f305f08d8a5b808f690b645",
+          "size_bytes": 103
         }
       }
     },
@@ -2073,6 +2301,25 @@
         }
       }
     },
+    "Y/YM/YMMM/MELBOURNE_TMA": {
+      "files": {
+        "configs": {
+          "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_configs.json",
+          "sha256": "f3d9a37fe65ea4a6c2d8f50c7ce99a96d1961c4cda9c58ffde2f323f2e2bf8bd",
+          "size_bytes": 203
+        },
+        "definitions": {
+          "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_definitions.json",
+          "sha256": "60253aeb9c730e042c538ac2f10224ecaab9277052926b1a4dcd18f03d4bbf4d",
+          "size_bytes": 111512
+        },
+        "influence": {
+          "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_influence.json",
+          "sha256": "536db50572ee462378524bd9ab94416c1c923a4a00bb86e0d04c5e303134dc16",
+          "size_bytes": 103
+        }
+      }
+    },
     "Y/YM/YMMM/SYDNEY_TMA": {
       "files": {
         "configs": {
@@ -2112,12 +2359,12 @@
       }
     }
   },
-  "commit_sha": "2f8553e9f3ef1b2c75f3612f3e22f98c84b04459",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-05/sector-data-2611.zip",
-  "published_at": "2026-11-05T07:53:37Z",
-  "release_tag": "daily-2026-11-05",
+  "commit_sha": "9467b1ba959b211903efca494468e44ca7a42408",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/sector-data-2611.zip",
+  "published_at": "2026-11-06T07:40:59Z",
+  "release_tag": "daily-2026-11-06",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "b43ab6cb9a684ad57d196a264932c55aa4b0d3be571075a9348f5fae70616930",
-  "size_bytes": 316970
+  "sha256": "44aa0de5e7d6e84ba4488031e99937caaada13061e7b445c024bae02ed2726e5",
+  "size_bytes": 504095
 }

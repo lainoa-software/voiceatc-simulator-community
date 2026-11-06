@@ -1,9 +1,23 @@
 {
   "asset_name": "color-profiles-2611.zip",
-  "commit_sha": "2f8553e9f3ef1b2c75f3612f3e22f98c84b04459",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-05/color-profiles-2611.zip",
-  "profile_count": 46,
+  "commit_sha": "9467b1ba959b211903efca494468e44ca7a42408",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/color-profiles-2611.zip",
+  "profile_count": 51,
   "profiles": {
+    "C/CZ": {
+      "files": {
+        "colors": {
+          "repo_path": "C/CZ/colors.json",
+          "sha256": "adf06fafa458aef7c3e9fe7b85fae1b9ee6828fa24f0d5b0671613fef9e5dc66",
+          "size_bytes": 730
+        },
+        "style": {
+          "repo_path": "C/CZ/style.json",
+          "sha256": "b5f86bb4c09cf51d7414ba311410feb97342df0c01784de6777ec5543fc36711",
+          "size_bytes": 873
+        }
+      }
+    },
     "E/ED/EDGG": {
       "files": {
         "colors": {
@@ -545,6 +559,34 @@
         }
       }
     },
+    "O/OE/OEJD": {
+      "files": {
+        "colors": {
+          "repo_path": "O/OE/OEJD/colors.json",
+          "sha256": "ecb66d95105416e4469520fce1e7c419b5b1d37ed47424187e5324e9d3498537",
+          "size_bytes": 730
+        },
+        "style": {
+          "repo_path": "O/OE/OEJD/style.json",
+          "sha256": "12dd704c922e46e6b0a847582d9d15f0793c6cc931bffe763b27c528f295fd41",
+          "size_bytes": 968
+        }
+      }
+    },
+    "O/OM/OMAE/ABU_DHABI_TMA": {
+      "files": {
+        "colors": {
+          "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/colors.json",
+          "sha256": "88d22c7e5a78cb8aca1f38bd56b39069e74a08a4ecd22b8750cf10b7c28e6abd",
+          "size_bytes": 730
+        },
+        "style": {
+          "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/style.json",
+          "sha256": "1099b6b54457336c11d725955685a88c092f436f23106ebc976f0f050f69914d",
+          "size_bytes": 799
+        }
+      }
+    },
     "O/OM/OMAE/DUBAI_TERMINAL": {
       "files": {
         "colors": {
@@ -556,6 +598,20 @@
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/style.json",
           "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
           "size_bytes": 434
+        }
+      }
+    },
+    "O/OT/OTDF": {
+      "files": {
+        "colors": {
+          "repo_path": "O/OT/OTDF/colors.json",
+          "sha256": "afbe7ed96820f9ac4a2bd91789e0f57043c3a949e967909c557e7b93cb953c7b",
+          "size_bytes": 730
+        },
+        "style": {
+          "repo_path": "O/OT/OTDF/style.json",
+          "sha256": "2dbc1b4eec91af1373f21a2fe5039b1f41e0274bc9498aa3c4fc459008669947",
+          "size_bytes": 764
         }
       }
     },
@@ -642,12 +698,26 @@
           "size_bytes": 854
         }
       }
+    },
+    "Y/YM/YMMM": {
+      "files": {
+        "colors": {
+          "repo_path": "Y/YM/YMMM/colors.json",
+          "sha256": "4872291103063d7a8c990954743f6d5ef808df4efb5b1b93f11b9d7937a9c105",
+          "size_bytes": 730
+        },
+        "style": {
+          "repo_path": "Y/YM/YMMM/style.json",
+          "sha256": "ac24f1e942744e5d02f519ae7c0f8162048866abef25a4e06a4c2afb1be8e9f2",
+          "size_bytes": 957
+        }
+      }
     }
   },
-  "published_at": "2026-11-05T07:53:37Z",
-  "release_tag": "daily-2026-11-05",
+  "published_at": "2026-11-06T07:40:59Z",
+  "release_tag": "daily-2026-11-06",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "24d9b081d0028bef16f44e36340ad9b31e242ab216af3470088af27d83cafc5b",
-  "size_bytes": 46533
+  "sha256": "bc0f2aed638213520c563ad0c23ccf74965799e1ad5d6a94c796a9b15ed9e04e",
+  "size_bytes": 50390
 }

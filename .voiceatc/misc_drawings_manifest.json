@@ -1,6 +1,21 @@
 {
-  "airport_count": 35,
+  "airport_count": 53,
   "airports": {
+    "CYUL": {
+      "repo_path": "C/CZ/CZUL/MONTREAL_TMA/misc_drawings.json",
+      "sha256": "e4f24ce57dff394abf8190ebe7f722bb1d38ed5dbbcae677d4d964fa8d78418c",
+      "size_bytes": 143201
+    },
+    "CYVR": {
+      "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/misc_drawings.json",
+      "sha256": "f38bf233f8774adcc03e9941b4bae8eb82bf09389bf89311c9373d5d117476a2",
+      "size_bytes": 202537
+    },
+    "CYYZ": {
+      "repo_path": "C/CZ/CZYZ/TORONTO_TMA/misc_drawings.json",
+      "sha256": "f648374a4e863fd209f5b77ab29f852fdc3b77668c4a20583fdabe8235278e71",
+      "size_bytes": 90190
+    },
     "EDDB": {
       "repo_path": "E/ED/EDWW/BERLIN_TMA/misc_drawings.json",
       "sha256": "374b7516791bbafdf9a86b8ee8bcbd4dbf5d57e542dde8c215f556486957ed70",
@@ -12,14 +27,29 @@
       "size_bytes": 745
     },
     "EDDF": {
-      "repo_path": "E/ED/EDGG/EDDF_TMA/misc_drawings.json",
-      "sha256": "68c12602c6c343922e8736284f90a00a7c498e9cc4d8ed025114c5da9ff8b850",
-      "size_bytes": 7229
+      "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/misc_drawings.json",
+      "sha256": "b598bc086699f59dccc34e2a676b3a3fe1496d2a594d7fa480c195f3881f7fa4",
+      "size_bytes": 27050
+    },
+    "EDDG": {
+      "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/misc_drawings.json",
+      "sha256": "15600d88ee0640e8c891aed32a93e66b8bbe93fc591d811eb3ed29b49810c0de",
+      "size_bytes": 19898
     },
     "EDDH": {
       "repo_path": "E/ED/EDWW/HAMBURG_TMA/misc_drawings.json",
       "sha256": "37a467ebef88af731ff0ed7ab17a14c881b119d0cc5564344352a226d74ab17b",
       "size_bytes": 994
+    },
+    "EDDK": {
+      "repo_path": "E/ED/EDGG/KOELN_TMA/misc_drawings.json",
+      "sha256": "031168f74dae4dfe9e71b2d73f885dc07f94070b2edbd60d062359892909471a",
+      "size_bytes": 19914
+    },
+    "EDDL": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/misc_drawings.json",
+      "sha256": "aec9030f25efed4fe811f80d24ca5fc1ead59e9de3e19c52ba83ec8e2a9e8389",
+      "size_bytes": 19952
     },
     "EDDM": {
       "repo_path": "E/ED/EDMM/EDDM_TMA/misc_drawings.json",
@@ -31,6 +61,16 @@
       "sha256": "f6fee453097975b537abb21318a8f56b9a9b318de80cca68b07545db899d33b8",
       "size_bytes": 2166
     },
+    "EDDR": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/misc_drawings.json",
+      "sha256": "19e0b29385f457bca5e38337770b47d08f189094522ab74410bfa86d9c9eee53",
+      "size_bytes": 19918
+    },
+    "EDDS": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/misc_drawings.json",
+      "sha256": "859245fc6a7ec4a10d652bac97ebff852b653a133f9991edd316921a0940501f",
+      "size_bytes": 19926
+    },
     "EDDV": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/misc_drawings.json",
       "sha256": "f295961b180ff1bca6cb7c77b9fd08d737b120c80fe1e59a4da99bc3795c1792",
@@ -41,6 +81,11 @@
       "sha256": "e269cb3606a02a7dba3d0ae7b5fccdbbb2b20d2928a2e9179aefd887cebb343f",
       "size_bytes": 5482
     },
+    "EDFH": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/misc_drawings.json",
+      "sha256": "19e0b29385f457bca5e38337770b47d08f189094522ab74410bfa86d9c9eee53",
+      "size_bytes": 19918
+    },
     "EDHI": {
       "repo_path": "E/ED/EDWW/HAMBURG_TMA/misc_drawings.json",
       "sha256": "37a467ebef88af731ff0ed7ab17a14c881b119d0cc5564344352a226d74ab17b",
@@ -50,6 +95,26 @@
       "repo_path": "E/ED/EDWW/HAMBURG_TMA/misc_drawings.json",
       "sha256": "37a467ebef88af731ff0ed7ab17a14c881b119d0cc5564344352a226d74ab17b",
       "size_bytes": 994
+    },
+    "EDLN": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/misc_drawings.json",
+      "sha256": "aec9030f25efed4fe811f80d24ca5fc1ead59e9de3e19c52ba83ec8e2a9e8389",
+      "size_bytes": 19952
+    },
+    "EDLV": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/misc_drawings.json",
+      "sha256": "aec9030f25efed4fe811f80d24ca5fc1ead59e9de3e19c52ba83ec8e2a9e8389",
+      "size_bytes": 19952
+    },
+    "EDSB": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/misc_drawings.json",
+      "sha256": "859245fc6a7ec4a10d652bac97ebff852b653a133f9991edd316921a0940501f",
+      "size_bytes": 19926
+    },
+    "EDTL": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/misc_drawings.json",
+      "sha256": "859245fc6a7ec4a10d652bac97ebff852b653a133f9991edd316921a0940501f",
+      "size_bytes": 19926
     },
     "EDVE": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/misc_drawings.json",
@@ -141,6 +206,21 @@
       "sha256": "d58c1b267a8de0e7b1703ad7a232daed9a4e2e5c9e5d6915db16b784e99e5371",
       "size_bytes": 11224
     },
+    "OEJN": {
+      "repo_path": "O/OE/OEJD/JEDDAH_TMA/misc_drawings.json",
+      "sha256": "6ad6d83d5fafdb09d3d51428c4e223a8ee7c74c2ca53f0d6eca1731a43af8a25",
+      "size_bytes": 28382
+    },
+    "OERK": {
+      "repo_path": "O/OE/OEJD/RIYADH_TMA/misc_drawings.json",
+      "sha256": "36cad19ebf0a5291364c8a13fe0abfc6b056801a53655ca1e0dbdeab3ff997b5",
+      "size_bytes": 89292
+    },
+    "OMAA": {
+      "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/misc_drawings.json",
+      "sha256": "123f0663de2ed7f5c0cd0881f396153bc87fffc918e35c88c68c91357ef8bafb",
+      "size_bytes": 36440
+    },
     "OMDB": {
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
@@ -155,6 +235,11 @@
       "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
       "sha256": "7de4ba602527206de20afd3d5bc4d085257eb2e9c96793a405ebc7b1c15d45be",
       "size_bytes": 21639
+    },
+    "OTHH": {
+      "repo_path": "O/OT/OTDF/DOHA_TMA/misc_drawings.json",
+      "sha256": "fca5f3f2626090dfa97ff539225d1603a2027cf078672ec7887de182555b015c",
+      "size_bytes": 19860
     },
     "VTBD": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/misc_drawings.json",
@@ -171,6 +256,11 @@
       "sha256": "22ae32f064be1b5629b5e8329fb3b65a2c5a7e1736aa5077188b213d3a962e4c",
       "size_bytes": 717
     },
+    "YMML": {
+      "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/misc_drawings.json",
+      "sha256": "ab3a57745b933328be26d9de68c5569dbf36e4f80708c7760dbb3c1509f6891b",
+      "size_bytes": 160237
+    },
     "YSSY": {
       "repo_path": "Y/YM/YMMM/SYDNEY_TMA/misc_drawings.json",
       "sha256": "d0d8b9f31337e50aa1297a6461b29967986c75b8f036bfafefab94e6a6adc8e4",
@@ -178,12 +268,12 @@
     }
   },
   "asset_name": "misc-drawings-2611.zip",
-  "commit_sha": "2f8553e9f3ef1b2c75f3612f3e22f98c84b04459",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-05/misc-drawings-2611.zip",
-  "published_at": "2026-11-05T07:53:37Z",
-  "release_tag": "daily-2026-11-05",
+  "commit_sha": "9467b1ba959b211903efca494468e44ca7a42408",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/misc-drawings-2611.zip",
+  "published_at": "2026-11-06T07:40:59Z",
+  "release_tag": "daily-2026-11-06",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "ea200345b7d6af12a43d96f30217312d1e471884a7c63b9741ac631b661dbca7",
-  "size_bytes": 239872
+  "sha256": "f77a98fd66cd1fcd45504a32fcefc74501aa26494c0ead965ee30d0a5f4ea0a5",
+  "size_bytes": 425970
 }
