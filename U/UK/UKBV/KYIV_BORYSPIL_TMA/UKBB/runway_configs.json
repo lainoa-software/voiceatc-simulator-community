@@ -1,0 +1,29 @@
+{
+  "airport": "UKBB",
+  "runway_configs": [
+    {
+      "id": "NORTH_36L_36R",
+      "name": "North 36L 36R",
+      "arr": "36L 36R",
+      "dep": "36L 36R"
+    },
+    {
+      "id": "SOUTH_18L_18R",
+      "name": "South 18L 18R",
+      "arr": "18L 18R",
+      "dep": "18L 18R"
+    },
+    {
+      "id": "NORTH_36R",
+      "name": "North 36R",
+      "arr": "36R",
+      "dep": "36R"
+    },
+    {
+      "id": "SOUTH_18L",
+      "name": "South 18L",
+      "arr": "18L",
+      "dep": "18L"
+    }
+  ]
+}
