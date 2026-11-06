@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LTAI",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "44b6cf28",
+      "route": "LTAI DCT EKSEN L610 OSGED L620 APSER L610 YAA A16 VADEN L610 TONDO DCT SOPRO DCT ARSIN DCT SASAL DCT BADIT DCT DOSEL DCT AKINI Z109 UPALA DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

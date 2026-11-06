@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LFPG",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "994430f0",
+      "route": "LFPG DCT DIKOL J10 SUIPE M163 MMD Y180 DIK DCT BITBU DCT ADENU DCT RUDOT DCT ABDAP DCT REDLI DCT RUDUS L984 FOLWU DCT DF152 DCT RIPKU DCT MAMBU DCT EDUDU DCT DODAS DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

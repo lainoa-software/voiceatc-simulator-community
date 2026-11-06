@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LHBP",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "e387b0ea",
+      "route": "LHBP DCT GILEP DCT XOMBA P974 TABIN L616 NIT A4 ODNEM DCT BALTU L984 OKG N869 RONIG DCT ELGOT DCT PIVIR DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

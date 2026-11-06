@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LPMA",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "184323d2",
+      "route": "LPMA DCT DEGUN UZ13 NARTA UN745 PINOX G52 RIVRO N745 ZMR N976 PPN N995 LATEK DCT NINUN G53 ETREK DCT LUXAN G53 LTP N871 DITON T163 ZUE DCT TINOX N851 HEUSE Y715 ARSUT T125 REUTL DCT SUDEN Z79 GUPIN N869 LETKU DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LPFR",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "a0ddc6ad",
+      "route": "LPFR DCT NIRAK Y136 NAPES DCT ANDEV DCT SANTA DCT OXACA M30 HIJ N10 VTB N871 TOPTU DCT NINUN G53 ETREK DCT LUXAN G53 LTP N871 DITON T163 ZUE DCT TINOX N851 LOKTA DCT REUTL DCT BABEG DCT NOMBO DCT LETKU DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

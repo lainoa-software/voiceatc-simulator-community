@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LHBP",
+  "routes": [
+    {
+      "id": "039f27b7",
+      "route": "EDDN DCT BOLSI DCT ASPAT DCT ESEGA DCT MAREG L175 ANEXA DCT LHBP",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

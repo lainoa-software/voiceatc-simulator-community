@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LUKK",
+  "routes": [
+    {
+      "id": "f7d4e6db",
+      "route": "EDDN DCT ERETO Z650 VEMUT DCT VLM L726 UPLAV P27 PPD R232 MARKA DCT EXIDA P193 KEKED DCT KARIL T33 SAT T90 JIBOU DCT OKLIV DCT BUKOV DCT SCV DCT TOMUC P133 ISI DCT NUNTA DCT ERADA DCT UNIRA DCT LUKK",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

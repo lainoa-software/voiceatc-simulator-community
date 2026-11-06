@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "EDDN",
+  "dest": "LTFM",
+  "routes": [
+    {
+      "id": "1ee060f4",
+      "route": "EDDN DCT NUB DCT MOOCE DCT BETGI DCT TIVDA DCT PEPIK DCT BERVA A4 NIT M748 ERGOM DCT KEROP P192 OKLOP M19 ETIDA T390 RILEX DCT LTFM",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}

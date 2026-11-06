@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "LEPA",
+  "dest": "EDDN",
+  "routes": [
+    {
+      "id": "df1bbdf5",
+      "route": "LEPA DCT MEROS N853 LUMAS DCT SOSUR Z16 MTG A6 MTL Z16 LTP N871 DITON T163 ZUE DCT TINOX N851 LOKTA DCT REUTL DCT BABEG DCT NOMBO DCT LETKU DCT EDDN",
+      "created_at": "2026-11-05T19:35:16Z",
+      "creation_airac": "2611"
+    }
+  ]
+}
