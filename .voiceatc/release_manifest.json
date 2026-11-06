@@ -4,7 +4,7 @@
     "color_profiles_zip": {
       "asset_name": "color-profiles-2611.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/color-profiles-2611.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/color-profiles-2611.zip",
       "preserves_repo_paths": true,
       "profile_count": 51,
       "sha256": "bc0f2aed638213520c563ad0c23ccf74965799e1ad5d6a94c796a9b15ed9e04e",
@@ -14,7 +14,7 @@
       "airport_count": 53,
       "asset_name": "misc-drawings-2611.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/misc-drawings-2611.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/misc-drawings-2611.zip",
       "preserves_repo_paths": true,
       "sha256": "f77a98fd66cd1fcd45504a32fcefc74501aa26494c0ead965ee30d0a5f4ea0a5",
       "size_bytes": 425970
@@ -23,7 +23,7 @@
       "airport_count": 55,
       "asset_name": "mva-2611.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/mva-2611.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/mva-2611.zip",
       "preserves_repo_paths": true,
       "sha256": "fb28a57e8daf0f443fc2d0420ae6870023d3831976b23c4319f0ab0840127c9a",
       "size_bytes": 723829
@@ -32,7 +32,7 @@
       "airac": "2611",
       "asset_name": "routes-rich-2611.tsv",
       "content_type": "text/tab-separated-values; charset=utf-8",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/routes-rich-2611.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/routes-rich-2611.tsv",
       "projection_id": "rich_route_coordinates_v1",
       "repo_path": "ROUTES/routes.tsv",
       "route_count": 100060,
@@ -44,7 +44,7 @@
       "asset_name": "routes-2611.tsv",
       "compatibility_fallback": false,
       "content_type": "text/tab-separated-values; charset=utf-8",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/routes-2611.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/routes-2611.tsv",
       "repo_path": "ROUTES/routes_legacy.tsv",
       "route_count": 100060,
       "sha256": "0eb785a631d4b89dd7d595a6319daefd53bdba480fad5819916b9b169501c91b",
@@ -52,28 +52,28 @@
       "source_airac": "2611"
     },
     "runway_configs_zip": {
-      "airport_count": 252,
+      "airport_count": 253,
       "asset_name": "runway-configs-2611.zip",
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/runway-configs-2611.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/runway-configs-2611.zip",
       "preserves_repo_paths": true,
-      "sha256": "38f3005a3acbfbcc50ff8e760b4312e639e379c69e3600d57ee9d8f25e884c9b",
-      "size_bytes": 78089
+      "sha256": "befe52dc715f85ab10ce3f88ace958931a32b1ff9852021d39f564a7373d3761",
+      "size_bytes": 78432
     },
     "sector_data_zip": {
       "asset_name": "sector-data-2611.zip",
       "bundle_count": 124,
       "content_type": "application/zip",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/sector-data-2611.zip",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/sector-data-2611.zip",
       "preserves_repo_paths": true,
       "sha256": "44aa0de5e7d6e84ba4488031e99937caaada13061e7b445c024bae02ed2726e5",
       "size_bytes": 504095
     }
   },
-  "commit_sha": "195a561d830d99d85c41ee005d861b2783b717c9",
-  "published_at": "2026-11-06T07:53:55Z",
-  "release_tag": "daily-2026-11-06",
-  "release_title": "Daily Community Release - Friday 2026-11-06",
+  "commit_sha": "3fd34d444c9fce54535ddfbbef2ee4befa36cf6e",
+  "published_at": "2026-11-06T11:30:55Z",
+  "release_tag": "daily-2026-11-06-b",
+  "release_title": "Daily Community Release - Friday 2026-11-06 b",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 4
 }

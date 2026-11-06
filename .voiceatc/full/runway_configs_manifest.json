@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "195a561d830d99d85c41ee005d861b2783b717c9",
+  "commit_sha": "3fd34d444c9fce54535ddfbbef2ee4befa36cf6e",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-06-b/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYUL",
@@ -1452,6 +1452,12 @@
       "size_bytes": 242
     },
     {
+      "id": "UKBB",
+      "repo_path": "U/UK/UKBV/KYIV_BORYSPIL_TMA/UKBB/runway_configs.json",
+      "sha256": "2357e30fd4f26068c172125ae2cf701b3cef921660e22992d6506057ceaa0ad0",
+      "size_bytes": 498
+    },
+    {
       "id": "ULLI",
       "repo_path": ".voiceatc/defaults/U/UL/ULLL/ST_PETERSBURG_CTR/ULLI/runway_configs.json",
       "sha256": "e213f129b26091429267055ed4cfcfad8df2fe9d2168633ce28569d93df54f4e",
@@ -1531,11 +1537,11 @@
       "size_bytes": 1150
     }
   ],
-  "entry_count": 254,
-  "generated_at": "2026-11-06T07:53:55Z",
-  "published_at": "2026-11-06T07:53:55Z",
-  "release_tag": "daily-2026-11-06",
+  "entry_count": 255,
+  "generated_at": "2026-11-06T11:30:55Z",
+  "published_at": "2026-11-06T11:30:55Z",
+  "release_tag": "daily-2026-11-06-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "3daf490ea579d957d03f796f26d022137782a58a5972311beb4bd953f6e07f6b",
-  "size_bytes": 78873
+  "sha256": "90c5bfd42ab335c64f648f5f563d16ab88345cb7905767ab0cc8bc9f2d0f6deb",
+  "size_bytes": 79216
 }
