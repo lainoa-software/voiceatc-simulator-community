@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "KLAX",
+  "dest": "ZSPD",
+  "routes": [
+    {
+      "id": "86a98d58",
+      "route": "KLAX DCT SCTRR GONNA RRUNN AMAKR LINUZ NATTE FASEL 52N140W 55N150W 57N160W 5730N17000W ECOMI NATES R220 NODAN R217 ASTER Y514 SDE Y512 GTC Y142 SAMON Y14 DGC Y28 ISAKY Y592 ONIKU A593 PUD DCT ZSPD",
+      "created_at": "2026-11-07T02:15:17Z",
+      "creation_airac": "2611"
+    }
+  ]
+}
