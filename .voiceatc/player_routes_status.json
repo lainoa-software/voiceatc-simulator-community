@@ -480,6 +480,13 @@
           "status": "ok"
         }
       },
+      "KLAX_ZSPD": {
+        "86a98d58": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "KMSP_KMKE": {
         "9927acb2": {
           "checked_airac": "2611",
@@ -4802,7 +4809,7 @@
     "deep_validation": false,
     "pairs": {}
   },
-  "generated_at": "2026-11-06T11:30:55Z",
+  "generated_at": "2026-11-07T06:36:02Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }
