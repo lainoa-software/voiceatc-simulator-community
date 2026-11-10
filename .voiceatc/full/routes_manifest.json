@@ -1,11 +1,11 @@
 {
-  "commit_sha": "da140730ed716336eddf3f9be0dfc03f23fe7343",
+  "commit_sha": "dae862d4dab37851a6ba928912a4a0d206a1a34d",
   "dataset": "routes",
   "entries": [
     {
       "airac": "2611",
       "asset_name": "routes-rich-2611-full.tsv",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-09/routes-rich-2611-full.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-10/routes-rich-2611-full.tsv",
       "id": "short_hop_direct",
       "overlays": [
         "ROUTES/full/starless_arrivals.tsv",
@@ -14,27 +14,27 @@
       "projection_id": "rich_route_coordinates_v1",
       "requires": ["routes.starless_arrivals", "routes.short_hop_direct"],
       "route_count": 100060,
-      "sha256": "29f19ffaebec0d48ddf23c5821c540a77aae96c4e2b8a39964c5de175c84a95d",
-      "size_bytes": 12256756,
+      "sha256": "a7d252790fce3b23e0bb1647cbd87593904a056fb32b0d45be1c4d4ebc1fccae",
+      "size_bytes": 12186551,
       "source_airac": "2611"
     },
     {
       "airac": "2611",
       "asset_name": "routes-rich-2611-full-starless_arrivals.tsv",
-      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-09/routes-rich-2611-full-starless_arrivals.tsv",
+      "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-10/routes-rich-2611-full-starless_arrivals.tsv",
       "id": "starless_arrivals",
       "overlays": ["ROUTES/full/starless_arrivals.tsv"],
       "projection_id": "rich_route_coordinates_v1",
       "requires": ["routes.starless_arrivals"],
       "route_count": 100060,
-      "sha256": "86ef46e84b65755a1f43325b6064b8309fa6b3823f0060ce22b75b6cfd2db1ef",
-      "size_bytes": 12291908,
+      "sha256": "4618e0e501a7e81179d4f23ecdc27a7c5cd6bd2561136ad517ef15b5d4b90a8a",
+      "size_bytes": 12221365,
       "source_airac": "2611"
     }
   ],
   "entry_count": 2,
-  "generated_at": "2026-11-09T07:55:09Z",
-  "published_at": "2026-11-09T07:55:09Z",
-  "release_tag": "daily-2026-11-09",
+  "generated_at": "2026-11-10T08:22:58Z",
+  "published_at": "2026-11-10T08:22:58Z",
+  "release_tag": "daily-2026-11-10",
   "repo": "lainoa-software/voiceatc-simulator-community"
 }
