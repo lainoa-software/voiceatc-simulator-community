@@ -37,6 +37,7 @@ TERMINAL_FILE_NAMES = {
     "sector_configs.json",
     "sector_definitions.json",
     "sector_influence.json",
+    "tma.json",
 }
 # Terminal-area files an airport may also carry in its own folder, for itself
 # only: some sources publish one MVA chart per airport, not one per terminal area.

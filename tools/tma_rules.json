@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "file_name": "tma.json",
+  "capability": "community.tma_file",
+  "services": {
+    "tower": { "needs_airport": true, "playable": false },
+    "approach_radar": { "needs_airport": false, "playable": true },
+    "approach_conventional": { "needs_airport": false, "playable": false },
+    "center": { "needs_airport": false, "playable": false }
+  },
+  "messages": {
+    "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",
+    "TMA_SCHEMA_MISSING": "{where}: schema is missing. Write \"schema\": {schema}.",
+    "TMA_SCHEMA_NEWER": "{where}: schema {value} needs a newer game build (this one reads schema {schema}).",
+    "TMA_UNKNOWN_KEY": "{where}: unknown field \"{value}\". Allowed here: {allowed}.",
+    "TMA_FIELD_MISSING": "{where}: {value} is missing.",
+    "TMA_FIELD_SHAPE": "{where}: must be {value}.",
+    "TMA_ID_MISMATCH": "{where}: id \"{value}\" must equal the bundle folder name \"{expected}\".",
+    "TMA_ID_DUPLICATE": "{where}: \"{value}\" is used twice.",
+    "TMA_AIRPORT_INVALID": "{where}: \"{value}\" is not a four-character ICAO code.",
+    "TMA_AIRPORT_NOT_IN_TMA": "{where}: airport \"{value}\" is not in the TMA's airports.",
+    "TMA_AIRPORT_NO_OWNER": "{where}: airport \"{value}\" has no owner in this layout.",
+    "TMA_AIRPORT_TWO_OWNERS": "{where}: airport \"{value}\" has two owners in this layout.",
+    "TMA_UNIT_NO_SERVICES": "{where}: has no services. Use one or more of: {allowed}.",
+    "TMA_UNIT_SERVICE_UNKNOWN": "{where}: service \"{value}\" is not in the list. Use one or more of: {allowed}.",
+    "TMA_UNIT_AIRPORT_MISSING": "{where}: a {value} unit must name its airport.",
+    "TMA_UNIT_UNKNOWN": "{where}: unit \"{value}\" is not in units.",
+    "TMA_FREQUENCY_INVALID": "{where}: frequency \"{value}\" must look like 131.125 and lie between 118.000 and 136.990 MHz.",
+    "TMA_POSITION_ONE_SECTOR": "{where}: a position works exactly one sector; \"{value}\" is not one sector id.",
+    "TMA_SECTOR_UNDEFINED": "{where}: sector \"{value}\" is not in sector_definitions.json.",
+    "TMA_SECTOR_TWICE": "{where}: sector \"{value}\" has two positions in this layout.",
+    "TMA_POSITION_NAME": "{where}: name \"{value}\" must be capital words joined by \" + \", such as APPROACH + DIRECTORS.",
+    "TMA_POSITION_NOT_PLAYABLE": "{where}: unit \"{value}\" cannot be played. Only sectors you can play are listed; a position's unit needs one of: {allowed}.",
+    "TMA_POSITION_FREQUENCY_NOT_UNITS": "{where}: frequency \"{value}\" is not one of unit \"{expected}\"'s frequencies.",
+    "TMA_LEVEL_INVALID": "{where}: level \"{value}\" must be F and three digits (F130) or A and three digits (A060).",
+    "TMA_AGREEMENT_NO_LEVEL": "{where}: agreement \"{value}\" needs a climb or a descent level.",
+    "TMA_AGREEMENT_NO_TRAFFIC": "{where}: agreement \"{value}\" needs departs or arrives.",
+    "TMA_AGREEMENT_SAME_UNIT": "{where}: agreement \"{value}\" goes from a unit to itself.",
+    "TMA_AGREEMENT_PRIORITY_TIE": "{where}: agreements \"{value}\" and \"{expected}\" cover the same traffic with the same priority.",
+    "TMA_RUNWAY_PRESET_UNKNOWN": "{where}: runway preset \"{value}\" is not in {expected}/runway_configs.json."
+  }
+}

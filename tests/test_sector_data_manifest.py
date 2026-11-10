@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import math
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -312,6 +313,37 @@ class SectorDataManifestTests(unittest.TestCase):
             (bundle / "sector_influence.json").write_text(json.dumps(valid_sector_influence()), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "at least 3 points"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_tma_json_alone_is_not_a_sector_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
+            bundle.mkdir(parents=True, exist_ok=True)
+            (bundle / "tma.json").write_text("{}", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "missing sector bundle files"):
+                MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_validate_sector_bundle_rejects_broken_tma_json(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "BARCELONA_TMA"
+            shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA", bundle)
+            shutil.copyfile(
+                REPO_ROOT / "tests" / "fixtures" / "tma_cases" / "broken_barcelona_tma.json",
+                bundle / "tma.json",
+            )
+            with self.assertRaisesRegex(ValueError, 'units\\[2\\] "GIR_TWR": has no services'):
+                MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_valid_sector_bundle_records_tma_requires_the_capability(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "BARCELONA_TMA"
+            shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA", bundle)
+            manifest = MODULE.build_manifest(root, commit_sha="test-commit")
+            files = manifest["bundles"]["L/LE/BARCELONA_TMA"]["files"]
+            self.assertEqual(["community.tma_file"], files["tma"]["requires"])
+            self.assertEqual("L/LE/BARCELONA_TMA/tma.json", files["tma"]["repo_path"])
 
     def test_safe_repo_path_rejects_paths_outside_root(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

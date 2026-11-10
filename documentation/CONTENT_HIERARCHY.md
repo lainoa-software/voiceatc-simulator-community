@@ -49,6 +49,7 @@ Community publication does not require a simulator-channel promotion once the ge
 | `mva.json` | Terminal-area folder, or an airport folder when the chart covers that airport alone |
 | `misc_drawings.json` | Terminal-area folder |
 | `sector_configs.json`, `sector_definitions.json`, `sector_influence.json` | Terminal-area folder as one bundle |
+| `tma.json` | Terminal-area folder, optional; published only to builds that read it |
 | `colors.json`, `style.json` | Region, nationality, FIR/ARTCC, ACC, or terminal folder |
 
 Terminal-area data can reference several airports, but each referenced airport must be registered in that terminal scope. Do not place terminal data inside an airport folder, except an `mva.json` that names only that airport; an airport has one MVA file, so it cannot also appear in the terminal-area `mva.json`.
