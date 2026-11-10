@@ -98,6 +98,34 @@ class MvaManifestTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "minimum_altitude_ft"):
                 MODULE.validate_mva_file(path, root)
 
+    def _square(self, area_id: str, feet: int, lat: float, lon: float, size: float) -> dict[str, object]:
+        return {
+            "area_id": area_id,
+            "minimum_altitude_ft": feet,
+            "polygon": [[lat, lon], [lat, lon + size], [lat + size, lon + size], [lat + size, lon]],
+        }
+
+    def test_validate_mva_file_rejects_lower_area_hidden_inside_higher(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            path = root / "EHAM" / "mva.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            payload = valid_payload("EHAM")
+            payload["mva_areas"] = [self._square("TMA", 2000, 52.0, 4.0, 1.0), self._square("CTR", 1700, 52.3, 4.3, 0.2)]
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "'CTR' \(1700 ft\) lies inside 'TMA'"):
+                MODULE.validate_mva_file(path, root)
+
+    def test_validate_mva_file_accepts_higher_area_inside_lower(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            path = root / "EHAM" / "mva.json"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            payload = valid_payload("EHAM")
+            payload["mva_areas"] = [self._square("TMA", 2000, 52.0, 4.0, 1.0), self._square("HILL", 3000, 52.3, 4.3, 0.2)]
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            self.assertEqual("EHAM", MODULE.validate_mva_file(path, root)["airport"])
+
     def test_build_manifest_rejects_duplicate_airports(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)

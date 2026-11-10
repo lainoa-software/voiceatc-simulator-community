@@ -124,6 +124,7 @@ def _validate_mva_document(payload: dict, path: Path, root: Path, raw_bytes: byt
             ensure_text_field(label.get("text"), "text", path)
             ensure_point(label.get("position"), "position", path)
 
+    _refuse_hidden_areas(areas, path)
     return {
         "airport": airports[0],
         "airports": airports,
@@ -131,6 +132,40 @@ def _validate_mva_document(payload: dict, path: Path, root: Path, raw_bytes: byt
         "sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "size_bytes": len(raw_bytes),
     }
+
+
+def _inside(point: list[float], polygon: list[list[float]]) -> bool:
+    lat, lon = point
+    inside = False
+    for (lat_a, lon_a), (lat_b, lon_b) in zip(polygon, polygon[1:] + polygon[:1]):
+        if (lat_a > lat) != (lat_b > lat) and lon < lon_a + (lat - lat_a) * (lon_b - lon_a) / (lat_b - lat_a):
+            inside = not inside
+    return inside
+
+
+def _bounds(polygon: list[list[float]]) -> tuple[float, float, float, float]:
+    lats = [p[0] for p in polygon]
+    lons = [p[1] for p in polygon]
+    return min(lats), min(lons), max(lats), max(lons)
+
+
+def _refuse_hidden_areas(areas: list[dict], path: Path) -> None:
+    """The game reads the highest area containing a point, so a lower area drawn wholly inside a
+    higher one never shows its value. Cut it out of the higher area: tools/mva_unhide.py."""
+    boxes = [_bounds(area["polygon"]) for area in areas]
+    for inner, inner_box in zip(areas, boxes):
+        for outer, outer_box in zip(areas, boxes):
+            if outer["minimum_altitude_ft"] <= inner["minimum_altitude_ft"]:
+                continue
+            if not (outer_box[0] <= inner_box[0] and outer_box[1] <= inner_box[1]
+                    and inner_box[2] <= outer_box[2] and inner_box[3] <= outer_box[3]):
+                continue
+            if all(_inside(point, outer["polygon"]) for point in inner["polygon"]):
+                raise ValueError(
+                    f"{path}: area '{inner['area_id']}' ({inner['minimum_altitude_ft']} ft) lies inside "
+                    f"'{outer['area_id']}' ({outer['minimum_altitude_ft']} ft), so the game reads "
+                    f"{outer['minimum_altitude_ft']} ft there; cut it out with tools/mva_unhide.py"
+                )
 
 
 def current_commit_sha(root: Path = ROOT) -> str:
