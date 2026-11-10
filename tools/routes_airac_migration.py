@@ -16,6 +16,11 @@ that blanks rows.  Produces three outputs:
   migration_report.json — machine-readable summary for the CI workflow.
   migration_report.md   — human-readable PR body (optional).
 
+On top of the contribution gate, the migration rejects a route whose first fix
+is a coded SID end of the origin or whose last fix is a coded STAR start of the
+destination (``reject_coded_route_ends``, creator decision 2026-10-21), so the
+generator rebuilds it from a published point.
+
 Only routes authored by LainoaSoftware (or with no author) are auto-blanked.
 Community-authored routes are flagged in the report but never modified.
 
@@ -112,6 +117,9 @@ def _validate_rows(
         # and would silently categorise the untouched tail as "ok".
         max_findings=sys.maxsize,
         airport_aliases=airport_aliases,
+        # Creator decision 2026-10-21: generated routes start and end at published
+        # SID and STAR points, so LainoaSoftware rows at a coded one are rebuilt.
+        reject_coded_route_ends=True,
     )
 
     errors_by_line: dict[int, list[Finding]] = {}
