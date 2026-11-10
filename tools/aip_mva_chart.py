@@ -31,7 +31,13 @@ import fitz
 import numpy as np
 from fontTools.cffLib import CFFFontSet
 from shapely.geometry import LineString, MultiLineString, Point, Polygon
-from shapely.ops import polygonize, snap, split, unary_union
+from shapely.ops import polygonize, snap, unary_union
+
+try:
+    from .mva_geometry import bridge_cut
+except ImportError:  # run as a script
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from mva_geometry import bridge_cut
 
 NM_PER_DEG_LAT = 60.0
 ALTITUDE_LABEL_RE = re.compile(r"^(?:(\d{4})|FL(\d{3}))$")
@@ -421,30 +427,6 @@ def radar_exclusion(page: fitz.Page, words: list[Token]) -> Polygon | None:
 # ---- assembly ---------------------------------------------------------------------------
 
 
-def _bridge_cut(face: Polygon) -> list[Polygon]:
-    """Cut a face with holes into hole-free pieces along short straight cuts through each hole."""
-    pieces = [Polygon(face.exterior, face.interiors)]
-    while any(p.interiors for p in pieces):
-        piece = next(p for p in pieces if p.interiors)
-        hole = Polygon(piece.interiors[0])
-        center = hole.representative_point()
-        best = None
-        span = math.hypot(*np.subtract(piece.bounds[2:], piece.bounds[:2])) * 2
-        for degrees in range(0, 180, 3):
-            angle = math.radians(degrees)
-            dx, dy = math.cos(angle) * span, math.sin(angle) * span
-            cutter = LineString([(center.x - dx, center.y - dy), (center.x + dx, center.y + dy)])
-            parts = [g for g in split(piece, cutter).geoms if g.area > SLIVER_AREA_PT2]
-            cut_length = cutter.intersection(piece).length
-            if len(parts) >= 2 and (best is None or cut_length < best[0]):
-                best = (cut_length, parts)
-        if best is None:
-            raise ValueError("could not cut a face with holes")
-        pieces.remove(piece)
-        pieces.extend(best[1])
-    return pieces
-
-
 def build_areas(faces: list[Polygon], labels: list[Label], pinks: list[Polygon], radar: Polygon | None) -> tuple[list[Area], list[str]]:
     problems: list[str] = []
     face_labels: list[list[Label]] = [[] for _ in faces]
@@ -482,7 +464,7 @@ def build_areas(faces: list[Polygon], labels: list[Label], pinks: list[Polygon],
             if j != i and altitudes[j] is not None and altitudes[j] < altitudes[i]
             and any(Polygon(ring).contains(other.representative_point()) for ring in face.interiors)
         ]
-        pieces = _bridge_cut(face) if nested_lower else [Polygon(face.exterior)]
+        pieces = bridge_cut(face, SLIVER_AREA_PT2) if nested_lower else [Polygon(face.exterior)]
         text = face_labels[i][0].text
         for piece in pieces:
             inside = [label for label in face_labels[i] if piece.buffer(0.5).contains(Point(label.anchor))]
