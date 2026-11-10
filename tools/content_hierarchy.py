@@ -38,6 +38,9 @@ TERMINAL_FILE_NAMES = {
     "sector_definitions.json",
     "sector_influence.json",
 }
+# Terminal-area files an airport may also carry in its own folder, for itself
+# only: France publishes one MVA chart per airport, not one per terminal area.
+AIRPORT_OVERRIDABLE_FILE_NAMES = {"mva.json"}
 PROFILE_FILE_NAMES = {"colors.json", "style.json"}
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
 PLACEHOLDER_RE = re.compile(r"^[A-Z]{1,2}X{2,3}$")
@@ -224,6 +227,13 @@ def _airport_scope_map(registry: dict[str, Any]) -> dict[str, str]:
     return {airport: scope for scope, airports in terminals.items() for airport in airports}
 
 
+def _is_airport_folder(folder: Path, root: Path, terminals: dict[str, list[str]]) -> bool:
+    if folder == root:
+        return False
+    parent_scope = folder.parent.relative_to(root).as_posix()
+    return parent_scope in terminals and folder.name in terminals[parent_scope]
+
+
 def _airport_references(path: Path) -> set[str]:
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -293,7 +303,8 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
 
     _nationalities, _operational, terminals = _registry_maps(registry)
     airport_scopes = _airport_scope_map(registry)
-    if path.name in AIRPORT_FILE_NAMES:
+    inside_airport_folder = _is_airport_folder(path.parent, root, terminals)
+    if path.name in AIRPORT_FILE_NAMES or (inside_airport_folder and path.name in AIRPORT_OVERRIDABLE_FILE_NAMES):
         airport = path.parent.name
         scope = path.parent.parent.relative_to(root).as_posix()
         _ident, scope_errors = _parse_scope(scope, registry, allow_shallow=False)
@@ -320,8 +331,6 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
         _ident, scope_errors = _parse_scope(scope, registry, allow_shallow=False)
         for message in scope_errors:
             add(message)
-        parent_scope = path.parent.parent.relative_to(root).as_posix() if path.parent != root else ""
-        inside_airport_folder = parent_scope in terminals and path.parent.name in terminals[parent_scope]
         # Only an unregistered terminal area is groupable. A misplaced file inside
         # an airport folder needs moving, not registering.
         groupable_scope = "" if inside_airport_folder or scope in terminals else scope

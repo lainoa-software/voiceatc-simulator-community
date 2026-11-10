@@ -13,7 +13,7 @@ assert SPEC.loader is not None
 SPEC.loader.exec_module(MODULE)
 
 
-def valid_payload(airport: str) -> dict[str, object]:
+def valid_payload(airport: str | list[str]) -> dict[str, object]:
     return {
         "airport": airport,
         "mva_areas": [
@@ -110,6 +110,28 @@ class MvaManifestTests(unittest.TestCase):
             path_b.write_text(payload, encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "duplicate airport"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_build_manifest_rejects_airport_in_terminal_and_airport_files(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            terminal = root / "PARIS_TMA" / "mva.json"
+            airport = root / "PARIS_TMA" / "LFPG" / "mva.json"
+            airport.parent.mkdir(parents=True, exist_ok=True)
+            terminal.write_text(json.dumps(valid_payload(["LFPG", "LFPO"])), encoding="utf-8")
+            airport.write_text(json.dumps(valid_payload("LFPG")), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "duplicate airport 'LFPG'"):
+                MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_build_manifest_points_each_airport_at_its_own_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            for airport in ("LFPG", "LFPO"):
+                path = root / "PARIS_TMA" / airport / "mva.json"
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(valid_payload(airport)), encoding="utf-8")
+            manifest = MODULE.build_manifest(root, commit_sha="test-commit")
+            self.assertEqual("PARIS_TMA/LFPG/mva.json", manifest["airports"]["LFPG"]["repo_path"])
+            self.assertEqual("PARIS_TMA/LFPO/mva.json", manifest["airports"]["LFPO"]["repo_path"])
 
 
 if __name__ == "__main__":
