@@ -46,8 +46,6 @@ generated indexes under `.voiceatc/`. Approval and a green required check are bo
 - [Hierarchy authority](documentation/CONTENT_HIERARCHY.md) — registry and placement contracts.
 - [Map-display contract](documentation/map-display.md) — curated fixes, navaids and MAPS layer defaults.
 - [Visual-procedure contract](documentation/visual-procedures.md) — schema, source evidence and review.
-- [US runway config sources](documentation/US_RUNWAY_CONFIG_SOURCES.md) — provenance of existing flows.
-- [MVA sources](documentation/MVA_SOURCES.md) — the chart behind every generated MVA file and how to rebuild it.
 
 ## Maintainers
 

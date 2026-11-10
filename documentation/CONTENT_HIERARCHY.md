@@ -84,8 +84,3 @@ The hierarchy validator rejects unknown operational areas, placeholders, excess 
 JSON formatting is **not** something to check by hand. CI normalises every JSON
 file after merge, so do not run prettier yourself and do not treat indentation or
 a missing trailing newline as a review finding.
-
-`tools/generate_us_runway_configs.py` is maintainer tooling, not a contributor
-check. It reproduces a one-shot import of FAA preferential-use configurations, and
-several shipped airports have deliberately been improved past it — see
-[`US_RUNWAY_CONFIG_SOURCES.md`](US_RUNWAY_CONFIG_SOURCES.md).

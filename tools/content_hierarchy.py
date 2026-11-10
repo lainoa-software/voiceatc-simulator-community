@@ -39,7 +39,7 @@ TERMINAL_FILE_NAMES = {
     "sector_influence.json",
 }
 # Terminal-area files an airport may also carry in its own folder, for itself
-# only: France publishes one MVA chart per airport, not one per terminal area.
+# only: some sources publish one MVA chart per airport, not one per terminal area.
 AIRPORT_OVERRIDABLE_FILE_NAMES = {"mva.json"}
 PROFILE_FILE_NAMES = {"colors.json", "style.json"}
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
