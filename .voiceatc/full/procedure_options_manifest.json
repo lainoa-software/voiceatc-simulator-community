@@ -175,6 +175,11 @@
       "sha256": "772cb504eea28173604c150e643051ec52c748b1dbbc9a68f5fa754cd5dc7755",
       "size_bytes": 1716
     },
+    "LOWW": {
+      "repo_path": "L/LO/LOVV/VIENNA_TMA/LOWW/procedure_options.json",
+      "sha256": "71ef26c01172b92db15528046bc1b2e44305476ca5583721ac97f7ccd2061bdc",
+      "size_bytes": 11172
+    },
     "LPPR": {
       "repo_path": "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json",
       "sha256": "6c9591208b4f732df09d67a66778a059e80657020d38e1241f83c945d83d77f8",
@@ -301,8 +306,11 @@
       "size_bytes": 129
     }
   },
-  "published_at": "2026-11-10T11:25:44Z",
+  "published_at": "2026-11-10T15:54:05Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": ["community.airac_overrides", "community.procedure_route_keys"],
+  "requires": [
+    "community.airac_overrides",
+    "community.procedure_route_keys"
+  ],
   "schema_version": 1
 }

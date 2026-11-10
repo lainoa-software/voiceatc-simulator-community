@@ -14,10 +14,22 @@
       "dep": "16"
     },
     {
+      "id": "DAY_CALM",
+      "name": "Day calm",
+      "arr": "16",
+      "dep": "29"
+    },
+    {
       "id": "NIGHT",
       "name": "Night preferential",
       "arr": "29",
       "dep": "29"
+    },
+    {
+      "id": "NIGHT_SE",
+      "name": "Night southeasterly",
+      "arr": "16",
+      "dep": "11"
     }
   ]
 }
