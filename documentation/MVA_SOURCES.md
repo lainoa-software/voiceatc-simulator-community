@@ -8,6 +8,12 @@ tools follow the same rule, in `tools/mva_geometry.py`: a hole is dropped when e
 at least as high, and an area with a lower area (or no area) inside a hole is cut into hole-free
 pieces. A cut shows on the scope as a line the chart does not have.
 
+The same holds for whole areas: a lower area drawn wholly inside a higher one (a control zone inside
+its TMA) is cut out of the higher area, or the game reads the higher value over it. The validator
+refuses such a file, and `tools/mva_unhide.py <mva.json> --write` fixes it, checking on a 0.25 NM
+grid that the game then reads the innermost area's value and nothing else changes. Amsterdam,
+Gothenburg, Stockholm, Palma and Istanbul were fixed this way on 2026-11-10.
+
 ## United States: FAA AIXM
 
 The FAA publishes each TRACON's MVA chart as AIXM 5.1 at <https://aeronav.faa.gov/MVA_Charts/aixm/>,
