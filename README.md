@@ -47,6 +47,7 @@ generated indexes under `.voiceatc/`. Approval and a green required check are bo
 - [Map-display contract](documentation/map-display.md) — curated fixes, navaids and MAPS layer defaults.
 - [Visual-procedure contract](documentation/visual-procedures.md) — schema, source evidence and review.
 - [US runway config sources](documentation/US_RUNWAY_CONFIG_SOURCES.md) — provenance of existing flows.
+- [France MVA sources](documentation/FRANCE_MVA_SOURCES.md) — the Paris MVA charts and how they are converted.
 
 ## Maintainers
 
