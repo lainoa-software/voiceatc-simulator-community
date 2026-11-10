@@ -39,6 +39,12 @@
       "services": ["tower"],
       "airport": "LEDA",
       "frequencies": ["121.330"]
+    },
+    {
+      "id": "BCN_CTR",
+      "call_sign": "Barcelona Control",
+      "services": ["center"],
+      "frequencies": ["134.680"]
     }
   ],
   "layouts": [
