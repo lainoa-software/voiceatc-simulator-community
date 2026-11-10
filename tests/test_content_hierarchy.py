@@ -94,8 +94,26 @@ class ContentHierarchyTests(unittest.TestCase):
         self.assertTrue(any("more than one ACC grouping" in error for error in self.errors()))
 
     def test_rejects_terminal_data_inside_airport_folder(self) -> None:
-        self.write_json("K/KZHU/AUSTIN_TMA/KAUS/mva.json", {"airport": "KAUS"})
+        self.write_json("K/KZHU/AUSTIN_TMA/KAUS/misc_drawings.json", {"airport": "KAUS"})
         self.assertTrue(any("must not be inside an airport folder" in error for error in self.errors()))
+
+    def test_accepts_airport_mva_inside_its_airport_folder(self) -> None:
+        self.write_json("K/KZHU/AUSTIN_TMA/KAUS/mva.json", {"airport": "KAUS"})
+        self.assertEqual([], self.errors())
+
+    def test_rejects_airport_mva_naming_another_airport(self) -> None:
+        registry = fixture_registry()
+        registry["terminal_scopes"]["K/KZHU/AUSTIN_TMA"] = ["KAUS", "KEDC"]
+        self.write_registry(registry)
+        self.write_json("K/KZHU/AUSTIN_TMA/KAUS/mva.json", {"airport": ["KAUS", "KEDC"]})
+        self.assertTrue(
+            any("payload airport 'KEDC' does not match folder airport 'KAUS'" in error for error in self.errors())
+        )
+
+    def test_accepts_terminal_mva_beside_airport_folders(self) -> None:
+        self.write_json("K/KZHU/AUSTIN_TMA/mva.json", {"airport": "KAUS"})
+        self.write_json("K/KZHU/AUSTIN_TMA/KAUS/runway_configs.json", {"airport": "KAUS"})
+        self.assertEqual([], self.errors())
 
     def test_accepts_exact_release_alias_declaration_without_source_aliases(self) -> None:
         registry = fixture_registry()
