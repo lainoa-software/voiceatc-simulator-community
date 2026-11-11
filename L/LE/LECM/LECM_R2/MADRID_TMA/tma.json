@@ -38,7 +38,28 @@
           "name": "ALL",
           "unit": "MAD_APP",
           "frequency": "136.105",
-          "airports": ["LEMD"]
+          "airports": ["LEMD"],
+          "zones": ["LEMDCTR"]
+        }
+      ],
+      "on_duty": [
+        {
+          "unit": "BAR_TWR",
+          "name": "TOWER",
+          "frequency": "118.155",
+          "sectors": ["LEMDATZ"]
+        },
+        {
+          "unit": "MAD_CTR",
+          "name": "RUTA 1",
+          "frequency": "135.700",
+          "sectors": ["LECMR1I"]
+        },
+        {
+          "unit": "MAD_CTR",
+          "name": "RUTA 2",
+          "frequency": "133.755",
+          "sectors": ["LECMR2I"]
         }
       ]
     },
@@ -53,9 +74,42 @@
           "name": "ALL",
           "unit": "MAD_APP",
           "frequency": "136.105",
-          "airports": ["LEMD"]
+          "airports": ["LEMD"],
+          "zones": ["LEMDCTR"]
+        }
+      ],
+      "on_duty": [
+        {
+          "unit": "BAR_TWR",
+          "name": "TOWER",
+          "frequency": "118.155",
+          "sectors": ["LEMDATZ"]
+        },
+        {
+          "unit": "MAD_CTR",
+          "name": "RUTA 1",
+          "frequency": "135.700",
+          "sectors": ["LECMR1I"]
+        },
+        {
+          "unit": "MAD_CTR",
+          "name": "RUTA 2",
+          "frequency": "133.755",
+          "sectors": ["LECMR2I"]
         }
       ]
+    }
+  ],
+  "zones": [
+    {
+      "sector": "LEMDCTR",
+      "kind": "CTR",
+      "airport": "LEMD"
+    },
+    {
+      "sector": "LEMDATZ",
+      "kind": "ATZ",
+      "airport": "LEMD"
     }
   ]
 }
