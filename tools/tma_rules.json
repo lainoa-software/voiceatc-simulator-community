@@ -8,6 +8,7 @@
     "approach_conventional": { "needs_airport": false, "playable": false },
     "center": { "needs_airport": false, "playable": false }
   },
+  "zone_kinds": ["CTR", "ATZ"],
   "messages": {
     "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",
     "TMA_SCHEMA_MISSING": "{where}: schema is missing. Write \"schema\": {schema}.",
@@ -28,7 +29,7 @@
     "TMA_FREQUENCY_INVALID": "{where}: frequency \"{value}\" must look like 131.125 and lie between 118.000 and 136.990 MHz.",
     "TMA_POSITION_ONE_SECTOR": "{where}: a position works exactly one sector; \"{value}\" is not one sector id.",
     "TMA_SECTOR_UNDEFINED": "{where}: sector \"{value}\" is not in sector_definitions.json.",
-    "TMA_SECTOR_TWICE": "{where}: sector \"{value}\" has two positions in this layout.",
+    "TMA_SECTOR_TWICE": "{where}: sector \"{value}\" has two workers in this layout (positions and on_duty together).",
     "TMA_POSITION_NAME": "{where}: name \"{value}\" must be capital words joined by \" + \", such as APPROACH + DIRECTORS.",
     "TMA_POSITION_NOT_PLAYABLE": "{where}: unit \"{value}\" cannot be played. Only sectors you can play are listed; a position's unit needs one of: {allowed}.",
     "TMA_POSITION_FREQUENCY_NOT_UNITS": "{where}: frequency \"{value}\" is not one of unit \"{expected}\"'s frequencies.",
@@ -37,6 +38,9 @@
     "TMA_AGREEMENT_NO_TRAFFIC": "{where}: agreement \"{value}\" needs departs or arrives.",
     "TMA_AGREEMENT_SAME_UNIT": "{where}: agreement \"{value}\" goes from a unit to itself.",
     "TMA_AGREEMENT_PRIORITY_TIE": "{where}: agreements \"{value}\" and \"{expected}\" cover the same traffic with the same priority.",
+    "TMA_ZONE_KIND": "{where}: kind \"{value}\" must be one of: {allowed}.",
+    "TMA_ZONE_UNKNOWN": "{where}: \"{value}\" is not a sector in zones.",
+    "TMA_ON_DUTY_NAME": "{where}: name \"{value}\" must be capital words or numbers joined by \" \" or \" + \", such as RUTA 1.",
     "TMA_RUNWAY_PRESET_UNKNOWN": "{where}: runway preset \"{value}\" is not in {expected}/runway_configs.json."
   }
 }

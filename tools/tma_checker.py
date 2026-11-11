@@ -33,15 +33,19 @@ PLAYABLE = [name for name, row in SERVICES.items() if row["playable"]]
 ICAO_RE = re.compile(r"^[A-Z0-9]{4}$")
 SECTOR_RE = re.compile(r"^[A-Z0-9_]+$")
 NAME_RE = re.compile(r"^[A-Z0-9]+( \+ [A-Z0-9]+)*$")
+DUTY_NAME_RE = re.compile(r"^[A-Z0-9]+(( \+ | )[A-Z0-9]+)*$")
+ZONE_KINDS: list[str] = list(RULES.get("zone_kinds", []))
 FREQ_RE = re.compile(r"^\d{3}\.\d{3}$")
 LEVEL_RE = re.compile(r"^[FA]\d{3}$")
 
 KEYS = {
-    "root": {"schema", "tma", "airports", "units", "layouts", "agreements"},
+    "root": {"schema", "tma", "airports", "units", "zones", "layouts", "agreements"},
     "tma": {"id", "name"},
     "unit": {"id", "call_sign", "services", "airport", "frequencies"},
-    "layout": {"id", "runways", "positions"},
-    "position": {"sector", "name", "unit", "frequency", "airports"},
+    "zone": {"sector", "kind", "airport"},
+    "layout": {"id", "runways", "positions", "on_duty"},
+    "position": {"sector", "name", "unit", "frequency", "airports", "zones"},
+    "on_duty": {"unit", "name", "frequency", "sectors"},
     "agreement": {"name", "from", "to", "departs", "arrives", "fix", "climb", "descent", "priority",
                   "release_kind", "miles_in_trail", "go_around", "traffic_of_interest", "holding"},
     "go_around": {"to", "climb"},
@@ -147,7 +151,8 @@ def check(payload: object, bundle_key: str, sector_ids: set[str]) -> list[Proble
     _tma(w, payload)
     airports = _airports(w, payload)
     units = _units(w, payload, airports)
-    _layouts(w, payload, airports, units)
+    zones = _zones(w, payload, airports)
+    _layouts(w, payload, airports, units, zones)
     _agreements(w, payload, units)
     return w.problems
 
@@ -216,7 +221,35 @@ def _services(w: _Walk, unit: dict, where: str) -> list[str]:
     return known
 
 
-def _layouts(w: _Walk, payload: dict, airports: list[str], units: dict[str, dict]) -> None:
+def _zones(w: _Walk, payload: dict, airports: list[str]) -> set[str]:
+    """The top-level zones: each a defined sector, CTR or ATZ, of an airport in the file."""
+    zones: set[str] = set()
+    for i, zone in enumerate(w.array(payload, "zones", "", required=False)):
+        where = f"zones[{i}]"
+        if not w.keys(zone, "zone", where):
+            continue
+        sector = w.text(zone, "sector", where)
+        defined = False
+        if sector:
+            where = f'zones[{i}] "{sector}"'
+            if sector in zones:
+                w.add("TMA_ID_DUPLICATE", where, sector)
+            elif sector not in w.sector_ids:
+                w.add("TMA_SECTOR_UNDEFINED", f"{where}.sector", sector)
+            else:
+                defined = True
+        kind = w.text(zone, "kind", where)
+        if kind and kind not in ZONE_KINDS:
+            w.add("TMA_ZONE_KIND", f"{where}.kind", kind, allowed=", ".join(ZONE_KINDS))
+        airport = w.text(zone, "airport", where)
+        if airport and airport not in airports:
+            w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airport", airport)
+        if defined:
+            zones.add(sector)
+    return zones
+
+
+def _layouts(w: _Walk, payload: dict, airports: list[str], units: dict[str, dict], zones: set[str]) -> None:
     seen: set[str] = set()
     for i, layout in enumerate(w.array(payload, "layouts", "")):
         where = f"layouts[{i}]"
@@ -232,7 +265,8 @@ def _layouts(w: _Walk, payload: dict, airports: list[str], units: dict[str, dict
         owners: dict[str, int] = {code: 0 for code in airports}
         sectors: set[str] = set()
         for k, position in enumerate(w.array(layout, "positions", where)):
-            _position(w, position, f"{where}.positions[{k}]", units, owners, sectors)
+            _position(w, position, f"{where}.positions[{k}]", units, owners, sectors, zones)
+        _on_duty(w, layout, where, units, sectors)
         for code in airports:
             if owners[code] == 0:
                 w.add("TMA_AIRPORT_NO_OWNER", where, code)
@@ -256,7 +290,7 @@ def _runways(w: _Walk, layout: dict, where: str, airports: list[str]) -> None:
 
 
 def _position(w: _Walk, position: object, where: str, units: dict[str, dict],
-              owners: dict[str, int], sectors: set[str]) -> None:
+              owners: dict[str, int], sectors: set[str], zones: set[str]) -> None:
     if not w.keys(position, "position", where):
         return
     _position_sector(w, position, where, sectors)
@@ -281,6 +315,48 @@ def _position(w: _Walk, position: object, where: str, units: dict[str, dict],
             owners[code] += 1
         else:
             w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airports[{m}]", code)
+    for m, zone_id in enumerate(w.array(position, "zones", where, required=False)):
+        at = f"{where}.zones[{m}]"
+        if not isinstance(zone_id, str) or zone_id not in zones:
+            w.add("TMA_ZONE_UNKNOWN", at, zone_id)
+        else:
+            _claim(w, sectors, zone_id, at)
+
+
+def _on_duty(w: _Walk, layout: dict, where: str, units: dict[str, dict], sectors: set[str]) -> None:
+    """The other units working the combination: known units on their own frequencies, on free sectors."""
+    for k, row in enumerate(w.array(layout, "on_duty", where, required=False)):
+        at = f"{where}.on_duty[{k}]"
+        if not w.keys(row, "on_duty", at):
+            continue
+        unit_id = w.text(row, "unit", at)
+        unit = units.get(unit_id)
+        if unit_id and unit is None:
+            w.add("TMA_UNIT_UNKNOWN", f"{at}.unit", unit_id)
+        if "name" not in row:
+            w.add("TMA_FIELD_MISSING", at, "name")
+        elif not isinstance(row["name"], str) or not DUTY_NAME_RE.match(row["name"]):
+            w.add("TMA_ON_DUTY_NAME", f"{at}.name", row["name"])
+        if "frequency" not in row:
+            w.add("TMA_FIELD_MISSING", at, "frequency")
+        else:
+            frequency = w.frequency(row["frequency"], f"{at}.frequency")
+            if frequency and unit is not None and frequency not in unit["frequencies"]:
+                w.add("TMA_POSITION_FREQUENCY_NOT_UNITS", f"{at}.frequency", frequency, expected=unit_id)
+        for m, sector in enumerate(w.array(row, "sectors", at)):
+            spot = f"{at}.sectors[{m}]"
+            if not isinstance(sector, str) or sector not in w.sector_ids:
+                w.add("TMA_SECTOR_UNDEFINED", spot, sector)
+            else:
+                _claim(w, sectors, sector, spot)
+
+
+def _claim(w: _Walk, sectors: set[str], sector: str, where: str) -> None:
+    """One worker per sector in a layout, positions and on_duty entries together."""
+    if sector in sectors:
+        w.add("TMA_SECTOR_TWICE", where, sector)
+    else:
+        sectors.add(sector)
 
 
 def _position_sector(w: _Walk, position: dict, where: str, sectors: set[str]) -> None:
@@ -292,10 +368,8 @@ def _position_sector(w: _Walk, position: dict, where: str, sectors: set[str]) ->
         w.add("TMA_POSITION_ONE_SECTOR", f"{where}.sector", sector)
     elif sector not in w.sector_ids:
         w.add("TMA_SECTOR_UNDEFINED", f"{where}.sector", sector)
-    elif sector in sectors:
-        w.add("TMA_SECTOR_TWICE", f"{where}.sector", sector)
     else:
-        sectors.add(sector)
+        _claim(w, sectors, sector, f"{where}.sector")
 
 
 def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:

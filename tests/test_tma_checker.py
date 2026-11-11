@@ -24,7 +24,7 @@ MADRID = REPO_ROOT / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA"
 
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
-        self.assertEqual(63, len(CORPUS["cases"]))
+        self.assertEqual(81, len(CORPUS["cases"]))
         for case in CORPUS["cases"]:
             with self.subTest(case=case["name"]):
                 problems = MODULE.check(case["payload"], case["bundle_key"], set(case["sector_ids"]))
