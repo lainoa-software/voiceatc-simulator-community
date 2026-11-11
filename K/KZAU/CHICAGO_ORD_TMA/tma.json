@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "CHICAGO_ORD_TMA",
+    "name": "Chicago O'Hare TMA"
+  },
+  "airports": ["KORD"],
+  "units": [
+    {
+      "id": "CHI_APP",
+      "call_sign": "Chicago Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["119.000", "124.350", "125.700", "133.625"]
+    },
+    {
+      "id": "ORD_TWR",
+      "call_sign": "O'Hare Tower",
+      "services": ["tower"],
+      "airport": "KORD",
+      "frequencies": ["120.750", "119.625", "121.150", "126.800", "126.900", "128.050", "128.150", "132.700", "133.000"]
+    },
+    {
+      "id": "CHI_CTR",
+      "call_sign": "Chicago Center",
+      "services": ["center"],
+      "frequencies": ["120.350", "118.150", "118.225", "118.550", "118.750", "119.225", "119.850", "119.950", "120.125", "120.225", "120.975", "121.050", "121.275", "121.375", "123.750", "123.825", "123.850", "124.550", "124.725", "124.800", "124.825", "125.050", "125.100", "125.225", "125.375", "125.575", "125.625", "125.975", "126.125", "126.275", "126.325", "126.425", "126.475", "126.875", "127.050", "127.325", "127.550", "127.625", "127.775", "128.400", "128.500", "128.525", "128.650", "132.100", "132.225", "132.275", "132.500", "132.625", "132.800", "132.950", "133.200", "133.300", "133.350", "133.625", "133.950", "134.025", "134.200", "134.325", "134.825", "134.875", "135.150", "135.450", "135.550", "135.600", "135.750", "135.900", "135.975"]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "WEST_FLOW_DUAL",
+      "runways": {
+        "KORD": ["WEST_FLOW_DUAL"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "WEST_FLOW_TRIPLE",
+      "runways": {
+        "KORD": ["WEST_FLOW_TRIPLE"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "WEST_FLOW_NOISE_ABATEMENT",
+      "runways": {
+        "KORD": ["WEST_FLOW_NOISE_ABATEMENT"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "EAST_FLOW_DUAL_1",
+      "runways": {
+        "KORD": ["EAST_FLOW_DUAL_1"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "EAST_FLOW_DUAL_2",
+      "runways": {
+        "KORD": ["EAST_FLOW_DUAL_2"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "EAST_FLOW_TRIPLE_1",
+      "runways": {
+        "KORD": ["EAST_FLOW_TRIPLE_1"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "EAST_FLOW_TRIPLE_2",
+      "runways": {
+        "KORD": ["EAST_FLOW_TRIPLE_2"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "EAST_FLOW_NOISE_ABATEMENT",
+      "runways": {
+        "KORD": ["EAST_FLOW_NOISE_ABATEMENT"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "4S",
+      "runways": {
+        "KORD": ["4S"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    },
+    {
+      "id": "22S",
+      "runways": {
+        "KORD": ["22S"]
+      },
+      "positions": [
+        {
+          "sector": "KORDAPP",
+          "name": "ALL",
+          "unit": "CHI_APP",
+          "frequency": "119.000",
+          "airports": ["KORD"]
+        }
+      ]
+    }
+  ]
+}
