@@ -1,0 +1,136 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "LAX_TMA",
+    "name": "Los Angeles TMA"
+  },
+  "airports": ["KLAX", "KLGB"],
+  "units": [
+    {
+      "id": "LAX_APP",
+      "call_sign": "SoCal Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["124.900", "124.300", "124.500", "125.350", "128.500"]
+    },
+    {
+      "id": "LAX_TWR",
+      "call_sign": "Los Angeles Tower",
+      "services": ["tower"],
+      "airport": "KLAX",
+      "frequencies": ["120.950", "133.900"]
+    },
+    {
+      "id": "LGB_TWR",
+      "call_sign": "Long Beach Tower",
+      "services": ["tower"],
+      "airport": "KLGB",
+      "frequencies": ["119.400", "120.500"]
+    },
+    {
+      "id": "KZLACTR",
+      "call_sign": "Los Angeles Center",
+      "services": ["center"],
+      "frequencies": [
+        "124.625",
+        "118.025",
+        "119.050",
+        "119.950",
+        "121.900",
+        "124.200",
+        "124.850",
+        "125.275",
+        "125.650",
+        "125.725",
+        "125.800",
+        "126.350",
+        "126.525",
+        "126.700",
+        "126.775",
+        "127.100",
+        "127.350",
+        "127.525",
+        "128.075",
+        "128.150",
+        "128.375",
+        "128.600",
+        "132.150",
+        "132.500",
+        "132.600",
+        "132.625",
+        "132.850",
+        "133.200",
+        "133.550",
+        "133.750",
+        "134.475",
+        "134.575",
+        "134.650",
+        "135.250",
+        "135.300",
+        "135.500",
+        "135.550"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1WEST",
+      "runways": {
+        "KLAX": ["WEST"]
+      },
+      "positions": [
+        {
+          "sector": "KLAXAPP",
+          "name": "ALL",
+          "unit": "LAX_APP",
+          "frequency": "124.900",
+          "airports": ["KLAX", "KLGB"]
+        }
+      ]
+    },
+    {
+      "id": "1EAST",
+      "runways": {
+        "KLAX": ["EAST"]
+      },
+      "positions": [
+        {
+          "sector": "KLAXAPP",
+          "name": "ALL",
+          "unit": "LAX_APP",
+          "frequency": "124.900",
+          "airports": ["KLAX", "KLGB"]
+        }
+      ]
+    },
+    {
+      "id": "1OVER_OCEAN",
+      "runways": {
+        "KLAX": ["OVER_OCEAN"]
+      },
+      "positions": [
+        {
+          "sector": "KLAXAPP",
+          "name": "ALL",
+          "unit": "LAX_APP",
+          "frequency": "124.900",
+          "airports": ["KLAX", "KLGB"]
+        }
+      ]
+    },
+    {
+      "id": "1NIGHT_INBOARD",
+      "runways": {
+        "KLAX": ["NIGHT_INBOARD"]
+      },
+      "positions": [
+        {
+          "sector": "KLAXAPP",
+          "name": "ALL",
+          "unit": "LAX_APP",
+          "frequency": "124.900",
+          "airports": ["KLAX", "KLGB"]
+        }
+      ]
+    }
+  ]
+}
