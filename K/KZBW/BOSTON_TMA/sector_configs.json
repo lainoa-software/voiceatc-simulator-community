@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["NOISE_ABATE", "OVERNIGHT"],
+      "sectors": [
+        {
+          "sector_ids": "BOS",
+          "frequency": "118.250"
+        }
+      ]
+    }
+  ]
+}
