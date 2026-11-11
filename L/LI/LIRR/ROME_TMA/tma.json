@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "ROME_TMA",
+    "name": "Rome TMA"
+  },
+  "airports": ["LIRF", "LIRA"],
+  "units": [
+    {
+      "id": "ROM_APP",
+      "call_sign": "Roma Arrivals",
+      "services": ["approach_radar"],
+      "frequencies": ["125.500", "119.200", "127.950", "131.250"]
+    },
+    {
+      "id": "FIU_TWR",
+      "call_sign": "Fiumicino Tower",
+      "services": ["tower"],
+      "airport": "LIRF",
+      "frequencies": ["118.700", "123.725", "127.625"]
+    },
+    {
+      "id": "CIA_TWR",
+      "call_sign": "Ciampino Tower",
+      "services": ["tower"],
+      "airport": "LIRA",
+      "frequencies": ["120.500", "119.405"]
+    },
+    {
+      "id": "ROM_CTR",
+      "call_sign": "Roma Radar",
+      "services": ["center"],
+      "frequencies": [
+        "127.350",
+        "118.800",
+        "119.200",
+        "119.425",
+        "120.330",
+        "121.315",
+        "122.530",
+        "123.415",
+        "124.200",
+        "124.350",
+        "124.800",
+        "125.455",
+        "125.500",
+        "125.950",
+        "127.125",
+        "127.950",
+        "128.800",
+        "130.775",
+        "130.875",
+        "130.900",
+        "131.100",
+        "131.200",
+        "131.250",
+        "132.030",
+        "132.360",
+        "132.525",
+        "132.840",
+        "133.130",
+        "133.250",
+        "133.485",
+        "134.200",
+        "134.780",
+        "134.900",
+        "135.425",
+        "135.615",
+        "135.700"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1",
+      "runways": {
+        "LIRF": ["SOUTH", "NORTH"]
+      },
+      "positions": [
+        {
+          "sector": "LIRFAPP",
+          "name": "ALL",
+          "unit": "ROM_APP",
+          "frequency": "125.500",
+          "airports": ["LIRF", "LIRA"]
+        }
+      ]
+    }
+  ]
+}
