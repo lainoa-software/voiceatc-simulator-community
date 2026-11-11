@@ -175,6 +175,11 @@
       "sha256": "772cb504eea28173604c150e643051ec52c748b1dbbc9a68f5fa754cd5dc7755",
       "size_bytes": 1716
     },
+    "LOWW": {
+      "repo_path": ".voiceatc/defaults/L/LO/LOVV/VIENNA_TMA/LOWW/procedure_options.json",
+      "sha256": "700a8c7b5a36ef01f49a98647455c0b5cb3489a3b6055d0f57eab47905403c11",
+      "size_bytes": 4598
+    },
     "LPPR": {
       "repo_path": "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json",
       "sha256": "6c9591208b4f732df09d67a66778a059e80657020d38e1241f83c945d83d77f8",
