@@ -72,6 +72,24 @@
           "name": "DDX",
           "frequency": "134.680",
           "sectors": ["LEBLDDX"]
+        },
+        {
+          "unit": "GIR_TWR",
+          "name": "TOWER",
+          "frequency": "120.905",
+          "sectors": ["LEGEAPP"]
+        },
+        {
+          "unit": "REU_TWR",
+          "name": "TOWER",
+          "frequency": "128.880",
+          "sectors": ["LERSAPP"]
+        },
+        {
+          "unit": "LLE_TWR",
+          "name": "TOWER",
+          "frequency": "121.330",
+          "sectors": ["LEDACTR"]
         }
       ]
     }
@@ -86,6 +104,11 @@
       "sector": "LEBLATZ",
       "kind": "ATZ",
       "airport": "LEBL"
+    },
+    {
+      "sector": "LEDACTR",
+      "kind": "CTR",
+      "airport": "LEDA"
     }
   ]
 }
