@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "AMSTERDAM_TMA",
+    "name": "Amsterdam TMA"
+  },
+  "airports": ["EHAM"],
+  "units": [
+    {
+      "id": "AMS_APP",
+      "call_sign": "Schiphol Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["121.205", "118.080", "119.055", "131.155"]
+    },
+    {
+      "id": "AMS_TWR",
+      "call_sign": "Schiphol Tower",
+      "services": ["tower"],
+      "airport": "EHAM",
+      "frequencies": ["119.230", "118.105", "118.280", "135.110"]
+    },
+    {
+      "id": "EHAA_CTR",
+      "call_sign": "Amsterdam Radar",
+      "services": ["center"],
+      "frequencies": [
+        "125.750",
+        "118.805",
+        "119.480",
+        "120.830",
+        "123.705",
+        "123.850",
+        "123.980",
+        "124.880",
+        "125.930",
+        "128.355",
+        "128.580",
+        "130.955",
+        "134.375"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "SOUTH",
+      "runways": {
+        "EHAM": ["ARR 18R 18C DEP 24 18L"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    },
+    {
+      "id": "MIXED",
+      "runways": {
+        "EHAM": ["ARR 36R 06 DEP 18L 18C"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    },
+    {
+      "id": "NORTH",
+      "runways": {
+        "EHAM": ["ARR 36C 36R DEP 36L 36C"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    }
+  ]
+}
