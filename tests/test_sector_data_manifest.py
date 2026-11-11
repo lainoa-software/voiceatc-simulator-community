@@ -129,11 +129,21 @@ class SectorDataManifestTests(unittest.TestCase):
         self.assertTrue(forbidden_metadata.isdisjoint(definitions))
 
         sector_definitions = definitions["sector_definitions"]
-        self.assertEqual(1, len(sector_definitions))
-        sector = sector_definitions[0]
-        self.assertEqual("KJFKAPP", sector["sector_id"])
+        self.assertEqual(
+            {"KJFKAPP", "KZNYCTR"}, {row["sector_id"] for row in sector_definitions}
+        )
+        sector = next(row for row in sector_definitions if row["sector_id"] == "KJFKAPP")
         self.assertEqual(0, sector["lower_limit"])
         self.assertEqual(19000, sector["higher_limit"])
+
+        # The centre's own boundary is a collateral piece: defined, never configured.
+        collateral = next(row for row in sector_definitions if row["sector_id"] == "KZNYCTR")
+        self.assertEqual(0, collateral["lower_limit"])
+        self.assertEqual(60000, collateral["higher_limit"])
+        self.assertEqual(collateral["polygon"][0], collateral["polygon"][-1])
+        self.assertGreater(len(collateral["polygon"]), 100)
+        configs = json.loads((bundle / "sector_configs.json").read_text(encoding="utf-8"))
+        self.assertNotIn("KZNYCTR", json.dumps(configs))
 
         polygon = sector["polygon"]
         self.assertEqual(45, len(polygon))
