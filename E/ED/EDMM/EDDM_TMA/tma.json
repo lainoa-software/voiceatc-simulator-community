@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "EDDM_TMA",
+    "name": "Munich TMA"
+  },
+  "airports": ["EDDM"],
+  "units": [
+    {
+      "id": "DM_APP",
+      "call_sign": "Munich Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["128.030", "118.830", "120.780", "123.905", "126.455", "127.955", "132.305"]
+    },
+    {
+      "id": "DM_TWR",
+      "call_sign": "Munich Tower",
+      "services": ["tower"],
+      "airport": "EDDM",
+      "frequencies": ["118.705", "119.405", "120.505"]
+    },
+    {
+      "id": "EDMM_CTR",
+      "call_sign": "Munich Radar",
+      "services": ["center"],
+      "frequencies": ["134.150", "118.235", "124.960", "125.140", "125.875", "126.065", "126.175", "128.635", "129.100", "129.450", "129.525", "129.555", "131.055", "132.455", "132.555", "132.635", "133.230", "133.550", "133.565", "133.615", "133.680", "136.230", "136.525"]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "26",
+      "runways": {
+        "EDDM": ["26"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "runways": {
+        "EDDM": ["08"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "26S_LVP",
+      "runways": {
+        "EDDM": ["26S_LVP"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "08S_LVP",
+      "runways": {
+        "EDDM": ["08S_LVP"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    }
+  ]
+}

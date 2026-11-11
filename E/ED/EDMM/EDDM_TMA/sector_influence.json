@@ -1,6 +1,10 @@
 {
   "sector_influences": [
     {
+      "sector_id": "EDDMAPP",
+      "airports": ["EDDM", "EDMA", "EDMO"]
+    },
+    {
       "sector_id": "DMNL",
       "airports": ["EDDM", "EDMA"]
     },
