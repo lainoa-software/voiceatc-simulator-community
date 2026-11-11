@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "VIENNA_TMA",
+    "name": "Vienna TMA"
+  },
+  "airports": ["LOWW"],
+  "units": [
+    {
+      "id": "VIE_APP",
+      "call_sign": "Wien Radar",
+      "services": ["approach_radar"],
+      "frequencies": [
+        "134.675",
+        "118.775",
+        "119.800",
+        "125.175",
+        "129.050",
+        "134.125",
+        "136.250"
+      ]
+    },
+    {
+      "id": "VIE_TWR",
+      "call_sign": "Wien Tower",
+      "services": ["tower"],
+      "airport": "LOWW",
+      "frequencies": ["119.400", "121.200", "123.800", "124.475"]
+    },
+    {
+      "id": "VIE_CTR",
+      "call_sign": "Wien Radar",
+      "services": ["center"],
+      "frequencies": [
+        "132.600",
+        "118.560",
+        "118.730",
+        "119.880",
+        "121.265",
+        "122.040",
+        "122.865",
+        "125.785",
+        "126.280",
+        "128.700",
+        "129.125",
+        "129.200",
+        "129.965",
+        "130.360",
+        "130.490",
+        "131.350",
+        "132.160",
+        "132.190",
+        "132.465",
+        "132.765",
+        "132.950",
+        "133.600",
+        "133.800",
+        "133.965",
+        "133.985",
+        "134.350",
+        "134.440",
+        "135.635",
+        "136.325",
+        "136.390"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "DAY_WEST",
+      "runways": {
+        "LOWW": ["DAY_WEST"]
+      },
+      "positions": [
+        {
+          "sector": "VIENNA_TMA_DAY_WEST",
+          "name": "ALL",
+          "unit": "VIE_APP",
+          "frequency": "134.675",
+          "airports": ["LOWW"]
+        }
+      ]
+    },
+    {
+      "id": "DAY_SE",
+      "runways": {
+        "LOWW": ["DAY_SE"]
+      },
+      "positions": [
+        {
+          "sector": "VIENNA_TMA_DAY_SE",
+          "name": "ALL",
+          "unit": "VIE_APP",
+          "frequency": "134.675",
+          "airports": ["LOWW"]
+        }
+      ]
+    },
+    {
+      "id": "NIGHT",
+      "runways": {
+        "LOWW": ["NIGHT"]
+      },
+      "positions": [
+        {
+          "sector": "VIENNA_TMA_NIGHT",
+          "name": "ALL",
+          "unit": "VIE_APP",
+          "frequency": "134.675",
+          "airports": ["LOWW"]
+        }
+      ]
+    }
+  ]
+}
