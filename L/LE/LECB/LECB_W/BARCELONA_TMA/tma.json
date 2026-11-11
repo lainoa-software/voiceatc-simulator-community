@@ -44,7 +44,7 @@
       "id": "BCN_CTR",
       "call_sign": "Barcelona Control",
       "services": ["center"],
-      "frequencies": ["134.680"]
+      "frequencies": ["132.580"]
     }
   ],
   "layouts": [
@@ -73,7 +73,7 @@
           "unit": "BCN_CTR",
           "name": "DDX",
           "code": "LECB_DDX_CTR",
-          "frequency": "134.680",
+          "frequency": "132.580",
           "sectors": ["LEBLDDX"]
         },
         {
