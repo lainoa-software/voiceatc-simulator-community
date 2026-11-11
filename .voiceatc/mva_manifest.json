@@ -1,10 +1,60 @@
 {
-  "airport_count": 57,
+  "airport_count": 99,
   "airports": {
+    "EDDB": {
+      "repo_path": "E/ED/EDWW/BERLIN_TMA/mva.json",
+      "sha256": "370acfc88fb6ddd3f2e646ab48459259ff5888b67c12d0f93cf87c4c01f72a13",
+      "size_bytes": 53762
+    },
+    "EDDF": {
+      "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/mva.json",
+      "sha256": "7ec275814a1f822574464442382db5f761fe220095d57185360896074870bf20",
+      "size_bytes": 46275
+    },
+    "EDDH": {
+      "repo_path": "E/ED/EDWW/HAMBURG_TMA/mva.json",
+      "sha256": "98d9f9724a58b8ec80fb876e37440719fa90330adb6d9cc531d896b05269c877",
+      "size_bytes": 42433
+    },
+    "EDDL": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/mva.json",
+      "sha256": "880da78da42b08a30f0ac6513ccb5d1f9234d5c029897114d751da2cb03f4866",
+      "size_bytes": 62061
+    },
+    "EDDM": {
+      "repo_path": "E/ED/EDMM/EDDM_TMA/mva.json",
+      "sha256": "69fd12eacec27a7658b1b2ccbd7eaea95622d048df32fec618976dba433e48b4",
+      "size_bytes": 56339
+    },
+    "EGCC": {
+      "repo_path": "E/EG/EGTT/MANCHESTER_TMA/EGCC/mva.json",
+      "sha256": "d96b1c8a47a5d8f939ce2974ebaf9e6bdaf51d62df9ac47d5f9f48034d5f449f",
+      "size_bytes": 5204
+    },
+    "EGKK": {
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGKK/mva.json",
+      "sha256": "5c8cbab4294e9a0d05ba38c2c52b6329848e5a96b2e8da2fd2875754d3ca94af",
+      "size_bytes": 18158
+    },
+    "EGLL": {
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGLL/mva.json",
+      "sha256": "e641d2b94dd70a4991be8c2f10341d8e0882525f2a7fa72746809501320ad6e3",
+      "size_bytes": 22323
+    },
+    "EGSS": {
+      "repo_path": "E/EG/EGTT/LONDON_TMA/EGSS/mva.json",
+      "sha256": "f8359782a503cbe4fdd2d3bd45520b5fc414b5f94c0907cbd4faeb499b1fb1b6",
+      "size_bytes": 5924
+    },
     "EHAM": {
       "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/mva.json",
-      "sha256": "1ea5cdf7e96a7be6bd16811827dc101a9d1e75cd1a6355cca2a3230f0799aa0b",
-      "size_bytes": 8527
+      "sha256": "26661031223466d3934f49e6bde833789fb36617281707676e40842ecbc919dd",
+      "size_bytes": 11178
+    },
+    "EIDW": {
+      "repo_path": "E/EI/EISN/DUBLIN_TMA/mva.json",
+      "sha256": "8b7d83908c64b1a2cd9d66c3b93d8137a5d8140ada9dd2d5a2ccdc5a1dbed73f",
+      "size_bytes": 40111
     },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/mva.json",
@@ -13,33 +63,143 @@
     },
     "ESGG": {
       "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/mva.json",
-      "sha256": "b1733282386795d6dd24e9af5dfe1be46ee55ae94164be1da99938dc544c5338",
-      "size_bytes": 2329
+      "sha256": "639a47cd02d0f642af6537e90163486870a06865751deb0f6d06fa28ff9b6cad",
+      "size_bytes": 3061
     },
     "ESOW": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/mva.json",
-      "sha256": "d9cafe5b0d92c7a2fe5ff14fa7ca64db5d92325ef3aa298beef2dd44b0d2da58",
-      "size_bytes": 10292
+      "sha256": "9538853b0cc3c89b0ba84d3343706b515184e02075578de69dca87851efa71a1",
+      "size_bytes": 13603
     },
     "ESSA": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/mva.json",
-      "sha256": "d9cafe5b0d92c7a2fe5ff14fa7ca64db5d92325ef3aa298beef2dd44b0d2da58",
-      "size_bytes": 10292
+      "sha256": "9538853b0cc3c89b0ba84d3343706b515184e02075578de69dca87851efa71a1",
+      "size_bytes": 13603
     },
     "ESSB": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/mva.json",
-      "sha256": "d9cafe5b0d92c7a2fe5ff14fa7ca64db5d92325ef3aa298beef2dd44b0d2da58",
-      "size_bytes": 10292
+      "sha256": "9538853b0cc3c89b0ba84d3343706b515184e02075578de69dca87851efa71a1",
+      "size_bytes": 13603
+    },
+    "KATL": {
+      "repo_path": "K/KZTL/ATLANTA_TMA/mva.json",
+      "sha256": "c9b34ae0f60d1f8772036a8d374f63fcc9232b9a762cbee176f21113cc5596bc",
+      "size_bytes": 152776
+    },
+    "KBOS": {
+      "repo_path": "K/KZBW/BOSTON_TMA/mva.json",
+      "sha256": "a16a80bf80325f7625cace0aab0902cdb87b54ad69f1d33fe3c875a6fd145d16",
+      "size_bytes": 176638
+    },
+    "KCLT": {
+      "repo_path": "K/KZTL/CHARLOTTE_TMA/mva.json",
+      "sha256": "8193b24faccdb46b0e9c70465db56270a9859c8771e97f7ac0684da17490c565",
+      "size_bytes": 89930
+    },
+    "KDCA": {
+      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/mva.json",
+      "sha256": "9988773bdae6522bdcb954c0df00dc360bd0ffa5f48e6a9a4249065c40569594",
+      "size_bytes": 306290
+    },
+    "KDEN": {
+      "repo_path": "K/KZDV/DENVER_TMA/mva.json",
+      "sha256": "b8fa6e931706a153aa3d17f7355128b3b9b1c49fd9be199bd1bb1dd74f11cba3",
+      "size_bytes": 102964
+    },
+    "KDFW": {
+      "repo_path": "K/KZFW/DFW_TMA/mva.json",
+      "sha256": "542cbab0bd4d4eadc4780741846666f8afddf9c39e9228c288966677bb330a60",
+      "size_bytes": 125162
+    },
+    "KDTW": {
+      "repo_path": "K/KZOB/DETROIT_TMA/mva.json",
+      "sha256": "5ecbf77d0af1b5ebe5c5f83461c4009bec5fb96e9ddf9c42fd42062fbeb6c20d",
+      "size_bytes": 50557
+    },
+    "KEWR": {
+      "repo_path": "K/KZNY/NEWARK_TMA/mva.json",
+      "sha256": "734ba0e6879b01f057715407880e3ea8def4e2cdde12bfbf7ed0f1b732c2dff8",
+      "size_bytes": 182923
+    },
+    "KIAD": {
+      "repo_path": "K/KZDC/DULLES_TMA/mva.json",
+      "sha256": "b1073adaa07a2f5de348281bac3d6aaebb8321737e7ae5aca0bc2b58977d01a5",
+      "size_bytes": 306290
+    },
+    "KIAH": {
+      "repo_path": "K/KZHU/HOUSTON_IAH_TMA/mva.json",
+      "sha256": "56230da7e3efa05bac663ba42f2d0e5a8fbee4218e345dee31b36fd6b877eed9",
+      "size_bytes": 219499
     },
     "KJFK": {
       "repo_path": "K/KZNY/JFK_TMA/mva.json",
-      "sha256": "c7505325febdf6742b4d8e02efbbff2684c3d239e206c7ec4066b49f816b4b06",
-      "size_bytes": 100841
+      "sha256": "8c770945d435eb0215f4618a2e48c7235c8a22c59c53be6414fc9e03993100c5",
+      "size_bytes": 182923
+    },
+    "KLAS": {
+      "repo_path": "K/KZLA/LAS_TMA/mva.json",
+      "sha256": "76712200458c196fed0c7127ed027028f047018613b3d737db1775f3328cfb5d",
+      "size_bytes": 111322
+    },
+    "KLAX": {
+      "repo_path": "K/KZLA/LAX_TMA/mva.json",
+      "sha256": "d0acee6074fde0d445824a00750708938ac632a4fb3e17094bd838790bb53169",
+      "size_bytes": 394507
     },
     "KLGA": {
       "repo_path": "K/KZNY/LAGUARDIA_TMA/mva.json",
-      "sha256": "f0f8493b317c1964e446fbcbd1d3eae58e5630c2dc969dc12c20ec97e0e4d44b",
-      "size_bytes": 89587
+      "sha256": "6401f53b4ffc55aeb979d4a462a8debbd598ab877cf5a3f67495cbf5a9276dde",
+      "size_bytes": 182923
+    },
+    "KMCO": {
+      "repo_path": "K/KZJX/ORLANDO_TMA/mva.json",
+      "sha256": "0f6a12d57b1629f05d0ebd332fadc512d60edd5a11a6873236bffc37da74ec57",
+      "size_bytes": 110388
+    },
+    "KMIA": {
+      "repo_path": "K/KZMA/MIAMI_TMA/mva.json",
+      "sha256": "4d21ef06f6bb3107f14291e310b53862f7ce75cd2ce0f73f58ff186d83ed330d",
+      "size_bytes": 67357
+    },
+    "KMSP": {
+      "repo_path": "K/KZMP/MINNEAPOLIS_TMA/mva.json",
+      "sha256": "ccbd64294350233d84d8d38ea94d429e924a4eb955d5265449be72aa08f4a175",
+      "size_bytes": 43781
+    },
+    "KORD": {
+      "repo_path": "K/KZAU/CHICAGO_ORD_TMA/mva.json",
+      "sha256": "1e80509a2d0b83c8ff1af0a66dacb0397703aa49975931136236a87428bdbaf4",
+      "size_bytes": 100423
+    },
+    "KPHL": {
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/mva.json",
+      "sha256": "a6271c027299f7f4ff8b757e30e4d53d788af328fac5f8372377c08cf0cb21fe",
+      "size_bytes": 71248
+    },
+    "KPHX": {
+      "repo_path": "K/KZAB/PHOENIX_TMA/mva.json",
+      "sha256": "60302e0c41e80739eb940a2d12e86fa2b84a0ad7580706abd795288be0793ddd",
+      "size_bytes": 124367
+    },
+    "KSAN": {
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/mva.json",
+      "sha256": "3ad256cd081ae28724699f27de1183bd6e5d8eb4ce73e7f3f58e18b6a6aa82a8",
+      "size_bytes": 394507
+    },
+    "KSEA": {
+      "repo_path": "K/KZSE/SEATTLE_TMA/mva.json",
+      "sha256": "ccc6dbef53238b3dffc9fe9630f30131a58729297216b23025908bd5c46f4d8b",
+      "size_bytes": 138633
+    },
+    "KSFO": {
+      "repo_path": "K/KZOA/SFO_TMA/mva.json",
+      "sha256": "d09700a14ff6a6c3df94d9529e978a52d94c50d993d4e338adc35c44ebdb9274",
+      "size_bytes": 330259
+    },
+    "KSLC": {
+      "repo_path": "K/KZLC/SALT_LAKE_TMA/mva.json",
+      "sha256": "0a2819cc95d7ae8ed38022f3421300b2b07773a46c7047dc3ea5f2462b2cbbd5",
+      "size_bytes": 219224
     },
     "LEAL": {
       "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
@@ -53,13 +213,13 @@
     },
     "LEBL": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/mva.json",
-      "sha256": "b60a41d94cb577dd870f59d6ec904550f116854aa7f126ecb28ea2db798cb97e",
-      "size_bytes": 38161
+      "sha256": "eb0fb04432a1bce9725d51a2404aa498f6ed84a7cb0d5efc0871557b91e42474",
+      "size_bytes": 52108
     },
     "LEIB": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
-      "sha256": "a6b885eaedf2bb86345a20ce9dc5127d88df3a7edbc245178ba9818bb4f19704",
-      "size_bytes": 41095
+      "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
+      "size_bytes": 35958
     },
     "LEJR": {
       "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/mva.json",
@@ -68,8 +228,8 @@
     },
     "LEMD": {
       "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/mva.json",
-      "sha256": "e019428e080004c24587c0a9effd35b9afe96f0d3481d535e1c1e0de7c6b392d",
-      "size_bytes": 17449
+      "sha256": "82b140cbd9dd10c8ca670d31c056d7fd544e49f6705776ebfce88b2284194de5",
+      "size_bytes": 23800
     },
     "LEMG": {
       "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/mva.json",
@@ -78,13 +238,13 @@
     },
     "LEMH": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
-      "sha256": "a6b885eaedf2bb86345a20ce9dc5127d88df3a7edbc245178ba9818bb4f19704",
-      "size_bytes": 41095
+      "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
+      "size_bytes": 35958
     },
     "LEPA": {
       "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
-      "sha256": "a6b885eaedf2bb86345a20ce9dc5127d88df3a7edbc245178ba9818bb4f19704",
-      "size_bytes": 41095
+      "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
+      "size_bytes": 35958
     },
     "LEVC": {
       "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
@@ -106,20 +266,60 @@
       "sha256": "10b659103ae7d598a182e0a5efd7ba10486bc7f24be9d51c2515636153b13c61",
       "size_bytes": 16375
     },
+    "LIMC": {
+      "repo_path": "L/LI/LIMM/MILAN_TMA/mva.json",
+      "sha256": "b5315f9fce2df667ba1a9e14671cf1f7cf8fe1674b7a04ed7a8617d2dd550f11",
+      "size_bytes": 46508
+    },
+    "LIRF": {
+      "repo_path": "L/LI/LIRR/ROME_TMA/mva.json",
+      "sha256": "67b3050b0635a214986e4e969e5d5a76cb7c628bb5f8f370caf6ba6bc73d2c5d",
+      "size_bytes": 22840
+    },
+    "LOWW": {
+      "repo_path": "L/LO/LOVV/VIENNA_TMA/mva.json",
+      "sha256": "5239f84fd1ea83bb9c7be5971944c67aee763dd898c62d52764f0f4a911c46d2",
+      "size_bytes": 39789
+    },
     "LTBA": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/mva.json",
-      "sha256": "d0a82d3d3b2d99f0ee66090174198e0e9ddf2decefc7eb8887d5d6104f938881",
-      "size_bytes": 8558
+      "sha256": "6d4b59b8e65bfe067dfbd34d2fff04599b3da4893adda1b04e5f2a5d6f91f1c0",
+      "size_bytes": 9170
     },
     "LTFJ": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/mva.json",
-      "sha256": "d0a82d3d3b2d99f0ee66090174198e0e9ddf2decefc7eb8887d5d6104f938881",
-      "size_bytes": 8558
+      "sha256": "6d4b59b8e65bfe067dfbd34d2fff04599b3da4893adda1b04e5f2a5d6f91f1c0",
+      "size_bytes": 9170
     },
     "LTFM": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/mva.json",
-      "sha256": "d0a82d3d3b2d99f0ee66090174198e0e9ddf2decefc7eb8887d5d6104f938881",
-      "size_bytes": 8558
+      "sha256": "6d4b59b8e65bfe067dfbd34d2fff04599b3da4893adda1b04e5f2a5d6f91f1c0",
+      "size_bytes": 9170
+    },
+    "OMAA": {
+      "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/mva.json",
+      "sha256": "10edcb55a75487b5f78333ca6f028291338479b17ebaf09150cf2f93756c2ee5",
+      "size_bytes": 10511
+    },
+    "OMDB": {
+      "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/mva.json",
+      "sha256": "9b3ba1e122d9ee053b1bcb458a4e1752f953f74a405408df96578bfd6e1e1208",
+      "size_bytes": 8562
+    },
+    "OTHH": {
+      "repo_path": "O/OT/OTDF/DOHA_TMA/mva.json",
+      "sha256": "b52c3929a76016ea55f05bfb1abaef5ea6d6881dd311439481c2393853ee7747",
+      "size_bytes": 2292
+    },
+    "PANC": {
+      "repo_path": "P/PA/PAZA/ANCHORAGE_TMA/mva.json",
+      "sha256": "8b1554fa942f085bba619603f4ff420e18c8992e746ac5abed946b9cb7a1796f",
+      "size_bytes": 64182
+    },
+    "PHNL": {
+      "repo_path": "P/PH/PHZH/PHNL_TMA/mva.json",
+      "sha256": "3d0ae07029d534a0f60752deea77d1d7cc2460c2894d3ad1c642f2e23cce1a34",
+      "size_bytes": 38160
     },
     "RCBS": {
       "repo_path": "R/RC/RCAA/KINMEN_TMA/mva.json",
@@ -283,17 +483,27 @@
     },
     "VHHH": {
       "repo_path": "V/VH/VHHK/HONGKONG_TMA/mva.json",
-      "sha256": "81fa38fa3dc7235db9ce96601279371d15e0ff6b0e5a73297f6f9f6124d915ca",
-      "size_bytes": 15116
+      "sha256": "f09799ad8b9b7e94ac6775e8e1ad2282aa8f17eb558de034c9511269db3e99bf",
+      "size_bytes": 123165
+    },
+    "WMKK": {
+      "repo_path": "W/WM/WMFC/Kuala_Lumpur_TMA/mva.json",
+      "sha256": "a26900a0c2f26c0f4eb569e002962dcbfe78520526b468fcf86cce50f0ace519",
+      "size_bytes": 138626
+    },
+    "YMML": {
+      "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/mva.json",
+      "sha256": "99e29487b1cca1e5a3a6a98d1c721c99f562f3b495e2e58d7b3546edfd8dfcfa",
+      "size_bytes": 76046
     }
   },
   "asset_name": "mva-2611.zip",
-  "commit_sha": "2a623c88d6ad0dfc0a4b53471a369657266bad74",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-10-b/mva-2611.zip",
-  "published_at": "2026-11-10T11:25:20Z",
-  "release_tag": "daily-2026-11-10-b",
+  "commit_sha": "0215b01d080294ff4f94596be313310af7eb175e",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-11/mva-2611.zip",
+  "published_at": "2026-11-11T07:43:48Z",
+  "release_tag": "daily-2026-11-11",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "121edc7a507b503bf4ca3a7e109a900800c4debc975805aea5ee8e2069174823",
-  "size_bytes": 732193
+  "sha256": "0ec1e760abb76558b363abb8ac15f78be54cdd79afb5b6e429a58d7ef74f808f",
+  "size_bytes": 1668381
 }
