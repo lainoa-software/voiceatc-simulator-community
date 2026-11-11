@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["NORTH", "SOUTH", "NORTH_RW33"],
+      "sectors": [
+        {
+          "sector_ids": "DCA",
+          "frequency": "119.850"
+        }
+      ]
+    }
+  ]
+}
