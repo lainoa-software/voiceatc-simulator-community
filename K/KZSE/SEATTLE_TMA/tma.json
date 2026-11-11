@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "SEATTLE_TMA",
+    "name": "Seattle TMA"
+  },
+  "airports": ["KSEA", "KBFI"],
+  "units": [
+    {
+      "id": "SEA_APP",
+      "call_sign": "Seattle Approach",
+      "services": ["approach_radar"],
+      "frequencies": [
+        "125.600",
+        "119.200",
+        "120.100",
+        "120.400",
+        "123.900",
+        "125.900",
+        "126.500",
+        "128.500",
+        "133.650"
+      ]
+    },
+    {
+      "id": "SEA_TWR",
+      "call_sign": "Seattle Tower",
+      "services": ["tower"],
+      "airport": "KSEA",
+      "frequencies": ["119.900", "120.950"]
+    },
+    {
+      "id": "BFI_TWR",
+      "call_sign": "Boeing Tower",
+      "services": ["tower"],
+      "airport": "KBFI",
+      "frequencies": ["118.300", "120.600"]
+    },
+    {
+      "id": "KZSECTR",
+      "call_sign": "Seattle Center",
+      "services": ["center"],
+      "frequencies": [
+        "135.450",
+        "118.550",
+        "118.625",
+        "119.225",
+        "119.650",
+        "120.300",
+        "121.350",
+        "123.950",
+        "124.200",
+        "124.750",
+        "124.850",
+        "125.100",
+        "125.800",
+        "126.100",
+        "126.150",
+        "126.600",
+        "127.050",
+        "127.550",
+        "127.600",
+        "128.150",
+        "128.300",
+        "128.450",
+        "132.075",
+        "132.600",
+        "134.900",
+        "134.950",
+        "135.150",
+        "135.350"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1SOUTH_DAY",
+      "runways": {
+        "KSEA": ["SOUTH_DAY"]
+      },
+      "positions": [
+        {
+          "sector": "KSEAAPP",
+          "name": "ALL",
+          "unit": "SEA_APP",
+          "frequency": "125.600",
+          "airports": ["KSEA", "KBFI"]
+        }
+      ]
+    },
+    {
+      "id": "1SOUTH_NIGHT",
+      "runways": {
+        "KSEA": ["SOUTH_NIGHT"]
+      },
+      "positions": [
+        {
+          "sector": "KSEAAPP",
+          "name": "ALL",
+          "unit": "SEA_APP",
+          "frequency": "125.600",
+          "airports": ["KSEA", "KBFI"]
+        }
+      ]
+    },
+    {
+      "id": "1NORTH_DAY",
+      "runways": {
+        "KSEA": ["NORTH_DAY"]
+      },
+      "positions": [
+        {
+          "sector": "KSEAAPP",
+          "name": "ALL",
+          "unit": "SEA_APP",
+          "frequency": "125.600",
+          "airports": ["KSEA", "KBFI"]
+        }
+      ]
+    },
+    {
+      "id": "1NORTH_NIGHT",
+      "runways": {
+        "KSEA": ["NORTH_NIGHT"]
+      },
+      "positions": [
+        {
+          "sector": "KSEAAPP",
+          "name": "ALL",
+          "unit": "SEA_APP",
+          "frequency": "125.600",
+          "airports": ["KSEA", "KBFI"]
+        }
+      ]
+    }
+  ]
+}
