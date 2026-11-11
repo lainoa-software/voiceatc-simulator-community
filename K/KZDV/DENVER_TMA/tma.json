@@ -82,6 +82,7 @@
         {
           "sector": "KDENAPP",
           "name": "ALL",
+          "code": "KDEN_APP",
           "unit": "DEN_APP",
           "frequency": "126.550",
           "airports": ["KDEN"]
@@ -97,6 +98,7 @@
         {
           "sector": "KDENAPP",
           "name": "ALL",
+          "code": "KDEN_APP",
           "unit": "DEN_APP",
           "frequency": "126.550",
           "airports": ["KDEN"]
@@ -112,6 +114,7 @@
         {
           "sector": "KDENAPP",
           "name": "ALL",
+          "code": "KDEN_APP",
           "unit": "DEN_APP",
           "frequency": "126.550",
           "airports": ["KDEN"]

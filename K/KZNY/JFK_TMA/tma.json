@@ -89,6 +89,7 @@
         {
           "sector": "KJFKAPP",
           "name": "ALL",
+          "code": "KJFK_APP",
           "unit": "JFK_APP",
           "frequency": "125.700",
           "airports": ["KJFK", "KFRG"]
@@ -104,6 +105,7 @@
         {
           "sector": "KJFKAPP",
           "name": "ALL",
+          "code": "KJFK_APP",
           "unit": "JFK_APP",
           "frequency": "125.700",
           "airports": ["KJFK", "KFRG"]
@@ -119,6 +121,7 @@
         {
           "sector": "KJFKAPP",
           "name": "ALL",
+          "code": "KJFK_APP",
           "unit": "JFK_APP",
           "frequency": "125.700",
           "airports": ["KJFK", "KFRG"]
@@ -134,6 +137,7 @@
         {
           "sector": "KJFKAPP",
           "name": "ALL",
+          "code": "KJFK_APP",
           "unit": "JFK_APP",
           "frequency": "125.700",
           "airports": ["KJFK", "KFRG"]

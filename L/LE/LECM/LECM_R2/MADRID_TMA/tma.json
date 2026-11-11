@@ -36,6 +36,7 @@
         {
           "sector": "LEMDALN",
           "name": "ALL",
+          "code": "LEMD_ALN_APP",
           "unit": "MAD_APP",
           "frequency": "136.105",
           "airports": ["LEMD"],
@@ -46,18 +47,21 @@
         {
           "unit": "BAR_TWR",
           "name": "TOWER",
+          "code": "LEMD_ALL_TWR",
           "frequency": "118.155",
           "sectors": ["LEMDATZ"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 1",
+          "code": "LECM_R1_CTR",
           "frequency": "135.700",
           "sectors": ["LECMR1I"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 2",
+          "code": "LECM_R2_CTR",
           "frequency": "133.755",
           "sectors": ["LECMR2I"]
         }
@@ -72,6 +76,7 @@
         {
           "sector": "LEMDALS",
           "name": "ALL",
+          "code": "LEMD_ALS_APP",
           "unit": "MAD_APP",
           "frequency": "136.105",
           "airports": ["LEMD"],
@@ -82,18 +87,21 @@
         {
           "unit": "BAR_TWR",
           "name": "TOWER",
+          "code": "LEMD_ALL_TWR",
           "frequency": "118.155",
           "sectors": ["LEMDATZ"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 1",
+          "code": "LECM_R1_CTR",
           "frequency": "135.700",
           "sectors": ["LECMR1I"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 2",
+          "code": "LECM_R2_CTR",
           "frequency": "133.755",
           "sectors": ["LECMR2I"]
         }

@@ -98,6 +98,7 @@
         {
           "sector": "EGLLINT27",
           "name": "INTERMEDIATE + FINAL",
+          "code": "EGLL_INT_APP",
           "unit": "HLR_APP",
           "frequency": "119.730",
           "airports": ["EGLL"]
@@ -113,6 +114,7 @@
         {
           "sector": "EGLLINT27",
           "name": "INTERMEDIATE + FINAL",
+          "code": "EGLL_INT_APP",
           "unit": "HLR_APP",
           "frequency": "119.730",
           "airports": ["EGLL"]

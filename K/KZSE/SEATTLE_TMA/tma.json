@@ -82,6 +82,7 @@
         {
           "sector": "KSEAAPP",
           "name": "ALL",
+          "code": "KSEA_APP",
           "unit": "SEA_APP",
           "frequency": "125.600",
           "airports": ["KSEA", "KBFI"]
@@ -97,6 +98,7 @@
         {
           "sector": "KSEAAPP",
           "name": "ALL",
+          "code": "KSEA_APP",
           "unit": "SEA_APP",
           "frequency": "125.600",
           "airports": ["KSEA", "KBFI"]
@@ -112,6 +114,7 @@
         {
           "sector": "KSEAAPP",
           "name": "ALL",
+          "code": "KSEA_APP",
           "unit": "SEA_APP",
           "frequency": "125.600",
           "airports": ["KSEA", "KBFI"]
@@ -127,6 +130,7 @@
         {
           "sector": "KSEAAPP",
           "name": "ALL",
+          "code": "KSEA_APP",
           "unit": "SEA_APP",
           "frequency": "125.600",
           "airports": ["KSEA", "KBFI"]

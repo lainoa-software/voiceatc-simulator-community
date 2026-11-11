@@ -104,6 +104,7 @@
         {
           "sector": "KDFWAPP",
           "name": "ALL",
+          "code": "KDFW_APP",
           "unit": "DFW_APP",
           "frequency": "125.025",
           "airports": ["KDFW"]
@@ -119,6 +120,7 @@
         {
           "sector": "KDFWAPP",
           "name": "ALL",
+          "code": "KDFW_APP",
           "unit": "DFW_APP",
           "frequency": "125.025",
           "airports": ["KDFW"]
@@ -134,6 +136,7 @@
         {
           "sector": "KDFWAPP",
           "name": "ALL",
+          "code": "KDFW_APP",
           "unit": "DFW_APP",
           "frequency": "125.025",
           "airports": ["KDFW"]
@@ -149,6 +152,7 @@
         {
           "sector": "KDFWAPP",
           "name": "ALL",
+          "code": "KDFW_APP",
           "unit": "DFW_APP",
           "frequency": "125.025",
           "airports": ["KDFW"]

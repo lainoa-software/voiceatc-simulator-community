@@ -54,6 +54,7 @@
         {
           "sector": "LEBLCORE",
           "name": "FINAL + T1 + T2 + T3 + T4",
+          "code": "LEBL_CORE_APP",
           "unit": "BCN_APP",
           "frequency": "131.125",
           "airports": ["LEBL", "LEGE", "LERS", "LEDA"],
@@ -64,30 +65,35 @@
         {
           "unit": "BCN_TWR",
           "name": "TOWER",
+          "code": "LEBL_TWR",
           "frequency": "118.105",
           "sectors": ["LEBLATZ"]
         },
         {
           "unit": "BCN_CTR",
           "name": "DDX",
+          "code": "LECB_DDX_CTR",
           "frequency": "134.680",
           "sectors": ["LEBLDDX"]
         },
         {
           "unit": "GIR_TWR",
           "name": "TOWER",
+          "code": "LEGE_APP",
           "frequency": "120.905",
           "sectors": ["LEGEAPP"]
         },
         {
           "unit": "REU_TWR",
           "name": "TOWER",
+          "code": "LERS_APP",
           "frequency": "128.880",
           "sectors": ["LERSAPP"]
         },
         {
           "unit": "LLE_TWR",
           "name": "TOWER",
+          "code": "LEDA_TWR",
           "frequency": "121.330",
           "sectors": ["LEDACTR"]
         }

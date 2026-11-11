@@ -36,6 +36,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -51,6 +52,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -66,6 +68,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -81,6 +84,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -96,6 +100,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -111,6 +116,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -126,6 +132,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -141,6 +148,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -156,6 +164,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]
@@ -171,6 +180,7 @@
         {
           "sector": "KORDAPP",
           "name": "ALL",
+          "code": "KORD_APP",
           "unit": "CHI_APP",
           "frequency": "119.000",
           "airports": ["KORD"]

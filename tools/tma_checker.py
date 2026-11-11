@@ -37,6 +37,7 @@ DUTY_NAME_RE = re.compile(r"^[A-Z0-9]+(( \+ | )[A-Z0-9]+)*$")
 ZONE_KINDS: list[str] = list(RULES.get("zone_kinds", []))
 FREQ_RE = re.compile(r"^\d{3}\.\d{3}$")
 LEVEL_RE = re.compile(r"^[FA]\d{3}$")
+CODE_RE = re.compile(RULES["code_pattern"])
 
 KEYS = {
     "root": {"schema", "tma", "airports", "units", "zones", "layouts", "agreements"},
@@ -44,8 +45,8 @@ KEYS = {
     "unit": {"id", "call_sign", "services", "airport", "frequencies"},
     "zone": {"sector", "kind", "airport"},
     "layout": {"id", "runways", "positions", "on_duty"},
-    "position": {"sector", "name", "unit", "frequency", "airports", "zones"},
-    "on_duty": {"unit", "name", "frequency", "sectors"},
+    "position": {"sector", "name", "code", "unit", "frequency", "airports", "zones"},
+    "on_duty": {"unit", "name", "code", "frequency", "sectors"},
     "agreement": {"name", "from", "to", "departs", "arrives", "fix", "climb", "descent", "priority",
                   "release_kind", "miles_in_trail", "go_around", "traffic_of_interest", "holding"},
     "go_around": {"to", "climb"},
@@ -298,6 +299,7 @@ def _position(w: _Walk, position: object, where: str, units: dict[str, dict],
         w.add("TMA_FIELD_MISSING", where, "name")
     elif not isinstance(position["name"], str) or not NAME_RE.match(position["name"]):
         w.add("TMA_POSITION_NAME", f"{where}.name", position["name"])
+    _code(w, position, where)
     unit_id = w.text(position, "unit", where)
     unit = units.get(unit_id)
     if unit_id and unit is None:
@@ -337,6 +339,7 @@ def _on_duty(w: _Walk, layout: dict, where: str, units: dict[str, dict], sectors
             w.add("TMA_FIELD_MISSING", at, "name")
         elif not isinstance(row["name"], str) or not DUTY_NAME_RE.match(row["name"]):
             w.add("TMA_ON_DUTY_NAME", f"{at}.name", row["name"])
+        _code(w, row, at)
         if "frequency" not in row:
             w.add("TMA_FIELD_MISSING", at, "frequency")
         else:
@@ -349,6 +352,14 @@ def _on_duty(w: _Walk, layout: dict, where: str, units: dict[str, dict], sectors
                 w.add("TMA_SECTOR_UNDEFINED", spot, sector)
             else:
                 _claim(w, sectors, sector, spot)
+
+
+def _code(w: _Walk, entry: dict, where: str) -> None:
+    """A position's or on_duty unit's code: its ICAO, words joined by "_", then TWR, APP or CTR."""
+    if "code" not in entry:
+        w.add("TMA_FIELD_MISSING", where, "code")
+    elif not isinstance(entry["code"], str) or not CODE_RE.match(entry["code"]):
+        w.add("TMA_UNIT_CODE", f"{where}.code", entry["code"])
 
 
 def _claim(w: _Walk, sectors: set[str], sector: str, where: str) -> None:

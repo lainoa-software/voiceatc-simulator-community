@@ -80,6 +80,7 @@
         {
           "sector": "LIRFAPP",
           "name": "ALL",
+          "code": "LIRF_APP",
           "unit": "ROM_APP",
           "frequency": "125.500",
           "airports": ["LIRF", "LIRA"]

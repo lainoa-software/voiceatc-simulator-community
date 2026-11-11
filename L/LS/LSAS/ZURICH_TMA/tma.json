@@ -52,6 +52,7 @@
         {
           "sector": "LSZHAPP",
           "name": "ALL",
+          "code": "LSZH_APP",
           "unit": "ZRH_APP",
           "frequency": "135.230",
           "airports": ["LSZH"]

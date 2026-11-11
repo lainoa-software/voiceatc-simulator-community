@@ -36,6 +36,7 @@
         {
           "sector": "EDDMAPP",
           "name": "ALL",
+          "code": "EDDM_APP",
           "unit": "DM_APP",
           "frequency": "128.030",
           "airports": ["EDDM"]
@@ -51,6 +52,7 @@
         {
           "sector": "EDDMAPP",
           "name": "ALL",
+          "code": "EDDM_APP",
           "unit": "DM_APP",
           "frequency": "128.030",
           "airports": ["EDDM"]
@@ -66,6 +68,7 @@
         {
           "sector": "EDDMAPP",
           "name": "ALL",
+          "code": "EDDM_APP",
           "unit": "DM_APP",
           "frequency": "128.030",
           "airports": ["EDDM"]
@@ -81,6 +84,7 @@
         {
           "sector": "EDDMAPP",
           "name": "ALL",
+          "code": "EDDM_APP",
           "unit": "DM_APP",
           "frequency": "128.030",
           "airports": ["EDDM"]

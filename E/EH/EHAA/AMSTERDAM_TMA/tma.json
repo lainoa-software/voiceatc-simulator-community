@@ -50,6 +50,7 @@
         {
           "sector": "EHAMAPP",
           "name": "ALL",
+          "code": "EHAM_APP",
           "unit": "AMS_APP",
           "frequency": "121.205",
           "airports": ["EHAM"]
@@ -65,6 +66,7 @@
         {
           "sector": "EHAMAPP",
           "name": "ALL",
+          "code": "EHAM_APP",
           "unit": "AMS_APP",
           "frequency": "121.205",
           "airports": ["EHAM"]
@@ -80,6 +82,7 @@
         {
           "sector": "EHAMAPP",
           "name": "ALL",
+          "code": "EHAM_APP",
           "unit": "AMS_APP",
           "frequency": "121.205",
           "airports": ["EHAM"]

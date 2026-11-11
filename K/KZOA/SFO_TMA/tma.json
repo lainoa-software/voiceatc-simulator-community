@@ -63,6 +63,7 @@
         {
           "sector": "KSFOAPP",
           "name": "ALL",
+          "code": "KSFO_APP",
           "unit": "SFO_APP",
           "frequency": "133.950",
           "airports": ["KSFO"]
@@ -78,6 +79,7 @@
         {
           "sector": "KSFOAPP",
           "name": "ALL",
+          "code": "KSFO_APP",
           "unit": "SFO_APP",
           "frequency": "133.950",
           "airports": ["KSFO"]
@@ -93,6 +95,7 @@
         {
           "sector": "KSFOAPP",
           "name": "ALL",
+          "code": "KSFO_APP",
           "unit": "SFO_APP",
           "frequency": "133.950",
           "airports": ["KSFO"]

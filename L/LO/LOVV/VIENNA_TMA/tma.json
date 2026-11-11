@@ -75,6 +75,7 @@
         {
           "sector": "VIENNA_TMA_DAY_WEST",
           "name": "ALL",
+          "code": "LOWW_APP",
           "unit": "VIE_APP",
           "frequency": "134.675",
           "airports": ["LOWW"]
@@ -90,6 +91,7 @@
         {
           "sector": "VIENNA_TMA_DAY_SE",
           "name": "ALL",
+          "code": "LOWW_APP",
           "unit": "VIE_APP",
           "frequency": "134.675",
           "airports": ["LOWW"]
@@ -105,6 +107,7 @@
         {
           "sector": "VIENNA_TMA_NIGHT",
           "name": "ALL",
+          "code": "LOWW_APP",
           "unit": "VIE_APP",
           "frequency": "134.675",
           "airports": ["LOWW"]

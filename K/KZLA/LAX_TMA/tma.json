@@ -81,6 +81,7 @@
         {
           "sector": "KLAXAPP",
           "name": "ALL",
+          "code": "KLAX_APP",
           "unit": "LAX_APP",
           "frequency": "124.900",
           "airports": ["KLAX", "KLGB"]
@@ -96,6 +97,7 @@
         {
           "sector": "KLAXAPP",
           "name": "ALL",
+          "code": "KLAX_APP",
           "unit": "LAX_APP",
           "frequency": "124.900",
           "airports": ["KLAX", "KLGB"]
@@ -111,6 +113,7 @@
         {
           "sector": "KLAXAPP",
           "name": "ALL",
+          "code": "KLAX_APP",
           "unit": "LAX_APP",
           "frequency": "124.900",
           "airports": ["KLAX", "KLGB"]
@@ -126,6 +129,7 @@
         {
           "sector": "KLAXAPP",
           "name": "ALL",
+          "code": "KLAX_APP",
           "unit": "LAX_APP",
           "frequency": "124.900",
           "airports": ["KLAX", "KLGB"]

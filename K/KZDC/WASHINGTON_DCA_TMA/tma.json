@@ -93,6 +93,7 @@
         {
           "sector": "DCA",
           "name": "ALL",
+          "code": "KDCA_APP",
           "unit": "DCA_APP",
           "frequency": "119.850",
           "airports": ["KDCA"]

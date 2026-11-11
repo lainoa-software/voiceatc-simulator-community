@@ -36,6 +36,7 @@
         {
           "sector": "DFAN",
           "name": "ALL",
+          "code": "EDDF_APP",
           "unit": "DF_APP",
           "frequency": "120.805",
           "airports": ["EDDF"]
@@ -51,6 +52,7 @@
         {
           "sector": "DFAN",
           "name": "ALL",
+          "code": "EDDF_APP",
           "unit": "DF_APP",
           "frequency": "120.805",
           "airports": ["EDDF"]

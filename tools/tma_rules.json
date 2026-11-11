@@ -9,6 +9,7 @@
     "center": { "needs_airport": false, "playable": false }
   },
   "zone_kinds": ["CTR", "ATZ"],
+  "code_pattern": "^[A-Z0-9]{4}(_[A-Z0-9]+)*_(TWR|APP|CTR)$",
   "messages": {
     "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",
     "TMA_SCHEMA_MISSING": "{where}: schema is missing. Write \"schema\": {schema}.",
@@ -40,6 +41,7 @@
     "TMA_AGREEMENT_PRIORITY_TIE": "{where}: agreements \"{value}\" and \"{expected}\" cover the same traffic with the same priority.",
     "TMA_ZONE_KIND": "{where}: kind \"{value}\" must be one of: {allowed}.",
     "TMA_ZONE_UNKNOWN": "{where}: \"{value}\" is not a sector in zones.",
+    "TMA_UNIT_CODE": "{where}: code \"{value}\" must be an ICAO code, then capital words or numbers each after \"_\", ending in _TWR, _APP or _CTR, such as LEMD_ALN_APP.",
     "TMA_ON_DUTY_NAME": "{where}: name \"{value}\" must be capital words or numbers joined by \" \" or \" + \", such as RUTA 1.",
     "TMA_RUNWAY_PRESET_UNKNOWN": "{where}: runway preset \"{value}\" is not in {expected}/runway_configs.json."
   }

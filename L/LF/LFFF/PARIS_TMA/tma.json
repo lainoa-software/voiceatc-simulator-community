@@ -95,6 +95,7 @@
         {
           "sector": "CDGAPP",
           "name": "ALL",
+          "code": "LFPG_APP",
           "unit": "CDG_APP",
           "frequency": "125.830",
           "airports": ["LFPG"]
@@ -110,6 +111,7 @@
         {
           "sector": "CDGAPP",
           "name": "ALL",
+          "code": "LFPG_APP",
           "unit": "CDG_APP",
           "frequency": "125.830",
           "airports": ["LFPG"]

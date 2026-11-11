@@ -106,6 +106,7 @@
         {
           "sector": "ATL",
           "name": "ALL",
+          "code": "KATL_APP",
           "unit": "ATL_APP",
           "frequency": "128.000",
           "airports": ["KATL", "KPDK"]

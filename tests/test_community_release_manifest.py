@@ -233,6 +233,7 @@ def add_bundle_tma(root: Path) -> None:
                         {
                             "sector": "LEBLAAA",
                             "name": "ALL",
+                            "code": "LEBL_APP",
                             "unit": "BCN_APP",
                             "frequency": "131.125",
                             "airports": ["LEBL"],
@@ -264,6 +265,7 @@ def add_bundle_tma(root: Path) -> None:
                         {
                             "sector": "LEMDAAA",
                             "name": "ALL",
+                            "code": "LEMD_APP",
                             "unit": "MAD_APP",
                             "frequency": "136.105",
                             "airports": ["LEMD"],
