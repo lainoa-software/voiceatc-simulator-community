@@ -47,7 +47,7 @@
         {
           "unit": "BAR_TWR",
           "name": "TOWER",
-          "code": "LEMD_ALL_TWR",
+          "code": "LEMD_TWR",
           "frequency": "118.155",
           "sectors": ["LEMDATZ"]
         },
@@ -87,7 +87,7 @@
         {
           "unit": "BAR_TWR",
           "name": "TOWER",
-          "code": "LEMD_ALL_TWR",
+          "code": "LEMD_TWR",
           "frequency": "118.155",
           "sectors": ["LEMDATZ"]
         },
