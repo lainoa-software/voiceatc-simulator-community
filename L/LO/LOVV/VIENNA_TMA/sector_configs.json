@@ -2,7 +2,7 @@
   "sector_configs": [
     {
       "sector_config_id": "VIENNA_TMA_WHOLE_DAY_WEST",
-      "runway_configs": ["DAY_WEST"],
+      "runway_configs": ["DAY_WEST", "DAY_CALM"],
       "sectors": [
         {
           "sector_ids": "VIENNA_TMA_DAY_WEST",
@@ -22,7 +22,7 @@
     },
     {
       "sector_config_id": "VIENNA_TMA_WHOLE_NIGHT",
-      "runway_configs": ["NIGHT"],
+      "runway_configs": ["NIGHT", "NIGHT_SE"],
       "sectors": [
         {
           "sector_ids": "VIENNA_TMA_NIGHT",
