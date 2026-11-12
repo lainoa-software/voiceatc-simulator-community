@@ -40,11 +40,12 @@ LEVEL_RE = re.compile(r"^[FA]\d{3}$")
 CODE_RE = re.compile(RULES["code_pattern"])
 
 KEYS = {
-    "root": {"schema", "tma", "airports", "units", "zones", "layouts", "agreements"},
+    "root": {"schema", "tma", "airports", "units", "zones", "layouts", "configurations", "agreements"},
     "tma": {"id", "name"},
     "unit": {"id", "call_sign", "services", "airport", "frequencies"},
     "zone": {"sector", "kind", "airport"},
     "layout": {"id", "runways", "positions", "on_duty"},
+    "configuration": {"id", "name", "airports"},
     "position": {"sector", "name", "code", "unit", "frequency", "airports", "zones"},
     "on_duty": {"unit", "name", "code", "frequency", "sectors"},
     "agreement": {"name", "from", "to", "departs", "arrives", "fix", "climb", "descent", "priority",
@@ -154,6 +155,7 @@ def check(payload: object, bundle_key: str, sector_ids: set[str]) -> list[Proble
     units = _units(w, payload, airports)
     zones = _zones(w, payload, airports)
     _layouts(w, payload, airports, units, zones)
+    _configurations(w, payload, airports)
     _agreements(w, payload, units)
     return w.problems
 
@@ -381,6 +383,42 @@ def _position_sector(w: _Walk, position: dict, where: str, sectors: set[str]) ->
         w.add("TMA_SECTOR_UNDEFINED", f"{where}.sector", sector)
     else:
         _claim(w, sectors, sector, f"{where}.sector")
+
+
+def _configurations(w: _Walk, payload: dict, airports: list[str]) -> None:
+    """One runway preset id per airport of the file, in every configuration."""
+    seen: set[str] = set()
+    for i, row in enumerate(w.array(payload, "configurations", "", required=False)):
+        where = f"configurations[{i}]"
+        if not w.keys(row, "configuration", where):
+            continue
+        configuration_id = w.text(row, "id", where)
+        if configuration_id:
+            where = f'configurations[{i}] "{configuration_id}"'
+            if configuration_id in seen:
+                w.add("TMA_ID_DUPLICATE", where, configuration_id)
+            seen.add(configuration_id)
+        w.text(row, "name", where)
+        _configuration_airports(w, row, where, airports)
+
+
+def _configuration_airports(w: _Walk, row: dict, where: str, airports: list[str]) -> None:
+    if "airports" not in row:
+        w.add("TMA_FIELD_MISSING", where, "airports")
+        return
+    named = row["airports"]
+    if not isinstance(named, dict) or not named:
+        w.add("TMA_FIELD_SHAPE", f"{where}.airports", "an object of airport to runway preset id")
+        return
+    for code in sorted(str(key) for key in named):
+        if code not in airports:
+            w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airports", code)
+        preset = named[code]
+        if not isinstance(preset, str) or not preset.strip():
+            w.add("TMA_FIELD_SHAPE", f"{where}.airports.{code}", "a runway preset id")
+    for code in airports:
+        if code not in named:
+            w.add("TMA_FIELD_MISSING", f"{where}.airports", code)
 
 
 def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:

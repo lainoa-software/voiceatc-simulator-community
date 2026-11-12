@@ -100,6 +100,12 @@
       ]
     }
   ],
+  "configurations": [
+    {"id": "WEST", "name": "West", "airports": {"LEBL": "WRL", "LEGE": "SOUTH", "LERS": "WEST", "LEDA": "31"}},
+    {"id": "EAST", "name": "East", "airports": {"LEBL": "ELR", "LEGE": "NORTH", "LERS": "EAST", "LEDA": "13"}},
+    {"id": "NIGHT", "name": "Night", "airports": {"LEBL": "ENR", "LEGE": "NORTH", "LERS": "EAST", "LEDA": "13"}},
+    {"id": "NIGHT WEST", "name": "Night west", "airports": {"LEBL": "WLL", "LEGE": "SOUTH", "LERS": "WEST", "LEDA": "31"}}
+  ],
   "zones": [
     {
       "sector": "LEBLCTR",
