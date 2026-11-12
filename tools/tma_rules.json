@@ -31,6 +31,7 @@
     "TMA_POSITION_ONE_SECTOR": "{where}: a position works exactly one sector; \"{value}\" is not one sector id.",
     "TMA_SECTOR_UNDEFINED": "{where}: sector \"{value}\" is not in sector_definitions.json.",
     "TMA_SECTOR_TWICE": "{where}: sector \"{value}\" has two workers in this layout (positions and on_duty together).",
+    "TMA_SECTOR_UNBOUND": "{where}: sector piece \"{value}\" is bound to no unit; the center above works it.",
     "TMA_POSITION_NAME": "{where}: name \"{value}\" must be capital words joined by \" + \", such as APPROACH + DIRECTORS.",
     "TMA_POSITION_NOT_PLAYABLE": "{where}: unit \"{value}\" cannot be played. Only sectors you can play are listed; a position's unit needs one of: {allowed}.",
     "TMA_POSITION_FREQUENCY_NOT_UNITS": "{where}: frequency \"{value}\" is not one of unit \"{expected}\"'s frequencies.",
