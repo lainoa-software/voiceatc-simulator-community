@@ -54,6 +54,8 @@ Community publication does not require a simulator-channel promotion once the ge
 
 Terminal-area data can reference several airports, but each referenced airport must be registered in that terminal scope. Do not place terminal data inside an airport folder, except an `mva.json` that names only that airport; an airport has one MVA file, so it cannot also appear in the terminal-area `mva.json`.
 
+Each `polygon` in `sector_definitions.json` must be a simple ring: no point appears twice (a closing point equal to the first is allowed) and no two edges cross or touch. An outline that crosses itself, or a cutout joined to the outline by a doubled seam, is written as several entries with the same `sector_id` and limits. The validator refuses a piece that breaks this.
+
 ## Registering a new terminal area or airport
 
 A new terminal-area folder, or a new airport inside one, needs an entry in

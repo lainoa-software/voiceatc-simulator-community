@@ -227,14 +227,72 @@ def _validate_sector_definitions_document(payload: dict, path: Path, root: Path,
         polygon = row.get("polygon", row.get("points", row.get("coordinates", [])))
         if not isinstance(polygon, list) or len(polygon) < 3:
             raise ValueError(f"{path}: sector '{sector_id}' polygon must contain at least 3 points")
-        for point_index, point in enumerate(polygon):
-            ensure_point(point, f"polygon[{point_index}]", path)
+        points = [ensure_point(point, f"polygon[{point_index}]", path) for point_index, point in enumerate(polygon)]
+        defect = polygon_ring_defect(points)
+        if defect:
+            raise ValueError(f"{path}: sector '{sector_id}' definition {index} polygon {defect}")
 
     return {
         "repo_path": safe_repo_path(path, root),
         "sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "size_bytes": len(raw_bytes),
     }
+
+
+def _cross(origin: list[float], a: list[float], b: list[float]) -> float:
+    return (a[0] - origin[0]) * (b[1] - origin[1]) - (a[1] - origin[1]) * (b[0] - origin[0])
+
+
+def _on_segment(a: list[float], b: list[float], point: list[float]) -> bool:
+    return min(a[0], b[0]) <= point[0] <= max(a[0], b[0]) and min(a[1], b[1]) <= point[1] <= max(a[1], b[1])
+
+
+def _segments_meet(a: list[float], b: list[float], c: list[float], d: list[float]) -> bool:
+    """True when segment ab and segment cd share any point, a touch or a collinear overlap included."""
+    d1, d2, d3, d4 = _cross(c, d, a), _cross(c, d, b), _cross(a, b, c), _cross(a, b, d)
+    if ((d1 > 0) != (d2 > 0) and d1 != 0 and d2 != 0) and ((d3 > 0) != (d4 > 0) and d3 != 0 and d4 != 0):
+        return True
+    return (
+        (d1 == 0 and _on_segment(c, d, a))
+        or (d2 == 0 and _on_segment(c, d, b))
+        or (d3 == 0 and _on_segment(a, b, c))
+        or (d4 == 0 and _on_segment(a, b, d))
+    )
+
+
+def polygon_ring_defect(points: list[list[float]]) -> str | None:
+    """Why a sector piece's outline is not a simple ring, or None when it is one.
+
+    A closing point equal to the first is allowed. A simple ring has no point twice (a keyhole joins a cutout to
+    the outline through a doubled seam, which repeats points) and no two edges that cross or touch except
+    neighbours at their shared point.
+    """
+    ring = points[:-1] if len(points) > 1 and points[0] == points[-1] else points
+    count = len(ring)
+    seen: dict[tuple[float, float], int] = {}
+    for index, point in enumerate(ring):
+        key = (point[0], point[1])
+        if key in seen:
+            kind = "repeats the point of its neighbour" if index - seen[key] == 1 else "revisits a point"
+            return f"{kind} [{point[0]}, {point[1]}] (points {seen[key]} and {index}); a piece must be a simple ring"
+        seen[key] = index
+    edges = sorted(range(count), key=lambda i: min(ring[i][0], ring[(i + 1) % count][0]))
+    for position, i in enumerate(edges):
+        a, b = ring[i], ring[(i + 1) % count]
+        for j in edges[position + 1:]:
+            c, d = ring[j], ring[(j + 1) % count]
+            if min(c[0], d[0]) > max(a[0], b[0]):
+                break
+            if (j - i) % count in (1, count - 1):
+                # neighbouring edges meet at their shared point and must not fold back along each other
+                forward = (i + 1) % count == j
+                shared, near, far = (b, a, d) if forward else (a, b, c)
+                dot = (near[0] - shared[0]) * (far[0] - shared[0]) + (near[1] - shared[1]) * (far[1] - shared[1])
+                if _cross(shared, near, far) == 0 and dot > 0:
+                    return f"folds back on itself at [{shared[0]}, {shared[1]}]; a piece must be a simple ring"
+            elif _segments_meet(a, b, c, d):
+                return f"crosses itself between edges {i} and {j}; a piece must be a simple ring"
+    return None
 
 
 def validate_sector_influence_file(path: Path, root: Path = ROOT) -> dict[str, object]:
