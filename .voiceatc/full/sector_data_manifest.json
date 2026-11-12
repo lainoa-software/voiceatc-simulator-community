@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "0215b01d080294ff4f94596be313310af7eb175e",
+  "commit_sha": "6172a1963dfcf7e8dd36735a46fc5c7f6abf8e00",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-11/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-12/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -948,8 +948,8 @@
       "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_configs.json",
-          "sha256": "c3174db5fc0fdf0624fccc67524f97c711c2b3aef4790c3cf8ce190bbdb7bea9",
-          "size_bytes": 713
+          "sha256": "0a88e6f6817f30374fef5b84748eba0ff1b40513b319968761615a3c7bd421f2",
+          "size_bytes": 737
         },
         "definitions": {
           "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_definitions.json",
@@ -2486,10 +2486,10 @@
     }
   ],
   "entry_count": 124,
-  "generated_at": "2026-11-11T07:43:48Z",
-  "published_at": "2026-11-11T07:43:48Z",
-  "release_tag": "daily-2026-11-11",
+  "generated_at": "2026-11-12T08:17:21Z",
+  "published_at": "2026-11-12T08:17:21Z",
+  "release_tag": "daily-2026-11-12",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "44aa0de5e7d6e84ba4488031e99937caaada13061e7b445c024bae02ed2726e5",
-  "size_bytes": 504095
+  "sha256": "06debb57f790d5c7e34c117048e98c2e1083674f9deb7c3c0261dd4dca9711d0",
+  "size_bytes": 504106
 }

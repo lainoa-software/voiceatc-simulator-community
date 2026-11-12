@@ -1,8 +1,8 @@
 {
   "asset_name": "mva-2611-full.zip",
-  "commit_sha": "0215b01d080294ff4f94596be313310af7eb175e",
+  "commit_sha": "6172a1963dfcf7e8dd36735a46fc5c7f6abf8e00",
   "dataset": "mva",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-11/mva-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-12/mva-2611-full.zip",
   "entries": [
     {
       "id": "EDDB",
@@ -337,8 +337,8 @@
     {
       "id": "LOWW",
       "repo_path": "L/LO/LOVV/VIENNA_TMA/mva.json",
-      "sha256": "5239f84fd1ea83bb9c7be5971944c67aee763dd898c62d52764f0f4a911c46d2",
-      "size_bytes": 39789
+      "sha256": "bc6e73217c4286e48dea184ed714e8a7ce0414315efa9fa18c333784edff9f5c",
+      "size_bytes": 438934
     },
     {
       "id": "LTBA",
@@ -600,10 +600,10 @@
     }
   ],
   "entry_count": 99,
-  "generated_at": "2026-11-11T07:43:48Z",
-  "published_at": "2026-11-11T07:43:48Z",
-  "release_tag": "daily-2026-11-11",
+  "generated_at": "2026-11-12T08:17:21Z",
+  "published_at": "2026-11-12T08:17:21Z",
+  "release_tag": "daily-2026-11-12",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "0ec1e760abb76558b363abb8ac15f78be54cdd79afb5b6e429a58d7ef74f808f",
-  "size_bytes": 1668381
+  "sha256": "fa7e19ad838c8fdc5e0e6a06369f4f338adb7f0ca2d6bb44a618aa988e2f540f",
+  "size_bytes": 1718639
 }
