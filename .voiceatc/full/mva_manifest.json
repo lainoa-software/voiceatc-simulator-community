@@ -1,8 +1,8 @@
 {
   "asset_name": "mva-2611-full.zip",
-  "commit_sha": "a5fb452c274d27d7277e3c417d15d275bcbc77bd",
+  "commit_sha": "ae29a3637bd3d473ecf6a18734092ee0793b7234",
   "dataset": "mva",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-13/mva-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-14/mva-2611-full.zip",
   "entries": [
     {
       "id": "EDDB",
@@ -600,9 +600,9 @@
     }
   ],
   "entry_count": 99,
-  "generated_at": "2026-11-13T07:53:31Z",
-  "published_at": "2026-11-13T07:53:31Z",
-  "release_tag": "daily-2026-11-13",
+  "generated_at": "2026-11-14T07:35:21Z",
+  "published_at": "2026-11-14T07:35:21Z",
+  "release_tag": "daily-2026-11-14",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "sha256": "fa7e19ad838c8fdc5e0e6a06369f4f338adb7f0ca2d6bb44a618aa988e2f540f",
   "size_bytes": 1718639
