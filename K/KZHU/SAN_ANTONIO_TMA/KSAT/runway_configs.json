@@ -3,20 +3,26 @@
   "runway_configs": [
     {
       "id": "NORTH",
-      "name": "NORTH FLOW",
+      "name": "SOUTH FLOW",
       "arr": "13R",
       "dep": "13R"
     },
     {
       "id": "SOUTH",
-      "name": "SOUTH FLOW",
+      "name": "NORTH FLOW",
       "arr": "31L",
       "dep": "31L"
     },
     {
       "id": "CROSSWIND",
-      "name": "CROSSWIND 04/22",
+      "name": "CROSSWIND 04",
       "arr": "04",
+      "dep": "04"
+    },
+    {
+      "id": "CROSSWIND_22",
+      "name": "CROSSWIND 22",
+      "arr": "22",
       "dep": "22"
     }
   ]
