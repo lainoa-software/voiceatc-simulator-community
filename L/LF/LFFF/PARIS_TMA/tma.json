@@ -36,6 +36,12 @@
       ]
     },
     {
+      "id": "ORY_APP",
+      "call_sign": "Orly Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["123.880", "124.455", "118.855", "120.855"]
+    },
+    {
       "id": "LFFF_CTR",
       "call_sign": "Paris Control",
       "services": ["center"],
@@ -100,6 +106,15 @@
           "frequency": "125.830",
           "airports": ["LFPG"]
         }
+      ],
+      "on_duty": [
+        {
+          "unit": "ORY_APP",
+          "name": "ALL",
+          "code": "LFPO_APP",
+          "frequency": "123.880",
+          "sectors": ["LFPOAPP"]
+        }
       ]
     },
     {
@@ -115,6 +130,15 @@
           "unit": "CDG_APP",
           "frequency": "125.830",
           "airports": ["LFPG"]
+        }
+      ],
+      "on_duty": [
+        {
+          "unit": "ORY_APP",
+          "name": "ALL",
+          "code": "LFPO_APP",
+          "frequency": "123.880",
+          "sectors": ["LFPOAPP"]
         }
       ]
     }
