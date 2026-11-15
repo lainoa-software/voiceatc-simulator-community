@@ -436,7 +436,7 @@ def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
                 w.add("TMA_UNIT_UNKNOWN", f"{where}.{key}", unit_id)
         if ends[0] and ends[0] == ends[1]:
             w.add("TMA_AGREEMENT_SAME_UNIT", where, name)
-        fix = w.text(row, "fix", where)
+        fix = "" if _departure_without_fix(row) else w.text(row, "fix", where)
         traffic = [(key, code) for key in ("departs", "arrives") for code in w.array(row, key, where, required=False)]
         if not traffic:
             w.add("TMA_AGREEMENT_NO_TRAFFIC", where, name)
@@ -469,6 +469,13 @@ def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
                 w.add("TMA_UNIT_UNKNOWN", f"{where}.go_around.to", target)
             if "climb" in go_around:
                 w.level(go_around["climb"], f"{where}.go_around.climb")
+
+
+def _departure_without_fix(row: dict) -> bool:
+    """A row that only sends traffic away may leave ``fix`` out: it states one level for every
+    route leaving that airport, and the hand-off is where the flow leaves the from unit's air,
+    which the runtime finds without a fix. An arrival row always names its fix."""
+    return "fix" not in row and "departs" in row and "arrives" not in row
 
 
 def check_bundle(bundle_dir: Path) -> list[str]:
