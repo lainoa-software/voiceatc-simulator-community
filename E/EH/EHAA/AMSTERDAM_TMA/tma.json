@@ -89,5 +89,39 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "EHAM_ARR_ARTIP", "from": "EHAA_CTR", "to": "AMS_APP", "fix": "ARTIP",
+      "arrives": ["EHAM"], "descent": "F100", "priority": 10},
+    {"name": "EHAM_ARR_SUGOL", "from": "EHAA_CTR", "to": "AMS_APP", "fix": "SUGOL",
+      "arrives": ["EHAM"], "descent": "F100", "priority": 10},
+    {"name": "EHAM_ARR_RIVER", "from": "EHAA_CTR", "to": "AMS_APP", "fix": "RIVER",
+      "arrives": ["EHAM"], "descent": "F100", "priority": 10},
+    {"name": "EHAM_DEP_BERGI", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "BERGI",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_IDRID", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "IDRID",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_VALKO", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "VALKO",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_VOLLA", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "VOLLA",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_ANDIK", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "ANDIK",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_BETUS", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "BETUS",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_ARNEM", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "ARNEM",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_EDUPO", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "EDUPO",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_RENDI", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "RENDI",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_WOODY", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "WOODY",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_KUDAD", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "KUDAD",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_LOPIK", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "LOPIK",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10},
+    {"name": "EHAM_DEP_OGINA", "from": "AMS_APP", "to": "EHAA_CTR", "fix": "OGINA",
+      "departs": ["EHAM"], "climb": "F090", "priority": 10}
   ]
 }

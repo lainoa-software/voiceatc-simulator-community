@@ -3,7 +3,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 3000,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.69333333, 8.34722222],
         [47.68638889, 8.47388889],
@@ -20,7 +20,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 3500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.68638889, 8.47388889],
         [47.60722222, 8.66222222],
@@ -44,7 +44,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 3500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.63722222, 8.22222222],
         [47.53611111, 8.36055556],
@@ -61,7 +61,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 3500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.36388889, 8.71611111],
         [47.34388889, 8.72972222],
@@ -75,7 +75,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 4500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.60944444, 8.54083333],
         [47.50972222, 8.7375],
@@ -106,7 +106,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 4500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.79277778, 8.51305556],
         [47.77138889, 8.55277778],
@@ -155,7 +155,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 5500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.77861111, 8.74944444],
         [47.73611111, 8.82166667],
@@ -199,7 +199,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 5500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.7925, 8.46916667],
         [47.76666667, 8.38333333],
@@ -244,7 +244,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 6500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.8625, 8.775],
         [47.78333333, 8.86666667],
@@ -279,7 +279,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 6500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.64277778, 8.0],
         [47.54666667, 7.99638889],
@@ -296,7 +296,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 7500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.86611111, 8.40722222],
         [47.8625, 8.775],
@@ -310,7 +310,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 7500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.58694444, 9.33833333],
         [47.44, 9.32083333],
@@ -324,7 +324,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 7500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.30777778, 8.39166667],
         [47.23277778, 8.43444444],
@@ -340,7 +340,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 7500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.23277778, 8.43444444],
         [47.14444444, 8.49138889],
@@ -353,7 +353,7 @@
     {
       "sector_id": "LSZHAPP",
       "lower_limit": 8500,
-      "higher_limit": 10000,
+      "higher_limit": 12500,
       "polygon": [
         [47.73833333, 9.23222222],
         [47.72222222, 9.42722222],
