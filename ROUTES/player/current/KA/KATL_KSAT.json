@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "KATL",
+  "dest": "KSAT",
+  "routes": [
+    {
+      "id": "84bf3a5d",
+      "route": "KATL DCT KAJIN DCT STNGA DCT WINAP DCT INCIN Q38 ROKIT DCT CAAGE DCT KSAT",
+      "created_at": "2026-11-16T02:14:43Z",
+      "creation_airac": "2611"
+    }
+  ]
+}
