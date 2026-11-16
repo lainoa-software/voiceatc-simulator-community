@@ -59,5 +59,35 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "EDDF_ARR_KERAX_25", "from": "EDGG_CTR", "to": "DF_APP", "fix": "KERAX",
+      "arrives": ["EDDF"], "runways": ["25L", "25C", "25R"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_ARR_KERAX_07", "from": "EDGG_CTR", "to": "DF_APP", "fix": "KERAX",
+      "arrives": ["EDDF"], "runways": ["07L", "07C", "07R"], "descent": "F130", "priority": 10},
+    {"name": "EDDF_ARR_OSPUL", "from": "EDGG_CTR", "to": "DF_APP", "fix": "OSPUL",
+      "arrives": ["EDDF"], "descent": "F100", "priority": 10},
+    {"name": "EDDF_ARR_RAMOB", "from": "EDGG_CTR", "to": "DF_APP", "fix": "RAMOB",
+      "arrives": ["EDDF"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_ARR_ADNIS", "from": "EDGG_CTR", "to": "DF_APP", "fix": "ADNIS",
+      "arrives": ["EDDF"], "descent": "F100", "priority": 10},
+    {"name": "EDDF_ARR_SPESA", "from": "EDGG_CTR", "to": "DF_APP", "fix": "SPESA",
+      "arrives": ["EDDF"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_DEP_AMTIX", "from": "DF_APP", "to": "EDGG_CTR", "fix": "AMTIX",
+      "departs": ["EDDF"], "climb": "F110", "priority": 10},
+    {"name": "EDDF_DEP_KOMIB", "from": "DF_APP", "to": "EDGG_CTR", "fix": "KOMIB",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_ANEKI", "from": "DF_APP", "to": "EDGG_CTR", "fix": "ANEKI",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_SOBRA", "from": "DF_APP", "to": "EDGG_CTR", "fix": "SOBRA",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_ULKIG", "from": "DF_APP", "to": "EDGG_CTR", "fix": "ULKIG",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_OBOKA", "from": "DF_APP", "to": "EDGG_CTR", "fix": "OBOKA",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_MARUN", "from": "DF_APP", "to": "EDGG_CTR", "fix": "MARUN",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_TOBAK", "from": "DF_APP", "to": "EDGG_CTR", "fix": "TOBAK",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10}
   ]
 }
