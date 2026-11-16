@@ -9,11 +9,16 @@ row on CUR, and the player can switch to ALL or hide and show single points.
     {"airport": "LEBL", "schema": 1,
      "layers": {"VOR": true, "Low Airways": false},
      "fixes": ["SLL", {"ident": "RULOS", "lat": 41.2, "lon": 2.1}],
-     "vors": ["BCN"], "ndbs": [], "ils_length_nm": 25}
+     "vors": ["BCN"], "ndbs": [], "ils_length_nm": 25,
+     "positions": {"LEBL_CORE_APP": {"layers": {"VOR": false}, "airspaces": ["CTR"],
+                                     "fixes": ["VIBOK"]}}}
 
 A bare ident resolves in-game to the occurrence nearest the airport; an object with
 lat/lon resolves to the occurrence nearest that position. An omitted list leaves that
-point type uncurated; an empty list curates it to nothing.
+point type uncurated; an empty list curates it to nothing. A `positions` block, keyed by the
+unit code New Session shows (LEBL_CORE_APP), applies only when the player works that
+position: its layers over the airport's, its airspaces added to the opening AIRSPACES set,
+and its fixes in place of the airport's.
 
 Validation is structural (no navdata ships in this repo): JSON shape, airport==folder,
 known layer names, ident format, coordinate ranges, no duplicates. The game skips an
@@ -56,7 +61,9 @@ ILS_LENGTH_KEY = "ils_length_nm"
 # The game's ILS line length range (MIN/MAX_ILS_TICK_NM in scripts/world/levels/ils_spawner.gd).
 ILS_LENGTH_RANGE = (1, 50)
 SETTING_KEYS = ("layers", ILS_LENGTH_KEY, *LIST_KEYS)
-TOP_LEVEL_KEYS = {"airport", "schema", "notes", *SETTING_KEYS}
+POSITIONS_KEY = "positions"
+POSITION_KEYS = {"layers", "airspaces", "fixes"}
+TOP_LEVEL_KEYS = {"airport", "schema", "notes", POSITIONS_KEY, *SETTING_KEYS}
 # The game's MAPS layer names (LAYERS in scripts/ui/pref_bar/map_layer_menu_button_base.gd).
 LAYER_NAMES = (
     "VOR", "VOR Labels", "NDB", "NDB Labels", "FIX", "FIX Labels",
@@ -65,6 +72,8 @@ LAYER_NAMES = (
 )
 LAYERS_BY_UPPER = {name.upper(): name for name in LAYER_NAMES}
 IDENT_RE = re.compile(r"^[A-Z0-9]{1,8}$")
+# A tma.json unit code: ICAO_part_TYPE or ICAO_TYPE (LEBL_CORE_APP, LEBL_TWR).
+POSITION_CODE_RE = re.compile(r"^[A-Z0-9]+(_[A-Z0-9]+)+$")
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
@@ -139,6 +148,32 @@ def _validate_list(entries: object, key: str, path: Path) -> None:
         seen.add(identity)
 
 
+def _validate_positions(positions: object, path: Path) -> None:
+    if not isinstance(positions, dict) or not positions:
+        raise ValueError(f"{path}: '{POSITIONS_KEY}' must be a JSON object of unit codes")
+    for code, block in positions.items():
+        where = f"{POSITIONS_KEY}.{code}"
+        if not POSITION_CODE_RE.fullmatch(str(code)):
+            raise ValueError(f"{path}: {where} must be a unit code such as LEBL_CORE_APP")
+        if not isinstance(block, dict) or not block:
+            raise ValueError(f"{path}: {where} must be an object with {', '.join(sorted(POSITION_KEYS))}")
+        unknown = set(block) - POSITION_KEYS
+        if unknown:
+            raise ValueError(f"{path}: {where} has unknown keys {sorted(unknown)}")
+        if "layers" in block:
+            _validate_layers(block["layers"], path)
+        if "airspaces" in block:
+            names = block["airspaces"]
+            if not isinstance(names, list):
+                raise ValueError(f"{path}: {where}.airspaces must be an array")
+            for index, name in enumerate(names):
+                ensure_text_field(name, f"{where}.airspaces[{index}]", path)
+            if len({str(name).strip().upper() for name in names}) != len(names):
+                raise ValueError(f"{path}: {where}.airspaces repeats a name")
+        if "fixes" in block:
+            _validate_list(block["fixes"], f"{where}.fixes", path)
+
+
 def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     raw_bytes = path.read_bytes()
     try:
@@ -171,8 +206,10 @@ def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     for key in LIST_KEYS:
         if key in payload:
             _validate_list(payload[key], key, path)
-    if not any(key in payload for key in SETTING_KEYS):
-        raise ValueError(f"{path}: needs at least one of {', '.join(SETTING_KEYS)}")
+    if POSITIONS_KEY in payload:
+        _validate_positions(payload[POSITIONS_KEY], path)
+    if not any(key in payload for key in (*SETTING_KEYS, POSITIONS_KEY)):
+        raise ValueError(f"{path}: needs at least one of {', '.join((*SETTING_KEYS, POSITIONS_KEY))}")
 
     canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {
