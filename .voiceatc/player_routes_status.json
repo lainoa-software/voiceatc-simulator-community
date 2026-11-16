@@ -401,6 +401,13 @@
           "status": "ok"
         }
       },
+      "KATL_KSAT": {
+        "84bf3a5d": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "KATL_RKSI": {
         "c97b3b63": {
           "checked_airac": "2611",
@@ -431,6 +438,25 @@
           "status": "ok"
         }
       },
+      "KDEN_KSAT": {
+        "90515bbd": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        },
+        "e06604f5": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KDFW_KSAT": {
+        "9efc0469": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "KDFW_RKSI": {
         "721e3482": {
           "checked_airac": "2611",
@@ -452,8 +478,27 @@
           "status": "ok"
         }
       },
+      "KHOU_KSAT": {
+        "8cfef24b": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
       "KIAD_RKSI": {
         "01a07f00": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KIAH_KSAT": {
+        "95ab801a": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        },
+        "ecb2e99b": {
           "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
@@ -512,6 +557,65 @@
       },
       "KORD_RKSI": {
         "908ca750": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KPHX_KSAT": {
+        "f1465a01": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KATL": {
+        "7909cce6": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KDEN": {
+        "50658ecc": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        },
+        "6aae75fc": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KDFW": {
+        "1ab36ac7": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        },
+        "fc7161aa": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KHOU": {
+        "ca573c56": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KIAH": {
+        "df5db066": {
+          "checked_airac": "2611",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KPHX": {
+        "0142cb21": {
           "checked_airac": "2611",
           "reasons": [],
           "status": "ok"
@@ -4807,9 +4911,114 @@
   "default": {
     "airac": "2503",
     "deep_validation": false,
-    "pairs": {}
+    "pairs": {
+      "KATL_KSAT": {
+        "84bf3a5d": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KDEN_KSAT": {
+        "90515bbd": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        },
+        "e06604f5": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KDFW_KSAT": {
+        "9efc0469": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KHOU_KSAT": {
+        "8cfef24b": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KIAH_KSAT": {
+        "95ab801a": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        },
+        "ecb2e99b": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KPHX_KSAT": {
+        "f1465a01": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KATL": {
+        "7909cce6": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KDEN": {
+        "50658ecc": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        },
+        "6aae75fc": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KDFW": {
+        "1ab36ac7": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        },
+        "fc7161aa": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KHOU": {
+        "ca573c56": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KIAH": {
+        "df5db066": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      },
+      "KSAT_KPHX": {
+        "0142cb21": {
+          "checked_airac": "",
+          "reasons": [],
+          "status": "ok"
+        }
+      }
+    }
   },
-  "generated_at": "2026-11-16T07:57:12Z",
+  "generated_at": "2026-11-16T08:05:57Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

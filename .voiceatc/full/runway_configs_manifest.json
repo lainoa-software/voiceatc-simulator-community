@@ -1,6 +1,6 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "88b0b46b86eaed07766fda5b00cb2ded2004cb52",
+  "commit_sha": "7a4c61703841d902ed148620a3513b1bb3113246",
   "dataset": "runway_configs",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-16/runway-configs-2611-full.zip",
   "entries": [
@@ -614,8 +614,8 @@
     {
       "id": "KSAT",
       "repo_path": "K/KZHU/SAN_ANTONIO_TMA/KSAT/runway_configs.json",
-      "sha256": "e2ddf75e0c8f08ae36a2f9df73c75b39d477751a9ee7b313494e593035cba520",
-      "size_bytes": 360
+      "sha256": "ccc7b63f7bf27b8ea073c6f25b7837d12e8a3d98ddf31237783f5f0b111853a7",
+      "size_bytes": 465
     },
     {
       "id": "KSEA",
@@ -1538,10 +1538,10 @@
     }
   ],
   "entry_count": 255,
-  "generated_at": "2026-11-16T07:57:12Z",
-  "published_at": "2026-11-16T07:57:12Z",
+  "generated_at": "2026-11-16T08:05:57Z",
+  "published_at": "2026-11-16T08:05:57Z",
   "release_tag": "daily-2026-11-16",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "50b368a6e46dc084e818a4af0190b5959625f02a3a2269c69576917940b48ec1",
-  "size_bytes": 79245
+  "sha256": "4f3adae2c1b91154e4fbad4d9a8b9eb688b3697ecc3b0e93bf378a1b371ab826",
+  "size_bytes": 79264
 }
