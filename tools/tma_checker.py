@@ -49,7 +49,8 @@ KEYS = {
     "position": {"sector", "name", "code", "unit", "frequency", "airports", "zones"},
     "on_duty": {"unit", "name", "code", "frequency", "sectors"},
     "agreement": {"name", "from", "to", "departs", "arrives", "fix", "climb", "descent", "priority",
-                  "release_kind", "miles_in_trail", "go_around", "traffic_of_interest", "holding"},
+                  "release_kind", "miles_in_trail", "go_around", "traffic_of_interest", "holding",
+                  "runways"},
     "go_around": {"to", "climb"},
 }
 
@@ -421,6 +422,32 @@ def _configuration_airports(w: _Walk, row: dict, where: str, airports: list[str]
             w.add("TMA_FIELD_MISSING", f"{where}.airports", code)
 
 
+def _runway_keys(raw) -> list[str]:
+    """A row's runway ends as tie keys; "*" for a row naming none, which matches every runway."""
+    keys: list[str] = []
+    if isinstance(raw, list):
+        for value in raw:
+            runway = str(value).strip().upper()
+            if runway.startswith("RWY"):
+                runway = runway[3:]
+            elif runway.startswith("RW"):
+                runway = runway[2:]
+            runway = runway.strip()
+            if runway and runway not in keys:
+                keys.append(runway)
+    return keys or ["*"]
+
+
+def _tied_row(taken: dict[str, str], runways: list[str]) -> str:
+    """The row already in this slot that a flow on one of `runways` would also match, else ""."""
+    for runway in runways:
+        if runway in taken:
+            return taken[runway]
+        if runway == "*" and taken:
+            return next(iter(taken.values()))
+    return taken.get("*", "")
+
+
 def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
     covered: dict[tuple, str] = {}
     for i, row in enumerate(w.array(payload, "agreements", "", required=False)):
@@ -449,11 +476,15 @@ def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
         if not _is_whole(priority) or priority < 0:
             w.add("TMA_FIELD_SHAPE", f"{where}.priority", "a whole number, 0 or more")
         else:
+            runways = _runway_keys(row.get("runways", []))
             for key, code in traffic:
                 slot = (ends[0], ends[1], key, str(code), fix, int(priority))
-                if slot in covered:
-                    w.add("TMA_AGREEMENT_PRIORITY_TIE", where, name, expected=covered[slot])
-                covered.setdefault(slot, name)
+                taken = covered.setdefault(slot, {})
+                other = _tied_row(taken, runways)
+                if other:
+                    w.add("TMA_AGREEMENT_PRIORITY_TIE", where, name, expected=other)
+                for runway in runways:
+                    taken.setdefault(runway, name)
         if "release_kind" in row:
             w.text(row, "release_kind", where)
         if "holding" in row:
@@ -462,6 +493,7 @@ def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
         if not isinstance(trail, (int, float)) or isinstance(trail, bool) or trail < 0:
             w.add("TMA_FIELD_SHAPE", f"{where}.miles_in_trail", "a number, 0 or more")
         w.array(row, "traffic_of_interest", where, required=False)
+        w.array(row, "runways", where, required=False)
         go_around = row.get("go_around")
         if go_around is not None and w.keys(go_around, "go_around", f"{where}.go_around"):
             target = w.text(go_around, "to", f"{where}.go_around")
