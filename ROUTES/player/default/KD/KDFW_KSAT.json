@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "KDFW",
+  "dest": "KSAT",
+  "routes": [
+    {
+      "id": "9efc0469",
+      "route": "KDFW DCT JASPA DCT WINDU DCT KSAT",
+      "created_at": "2026-11-16T00:14:38Z",
+      "creation_airac": "2503"
+    }
+  ]
+}
