@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "KSAT",
+  "dest": "KHOU",
+  "routes": [
+    {
+      "id": "ca573c56",
+      "route": "KSAT DCT SNIDR DCT WEMAR DCT KHOU",
+      "created_at": "2026-11-16T00:14:38Z",
+      "creation_airac": "2503"
+    }
+  ]
+}

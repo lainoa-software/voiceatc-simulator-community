@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "origin": "KSAT",
+  "dest": "KDEN",
+  "routes": [
+    {
+      "id": "6aae75fc",
+      "route": "KSAT DCT YODUH DCT PRTZY DCT PNH DCT ZIGEE DCT KDEN",
+      "created_at": "2026-11-16T00:14:38Z",
+      "creation_airac": "2503"
+    },
+    {
+      "id": "50658ecc",
+      "route": "KSAT DCT ALISS DCT JCT Q20 CNX DCT GNDLA DCT KDEN",
+      "created_at": "2026-11-16T00:14:38Z",
+      "creation_airac": "2503"
+    }
+  ]
+}

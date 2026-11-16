@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "origin": "KSAT",
+  "dest": "KATL",
+  "routes": [
+    {
+      "id": "7909cce6",
+      "route": "KSAT DCT SNIDR DCT MOLLR Q24 PAYTN DCT SHYRE DCT KATL",
+      "created_at": "2026-11-16T00:14:38Z",
+      "creation_airac": "2503"
+    }
+  ]
+}
