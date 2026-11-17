@@ -44,7 +44,7 @@
       "id": "BCN_CTR",
       "call_sign": "Barcelona Control",
       "services": ["center"],
-      "frequencies": ["132.580"]
+      "frequencies": ["132.580", "134.680", "135.355"]
     }
   ],
   "layouts": [
@@ -68,6 +68,20 @@
           "code": "LEBL_TWR",
           "frequency": "118.105",
           "sectors": ["LEBLATZ"]
+        },
+        {
+          "unit": "BCN_CTR",
+          "name": "BKW",
+          "code": "LECB_BKW_CTR",
+          "frequency": "134.680",
+          "sectors": ["LECBBKW"]
+        },
+        {
+          "unit": "BCN_CTR",
+          "name": "BKE",
+          "code": "LECB_BKE_CTR",
+          "frequency": "135.355",
+          "sectors": ["LECBBKE"]
         },
         {
           "unit": "BCN_CTR",
