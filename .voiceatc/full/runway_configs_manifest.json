@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "a508958c3f3cd48878724064c53bf8732b1db071",
+  "commit_sha": "fa60804d3d214b62a44318a8ca668850ebe202a2",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-18/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-18-b/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYUL",
@@ -81,6 +81,12 @@
       "repo_path": "E/ED/EDMM/EDDN_TMA/EDDN/runway_configs.json",
       "sha256": "8b9756741206d4ffef54d82e1ba8b7e721c757d94d34ec890770a693518f892b",
       "size_bytes": 226
+    },
+    {
+      "id": "EDDP",
+      "repo_path": "E/ED/EDMM/EDDC_TMA/EDDP/runway_configs.json",
+      "sha256": "48f6e31713a29cad160dcef71026699638d0b2969ebac5cceb1c3ae6324ed57a",
+      "size_bytes": 618
     },
     {
       "id": "EDDR",
@@ -1537,11 +1543,11 @@
       "size_bytes": 1150
     }
   ],
-  "entry_count": 255,
-  "generated_at": "2026-11-18T10:36:00Z",
-  "published_at": "2026-11-18T10:36:00Z",
-  "release_tag": "daily-2026-11-18",
+  "entry_count": 256,
+  "generated_at": "2026-11-18T11:00:58Z",
+  "published_at": "2026-11-18T11:00:58Z",
+  "release_tag": "daily-2026-11-18-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "113e7a830bd8b84f425fdc6d1605353bae6c232450b70c20ed4f922d62210c61",
-  "size_bytes": 79298
+  "sha256": "a29c0d7c353069ffd06c30059ac3816e2cfd9b67fa84205bb037e125100d42ab",
+  "size_bytes": 79628
 }
