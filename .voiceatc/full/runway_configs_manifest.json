@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "6ab3ed3fa9d16a4cb2a0fb458dc3b4b4c793d749",
+  "commit_sha": "90206ac2b0ee2116d6f6bc46f6a03bf596426b82",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-17/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-18/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYUL",
@@ -1538,9 +1538,9 @@
     }
   ],
   "entry_count": 255,
-  "generated_at": "2026-11-17T09:10:44Z",
-  "published_at": "2026-11-17T09:10:44Z",
-  "release_tag": "daily-2026-11-17",
+  "generated_at": "2026-11-18T08:30:01Z",
+  "published_at": "2026-11-18T08:30:01Z",
+  "release_tag": "daily-2026-11-18",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "sha256": "4f3adae2c1b91154e4fbad4d9a8b9eb688b3697ecc3b0e93bf378a1b371ab826",
   "size_bytes": 79264
