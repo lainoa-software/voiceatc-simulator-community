@@ -12,6 +12,18 @@
       "name": "06s",
       "arr": "06R 06L",
       "dep": "06R 06L"
+    },
+    {
+      "id": "ILA_24R",
+      "name": "ILA 24R",
+      "arr": "24R",
+      "dep": "24R"
+    },
+    {
+      "id": "ILA_06L",
+      "name": "ILA 06L",
+      "arr": "06L",
+      "dep": "06L"
     }
   ]
 }
