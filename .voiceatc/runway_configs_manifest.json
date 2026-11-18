@@ -23,8 +23,8 @@
     },
     "EDDB": {
       "repo_path": "E/ED/EDWW/BERLIN_TMA/EDDB/runway_configs.json",
-      "sha256": "60dddda8c62dba83debf29e326194bbcee1ba958e72ddb3941cd7374331a4c98",
-      "size_bytes": 248
+      "sha256": "25a89337856f44fdd823a3ef2a2bc2c9d600adf7de2b4bdd8ccdb785ebd67634",
+      "size_bytes": 448
     },
     "EDDC": {
       "repo_path": "E/ED/EDMM/EDDC_TMA/EDDC/runway_configs.json",
@@ -1268,12 +1268,12 @@
     }
   },
   "asset_name": "runway-configs-2611.zip",
-  "commit_sha": "90206ac2b0ee2116d6f6bc46f6a03bf596426b82",
+  "commit_sha": "a508958c3f3cd48878724064c53bf8732b1db071",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-18/runway-configs-2611.zip",
-  "published_at": "2026-11-18T08:30:01Z",
+  "published_at": "2026-11-18T10:36:00Z",
   "release_tag": "daily-2026-11-18",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "526bb8a64c9ba941725ff49f05dc4d590f164b221f6011c636ae98b1563dcd0b",
-  "size_bytes": 78480
+  "sha256": "e8612704d4c2377e9580de33a09d72538211ef169e5b77263929ead77159d91a",
+  "size_bytes": 78514
 }
