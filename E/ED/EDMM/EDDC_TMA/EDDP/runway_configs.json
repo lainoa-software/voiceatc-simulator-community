@@ -1,0 +1,41 @@
+{
+  "airport": "EDDP",
+  "runway_configs": [
+    {
+      "id": "26S",
+      "name": "26s",
+      "arr": "26R 26L",
+      "dep": "26R 26L"
+    },
+    {
+      "id": "08S",
+      "name": "08s",
+      "arr": "08L 08R",
+      "dep": "08L 08R"
+    },
+    {
+      "id": "08R",
+      "name": "08R",
+      "arr": "08R",
+      "dep": "08R"
+    },
+    {
+      "id": "08L",
+      "name": "08L",
+      "arr": "08L",
+      "dep": "08L"
+    },
+    {
+      "id": "26L",
+      "name": "26L",
+      "arr": "26L",
+      "dep": "26L"
+    },
+    {
+      "id": "26R",
+      "name": "26R",
+      "arr": "26R",
+      "dep": "26R"
+    }
+  ]
+}
