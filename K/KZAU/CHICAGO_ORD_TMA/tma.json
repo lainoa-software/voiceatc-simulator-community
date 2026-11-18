@@ -187,5 +187,17 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "KORD_ARR_BENKY", "from": "CHI_CTR", "to": "CHI_APP", "fix": "BENKY",
+      "arrives": ["KORD"], "descent": "A120", "priority": 10},
+    {"name": "KORD_ARR_SHAIN", "from": "CHI_CTR", "to": "CHI_APP", "fix": "SHAIN",
+      "arrives": ["KORD"], "descent": "A120", "priority": 10},
+    {"name": "KORD_ARR_TRTLL", "from": "CHI_CTR", "to": "CHI_APP", "fix": "TRTLL",
+      "arrives": ["KORD"], "descent": "A110", "priority": 10},
+    {"name": "KORD_ARR_FYTTE", "from": "CHI_CTR", "to": "CHI_APP", "fix": "FYTTE",
+      "arrives": ["KORD"], "descent": "A110", "priority": 10},
+    {"name": "KORD_ARR_KRENA", "from": "CHI_CTR", "to": "CHI_APP", "fix": "KRENA",
+      "arrives": ["KORD"], "descent": "A110", "priority": 10}
   ]
 }

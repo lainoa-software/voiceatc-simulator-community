@@ -100,5 +100,43 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "KDCA_ARR_BULII", "from": "DCA_CTR", "to": "DCA_APP", "fix": "BULII",
+      "arrives": ["KDCA"], "descent": "A130", "priority": 10},
+    {"name": "KDCA_ARR_EYESS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "EYESS",
+      "arrives": ["KDCA"], "descent": "A120", "priority": 10},
+    {"name": "KDCA_ARR_BILIT", "from": "DCA_CTR", "to": "DCA_APP", "fix": "BILIT",
+      "arrives": ["KDCA"], "descent": "A110", "priority": 10},
+    {"name": "KDCA_ARR_ALWYZ", "from": "DCA_CTR", "to": "DCA_APP", "fix": "ALWYZ",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_ARR_IRONS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "IRONS",
+      "arrives": ["KDCA"], "descent": "A130", "priority": 10},
+    {"name": "KDCA_ARR_AML", "from": "DCA_CTR", "to": "DCA_APP", "fix": "AML",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_ARR_SKILS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "SKILS",
+      "arrives": ["KDCA"], "descent": "A120", "priority": 10},
+    {"name": "KDCA_ARR_TIKEE", "from": "DCA_CTR", "to": "DCA_APP", "fix": "TIKEE",
+      "arrives": ["KDCA"], "descent": "A090", "priority": 10},
+    {"name": "KDCA_ARR_TRUPS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "TRUPS",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_DEP_AMEEE", "from": "DCA_APP", "to": "DCA_CTR", "fix": "AMEEE",
+      "departs": ["KDCA"], "climb": "F190", "priority": 10},
+    {"name": "KDCA_DEP_CLTCH", "from": "DCA_APP", "to": "DCA_CTR", "fix": "CLTCH",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_JDUBB", "from": "DCA_APP", "to": "DCA_CTR", "fix": "JDUBB",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_SCRAM", "from": "DCA_APP", "to": "DCA_CTR", "fix": "SCRAM",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_DOCTR", "from": "DCA_APP", "to": "DCA_CTR", "fix": "DOCTR",
+      "departs": ["KDCA"], "climb": "A170", "priority": 10},
+    {"name": "KDCA_DEP_HORTO", "from": "DCA_APP", "to": "DCA_CTR", "fix": "HORTO",
+      "departs": ["KDCA"], "climb": "A170", "priority": 10},
+    {"name": "KDCA_DEP_SOOKI", "from": "DCA_APP", "to": "DCA_CTR", "fix": "SOOKI",
+      "departs": ["KDCA"], "climb": "F190", "priority": 10},
+    {"name": "KDCA_DEP_WYNGS", "from": "DCA_APP", "to": "DCA_CTR", "fix": "WYNGS",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_REBLL", "from": "DCA_APP", "to": "DCA_CTR", "fix": "REBLL",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10}
   ]
 }

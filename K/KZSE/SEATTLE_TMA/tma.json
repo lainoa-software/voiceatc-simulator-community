@@ -137,5 +137,35 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "KSEA_ARR_JAKSN", "from": "KZSECTR", "to": "SEA_APP", "fix": "JAKSN",
+      "arrives": ["KSEA"], "descent": "A120", "priority": 10},
+    {"name": "KSEA_ARR_RADDY", "from": "KZSECTR", "to": "SEA_APP", "fix": "RADDY",
+      "arrives": ["KSEA"], "descent": "A120", "priority": 10},
+    {"name": "KSEA_ARR_JAWBN", "from": "KZSECTR", "to": "SEA_APP", "fix": "JAWBN",
+      "arrives": ["KSEA"], "descent": "A120", "priority": 10},
+    {"name": "KSEA_ARR_ARVAD", "from": "KZSECTR", "to": "SEA_APP", "fix": "ARVAD",
+      "arrives": ["KSEA"], "descent": "A120", "priority": 10},
+    {"name": "KSEA_ARR_OLM", "from": "KZSECTR", "to": "SEA_APP", "fix": "OLM",
+      "arrives": ["KSEA"], "descent": "A120", "priority": 10},
+    {"name": "KSEA_DEP_BANGR", "from": "SEA_APP", "to": "KZSECTR", "fix": "BANGR",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_HAROB", "from": "SEA_APP", "to": "KZSECTR", "fix": "HAROB",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_ISBRG", "from": "SEA_APP", "to": "KZSECTR", "fix": "ISBRG",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_JEFPO", "from": "SEA_APP", "to": "KZSECTR", "fix": "JEFPO",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_OZWLD", "from": "SEA_APP", "to": "KZSECTR", "fix": "OZWLD",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_SUMMA", "from": "SEA_APP", "to": "KZSECTR", "fix": "SUMMA",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_ELMAA", "from": "SEA_APP", "to": "KZSECTR", "fix": "ELMAA",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_PEAKK", "from": "SEA_APP", "to": "KZSECTR", "fix": "PEAKK",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10},
+    {"name": "KSEA_DEP_SEA", "from": "SEA_APP", "to": "KZSECTR", "fix": "SEA",
+      "departs": ["KSEA"], "climb": "A150", "priority": 10}
   ]
 }

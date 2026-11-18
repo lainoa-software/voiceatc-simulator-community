@@ -144,5 +144,17 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "KJFK_ARR_CAMRN", "from": "KZNYCTR", "to": "JFK_APP", "fix": "CAMRN",
+      "arrives": ["KJFK"], "descent": "A110", "priority": 10},
+    {"name": "KJFK_ARR_CCC", "from": "KZNYCTR", "to": "JFK_APP", "fix": "CCC",
+      "arrives": ["KJFK"], "descent": "A120", "priority": 10},
+    {"name": "KJFK_ARR_LOVES", "from": "KZNYCTR", "to": "JFK_APP", "fix": "LOVES",
+      "arrives": ["KJFK"], "descent": "A060", "priority": 10},
+    {"name": "KJFK_ARR_JENNO", "from": "KZNYCTR", "to": "JFK_APP", "fix": "JENNO",
+      "arrives": ["KJFK"], "descent": "F230", "priority": 10},
+    {"name": "KJFK_DEP_DEEZZ", "from": "JFK_APP", "to": "KZNYCTR", "fix": "DEEZZ",
+      "departs": ["KJFK"], "climb": "F190", "priority": 10}
   ]
 }

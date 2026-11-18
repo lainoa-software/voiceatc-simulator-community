@@ -102,5 +102,17 @@
         }
       ]
     }
+  ],
+  "agreements": [
+    {"name": "KSFO_ARR_ARCHI", "from": "KZOACTR", "to": "SFO_APP", "fix": "ARCHI",
+      "arrives": ["KSFO"], "descent": "A070", "priority": 10},
+    {"name": "KSFO_ARR_PIRAT", "from": "KZOACTR", "to": "SFO_APP", "fix": "PIRAT",
+      "arrives": ["KSFO"], "descent": "A100", "priority": 10},
+    {"name": "KSFO_ARR_ARRTU", "from": "KZOACTR", "to": "SFO_APP", "fix": "ARRTU",
+      "arrives": ["KSFO"], "descent": "A100", "priority": 10},
+    {"name": "KSFO_ARR_WPOUT", "from": "KZOACTR", "to": "SFO_APP", "fix": "WPOUT",
+      "arrives": ["KSFO"], "descent": "A110", "priority": 10},
+    {"name": "KSFO_DEP_SEGUL", "from": "SFO_APP", "to": "KZOACTR", "fix": "SEGUL",
+      "departs": ["KSFO"], "climb": "A160", "priority": 10}
   ]
 }
