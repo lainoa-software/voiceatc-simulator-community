@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "91f5b8f4ad65de6893f8b058d12dcf6d089f8b90",
+  "commit_sha": "808afa444ea319dcc06f7d2d582b4d82f1f132e9",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-b/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYUL",
@@ -322,6 +322,12 @@
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/runway_configs.json",
       "sha256": "83b50bd599c560f87a21c9feeae88878bfa1b36a73f0fd6d0d451624e78284e1",
       "size_bytes": 232
+    },
+    {
+      "id": "FACT",
+      "repo_path": "F/FA/FACA/CAPE_TOWN_CTR/FACT/runway_configs.json",
+      "sha256": "9ba198ca1912130107177751669a8f8194122f5f2f1c8c226da481fa9bfa8ab7",
+      "size_bytes": 226
     },
     {
       "id": "GCFV",
@@ -1549,11 +1555,11 @@
       "size_bytes": 1150
     }
   ],
-  "entry_count": 257,
-  "generated_at": "2026-11-20T12:18:13Z",
-  "published_at": "2026-11-20T12:18:13Z",
-  "release_tag": "daily-2026-11-20",
+  "entry_count": 258,
+  "generated_at": "2026-11-20T13:01:09Z",
+  "published_at": "2026-11-20T13:01:09Z",
+  "release_tag": "daily-2026-11-20-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "293490f06d0b392c937d2b3b090cfe1a6908359051fd7842c08cc8d6fb87b8f2",
-  "size_bytes": 79898
+  "sha256": "04a3bf2f3344b79a200386ec59acb18b4b63d166426a4e5a886de79d6a89f63f",
+  "size_bytes": 80175
 }
