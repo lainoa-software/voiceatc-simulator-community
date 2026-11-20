@@ -20,6 +20,7 @@
   "nationality_areas": {
     "C": ["CZ"],
     "E": ["EB", "ED", "EF", "EG", "EH", "EI", "EK", "EN", "EP", "ES"],
+    "F": ["FA"],
     "G": ["GC"],
     "K": [],
     "L": [
@@ -95,6 +96,7 @@
     "ENOR": { "authority": "navigraph_2607", "kind": "fir" },
     "EPWW": { "authority": "navigraph_2607", "kind": "fir" },
     "ESAA": { "authority": "navigraph_2607", "kind": "fir" },
+    "FACA": { "authority": "navigraph_2503", "kind": "fir" },
     "GCCC": { "authority": "navigraph_2607", "kind": "fir" },
     "KZAB": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
     "KZAU": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
@@ -387,6 +389,7 @@
     "W/WM/WMFC/Kuala_Lumpur_TMA": ["WMKK"],
     "Y/YM/YMMM/MELBOURNE_TMA": ["YMML"],
     "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
-    "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"]
+    "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"],
+    "F/FA/FACA/CAPE_TOWN_CTR": ["FACT"]
   }
 }
