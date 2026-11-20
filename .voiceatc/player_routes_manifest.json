@@ -1,10 +1,10 @@
 {
-  "commit_sha": "153f7d10e711cacc1874c303f12a83128aa46b23",
+  "commit_sha": "c15706c3a44913f625a085fb5353c00833b3cc1b",
   "current": {
     "airac": "2611",
     "asset_name": "player-routes-2611.tsv",
     "content_type": "text/tab-separated-values; charset=utf-8",
-    "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-c/player-routes-2611.tsv",
+    "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-d/player-routes-2611.tsv",
     "pair_count": 687,
     "route_count": 693,
     "sha256": "e9e8c41abe1f1decdb5ef15fd224c99ebce935508c2b513d3be2c14d48bf8bf3",
@@ -14,14 +14,14 @@
     "airac": "2503",
     "asset_name": "player-routes-default-2503.tsv",
     "content_type": "text/tab-separated-values; charset=utf-8",
-    "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-c/player-routes-default-2503.tsv",
+    "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-d/player-routes-default-2503.tsv",
     "pair_count": 12,
     "route_count": 16,
     "sha256": "c0933a369d70096974e817e56de6fd04d99826aa330ccdad71b6d221ab139f4e",
     "size_bytes": 1039
   },
-  "published_at": "2026-11-20T15:41:04Z",
-  "release_tag": "daily-2026-11-20-c",
+  "published_at": "2026-11-20T16:57:40Z",
+  "release_tag": "daily-2026-11-20-d",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 1
 }

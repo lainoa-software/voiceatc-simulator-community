@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "153f7d10e711cacc1874c303f12a83128aa46b23",
+  "commit_sha": "c15706c3a44913f625a085fb5353c00833b3cc1b",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-c/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20-d/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -1054,8 +1054,8 @@
         "tma": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/tma.json",
           "requires": ["community.tma_file"],
-          "sha256": "c8befd6cfe038e8b65e135f747cadb96907c913261356e76ca6d489c62a4831c",
-          "size_bytes": 8474
+          "sha256": "5b8b240deb0141c5013a6cbce4d57202024236f0c768d7d9c9a125f65f9fd99c",
+          "size_bytes": 8466
         }
       },
       "id": "L/LE/LECM/LECM_R2/MADRID_TMA"
@@ -2846,10 +2846,10 @@
     }
   ],
   "entry_count": 136,
-  "generated_at": "2026-11-20T15:41:04Z",
-  "published_at": "2026-11-20T15:41:04Z",
-  "release_tag": "daily-2026-11-20-c",
+  "generated_at": "2026-11-20T16:57:40Z",
+  "published_at": "2026-11-20T16:57:40Z",
+  "release_tag": "daily-2026-11-20-d",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "59a8bc01d05f60925dd94c92dec6ad742765c0b4a73218d03c4a5298c2e9092e",
-  "size_bytes": 601021
+  "sha256": "ed27b8625a6f13264442f489a7c45c4ecc9f3b5eb0ebc81ba7ab82ca69b2a805",
+  "size_bytes": 601020
 }
