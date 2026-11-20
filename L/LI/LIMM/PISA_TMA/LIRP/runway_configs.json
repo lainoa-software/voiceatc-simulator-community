@@ -1,0 +1,23 @@
+{
+  "airport": "LIRP",
+  "runway_configs": [
+    {
+      "id": "21L_ARR_DEP",
+      "name": "21L ARR/DEP",
+      "arr": "21L",
+      "dep": "21L"
+    },
+    {
+      "id": "03R_ARR_DEP",
+      "name": "03R ARR/DEP",
+      "arr": "03R",
+      "dep": "03R"
+    },
+    {
+      "id": "03R_ARR_21L_DEP",
+      "name": "03R ARR / 21L DEP",
+      "arr": "03R",
+      "dep": "21L"
+    }
+  ]
+}
