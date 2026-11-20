@@ -1,5 +1,5 @@
 {
-  "airport_count": 254,
+  "airport_count": 255,
   "airports": {
     "CYUL": {
       "repo_path": "C/CZ/CZUL/MONTREAL_TMA/CYUL/runway_configs.json",
@@ -741,6 +741,11 @@
       "sha256": "58666385bf38a2abb5aae824bb83e35575e1ea0b0818ba12fed6a44ed7f97c59",
       "size_bytes": 379
     },
+    "LIRA": {
+      "repo_path": "L/LI/LIRR/ROME_TMA/LIRA/runway_configs.json",
+      "sha256": "57bfa1ff6a705f99b32aec108d7eeb9888fcaf08fc43029aeeef610706644dc7",
+      "size_bytes": 236
+    },
     "LIRF": {
       "repo_path": "L/LI/LIRR/ROME_TMA/LIRF/runway_configs.json",
       "sha256": "13c2b6be172e44dbbe088b59dd20ebc09ee46307a7b606a8ecfd0895721f3e99",
@@ -1273,12 +1278,12 @@
     }
   },
   "asset_name": "runway-configs-2611.zip",
-  "commit_sha": "efa0afcaf7294c85be77b444a20a70a9c6a4840f",
+  "commit_sha": "91f5b8f4ad65de6893f8b058d12dcf6d089f8b90",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20/runway-configs-2611.zip",
-  "published_at": "2026-11-20T08:29:51Z",
+  "published_at": "2026-11-20T12:18:13Z",
   "release_tag": "daily-2026-11-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f85d22ee8bb9d3b928c8ddcf3568170a0aa5fa12bfc4c7a859f2be470bde639b",
-  "size_bytes": 78844
+  "sha256": "e948e45430722818240c1f9afb294733134296c72895484dd1a78c798d1eaa5d",
+  "size_bytes": 79114
 }

@@ -1,6 +1,6 @@
 {
   "asset_name": "misc-drawings-2611-full.zip",
-  "commit_sha": "efa0afcaf7294c85be77b444a20a70a9c6a4840f",
+  "commit_sha": "91f5b8f4ad65de6893f8b058d12dcf6d089f8b90",
   "dataset": "misc_drawings",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20/misc-drawings-2611-full.zip",
   "entries": [
@@ -324,8 +324,8 @@
     }
   ],
   "entry_count": 53,
-  "generated_at": "2026-11-20T08:29:51Z",
-  "published_at": "2026-11-20T08:29:51Z",
+  "generated_at": "2026-11-20T12:18:13Z",
+  "published_at": "2026-11-20T12:18:13Z",
   "release_tag": "daily-2026-11-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "sha256": "f77a98fd66cd1fcd45504a32fcefc74501aa26494c0ead965ee30d0a5f4ea0a5",

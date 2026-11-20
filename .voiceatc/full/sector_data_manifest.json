@@ -1,6 +1,6 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "efa0afcaf7294c85be77b444a20a70a9c6a4840f",
+  "commit_sha": "91f5b8f4ad65de6893f8b058d12dcf6d089f8b90",
   "dataset": "sector_data",
   "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-20/sector-data-2611-full.zip",
   "entries": [
@@ -33,8 +33,8 @@
         },
         "definitions": {
           "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_definitions.json",
-          "sha256": "ca1a740f6ac0bc97cf10621f79009cd55a4c41249674e75298f94468e93c6ebd",
-          "size_bytes": 433196
+          "sha256": "f35853d04d1023ecc4b93c0a58776d7e8a25bd4f884c9642bbb8cca73198e744",
+          "size_bytes": 430728
         },
         "influence": {
           "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_influence.json",
@@ -93,13 +93,19 @@
         },
         "definitions": {
           "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_definitions.json",
-          "sha256": "b87efa316a26454d0bdb4e2542d3c1737a48efb2ce96729ea0dd897b8e17b510",
-          "size_bytes": 1596
+          "sha256": "9cf69ebe5259861267ce0f85d227428e054ce4351918015a26617d3a49bcded2",
+          "size_bytes": 11484
         },
         "influence": {
           "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_influence.json",
           "sha256": "20f56343f4729eb1159006604a5a7ba2f2822623d29718664473ffaad00162a9",
           "size_bytes": 99
+        },
+        "tma": {
+          "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "5012873a872b1cb8cfaaf8f4c7e54b1cd643cf51230059fdf3e5e01134b585b2",
+          "size_bytes": 4884
         }
       },
       "id": "E/ED/EDGG/FRANKFURT_MAIN_TMA"
@@ -208,18 +214,24 @@
       "files": {
         "configs": {
           "repo_path": "E/ED/EDMM/EDDM_TMA/sector_configs.json",
-          "sha256": "c23c43175a57c275a17d889d9b78d953ab4eab7ec2a8adbf25fafe3b5027159f",
-          "size_bytes": 983
+          "sha256": "4dbbc48b56ad6375203bcaeb0c52f76cb1ddc29b8dd70a26dd9a46dd1bdb1064",
+          "size_bytes": 1090
         },
         "definitions": {
           "repo_path": "E/ED/EDMM/EDDM_TMA/sector_definitions.json",
-          "sha256": "fabf23ec369b8f6a754cabea0a54b95c517a81ca7f9e1349687cd7f53b15ef1c",
-          "size_bytes": 5166
+          "sha256": "dfe2dde81acc369fb120fd0bb6dc9cf7cadeb0e0edb13d4281d4253dd4f50ada",
+          "size_bytes": 135054
         },
         "influence": {
           "repo_path": "E/ED/EDMM/EDDM_TMA/sector_influence.json",
-          "sha256": "711be999533613145a255d86e347fc404fd28bf41126aed0644732eee459ed17",
-          "size_bytes": 468
+          "sha256": "c4ee19c801d7c6e7cedd336e259e07e9bb7a17dbc3a334aa3a5ea69f56f46505",
+          "size_bytes": 554
+        },
+        "tma": {
+          "repo_path": "E/ED/EDMM/EDDM_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "2972ac9096de77e99df5acfa0223e50d00ea0440daec585e7a3d3afd4f1df7c4",
+          "size_bytes": 8993
         }
       },
       "id": "E/ED/EDMM/EDDM_TMA"
@@ -348,21 +360,53 @@
       "files": {
         "configs": {
           "repo_path": "E/EG/EGTT/LONDON_TMA/sector_configs.json",
-          "sha256": "9eb03229ab59ffb7637716eb2fba9dc35dbcfaf3d09c3bad9249d29a91ae6e9e",
-          "size_bytes": 222
+          "sha256": "688ae1e96133c20c1f24aa90be8f340b4880a4b3bf5bac748cbd78f48f97d0d0",
+          "size_bytes": 415
         },
         "definitions": {
           "repo_path": "E/EG/EGTT/LONDON_TMA/sector_definitions.json",
-          "sha256": "2065285248bb79307dc1505d5dd97d56e755aef7b311c59e96a12867e132a980",
-          "size_bytes": 538
+          "sha256": "c43c86280991bc789c7e35bd4ff40e21995d9b06e4e4a8eb020963cc39c9d391",
+          "size_bytes": 39268
         },
         "influence": {
           "repo_path": "E/EG/EGTT/LONDON_TMA/sector_influence.json",
-          "sha256": "20409c5fdcbfce53e72769f59089987cad4a7ffc86544677008c0fbcc489de36",
-          "size_bytes": 112
+          "sha256": "a0e38839751ef3f0860ce9566a78db9248ecf669ed144381660fcb6cedca7549",
+          "size_bytes": 104
+        },
+        "tma": {
+          "repo_path": "E/EG/EGTT/LONDON_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "3e4e7a10257b17fc34f2b2dddc549b197949cd1b83676b03e257707f6caf18a1",
+          "size_bytes": 3441
         }
       },
       "id": "E/EG/EGTT/LONDON_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/sector_configs.json",
+          "sha256": "f86ff86f57c488f9d4737d0c241925eb9a8e696a1916acc5d23da9a569713575",
+          "size_bytes": 325
+        },
+        "definitions": {
+          "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/sector_definitions.json",
+          "sha256": "dbfc670f0ee78f4881b4571a6f843a2fdfabb199042f025c9de49c2ec0f241c8",
+          "size_bytes": 21805
+        },
+        "influence": {
+          "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/sector_influence.json",
+          "sha256": "a2d3c26f98db55c9ecd02ebae4a22742597c8af4567905d63f4c07f929ec2cd6",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "ef027a8a51493af898d78935c2772a1023c74c4ec00716ba65721e4a1b646c27",
+          "size_bytes": 4927
+        }
+      },
+      "id": "E/EH/EHAA/AMSTERDAM_TMA"
     },
     {
       "files": {
@@ -553,8 +597,8 @@
         },
         "definitions": {
           "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/sector_definitions.json",
-          "sha256": "b53a93aaa6e67ed8e8082cda25eb6ad5d09f4271dc1ed8cc03a776b166e99234",
-          "size_bytes": 5862
+          "sha256": "9df7ac05aa1c54f9f85365e9d7e0c35e8edf242ba0d49502579dfeba88fae3af",
+          "size_bytes": 5784
         },
         "influence": {
           "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/sector_influence.json",
@@ -587,14 +631,40 @@
     {
       "files": {
         "configs": {
+          "repo_path": "K/KZAU/CHICAGO_ORD_TMA/sector_configs.json",
+          "sha256": "f0e46837c0cbccb02f71fc11b1fed6b3163756e828f932457954fcade38b7dd4",
+          "size_bytes": 504
+        },
+        "definitions": {
+          "repo_path": "K/KZAU/CHICAGO_ORD_TMA/sector_definitions.json",
+          "sha256": "4675f2305aa166990e8dfd097b6f31f824fd01e57e5f6dd84bb9a1255e81e2cc",
+          "size_bytes": 6412
+        },
+        "influence": {
+          "repo_path": "K/KZAU/CHICAGO_ORD_TMA/sector_influence.json",
+          "sha256": "6a155839c694010d9d8f3b9c2d475362aeacf90e7a65f8dfde009720bc5da089",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "K/KZAU/CHICAGO_ORD_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "5b99af47de18cde97b421c560b214b606fff14945eb56e54b330400d70b1c59d",
+          "size_bytes": 6405
+        }
+      },
+      "id": "K/KZAU/CHICAGO_ORD_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_configs.json",
           "sha256": "8f14986275bf7275a88ecc1ecd91a42a88c81704426ab74d5a76118912d76117",
           "size_bytes": 581
         },
         "definitions": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_definitions.json",
-          "sha256": "6520f558d6c788aae3ba5ee1a21cd1d7fb8e762cfe5702c82e49b005a8c1791f",
-          "size_bytes": 4996
+          "sha256": "a14698996357c59e18d68e917a17aa35ca5f2162a3c142e1338acc35bd2f3d49",
+          "size_bytes": 5147
         },
         "influence": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_influence.json",
@@ -607,8 +677,138 @@
     {
       "files": {
         "configs": {
+          "repo_path": "K/KZBW/BOSTON_TMA/sector_configs.json",
+          "sha256": "9f90a7c3e6707c8a4bc225502ebf5d0a63c07c6b5b7824a1c7a27510f3178a14",
+          "size_bytes": 238
+        },
+        "definitions": {
+          "repo_path": "K/KZBW/BOSTON_TMA/sector_definitions.json",
+          "sha256": "8d03888c7c9d75dc00a36b55ec086de5e3b2a1a003951e929b6992d1037ae743",
+          "size_bytes": 978
+        },
+        "influence": {
+          "repo_path": "K/KZBW/BOSTON_TMA/sector_influence.json",
+          "sha256": "74880a46acd57eb108085937806700eae94aeccda0f5226305cb2b00495c2ef4",
+          "size_bytes": 98
+        },
+        "tma": {
+          "repo_path": "K/KZBW/BOSTON_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "e098e8a219883f8527c71c942537f1b8dfac6dee000b4d884bf36c6fb5370019",
+          "size_bytes": 2473
+        }
+      },
+      "id": "K/KZBW/BOSTON_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/sector_configs.json",
+          "sha256": "22a316d2a2a0ac2b743a77022eac86bf5c9ff86ce5c0776d1404a5a407fc765a",
+          "size_bytes": 242
+        },
+        "definitions": {
+          "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/sector_definitions.json",
+          "sha256": "41b34f1a4ac105d49d253d598549d2ad6a5bbfdb7bd1de9e12e123b2d0d5e326",
+          "size_bytes": 53271
+        },
+        "influence": {
+          "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/sector_influence.json",
+          "sha256": "43c04b338857adcc0d5016333ce81addc3f626edbeac3da4940f1a948ecaaf7a",
+          "size_bytes": 98
+        },
+        "tma": {
+          "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "8ad85b78629d81467b61bf8daf36a671e113be6a724b69b757b9b8b630ac68d8",
+          "size_bytes": 5410
+        }
+      },
+      "id": "K/KZDC/WASHINGTON_DCA_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZDV/DENVER_TMA/sector_configs.json",
+          "sha256": "75904e6f059db86c761203bfdf64f200cb86d08f032321e8b31de3f2e30be7ec",
+          "size_bytes": 257
+        },
+        "definitions": {
+          "repo_path": "K/KZDV/DENVER_TMA/sector_definitions.json",
+          "sha256": "6e8c200ad629958b158062ed73c474344722744660c30138282cb90af3b247c1",
+          "size_bytes": 40242
+        },
+        "influence": {
+          "repo_path": "K/KZDV/DENVER_TMA/sector_influence.json",
+          "sha256": "16a3e27e6f7e12209e0e4f76cc6ed6522143cff417fb7ccf8867a44c257d0b07",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "K/KZDV/DENVER_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "9b514b5565d46b58c9d8a12eda9cc09492da347f4a789a23a2bc01003209a553",
+          "size_bytes": 7747
+        }
+      },
+      "id": "K/KZDV/DENVER_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZFW/DFW_TMA/sector_configs.json",
+          "sha256": "d88e2108600a809c8a04a94767e52d44d68cf92dbea2a8a66c7be3b593d94891",
+          "size_bytes": 310
+        },
+        "definitions": {
+          "repo_path": "K/KZFW/DFW_TMA/sector_definitions.json",
+          "sha256": "6997ad5919334c202efdc9930d9a9a2526d7bc5d1ea070ccbcdf73823f9364c7",
+          "size_bytes": 433
+        },
+        "influence": {
+          "repo_path": "K/KZFW/DFW_TMA/sector_influence.json",
+          "sha256": "b6d0737091c86871697dd1cb931ba31ac826b187805b93aef71c5d2e5c2cae32",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "K/KZFW/DFW_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "34c6a2e77c0ef0b8743e0255f7f62d6a0c1d92edd5e1e10bedc82ad8fd9859a6",
+          "size_bytes": 11507
+        }
+      },
+      "id": "K/KZFW/DFW_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZLA/LAX_TMA/sector_configs.json",
+          "sha256": "b92dc8961a8008f10b8af07652b0f0d4e3a3e4dd6e8d8a0c880c1b7311d63a91",
+          "size_bytes": 261
+        },
+        "definitions": {
+          "repo_path": "K/KZLA/LAX_TMA/sector_definitions.json",
+          "sha256": "4dd1cee1ff79d24fe916245ef59258a138f61e2a9a4b8844cbc1209cf93aa776",
+          "size_bytes": 5558
+        },
+        "influence": {
+          "repo_path": "K/KZLA/LAX_TMA/sector_influence.json",
+          "sha256": "cacc09f017588efcac5ab372ad67f78589922acf66d8514002afcefe2733ee27",
+          "size_bytes": 110
+        },
+        "tma": {
+          "repo_path": "K/KZLA/LAX_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "e28e86e784c913f7489838c6f285fb003dd210f483771cbf87e3350cf801f5b0",
+          "size_bytes": 10256
+        }
+      },
+      "id": "K/KZLA/LAX_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "K/KZNY/JFK_TMA/sector_configs.json",
-          "sha256": "b4a1f55b5b3e4a2a6c4df7a55a3bde63806c6dcd89667d0d5096753a4e0d26fe",
+          "sha256": "4ff18e6c46320f4f9aff827327042fc64e984e92e9cbce85d4c79aca0f333aaa",
           "size_bytes": 211
         },
         "definitions": {
@@ -620,6 +820,12 @@
           "repo_path": "K/KZNY/JFK_TMA/sector_influence.json",
           "sha256": "b50faf20751c9e1c322a3d36c8a6b628105f7ec7178835672c063c36fb6d7b09",
           "size_bytes": 131
+        },
+        "tma": {
+          "repo_path": "K/KZNY/JFK_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "bf5ffb6d41e03579b3064712a7b648fdd579b7d6f0842552e745cc08466dfa8f",
+          "size_bytes": 3892
         }
       },
       "id": "K/KZNY/JFK_TMA"
@@ -647,19 +853,77 @@
     {
       "files": {
         "configs": {
+          "repo_path": "K/KZOA/SFO_TMA/sector_configs.json",
+          "sha256": "d58297c1ac89529d68590c88dda99fa41aba4c131fe7e797cd27f3fb0b3709d9",
+          "size_bytes": 247
+        },
+        "definitions": {
+          "repo_path": "K/KZOA/SFO_TMA/sector_definitions.json",
+          "sha256": "4c4e6e87a233b39165712c29bcf05a747efca97b471a525391e4a1785890a18f",
+          "size_bytes": 1861
+        },
+        "influence": {
+          "repo_path": "K/KZOA/SFO_TMA/sector_influence.json",
+          "sha256": "8b6a7f6dafb104df6d87a942a7e0a75cdd2180edc96a5d6bb7b296baa3bdedbe",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "K/KZOA/SFO_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "690de7f770e8a56ddae5383a28c2687feae19e35bee0eef7ed2137d2b0fc16ac",
+          "size_bytes": 3032
+        }
+      },
+      "id": "K/KZOA/SFO_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "K/KZSE/SEATTLE_TMA/sector_configs.json",
+          "sha256": "a882c1add95a6d3e631767ebaebc41e56207f7d7951c07a2bdb699c90925005c",
+          "size_bytes": 310
+        },
+        "definitions": {
+          "repo_path": "K/KZSE/SEATTLE_TMA/sector_definitions.json",
+          "sha256": "b128ee18fd9e1566703c02d50877f704d873aa780338736f33e1a3029efd2e44",
+          "size_bytes": 1593
+        },
+        "influence": {
+          "repo_path": "K/KZSE/SEATTLE_TMA/sector_influence.json",
+          "sha256": "7951020c67b16ae449e7439a1e6aeb43fabd6eafcb4ddacfc3875a9229dea3f1",
+          "size_bytes": 110
+        },
+        "tma": {
+          "repo_path": "K/KZSE/SEATTLE_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "d43b3f7833c63cad0dee259817b49a4fca21637cd1549453223b7c79c49be9fc",
+          "size_bytes": 5443
+        }
+      },
+      "id": "K/KZSE/SEATTLE_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "K/KZTL/ATLANTA_TMA/sector_configs.json",
-          "sha256": "5da261a9358d082d07b99f6e9d591b6057ca8ddb0b5efe6fc1832c8266c0ca69",
-          "size_bytes": 266
+          "sha256": "cfc45d09a82464b4f992265ac383574e2351c31e48f7d25b9e520277f6cfa124",
+          "size_bytes": 264
         },
         "definitions": {
           "repo_path": "K/KZTL/ATLANTA_TMA/sector_definitions.json",
-          "sha256": "bf22347b6a2fbd7bc14c6c1982fe285a0cd59c9b10aae6f39b91569457db9d52",
-          "size_bytes": 933
+          "sha256": "6588c4ed52c563bf81d48315106170554b2a0039206bc9044c5f4166ab958381",
+          "size_bytes": 818
         },
         "influence": {
           "repo_path": "K/KZTL/ATLANTA_TMA/sector_influence.json",
-          "sha256": "90e79ec99470df816f35562872b89cd8fb79463ac6a84946bbbd39a9b572a342",
-          "size_bytes": 98
+          "sha256": "83dde60a39bfacc14b834bc6609f3d0cc81f9d301a83e404e9d550df64f8ea01",
+          "size_bytes": 106
+        },
+        "tma": {
+          "repo_path": "K/KZTL/ATLANTA_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "245969f4fd6a0af41acd003ffb42edbdfa3856c5dfebc8bb3f362d2330af65ee",
+          "size_bytes": 6825
         }
       },
       "id": "K/KZTL/ATLANTA_TMA"
@@ -673,8 +937,8 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_definitions.json",
-          "sha256": "a2d5db37dc44b8740deb85c1e23de8ed2a859dbafedd90d8272a88caca371b9a",
-          "size_bytes": 14867
+          "sha256": "bff575b66d01b568995fab0f475d8729b2d25ce09f3b8917c639eef853cbbdd4",
+          "size_bytes": 11471
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/sector_influence.json",
@@ -693,13 +957,19 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
-          "sha256": "54431a9e55c43daa6a862c355936181d98d1cd727330db7413fb08bb750069b3",
-          "size_bytes": 36368
+          "sha256": "1401abbc65d1fb570f317203533d9ac8c7c7505edec09b488d0707c3cce41a51",
+          "size_bytes": 80581
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/sector_influence.json",
           "sha256": "e187e5b1625d6fe195a4a27e36098352b36fd7943ea779f6ff1d970c49749cf4",
           "size_bytes": 283
+        },
+        "tma": {
+          "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "74853c83fddebd7dde540a71bdc07b10bef4786f0645c1c7a8e11a179854c5d1",
+          "size_bytes": 9922
         }
       },
       "id": "L/LE/LECB/LECB_W/BARCELONA_TMA"
@@ -773,13 +1043,19 @@
         },
         "definitions": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
-          "sha256": "f488b978398ab5e2e4e91a26d471b6a14455e4e3e0ee44db12518b088cefbc97",
-          "size_bytes": 1125
+          "sha256": "bf2da53adc40b9deeffef01a9c403e07aa31eeb9fa40c6ab1efa0376b9fef6c6",
+          "size_bytes": 40230
         },
         "influence": {
           "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/sector_influence.json",
           "sha256": "060a6b5963d6b2d512954d2757a275700b4ae2beb78737004e7284d792556fa4",
           "size_bytes": 126
+        },
+        "tma": {
+          "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "c8befd6cfe038e8b65e135f747cadb96907c913261356e76ca6d489c62a4831c",
+          "size_bytes": 8474
         }
       },
       "id": "L/LE/LECM/LECM_R2/MADRID_TMA"
@@ -823,6 +1099,58 @@
         }
       },
       "id": "L/LE/LECM/LECS/SEVILLA_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LF/LFFF/PARIS_TMA/sector_configs.json",
+          "sha256": "2279407ffe472f3f1a6f244becc52ae6eaacac4ae1b6da844aa55dfd803f32ef",
+          "size_bytes": 229
+        },
+        "definitions": {
+          "repo_path": "L/LF/LFFF/PARIS_TMA/sector_definitions.json",
+          "sha256": "c6fa3ae2832249202aa347463ae7bfb07fee14b2e8d3da834ee55d9f59086346",
+          "size_bytes": 59175
+        },
+        "influence": {
+          "repo_path": "L/LF/LFFF/PARIS_TMA/sector_influence.json",
+          "sha256": "f6603786e8089fcc7e259a2738964972e9ef6b5e62cff11e3ddfbacf26d67516",
+          "size_bytes": 101
+        },
+        "tma": {
+          "repo_path": "L/LF/LFFF/PARIS_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "2cef74f312e1348ab8cb8fa167820ad4c1c0cb2e2d04e2bb57353c9dc2aa959a",
+          "size_bytes": 7835
+        }
+      },
+      "id": "L/LF/LFFF/PARIS_TMA"
+    },
+    {
+      "files": {
+        "configs": {
+          "repo_path": "L/LI/LIRR/ROME_TMA/sector_configs.json",
+          "sha256": "2af0b5a7d805f54331e112dee260a87126ee7a86c150e1899cf0aba434c5a854",
+          "size_bytes": 232
+        },
+        "definitions": {
+          "repo_path": "L/LI/LIRR/ROME_TMA/sector_definitions.json",
+          "sha256": "6039f855db4b81d4f9d5509f1dfbce6f5ba3fd7e369d965da3ca4e8af8cd12b1",
+          "size_bytes": 12205
+        },
+        "influence": {
+          "repo_path": "L/LI/LIRR/ROME_TMA/sector_influence.json",
+          "sha256": "991f4e8a3c8f77c1bf665c0dd770e31098bd08c3054bc50bfb10099cdfd598d6",
+          "size_bytes": 110
+        },
+        "tma": {
+          "repo_path": "L/LI/LIRR/ROME_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "c5bff681322811456ef8617266db49edefeb5d048c6147d35833f1d04e7e8531",
+          "size_bytes": 3156
+        }
+      },
+      "id": "L/LI/LIRR/ROME_TMA"
     },
     {
       "files": {
@@ -953,13 +1281,19 @@
         },
         "definitions": {
           "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_definitions.json",
-          "sha256": "b8b32824e71b624a713572e78c638af682b72447d88b93650ef6d4fdff99ed2d",
-          "size_bytes": 35722
+          "sha256": "3bfb93847c5aaf86d1a170611514027cb9223e40b1659ff37618f9a63f589f4d",
+          "size_bytes": 23610
         },
         "influence": {
           "repo_path": "L/LO/LOVV/VIENNA_TMA/sector_influence.json",
           "sha256": "22b140dd5b94e43638b3861e02eabaf5e27f9942cbf15418e2aa2caa1b5bdb1f",
           "size_bytes": 273
+        },
+        "tma": {
+          "repo_path": "L/LO/LOVV/VIENNA_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "2bb0559cc0b8a5eeee82c2e605ca6ff2a24c00ef5c34dc424bc85442120b6316",
+          "size_bytes": 5863
         }
       },
       "id": "L/LO/LOVV/VIENNA_TMA"
@@ -1147,6 +1481,32 @@
     {
       "files": {
         "configs": {
+          "repo_path": "L/LS/LSAS/ZURICH_TMA/sector_configs.json",
+          "sha256": "a17399a22cc17f71d6e43f6fd3ff9ac37e86934bc76814ba0bcb6d686a272b1e",
+          "size_bytes": 243
+        },
+        "definitions": {
+          "repo_path": "L/LS/LSAS/ZURICH_TMA/sector_definitions.json",
+          "sha256": "bb6decd03aee5e3ae7f88f98e8948017c28283e44a91269ce368d57fb1ec535f",
+          "size_bytes": 14023
+        },
+        "influence": {
+          "repo_path": "L/LS/LSAS/ZURICH_TMA/sector_influence.json",
+          "sha256": "6ec0045fbd505c1286372aa12b094a7ff6826c908555b8d13d77a5f35a5105a5",
+          "size_bytes": 102
+        },
+        "tma": {
+          "repo_path": "L/LS/LSAS/ZURICH_TMA/tma.json",
+          "requires": ["community.tma_file"],
+          "sha256": "48f29025bca2aaa73008d203497bc3d0a7ba699c32e384d424405d619a712b7c",
+          "size_bytes": 4060
+        }
+      },
+      "id": "L/LS/LSAS/ZURICH_TMA"
+    },
+    {
+      "files": {
+        "configs": {
           "repo_path": "L/LT/LTBB/ISTANBUL_TMA/sector_configs.json",
           "sha256": "a13cd0bea59842c2b93dfad3aabc5ceb87a45e4f047a15c08668559a7e3ec51b",
           "size_bytes": 706
@@ -1213,8 +1573,8 @@
         },
         "definitions": {
           "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/sector_definitions.json",
-          "sha256": "4066414f87cf7edbcbeee845550e13ad61cde2ba3ab7c8eba9ba69cd33cc85ea",
-          "size_bytes": 85458
+          "sha256": "ecd2fe3daf7b5c8685a9cb20f8435721d4ed65c2d1ac763ee1cfbd9b723c42c7",
+          "size_bytes": 85254
         },
         "influence": {
           "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/sector_influence.json",
@@ -2353,8 +2713,8 @@
         },
         "definitions": {
           "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_definitions.json",
-          "sha256": "34888c89f2500249cf882ceae72b2f2d7eeef14d227f13d7e8ea068cb85c8d07",
-          "size_bytes": 135760
+          "sha256": "2039230efc8283ad2139e8bb97d7214d1ad583b6d897f3bdaba31453d91d8fbd",
+          "size_bytes": 135716
         },
         "influence": {
           "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_influence.json",
@@ -2433,8 +2793,8 @@
         },
         "definitions": {
           "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_definitions.json",
-          "sha256": "60253aeb9c730e042c538ac2f10224ecaab9277052926b1a4dcd18f03d4bbf4d",
-          "size_bytes": 111512
+          "sha256": "be1995da2e03ec8b8bb266340f4da82f1aa9cbd908c686385abc7d15964a2344",
+          "size_bytes": 111369
         },
         "influence": {
           "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_influence.json",
@@ -2453,8 +2813,8 @@
         },
         "definitions": {
           "repo_path": "Y/YM/YMMM/SYDNEY_TMA/sector_definitions.json",
-          "sha256": "4079aa4de577ae4ff345452df701fbfdc8a68da0e87a09617ad5d7d1a8d47e07",
-          "size_bytes": 506568
+          "sha256": "2a5f0e17286d4563a5316281385dcc5b3e6387a86750a19e06ba135d98dff025",
+          "size_bytes": 475428
         },
         "influence": {
           "repo_path": "Y/YM/YMMM/SYDNEY_TMA/sector_influence.json",
@@ -2485,11 +2845,11 @@
       "id": "Z/ZG/ZGZU/ZHUHAI_TMA"
     }
   ],
-  "entry_count": 124,
-  "generated_at": "2026-11-20T08:29:51Z",
-  "published_at": "2026-11-20T08:29:51Z",
+  "entry_count": 136,
+  "generated_at": "2026-11-20T12:18:13Z",
+  "published_at": "2026-11-20T12:18:13Z",
   "release_tag": "daily-2026-11-20",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "06debb57f790d5c7e34c117048e98c2e1083674f9deb7c3c0261dd4dca9711d0",
-  "size_bytes": 504106
+  "sha256": "59a8bc01d05f60925dd94c92dec6ad742765c0b4a73218d03c4a5298c2e9092e",
+  "size_bytes": 601021
 }
