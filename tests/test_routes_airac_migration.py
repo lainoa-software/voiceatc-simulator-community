@@ -155,6 +155,58 @@ class RoutesAiracMigrationTests(unittest.TestCase):
             self.assertEqual(1, report["summary"]["community_routes_needing_review"])
             self.assertIn(row, output_lines)
 
+    def test_lainoa_route_starting_at_coded_sid_end_is_blanked(self) -> None:
+        """Creator decision 2026-10-21: generated routes start at a published SID point."""
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            exit_code, output_lines, report = self._run(
+                Path(tmp_dir), [f"EDXX\tKDDD\tEDXX DCT XX123 DCT CCC V2 DDD KDDD\t2608\t{LAINOA}"]
+            )
+
+            self.assertEqual(0, exit_code)
+            self.assertEqual(1, report["summary"]["lainoa_routes_to_rebuild"])
+            entry = report["lainoa_routes_to_rebuild"][0]
+            self.assertEqual(["sid_exit_coded_point"], [e["code"] for e in entry["errors"]])
+            self.assertIn("EDXX\tKDDD\t\t\t", output_lines)
+
+    def test_lainoa_route_ending_at_coded_star_start_is_blanked(self) -> None:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            exit_code, output_lines, report = self._run(
+                Path(tmp_dir), [f"KAAA\tEDXX\tKAAA AAA Y1 CCC DCT XX456 EDXX\t2608\t{LAINOA}"]
+            )
+
+            self.assertEqual(0, exit_code)
+            self.assertEqual(1, report["summary"]["lainoa_routes_to_rebuild"])
+            entry = report["lainoa_routes_to_rebuild"][0]
+            self.assertEqual(["star_entry_coded_point"], [e["code"] for e in entry["errors"]])
+            self.assertIn("KAAA\tEDXX\t\t\t", output_lines)
+
+    def test_letter_only_terminal_sid_end_is_not_rebuilt(self) -> None:
+        """A letter-only name found only in tbl_pc_terminal_waypoints (Canadian HAMPO) is not coded."""
+        self._assert_od_route_survives("EDXX\tKDDD\tEDXX DCT XXEXT DCT CCC V2 DDD KDDD")
+
+    def test_published_sid_end_is_not_rebuilt(self) -> None:
+        self._assert_od_route_survives("EDXX\tKDDD\tEDXX DCT AAA Y1 CCC V2 DDD KDDD")
+
+    def _assert_od_route_survives(self, od_route: str) -> None:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            row = f"{od_route}\t2608\t{LAINOA}"
+            exit_code, output_lines, report = self._run(Path(tmp_dir), [row])
+
+            self.assertEqual(0, exit_code)
+            self.assertEqual(1, report["summary"]["routes_ok"], report["lainoa_routes_to_rebuild"])
+            self.assertIn(row, output_lines)
+
+    def test_community_route_at_coded_sid_end_is_flagged_not_modified(self) -> None:
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp_dir:
+            row = f"EDXX\tKDDD\tEDXX DCT XX123 DCT CCC V2 DDD KDDD\t2608\t{CONTRIBUTOR}"
+            exit_code, output_lines, report = self._run(Path(tmp_dir), [row])
+
+            self.assertEqual(0, exit_code)
+            self.assertEqual(0, report["summary"]["lainoa_routes_to_rebuild"])
+            entry = report["community_routes_needing_review"][0]
+            self.assertEqual(["sid_exit_coded_point"], [e["code"] for e in entry["errors"]])
+            self.assertIn(row, output_lines)
+
     def test_every_row_is_categorised_past_any_findings_cap(self) -> None:
         """validate_routes stops at max_findings; migration must not inherit a cap
         or the untouched tail would be silently categorised 'ok'."""
