@@ -86,7 +86,7 @@
       ],
       "on_duty": [
         {
-          "unit": "BAR_TWR",
+          "unit": "MAD_TWR",
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
@@ -126,7 +126,7 @@
       ],
       "on_duty": [
         {
-          "unit": "BAR_TWR",
+          "unit": "MAD_TWR",
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
