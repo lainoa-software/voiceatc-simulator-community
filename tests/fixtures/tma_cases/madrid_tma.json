@@ -13,7 +13,7 @@
       "frequencies": ["136.105"]
     },
     {
-      "id": "BAR_TWR",
+      "id": "MAD_TWR",
       "call_sign": "Barajas Tower",
       "services": ["tower"],
       "airport": "LEMD",
@@ -86,7 +86,7 @@
       ],
       "on_duty": [
         {
-          "unit": "BAR_TWR",
+          "unit": "MAD_TWR",
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
@@ -126,7 +126,7 @@
       ],
       "on_duty": [
         {
-          "unit": "BAR_TWR",
+          "unit": "MAD_TWR",
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
@@ -134,14 +134,14 @@
         },
         {
           "unit": "MAD_CTR",
-          "name": "RUTA 1",
+          "name": "R1",
           "code": "LECM_R1_CTR",
           "frequency": "135.700",
           "sectors": ["LECMR1I"]
         },
         {
           "unit": "MAD_CTR",
-          "name": "RUTA 2",
+          "name": "R2",
           "code": "LECM_R2_CTR",
           "frequency": "133.755",
           "sectors": ["LECMR2I"]
