@@ -13,7 +13,7 @@
       "frequencies": ["136.105"]
     },
     {
-      "id": "BAR_TWR",
+      "id": "MAD_TWR",
       "call_sign": "Barajas Tower",
       "services": ["tower"],
       "airport": "LEMD",
