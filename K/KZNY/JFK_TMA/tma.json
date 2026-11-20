@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "JFK_TMA",
+    "name": "John F. Kennedy TMA"
+  },
+  "airports": ["KJFK", "KFRG"],
+  "units": [
+    {
+      "id": "JFK_APP",
+      "call_sign": "New York Approach",
+      "services": ["approach_radar"],
+      "frequencies": [
+        "125.700",
+        "118.400",
+        "123.700",
+        "126.800",
+        "128.125",
+        "132.400",
+        "134.350"
+      ]
+    },
+    {
+      "id": "JFK_TWR",
+      "call_sign": "Kennedy Tower",
+      "services": ["tower"],
+      "airport": "KJFK",
+      "frequencies": ["119.100", "123.900"]
+    },
+    {
+      "id": "FRG_TWR",
+      "call_sign": "Republic Tower",
+      "services": ["tower"],
+      "airport": "KFRG",
+      "frequencies": ["118.800", "125.200"]
+    },
+    {
+      "id": "KZNYCTR",
+      "call_sign": "New York Center",
+      "services": ["center"],
+      "frequencies": [
+        "125.325",
+        "118.550",
+        "118.975",
+        "119.100",
+        "120.025",
+        "121.125",
+        "121.325",
+        "123.625",
+        "123.825",
+        "124.625",
+        "124.775",
+        "124.900",
+        "125.925",
+        "126.025",
+        "127.175",
+        "127.725",
+        "128.300",
+        "128.500",
+        "128.575",
+        "128.675",
+        "132.100",
+        "132.150",
+        "132.175",
+        "132.200",
+        "132.600",
+        "132.875",
+        "133.050",
+        "133.150",
+        "133.175",
+        "133.350",
+        "133.475",
+        "133.500",
+        "133.525",
+        "134.325",
+        "134.450",
+        "134.800",
+        "135.450"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "SOUTH_ARR",
+      "runways": {
+        "KJFK": ["SOUTH_ARR"]
+      },
+      "positions": [
+        {
+          "sector": "KJFKAPP",
+          "name": "ALL",
+          "code": "KJFK_APP",
+          "unit": "JFK_APP",
+          "frequency": "125.700",
+          "airports": ["KJFK", "KFRG"]
+        }
+      ]
+    },
+    {
+      "id": "SOUTH_DEP",
+      "runways": {
+        "KJFK": ["SOUTH_DEP"]
+      },
+      "positions": [
+        {
+          "sector": "KJFKAPP",
+          "name": "ALL",
+          "code": "KJFK_APP",
+          "unit": "JFK_APP",
+          "frequency": "125.700",
+          "airports": ["KJFK", "KFRG"]
+        }
+      ]
+    },
+    {
+      "id": "NORTH",
+      "runways": {
+        "KJFK": ["NORTH"]
+      },
+      "positions": [
+        {
+          "sector": "KJFKAPP",
+          "name": "ALL",
+          "code": "KJFK_APP",
+          "unit": "JFK_APP",
+          "frequency": "125.700",
+          "airports": ["KJFK", "KFRG"]
+        }
+      ]
+    },
+    {
+      "id": "NORTHWEST",
+      "runways": {
+        "KJFK": ["NORTHWEST"]
+      },
+      "positions": [
+        {
+          "sector": "KJFKAPP",
+          "name": "ALL",
+          "code": "KJFK_APP",
+          "unit": "JFK_APP",
+          "frequency": "125.700",
+          "airports": ["KJFK", "KFRG"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {"name": "KJFK_ARR_CAMRN", "from": "KZNYCTR", "to": "JFK_APP", "fix": "CAMRN",
+      "arrives": ["KJFK"], "descent": "A110", "priority": 10},
+    {"name": "KJFK_ARR_CCC", "from": "KZNYCTR", "to": "JFK_APP", "fix": "CCC",
+      "arrives": ["KJFK"], "descent": "A120", "priority": 10},
+    {"name": "KJFK_ARR_LOVES", "from": "KZNYCTR", "to": "JFK_APP", "fix": "LOVES",
+      "arrives": ["KJFK"], "descent": "A060", "priority": 10},
+    {"name": "KJFK_ARR_JENNO", "from": "KZNYCTR", "to": "JFK_APP", "fix": "JENNO",
+      "arrives": ["KJFK"], "descent": "F230", "priority": 10},
+    {"name": "KJFK_DEP_DEEZZ", "from": "JFK_APP", "to": "KZNYCTR", "fix": "DEEZZ",
+      "departs": ["KJFK"], "climb": "F190", "priority": 10}
+  ]
+}

@@ -2,7 +2,7 @@
   "sector_influences": [
     {
       "sector_id": "ATL",
-      "airports": ["KATL"]
+      "airports": ["KATL", "KPDK"]
     }
   ]
 }

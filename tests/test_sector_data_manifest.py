@@ -1,6 +1,7 @@
 import importlib.util
 import json
 import math
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -312,6 +313,78 @@ class SectorDataManifestTests(unittest.TestCase):
             (bundle / "sector_influence.json").write_text(json.dumps(valid_sector_influence()), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "at least 3 points"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_tma_json_alone_is_not_a_sector_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
+            bundle.mkdir(parents=True, exist_ok=True)
+            (bundle / "tma.json").write_text("{}", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "missing sector bundle files"):
+                MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_validate_sector_bundle_rejects_broken_tma_json(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "BARCELONA_TMA"
+            shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA", bundle)
+            shutil.copyfile(
+                REPO_ROOT / "tests" / "fixtures" / "tma_cases" / "broken_barcelona_tma.json",
+                bundle / "tma.json",
+            )
+            with self.assertRaisesRegex(ValueError, 'units\\[2\\] "GIR_TWR": has no services'):
+                MODULE.build_manifest(root, commit_sha="test-commit")
+
+    def test_valid_sector_bundle_records_tma_requires_the_capability(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = root / "L" / "LE" / "BARCELONA_TMA"
+            shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA", bundle)
+            manifest = MODULE.build_manifest(root, commit_sha="test-commit")
+            files = manifest["bundles"]["L/LE/BARCELONA_TMA"]["files"]
+            self.assertEqual(["community.tma_file"], files["tma"]["requires"])
+            self.assertEqual("L/LE/BARCELONA_TMA/tma.json", files["tma"]["repo_path"])
+
+    def definitions_error(self, polygon: list[list[float]]) -> str | None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "sector_definitions.json"
+            definitions = valid_sector_definitions()
+            definitions["sector_definitions"][0]["polygon"] = polygon
+            path.write_text(json.dumps(definitions), encoding="utf-8")
+            try:
+                MODULE.validate_sector_definitions_file(path, Path(tmp_dir))
+            except ValueError as error:
+                return str(error)
+            return None
+
+    def test_validate_sector_definitions_accepts_simple_rings(self) -> None:
+        square = [[40.0, -4.0], [40.0, -3.0], [41.0, -3.0], [41.0, -4.0]]
+        self.assertIsNone(self.definitions_error(square))
+        self.assertIsNone(self.definitions_error(square + [square[0]]), "a closing point equal to the first is allowed")
+        notch = [[0.0, 0.0], [0.0, 4.0], [4.0, 4.0], [4.0, 0.0], [2.0, 0.0], [2.0, 2.0], [1.0, 1.0]]
+        self.assertIsNone(self.definitions_error(notch))
+
+    def test_validate_sector_definitions_rejects_a_ring_that_crosses_itself(self) -> None:
+        bow_tie = [[0.0, 0.0], [2.0, 2.0], [0.0, 2.0], [2.0, 0.0]]
+        self.assertRegex(self.definitions_error(bow_tie) or "", "crosses itself")
+
+    def test_validate_sector_definitions_rejects_a_keyhole_that_revisits_a_point(self) -> None:
+        keyhole = [
+            [0.0, 0.0], [0.0, 10.0], [10.0, 10.0], [10.0, 0.0],
+            [4.0, 0.0], [4.0, 4.0], [6.0, 4.0], [6.0, 6.0], [4.0, 6.0], [4.0, 4.0], [4.0, 0.0],
+        ]
+        self.assertRegex(self.definitions_error(keyhole) or "", "revisits a point")
+
+    def test_validate_sector_definitions_rejects_a_repeated_neighbour_point(self) -> None:
+        repeated = [[0.0, 0.0], [0.0, 4.0], [0.0, 4.0], [4.0, 4.0], [4.0, 0.0]]
+        self.assertRegex(self.definitions_error(repeated) or "", "repeats the point of its neighbour")
+
+    def test_validate_sector_definitions_rejects_edges_that_touch_or_fold_back(self) -> None:
+        touching = [[0.0, 0.0], [0.0, 4.0], [4.0, 4.0], [4.0, 0.0], [2.0, 0.0], [2.0, 4.0]]
+        self.assertRegex(self.definitions_error(touching) or "", "crosses itself")
+        spike = [[0.0, 0.0], [0.0, 4.0], [4.0, 4.0], [4.0, 2.0], [6.0, 2.0], [5.0, 2.0], [4.0, 0.0]]
+        self.assertRegex(self.definitions_error(spike) or "", "folds back|crosses itself")
+        self.assertRegex(MODULE.polygon_ring_defect([[0.0, 0.0], [1.0, 0.0], [0.0, 0.0]]) or "", "folds back")
 
     def test_safe_repo_path_rejects_paths_outside_root(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

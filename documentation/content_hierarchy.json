@@ -288,7 +288,7 @@
     "L/LF/LFMM/NICE_TMA": ["LFMN"],
     "L/LG/LGGG/ATHENS_TMA": ["LGAV"],
     "L/LI/LIMM/MILAN_TMA": ["LIMC"],
-    "L/LI/LIRR/ROME_TMA": ["LIRF"],
+    "L/LI/LIRR/ROME_TMA": ["LIRA", "LIRF"],
     "L/LL/LLLL/EILAT_TMA": ["LLER"],
     "L/LL/LLLL/TEL_AVIV_TMA": ["LLBG"],
     "L/LO/LOVV/GRAZ_TMA": ["LOWG"],

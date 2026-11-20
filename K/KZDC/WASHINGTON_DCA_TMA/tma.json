@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "WASHINGTON_DCA_TMA",
+    "name": "Washington National TMA"
+  },
+  "airports": ["KDCA"],
+  "units": [
+    {
+      "id": "DCA_APP",
+      "call_sign": "Potomac Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["119.850", "124.200", "124.700"]
+    },
+    {
+      "id": "DCA_TWR",
+      "call_sign": "Washington Tower",
+      "services": ["tower"],
+      "airport": "KDCA",
+      "frequencies": ["119.100"]
+    },
+    {
+      "id": "DCA_CTR",
+      "call_sign": "Washington Center",
+      "services": ["center"],
+      "frequencies": [
+        "133.725",
+        "118.025",
+        "118.750",
+        "118.825",
+        "118.925",
+        "120.750",
+        "120.975",
+        "121.025",
+        "121.375",
+        "121.675",
+        "121.875",
+        "121.925",
+        "123.850",
+        "124.025",
+        "124.050",
+        "125.450",
+        "125.725",
+        "126.875",
+        "127.275",
+        "127.700",
+        "127.750",
+        "127.925",
+        "128.300",
+        "128.525",
+        "128.600",
+        "132.025",
+        "132.050",
+        "132.225",
+        "132.275",
+        "132.525",
+        "132.550",
+        "132.950",
+        "133.025",
+        "133.050",
+        "133.125",
+        "133.200",
+        "133.275",
+        "133.525",
+        "133.550",
+        "133.575",
+        "133.650",
+        "133.825",
+        "133.900",
+        "133.975",
+        "134.150",
+        "134.325",
+        "134.400",
+        "134.500",
+        "135.200",
+        "135.275",
+        "135.300",
+        "135.400",
+        "135.450",
+        "135.500",
+        "135.525",
+        "135.750"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1",
+      "runways": {
+        "KDCA": ["NORTH", "SOUTH", "NORTH_RW33"]
+      },
+      "positions": [
+        {
+          "sector": "DCA",
+          "name": "ALL",
+          "code": "KDCA_APP",
+          "unit": "DCA_APP",
+          "frequency": "119.850",
+          "airports": ["KDCA"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {"name": "KDCA_ARR_BULII", "from": "DCA_CTR", "to": "DCA_APP", "fix": "BULII",
+      "arrives": ["KDCA"], "descent": "A130", "priority": 10},
+    {"name": "KDCA_ARR_EYESS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "EYESS",
+      "arrives": ["KDCA"], "descent": "A120", "priority": 10},
+    {"name": "KDCA_ARR_BILIT", "from": "DCA_CTR", "to": "DCA_APP", "fix": "BILIT",
+      "arrives": ["KDCA"], "descent": "A110", "priority": 10},
+    {"name": "KDCA_ARR_ALWYZ", "from": "DCA_CTR", "to": "DCA_APP", "fix": "ALWYZ",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_ARR_IRONS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "IRONS",
+      "arrives": ["KDCA"], "descent": "A130", "priority": 10},
+    {"name": "KDCA_ARR_AML", "from": "DCA_CTR", "to": "DCA_APP", "fix": "AML",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_ARR_SKILS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "SKILS",
+      "arrives": ["KDCA"], "descent": "A120", "priority": 10},
+    {"name": "KDCA_ARR_TIKEE", "from": "DCA_CTR", "to": "DCA_APP", "fix": "TIKEE",
+      "arrives": ["KDCA"], "descent": "A090", "priority": 10},
+    {"name": "KDCA_ARR_TRUPS", "from": "DCA_CTR", "to": "DCA_APP", "fix": "TRUPS",
+      "arrives": ["KDCA"], "descent": "A140", "priority": 10},
+    {"name": "KDCA_DEP_AMEEE", "from": "DCA_APP", "to": "DCA_CTR", "fix": "AMEEE",
+      "departs": ["KDCA"], "climb": "F190", "priority": 10},
+    {"name": "KDCA_DEP_CLTCH", "from": "DCA_APP", "to": "DCA_CTR", "fix": "CLTCH",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_JDUBB", "from": "DCA_APP", "to": "DCA_CTR", "fix": "JDUBB",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_SCRAM", "from": "DCA_APP", "to": "DCA_CTR", "fix": "SCRAM",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_DOCTR", "from": "DCA_APP", "to": "DCA_CTR", "fix": "DOCTR",
+      "departs": ["KDCA"], "climb": "A170", "priority": 10},
+    {"name": "KDCA_DEP_HORTO", "from": "DCA_APP", "to": "DCA_CTR", "fix": "HORTO",
+      "departs": ["KDCA"], "climb": "A170", "priority": 10},
+    {"name": "KDCA_DEP_SOOKI", "from": "DCA_APP", "to": "DCA_CTR", "fix": "SOOKI",
+      "departs": ["KDCA"], "climb": "F190", "priority": 10},
+    {"name": "KDCA_DEP_WYNGS", "from": "DCA_APP", "to": "DCA_CTR", "fix": "WYNGS",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10},
+    {"name": "KDCA_DEP_REBLL", "from": "DCA_APP", "to": "DCA_CTR", "fix": "REBLL",
+      "departs": ["KDCA"], "climb": "F230", "priority": 10}
+  ]
+}

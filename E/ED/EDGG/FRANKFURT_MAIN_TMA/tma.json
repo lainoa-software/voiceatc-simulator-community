@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "FRANKFURT_MAIN_TMA",
+    "name": "Frankfurt TMA"
+  },
+  "airports": ["EDDF"],
+  "units": [
+    {
+      "id": "DF_APP",
+      "call_sign": "Frankfurt Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["120.805", "118.505", "119.030", "120.155", "125.355", "126.555", "127.280", "136.130"]
+    },
+    {
+      "id": "DF_TWR",
+      "call_sign": "Frankfurt Tower",
+      "services": ["tower"],
+      "airport": "EDDF",
+      "frequencies": ["118.780", "119.905", "124.855", "127.330", "136.500"]
+    },
+    {
+      "id": "EDGG_CTR",
+      "call_sign": "Langen Radar",
+      "services": ["center"],
+      "frequencies": ["127.625", "118.750", "119.030", "119.110", "119.200", "120.155", "120.805", "121.050", "121.355", "123.280", "124.430", "124.730", "124.900", "125.050", "125.200", "125.225", "125.355", "125.405", "125.600", "125.680", "126.555", "127.050", "127.365", "127.500", "127.725", "128.505", "128.555", "129.175", "129.300", "129.355", "129.675", "131.300", "132.155", "133.435", "133.460", "134.800", "135.350", "135.650", "135.725", "136.130"]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "07",
+      "runways": {
+        "EDDF": ["07"]
+      },
+      "positions": [
+        {
+          "sector": "DFAN",
+          "name": "ALL",
+          "code": "EDDF_APP",
+          "unit": "DF_APP",
+          "frequency": "120.805",
+          "airports": ["EDDF"]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "runways": {
+        "EDDF": ["25"]
+      },
+      "positions": [
+        {
+          "sector": "DFAN",
+          "name": "ALL",
+          "code": "EDDF_APP",
+          "unit": "DF_APP",
+          "frequency": "120.805",
+          "airports": ["EDDF"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {"name": "EDDF_ARR_KERAX_25", "from": "EDGG_CTR", "to": "DF_APP", "fix": "KERAX",
+      "arrives": ["EDDF"], "runways": ["25L", "25C", "25R"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_ARR_KERAX_07", "from": "EDGG_CTR", "to": "DF_APP", "fix": "KERAX",
+      "arrives": ["EDDF"], "runways": ["07L", "07C", "07R"], "descent": "F130", "priority": 10},
+    {"name": "EDDF_ARR_OSPUL", "from": "EDGG_CTR", "to": "DF_APP", "fix": "OSPUL",
+      "arrives": ["EDDF"], "descent": "F100", "priority": 10},
+    {"name": "EDDF_ARR_RAMOB", "from": "EDGG_CTR", "to": "DF_APP", "fix": "RAMOB",
+      "arrives": ["EDDF"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_ARR_ADNIS", "from": "EDGG_CTR", "to": "DF_APP", "fix": "ADNIS",
+      "arrives": ["EDDF"], "descent": "F100", "priority": 10},
+    {"name": "EDDF_ARR_SPESA", "from": "EDGG_CTR", "to": "DF_APP", "fix": "SPESA",
+      "arrives": ["EDDF"], "descent": "F110", "priority": 10},
+    {"name": "EDDF_DEP_AMTIX", "from": "DF_APP", "to": "EDGG_CTR", "fix": "AMTIX",
+      "departs": ["EDDF"], "climb": "F110", "priority": 10},
+    {"name": "EDDF_DEP_KOMIB", "from": "DF_APP", "to": "EDGG_CTR", "fix": "KOMIB",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_ANEKI", "from": "DF_APP", "to": "EDGG_CTR", "fix": "ANEKI",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_SOBRA", "from": "DF_APP", "to": "EDGG_CTR", "fix": "SOBRA",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_ULKIG", "from": "DF_APP", "to": "EDGG_CTR", "fix": "ULKIG",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_OBOKA", "from": "DF_APP", "to": "EDGG_CTR", "fix": "OBOKA",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_MARUN", "from": "DF_APP", "to": "EDGG_CTR", "fix": "MARUN",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10},
+    {"name": "EDDF_DEP_TOBAK", "from": "DF_APP", "to": "EDGG_CTR", "fix": "TOBAK",
+      "departs": ["EDDF"], "climb": "F130", "priority": 10}
+  ]
+}

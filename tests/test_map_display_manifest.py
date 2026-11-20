@@ -67,7 +67,10 @@ class MapDisplayManifestTests(unittest.TestCase):
             root = Path(tmp_dir)
             for payload in ({"airport": "LEBL", "layers": {"ILS": False}},
                             {"airport": "LEBL", "fixes": []},
-                            {"airport": "LEBL", "ils_length_nm": 25}):
+                            {"airport": "LEBL", "ils_length_nm": 25},
+                            {"airport": "LEBL", "positions": {"LEBL_CORE_APP": {
+                                "layers": {"VOR": False}, "airspaces": ["CTR", "TMA"],
+                                "fixes": ["VIBOK", {"ident": "SLL", "lat": 41.27, "lon": 1.99}]}}}):
                 path = self._write(root, payload)
                 self.assertEqual("LEBL", MODULE.validate_display_file(path, root)["airport"])
 
@@ -91,6 +94,14 @@ class MapDisplayManifestTests(unittest.TestCase):
             ({**valid_payload(), "ils_length_nm": "25"}, "whole number from 1 to 50"),
             ({**valid_payload(), "ils_length_nm": True}, "whole number from 1 to 50"),
             ({"airport": "LEBL"}, "needs at least one of"),
+            ({**valid_payload(), "positions": []}, "must be a JSON object of unit codes"),
+            ({**valid_payload(), "positions": {"approach": {"fixes": []}}}, "must be a unit code"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {}}}, "must be an object with"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {"zoom": 60}}}, "has unknown keys"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {"layers": {"Airways": True}}}}, "is not a MAPS layer"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {"airspaces": "CTR"}}}, "airspaces must be an array"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {"airspaces": ["CTR", "ctr"]}}}, "repeats a name"),
+            ({**valid_payload(), "positions": {"LEBL_APP": {"fixes": ["VIBOK", "vibok"]}}}, "repeats"),
             (["LEBL"], "must be a JSON object"),
         ]
         for payload, fragment in cases:

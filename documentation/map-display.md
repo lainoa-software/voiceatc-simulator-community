@@ -31,7 +31,10 @@ The file sits in the airport folder, beside `procedure_options.json`
   "ils_length_nm": 25,
   "fixes": ["RULOS", "SLL", { "ident": "TOTKI", "lat": 41.12, "lon": 1.89 }],
   "vors": ["BCN"],
-  "ndbs": []
+  "ndbs": [],
+  "positions": {
+    "LEBL_CORE_APP": { "layers": { "VOR": false }, "airspaces": ["CTR", "TMA"], "fixes": ["VIBOK", "PUMAL"] }
+  }
 }
 ```
 
@@ -42,9 +45,10 @@ The file sits in the airport folder, beside `procedure_options.json`
 | `notes` | Optional free text for reviewers. |
 | `layers` | Optional. MAPS layer name → `true`/`false`: `VOR`, `VOR Labels`, `NDB`, `NDB Labels`, `FIX`, `FIX Labels`, `Low Airways`, `High Airways`, `GEO` (sets its three children), `GEO Coastlines`, `GEO Lakes`, `GEO Rivers`, `RWY`, `RWY Labels`, `MRVA`, `MRVA Labels`, `MISC`, `MISC Labels`, `ILS`. Names are case-insensitive. |
 | `ils_length_nm` | Optional. How far the ILS lines reach from the runway, a whole number of NM from 1 to 50 (the game's own default is 20). Game builds older than this field ignore it. |
+| `positions` | Optional. A unit code as New Session shows it (`LEBL_CORE_APP`) → what the map opens with when the player works that position: `layers` over the airport's, `airspaces` added to the opening AIRSPACES set, and `fixes` in place of the airport's list. Each key is optional, in the same form as the airport's own. |
 | `fixes`, `vors`, `ndbs` | Optional lists. An entry is an ident (`"RULOS"`), matched to the point of that type nearest the airport, or `{"ident", "lat", "lon"}` when two points share the ident nearby. Leaving a list out keeps every point of that type; an empty list hides them all. |
 
-A file needs `layers`, `ils_length_nm` or at least one list. The airport's layers and ILS
+A file needs `layers`, `ils_length_nm`, `positions` or at least one list. The airport's layers and ILS
 length apply over a session skin's own display (for example the Spanish skin's). LEMD's file
 is an example without lists.
 

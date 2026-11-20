@@ -131,27 +131,35 @@ def publish_raw_manifest(root: Path, manifest_path: Path, manifest: dict, requir
 
 
 def project_sector_feed(root: Path, gated: dict) -> tuple[dict[str, str], dict[str, str]]:
-    """Legacy sectors require scope-relative paths; full variants use gated aliases."""
+    """Legacy sectors require scope-relative paths; full variants use gated aliases.
+
+    ``tma.json`` is read only by builds that declare its capability, so the default
+    projection drops it and the full entry keeps it at its repo path.
+    """
     default_sources: dict[str, str] = {}
     full_sources: dict[str, str] = {}
 
-    def project(entry: dict, sources: dict[str, str]) -> dict:
+    def project(entry: dict, sources: dict[str, str], *, default: bool) -> dict:
         legacy = default_entry(root, entry)
+        if default:
+            legacy["files"].pop("tma", None)
         for kind, item in legacy["files"].items():
             original_path = entry["files"][kind]["repo_path"]
             sources[original_path] = item["repo_path"]
             item["repo_path"] = original_path
         return legacy
 
-    gated["default"] = {key: project(item, default_sources) for key, item in gated["default"].items()}
+    gated["default"] = {key: project(item, default_sources, default=True) for key, item in gated["default"].items()}
     entries = []
     for entry in gated["full_entries"]:
-        legacy = project(entry, full_sources)
+        legacy = project(entry, full_sources, default=False)
         if legacy != entry:
             entries.append(legacy)
             entry = deepcopy(entry)
             entry["requires"] = sorted(set(entry.get("requires", [])) | {CAPABILITY})
-            for item in entry["files"].values():
+            for kind, item in entry["files"].items():
+                if kind == "tma":
+                    continue
                 source = item["repo_path"]
                 alias = "airac_variants/" + source
                 full_sources[alias] = source

@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["DAY", "MORNING", "EVENING"],
+      "sectors": [
+        {
+          "sector_ids": "LSZHAPP",
+          "frequency": "135.230"
+        }
+      ]
+    }
+  ]
+}
