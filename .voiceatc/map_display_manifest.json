@@ -2,8 +2,8 @@
   "airports": {
     "LEBL": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json",
-      "sha256": "93693d7504edea0aaf86f636d0cb5de5a277babc1a69deae81b984221e883512",
-      "size_bytes": 1149
+      "sha256": "668ddd0cd28541f66bbb8bd66a7da66be11c63886d127a809c7c7dd9c5226db0",
+      "size_bytes": 1706
     },
     "LEMD": {
       "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/map_display.json",

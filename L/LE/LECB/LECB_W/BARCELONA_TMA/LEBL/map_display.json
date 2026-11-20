@@ -76,8 +76,35 @@
   "positions": {
     "LEBL_CORE_APP": {
       "airspaces": [],
-      "fixes": ["ALBER", "BISBA", "CASPE", "GRAUS", "LOBAR", "MAMUK", "MARTA", "MATEX", "NEPAL", "OSTUR", "PUMAL", "VERSO", "VIBOK", "MOPAS",
-        "NATPI", "OLOXO", "DUQQI", "AGENA", "DIPES", "LOTOS", "SENIA", "DALIN", "DUNES", "LARPA", "BANOL", "KERIP", "DISET"]
+      "fixes": [
+        "ALBER",
+        "BISBA",
+        "CASPE",
+        "GRAUS",
+        "LOBAR",
+        "MAMUK",
+        "MARTA",
+        "MATEX",
+        "NEPAL",
+        "OSTUR",
+        "PUMAL",
+        "VERSO",
+        "VIBOK",
+        "MOPAS",
+        "NATPI",
+        "OLOXO",
+        "DUQQI",
+        "AGENA",
+        "DIPES",
+        "LOTOS",
+        "SENIA",
+        "DALIN",
+        "DUNES",
+        "LARPA",
+        "BANOL",
+        "KERIP",
+        "DISET"
+      ]
     }
   }
 }

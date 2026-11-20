@@ -5,7 +5,15 @@
       "runway_configs": ["08", "26"],
       "sectors": [
         {
-          "sector_ids": ["EDDMAPP", "DMNL", "DMSL", "DMNH", "DMSH", "DMNAT", "DMSAT"],
+          "sector_ids": [
+            "EDDMAPP",
+            "DMNL",
+            "DMSL",
+            "DMNH",
+            "DMSH",
+            "DMNAT",
+            "DMSAT"
+          ],
           "frequency": "128.030"
         }
       ]

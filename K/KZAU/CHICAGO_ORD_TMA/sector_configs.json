@@ -2,7 +2,18 @@
   "sector_configs": [
     {
       "sector_config_id": "KORD_APP",
-      "runway_configs": ["WEST_FLOW_DUAL", "WEST_FLOW_TRIPLE", "WEST_FLOW_NOISE_ABATEMENT", "EAST_FLOW_DUAL_1", "EAST_FLOW_DUAL_2", "EAST_FLOW_TRIPLE_1", "EAST_FLOW_TRIPLE_2", "EAST_FLOW_NOISE_ABATEMENT", "4S", "22S"],
+      "runway_configs": [
+        "WEST_FLOW_DUAL",
+        "WEST_FLOW_TRIPLE",
+        "WEST_FLOW_NOISE_ABATEMENT",
+        "EAST_FLOW_DUAL_1",
+        "EAST_FLOW_DUAL_2",
+        "EAST_FLOW_TRIPLE_1",
+        "EAST_FLOW_TRIPLE_2",
+        "EAST_FLOW_NOISE_ABATEMENT",
+        "4S",
+        "22S"
+      ],
       "sectors": [
         {
           "sector_ids": ["KORDAPP"],

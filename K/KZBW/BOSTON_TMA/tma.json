@@ -86,13 +86,41 @@
     }
   ],
   "agreements": [
-    {"name": "KBOS_ARR_PROVI", "from": "BOS_CTR", "to": "BOS_APP", "fix": "PROVI",
-      "arrives": ["KBOS"], "descent": "A110", "priority": 10},
-    {"name": "KBOS_ARR_JFUND", "from": "BOS_CTR", "to": "BOS_APP", "fix": "JFUND",
-      "arrives": ["KBOS"], "descent": "A110", "priority": 10},
-    {"name": "KBOS_ARR_OOSHN", "from": "BOS_CTR", "to": "BOS_APP", "fix": "OOSHN",
-      "arrives": ["KBOS"], "descent": "A110", "priority": 10},
-    {"name": "KBOS_ARR_JEWIT", "from": "BOS_CTR", "to": "BOS_APP", "fix": "JEWIT",
-      "arrives": ["KBOS"], "descent": "A110", "priority": 10}
+    {
+      "name": "KBOS_ARR_PROVI",
+      "from": "BOS_CTR",
+      "to": "BOS_APP",
+      "fix": "PROVI",
+      "arrives": ["KBOS"],
+      "descent": "A110",
+      "priority": 10
+    },
+    {
+      "name": "KBOS_ARR_JFUND",
+      "from": "BOS_CTR",
+      "to": "BOS_APP",
+      "fix": "JFUND",
+      "arrives": ["KBOS"],
+      "descent": "A110",
+      "priority": 10
+    },
+    {
+      "name": "KBOS_ARR_OOSHN",
+      "from": "BOS_CTR",
+      "to": "BOS_APP",
+      "fix": "OOSHN",
+      "arrives": ["KBOS"],
+      "descent": "A110",
+      "priority": 10
+    },
+    {
+      "name": "KBOS_ARR_JEWIT",
+      "from": "BOS_CTR",
+      "to": "BOS_APP",
+      "fix": "JEWIT",
+      "arrives": ["KBOS"],
+      "descent": "A110",
+      "priority": 10
+    }
   ]
 }

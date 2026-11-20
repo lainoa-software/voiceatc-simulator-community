@@ -61,35 +61,140 @@
     }
   ],
   "agreements": [
-    {"name": "LSZH_ARR_RILAX", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "RILAX",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_BERSU", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "BERSU",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_BLM", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "BLM",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_DOPIL", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "DOPIL",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_KELIP", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "KELIP",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_NEGRA", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "NEGRA",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_TRA", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "TRA",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_WIL", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "WIL",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_GIPOL", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "GIPOL",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_ARR_AMIKI", "from": "SWI_CTR", "to": "ZRH_APP", "fix": "AMIKI",
-      "arrives": ["LSZH"], "descent": "F130", "priority": 10},
-    {"name": "LSZH_DEP_DEGES", "from": "ZRH_APP", "to": "SWI_CTR", "fix": "DEGES",
-      "departs": ["LSZH"], "climb": "F080", "priority": 10},
-    {"name": "LSZH_DEP_VEBIT", "from": "ZRH_APP", "to": "SWI_CTR", "fix": "VEBIT",
-      "departs": ["LSZH"], "climb": "F080", "priority": 10},
-    {"name": "LSZH_DEP_WIL", "from": "ZRH_APP", "to": "SWI_CTR", "fix": "WIL",
-      "departs": ["LSZH"], "climb": "F080", "priority": 10},
-    {"name": "LSZH_DEP_ZUE", "from": "ZRH_APP", "to": "SWI_CTR", "fix": "ZUE",
-      "departs": ["LSZH"], "climb": "F080", "priority": 10},
-    {"name": "LSZH_DEP_GERSA", "from": "ZRH_APP", "to": "SWI_CTR", "fix": "GERSA",
-      "departs": ["LSZH"], "climb": "F080", "priority": 10}
+    {
+      "name": "LSZH_ARR_RILAX",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "RILAX",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_BERSU",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "BERSU",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_BLM",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "BLM",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_DOPIL",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "DOPIL",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_KELIP",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "KELIP",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_NEGRA",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "NEGRA",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_TRA",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "TRA",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_WIL",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "WIL",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_GIPOL",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "GIPOL",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_ARR_AMIKI",
+      "from": "SWI_CTR",
+      "to": "ZRH_APP",
+      "fix": "AMIKI",
+      "arrives": ["LSZH"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_DEP_DEGES",
+      "from": "ZRH_APP",
+      "to": "SWI_CTR",
+      "fix": "DEGES",
+      "departs": ["LSZH"],
+      "climb": "F080",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_DEP_VEBIT",
+      "from": "ZRH_APP",
+      "to": "SWI_CTR",
+      "fix": "VEBIT",
+      "departs": ["LSZH"],
+      "climb": "F080",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_DEP_WIL",
+      "from": "ZRH_APP",
+      "to": "SWI_CTR",
+      "fix": "WIL",
+      "departs": ["LSZH"],
+      "climb": "F080",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_DEP_ZUE",
+      "from": "ZRH_APP",
+      "to": "SWI_CTR",
+      "fix": "ZUE",
+      "departs": ["LSZH"],
+      "climb": "F080",
+      "priority": 10
+    },
+    {
+      "name": "LSZH_DEP_GERSA",
+      "from": "ZRH_APP",
+      "to": "SWI_CTR",
+      "fix": "GERSA",
+      "departs": ["LSZH"],
+      "climb": "F080",
+      "priority": 10
+    }
   ]
 }

@@ -123,15 +123,51 @@
     }
   ],
   "agreements": [
-    {"name": "EGLL_ARR_LAM", "from": "LON_CTR", "to": "HLR_APP", "fix": "LAM",
-      "arrives": ["EGLL"], "descent": "F080", "priority": 10},
-    {"name": "EGLL_ARR_BNN", "from": "LON_CTR", "to": "HLR_APP", "fix": "BNN",
-      "arrives": ["EGLL"], "descent": "F080", "priority": 10},
-    {"name": "EGLL_ARR_BIG", "from": "LON_CTR", "to": "HLR_APP", "fix": "BIG",
-      "arrives": ["EGLL"], "descent": "F080", "priority": 10},
-    {"name": "EGLL_ARR_OCK", "from": "LON_CTR", "to": "HLR_APP", "fix": "OCK",
-      "arrives": ["EGLL"], "descent": "F080", "priority": 10},
-    {"name": "EGLL_DEP_CPT_09", "from": "HLR_APP", "to": "LON_CTR", "fix": "CPT",
-      "departs": ["EGLL"], "runways": ["09L", "09R"], "climb": "F080", "priority": 10}
+    {
+      "name": "EGLL_ARR_LAM",
+      "from": "LON_CTR",
+      "to": "HLR_APP",
+      "fix": "LAM",
+      "arrives": ["EGLL"],
+      "descent": "F080",
+      "priority": 10
+    },
+    {
+      "name": "EGLL_ARR_BNN",
+      "from": "LON_CTR",
+      "to": "HLR_APP",
+      "fix": "BNN",
+      "arrives": ["EGLL"],
+      "descent": "F080",
+      "priority": 10
+    },
+    {
+      "name": "EGLL_ARR_BIG",
+      "from": "LON_CTR",
+      "to": "HLR_APP",
+      "fix": "BIG",
+      "arrives": ["EGLL"],
+      "descent": "F080",
+      "priority": 10
+    },
+    {
+      "name": "EGLL_ARR_OCK",
+      "from": "LON_CTR",
+      "to": "HLR_APP",
+      "fix": "OCK",
+      "arrives": ["EGLL"],
+      "descent": "F080",
+      "priority": 10
+    },
+    {
+      "name": "EGLL_DEP_CPT_09",
+      "from": "HLR_APP",
+      "to": "LON_CTR",
+      "fix": "CPT",
+      "departs": ["EGLL"],
+      "runways": ["09L", "09R"],
+      "climb": "F080",
+      "priority": 10
+    }
   ]
 }
