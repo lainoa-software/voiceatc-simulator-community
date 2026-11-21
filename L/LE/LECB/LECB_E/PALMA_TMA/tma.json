@@ -25,6 +25,18 @@
       "frequencies": ["135.355"]
     },
     {
+      "id": "LECB_BKW_CTR",
+      "call_sign": "Barcelona Control",
+      "services": ["center"],
+      "frequencies": ["134.680"]
+    },
+    {
+      "id": "LECL_ALV_CTR",
+      "call_sign": "Valencia Control",
+      "services": ["center"],
+      "frequencies": ["120.100"]
+    },
+    {
       "id": "PAL_CTR",
       "call_sign": "Palma Control",
       "services": ["center"],
@@ -124,6 +136,20 @@
           "code": "LECB_BKE_CTR",
           "frequency": "135.355",
           "sectors": ["LECBBKE"]
+        },
+        {
+          "unit": "LECB_BKW_CTR",
+          "name": "BKW",
+          "code": "LECB_BKW_CTR",
+          "frequency": "134.680",
+          "sectors": ["LECBBKW"]
+        },
+        {
+          "unit": "LECL_ALV_CTR",
+          "name": "ALV",
+          "code": "LECL_ALV_CTR",
+          "frequency": "120.100",
+          "sectors": ["LECLALV"]
         },
         {
           "unit": "BCN_APP",
@@ -372,6 +398,15 @@
       "priority": 10
     },
     {
+      "name": "LEIB_ARR_TOLSO_BCN_APP",
+      "from": "BCN_APP",
+      "to": "PAL_APP",
+      "fix": "TOLSO",
+      "arrives": ["LEIB"],
+      "descent": "F190",
+      "priority": 10
+    },
+    {
       "name": "LEIB_ARR_TOLSO_ENTRY",
       "from": "LECB_BKE_CTR",
       "to": "PAL_CTR",
@@ -436,7 +471,7 @@
     },
     {
       "name": "LEIB_ARR_INSUB",
-      "from": "LECB_BKE_CTR",
+      "from": "LECB_BKW_CTR",
       "to": "LECP_IXX_APP",
       "fix": "INSUB",
       "arrives": ["LEIB"],
@@ -445,7 +480,7 @@
     },
     {
       "name": "LEIB_ARR_RUXET",
-      "from": "LECB_BKE_CTR",
+      "from": "LECB_BKW_CTR",
       "to": "LECP_IXX_APP",
       "fix": "RUXET",
       "arrives": ["LEIB"],
@@ -454,7 +489,7 @@
     },
     {
       "name": "LEIB_ARR_VARUT",
-      "from": "LECB_BKE_CTR",
+      "from": "LECB_BKW_CTR",
       "to": "LECP_IXX_APP",
       "fix": "VARUT",
       "arrives": ["LEIB"],
@@ -741,7 +776,7 @@
     {
       "name": "LEIB_DEP_EPAMA_EXIT",
       "from": "PAL_GXX_CTR",
-      "to": "LECB_BKE_CTR",
+      "to": "LECB_BKW_CTR",
       "fix": "EPAMA",
       "departs": ["LEIB"],
       "climb": "F260",
@@ -750,28 +785,28 @@
     {
       "name": "LEIB_DEP_XOSTA",
       "from": "LECP_IXX_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LECB_BKW_CTR",
       "fix": "XOSTA",
       "departs": ["LEIB"],
-      "climb": "F240",
+      "climb": "F140",
       "priority": 10
     },
     {
       "name": "LEIB_DEP_BAVER",
       "from": "LECP_IXX_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LECB_BKW_CTR",
       "fix": "BAVER",
       "departs": ["LEIB"],
-      "climb": "F240",
+      "climb": "F140",
       "priority": 10
     },
     {
       "name": "LEIB_DEP_INSUB",
       "from": "LECP_IXX_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LECB_BKW_CTR",
       "fix": "INSUB",
       "departs": ["LEIB"],
-      "climb": "F240",
+      "climb": "F140",
       "priority": 10
     },
     {
