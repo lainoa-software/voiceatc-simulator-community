@@ -24,34 +24,68 @@ MADRID = REPO_ROOT / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA"
 
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
-        self.assertEqual(101, len(CORPUS["cases"]))
+        self.assertEqual(107, len(CORPUS["cases"]))
         for case in CORPUS["cases"]:
             with self.subTest(case=case["name"]):
-                problems = MODULE.check(case["payload"], case["bundle_key"], set(case["sector_ids"]))
+                problems = MODULE.check(
+                    case["payload"],
+                    case["bundle_key"],
+                    set(case["sector_ids"]),
+                    case.get("acc_units", []),
+                    case.get("coordination"),
+                )
                 self.assertEqual([[problem.code, problem.where] for problem in problems], case["expect"])
 
     def test_message_case_sentence_is_exact(self) -> None:
         message_case = CORPUS["message_case"]
         case = next(case for case in CORPUS["cases"] if case["name"] == message_case["name"])
-        problems = MODULE.check(case["payload"], case["bundle_key"], set(case["sector_ids"]))
+        problems = MODULE.check(
+            case["payload"],
+            case["bundle_key"],
+            set(case["sector_ids"]),
+            case.get("acc_units", []),
+            case.get("coordination"),
+        )
         self.assertIn(message_case["message"], [problem.message(case["bundle_key"]) for problem in problems])
 
-    def test_real_bundles_pass(self) -> None:
-        self.assertEqual([], MODULE.check_bundle(BARCELONA))
-        self.assertEqual([], MODULE.check_bundle(MADRID))
+    def _seed_bundle(
+        self,
+        fir_dir: Path,
+        bundle_name: str,
+        source_bundle: Path,
+        tma_fixture: str,
+        acc_fixture: str,
+        coord_fixture: str | None = None,
+    ) -> Path:
+        fir_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(CASES_DIR / acc_fixture, fir_dir / "acc_structure.json")
+        target = fir_dir / bundle_name
+        shutil.copytree(source_bundle, target)
+        shutil.copyfile(CASES_DIR / tma_fixture, target / "tma_structure.json")
+        if coord_fixture is not None:
+            shutil.copyfile(CASES_DIR / coord_fixture, target / "tma_coordination.json")
+        return target
 
-    def test_a_bundle_without_tma_json_passes(self) -> None:
+    def test_real_bundles_pass(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bcn = self._seed_bundle(root / "LECB", "BARCELONA_TMA", BARCELONA, "barcelona_tma.json", "barcelona_acc.json")
+            mad = self._seed_bundle(root / "LECM", "MADRID_TMA", MADRID, "madrid_tma.json", "madrid_acc.json", "madrid_coordination.json")
+            self.assertEqual([], MODULE.check_bundle(bcn))
+            self.assertEqual([], MODULE.check_bundle(mad))
+
+    def test_a_bundle_without_tma_structure_passes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             bundle = Path(tmp_dir) / "BARCELONA_TMA"
             shutil.copytree(BARCELONA, bundle)
-            (bundle / "tma.json").unlink()
+            tma_file = bundle / "tma_structure.json"
+            if tma_file.exists():
+                tma_file.unlink()
             self.assertEqual([], MODULE.check_bundle(bundle))
 
-    def test_broken_tma_json_reports_every_sentence(self) -> None:
+    def test_broken_tma_structure_reports_every_sentence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
-            bundle = Path(tmp_dir) / "BARCELONA_TMA"
-            shutil.copytree(BARCELONA, bundle)
-            shutil.copyfile(CASES_DIR / "broken_barcelona_tma.json", bundle / "tma.json")
+            bundle = self._seed_bundle(Path(tmp_dir) / "LECB", "BARCELONA_TMA", BARCELONA, "broken_barcelona_tma.json", "barcelona_acc.json")
             sentences = MODULE.check_bundle(bundle)
             self.assertTrue(sentences)
             self.assertTrue(
@@ -59,35 +93,35 @@ class TmaCheckerTests(unittest.TestCase):
                 sentences,
             )
 
-    def test_unparseable_tma_json_is_one_invalid_sentence(self) -> None:
+    def test_unparseable_tma_structure_is_one_invalid_sentence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             bundle = Path(tmp_dir) / "BARCELONA_TMA"
             shutil.copytree(BARCELONA, bundle)
-            (bundle / "tma.json").write_text("{bad json", encoding="utf-8")
+            (bundle / "tma_structure.json").write_text("{bad json", encoding="utf-8")
             self.assertEqual(
-                ["BARCELONA_TMA/tma.json: the file is not a JSON object."],
+                ["BARCELONA_TMA/tma_structure.json: the file is not a JSON object."],
                 MODULE.check_bundle(bundle),
             )
 
     def test_unknown_runway_preset_is_refused(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
-            bundle = Path(tmp_dir) / "MADRID_TMA"
-            shutil.copytree(MADRID, bundle)
-            payload = json.loads((bundle / "tma.json").read_text(encoding="utf-8"))
+            bundle = self._seed_bundle(Path(tmp_dir) / "LECM", "MADRID_TMA", MADRID, "madrid_tma.json", "madrid_acc.json", "madrid_coordination.json")
+            payload = json.loads((bundle / "tma_structure.json").read_text(encoding="utf-8"))
             payload["layouts"][0]["runways"]["LEMD"] = ["NOWHERE"]
-            (bundle / "tma.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+            (bundle / "tma_structure.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
             self.assertEqual(
                 [
-                    'MADRID_TMA/tma.json layouts[0] "1AND".runways.LEMD: '
+                    'MADRID_TMA/tma_structure.json layouts[0] "1AND".runways.LEMD: '
                     'runway preset "NOWHERE" is not in LEMD/runway_configs.json.'
                 ],
                 MODULE.check_bundle(bundle),
             )
 
-    def test_corpus_copies_match_the_real_bundle_files(self) -> None:
-        for name, bundle in (("barcelona_tma.json", BARCELONA), ("madrid_tma.json", MADRID)):
+    def test_corpus_copies_are_valid_schema2_tma_fixtures(self) -> None:
+        for name in ("barcelona_tma.json", "madrid_tma.json", "barcelona_acc.json", "madrid_acc.json", "madrid_coordination.json"):
             with self.subTest(file=name):
-                self.assertEqual((CASES_DIR / name).read_bytes(), (bundle / "tma.json").read_bytes())
+                payload = json.loads((CASES_DIR / name).read_text(encoding="utf-8"))
+                self.assertEqual(2, payload["schema"])
 
 
 if __name__ == "__main__":
