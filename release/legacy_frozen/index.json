@@ -216,11 +216,40 @@
         "sector_influence.json",
         "tma.json"
       ],
+      "sector_aliases": {
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP": [
+          "DMNAT",
+          "DMNH",
+          "DMNL",
+          "DMSAT",
+          "DMSH",
+          "DMSL",
+          "EDDMAPP"
+        ],
+        "DMNAT_DMNL_DMSAT_DMSL": [
+          "DMNAT",
+          "DMNL",
+          "DMSAT",
+          "DMSL"
+        ],
+        "DMNAT_DMSAT": [
+          "DMNAT",
+          "DMSAT"
+        ],
+        "DMNH_DMSH": [
+          "DMNH",
+          "DMSH"
+        ],
+        "DMNL_DMSL": [
+          "DMNL",
+          "DMSL"
+        ]
+      },
       "source_sha256": {
         "acc_structure.json": "e21cbbe7e6588d568db1a497d4a50dc9834807f3c621a3cc508882aa01b16dbf",
-        "sector_definitions.json": "d4b214595980b3336cc2d2fd9eb494fb56fcfe0486ca5210c9b4152f254cb1d2",
+        "sector_definitions.json": "b6613182627705d43b45494718c104b6a81d9adb7e8d5b5580022be9cf2b088d",
         "tma_coordination.json": "7b694c2cbf98dc31d97e23b0347348c95a0681a373926a58ad3cfa635835e24e",
-        "tma_structure.json": "7415692f2e956ec46b209c7c2628fe5e1df8fefc673ef9d39e216ef5bce3338b"
+        "tma_structure.json": "4f2f8cbae5f3403dfe6241b2ac3e6bedd143cc3538d572470a4d6bd66ed4e425"
       },
       "tma_name": "Munich TMA",
       "unit_aliases": {

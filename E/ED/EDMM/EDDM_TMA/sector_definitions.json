@@ -150,7 +150,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -435,7 +436,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -700,7 +702,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -1269,7 +1272,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -1850,7 +1854,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -2483,7 +2488,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -2972,7 +2978,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -3473,7 +3480,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -3958,7 +3966,8 @@
         ]
       ],
       "sector_ids": [
-        "EDDMAPP"
+        "EDDMAPP",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
       ]
     },
     {
@@ -4111,7 +4120,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNL"
+        "DMNL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -4264,7 +4276,9 @@
         ]
       ],
       "sector_ids": [
-        "DMNH"
+        "DMNH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -4417,7 +4431,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNAT"
+        "DMNAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -4702,7 +4719,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNL"
+        "DMNL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -4987,7 +5007,9 @@
         ]
       ],
       "sector_ids": [
-        "DMNH"
+        "DMNH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -5272,7 +5294,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNAT"
+        "DMNAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -5773,7 +5798,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNL"
+        "DMNL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -6274,7 +6302,9 @@
         ]
       ],
       "sector_ids": [
-        "DMNH"
+        "DMNH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -6775,7 +6805,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNAT"
+        "DMNAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -7344,7 +7377,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNL"
+        "DMNL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -7913,7 +7949,9 @@
         ]
       ],
       "sector_ids": [
-        "DMNH"
+        "DMNH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -8482,7 +8520,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNAT"
+        "DMNAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -9115,7 +9156,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNL"
+        "DMNL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -9748,7 +9792,9 @@
         ]
       ],
       "sector_ids": [
-        "DMNH"
+        "DMNH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -10381,7 +10427,10 @@
         ]
       ],
       "sector_ids": [
-        "DMNAT"
+        "DMNAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -10534,7 +10583,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSL"
+        "DMSL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -10687,7 +10739,9 @@
         ]
       ],
       "sector_ids": [
-        "DMSH"
+        "DMSH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -10840,7 +10894,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSAT"
+        "DMSAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -11105,7 +11162,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSL"
+        "DMSL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -11370,7 +11430,9 @@
         ]
       ],
       "sector_ids": [
-        "DMSH"
+        "DMSH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -11635,7 +11697,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSAT"
+        "DMSAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -12120,7 +12185,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSL"
+        "DMSL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -12605,7 +12673,9 @@
         ]
       ],
       "sector_ids": [
-        "DMSH"
+        "DMSH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -13090,7 +13160,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSAT"
+        "DMSAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -13671,7 +13744,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSL"
+        "DMSL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -14252,7 +14328,9 @@
         ]
       ],
       "sector_ids": [
-        "DMSH"
+        "DMSH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -14833,7 +14911,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSAT"
+        "DMSAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
@@ -15322,7 +15403,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSL"
+        "DMSL",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNL_DMSL"
       ]
     },
     {
@@ -15811,7 +15895,9 @@
         ]
       ],
       "sector_ids": [
-        "DMSH"
+        "DMSH",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNH_DMSH"
       ]
     },
     {
@@ -16300,7 +16386,10 @@
         ]
       ],
       "sector_ids": [
-        "DMSAT"
+        "DMSAT",
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+        "DMNAT_DMNL_DMSAT_DMSL",
+        "DMNAT_DMSAT"
       ]
     },
     {
