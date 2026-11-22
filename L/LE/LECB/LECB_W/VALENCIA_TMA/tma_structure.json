@@ -18,6 +18,7 @@
     },
     {
       "airports": [
+        "LEAL",
         "LEVC"
       ],
       "id": "3W",
@@ -28,6 +29,13 @@
           "name": "ALL",
           "sector": "LECLVAP",
           "unit": "LEAL_APP"
+        },
+        {
+          "code": "LEAL_AAW_APP",
+          "frequency": "120.400",
+          "name": "ALICANTE + WEST",
+          "sector": "LECLAAW",
+          "unit": "LEAL_APP"
         }
       ]
     }
@@ -37,7 +45,8 @@
     {
       "call_sign": "Alicante approach",
       "frequencies": [
-        "120.100"
+        "120.100",
+        "120.400"
       ],
       "id": "LEAL_APP",
       "services": [

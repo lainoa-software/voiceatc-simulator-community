@@ -10,23 +10,31 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 class SectorLegacyProjectionTests(unittest.TestCase):
-    def test_all_136_repo_bundles_take_frozen_path_and_ship_verbatim_bytes(self) -> None:
+    def test_repo_bundles_take_frozen_or_expected_generated_path(self) -> None:
         source_bundles = sector_data_manifest.build_manifest(REPO_ROOT, commit_sha="test")["bundles"]
         projection = sector_legacy_projection.build_sector_release_projection(REPO_ROOT, source_bundles)
         index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
 
+        expected_generated = ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"]
         self.assertEqual(136, len(index))
-        self.assertEqual(136, len(projection["frozen_bundles"]))
-        self.assertEqual([], projection["generated_bundles"])
-        self.assertEqual("Sector projection: 136 frozen, 0 generated.", sector_legacy_projection.format_projection_report(projection))
+        self.assertEqual(134, len(projection["frozen_bundles"]))
+        self.assertEqual(expected_generated, projection["generated_bundles"])
+        self.assertEqual(
+            "Sector projection: 134 frozen, 2 generated (K/KZAU/MILWAUKEE_TMA, L/LE/LECB/LECB_W/VALENCIA_TMA).",
+            sector_legacy_projection.format_projection_report(projection),
+        )
 
         tma_count = 0
         for bundle_path, entry in sorted(index.items()):
-            self.assertEqual("frozen", projection["bundle_paths"][bundle_path])
+            expected_kind = "generated" if bundle_path in expected_generated else "frozen"
+            self.assertEqual(expected_kind, projection["bundle_paths"][bundle_path])
             for fname in entry["frozen_files"]:
                 repo_path = f"{bundle_path}/{fname}"
-                frozen_bytes = (REPO_ROOT / "release" / "legacy_frozen" / bundle_path / fname).read_bytes()
-                self.assertEqual(frozen_bytes, projection["projected_bytes"][repo_path])
+                if expected_kind == "frozen":
+                    frozen_bytes = (REPO_ROOT / "release" / "legacy_frozen" / bundle_path / fname).read_bytes()
+                    self.assertEqual(frozen_bytes, projection["projected_bytes"][repo_path])
+                else:
+                    self.assertIn(repo_path, projection["projected_bytes"])
                 if fname == "tma.json":
                     tma_count += 1
         self.assertEqual(20, tma_count)

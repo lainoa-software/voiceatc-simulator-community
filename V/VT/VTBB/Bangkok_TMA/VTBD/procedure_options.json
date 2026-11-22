@@ -8,11 +8,133 @@
   "runway_ends": {
     "03L": {
       "init_climb": 6000,
-      "spawn_enabled": false
+      "sids": {
+        "ALBO1B": {
+          "spawn_enabled": false
+        },
+        "BONV1B": {
+          "spawn_enabled": false
+        },
+        "DOSB1B": {
+          "spawn_enabled": false
+        },
+        "GORS1B": {
+          "spawn_enabled": false
+        },
+        "HHN1B": {
+          "spawn_enabled": false
+        },
+        "KASN1B": {
+          "spawn_enabled": false
+        },
+        "KIGO1B": {
+          "spawn_enabled": false
+        },
+        "NOBE2B": {
+          "spawn_enabled": false
+        },
+        "NUNL1B": {
+          "spawn_enabled": false
+        },
+        "OLVU1B": {
+          "spawn_enabled": false
+        },
+        "PAST1B": {
+          "spawn_enabled": false
+        },
+        "REGO1B": {
+          "spawn_enabled": false
+        },
+        "RIVD1B": {
+          "spawn_enabled": false
+        },
+        "ROBK1B": {
+          "spawn_enabled": false
+        },
+        "RYN1B": {
+          "spawn_enabled": false
+        },
+        "SABI2B": {
+          "spawn_enabled": false
+        },
+        "SEMB2B": {
+          "spawn_enabled": false
+        },
+        "TARE1B": {
+          "spawn_enabled": false
+        },
+        "UKER1B": {
+          "spawn_enabled": false
+        },
+        "UPKU1B": {
+          "spawn_enabled": false
+        }
+      }
     },
     "03R": {
       "init_climb": 6000,
-      "spawn_enabled": false
+      "sids": {
+        "ALBO1D": {
+          "spawn_enabled": false
+        },
+        "BONV1D": {
+          "spawn_enabled": false
+        },
+        "DOSB1D": {
+          "spawn_enabled": false
+        },
+        "GORS1D": {
+          "spawn_enabled": false
+        },
+        "HHN1D": {
+          "spawn_enabled": false
+        },
+        "KASN1D": {
+          "spawn_enabled": false
+        },
+        "KIGO1D": {
+          "spawn_enabled": false
+        },
+        "NOBE2D": {
+          "spawn_enabled": false
+        },
+        "NUNL1D": {
+          "spawn_enabled": false
+        },
+        "OLVU1D": {
+          "spawn_enabled": false
+        },
+        "PAST1D": {
+          "spawn_enabled": false
+        },
+        "REGO1D": {
+          "spawn_enabled": false
+        },
+        "RIVD1D": {
+          "spawn_enabled": false
+        },
+        "ROBK1D": {
+          "spawn_enabled": false
+        },
+        "RYN1D": {
+          "spawn_enabled": false
+        },
+        "SABI2D": {
+          "spawn_enabled": false
+        },
+        "SEMB2D": {
+          "spawn_enabled": false
+        },
+        "TARE1D": {
+          "spawn_enabled": false
+        },
+        "UKER1D": {
+          "spawn_enabled": false
+        },
+        "UPKU1D": {
+          "spawn_enabled": false
+        }
+      }
     }
   },
   "schema_version": 1,
