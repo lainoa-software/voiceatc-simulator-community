@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "YSSY_APP",
+      "airports": ["YSSY"]
+    },
+    {
+      "sector_id": "YSSY_N_APP",
+      "airports": ["YSSY"]
+    },
+    {
+      "sector_id": "YSSY_S_APP",
+      "airports": ["YSSY"]
+    }
+  ]
+}

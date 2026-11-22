@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "SFO_TMA",
+    "name": "San Francisco TMA"
+  },
+  "airports": ["KSFO"],
+  "units": [
+    {
+      "id": "SFO_APP",
+      "call_sign": "NorCal Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["133.950", "128.325", "134.500"]
+    },
+    {
+      "id": "SFO_TWR",
+      "call_sign": "San Francisco Tower",
+      "services": ["tower"],
+      "airport": "KSFO",
+      "frequencies": ["120.500"]
+    },
+    {
+      "id": "KZOACTR",
+      "call_sign": "Oakland Center",
+      "services": ["center"],
+      "frequencies": [
+        "134.550",
+        "119.475",
+        "119.750",
+        "119.975",
+        "121.250",
+        "123.800",
+        "125.750",
+        "125.850",
+        "126.850",
+        "126.900",
+        "127.175",
+        "127.450",
+        "127.800",
+        "127.950",
+        "128.700",
+        "128.800",
+        "132.050",
+        "132.200",
+        "132.800",
+        "132.950",
+        "133.700",
+        "134.150",
+        "134.300",
+        "134.375",
+        "134.450",
+        "134.975"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1WEST",
+      "runways": {
+        "KSFO": ["WEST"]
+      },
+      "positions": [
+        {
+          "sector": "KSFOAPP",
+          "name": "ALL",
+          "code": "KSFO_APP",
+          "unit": "SFO_APP",
+          "frequency": "133.950",
+          "airports": ["KSFO"]
+        }
+      ]
+    },
+    {
+      "id": "1SOUTHEAST",
+      "runways": {
+        "KSFO": ["SOUTHEAST"]
+      },
+      "positions": [
+        {
+          "sector": "KSFOAPP",
+          "name": "ALL",
+          "code": "KSFO_APP",
+          "unit": "SFO_APP",
+          "frequency": "133.950",
+          "airports": ["KSFO"]
+        }
+      ]
+    },
+    {
+      "id": "1NIGHT_10",
+      "runways": {
+        "KSFO": ["NIGHT_10"]
+      },
+      "positions": [
+        {
+          "sector": "KSFOAPP",
+          "name": "ALL",
+          "code": "KSFO_APP",
+          "unit": "SFO_APP",
+          "frequency": "133.950",
+          "airports": ["KSFO"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {
+      "name": "KSFO_ARR_ARCHI",
+      "from": "KZOACTR",
+      "to": "SFO_APP",
+      "fix": "ARCHI",
+      "arrives": ["KSFO"],
+      "descent": "A070",
+      "priority": 10
+    },
+    {
+      "name": "KSFO_ARR_PIRAT",
+      "from": "KZOACTR",
+      "to": "SFO_APP",
+      "fix": "PIRAT",
+      "arrives": ["KSFO"],
+      "descent": "A100",
+      "priority": 10
+    },
+    {
+      "name": "KSFO_ARR_ARRTU",
+      "from": "KZOACTR",
+      "to": "SFO_APP",
+      "fix": "ARRTU",
+      "arrives": ["KSFO"],
+      "descent": "A100",
+      "priority": 10
+    },
+    {
+      "name": "KSFO_ARR_WPOUT",
+      "from": "KZOACTR",
+      "to": "SFO_APP",
+      "fix": "WPOUT",
+      "arrives": ["KSFO"],
+      "descent": "A110",
+      "priority": 10
+    },
+    {
+      "name": "KSFO_DEP_SEGUL",
+      "from": "SFO_APP",
+      "to": "KZOACTR",
+      "fix": "SEGUL",
+      "departs": ["KSFO"],
+      "climb": "A160",
+      "priority": 10
+    }
+  ]
+}

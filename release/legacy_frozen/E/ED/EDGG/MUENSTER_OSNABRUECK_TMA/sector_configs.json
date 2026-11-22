@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDG_APP",
+      "runway_configs": ["25", "07"],
+      "sectors": [
+        {
+          "sector_ids": ["HMM1", "HMM2", "HMM3", "HMM4", "HMM5", "HMM6"],
+          "frequency": "129.300"
+        }
+      ]
+    }
+  ]
+}

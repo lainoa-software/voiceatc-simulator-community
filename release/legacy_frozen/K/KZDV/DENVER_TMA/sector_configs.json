@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["NORTH_FLOW", "SOUTH_FLOW", "NIGHT_NORTH"],
+      "sectors": [
+        {
+          "sector_ids": "KDENAPP",
+          "frequency": "126.550"
+        }
+      ]
+    }
+  ]
+}

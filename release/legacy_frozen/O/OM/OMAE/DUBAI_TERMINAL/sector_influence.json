@@ -1,0 +1,8 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "OMDBARR",
+      "airports": ["OMDB", "OMDW", "OMSJ"]
+    }
+  ]
+}

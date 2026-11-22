@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDL_APP",
+      "runway_configs": ["31", "13", "23", "05", "23d", "05d"],
+      "sectors": [
+        {
+          "sector_ids": ["DUS1", "DUS2", "DUS3", "DUS4", "DUS5", "DUS6"],
+          "frequency": "121.355"
+        }
+      ]
+    }
+  ]
+}

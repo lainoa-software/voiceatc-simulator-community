@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["22 PARA", "04 PARA"],
+      "sectors": [
+        {
+          "sector_ids": ["HKCTAW", "HKCTAE", "HKTMAL", "HKTMAU"],
+          "frequency": "119.100"
+        }
+      ]
+    }
+  ]
+}

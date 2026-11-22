@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["WEST", "SOUTHEAST", "NIGHT_10"],
+      "sectors": [
+        {
+          "sector_ids": "KSFOAPP",
+          "frequency": "133.950"
+        }
+      ]
+    }
+  ]
+}

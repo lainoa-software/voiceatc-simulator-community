@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["33/23", "23/15", "33/05"],
+      "sectors": [
+        {
+          "sector_ids": ["HAM", "HAMW"],
+          "frequency": "120.540"
+        }
+      ]
+    }
+  ]
+}

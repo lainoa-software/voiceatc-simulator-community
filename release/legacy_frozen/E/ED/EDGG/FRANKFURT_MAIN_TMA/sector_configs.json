@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDF_APP",
+      "runway_configs": ["07", "25"],
+      "sectors": [
+        {
+          "sector_ids": ["DFAN"],
+          "frequency": "120.805"
+        }
+      ]
+    }
+  ]
+}

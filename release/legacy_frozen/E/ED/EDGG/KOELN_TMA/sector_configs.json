@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "EDDK_APP",
+      "runway_configs": ["31", "13", "1306", "3124"],
+      "sectors": [
+        {
+          "sector_ids": ["DKA1", "DKA2", "DKA3"],
+          "frequency": "135.350"
+        }
+      ]
+    }
+  ]
+}

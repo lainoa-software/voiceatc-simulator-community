@@ -1,0 +1,24 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "SALZBURG_TMA_WHOLE_LOWS_15",
+      "runway_configs": ["LOWS_15"],
+      "sectors": [
+        {
+          "sector_ids": "SALZBURG_TMA_LOWS_15",
+          "frequency": "123.725"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "SALZBURG_TMA_WHOLE_LOWS_33",
+      "runway_configs": ["LOWS_33"],
+      "sectors": [
+        {
+          "sector_ids": "SALZBURG_TMA_LOWS_33",
+          "frequency": "123.725"
+        }
+      ]
+    }
+  ]
+}

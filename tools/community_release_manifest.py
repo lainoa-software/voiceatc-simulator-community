@@ -21,6 +21,7 @@ import misc_drawings_manifest
 import routes_release_manifest
 import runway_configs_manifest
 import sector_data_manifest
+import sector_legacy_projection
 import color_profiles_manifest
 import airac_overrides
 import release_gates
@@ -106,8 +107,11 @@ def build_deterministic_zip_from_sources(
     root: Path,
     archive_sources: dict[str, str],
     output_path: Path,
+    *,
+    generated_bytes: dict[str, bytes] | None = None,
 ) -> dict[str, object]:
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    in_memory = generated_bytes or {}
     normalized_sources: dict[str, str] = {}
     for raw_archive_path, raw_source_path in archive_sources.items():
         archive_path = _safe_repo_paths([raw_archive_path], output_path.name)[0]
@@ -116,17 +120,21 @@ def build_deterministic_zip_from_sources(
             raise ValueError(f"{output_path.name}: duplicate archive path '{archive_path}'")
         normalized_sources[archive_path] = source_path
     for source_repo_path in normalized_sources.values():
-        if not (root / source_repo_path).is_file():
+        if source_repo_path not in in_memory and not (root / source_repo_path).is_file():
             raise ValueError(f"Missing release asset source file: {source_repo_path}")
     with zipfile.ZipFile(output_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for archive_path in sorted(normalized_sources):
             source_repo_path = normalized_sources[archive_path]
-            source_path = root / source_repo_path
+            payload_bytes = (
+                in_memory[source_repo_path]
+                if source_repo_path in in_memory
+                else (root / source_repo_path).read_bytes()
+            )
             info = zipfile.ZipInfo(archive_path, date_time=ZIP_TIMESTAMP)
             info.compress_type = zipfile.ZIP_DEFLATED
             info.create_system = 3
             info.external_attr = ZIP_FILE_MODE
-            archive.writestr(info, source_path.read_bytes())
+            archive.writestr(info, payload_bytes)
 
     raw_bytes = output_path.read_bytes()
     return {
@@ -211,7 +219,14 @@ def build_sector_data_release_manifest(
 ) -> dict[str, object]:
     if bundles is None:
         base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
-        bundles = base_manifest["bundles"]
+        projection = sector_legacy_projection.build_sector_release_projection(root, base_manifest["bundles"])
+        gates = release_gates.load_gates(root)
+        bundles = release_gates.apply_gates(
+            "sector_data",
+            projection["bundles"],
+            gates=gates,
+            required_kinds=("configs", "definitions", "influence"),
+        )["default"]
     return {
         "schema_version": LEGACY_DATASET_MANIFEST_SCHEMA_VERSION,
         "repo": REPO_NAME,
@@ -417,6 +432,10 @@ def build_release_bundle(
     mva_base_manifest = mva_manifest.build_manifest(root, commit_sha=commit_sha)
     runway_base_manifest = runway_configs_manifest.build_manifest(root, commit_sha=commit_sha)
     sector_data_base_manifest = sector_data_manifest.build_manifest(root, commit_sha=commit_sha)
+    sector_projection = sector_legacy_projection.build_sector_release_projection(
+        root, sector_data_base_manifest["bundles"]
+    )
+    sector_projected_bytes: dict[str, bytes] = sector_projection["projected_bytes"]
     misc_drawings_base_manifest = misc_drawings_manifest.build_manifest(root, commit_sha=commit_sha)
     color_profiles_projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
 
@@ -432,7 +451,10 @@ def build_release_bundle(
             "runway_configs", runway_base_manifest["airports"], gates=gates
         ),
         "sector_data": release_gates.apply_gates(
-            "sector_data", sector_data_base_manifest["bundles"], gates=gates
+            "sector_data",
+            sector_projection["bundles"],
+            gates=gates,
+            required_kinds=("configs", "definitions", "influence"),
         ),
         "misc_drawings": release_gates.apply_gates(
             "misc_drawings", misc_drawings_base_manifest["airports"], gates=gates
@@ -447,7 +469,19 @@ def build_release_bundle(
     }
     for dataset in ("mva", "runway_configs", "misc_drawings"):
         airac_overrides.project_feed(root, gated[dataset])
-    sector_default_sources, sector_full_sources = airac_overrides.project_sector_feed(root, gated["sector_data"])
+    sector_default_sources, sector_full_sources = airac_overrides.project_sector_feed(
+        root, gated["sector_data"], projected_bytes=sector_projected_bytes
+    )
+    mva_generated_bytes, mva_full_sources = sector_legacy_projection.project_release_dataset_feeds(
+        root, gated["mva"], kind="mva"
+    )
+    misc_generated_bytes, misc_full_sources = sector_legacy_projection.project_release_dataset_feeds(
+        root, gated["misc_drawings"], kind="misc_drawings"
+    )
+    sector_full_bytes, extra_sector_full_sources = sector_legacy_projection.project_release_dataset_feeds(
+        root, gated["sector_data"], kind="sector_data", projected_bytes=sector_projected_bytes
+    )
+    sector_full_sources.update(extra_sector_full_sources)
     mva_airports = gated["mva"]["default"]
     runway_airports = gated["runway_configs"]["default"]
     sector_data_bundles = gated["sector_data"]["default"]
@@ -463,10 +497,25 @@ def build_release_bundle(
     mva_repo_paths = sorted({str(entry["repo_path"]) for entry in mva_airports.values()})
     runway_repo_paths = [str(entry["repo_path"]) for entry in runway_airports.values()]
     misc_drawings_repo_paths = sorted({str(entry["repo_path"]) for entry in misc_drawings_airports.values()})
-    mva_asset = build_deterministic_zip(root, mva_repo_paths, output_dir / mva_asset_name)
+    mva_asset = build_deterministic_zip_from_sources(
+        root,
+        {p: p for p in mva_repo_paths},
+        output_dir / mva_asset_name,
+        generated_bytes=mva_generated_bytes,
+    )
     runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
-    sector_data_asset = build_deterministic_zip_from_sources(root, sector_default_sources, output_dir / sector_data_asset_name)
-    misc_drawings_asset = build_deterministic_zip(root, misc_drawings_repo_paths, output_dir / misc_drawings_asset_name)
+    sector_data_asset = build_deterministic_zip_from_sources(
+        root,
+        sector_default_sources,
+        output_dir / sector_data_asset_name,
+        generated_bytes=sector_projected_bytes,
+    )
+    misc_drawings_asset = build_deterministic_zip_from_sources(
+        root,
+        {p: p for p in misc_drawings_repo_paths},
+        output_dir / misc_drawings_asset_name,
+        generated_bytes=misc_generated_bytes,
+    )
     color_profiles_asset = build_deterministic_zip_from_sources(
         root,
         color_default_sources,
@@ -474,10 +523,11 @@ def build_release_bundle(
     )
 
     full_assets = {
-        "mva": build_deterministic_zip(
+        "mva": build_deterministic_zip_from_sources(
             root,
-            airac_overrides.full_repo_paths(gated["mva"]),
+            mva_full_sources,
             output_dir / _full_asset_name(mva_asset_name),
+            generated_bytes=mva_generated_bytes,
         ),
         "runway_configs": build_deterministic_zip(
             root,
@@ -488,11 +538,13 @@ def build_release_bundle(
             root,
             sector_full_sources,
             output_dir / _full_asset_name(sector_data_asset_name),
+            generated_bytes=sector_full_bytes,
         ),
-        "misc_drawings": build_deterministic_zip(
+        "misc_drawings": build_deterministic_zip_from_sources(
             root,
-            airac_overrides.full_repo_paths(gated["misc_drawings"]),
+            misc_full_sources,
             output_dir / _full_asset_name(misc_drawings_asset_name),
+            generated_bytes=misc_generated_bytes,
         ),
         "color_profiles": build_deterministic_zip_from_sources(
             root,
@@ -615,6 +667,12 @@ def build_release_bundle(
 
     return {
         "airac": airac,
+        "sector_projection": {
+            "frozen_count": len(sector_projection["frozen_bundles"]),
+            "generated_count": len(sector_projection["generated_bundles"]),
+            "generated_bundles": list(sector_projection["generated_bundles"]),
+            "bundle_paths": dict(sector_projection["bundle_paths"]),
+        },
         "assets": {
             "routes_tsv": {
                 "asset_name": routes_asset_name,
@@ -684,6 +742,17 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
 
+    print(
+        sector_legacy_projection.format_projection_report(
+            {
+                "frozen_bundles": [
+                    k for k, v in bundle["sector_projection"]["bundle_paths"].items() if v == "frozen"
+                ],
+                "generated_bundles": bundle["sector_projection"]["generated_bundles"],
+            }
+        ),
+        file=sys.stderr,
+    )
     print(json.dumps(bundle, indent=2, sort_keys=True))
     return 0
 

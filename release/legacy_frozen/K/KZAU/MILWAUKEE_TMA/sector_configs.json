@@ -1,0 +1,29 @@
+{
+  "airport": "KMKE",
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["01", "07", "19", "25", "Overnight"],
+      "sectors": [
+        {
+          "sector_ids": ["MKE_APP"],
+          "frequency": "118.000"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "2",
+      "runway_configs": ["01", "19", "Overnight"],
+      "sectors": [
+        {
+          "sector_ids": ["MKE_E_APP"],
+          "frequency": "118.000"
+        },
+        {
+          "sector_ids": ["MKE_W_APP"],
+          "frequency": "126.500"
+        }
+      ]
+    }
+  ]
+}

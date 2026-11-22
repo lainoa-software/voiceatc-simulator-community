@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["WEST DUAL", "EAST DUAL", "WEST TRIPS", "EAST TRIPS"],
+      "sectors": [
+        {
+          "sector_ids": "ATL",
+          "frequency": "128.000"
+        }
+      ]
+    }
+  ]
+}

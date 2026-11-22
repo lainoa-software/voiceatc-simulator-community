@@ -1,0 +1,28 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "DUS1",
+      "airports": ["EDDL", "EDLN"]
+    },
+    {
+      "sector_id": "DUS2",
+      "airports": ["EDDL", "EDLN"]
+    },
+    {
+      "sector_id": "DUS3",
+      "airports": ["EDDL", "EDLN"]
+    },
+    {
+      "sector_id": "DUS4",
+      "airports": ["EDDL", "EDLN"]
+    },
+    {
+      "sector_id": "DUS5",
+      "airports": ["EDDL", "EDLN"]
+    },
+    {
+      "sector_id": "DUS6",
+      "airports": ["EDDL", "EDLN"]
+    }
+  ]
+}

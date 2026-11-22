@@ -1,0 +1,12 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "INNSBRUCK_TMA_LOWI_08",
+      "airports": ["LOWI"]
+    },
+    {
+      "sector_id": "INNSBRUCK_TMA_LOWI_26",
+      "airports": ["LOWI"]
+    }
+  ]
+}

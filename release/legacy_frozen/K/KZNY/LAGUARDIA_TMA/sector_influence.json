@@ -1,0 +1,9 @@
+{
+  "airport": "KLGA",
+  "sector_influences": [
+    {
+      "sector_id": "KLGAAPP",
+      "airports": ["KLGA"]
+    }
+  ]
+}

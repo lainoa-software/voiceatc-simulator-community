@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "VIENNA_TMA_DAY_WEST",
+      "airports": ["LOWW"]
+    },
+    {
+      "sector_id": "VIENNA_TMA_DAY_SE",
+      "airports": ["LOWW"]
+    },
+    {
+      "sector_id": "VIENNA_TMA_NIGHT",
+      "airports": ["LOWW"]
+    }
+  ]
+}

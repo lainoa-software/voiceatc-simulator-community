@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 try:
-    from . import airac_overrides, tma_checker
+    from . import airac_overrides
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -11,7 +11,6 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
-    import tma_checker
     from content_files import content_files
 
 import argparse
@@ -28,14 +27,18 @@ MANIFEST_PATH = ROOT / ".voiceatc" / "sector_data_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 BRANCH_NAME = "main"
 SCHEMA_VERSION = 1
+AIRSPACE_CAPABILITY = "community.airspace_files"
 SECTOR_FILE_NAMES = {
-    "configs": "sector_configs.json",
+    "tma_structure": "tma_structure.json",
+    "tma_coordination": "tma_coordination.json",
     "definitions": "sector_definitions.json",
-    "influence": "sector_influence.json",
-    "tma": "tma.json",
+    "acc_structure": "acc_structure.json",
+    "acc_coordination": "acc_coordination.json",
 }
+LEGACY_GENERATED_FILE_NAMES = ("sector_configs.json", "sector_influence.json")
 FILE_KIND_BY_NAME = {file_name: kind for kind, file_name in SECTOR_FILE_NAMES.items()}
-FILE_KIND_ORDER = ("configs", "definitions", "influence")
+TMA_REQUIRED_KINDS = ("tma_structure", "definitions")
+ACC_REQUIRED_KINDS = ("acc_structure",)
 
 
 def _tracked_sector_files(root: Path) -> list[Path]:
@@ -86,118 +89,116 @@ def _load_json_object(path: Path) -> tuple[dict[str, object], bytes]:
     return payload, raw_bytes
 
 
-def _coerce_array(value: object, label: str, path: Path) -> list[object]:
-    if isinstance(value, list):
-        return value
-    if value is None:
-        return []
-    if isinstance(value, (str, dict)):
-        return [value]
-    raise ValueError(f"{path}: '{label}' must be a string, object, or array")
+def _require_schema2(payload: dict[str, object], path: Path) -> None:
+    schema = payload.get("schema")
+    if isinstance(schema, bool) or not isinstance(schema, int) or schema != 2:
+        raise ValueError(f"{path}: schema must be 2")
 
 
-def _normalize_string_tokens(value: object, label: str, path: Path) -> list[str]:
-    if isinstance(value, list):
-        tokens = value
-    elif isinstance(value, str):
-        normalized = (
-            value.replace(";", ",")
-            .replace("|", ",")
-            .replace("+", ",")
-            .replace("\t", ",")
-            .replace(" ", ",")
-        )
-        tokens = normalized.split(",")
-    else:
-        raise ValueError(f"{path}: '{label}' must be a string or array")
-
-    normalized_tokens: list[str] = []
-    for token in tokens:
-        if not isinstance(token, str):
-            raise ValueError(f"{path}: '{label}' entries must be strings")
-        text = token.strip()
-        if text:
-            normalized_tokens.append(text)
-    return normalized_tokens
-
-
-def validate_sector_configs_file(path: Path, root: Path = ROOT) -> dict[str, object]:
-    payload, raw_bytes = _load_json_object(path)
-    airac_overrides.validate_references(payload, path)
-    result = {}
-    for tier, document in airac_overrides.documents(payload):
-        checked = _validate_sector_configs_document(document, path, root, raw_bytes, tier)
-        if not tier:
-            result = checked
-    return result
-
-
-def _validate_sector_configs_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
-    configs = payload.get("sector_configs", payload.get("sector_configurations", payload.get("configs")))
-    if not isinstance(configs, list) or not configs:
-        raise ValueError(f"{path}: missing non-empty sector_configs array")
-
-    seen_ids: set[str] = set()
-    for index, row in enumerate(configs):
-        if not isinstance(row, dict):
-            raise ValueError(f"{path}: sector config row {index} must be an object")
-
-        config_id = ensure_text_field(
-            row.get("sector_config_id", row.get("config_id", row.get("id", row.get("SECTOR_CONFIG_ID", "")))),
-            "sector_config_id",
-            path,
-        ).upper()
-        if config_id in seen_ids:
-            raise ValueError(f"{path}: duplicate sector_config_id '{config_id}'")
-        seen_ids.add(config_id)
-
-        if "runway_configs" in row or "runway_configurations" in row or "runways" in row:
-            runway_configs = row.get("runway_configs", row.get("runway_configurations", row.get("runways", [])))
-            runway_tokens = _normalize_string_tokens(runway_configs, "runway_configs", path)
-            if not runway_tokens:
-                raise ValueError(f"{path}: sector_config '{config_id}' runway_configs must not be empty when present")
-
-        sectors = _coerce_array(
-            row.get("sectors", row.get("sector_entries", row.get("sector_ids", row.get("sector_id", [])))),
-            "sectors",
-            path,
-        )
-        if not sectors:
-            raise ValueError(f"{path}: sector_config '{config_id}' must define at least one sector")
-        for sector_index, sector in enumerate(sectors):
-            if isinstance(sector, dict):
-                sector_id_raw = sector.get("sector_ids", sector.get("sector_id", sector.get("sector", sector.get("id", sector.get("SECTOR_ID", "")))))
-                if isinstance(sector_id_raw, list):
-                    for item in sector_id_raw:
-                        if not isinstance(item, str):
-                            raise ValueError(f"{path}: sector_config '{config_id}' sector {sector_index} sector_id entries must be strings")
-                else:
-                    ensure_text_field(sector_id_raw, "sector_id", path)
-                frequency = sector.get("frequency", None)
-                if frequency is not None and not isinstance(frequency, str):
-                    raise ValueError(f"{path}: sector_config '{config_id}' frequency must be a string")
-            elif isinstance(sector, str):
-                if not sector.strip():
-                    raise ValueError(f"{path}: sector_config '{config_id}' sector {sector_index} must not be empty")
-            else:
-                raise ValueError(f"{path}: sector_config '{config_id}' sector {sector_index} must be a string or object")
-
-    return {
+def _file_entry(path: Path, root: Path, raw_bytes: bytes, *, requires: list[str] | None = None) -> dict[str, object]:
+    entry: dict[str, object] = {
         "repo_path": safe_repo_path(path, root),
         "sha256": hashlib.sha256(raw_bytes).hexdigest(),
         "size_bytes": len(raw_bytes),
     }
+    if requires is not None:
+        entry["requires"] = list(requires)
+    return entry
+
+
+def validate_tma_structure_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result: dict[str, object] = {}
+    for tier, document in airac_overrides.documents(payload):
+        _require_schema2(document, path)
+        units = document.get("units")
+        if not isinstance(units, list):
+            raise ValueError(f"{path}: 'units' must be an array")
+        for index, unit in enumerate(units):
+            if not isinstance(unit, dict):
+                raise ValueError(f"{path}: units[{index}] must be an object")
+            ensure_text_field(unit.get("id"), f"units[{index}].id", path)
+        layouts = document.get("layouts")
+        if not isinstance(layouts, list) or not layouts:
+            raise ValueError(f"{path}: missing non-empty layouts array")
+        for index, layout in enumerate(layouts):
+            if not isinstance(layout, dict):
+                raise ValueError(f"{path}: layouts[{index}] must be an object")
+            ensure_text_field(layout.get("id"), f"layouts[{index}].id", path)
+            positions = layout.get("positions")
+            if not isinstance(positions, list) or not positions:
+                raise ValueError(f"{path}: layouts[{index}].positions must be a non-empty array")
+        if not tier:
+            result = _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
+    return result
+
+
+def validate_tma_coordination_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    payload, raw_bytes = _load_json_object(path)
+    _require_schema2(payload, path)
+    agreements = payload.get("agreements")
+    if not isinstance(agreements, list):
+        raise ValueError(f"{path}: 'agreements' must be an array")
+    for index, row in enumerate(agreements):
+        if not isinstance(row, dict):
+            raise ValueError(f"{path}: agreements[{index}] must be an object")
+        ensure_text_field(row.get("name"), f"agreements[{index}].name", path)
+        ensure_text_field(row.get("from"), f"agreements[{index}].from", path)
+        ensure_text_field(row.get("to"), f"agreements[{index}].to", path)
+    return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
+
+
+def validate_acc_structure_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    payload, raw_bytes = _load_json_object(path)
+    _require_schema2(payload, path)
+    units = payload.get("units")
+    if not isinstance(units, list) or not units:
+        raise ValueError(f"{path}: missing non-empty units array")
+    for index, unit in enumerate(units):
+        if not isinstance(unit, dict):
+            raise ValueError(f"{path}: units[{index}] must be an object")
+        ensure_text_field(unit.get("id"), f"units[{index}].id", path)
+        ensure_text_field(unit.get("call_sign"), f"units[{index}].call_sign", path)
+        services = unit.get("services")
+        if not isinstance(services, list) or not services:
+            raise ValueError(f"{path}: units[{index}].services must be a non-empty array")
+        frequencies = unit.get("frequencies")
+        if not isinstance(frequencies, list) or not frequencies:
+            raise ValueError(f"{path}: units[{index}].frequencies must be a non-empty array")
+    if "layouts" in payload and not isinstance(payload["layouts"], list):
+        raise ValueError(f"{path}: 'layouts' must be an array")
+    return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
+
+
+def validate_acc_coordination_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    return validate_tma_coordination_file(path, root)
 
 
 def validate_sector_definitions_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
     airac_overrides.validate_references(payload, path)
-    result = {}
+    result: dict[str, object] = {}
     for tier, document in airac_overrides.documents(payload):
         checked = _validate_sector_definitions_document(document, path, root, raw_bytes, tier)
         if not tier:
             result = checked
     return result
+
+
+def _definition_sector_ids(row: dict[str, object], path: Path) -> list[str]:
+    if "sector_ids" in row:
+        raw_ids = row["sector_ids"]
+        if not isinstance(raw_ids, list) or not raw_ids:
+            raise ValueError(f"{path}: 'sector_ids' must be a non-empty array")
+        return [ensure_text_field(item, "sector_ids[]", path).upper() for item in raw_ids]
+    return [
+        ensure_text_field(
+            row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", "")))),
+            "sector_id",
+            path,
+        ).upper()
+    ]
 
 
 def _validate_sector_definitions_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
@@ -209,11 +210,7 @@ def _validate_sector_definitions_document(payload: dict, path: Path, root: Path,
         if not isinstance(row, dict):
             raise ValueError(f"{path}: sector definition row {index} must be an object")
 
-        sector_id = ensure_text_field(
-            row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", "")))),
-            "sector_id",
-            path,
-        )
+        sector_id = _definition_sector_ids(row, path)[0]
 
         lower_limit = row.get("lower_limit", row.get("floor", None))
         higher_limit = row.get("higher_limit", row.get("ceiling", None))
@@ -232,11 +229,7 @@ def _validate_sector_definitions_document(payload: dict, path: Path, root: Path,
         if defect:
             raise ValueError(f"{path}: sector '{sector_id}' definition {index} polygon {defect}")
 
-    return {
-        "repo_path": safe_repo_path(path, root),
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
-    }
+    return _file_entry(path, root, raw_bytes)
 
 
 def _cross(origin: list[float], a: list[float], b: list[float]) -> float:
@@ -261,12 +254,7 @@ def _segments_meet(a: list[float], b: list[float], c: list[float], d: list[float
 
 
 def polygon_ring_defect(points: list[list[float]]) -> str | None:
-    """Why a sector piece's outline is not a simple ring, or None when it is one.
-
-    A closing point equal to the first is allowed. A simple ring has no point twice (a keyhole joins a cutout to
-    the outline through a doubled seam, which repeats points) and no two edges that cross or touch except
-    neighbours at their shared point.
-    """
+    """Why a sector piece's outline is not a simple ring, or None when it is one."""
     ring = points[:-1] if len(points) > 1 and points[0] == points[-1] else points
     count = len(ring)
     seen: dict[tuple[float, float], int] = {}
@@ -284,7 +272,6 @@ def polygon_ring_defect(points: list[list[float]]) -> str | None:
             if min(c[0], d[0]) > max(a[0], b[0]):
                 break
             if (j - i) % count in (1, count - 1):
-                # neighbouring edges meet at their shared point and must not fold back along each other
                 forward = (i + 1) % count == j
                 shared, near, far = (b, a, d) if forward else (a, b, c)
                 dot = (near[0] - shared[0]) * (far[0] - shared[0]) + (near[1] - shared[1]) * (far[1] - shared[1])
@@ -295,92 +282,70 @@ def polygon_ring_defect(points: list[list[float]]) -> str | None:
     return None
 
 
-def validate_sector_influence_file(path: Path, root: Path = ROOT) -> dict[str, object]:
-    payload, raw_bytes = _load_json_object(path)
-    airac_overrides.validate_references(payload, path)
-    result = {}
-    for tier, document in airac_overrides.documents(payload):
-        checked = _validate_sector_influence_document(document, path, root, raw_bytes, tier)
-        if not tier:
-            result = checked
-    return result
-
-
-def _validate_sector_influence_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
-    influences = payload.get("sector_influence", payload.get("sector_influences", payload.get("sectors")))
-    if not isinstance(influences, list) or not influences:
-        raise ValueError(f"{path}: missing non-empty sector_influence array")
-
-    for index, row in enumerate(influences):
-        if not isinstance(row, dict):
-            raise ValueError(f"{path}: sector influence row {index} must be an object")
-
-        sector_id = ensure_text_field(
-            row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", "")))),
-            "sector_id",
-            path,
-        )
-        airports = _normalize_string_tokens(
-            row.get("airports", row.get("sector_airports", row.get("influenced_airports", row.get("AIRPORTS", [])))),
-            "airports",
-            path,
-        )
-        if not airports:
-            raise ValueError(f"{path}: sector '{sector_id}' must list at least one influenced airport")
-
-    return {
-        "repo_path": safe_repo_path(path, root),
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
-    }
+def _referenced_tma_sectors(tma_structure: dict) -> set[str]:
+    referenced: set[str] = set()
+    for layout in tma_structure.get("layouts", []):
+        if not isinstance(layout, dict):
+            continue
+        for pos in layout.get("positions", []):
+            if isinstance(pos, dict) and pos.get("sector"):
+                referenced.add(str(pos["sector"]).strip().upper())
+        for duty in layout.get("on_duty", []):
+            if isinstance(duty, dict):
+                for sid in duty.get("sectors", []):
+                    if sid:
+                        referenced.add(str(sid).strip().upper())
+    return referenced
 
 
 def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root: Path = ROOT) -> dict[str, object]:
     bundle_repo_path = safe_repo_path(bundle_dir, root)
-    missing_kinds = [kind for kind in FILE_KIND_ORDER if kind not in bundle_files]
-    if missing_kinds:
-        raise ValueError(f"{bundle_repo_path}: missing sector bundle files: {', '.join(missing_kinds)}")
+    is_acc = "acc_structure" in bundle_files or "acc_coordination" in bundle_files
+    is_tma = "tma_structure" in bundle_files or "tma_coordination" in bundle_files
+    if is_acc and is_tma:
+        raise ValueError(f"{bundle_repo_path}: cannot mix ACC and TMA files in one bundle")
 
-    files = {
-        "configs": validate_sector_configs_file(bundle_files["configs"], root),
-        "definitions": validate_sector_definitions_file(bundle_files["definitions"], root),
-        "influence": validate_sector_influence_file(bundle_files["influence"], root),
-    }
-    if "tma" in bundle_files:
-        problems = tma_checker.check_bundle(bundle_dir)
-        if problems:
-            raise ValueError("\n".join(problems))
-        raw_bytes = bundle_files["tma"].read_bytes()
-        files["tma"] = {
-            "repo_path": safe_repo_path(bundle_files["tma"], root),
-            "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-            "size_bytes": len(raw_bytes),
-            "requires": [tma_checker.RULES["capability"]],
+    files: dict[str, object] = {}
+    if is_acc:
+        missing_kinds = [kind for kind in ACC_REQUIRED_KINDS if kind not in bundle_files]
+        if missing_kinds:
+            raise ValueError(f"{bundle_repo_path}: missing ACC bundle files: {', '.join(missing_kinds)}")
+        files["acc_structure"] = validate_acc_structure_file(bundle_files["acc_structure"], root)
+        if "acc_coordination" in bundle_files:
+            files["acc_coordination"] = validate_acc_coordination_file(bundle_files["acc_coordination"], root)
+        if "definitions" in bundle_files:
+            files["definitions"] = validate_sector_definitions_file(bundle_files["definitions"], root)
+    else:
+        missing_kinds = [kind for kind in TMA_REQUIRED_KINDS if kind not in bundle_files]
+        if missing_kinds:
+            raise ValueError(f"{bundle_repo_path}: missing sector bundle files: {', '.join(missing_kinds)}")
+        files["tma_structure"] = validate_tma_structure_file(bundle_files["tma_structure"], root)
+        files["definitions"] = validate_sector_definitions_file(bundle_files["definitions"], root)
+        if "tma_coordination" in bundle_files:
+            files["tma_coordination"] = validate_tma_coordination_file(bundle_files["tma_coordination"], root)
+
+        documents = {
+            kind: json.loads(bundle_files[kind].read_text(encoding="utf-8"))
+            for kind in ("tma_structure", "definitions")
         }
-    documents = {
-        kind: json.loads(path.read_text(encoding="utf-8"))
-        for kind, path in bundle_files.items()
-        if kind in FILE_KIND_ORDER
-    }
-    if any("airac_overrides" in document for document in documents.values()):
-        for tier in ("", *airac_overrides.TIERS):
-            resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
-            definitions = resolved["definitions"]
-            rows = definitions.get("sector_definitions", definitions.get("definitions", definitions.get("sectors", [])))
-            defined = {str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper() for row in rows}
-            configs = resolved["configs"]
-            rows = configs.get("sector_configs", configs.get("sector_configurations", configs.get("configs", [])))
-            referenced = set()
-            for row in rows:
-                sectors = row.get("sectors", row.get("sector_entries", row.get("sector_ids", row.get("sector_id", []))))
-                for item in sectors if isinstance(sectors, list) else [sectors]:
-                    value = item.get("sector_ids", item.get("sector_id", item.get("sector", item.get("id", item.get("SECTOR_ID", ""))))) if isinstance(item, dict) else item
-                    referenced.update(_normalize_string_tokens(value, "sector_id", bundle_dir))
-            influence = resolved["influence"]
-            for row in influence.get("sector_influence", influence.get("sector_influences", influence.get("sectors", []))):
-                referenced.add(str(row.get("sector_id", row.get("sector", row.get("id", row.get("SECTOR_ID", ""))))).upper())
-            if referenced - defined:
-                raise ValueError(f"{bundle_dir}: {tier or 'shared default'} references undefined sectors: {sorted(referenced - defined)}")
+        if any("airac_overrides" in document for document in documents.values()):
+            for tier in ("", *airac_overrides.TIERS):
+                resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
+                defs_rows = resolved["definitions"].get(
+                    "sector_definitions",
+                    resolved["definitions"].get("definitions", resolved["definitions"].get("sectors", [])),
+                )
+                defined: set[str] = set()
+                for row in defs_rows:
+                    if isinstance(row, dict):
+                        defined.update(_definition_sector_ids(row, bundle_files["definitions"]))
+                referenced = _referenced_tma_sectors(resolved["tma_structure"])
+                if referenced - defined:
+                    raise ValueError(
+                        f"{bundle_dir}: {tier or 'shared default'} references undefined sectors: "
+                        f"{sorted(referenced - defined)}"
+                    )
+
     return {
         "bundle_path": bundle_repo_path,
         "files": files,
@@ -396,6 +361,13 @@ def current_commit_sha(root: Path = ROOT) -> str:
 
 
 def build_manifest(root: Path = ROOT, commit_sha: str | None = None) -> dict[str, object]:
+    for legacy_name in LEGACY_GENERATED_FILE_NAMES:
+        legacy_paths = content_files(root, legacy_name)
+        if legacy_paths:
+            raise ValueError(
+                f"{safe_repo_path(legacy_paths[0], root)}: {legacy_name} is generated at publish and must not exist in source"
+            )
+
     bundle_candidates: dict[Path, dict[str, Path]] = {}
     for path in _tracked_sector_files(root):
         kind = FILE_KIND_BY_NAME.get(path.name)

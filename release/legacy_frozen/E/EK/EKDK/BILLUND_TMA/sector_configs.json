@@ -1,0 +1,21 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "BILLUND_TMA_WHOLE_ALL",
+      "runway_configs": [
+        "EKBI_09",
+        "EKBI_27",
+        "EKEB_08",
+        "EKEB_26",
+        "EKVD_07",
+        "EKVD_25"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "BILLUND_TMA_ALL",
+          "frequency": "127.580"
+        }
+      ]
+    }
+  ]
+}

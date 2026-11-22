@@ -103,13 +103,14 @@ def _parse_airports_metadata(payload: dict[str, object], path: Path) -> list[str
 
 
 def _validate_configs_filter(item: dict[str, object], item_label: str, path: Path) -> None:
-    if "configs" not in item:
-        return
-    configs = item["configs"]
-    if not isinstance(configs, list):
-        raise ValueError(f"{path}: '{item_label}.configs' must be an array")
-    for config_index, config in enumerate(configs):
-        ensure_text_field(config, f"{item_label}.configs[{config_index}]", path)
+    for key in ("configs", "runway_configs"):
+        if key not in item:
+            continue
+        configs = item[key]
+        if not isinstance(configs, list):
+            raise ValueError(f"{path}: '{item_label}.{key}' must be an array")
+        for config_index, config in enumerate(configs):
+            ensure_text_field(config, f"{item_label}.{key}[{config_index}]", path)
 
 
 def _validate_line_sections(value: object, dataset_label: str, path: Path) -> None:

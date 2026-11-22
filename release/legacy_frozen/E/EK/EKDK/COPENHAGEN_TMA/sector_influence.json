@@ -1,0 +1,20 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "COPENHAGEN_TMA_04",
+      "airports": ["EKCH"]
+    },
+    {
+      "sector_id": "COPENHAGEN_TMA_22",
+      "airports": ["EKCH"]
+    },
+    {
+      "sector_id": "COPENHAGEN_TMA_12",
+      "airports": ["EKCH"]
+    },
+    {
+      "sector_id": "COPENHAGEN_TMA_30",
+      "airports": ["EKCH"]
+    }
+  ]
+}

@@ -33,7 +33,7 @@ is a harmless no-op in-game (it simply matches nothing and stays enabled).
 from __future__ import annotations
 
 try:
-    from . import airac_overrides
+    from . import airac_overrides, sector_legacy_projection
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -42,6 +42,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import sector_legacy_projection
     from content_files import content_files
 
 import argparse
@@ -358,7 +359,9 @@ def validate_options_schema(payload: dict[str, object], path: Path) -> None:
     if "transitions" in payload:
         _validate_transitions(payload["transitions"], "transitions", path)
     _validate_direction_overrides(payload, "runways", path)
+    _validate_direction_overrides(payload, "runway_ends", path)
     _validate_direction_overrides(payload, "configs", path)
+    _validate_direction_overrides(payload, "runway_configs", path)
 
 
 def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:
@@ -380,7 +383,7 @@ def validate_options_file(path: Path, root: Path = ROOT) -> dict[str, object]:
 
 def _reject_route_keys(document: dict, path: Path) -> None:
     payloads = [("", document)]
-    for axis in ("runways", "configs"):
+    for axis in ("runways", "runway_ends", "configs", "runway_configs"):
         for name, payload in (document.get(axis) or {}).items():
             payloads.append((f"{axis}.{name}.", payload))
     for prefix, payload in payloads:
@@ -569,8 +572,27 @@ def main() -> int:
         return 1
 
     if args.write:
+        source_airports = {
+            ap: str(entry["repo_path"])
+            for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
+        }
         manifest = airac_overrides.publish_raw_manifest(
-            ROOT, MANIFEST_PATH, manifest, requires=(ROUTE_KEYS_CAPABILITY,))
+            ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files", ROUTE_KEYS_CAPABILITY)
+        )
+        files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
+        for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
+            orig_repo = source_airports[ap]
+            raw_bytes = _canonical_repo_bytes((ROOT / orig_repo).read_bytes())
+            leg_bytes = sector_legacy_projection.project_procedure_options_default_bytes(
+                ROOT, orig_repo, files_index=files_index
+            )
+            if leg_bytes != raw_bytes:
+                dest = ROOT / ".voiceatc" / "defaults" / orig_repo
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(leg_bytes)
+                entry["repo_path"] = f".voiceatc/defaults/{orig_repo}"
+                entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
+                entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         print(f"Wrote {MANIFEST_PATH.relative_to(ROOT).as_posix()}")

@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["03", "21"],
+      "sectors": [
+        {
+          "sector_ids": "GE",
+          "frequency": "124.680"
+        }
+      ]
+    }
+  ]
+}

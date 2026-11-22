@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "AARHUS_TMA_WHOLE_ALL",
+      "runway_configs": ["EKAH_10R", "EKAH_28L", "EKAH_10L", "EKAH_28R"],
+      "sectors": [
+        {
+          "sector_ids": "AARHUS_TMA_ALL",
+          "frequency": "119.280"
+        }
+      ]
+    }
+  ]
+}

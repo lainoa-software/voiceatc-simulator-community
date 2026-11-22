@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["30", "12"],
+      "sectors": [
+        {
+          "sector_ids": "OMDBARR",
+          "frequency": "124.900"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "SKRYDSTRUP_TMA_WHOLE_ALL",
+      "runway_configs": [
+        "EKSP_10R",
+        "EKSP_28L",
+        "EKSP_10L",
+        "EKSP_28R",
+        "EKSB_14",
+        "EKSB_32"
+      ],
+      "sectors": [
+        {
+          "sector_ids": "SKRYDSTRUP_TMA_ALL",
+          "frequency": "124.105"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "ATME_RWY02",
+      "airports": ["LPPT", "LPCS"]
+    },
+    {
+      "sector_id": "ATMO_RWY02",
+      "airports": ["LPPT", "LPCS"]
+    },
+    {
+      "sector_id": "ARRLI_RWY02",
+      "airports": ["LPPT", "LPCS"]
+    },
+    {
+      "sector_id": "ATME_RWY20",
+      "airports": ["LPPT", "LPCS"]
+    },
+    {
+      "sector_id": "ATMO_RWY20",
+      "airports": ["LPPT", "LPCS"]
+    },
+    {
+      "sector_id": "ARRLI_RWY20",
+      "airports": ["LPPT", "LPCS"]
+    }
+  ]
+}

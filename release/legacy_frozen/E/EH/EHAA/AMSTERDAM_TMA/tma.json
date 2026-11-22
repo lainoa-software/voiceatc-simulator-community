@@ -1,0 +1,239 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "AMSTERDAM_TMA",
+    "name": "Amsterdam TMA"
+  },
+  "airports": ["EHAM"],
+  "units": [
+    {
+      "id": "AMS_APP",
+      "call_sign": "Schiphol Approach",
+      "services": ["approach_radar"],
+      "frequencies": ["121.205", "118.080", "119.055", "131.155"]
+    },
+    {
+      "id": "AMS_TWR",
+      "call_sign": "Schiphol Tower",
+      "services": ["tower"],
+      "airport": "EHAM",
+      "frequencies": ["119.230", "118.105", "118.280", "135.110"]
+    },
+    {
+      "id": "EHAA_CTR",
+      "call_sign": "Amsterdam Radar",
+      "services": ["center"],
+      "frequencies": [
+        "125.750",
+        "118.805",
+        "119.480",
+        "120.830",
+        "123.705",
+        "123.850",
+        "123.980",
+        "124.880",
+        "125.930",
+        "128.355",
+        "128.580",
+        "130.955",
+        "134.375"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "SOUTH",
+      "runways": {
+        "EHAM": ["ARR 18R 18C DEP 24 18L"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "code": "EHAM_APP",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    },
+    {
+      "id": "MIXED",
+      "runways": {
+        "EHAM": ["ARR 36R 06 DEP 18L 18C"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "code": "EHAM_APP",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    },
+    {
+      "id": "NORTH",
+      "runways": {
+        "EHAM": ["ARR 36C 36R DEP 36L 36C"]
+      },
+      "positions": [
+        {
+          "sector": "EHAMAPP",
+          "name": "ALL",
+          "code": "EHAM_APP",
+          "unit": "AMS_APP",
+          "frequency": "121.205",
+          "airports": ["EHAM"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {
+      "name": "EHAM_ARR_ARTIP",
+      "from": "EHAA_CTR",
+      "to": "AMS_APP",
+      "fix": "ARTIP",
+      "arrives": ["EHAM"],
+      "descent": "F100",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_ARR_SUGOL",
+      "from": "EHAA_CTR",
+      "to": "AMS_APP",
+      "fix": "SUGOL",
+      "arrives": ["EHAM"],
+      "descent": "F100",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_ARR_RIVER",
+      "from": "EHAA_CTR",
+      "to": "AMS_APP",
+      "fix": "RIVER",
+      "arrives": ["EHAM"],
+      "descent": "F100",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_BERGI",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "BERGI",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_IDRID",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "IDRID",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_VALKO",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "VALKO",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_VOLLA",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "VOLLA",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_ANDIK",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "ANDIK",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_BETUS",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "BETUS",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_ARNEM",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "ARNEM",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_EDUPO",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "EDUPO",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_RENDI",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "RENDI",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_WOODY",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "WOODY",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_KUDAD",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "KUDAD",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_LOPIK",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "LOPIK",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    },
+    {
+      "name": "EHAM_DEP_OGINA",
+      "from": "AMS_APP",
+      "to": "EHAA_CTR",
+      "fix": "OGINA",
+      "departs": ["EHAM"],
+      "climb": "F090",
+      "priority": 10
+    }
+  ]
+}

@@ -45,15 +45,16 @@ def validate_references(payload: dict, path: Path) -> None:
         airports = [airports]
     candidates = [path.with_name("runway_configs.json")]
     candidates += [path.parent / str(airport) / "runway_configs.json" for airport in airports]
-    if path.name.startswith("sector_"):
+    if path.name.startswith("sector_") or path.name == "tma_structure.json":
         candidates += list(path.parent.glob("*/runway_configs.json"))
     runway_documents = [json.loads(item.read_text(encoding="utf-8")) for item in dict.fromkeys(candidates) if item.is_file()]
     if not runway_documents or not any("airac_overrides" in item for item in [payload, *runway_documents]):
         return
+    is_sector = path.name.startswith("sector_") or path.name == "tma_structure.json"
     for tier in ("", *TIERS):
         ids = {str(row["id"]).upper() for item in runway_documents
                for row in resolve(item, tier).get("runway_configs", resolve(item, tier).get("runway_configurations", []))}
-        unknown = _configuration_refs(resolve(payload, tier), path.name.startswith("sector_")) - ids
+        unknown = _configuration_refs(resolve(payload, tier), is_sector) - ids
         if unknown:
             raise ValueError(f"{path}: {tier} references unknown runway configurations: {', '.join(sorted(unknown))}")
 
@@ -65,12 +66,20 @@ def _configuration_refs(value: object, sector: bool) -> set[str]:
             found.update(_configuration_refs(item, sector))
     elif isinstance(value, dict):
         for key, item in value.items():
-            if key == "configs" and isinstance(item, dict):
+            if key in ("configs", "runway_configs") and isinstance(item, dict):
                 found.update(str(identifier).upper() for identifier in item)
-            elif key == "configs" or (sector and key in {"runway_configs", "runway_configurations", "runways"}):
-                tokens = re.split(r"[,;|+\t ]+", item) if isinstance(item, str) else item
-                if isinstance(tokens, list):
-                    found.update(token.upper() for token in tokens if isinstance(token, str) and token)
+            elif key in ("configs", "runway_configs") or (
+                sector and key in {"runway_configs", "runway_configurations", "runways"}
+            ):
+                if isinstance(item, dict):
+                    for sub in item.values():
+                        tokens = re.split(r"[,;|+\t ]+", sub) if isinstance(sub, str) else sub
+                        if isinstance(tokens, list):
+                            found.update(token.upper() for token in tokens if isinstance(token, str) and token)
+                else:
+                    tokens = re.split(r"[,;|+\t ]+", item) if isinstance(item, str) else item
+                    if isinstance(tokens, list):
+                        found.update(token.upper() for token in tokens if isinstance(token, str) and token)
             found.update(_configuration_refs(item, sector))
     return found
 
@@ -83,11 +92,16 @@ def full_repo_paths(gated: dict) -> list[str]:
     return sorted(paths)
 
 
-def default_entry(root: Path, entry: dict) -> dict:
+def default_entry(root: Path, entry: dict, *, projected_bytes: dict[str, bytes] | None = None) -> dict:
     """Materialize legacy bytes separately, never overwrite a contributor's file."""
     result = deepcopy(entry)
     if "files" in result:
-        result["files"] = {kind: default_entry(root, item) for kind, item in result["files"].items()}
+        result["files"] = {
+            kind: default_entry(root, item, projected_bytes=projected_bytes)
+            for kind, item in result["files"].items()
+        }
+        return result
+    if projected_bytes is not None and result["repo_path"] in projected_bytes:
         return result
     source = root / result["repo_path"]
     payload = json.loads(source.read_text(encoding="utf-8"))
@@ -130,7 +144,12 @@ def publish_raw_manifest(root: Path, manifest_path: Path, manifest: dict, requir
     return {**manifest, "airports": {key: default_entry(root, entry) for key, entry in manifest["airports"].items()}}
 
 
-def project_sector_feed(root: Path, gated: dict) -> tuple[dict[str, str], dict[str, str]]:
+def project_sector_feed(
+    root: Path,
+    gated: dict,
+    *,
+    projected_bytes: dict[str, bytes] | None = None,
+) -> tuple[dict[str, str], dict[str, str]]:
     """Legacy sectors require scope-relative paths; full variants use gated aliases.
 
     ``tma.json`` is read only by builds that declare its capability, so the default
@@ -140,7 +159,7 @@ def project_sector_feed(root: Path, gated: dict) -> tuple[dict[str, str], dict[s
     full_sources: dict[str, str] = {}
 
     def project(entry: dict, sources: dict[str, str], *, default: bool) -> dict:
-        legacy = default_entry(root, entry)
+        legacy = default_entry(root, entry, projected_bytes=projected_bytes)
         if default:
             legacy["files"].pop("tma", None)
         for kind, item in legacy["files"].items():
@@ -158,7 +177,7 @@ def project_sector_feed(root: Path, gated: dict) -> tuple[dict[str, str], dict[s
             entry = deepcopy(entry)
             entry["requires"] = sorted(set(entry.get("requires", [])) | {CAPABILITY})
             for kind, item in entry["files"].items():
-                if kind == "tma":
+                if legacy["files"].get(kind) == item:
                     continue
                 source = item["repo_path"]
                 alias = "airac_variants/" + source

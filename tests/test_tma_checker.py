@@ -62,8 +62,11 @@ class TmaCheckerTests(unittest.TestCase):
         target = fir_dir / bundle_name
         shutil.copytree(source_bundle, target)
         shutil.copyfile(CASES_DIR / tma_fixture, target / "tma_structure.json")
+        coord_path = target / "tma_coordination.json"
         if coord_fixture is not None:
-            shutil.copyfile(CASES_DIR / coord_fixture, target / "tma_coordination.json")
+            shutil.copyfile(CASES_DIR / coord_fixture, coord_path)
+        elif coord_path.exists():
+            coord_path.unlink()
         return target
 
     def test_real_bundles_pass(self) -> None:

@@ -1,0 +1,24 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "LINZ_TMA_WHOLE_LOWL_08",
+      "runway_configs": ["LOWL_08"],
+      "sectors": [
+        {
+          "sector_ids": "LINZ_TMA_LOWL_08",
+          "frequency": "125.685"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "LINZ_TMA_WHOLE_LOWL_26",
+      "runway_configs": ["LOWL_26"],
+      "sectors": [
+        {
+          "sector_ids": "LINZ_TMA_LOWL_26",
+          "frequency": "125.685"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "EIF1",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "EIF2",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "EIF3",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA1",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA2",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA3",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA4",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA5",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA6",
+      "airports": ["EDFH", "EDDR"]
+    },
+    {
+      "sector_id": "PFA7",
+      "airports": ["EDFH", "EDDR"]
+    }
+  ]
+}

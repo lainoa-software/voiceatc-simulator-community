@@ -31,6 +31,7 @@ engine's (1), the same value constraints and procedure options use.
 from __future__ import annotations
 
 try:
+    from . import airac_overrides, sector_legacy_projection
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -38,6 +39,8 @@ except ImportError:  # run as a script, or loaded by file path (tests)
 
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import airac_overrides
+    import sector_legacy_projection
     from content_files import content_files
 
 import argparse
@@ -174,14 +177,11 @@ def _validate_positions(positions: object, path: Path) -> None:
             _validate_list(block["fixes"], f"{where}.fixes", path)
 
 
-def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
-    raw_bytes = path.read_bytes()
-    try:
-        payload = json.loads(raw_bytes.decode("utf-8"))
-    except Exception as exc:
-        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
-    if not isinstance(payload, dict):
-        raise ValueError(f"{path}: map display file must be a JSON object")
+def _validate_display_document(payload: dict[str, object], path: Path) -> str:
+    """Validate one resolved tier document against schema-1 map display rules.
+
+    Checks allowed keys, airport match, schema version, notes, layers, ILS length, lists, and positions.
+    """
     unknown = set(payload) - TOP_LEVEL_KEYS
     if unknown:
         raise ValueError(
@@ -210,6 +210,22 @@ def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
         _validate_positions(payload[POSITIONS_KEY], path)
     if not any(key in payload for key in (*SETTING_KEYS, POSITIONS_KEY)):
         raise ValueError(f"{path}: needs at least one of {', '.join((*SETTING_KEYS, POSITIONS_KEY))}")
+    return airport
+
+
+def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    raw_bytes = path.read_bytes()
+    try:
+        payload = json.loads(raw_bytes.decode("utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    if not isinstance(payload, dict):
+        raise ValueError(f"{path}: map display file must be a JSON object")
+    airport = ""
+    for tier, document in airac_overrides.documents(payload):
+        resolved_ap = _validate_display_document(document, path)
+        if not tier:
+            airport = resolved_ap
 
     canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {
@@ -360,6 +376,32 @@ def main() -> int:
         return 1
 
     if args.write:
+        source_airports = {
+            ap: str(entry["repo_path"])
+            for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
+        }
+        files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
+        has_variants = any(
+            "airac_overrides" in json.loads((ROOT / rp).read_text(encoding="utf-8"))
+            for rp in source_airports.values()
+        )
+        if has_variants:
+            manifest = airac_overrides.publish_raw_manifest(
+                ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files",)
+            )
+        for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
+            orig_repo = source_airports[ap]
+            raw_bytes = (ROOT / orig_repo).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            leg_bytes = sector_legacy_projection.project_map_display_default_bytes(
+                ROOT, orig_repo, files_index=files_index
+            )
+            if leg_bytes != raw_bytes:
+                dest = ROOT / ".voiceatc" / "defaults" / orig_repo
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(leg_bytes)
+                entry["repo_path"] = f".voiceatc/defaults/{orig_repo}"
+                entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
+                entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(
             json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"

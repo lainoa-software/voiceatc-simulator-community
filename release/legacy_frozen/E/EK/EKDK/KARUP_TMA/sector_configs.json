@@ -1,0 +1,14 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "KARUP_TMA_WHOLE_ALL",
+      "runway_configs": ["EKKA_09R", "EKKA_27L", "EKKA_09L", "EKKA_27R"],
+      "sectors": [
+        {
+          "sector_ids": "KARUP_TMA_ALL",
+          "frequency": "120.430"
+        }
+      ]
+    }
+  ]
+}

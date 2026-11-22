@@ -1,0 +1,34 @@
+{
+  "sector_configs": [
+    {
+      "sector_config_id": "1",
+      "runway_configs": ["NORTH", "SOUTH"],
+      "sectors": [
+        {
+          "sector_ids": ["IST"],
+          "frequency": "127.100"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "2N",
+      "runway_configs": ["NORTH"],
+      "sectors": [
+        {
+          "sector_ids": ["SAD NORTH", "SCF NORTH", "SED NORTH", "SWD NORTH"],
+          "frequency": "131.125"
+        }
+      ]
+    },
+    {
+      "sector_config_id": "2S",
+      "runway_configs": ["SOUTH"],
+      "sectors": [
+        {
+          "sector_ids": ["SAD SOUTH", "SCF SOUTH", "SED SOUTH", "SWD SOUTH"],
+          "frequency": "131.125"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "STG1",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "STG2",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "STG3",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "STG5",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "STG6",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "REU1",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    },
+    {
+      "sector_id": "REU2",
+      "airports": ["EDDS", "EDTL", "EDSB"]
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "EDDM_TMA",
+    "name": "Munich TMA"
+  },
+  "airports": ["EDDM"],
+  "units": [
+    {
+      "id": "DM_APP",
+      "call_sign": "Munich Approach",
+      "services": ["approach_radar"],
+      "frequencies": [
+        "128.030",
+        "118.830",
+        "120.780",
+        "123.905",
+        "126.455",
+        "127.955",
+        "132.305"
+      ]
+    },
+    {
+      "id": "DM_TWR",
+      "call_sign": "Munich Tower",
+      "services": ["tower"],
+      "airport": "EDDM",
+      "frequencies": ["118.705", "119.405", "120.505"]
+    },
+    {
+      "id": "EDMM_CTR",
+      "call_sign": "Munich Radar",
+      "services": ["center"],
+      "frequencies": [
+        "134.150",
+        "118.235",
+        "124.960",
+        "125.140",
+        "125.875",
+        "126.065",
+        "126.175",
+        "128.635",
+        "129.100",
+        "129.450",
+        "129.525",
+        "129.555",
+        "131.055",
+        "132.455",
+        "132.555",
+        "132.635",
+        "133.230",
+        "133.550",
+        "133.565",
+        "133.615",
+        "133.680",
+        "136.230",
+        "136.525"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "26",
+      "runways": {
+        "EDDM": ["26"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "code": "EDDM_APP",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "runways": {
+        "EDDM": ["08"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "code": "EDDM_APP",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "26S_LVP",
+      "runways": {
+        "EDDM": ["26S_LVP"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "code": "EDDM_APP",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    },
+    {
+      "id": "08S_LVP",
+      "runways": {
+        "EDDM": ["08S_LVP"]
+      },
+      "positions": [
+        {
+          "sector": "EDDMAPP",
+          "name": "ALL",
+          "code": "EDDM_APP",
+          "unit": "DM_APP",
+          "frequency": "128.030",
+          "airports": ["EDDM"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {
+      "name": "EDDM_ARR_ROKIL_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "ROKIL",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F140",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_ROKIL_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "ROKIL",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F160",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_LANDU_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "LANDU",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F170",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_LANDU_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "LANDU",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F110",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_GOMAX_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "GOMAX",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F170",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_GOMAX_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "GOMAX",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F110",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_OSTES_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "OSTES",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F170",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_OSTES_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "OSTES",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F110",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_MITNU_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "MITNU",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F170",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_MITNU_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "MITNU",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F110",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_BURAM_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "BURAM",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F130",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_BURAM_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "BURAM",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F150",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_BETOS_08",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "BETOS",
+      "arrives": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "descent": "F120",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_ARR_BETOS_26",
+      "from": "EDMM_CTR",
+      "to": "DM_APP",
+      "fix": "BETOS",
+      "arrives": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "descent": "F160",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_AKINI",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "AKINI",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_ANKER",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "ANKER",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_EVIVA",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "EVIVA",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_GIVMI",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "GIVMI",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_INPUD",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "INPUD",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_MIQ",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "MIQ",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_ALG",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "ALG",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_BIBAG",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "BIBAG",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_KIRDI",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "KIRDI",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_MERSI",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "MERSI",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_OLASO",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "OLASO",
+      "departs": ["EDDM"],
+      "climb": "F190",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_RIDAR_08",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "RIDAR",
+      "departs": ["EDDM"],
+      "runways": ["08L", "08R"],
+      "climb": "F180",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_RIDAR_26",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "RIDAR",
+      "departs": ["EDDM"],
+      "runways": ["26L", "26R"],
+      "climb": "F140",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_OBAXA",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "OBAXA",
+      "departs": ["EDDM"],
+      "climb": "F150",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_ROTAX",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "ROTAX",
+      "departs": ["EDDM"],
+      "climb": "F150",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_TULSI",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "TULSI",
+      "departs": ["EDDM"],
+      "climb": "F150",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_TURBU",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "TURBU",
+      "departs": ["EDDM"],
+      "climb": "F150",
+      "priority": 10
+    },
+    {
+      "name": "EDDM_DEP_VAVOR",
+      "from": "DM_APP",
+      "to": "EDMM_CTR",
+      "fix": "VAVOR",
+      "departs": ["EDDM"],
+      "climb": "F150",
+      "priority": 10
+    }
+  ]
+}

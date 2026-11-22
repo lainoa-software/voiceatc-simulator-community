@@ -1,0 +1,5 @@
+{
+  "airports": ["EFHK"],
+  "runway_config": ["22 PARA", "04 PARA"],
+  "line_sections": []
+}

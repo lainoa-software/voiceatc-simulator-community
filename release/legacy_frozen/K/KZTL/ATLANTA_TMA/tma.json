@@ -1,0 +1,335 @@
+{
+  "schema": 1,
+  "tma": {
+    "id": "ATLANTA_TMA",
+    "name": "Atlanta TMA"
+  },
+  "airports": ["KATL", "KPDK"],
+  "units": [
+    {
+      "id": "ATL_APP",
+      "call_sign": "Atlanta Approach",
+      "services": ["approach_radar"],
+      "frequencies": [
+        "128.000",
+        "134.725",
+        "124.600",
+        "127.250",
+        "135.375",
+        "126.975"
+      ]
+    },
+    {
+      "id": "ATL_TWR",
+      "call_sign": "Atlanta Tower",
+      "services": ["tower"],
+      "airport": "KATL",
+      "frequencies": ["119.100", "119.300", "119.500", "123.850", "125.325"]
+    },
+    {
+      "id": "PDK_TWR",
+      "call_sign": "Peachtree Tower",
+      "services": ["tower"],
+      "airport": "KPDK",
+      "frequencies": ["120.900", "127.200"]
+    },
+    {
+      "id": "ATL_CTR",
+      "call_sign": "Atlanta Center",
+      "services": ["center"],
+      "frequencies": [
+        "121.350",
+        "118.550",
+        "119.375",
+        "120.425",
+        "120.450",
+        "120.550",
+        "120.725",
+        "123.700",
+        "123.725",
+        "123.950",
+        "124.250",
+        "124.325",
+        "124.375",
+        "124.425",
+        "124.500",
+        "124.875",
+        "125.025",
+        "125.150",
+        "125.575",
+        "125.625",
+        "125.875",
+        "125.925",
+        "126.425",
+        "126.675",
+        "126.775",
+        "126.825",
+        "127.050",
+        "127.125",
+        "127.300",
+        "127.500",
+        "127.550",
+        "127.850",
+        "127.950",
+        "128.025",
+        "128.100",
+        "128.725",
+        "128.800",
+        "132.050",
+        "132.250",
+        "132.625",
+        "132.675",
+        "132.975",
+        "133.100",
+        "133.150",
+        "133.175",
+        "133.600",
+        "134.075",
+        "134.200",
+        "134.500",
+        "134.550",
+        "134.600",
+        "134.800",
+        "134.950",
+        "135.000",
+        "135.350"
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "id": "1",
+      "runways": {
+        "KATL": ["WEST DUAL", "EAST DUAL", "WEST TRIPS", "EAST TRIPS"]
+      },
+      "positions": [
+        {
+          "sector": "ATL",
+          "name": "ALL",
+          "code": "KATL_APP",
+          "unit": "ATL_APP",
+          "frequency": "128.000",
+          "airports": ["KATL", "KPDK"]
+        }
+      ]
+    }
+  ],
+  "agreements": [
+    {
+      "name": "KATL_ARR_CHPPR",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "CHPPR",
+      "arrives": ["KATL"],
+      "descent": "A130",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_GLAVN",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "GLAVN",
+      "arrives": ["KATL"],
+      "descent": "A120",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_HOBTT",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "HOBTT",
+      "arrives": ["KATL"],
+      "descent": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_JJEDI",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "JJEDI",
+      "arrives": ["KATL"],
+      "descent": "A120",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_ONDRE",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "ONDRE",
+      "arrives": ["KATL"],
+      "descent": "A130",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_OZZZI",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "OZZZI",
+      "arrives": ["KATL"],
+      "descent": "A120",
+      "priority": 10
+    },
+    {
+      "name": "KATL_ARR_GNDLF",
+      "from": "ATL_CTR",
+      "to": "ATL_APP",
+      "fix": "GNDLF",
+      "arrives": ["KATL"],
+      "descent": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_BANNG",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "BANNG",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_CUTTN",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "CUTTN",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_HAALO",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "HAALO",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_JACCC",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "JACCC",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_KAJIN",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "KAJIN",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_NASSA",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "NASSA",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_PADGT",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "PADGT",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_PENCL",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "PENCL",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_PHIIL",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "PHIIL",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_PLMMR",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "PLMMR",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_POUNC",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "POUNC",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_SMKEY",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "SMKEY",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_SMLTZ",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "SMLTZ",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_VARNM",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "VARNM",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_VRSTY",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "VRSTY",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_GAIRY",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "GAIRY",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    },
+    {
+      "name": "KATL_DEP_ZELAN",
+      "from": "ATL_APP",
+      "to": "ATL_CTR",
+      "fix": "ZELAN",
+      "departs": ["KATL"],
+      "climb": "A140",
+      "priority": 10
+    }
+  ]
+}

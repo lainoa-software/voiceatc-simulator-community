@@ -1,0 +1,72 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "VABF_U1_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_U2_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_U3_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_U4_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_U5N_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_U5V_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_L1_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_L2_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_L3_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_L4_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_O3_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_O4_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_O5_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_O6_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_AH_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABF_NP_CTR",
+      "airports": ["VABB"]
+    },
+    {
+      "sector_id": "VABB_APP",
+      "airports": ["VABB"]
+    }
+  ]
+}

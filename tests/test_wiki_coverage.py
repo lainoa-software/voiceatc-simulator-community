@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.wiki_coverage import coverage_findings
+from tools.wiki_coverage import WIKI_FILE_KINDS, coverage_findings
 
 BLOB = "https://github.com/lainoa-software/voiceatc-simulator-community/blob/main"
 
@@ -73,6 +73,12 @@ class WikiCoverageTests(unittest.TestCase):
         self.page("Test-Locally.md", "`mva.json`")
         self.page("_Sidebar.md", "`mva.json`")
         self.assertEqual(["mva.json: no wiki guide page names it"], self.findings({"mva.json"}))
+
+    def test_wiki_file_kinds_track_schema2_additions_and_removals(self) -> None:
+        for added in ("tma_structure.json", "tma_coordination.json", "acc_structure.json", "acc_coordination.json"):
+            self.assertIn(added, WIKI_FILE_KINDS)
+        for removed in ("sector_configs.json", "sector_influence.json", "tma.json"):
+            self.assertNotIn(removed, WIKI_FILE_KINDS)
 
 
 if __name__ == "__main__":

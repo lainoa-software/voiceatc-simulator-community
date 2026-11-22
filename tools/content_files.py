@@ -30,6 +30,8 @@ IGNORED_DIRS = frozenset(
         "logs",
         "Backups",
         "Releases",
+        "preserved",
+        "release",
     }
 )
 

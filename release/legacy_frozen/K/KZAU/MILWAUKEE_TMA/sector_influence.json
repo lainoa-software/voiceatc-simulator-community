@@ -1,0 +1,16 @@
+{
+  "sector_influences": [
+    {
+      "sector_id": "MKE_E_APP",
+      "airports": ["KMKE"]
+    },
+    {
+      "sector_id": "MKE_W_APP",
+      "airports": ["KMKE"]
+    },
+    {
+      "sector_id": "MKE_APP",
+      "airports": ["KMKE"]
+    }
+  ]
+}
