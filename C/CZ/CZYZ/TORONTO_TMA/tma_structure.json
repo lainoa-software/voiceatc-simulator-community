@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "CYYZ"
+      ],
+      "id": "TORONTO_APP",
+      "positions": [
+        {
+          "code": "CYYZ_APP",
+          "frequency": "124.475",
+          "name": "ALL",
+          "sector": "CYYZ_APP",
+          "unit": "CYYZ_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Toronto approach",
+      "frequencies": [
+        "124.475"
+      ],
+      "id": "CYYZ_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

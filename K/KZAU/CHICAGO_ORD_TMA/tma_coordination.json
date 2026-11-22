@@ -1,0 +1,70 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "KORD"
+      ],
+      "descent": "A120",
+      "fix": [
+        "BENKY"
+      ],
+      "from": "KZAU_CTR",
+      "name": "KORD_ARR_BENKY",
+      "priority": 10,
+      "to": "KORD_APP"
+    },
+    {
+      "arrives": [
+        "KORD"
+      ],
+      "descent": "A120",
+      "fix": [
+        "SHAIN"
+      ],
+      "from": "KZAU_CTR",
+      "name": "KORD_ARR_SHAIN",
+      "priority": 10,
+      "to": "KORD_APP"
+    },
+    {
+      "arrives": [
+        "KORD"
+      ],
+      "descent": "A110",
+      "fix": [
+        "TRTLL"
+      ],
+      "from": "KZAU_CTR",
+      "name": "KORD_ARR_TRTLL",
+      "priority": 10,
+      "to": "KORD_APP"
+    },
+    {
+      "arrives": [
+        "KORD"
+      ],
+      "descent": "A110",
+      "fix": [
+        "FYTTE"
+      ],
+      "from": "KZAU_CTR",
+      "name": "KORD_ARR_FYTTE",
+      "priority": 10,
+      "to": "KORD_APP"
+    },
+    {
+      "arrives": [
+        "KORD"
+      ],
+      "descent": "A110",
+      "fix": [
+        "KRENA"
+      ],
+      "from": "KZAU_CTR",
+      "name": "KORD_ARR_KRENA",
+      "priority": 10,
+      "to": "KORD_APP"
+    }
+  ],
+  "schema": 2
+}

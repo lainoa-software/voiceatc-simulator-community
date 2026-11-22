@@ -1,0 +1,57 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LOWI"
+      ],
+      "id": "INNSBRUCK_TMA_WHOLE_LOWI_08",
+      "positions": [
+        {
+          "code": "LOWI_APP",
+          "frequency": "128.975",
+          "name": "ALL",
+          "sector": "INNSBRUCK_TMA_LOWI_08",
+          "unit": "LOWI_APP"
+        }
+      ],
+      "runways": {
+        "LOWI": [
+          "LOWI_08"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOWI"
+      ],
+      "id": "INNSBRUCK_TMA_WHOLE_LOWI_26",
+      "positions": [
+        {
+          "code": "LOWI_APP",
+          "frequency": "128.975",
+          "name": "ALL",
+          "sector": "INNSBRUCK_TMA_LOWI_26",
+          "unit": "LOWI_APP"
+        }
+      ],
+      "runways": {
+        "LOWI": [
+          "LOWI_26"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Innsbruck approach",
+      "frequencies": [
+        "128.975"
+      ],
+      "id": "LOWI_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

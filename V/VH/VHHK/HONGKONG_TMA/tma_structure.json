@@ -1,0 +1,44 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "VHHH"
+      ],
+      "id": "HONGKONG",
+      "positions": [
+        {
+          "code": "VHHH_APP",
+          "frequency": "119.100",
+          "name": "ALL",
+          "sector": "VHHH_APP",
+          "unit": "VHHH_APP"
+        }
+      ],
+      "runways": {
+        "VHHH": [
+          "07",
+          "25",
+          "07_SEG",
+          "25_SEG",
+          "07L_ONLY",
+          "07C_ONLY",
+          "25R_ONLY",
+          "25C_ONLY"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Hong Kong approach",
+      "frequencies": [
+        "119.100"
+      ],
+      "id": "VHHH_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

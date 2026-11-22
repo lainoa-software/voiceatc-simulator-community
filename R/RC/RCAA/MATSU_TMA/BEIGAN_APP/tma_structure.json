@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCFG"
+      ],
+      "id": "BEIGAN",
+      "positions": [
+        {
+          "code": "RCFG_APP",
+          "frequency": "121.000",
+          "name": "ALL",
+          "sector": "RCFG_APP",
+          "unit": "RCFG_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Matsu approach",
+      "frequencies": [
+        "121.000"
+      ],
+      "id": "RCFG_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "WEST_FLOW_DUAL",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "WEST_FLOW_DUAL"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "WEST_FLOW_TRIPLE",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "WEST_FLOW_TRIPLE"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "WEST_FLOW_NOISE_ABATEMENT",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "WEST_FLOW_NOISE_ABATEMENT"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "EAST_FLOW_DUAL_1",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "EAST_FLOW_DUAL_1"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "EAST_FLOW_DUAL_2",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "EAST_FLOW_DUAL_2"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "EAST_FLOW_TRIPLE_1",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "EAST_FLOW_TRIPLE_1"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "EAST_FLOW_TRIPLE_2",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "EAST_FLOW_TRIPLE_2"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "EAST_FLOW_NOISE_ABATEMENT",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "EAST_FLOW_NOISE_ABATEMENT"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "4S",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "4S"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KORD"
+      ],
+      "id": "22S",
+      "positions": [
+        {
+          "code": "KORD_APP",
+          "frequency": "119.000",
+          "name": "ALL",
+          "sector": "KORDAPP",
+          "unit": "KORD_APP"
+        }
+      ],
+      "runways": {
+        "KORD": [
+          "22S"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Chicago Approach",
+      "frequencies": [
+        "119.000",
+        "124.350",
+        "125.700",
+        "133.625"
+      ],
+      "id": "KORD_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "KORD",
+      "call_sign": "O'Hare Tower",
+      "frequencies": [
+        "120.750",
+        "119.625",
+        "121.150",
+        "126.800",
+        "126.900",
+        "128.050",
+        "128.150",
+        "132.700",
+        "133.000"
+      ],
+      "id": "KORD_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RPVB"
+      ],
+      "id": "BACOLOD",
+      "positions": [
+        {
+          "code": "RPVB_APP",
+          "frequency": "121.000",
+          "name": "ALL",
+          "sector": "RPVB_APP",
+          "unit": "RPVB_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Silay approach",
+      "frequencies": [
+        "121.000"
+      ],
+      "id": "RPVB_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

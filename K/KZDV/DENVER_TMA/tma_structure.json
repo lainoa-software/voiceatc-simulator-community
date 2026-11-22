@@ -1,0 +1,95 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KDEN"
+      ],
+      "id": "NORTH_FLOW",
+      "positions": [
+        {
+          "code": "KDEN_APP",
+          "frequency": "126.550",
+          "name": "ALL",
+          "sector": "KDENAPP",
+          "unit": "KDEN_APP"
+        }
+      ],
+      "runways": {
+        "KDEN": [
+          "NORTH_FLOW"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KDEN"
+      ],
+      "id": "SOUTH_FLOW",
+      "positions": [
+        {
+          "code": "KDEN_APP",
+          "frequency": "126.550",
+          "name": "ALL",
+          "sector": "KDENAPP",
+          "unit": "KDEN_APP"
+        }
+      ],
+      "runways": {
+        "KDEN": [
+          "SOUTH_FLOW"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KDEN"
+      ],
+      "id": "NIGHT_NORTH",
+      "positions": [
+        {
+          "code": "KDEN_APP",
+          "frequency": "126.550",
+          "name": "ALL",
+          "sector": "KDENAPP",
+          "unit": "KDEN_APP"
+        }
+      ],
+      "runways": {
+        "KDEN": [
+          "NIGHT_NORTH"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Denver Approach",
+      "frequencies": [
+        "126.550",
+        "119.300",
+        "120.350",
+        "120.800",
+        "124.950"
+      ],
+      "id": "KDEN_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "KDEN",
+      "call_sign": "Denver Tower",
+      "frequencies": [
+        "124.300",
+        "128.750",
+        "132.350",
+        "135.300"
+      ],
+      "id": "KDEN_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

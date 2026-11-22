@@ -1,0 +1,55 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LSZH"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "LSZH_APP",
+          "frequency": "135.230",
+          "name": "ALL",
+          "sector": "LSZHAPP",
+          "unit": "LSZH_APP"
+        }
+      ],
+      "runways": {
+        "LSZH": [
+          "DAY",
+          "MORNING",
+          "EVENING"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Zurich Arrival",
+      "frequencies": [
+        "135.230",
+        "120.755",
+        "125.330",
+        "130.560"
+      ],
+      "id": "LSZH_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "LSZH",
+      "call_sign": "Zurich Tower",
+      "frequencies": [
+        "118.100",
+        "119.700",
+        "120.230"
+      ],
+      "id": "LSZH_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

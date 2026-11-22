@@ -1,0 +1,133 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KSEA",
+        "KBFI"
+      ],
+      "id": "1SOUTH_DAY",
+      "positions": [
+        {
+          "code": "KSEA_APP",
+          "frequency": "125.600",
+          "name": "ALL",
+          "sector": "KSEAAPP",
+          "unit": "KSEA_APP"
+        }
+      ],
+      "runways": {
+        "KSEA": [
+          "SOUTH_DAY"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KSEA",
+        "KBFI"
+      ],
+      "id": "1SOUTH_NIGHT",
+      "positions": [
+        {
+          "code": "KSEA_APP",
+          "frequency": "125.600",
+          "name": "ALL",
+          "sector": "KSEAAPP",
+          "unit": "KSEA_APP"
+        }
+      ],
+      "runways": {
+        "KSEA": [
+          "SOUTH_NIGHT"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KSEA",
+        "KBFI"
+      ],
+      "id": "1NORTH_DAY",
+      "positions": [
+        {
+          "code": "KSEA_APP",
+          "frequency": "125.600",
+          "name": "ALL",
+          "sector": "KSEAAPP",
+          "unit": "KSEA_APP"
+        }
+      ],
+      "runways": {
+        "KSEA": [
+          "NORTH_DAY"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KSEA",
+        "KBFI"
+      ],
+      "id": "1NORTH_NIGHT",
+      "positions": [
+        {
+          "code": "KSEA_APP",
+          "frequency": "125.600",
+          "name": "ALL",
+          "sector": "KSEAAPP",
+          "unit": "KSEA_APP"
+        }
+      ],
+      "runways": {
+        "KSEA": [
+          "NORTH_NIGHT"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Seattle Approach",
+      "frequencies": [
+        "125.600",
+        "119.200",
+        "120.100",
+        "120.400",
+        "123.900",
+        "125.900",
+        "126.500",
+        "128.500",
+        "133.650"
+      ],
+      "id": "KSEA_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "KSEA",
+      "call_sign": "Seattle Tower",
+      "frequencies": [
+        "119.900",
+        "120.950"
+      ],
+      "id": "KSEA_TWR",
+      "services": [
+        "tower"
+      ]
+    },
+    {
+      "airport": "KBFI",
+      "call_sign": "Boeing Tower",
+      "frequencies": [
+        "118.300",
+        "120.600"
+      ],
+      "id": "KBFI_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

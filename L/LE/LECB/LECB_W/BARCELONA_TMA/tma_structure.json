@@ -1,0 +1,209 @@
+{
+  "configurations": [
+    {
+      "airports": {
+        "LEBL": "WRL",
+        "LEDA": "31",
+        "LEGE": "SOUTH",
+        "LERS": "WEST"
+      },
+      "id": "WEST",
+      "name": "West"
+    },
+    {
+      "airports": {
+        "LEBL": "ELR",
+        "LEDA": "13",
+        "LEGE": "NORTH",
+        "LERS": "EAST"
+      },
+      "id": "EAST",
+      "name": "East"
+    },
+    {
+      "airports": {
+        "LEBL": "ENR",
+        "LEDA": "13",
+        "LEGE": "NORTH",
+        "LERS": "EAST"
+      },
+      "id": "NIGHT",
+      "name": "Night"
+    },
+    {
+      "airports": {
+        "LEBL": "WLL",
+        "LEDA": "31",
+        "LEGE": "SOUTH",
+        "LERS": "WEST"
+      },
+      "id": "NIGHT WEST",
+      "name": "Night west"
+    }
+  ],
+  "layouts": [
+    {
+      "airports": [
+        "LEBL",
+        "LEGE",
+        "LERS",
+        "LEDA"
+      ],
+      "id": "2CO",
+      "on_duty": [
+        {
+          "code": "LEBL_TWR",
+          "frequency": "118.105",
+          "name": "TOWER",
+          "sectors": [
+            "LEBLATZ"
+          ],
+          "unit": "LEBL_TWR"
+        },
+        {
+          "code": "LECB_BKW_CTR",
+          "frequency": "134.680",
+          "name": "BKW",
+          "sectors": [
+            "LECBBKW"
+          ],
+          "unit": "LECB_CTR"
+        },
+        {
+          "code": "LECB_BKE_CTR",
+          "frequency": "135.355",
+          "name": "BKE",
+          "sectors": [
+            "LECBBKE"
+          ],
+          "unit": "LECB_CTR"
+        },
+        {
+          "code": "LECB_DDX_CTR",
+          "frequency": "132.580",
+          "name": "DDX",
+          "sectors": [
+            "LEBLDDX"
+          ],
+          "unit": "LECB_CTR"
+        },
+        {
+          "code": "LEGE_APP",
+          "frequency": "120.905",
+          "name": "TOWER",
+          "sectors": [
+            "LEGEAPP"
+          ],
+          "unit": "LEGE_TWR"
+        },
+        {
+          "code": "LERS_APP",
+          "frequency": "128.880",
+          "name": "TOWER",
+          "sectors": [
+            "LERSAPP"
+          ],
+          "unit": "LERS_TWR"
+        },
+        {
+          "code": "LEDA_TWR",
+          "frequency": "121.330",
+          "name": "TOWER",
+          "sectors": [
+            "LEDACTR"
+          ],
+          "unit": "LEDA_TWR"
+        }
+      ],
+      "positions": [
+        {
+          "code": "LEBL_CORE_APP",
+          "frequency": "131.125",
+          "name": "FINAL + T1 + T2 + T3 + T4",
+          "sector": "LEBLCORE",
+          "unit": "LEBL_APP",
+          "zones": [
+            "LEBLCTR"
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Barcelona Approach",
+      "frequencies": [
+        "131.125"
+      ],
+      "id": "LEBL_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "LEBL",
+      "call_sign": "Barcelona Tower",
+      "frequencies": [
+        "118.105",
+        "118.330"
+      ],
+      "id": "LEBL_TWR",
+      "services": [
+        "tower"
+      ]
+    },
+    {
+      "airport": "LEGE",
+      "call_sign": "Girona Tower",
+      "frequencies": [
+        "120.905"
+      ],
+      "id": "LEGE_TWR",
+      "services": [
+        "tower",
+        "approach_conventional"
+      ]
+    },
+    {
+      "airport": "LERS",
+      "call_sign": "Reus Tower",
+      "frequencies": [
+        "128.880"
+      ],
+      "id": "LERS_TWR",
+      "services": [
+        "tower",
+        "approach_conventional"
+      ]
+    },
+    {
+      "airport": "LEDA",
+      "call_sign": "Lleida Tower",
+      "frequencies": [
+        "121.330"
+      ],
+      "id": "LEDA_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "airport": "LEBL",
+      "kind": "CTR",
+      "sector": "LEBLCTR"
+    },
+    {
+      "airport": "LEBL",
+      "kind": "ATZ",
+      "sector": "LEBLATZ"
+    },
+    {
+      "airport": "LEDA",
+      "kind": "CTR",
+      "sector": "LEDACTR"
+    }
+  ]
+}

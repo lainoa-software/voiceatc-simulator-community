@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKJJ"
+      ],
+      "id": "GWANGJU",
+      "positions": [
+        {
+          "code": "RKJJ_APP",
+          "frequency": "130.000",
+          "name": "ALL",
+          "sector": "RKJJ_APP",
+          "unit": "RKJJ_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Gwangju approach",
+      "frequencies": [
+        "130.000"
+      ],
+      "id": "RKJJ_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LTBA",
+        "LTFJ",
+        "LTFM"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "LTBA_APP",
+          "frequency": "127.100",
+          "name": "ALL",
+          "sector": "IST",
+          "unit": "LTBA_APP"
+        }
+      ],
+      "runways": {
+        "LTBA": [
+          "NORTH",
+          "SOUTH"
+        ],
+        "LTFJ": [
+          "NORTH",
+          "SOUTH"
+        ],
+        "LTFM": [
+          "NORTH",
+          "SOUTH"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LTBA",
+        "LTFJ",
+        "LTFM"
+      ],
+      "id": "2N",
+      "positions": [
+        {
+          "code": "LTBA_APP",
+          "frequency": "131.125",
+          "name": "ALL",
+          "sector": "SAD_NORTH_SCF_NORTH_SED_NORTH_SWD_NORTH",
+          "unit": "LTBA_APP"
+        }
+      ],
+      "runways": {
+        "LTBA": [
+          "NORTH"
+        ],
+        "LTFJ": [
+          "NORTH"
+        ],
+        "LTFM": [
+          "NORTH"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LTBA",
+        "LTFJ",
+        "LTFM"
+      ],
+      "id": "2S",
+      "positions": [
+        {
+          "code": "LTBA_APP",
+          "frequency": "131.125",
+          "name": "ALL",
+          "sector": "SAD_SOUTH_SCF_SOUTH_SED_SOUTH_SWD_SOUTH",
+          "unit": "LTBA_APP"
+        }
+      ],
+      "runways": {
+        "LTBA": [
+          "SOUTH"
+        ],
+        "LTFJ": [
+          "SOUTH"
+        ],
+        "LTFM": [
+          "SOUTH"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Istanbul approach",
+      "frequencies": [
+        "127.100",
+        "131.125"
+      ],
+      "id": "LTBA_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

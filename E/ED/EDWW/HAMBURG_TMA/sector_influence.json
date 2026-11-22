@@ -1,8 +1,0 @@
-{
-  "sector_influences": [
-    {
-      "sector_id": "HAM",
-      "airports": ["EDDH", "EDHI", "EDHL"]
-    }
-  ]
-}

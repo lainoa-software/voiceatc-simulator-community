@@ -1,0 +1,57 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LOWG"
+      ],
+      "id": "GRAZ_TMA_WHOLE_LOWG_16C",
+      "positions": [
+        {
+          "code": "LOWG_APP",
+          "frequency": "119.300",
+          "name": "ALL",
+          "sector": "GRAZ_TMA_LOWG_16C",
+          "unit": "LOWG_APP"
+        }
+      ],
+      "runways": {
+        "LOWG": [
+          "LOWG_16C"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOWG"
+      ],
+      "id": "GRAZ_TMA_WHOLE_LOWG_34C",
+      "positions": [
+        {
+          "code": "LOWG_APP",
+          "frequency": "119.300",
+          "name": "ALL",
+          "sector": "GRAZ_TMA_LOWG_34C",
+          "unit": "LOWG_APP"
+        }
+      ],
+      "runways": {
+        "LOWG": [
+          "LOWG_34C"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Graz approach",
+      "frequencies": [
+        "119.300"
+      ],
+      "id": "LOWG_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

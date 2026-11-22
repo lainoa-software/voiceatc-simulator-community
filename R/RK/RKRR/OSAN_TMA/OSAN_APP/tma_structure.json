@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKSO"
+      ],
+      "id": "OSAN",
+      "positions": [
+        {
+          "code": "RKSO_APP",
+          "frequency": "127.900",
+          "name": "ALL",
+          "sector": "RKSO_APP",
+          "unit": "RKSO_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Osan approach",
+      "frequencies": [
+        "127.900"
+      ],
+      "id": "RKSO_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

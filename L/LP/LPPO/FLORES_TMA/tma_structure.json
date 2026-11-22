@@ -1,0 +1,47 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LPCR",
+        "LPFL"
+      ],
+      "id": "FLORES_TMA_SPLIT",
+      "positions": [
+        {
+          "code": "LPCR_APP",
+          "frequency": "118.800",
+          "name": "ALL",
+          "sector": "FLA",
+          "unit": "LPCR_APP"
+        }
+      ],
+      "runways": {
+        "LPCR": [
+          "LPFL_18",
+          "LPFL_36",
+          "LPCR_11",
+          "LPCR_29"
+        ],
+        "LPFL": [
+          "LPFL_18",
+          "LPFL_36",
+          "LPCR_11",
+          "LPCR_29"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Corvo approach",
+      "frequencies": [
+        "118.800"
+      ],
+      "id": "LPCR_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

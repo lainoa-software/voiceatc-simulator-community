@@ -1,0 +1,123 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KDFW"
+      ],
+      "id": "SOUTH_EAST",
+      "positions": [
+        {
+          "code": "KDFW_APP",
+          "frequency": "125.025",
+          "name": "ALL",
+          "sector": "KDFWAPP",
+          "unit": "KDFW_APP"
+        }
+      ],
+      "runways": {
+        "KDFW": [
+          "SOUTH_EAST"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KDFW"
+      ],
+      "id": "SOUTH_WEST",
+      "positions": [
+        {
+          "code": "KDFW_APP",
+          "frequency": "125.025",
+          "name": "ALL",
+          "sector": "KDFWAPP",
+          "unit": "KDFW_APP"
+        }
+      ],
+      "runways": {
+        "KDFW": [
+          "SOUTH_WEST"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KDFW"
+      ],
+      "id": "NORTH_EAST",
+      "positions": [
+        {
+          "code": "KDFW_APP",
+          "frequency": "125.025",
+          "name": "ALL",
+          "sector": "KDFWAPP",
+          "unit": "KDFW_APP"
+        }
+      ],
+      "runways": {
+        "KDFW": [
+          "NORTH_EAST"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KDFW"
+      ],
+      "id": "NORTH_WEST",
+      "positions": [
+        {
+          "code": "KDFW_APP",
+          "frequency": "125.025",
+          "name": "ALL",
+          "sector": "KDFWAPP",
+          "unit": "KDFW_APP"
+        }
+      ],
+      "runways": {
+        "KDFW": [
+          "NORTH_WEST"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Lone Star Approach",
+      "frequencies": [
+        "125.025",
+        "118.100",
+        "118.425",
+        "119.400",
+        "119.875",
+        "124.300",
+        "125.200",
+        "127.075",
+        "133.150",
+        "133.525",
+        "133.625",
+        "135.500",
+        "135.975"
+      ],
+      "id": "KDFW_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "KDFW",
+      "call_sign": "DFW Tower",
+      "frequencies": [
+        "124.150",
+        "126.550",
+        "127.500",
+        "134.900"
+      ],
+      "id": "KDFW_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

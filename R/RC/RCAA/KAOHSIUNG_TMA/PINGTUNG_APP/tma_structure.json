@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCDC"
+      ],
+      "id": "PINGTUNG",
+      "positions": [
+        {
+          "code": "RCDC_APP",
+          "frequency": "124.700",
+          "name": "ALL",
+          "sector": "RCDC_APP",
+          "unit": "RCDC_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Pingtung approach",
+      "frequencies": [
+        "124.700"
+      ],
+      "id": "RCDC_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

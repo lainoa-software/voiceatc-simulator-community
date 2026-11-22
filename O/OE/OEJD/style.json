@@ -1,34 +1,51 @@
 {
-  "symbol_size": 0.7,
-  "traildot_size": 0.15,
-  "symbol_line_width": 1,
-  "forecast_symbol": "diamond",
-  "incoming_symbol": "diamond_crossed",
-  "assumed_symbol": "diamond_crossed",
-  "of_interest_symbol": "diamond",
   "alien_symbol": "uncontrolled",
-  "released_symbol": "uncontrolled",
-  "traildot_symbol": "history",
+  "assumed_symbol": "diamond_crossed",
   "defined_symbols": {
-    "diamond_crossed": {
-      "type": "wireframe",
-      "draw": "M 0 6 L 6 0 L 0 -6 L -6 0 L 0 6 M -6 0 L 6 0 M 0 -6 L 0 6",
-      "connection_points": [[0, 0]]
-    },
     "diamond": {
-      "type": "wireframe",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 0 6 L 6 0 L 0 -6 L -6 0 L 0 6",
-      "connection_points": [[0, 0]]
+      "type": "wireframe"
     },
-    "uncontrolled": {
-      "type": "wireframe",
-      "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
-      "connection_points": [[0, 0]]
+    "diamond_crossed": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M 0 6 L 6 0 L 0 -6 L -6 0 L 0 6 M -6 0 L 6 0 M 0 -6 L 0 6",
+      "type": "wireframe"
     },
     "history": {
-      "type": "filled",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -1 -2 L 1 -2 L 2 -1 L 2 1 L 1 2 L -1 2 L -2 1 L -2 -1 L -1 -2",
-      "connection_points": [[0, 0]]
+      "type": "filled"
+    },
+    "uncontrolled": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
+      "type": "wireframe"
     }
-  }
+  },
+  "forecast_symbol": "diamond",
+  "incoming_symbol": "diamond_crossed",
+  "of_interest_symbol": "diamond",
+  "released_symbol": "uncontrolled",
+  "traildot_symbol": "history"
 }

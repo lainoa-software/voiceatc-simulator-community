@@ -1,0 +1,43 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EDDN",
+        "EDQM"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "EDDN_APP",
+          "frequency": "129.525",
+          "name": "ALL",
+          "sector": "FRK1_FRK2",
+          "unit": "EDDN_APP"
+        }
+      ],
+      "runways": {
+        "EDDN": [
+          "10",
+          "28"
+        ],
+        "EDQM": [
+          "10",
+          "28"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Nuernberg approach",
+      "frequencies": [
+        "129.525"
+      ],
+      "id": "EDDN_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LPMA",
+        "LPPS"
+      ],
+      "id": "MADEIRA_TMA_SPLIT",
+      "positions": [
+        {
+          "code": "LPMA_APP",
+          "frequency": "119.605",
+          "name": "ALL",
+          "sector": "MATMA",
+          "unit": "LPMA_APP"
+        }
+      ],
+      "runways": {
+        "LPMA": [
+          "LPMA_05",
+          "LPMA_23",
+          "LPPS_18",
+          "LPPS_36"
+        ],
+        "LPPS": [
+          "LPMA_05",
+          "LPMA_23",
+          "LPPS_18",
+          "LPPS_36"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Madeira approach",
+      "frequencies": [
+        "119.605"
+      ],
+      "id": "LPMA_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

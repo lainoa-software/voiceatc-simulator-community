@@ -1,29 +1,41 @@
 {
-  "symbol_size": 0.6,
-  "traildot_size": 0.12,
-  "symbol_line_width": 1,
-  "forecast_symbol": "controlled",
-  "incoming_symbol": "controlled",
-  "assumed_symbol": "controlled",
-  "of_interest_symbol": "controlled",
   "alien_symbol": "uncontrolled",
-  "released_symbol": "uncontrolled",
-  "traildot_symbol": "history",
+  "assumed_symbol": "controlled",
   "defined_symbols": {
     "controlled": {
-      "type": "wireframe",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -3 -3 L 3 -3 L 3 3 L -3 3 L -3 -3",
-      "connection_points": [[0, 0]]
-    },
-    "uncontrolled": {
-      "type": "wireframe",
-      "draw": "M -3 3 L 0 -3 L 3 3 L -3 3",
-      "connection_points": [[0, 0]]
+      "type": "wireframe"
     },
     "history": {
-      "type": "filled",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
-      "connection_points": [[0, 0]]
+      "type": "filled"
+    },
+    "uncontrolled": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M -3 3 L 0 -3 L 3 3 L -3 3",
+      "type": "wireframe"
     }
-  }
+  },
+  "forecast_symbol": "controlled",
+  "incoming_symbol": "controlled",
+  "of_interest_symbol": "controlled",
+  "released_symbol": "uncontrolled",
+  "traildot_symbol": "history"
 }

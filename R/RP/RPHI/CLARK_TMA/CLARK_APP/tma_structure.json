@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RPLC"
+      ],
+      "id": "CLARK",
+      "positions": [
+        {
+          "code": "RPLC_APP",
+          "frequency": "119.200",
+          "name": "ALL",
+          "sector": "RPLC_APP",
+          "unit": "RPLC_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Pampanga approach",
+      "frequencies": [
+        "119.200"
+      ],
+      "id": "RPLC_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

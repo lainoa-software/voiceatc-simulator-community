@@ -1,0 +1,79 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EDDF"
+      ],
+      "id": "07",
+      "positions": [
+        {
+          "code": "EDDF_APP",
+          "frequency": "120.805",
+          "name": "ALL",
+          "sector": "DFAN",
+          "unit": "EDDF_APP"
+        }
+      ],
+      "runways": {
+        "EDDF": [
+          "07"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDF"
+      ],
+      "id": "25",
+      "positions": [
+        {
+          "code": "EDDF_APP",
+          "frequency": "120.805",
+          "name": "ALL",
+          "sector": "DFAN",
+          "unit": "EDDF_APP"
+        }
+      ],
+      "runways": {
+        "EDDF": [
+          "25"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Frankfurt Approach",
+      "frequencies": [
+        "120.805",
+        "118.505",
+        "119.030",
+        "120.155",
+        "125.355",
+        "126.555",
+        "127.280",
+        "136.130"
+      ],
+      "id": "EDDF_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "EDDF",
+      "call_sign": "Frankfurt Tower",
+      "frequencies": [
+        "118.780",
+        "119.905",
+        "124.855",
+        "127.330",
+        "136.500"
+      ],
+      "id": "EDDF_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

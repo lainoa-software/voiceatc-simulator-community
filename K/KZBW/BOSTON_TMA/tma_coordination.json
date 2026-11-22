@@ -1,0 +1,57 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "KBOS"
+      ],
+      "descent": "A110",
+      "fix": [
+        "PROVI"
+      ],
+      "from": "KZBW_CTR",
+      "name": "KBOS_ARR_PROVI",
+      "priority": 10,
+      "to": "KBOS_APP"
+    },
+    {
+      "arrives": [
+        "KBOS"
+      ],
+      "descent": "A110",
+      "fix": [
+        "JFUND"
+      ],
+      "from": "KZBW_CTR",
+      "name": "KBOS_ARR_JFUND",
+      "priority": 10,
+      "to": "KBOS_APP"
+    },
+    {
+      "arrives": [
+        "KBOS"
+      ],
+      "descent": "A110",
+      "fix": [
+        "OOSHN"
+      ],
+      "from": "KZBW_CTR",
+      "name": "KBOS_ARR_OOSHN",
+      "priority": 10,
+      "to": "KBOS_APP"
+    },
+    {
+      "arrives": [
+        "KBOS"
+      ],
+      "descent": "A110",
+      "fix": [
+        "JEWIT"
+      ],
+      "from": "KZBW_CTR",
+      "name": "KBOS_ARR_JEWIT",
+      "priority": 10,
+      "to": "KBOS_APP"
+    }
+  ],
+  "schema": 2
+}

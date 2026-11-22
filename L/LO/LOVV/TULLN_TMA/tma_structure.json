@@ -1,0 +1,137 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_08L",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_08L",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_08L"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_26R",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_26R",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_26R"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_13",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_13",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_13"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_31",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_31",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_31"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_05",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_05",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_05"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXT"
+      ],
+      "id": "TULLN_TMA_WHOLE_LOXT_23",
+      "positions": [
+        {
+          "code": "LOXT_APP",
+          "frequency": "136.130",
+          "name": "ALL",
+          "sector": "TULLN_TMA_LOXT_23",
+          "unit": "LOXT_APP"
+        }
+      ],
+      "runways": {
+        "LOXT": [
+          "LOXT_23"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Tulln approach",
+      "frequencies": [
+        "136.130"
+      ],
+      "id": "LOXT_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

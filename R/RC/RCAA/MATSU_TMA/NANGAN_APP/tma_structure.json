@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCMT"
+      ],
+      "id": "NANGAN",
+      "positions": [
+        {
+          "code": "RCMT_APP",
+          "frequency": "121.000",
+          "name": "ALL",
+          "sector": "RCMT_APP",
+          "unit": "RCMT_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Matsu approach",
+      "frequencies": [
+        "121.000"
+      ],
+      "id": "RCMT_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

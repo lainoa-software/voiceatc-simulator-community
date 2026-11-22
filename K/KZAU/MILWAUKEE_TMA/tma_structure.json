@@ -1,0 +1,71 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KMKE"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "KMKE_APP",
+          "frequency": "118.000",
+          "name": "ALL",
+          "sector": "MKE_APP",
+          "unit": "KMKE_APP"
+        }
+      ],
+      "runways": {
+        "KMKE": [
+          "01",
+          "07",
+          "19",
+          "25",
+          "Overnight"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KMKE"
+      ],
+      "id": "2",
+      "positions": [
+        {
+          "code": "KMKE_MKEE_APP",
+          "frequency": "118.000",
+          "name": "ALL",
+          "sector": "MKE_E_APP",
+          "unit": "KMKE_APP"
+        },
+        {
+          "code": "KMKE_MKEW_APP",
+          "frequency": "126.500",
+          "name": "ALL",
+          "sector": "MKE_W_APP",
+          "unit": "KMKE_APP"
+        }
+      ],
+      "runways": {
+        "KMKE": [
+          "01",
+          "19",
+          "Overnight"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Milwaukee approach",
+      "frequencies": [
+        "118.000",
+        "126.500"
+      ],
+      "id": "KMKE_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

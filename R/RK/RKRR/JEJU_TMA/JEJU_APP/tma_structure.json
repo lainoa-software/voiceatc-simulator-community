@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKPC"
+      ],
+      "id": "JEJU",
+      "positions": [
+        {
+          "code": "RKPC_APP",
+          "frequency": "121.200",
+          "name": "ALL",
+          "sector": "RKPC_APP",
+          "unit": "RKPC_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Jeju approach",
+      "frequencies": [
+        "121.200"
+      ],
+      "id": "RKPC_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

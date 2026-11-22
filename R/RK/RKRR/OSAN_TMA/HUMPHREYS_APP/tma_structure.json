@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKSG"
+      ],
+      "id": "HUMPHREYS",
+      "positions": [
+        {
+          "code": "RKSG_APP",
+          "frequency": "127.900",
+          "name": "ALL",
+          "sector": "RKSG_APP",
+          "unit": "RKSG_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Camp Humphreys approach",
+      "frequencies": [
+        "127.900"
+      ],
+      "id": "RKSG_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

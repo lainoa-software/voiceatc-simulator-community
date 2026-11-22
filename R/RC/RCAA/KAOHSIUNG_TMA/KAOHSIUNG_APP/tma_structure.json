@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCKH"
+      ],
+      "id": "KAOHSIUNG",
+      "positions": [
+        {
+          "code": "RCKH_APP",
+          "frequency": "124.700",
+          "name": "ALL",
+          "sector": "RCKH_APP",
+          "unit": "RCKH_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Kaohsiung approach",
+      "frequencies": [
+        "124.700"
+      ],
+      "id": "RCKH_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

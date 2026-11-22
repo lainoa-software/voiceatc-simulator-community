@@ -1,0 +1,147 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LEMD"
+      ],
+      "id": "1AND",
+      "on_duty": [
+        {
+          "code": "LEMD_TWR",
+          "frequency": "118.155",
+          "name": "TOWER",
+          "sectors": [
+            "LEMDATZ"
+          ],
+          "unit": "LEMD_TWR"
+        },
+        {
+          "code": "LECM_R1_CTR",
+          "frequency": "135.700",
+          "name": "RUTA 1",
+          "sectors": [
+            "LECMR1I"
+          ],
+          "unit": "LECM_CTR"
+        },
+        {
+          "code": "LECM_R2_CTR",
+          "frequency": "133.755",
+          "name": "RUTA 2",
+          "sectors": [
+            "LECMR2I"
+          ],
+          "unit": "LECM_CTR"
+        }
+      ],
+      "positions": [
+        {
+          "code": "LEMD_ALN_APP",
+          "frequency": "136.105",
+          "name": "ALL",
+          "sector": "LEMDALN",
+          "unit": "LEMD_APP",
+          "zones": [
+            "LEMDCTR"
+          ]
+        }
+      ],
+      "runways": {
+        "LEMD": [
+          "NORTH"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LEMD"
+      ],
+      "id": "1ASD",
+      "on_duty": [
+        {
+          "code": "LEMD_TWR",
+          "frequency": "118.155",
+          "name": "TOWER",
+          "sectors": [
+            "LEMDATZ"
+          ],
+          "unit": "LEMD_TWR"
+        },
+        {
+          "code": "LECM_R1_CTR",
+          "frequency": "135.700",
+          "name": "R1",
+          "sectors": [
+            "LECMR1I"
+          ],
+          "unit": "LECM_CTR"
+        },
+        {
+          "code": "LECM_R2_CTR",
+          "frequency": "133.755",
+          "name": "R2",
+          "sectors": [
+            "LECMR2I"
+          ],
+          "unit": "LECM_CTR"
+        }
+      ],
+      "positions": [
+        {
+          "code": "LEMD_ALS_APP",
+          "frequency": "136.105",
+          "name": "ALL",
+          "sector": "LEMDALS",
+          "unit": "LEMD_APP",
+          "zones": [
+            "LEMDCTR"
+          ]
+        }
+      ],
+      "runways": {
+        "LEMD": [
+          "SOUTH"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Madrid Approach",
+      "frequencies": [
+        "136.105"
+      ],
+      "id": "LEMD_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "LEMD",
+      "call_sign": "Barajas Tower",
+      "frequencies": [
+        "118.080",
+        "118.155",
+        "118.680",
+        "118.980"
+      ],
+      "id": "LEMD_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "airport": "LEMD",
+      "kind": "CTR",
+      "sector": "LEMDCTR"
+    },
+    {
+      "airport": "LEMD",
+      "kind": "ATZ",
+      "sector": "LEMDATZ"
+    }
+  ]
+}

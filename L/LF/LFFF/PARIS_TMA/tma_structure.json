@@ -1,0 +1,115 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LFPG"
+      ],
+      "id": "WEST",
+      "on_duty": [
+        {
+          "code": "LFPO_APP",
+          "frequency": "123.880",
+          "name": "ALL",
+          "sectors": [
+            "LFPOAPP"
+          ],
+          "unit": "LFPO_APP"
+        }
+      ],
+      "positions": [
+        {
+          "code": "LFPG_APP",
+          "frequency": "125.830",
+          "name": "ALL",
+          "sector": "CDGAPP",
+          "unit": "LFPG_APP"
+        }
+      ],
+      "runways": {
+        "LFPG": [
+          "WEST"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LFPG"
+      ],
+      "id": "EAST",
+      "on_duty": [
+        {
+          "code": "LFPO_APP",
+          "frequency": "123.880",
+          "name": "ALL",
+          "sectors": [
+            "LFPOAPP"
+          ],
+          "unit": "LFPO_APP"
+        }
+      ],
+      "positions": [
+        {
+          "code": "LFPG_APP",
+          "frequency": "125.830",
+          "name": "ALL",
+          "sector": "CDGAPP",
+          "unit": "LFPG_APP"
+        }
+      ],
+      "runways": {
+        "LFPG": [
+          "EAST"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "De Gaulle Approach",
+      "frequencies": [
+        "125.830",
+        "118.155",
+        "119.855",
+        "121.155",
+        "126.430",
+        "126.580",
+        "136.280"
+      ],
+      "id": "LFPG_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "LFPG",
+      "call_sign": "De Gaulle Tower",
+      "frequencies": [
+        "119.255",
+        "118.655",
+        "119.630",
+        "120.655",
+        "120.905",
+        "123.605",
+        "125.330"
+      ],
+      "id": "LFPG_TWR",
+      "services": [
+        "tower"
+      ]
+    },
+    {
+      "call_sign": "Orly Approach",
+      "frequencies": [
+        "123.880",
+        "124.455",
+        "118.855",
+        "120.855"
+      ],
+      "id": "LFPO_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

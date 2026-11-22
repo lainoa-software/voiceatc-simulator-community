@@ -1,0 +1,114 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EKCH"
+      ],
+      "id": "COPENHAGEN_TMA_WHOLE_04",
+      "positions": [
+        {
+          "code": "EKCH_APP",
+          "frequency": "119.805",
+          "name": "ALL",
+          "sector": "COPENHAGEN_TMA_04",
+          "unit": "EKCH_APP"
+        }
+      ],
+      "runways": {
+        "EKCH": [
+          "DAY_04",
+          "EKRK_11",
+          "EKRK_29",
+          "EKRK_03",
+          "EKRK_21"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EKCH"
+      ],
+      "id": "COPENHAGEN_TMA_WHOLE_22",
+      "positions": [
+        {
+          "code": "EKCH_APP",
+          "frequency": "119.805",
+          "name": "ALL",
+          "sector": "COPENHAGEN_TMA_22",
+          "unit": "EKCH_APP"
+        }
+      ],
+      "runways": {
+        "EKCH": [
+          "DAY_22",
+          "NIGHT_22",
+          "EKRK_11",
+          "EKRK_29",
+          "EKRK_03",
+          "EKRK_21"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EKCH"
+      ],
+      "id": "COPENHAGEN_TMA_WHOLE_12",
+      "positions": [
+        {
+          "code": "EKCH_APP",
+          "frequency": "119.805",
+          "name": "ALL",
+          "sector": "COPENHAGEN_TMA_12",
+          "unit": "EKCH_APP"
+        }
+      ],
+      "runways": {
+        "EKCH": [
+          "EKCH_12",
+          "EKRK_11",
+          "EKRK_29",
+          "EKRK_03",
+          "EKRK_21"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EKCH"
+      ],
+      "id": "COPENHAGEN_TMA_WHOLE_30",
+      "positions": [
+        {
+          "code": "EKCH_APP",
+          "frequency": "119.805",
+          "name": "ALL",
+          "sector": "COPENHAGEN_TMA_30",
+          "unit": "EKCH_APP"
+        }
+      ],
+      "runways": {
+        "EKCH": [
+          "EKCH_30",
+          "EKRK_11",
+          "EKRK_29",
+          "EKRK_03",
+          "EKRK_21"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Copenhagen approach",
+      "frequencies": [
+        "119.805"
+      ],
+      "id": "EKCH_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

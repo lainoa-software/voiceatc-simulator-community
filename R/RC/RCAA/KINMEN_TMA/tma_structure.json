@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCBS"
+      ],
+      "id": "KINMEN",
+      "positions": [
+        {
+          "code": "RCBS_APP",
+          "frequency": "124.600",
+          "name": "ALL",
+          "sector": "RCBS_APP",
+          "unit": "RCBS_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Kinmen approach",
+      "frequencies": [
+        "124.600"
+      ],
+      "id": "RCBS_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

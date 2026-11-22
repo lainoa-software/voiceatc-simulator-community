@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKPD"
+      ],
+      "id": "JEONGSEOK",
+      "positions": [
+        {
+          "code": "RKPD_APP",
+          "frequency": "121.200",
+          "name": "ALL",
+          "sector": "RKPD_APP",
+          "unit": "RKPD_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Jeju approach",
+      "frequencies": [
+        "121.200"
+      ],
+      "id": "RKPD_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "VMMC"
+      ],
+      "id": "ZHUHAI_APPROACH",
+      "positions": [
+        {
+          "code": "VMMC_APP",
+          "frequency": "119.025",
+          "name": "ALL",
+          "sector": "VMMC_APP",
+          "unit": "VMMC_APP"
+        }
+      ],
+      "runways": {
+        "VMMC": [
+          "16"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "VMMC"
+      ],
+      "id": "HONG_KONG_RADAR",
+      "positions": [
+        {
+          "code": "VMMC_APP",
+          "frequency": "123.950",
+          "name": "ALL",
+          "sector": "VMMC_APP",
+          "unit": "VMMC_APP"
+        }
+      ],
+      "runways": {
+        "VMMC": [
+          "34"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Macao approach",
+      "frequencies": [
+        "119.025",
+        "123.950"
+      ],
+      "id": "VMMC_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}
