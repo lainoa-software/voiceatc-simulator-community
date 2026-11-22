@@ -1,0 +1,47 @@
+{
+  "airport": "CYYC",
+  "runway_configs": [
+    {
+      "id": "SOUTH_FLOW_EVENING_ARRIV",
+      "name": "South Flow - Evening Arrivals",
+      "arr": "17L",
+      "dep": "17R"
+    },
+    {
+      "id": "SOUTH_FLOW_MORNING_DEPAR",
+      "name": "South Flow - Morning Departures",
+      "arr": "17R",
+      "dep": "17R 17L"
+    },
+    {
+      "id": "WEST_FLOW",
+      "name": "West Flow",
+      "arr": "29",
+      "dep": "29"
+    },
+    {
+      "id": "WEST_FLOW_HEAVY",
+      "name": "West Flow - Heavy",
+      "arr": "29",
+      "dep": "35R"
+    },
+    {
+      "id": "EAST_FLOW",
+      "name": "East Flow",
+      "arr": "11",
+      "dep": "11"
+    },
+    {
+      "id": "NORTH_FLOW_HEAVY",
+      "name": "North Flow - Heavy",
+      "arr": "35L 35R",
+      "dep": "35R"
+    },
+    {
+      "id": "NORTH_FLOW_MORNINGS",
+      "name": "North Flow - Mornings",
+      "arr": "35R 35L",
+      "dep": "35L 35R"
+    }
+  ]
+}
