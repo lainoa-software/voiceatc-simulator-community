@@ -1,0 +1,17 @@
+{
+  "airport": "CYLW",
+  "runway_configs": [
+    {
+      "id": "NORMAL_FLOW",
+      "name": "Normal Flow",
+      "arr": "16",
+      "dep": "16"
+    },
+    {
+      "id": "STRONG_NORTH_WIND",
+      "name": "Strong North Wind",
+      "arr": "34",
+      "dep": "34"
+    }
+  ]
+}
