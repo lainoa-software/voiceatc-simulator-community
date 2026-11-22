@@ -1,0 +1,24 @@
+{
+  "schema": 3,
+  "agreements": [
+    {
+      "name": "W_VALENCIA_F150",
+      "from": "LECB_BKW_CTR",
+      "to": "LEVC_APP",
+      "arrives": [
+        "LEVC",
+        "LECH"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "W_ALICANTE_F130",
+      "from": "LECB_BKW_CTR",
+      "to": "LEAL_APP",
+      "arrives": [
+        "LEAL"
+      ],
+      "level": "F130"
+    }
+  ]
+}

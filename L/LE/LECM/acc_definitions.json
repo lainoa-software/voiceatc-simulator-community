@@ -8,18 +8,15 @@
         "center"
       ],
       "unassigned_frequencies": [
-        "118.275",
         "119.630",
         "119.925",
         "124.875",
-        "125.225",
         "125.750",
         "125.775",
         "126.430",
         "126.550",
         "126.675",
         "127.230",
-        "127.325",
         "127.550",
         "128.450",
         "129.155",
@@ -28,10 +25,8 @@
         "131.025",
         "132.055",
         "132.475",
-        "132.550",
         "132.600",
         "132.675",
-        "132.980",
         "133.125",
         "133.205",
         "133.350",
@@ -42,10 +37,8 @@
         "135.025",
         "135.175",
         "135.775",
-        "135.955",
         "136.355",
-        "136.405",
-        "136.525"
+        "136.405"
       ]
     },
     {
@@ -74,6 +67,51 @@
       "call_sign": "LECM_R2_CTR",
       "unit": "LECM_R2_CTR",
       "frequency": "133.755"
+    },
+    {
+      "call_sign": "LECM_BLL_CTR",
+      "unit": "LECM_R1_CTR",
+      "frequency": "118.275"
+    },
+    {
+      "call_sign": "LECM_SAS_CTR",
+      "unit": "LECM_R1_CTR",
+      "frequency": "118.200"
+    },
+    {
+      "call_sign": "LECM_BDP_CTR",
+      "unit": "LECM_R1_CTR",
+      "frequency": "125.755"
+    },
+    {
+      "call_sign": "LECM_SAI_CTR",
+      "unit": "LECM_R1_CTR",
+      "frequency": "135.955"
+    },
+    {
+      "call_sign": "LECM_SAO_CTR",
+      "unit": "LECM_R1_CTR",
+      "frequency": "125.225"
+    },
+    {
+      "call_sign": "LECM_ZTI_CTR",
+      "unit": "LECM_R2_CTR",
+      "frequency": "127.325"
+    },
+    {
+      "call_sign": "LECM_CZI_CTR",
+      "unit": "LECM_R2_CTR",
+      "frequency": "132.980"
+    },
+    {
+      "call_sign": "LECM_ZMU_CTR",
+      "unit": "LECM_R2_CTR",
+      "frequency": "132.550"
+    },
+    {
+      "call_sign": "LECM_ZMI_CTR",
+      "unit": "LECM_R2_CTR",
+      "frequency": "136.525"
     }
   ]
 }

@@ -3,27 +3,47 @@
   "units": [
     {
       "id": "LEAL_APP",
-      "call_sign": "Alicante approach",
+      "call_sign": "Alicante Approach",
       "services": [
         "approach_radar"
       ]
+    },
+    {
+      "id": "LEVC_APP",
+      "call_sign": "Valencia Approach",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "id": "LEVC_TWR",
+      "call_sign": "Valencia Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LEVC"
     }
   ],
   "positions": [
     {
       "call_sign": "LEAL_APP",
       "unit": "LEAL_APP",
-      "frequency": "120.100"
+      "frequency": "120.400"
     },
     {
       "call_sign": "LEVC_APP",
-      "unit": "LEAL_APP",
+      "unit": "LEVC_APP",
       "frequency": "120.100"
     },
     {
       "call_sign": "LEAL_AAW_APP",
       "unit": "LEAL_APP",
       "frequency": "120.400"
+    },
+    {
+      "call_sign": "LEVC_TWR",
+      "unit": "LEVC_TWR",
+      "frequency": "118.555"
     }
   ]
 }

@@ -14,10 +14,7 @@
       "services": [
         "tower"
       ],
-      "airport": "LEBL",
-      "unassigned_frequencies": [
-        "118.330"
-      ]
+      "airport": "LEBL"
     },
     {
       "id": "LEGE_TWR",
@@ -71,6 +68,46 @@
       "call_sign": "LEDA_TWR",
       "unit": "LEDA_TWR",
       "frequency": "121.330"
+    },
+    {
+      "call_sign": "LEBL_T1_APP",
+      "unit": "LEBL_APP",
+      "frequency": "131.125"
+    },
+    {
+      "call_sign": "LEBL_T2_APP",
+      "unit": "LEBL_APP",
+      "frequency": "121.155"
+    },
+    {
+      "call_sign": "LEBL_FNL_APP",
+      "unit": "LEBL_APP",
+      "frequency": "119.105"
+    },
+    {
+      "call_sign": "LEBL_T3_APP",
+      "unit": "LEBL_APP",
+      "frequency": "126.505"
+    },
+    {
+      "call_sign": "LEBL_T4_APP",
+      "unit": "LEBL_APP",
+      "frequency": "127.700"
+    },
+    {
+      "call_sign": "LEBL_T34_APP",
+      "unit": "LEBL_APP",
+      "frequency": "126.505"
+    },
+    {
+      "call_sign": "LEBL_N_TWR",
+      "unit": "LEBL_TWR",
+      "frequency": "118.105"
+    },
+    {
+      "call_sign": "LEBL_S_TWR",
+      "unit": "LEBL_TWR",
+      "frequency": "118.330"
     }
   ],
   "zones": [

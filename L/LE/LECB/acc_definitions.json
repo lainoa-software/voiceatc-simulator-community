@@ -14,6 +14,11 @@
       "title": "Ruta 4 - Barcelona Oeste"
     },
     {
+      "id": "LECB_E_CTR",
+      "part_of": "LECB_CTR",
+      "title": "Ruta 5 - Barcelona Este"
+    },
+    {
       "id": "LECL_CTR",
       "part_of": "LECB_CTR",
       "title": "Valencia TACC"
@@ -27,18 +32,48 @@
   "positions": [
     {
       "call_sign": "LECB_BKW_CTR",
-      "unit": "LECB_CTR",
+      "unit": "LECB_W_CTR",
       "frequency": "134.680"
     },
     {
       "call_sign": "LECB_BKE_CTR",
-      "unit": "LECB_CTR",
+      "unit": "LECB_E_CTR",
       "frequency": "135.355"
     },
     {
       "call_sign": "LECB_DDX_CTR",
-      "unit": "LECB_CTR",
+      "unit": "LECB_W_CTR",
       "frequency": "132.580"
+    },
+    {
+      "call_sign": "LECB_CTR",
+      "unit": "LECB_CTR",
+      "frequency": "124.450"
+    },
+    {
+      "call_sign": "LECB_DDI_CTR",
+      "unit": "LECB_W_CTR",
+      "frequency": "135.805"
+    },
+    {
+      "call_sign": "LECB_XAL_CTR",
+      "unit": "LECB_E_CTR",
+      "frequency": "133.030"
+    },
+    {
+      "call_sign": "LECP_GIX_CTR",
+      "unit": "LECB_E_CTR",
+      "frequency": "118.125"
+    },
+    {
+      "call_sign": "LECP_MXX_CTR",
+      "unit": "LECB_E_CTR",
+      "frequency": "120.700"
+    },
+    {
+      "call_sign": "LECL_CTR",
+      "unit": "LECL_CTR",
+      "frequency": "118.800"
     }
   ]
 }

@@ -2,16 +2,16 @@
   "schema": 3,
   "sectors": {
     "LECSAPT": {
-      "name": "LECSA",
-      "title": "LECSAPT"
+      "name": "APT",
+      "title": "Aproximacion Total"
     },
     "LECSASN": {
-      "name": "LECSA",
-      "title": "LECSASN"
+      "name": "ASN",
+      "title": "Aproximacion Norte"
     },
     "LECSASV": {
       "name": "ASV",
-      "title": "LECSASV"
+      "title": "Aproximacion Sur"
     }
   },
   "volumes": [

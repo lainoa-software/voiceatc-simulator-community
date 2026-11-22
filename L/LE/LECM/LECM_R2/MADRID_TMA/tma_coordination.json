@@ -336,6 +336,76 @@
         "ZMR"
       ],
       "level": "F240"
+    },
+    {
+      "name": "R1_MADRID_ARR_NORTH_F250",
+      "from": "LECM_R1_CTR",
+      "to": "LEMD_APP",
+      "arrives": [
+        "LEMD"
+      ],
+      "level": "F250",
+      "runways": [
+        "32L",
+        "32R"
+      ]
+    },
+    {
+      "name": "R1_MADRID_ARR_SOUTH_F190",
+      "from": "LECM_R1_CTR",
+      "to": "LEMD_APP",
+      "arrives": [
+        "LEMD"
+      ],
+      "level": "F190",
+      "runways": [
+        "18L",
+        "18R"
+      ]
+    },
+    {
+      "name": "R2_MADRID_W_F250",
+      "from": "LECM_R2_CTR",
+      "to": "LEMD_W_APP",
+      "arrives": [
+        "LEMD"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "MADRID_ARR_F250",
+      "from": "LECM_CTR",
+      "to": "LEMD_APP",
+      "arrives": [
+        "LEMD"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "MADRID_ARR_BANEV_NONTU_F190",
+      "from": "LECM_CTR",
+      "to": "LEMD_APP",
+      "arrives": [
+        "LEMD"
+      ],
+      "fix": [
+        "BANEV",
+        "NONTU"
+      ],
+      "level": "F190",
+      "runways": [
+        "18L",
+        "18R"
+      ]
+    },
+    {
+      "name": "MADRID_DEP_F240",
+      "from": "LEMD_APP",
+      "to": "LECM_CTR",
+      "departs": [
+        "LEMD"
+      ],
+      "level": "F240"
     }
   ]
 }

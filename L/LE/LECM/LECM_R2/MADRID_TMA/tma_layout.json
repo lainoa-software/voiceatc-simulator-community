@@ -33,6 +33,58 @@
             "SOUTH"
           ]
         }
+      },
+      "N4": {
+        "positions": {
+          "LEMD_DEP_APP": [
+            "LEMDDEN",
+            "LEMDDWN"
+          ],
+          "LEMD_FNW_APP": [
+            "LEMDASWN"
+          ],
+          "LEMD_RW_APP": [
+            "LEMDRWN"
+          ],
+          "LEMD_W_APP": [
+            "LEMDWNN",
+            "LEMDWSN"
+          ]
+        },
+        "airports": [
+          "LEMD"
+        ]
+      },
+      "N7": {
+        "positions": {
+          "LEMD_DEP_APP": [
+            "LEMDDEN",
+            "LEMDDWN"
+          ],
+          "LEMD_E_APP": [
+            "LEMDENN",
+            "LEMDESN"
+          ],
+          "LEMD_FNE_APP": [
+            "LEMDASEN"
+          ],
+          "LEMD_FNW_APP": [
+            "LEMDASWN"
+          ],
+          "LEMD_RE_APP": [
+            "LEMDREN"
+          ],
+          "LEMD_RW_APP": [
+            "LEMDRWN"
+          ],
+          "LEMD_W_APP": [
+            "LEMDWNN",
+            "LEMDWSN"
+          ]
+        },
+        "airports": [
+          "LEMD"
+        ]
       }
     },
     "LEMD_TWR": {

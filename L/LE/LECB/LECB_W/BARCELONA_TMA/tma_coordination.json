@@ -390,6 +390,24 @@
         "LERS"
       ],
       "level": "A050"
+    },
+    {
+      "name": "W_BARCELONA_F200",
+      "from": "LECB_BKW_CTR",
+      "to": "LEBL_T1_APP",
+      "arrives": [
+        "LEBL"
+      ],
+      "level": "F200"
+    },
+    {
+      "name": "E_BARCELONA_F200",
+      "from": "LECB_BKE_CTR",
+      "to": "LEBL_T1_APP",
+      "arrives": [
+        "LEBL"
+      ],
+      "level": "F200"
     }
   ]
 }
