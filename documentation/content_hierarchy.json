@@ -380,6 +380,10 @@
     "CZEG": {
       "authority": "navigraph_2503",
       "kind": "fir"
+    },
+    "CZWG": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
     }
   },
   "terminal_scopes": {
@@ -618,6 +622,7 @@
     "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
     "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"],
     "F/FA/FACA/CAPE_TOWN_CTR": ["FACT"],
-    "C/CZ/CZEG/CALGARY_TMA": ["CYYC"]
+    "C/CZ/CZEG/CALGARY_TMA": ["CYYC"],
+    "C/CZ/CZWG/WINNIPEG_CTR": ["CYXE"]
   }
 }
