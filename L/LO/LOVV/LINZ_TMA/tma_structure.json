@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LOWL"
-      ],
+      "airports": ["LOWL"],
       "id": "LINZ_TMA_WHOLE_LOWL_08",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "LOWL": [
-          "LOWL_08"
-        ]
+        "LOWL": ["LOWL_08"]
       }
     },
     {
-      "airports": [
-        "LOWL"
-      ],
+      "airports": ["LOWL"],
       "id": "LINZ_TMA_WHOLE_LOWL_26",
       "positions": [
         {
@@ -35,9 +29,7 @@
         }
       ],
       "runways": {
-        "LOWL": [
-          "LOWL_26"
-        ]
+        "LOWL": ["LOWL_26"]
       }
     }
   ],
@@ -45,13 +37,9 @@
   "units": [
     {
       "call_sign": "Linz approach",
-      "frequencies": [
-        "125.685"
-      ],
+      "frequencies": ["125.685"],
       "id": "LOWL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

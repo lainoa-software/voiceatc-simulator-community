@@ -1,397 +1,238 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "ANJLL"
-      ],
+      "fix": ["ANJLL"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_ANJLL_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "HLYWD"
-      ],
+      "fix": ["HLYWD"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_HLYWD_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "HUULL"
-      ],
+      "fix": ["HUULL"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_HUULL_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "IRNMN"
-      ],
+      "fix": ["IRNMN"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_IRNMN_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "SNSTT"
-      ],
+      "fix": ["SNSTT"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_SNSTT_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "SEAVU"
-      ],
+      "fix": ["SEAVU"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_SEAVU_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A110",
-      "fix": [
-        "VTU"
-      ],
+      "fix": ["VTU"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_VTU_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A120",
-      "fix": [
-        "SYMON"
-      ],
+      "fix": ["SYMON"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_SYMON_W",
       "priority": 10,
-      "runways": [
-        "24R",
-        "25L"
-      ],
+      "runways": ["24R", "25L"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "ZUUMA"
-      ],
+      "fix": ["ZUUMA"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_ZUUMA",
       "priority": 10,
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "BIGBR"
-      ],
+      "fix": ["BIGBR"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_BIGBR_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "BRUEN"
-      ],
+      "fix": ["BRUEN"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_BRUEN_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A150",
-      "fix": [
-        "LAADY"
-      ],
+      "fix": ["LAADY"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_LAADY_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "BASET"
-      ],
+      "fix": ["BASET"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_BASET_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A060",
-      "fix": [
-        "EXERT"
-      ],
+      "fix": ["EXERT"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_EXERT_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A110",
-      "fix": [
-        "PAULA"
-      ],
+      "fix": ["PAULA"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_PAULA_E",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R"
-      ],
+      "runways": ["06L", "07R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "MDNYT"
-      ],
+      "fix": ["MDNYT"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_MDNYT_O",
       "priority": 10,
-      "runways": [
-        "06R"
-      ],
+      "runways": ["06R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "BASET"
-      ],
+      "fix": ["BASET"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_BASET_O",
       "priority": 10,
-      "runways": [
-        "06R"
-      ],
+      "runways": ["06R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A060",
-      "fix": [
-        "EXERT"
-      ],
+      "fix": ["EXERT"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_EXERT_O",
       "priority": 10,
-      "runways": [
-        "06R"
-      ],
+      "runways": ["06R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A160",
-      "fix": [
-        "GOATZ"
-      ],
+      "fix": ["GOATZ"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_GOATZ_O",
       "priority": 10,
-      "runways": [
-        "06R"
-      ],
+      "runways": ["06R"],
       "to": "KLAX_APP"
     },
     {
-      "arrives": [
-        "KLAX"
-      ],
+      "arrives": ["KLAX"],
       "descent": "A050",
-      "fix": [
-        "SLI"
-      ],
+      "fix": ["SLI"],
       "from": "KZLA_CTR",
       "name": "KLAX_ARR_SLI_EO",
       "priority": 10,
-      "runways": [
-        "06L",
-        "07R",
-        "06R"
-      ],
+      "runways": ["06L", "07R", "06R"],
       "to": "KLAX_APP"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "GMN"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["GMN"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_GMN_E",
       "priority": 10,
-      "runways": [
-        "06R",
-        "07L"
-      ],
+      "runways": ["06R", "07L"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "COREZ"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["COREZ"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_COREZ_E",
       "priority": 10,
-      "runways": [
-        "06R",
-        "07L"
-      ],
+      "runways": ["06R", "07L"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "CSTRO"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["CSTRO"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_CSTRO_E",
       "priority": 10,
-      "runways": [
-        "06R",
-        "07L"
-      ],
+      "runways": ["06R", "07L"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "GARDY"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["GARDY"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_GARDY",
       "priority": 10,
@@ -399,12 +240,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "SLI"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["SLI"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_SLI",
       "priority": 10,
@@ -412,12 +249,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "TRM"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["TRM"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_TRM",
       "priority": 10,
@@ -425,12 +258,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "DAG"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["DAG"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_DAG",
       "priority": 10,
@@ -438,12 +267,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "ORCKA"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["ORCKA"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_ORCKA",
       "priority": 10,
@@ -451,12 +276,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "DOTSS"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["DOTSS"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_DOTSS",
       "priority": 10,
@@ -464,12 +285,8 @@
     },
     {
       "climb": "A160",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "SXC"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["SXC"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_SXC",
       "priority": 10,
@@ -477,12 +294,8 @@
     },
     {
       "climb": "A100",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "MUELR"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["MUELR"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_MUELR",
       "priority": 10,
@@ -490,66 +303,42 @@
     },
     {
       "climb": "A120",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "KYLOW"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["KYLOW"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_KYLOW_O",
       "priority": 10,
-      "runways": [
-        "25R"
-      ],
+      "runways": ["25R"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "ZILLI"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["ZILLI"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_ZILLI_O",
       "priority": 10,
-      "runways": [
-        "25R"
-      ],
+      "runways": ["25R"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A130",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "VTU"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["VTU"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_VTU_O",
       "priority": 10,
-      "runways": [
-        "25R"
-      ],
+      "runways": ["25R"],
       "to": "KZLA_CTR"
     },
     {
       "climb": "A090",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "MOOOS"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["MOOOS"],
       "from": "KLAX_APP",
       "name": "KLAX_DEP_MOOOS_O",
       "priority": 10,
-      "runways": [
-        "25R"
-      ],
+      "runways": ["25R"],
       "to": "KZLA_CTR"
     }
   ],

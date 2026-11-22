@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDL",
-        "EDLN"
-      ],
+      "airports": ["EDDL", "EDLN"],
       "id": "EDDL_APP",
       "positions": [
         {
@@ -16,22 +13,8 @@
         }
       ],
       "runways": {
-        "EDDL": [
-          "31",
-          "13",
-          "23",
-          "05",
-          "23d",
-          "05d"
-        ],
-        "EDLN": [
-          "31",
-          "13",
-          "23",
-          "05",
-          "23d",
-          "05d"
-        ]
+        "EDDL": ["31", "13", "23", "05", "23d", "05d"],
+        "EDLN": ["31", "13", "23", "05", "23d", "05d"]
       }
     }
   ],
@@ -39,13 +22,9 @@
   "units": [
     {
       "call_sign": "Duesseldorf approach",
-      "frequencies": [
-        "121.355"
-      ],
+      "frequencies": ["121.355"],
       "id": "EDDL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

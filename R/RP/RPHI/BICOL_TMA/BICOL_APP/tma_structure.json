@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPLK"
-      ],
+      "airports": ["RPLK"],
       "id": "BICOL",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Albay approach",
-      "frequencies": [
-        "120.200"
-      ],
+      "frequencies": ["120.200"],
       "id": "RPLK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

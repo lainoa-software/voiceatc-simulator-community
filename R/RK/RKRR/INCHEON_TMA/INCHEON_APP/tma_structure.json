@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKSI"
-      ],
+      "airports": ["RKSI"],
       "id": "INCHEON",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Seoul approach",
-      "frequencies": [
-        "119.750"
-      ],
+      "frequencies": ["119.750"],
       "id": "RKSI_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

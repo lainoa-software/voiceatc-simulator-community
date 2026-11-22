@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPME"
-      ],
+      "airports": ["RPME"],
       "id": "BUTUAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Butuan approach",
-      "frequencies": [
-        "121.300"
-      ],
+      "frequencies": ["121.300"],
       "id": "RPME_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

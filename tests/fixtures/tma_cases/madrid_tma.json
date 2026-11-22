@@ -4,38 +4,23 @@
     {
       "id": "MAD_APP",
       "call_sign": "Madrid Approach",
-      "services": [
-        "approach_radar"
-      ],
-      "frequencies": [
-        "136.105"
-      ]
+      "services": ["approach_radar"],
+      "frequencies": ["136.105"]
     },
     {
       "id": "BAR_TWR",
       "call_sign": "Barajas Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEMD",
-      "frequencies": [
-        "118.080",
-        "118.155",
-        "118.680",
-        "118.980"
-      ]
+      "frequencies": ["118.080", "118.155", "118.680", "118.980"]
     }
   ],
   "layouts": [
     {
       "id": "1AND",
-      "airports": [
-        "LEMD"
-      ],
+      "airports": ["LEMD"],
       "runways": {
-        "LEMD": [
-          "NORTH"
-        ]
+        "LEMD": ["NORTH"]
       },
       "positions": [
         {
@@ -44,9 +29,7 @@
           "code": "LEMD_ALN_APP",
           "unit": "MAD_APP",
           "frequency": "136.105",
-          "zones": [
-            "LEMDCTR"
-          ]
+          "zones": ["LEMDCTR"]
         }
       ],
       "on_duty": [
@@ -55,39 +38,29 @@
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
-          "sectors": [
-            "LEMDATZ"
-          ]
+          "sectors": ["LEMDATZ"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 1",
           "code": "LECM_R1_CTR",
           "frequency": "135.700",
-          "sectors": [
-            "LECMR1I"
-          ]
+          "sectors": ["LECMR1I"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 2",
           "code": "LECM_R2_CTR",
           "frequency": "133.755",
-          "sectors": [
-            "LECMR2I"
-          ]
+          "sectors": ["LECMR2I"]
         }
       ]
     },
     {
       "id": "1ASD",
-      "airports": [
-        "LEMD"
-      ],
+      "airports": ["LEMD"],
       "runways": {
-        "LEMD": [
-          "SOUTH"
-        ]
+        "LEMD": ["SOUTH"]
       },
       "positions": [
         {
@@ -96,9 +69,7 @@
           "code": "LEMD_ALS_APP",
           "unit": "MAD_APP",
           "frequency": "136.105",
-          "zones": [
-            "LEMDCTR"
-          ]
+          "zones": ["LEMDCTR"]
         }
       ],
       "on_duty": [
@@ -107,27 +78,21 @@
           "name": "TOWER",
           "code": "LEMD_TWR",
           "frequency": "118.155",
-          "sectors": [
-            "LEMDATZ"
-          ]
+          "sectors": ["LEMDATZ"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 1",
           "code": "LECM_R1_CTR",
           "frequency": "135.700",
-          "sectors": [
-            "LECMR1I"
-          ]
+          "sectors": ["LECMR1I"]
         },
         {
           "unit": "MAD_CTR",
           "name": "RUTA 2",
           "code": "LECM_R2_CTR",
           "frequency": "133.755",
-          "sectors": [
-            "LECMR2I"
-          ]
+          "sectors": ["LECMR2I"]
         }
       ]
     }

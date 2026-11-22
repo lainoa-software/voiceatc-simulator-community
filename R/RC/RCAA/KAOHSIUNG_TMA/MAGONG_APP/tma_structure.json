@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCQC"
-      ],
+      "airports": ["RCQC"],
       "id": "MAGONG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Magong approach",
-      "frequencies": [
-        "128.100"
-      ],
+      "frequencies": ["128.100"],
       "id": "RCQC_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

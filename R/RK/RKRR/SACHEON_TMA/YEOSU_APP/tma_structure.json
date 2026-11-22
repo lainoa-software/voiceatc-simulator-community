@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKJY"
-      ],
+      "airports": ["RKJY"],
       "id": "YEOSU",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Yeosu approach",
-      "frequencies": [
-        "135.400"
-      ],
+      "frequencies": ["135.400"],
       "id": "RKJY_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

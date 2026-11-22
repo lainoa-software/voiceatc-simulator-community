@@ -1,65 +1,45 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "KSEA"
-      ],
+      "arrives": ["KSEA"],
       "descent": "A120",
-      "fix": [
-        "JAKSN"
-      ],
+      "fix": ["JAKSN"],
       "from": "KZSE_CTR",
       "name": "KSEA_ARR_JAKSN",
       "priority": 10,
       "to": "KSEA_APP"
     },
     {
-      "arrives": [
-        "KSEA"
-      ],
+      "arrives": ["KSEA"],
       "descent": "A120",
-      "fix": [
-        "RADDY"
-      ],
+      "fix": ["RADDY"],
       "from": "KZSE_CTR",
       "name": "KSEA_ARR_RADDY",
       "priority": 10,
       "to": "KSEA_APP"
     },
     {
-      "arrives": [
-        "KSEA"
-      ],
+      "arrives": ["KSEA"],
       "descent": "A120",
-      "fix": [
-        "JAWBN"
-      ],
+      "fix": ["JAWBN"],
       "from": "KZSE_CTR",
       "name": "KSEA_ARR_JAWBN",
       "priority": 10,
       "to": "KSEA_APP"
     },
     {
-      "arrives": [
-        "KSEA"
-      ],
+      "arrives": ["KSEA"],
       "descent": "A120",
-      "fix": [
-        "ARVAD"
-      ],
+      "fix": ["ARVAD"],
       "from": "KZSE_CTR",
       "name": "KSEA_ARR_ARVAD",
       "priority": 10,
       "to": "KSEA_APP"
     },
     {
-      "arrives": [
-        "KSEA"
-      ],
+      "arrives": ["KSEA"],
       "descent": "A120",
-      "fix": [
-        "OLM"
-      ],
+      "fix": ["OLM"],
       "from": "KZSE_CTR",
       "name": "KSEA_ARR_OLM",
       "priority": 10,
@@ -67,12 +47,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "BANGR"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["BANGR"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_BANGR",
       "priority": 10,
@@ -80,12 +56,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "HAROB"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["HAROB"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_HAROB",
       "priority": 10,
@@ -93,12 +65,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "ISBRG"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["ISBRG"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_ISBRG",
       "priority": 10,
@@ -106,12 +74,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "JEFPO"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["JEFPO"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_JEFPO",
       "priority": 10,
@@ -119,12 +83,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "OZWLD"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["OZWLD"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_OZWLD",
       "priority": 10,
@@ -132,12 +92,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "SUMMA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["SUMMA"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_SUMMA",
       "priority": 10,
@@ -145,12 +101,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "ELMAA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["ELMAA"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_ELMAA",
       "priority": 10,
@@ -158,12 +110,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "PEAKK"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["PEAKK"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_PEAKK",
       "priority": 10,
@@ -171,12 +119,8 @@
     },
     {
       "climb": "A150",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "SEA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["SEA"],
       "from": "KSEA_APP",
       "name": "KSEA_DEP_SEA",
       "priority": 10,

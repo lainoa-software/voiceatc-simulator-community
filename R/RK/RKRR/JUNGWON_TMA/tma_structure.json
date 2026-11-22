@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKTU"
-      ],
+      "airports": ["RKTU"],
       "id": "JUNGWON",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Cheongju approach",
-      "frequencies": [
-        "134.000"
-      ],
+      "frequencies": ["134.000"],
       "id": "RKTU_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

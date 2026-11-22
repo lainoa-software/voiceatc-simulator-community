@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPMY"
-      ],
+      "airports": ["RPMY"],
       "id": "LAGUINDINGAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Misamis Oriental approach",
-      "frequencies": [
-        "125.500"
-      ],
+      "frequencies": ["125.500"],
       "id": "RPMY_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

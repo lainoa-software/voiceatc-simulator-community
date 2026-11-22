@@ -1,11 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPHR",
-        "LPPI",
-        "LPSJ"
-      ],
+      "airports": ["LPHR", "LPPI", "LPSJ"],
       "id": "HORTA_TMA_SPLIT",
       "positions": [
         {
@@ -48,13 +44,9 @@
   "units": [
     {
       "call_sign": "Horta approach",
-      "frequencies": [
-        "120.600"
-      ],
+      "frequencies": ["120.600"],
       "id": "LPHR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

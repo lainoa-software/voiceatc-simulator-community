@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPLC"
-      ],
+      "airports": ["RPLC"],
       "id": "CLARK",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Pampanga approach",
-      "frequencies": [
-        "119.200"
-      ],
+      "frequencies": ["119.200"],
       "id": "RPLC_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

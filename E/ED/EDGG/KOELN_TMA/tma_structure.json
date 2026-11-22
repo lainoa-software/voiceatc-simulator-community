@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDK"
-      ],
+      "airports": ["EDDK"],
       "id": "EDDK_APP",
       "positions": [
         {
@@ -15,12 +13,7 @@
         }
       ],
       "runways": {
-        "EDDK": [
-          "31",
-          "13",
-          "1306",
-          "3124"
-        ]
+        "EDDK": ["31", "13", "1306", "3124"]
       }
     }
   ],
@@ -28,13 +21,9 @@
   "units": [
     {
       "call_sign": "Cologne Bonn approach",
-      "frequencies": [
-        "135.350"
-      ],
+      "frequencies": ["135.350"],
       "id": "EDDK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

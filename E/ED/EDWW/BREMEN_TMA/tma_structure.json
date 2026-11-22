@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDW"
-      ],
+      "airports": ["EDDW"],
       "id": "1",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "EDDW": [
-          "08",
-          "26"
-        ]
+        "EDDW": ["08", "26"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Bremen approach",
-      "frequencies": [
-        "124.800"
-      ],
+      "frequencies": ["124.800"],
       "id": "EDDW_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,130 +1,90 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "RILAX"
-      ],
+      "fix": ["RILAX"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_RILAX",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "BERSU"
-      ],
+      "fix": ["BERSU"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_BERSU",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "BLM"
-      ],
+      "fix": ["BLM"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_BLM",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "DOPIL"
-      ],
+      "fix": ["DOPIL"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_DOPIL",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "KELIP"
-      ],
+      "fix": ["KELIP"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_KELIP",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "NEGRA"
-      ],
+      "fix": ["NEGRA"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_NEGRA",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "TRA"
-      ],
+      "fix": ["TRA"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_TRA",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "WIL"
-      ],
+      "fix": ["WIL"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_WIL",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "GIPOL"
-      ],
+      "fix": ["GIPOL"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_GIPOL",
       "priority": 10,
       "to": "LSZH_APP"
     },
     {
-      "arrives": [
-        "LSZH"
-      ],
+      "arrives": ["LSZH"],
       "descent": "F130",
-      "fix": [
-        "AMIKI"
-      ],
+      "fix": ["AMIKI"],
       "from": "LSAS_CTR",
       "name": "LSZH_ARR_AMIKI",
       "priority": 10,
@@ -132,12 +92,8 @@
     },
     {
       "climb": "F080",
-      "departs": [
-        "LSZH"
-      ],
-      "fix": [
-        "DEGES"
-      ],
+      "departs": ["LSZH"],
+      "fix": ["DEGES"],
       "from": "LSZH_APP",
       "name": "LSZH_DEP_DEGES",
       "priority": 10,
@@ -145,12 +101,8 @@
     },
     {
       "climb": "F080",
-      "departs": [
-        "LSZH"
-      ],
-      "fix": [
-        "VEBIT"
-      ],
+      "departs": ["LSZH"],
+      "fix": ["VEBIT"],
       "from": "LSZH_APP",
       "name": "LSZH_DEP_VEBIT",
       "priority": 10,
@@ -158,12 +110,8 @@
     },
     {
       "climb": "F080",
-      "departs": [
-        "LSZH"
-      ],
-      "fix": [
-        "WIL"
-      ],
+      "departs": ["LSZH"],
+      "fix": ["WIL"],
       "from": "LSZH_APP",
       "name": "LSZH_DEP_WIL",
       "priority": 10,
@@ -171,12 +119,8 @@
     },
     {
       "climb": "F080",
-      "departs": [
-        "LSZH"
-      ],
-      "fix": [
-        "ZUE"
-      ],
+      "departs": ["LSZH"],
+      "fix": ["ZUE"],
       "from": "LSZH_APP",
       "name": "LSZH_DEP_ZUE",
       "priority": 10,
@@ -184,12 +128,8 @@
     },
     {
       "climb": "F080",
-      "departs": [
-        "LSZH"
-      ],
-      "fix": [
-        "GERSA"
-      ],
+      "departs": ["LSZH"],
+      "fix": ["GERSA"],
       "from": "LSZH_APP",
       "name": "LSZH_DEP_GERSA",
       "priority": 10,

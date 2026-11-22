@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LEJR",
-        "LEZL"
-      ],
+      "airports": ["LEJR", "LEZL"],
       "id": "1",
       "positions": [
         {
@@ -28,14 +25,9 @@
   "units": [
     {
       "call_sign": "Jerez approach",
-      "frequencies": [
-        "120.800",
-        "128.600"
-      ],
+      "frequencies": ["120.800", "128.600"],
       "id": "LEJR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

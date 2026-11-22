@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDM"
-      ],
+      "airports": ["EDDM"],
       "id": "26",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "26"
-        ]
+        "EDDM": ["26"]
       }
     },
     {
-      "airports": [
-        "EDDM"
-      ],
+      "airports": ["EDDM"],
       "id": "08",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "08"
-        ]
+        "EDDM": ["08"]
       }
     },
     {
-      "airports": [
-        "EDDM"
-      ],
+      "airports": ["EDDM"],
       "id": "26S_LVP",
       "positions": [
         {
@@ -55,15 +45,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "26S_LVP"
-        ]
+        "EDDM": ["26S_LVP"]
       }
     },
     {
-      "airports": [
-        "EDDM"
-      ],
+      "airports": ["EDDM"],
       "id": "08S_LVP",
       "positions": [
         {
@@ -75,17 +61,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "08S_LVP"
-        ]
+        "EDDM": ["08S_LVP"]
       }
     },
     {
-      "airports": [
-        "EDDM",
-        "EDMA",
-        "EDMO"
-      ],
+      "airports": ["EDDM", "EDMA", "EDMO"],
       "id": "1",
       "positions": [
         {
@@ -97,18 +77,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "08",
-          "26"
-        ]
+        "EDDM": ["08", "26"]
       }
     },
     {
-      "airports": [
-        "EDDM",
-        "EDMA",
-        "EDMO"
-      ],
+      "airports": ["EDDM", "EDMA", "EDMO"],
       "id": "2",
       "positions": [
         {
@@ -127,18 +100,11 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "08",
-          "26"
-        ]
+        "EDDM": ["08", "26"]
       }
     },
     {
-      "airports": [
-        "EDDM",
-        "EDMA",
-        "EDMO"
-      ],
+      "airports": ["EDDM", "EDMA", "EDMO"],
       "id": "3",
       "positions": [
         {
@@ -164,10 +130,7 @@
         }
       ],
       "runways": {
-        "EDDM": [
-          "08",
-          "26"
-        ]
+        "EDDM": ["08", "26"]
       }
     }
   ],
@@ -185,22 +148,14 @@
         "132.305"
       ],
       "id": "EDDM_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "EDDM",
       "call_sign": "Munich Tower",
-      "frequencies": [
-        "118.705",
-        "119.405",
-        "120.505"
-      ],
+      "frequencies": ["118.705", "119.405", "120.505"],
       "id": "EDDM_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKNY"
-      ],
+      "airports": ["RKNY"],
       "id": "GANGNEUNG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Yangyang approach",
-      "frequencies": [
-        "124.600"
-      ],
+      "frequencies": ["124.600"],
       "id": "RKNY_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

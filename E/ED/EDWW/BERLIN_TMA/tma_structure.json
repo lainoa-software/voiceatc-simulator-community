@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_N_APP_06",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_N_APP_24",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_S_APP_06",
       "positions": [
         {
@@ -55,15 +45,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_S_APP_24",
       "positions": [
         {
@@ -75,15 +61,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_N_DEP_06",
       "positions": [
         {
@@ -95,15 +77,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_N_DEP_24",
       "positions": [
         {
@@ -115,15 +93,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_S_DEP_06",
       "positions": [
         {
@@ -135,15 +109,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_S_DEP_24",
       "positions": [
         {
@@ -155,15 +125,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_FULL_APP-06",
       "positions": [
         {
@@ -175,15 +141,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_FULL_APP-24",
       "positions": [
         {
@@ -195,15 +157,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_A_APP-06",
       "positions": [
         {
@@ -215,15 +173,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_A_APP-24",
       "positions": [
         {
@@ -235,15 +189,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_DEP-06",
       "positions": [
         {
@@ -255,15 +205,11 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "06"
-        ]
+        "EDDB": ["06"]
       }
     },
     {
-      "airports": [
-        "EDDB"
-      ],
+      "airports": ["EDDB"],
       "id": "EDDB_DEP-24",
       "positions": [
         {
@@ -275,9 +221,7 @@
         }
       ],
       "runways": {
-        "EDDB": [
-          "24"
-        ]
+        "EDDB": ["24"]
       }
     }
   ],
@@ -285,17 +229,9 @@
   "units": [
     {
       "call_sign": "Berlin Brandenburg approach",
-      "frequencies": [
-        "119.630",
-        "126.425",
-        "120.340",
-        "120.630",
-        "121.130"
-      ],
+      "frequencies": ["119.630", "126.425", "120.340", "120.630", "121.130"],
       "id": "EDDB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDF"
-      ],
+      "airports": ["EDDF"],
       "id": "07",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "EDDF": [
-          "07"
-        ]
+        "EDDF": ["07"]
       }
     },
     {
-      "airports": [
-        "EDDF"
-      ],
+      "airports": ["EDDF"],
       "id": "25",
       "positions": [
         {
@@ -35,9 +29,7 @@
         }
       ],
       "runways": {
-        "EDDF": [
-          "25"
-        ]
+        "EDDF": ["25"]
       }
     }
   ],
@@ -56,24 +48,14 @@
         "136.130"
       ],
       "id": "EDDF_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "EDDF",
       "call_sign": "Frankfurt Tower",
-      "frequencies": [
-        "118.780",
-        "119.905",
-        "124.855",
-        "127.330",
-        "136.500"
-      ],
+      "frequencies": ["118.780", "119.905", "124.855", "127.330", "136.500"],
       "id": "EDDF_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

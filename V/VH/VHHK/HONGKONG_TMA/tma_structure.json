@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "VHHH"
-      ],
+      "airports": ["VHHH"],
       "id": "HONGKONG",
       "positions": [
         {
@@ -32,13 +30,9 @@
   "units": [
     {
       "call_sign": "Hong Kong approach",
-      "frequencies": [
-        "119.100"
-      ],
+      "frequencies": ["119.100"],
       "id": "VHHH_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

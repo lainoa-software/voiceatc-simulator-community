@@ -1,271 +1,177 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "ADUXO"
-      ],
+      "fix": ["ADUXO"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_ADUXO",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "AVILA"
-      ],
+      "fix": ["AVILA"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_AVILA",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "BAN"
-      ],
+      "fix": ["BAN"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_BAN",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "MORAL"
-      ],
+      "fix": ["MORAL"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_MORAL",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "ORBIS"
-      ],
+      "fix": ["ORBIS"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_ORBIS",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F200",
-      "fix": [
-        "PODOG"
-      ],
+      "fix": ["PODOG"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_PODOG",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "PRADO"
-      ],
+      "fix": ["PRADO"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_PRADO",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "RIDAV"
-      ],
+      "fix": ["RIDAV"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_RIDAV",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "SOTUK"
-      ],
+      "fix": ["SOTUK"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_SOTUK",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F200",
-      "fix": [
-        "TERSA"
-      ],
+      "fix": ["TERSA"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_TERSA",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "TLD"
-      ],
+      "fix": ["TLD"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_TLD",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "VILLA"
-      ],
+      "fix": ["VILLA"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_VILLA",
       "priority": 10,
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F210",
-      "fix": [
-        "TERSA"
-      ],
+      "fix": ["TERSA"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_TERSA_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F200",
-      "fix": [
-        "ORBIS"
-      ],
+      "fix": ["ORBIS"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_ORBIS_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F250",
-      "fix": [
-        "MORAL"
-      ],
+      "fix": ["MORAL"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_MORAL_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F250",
-      "fix": [
-        "RIDAV"
-      ],
+      "fix": ["RIDAV"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_RIDAV_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F250",
-      "fix": [
-        "SOTUK"
-      ],
+      "fix": ["SOTUK"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_SOTUK_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "descent": "F250",
-      "fix": [
-        "TLD"
-      ],
+      "fix": ["TLD"],
       "from": "LECM_CTR",
       "name": "LEMD_ARR_TLD_SOUTH",
       "priority": 20,
-      "runways": [
-        "18L",
-        "18R"
-      ],
+      "runways": ["18L", "18R"],
       "to": "LEMD_APP"
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "BARDI"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["BARDI"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_BARDI",
       "priority": 10,
@@ -273,12 +179,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "CCS"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["CCS"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_CCS",
       "priority": 10,
@@ -286,12 +188,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "NANDO"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["NANDO"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_NANDO",
       "priority": 10,
@@ -299,12 +197,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "PINAR"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["PINAR"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_PINAR",
       "priority": 10,
@@ -312,12 +206,8 @@
     },
     {
       "climb": "F230",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "RBO"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["RBO"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_RBO",
       "priority": 10,
@@ -325,12 +215,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "SIE"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["SIE"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_SIE",
       "priority": 10,
@@ -338,12 +224,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "VTB"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["VTB"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_VTB",
       "priority": 10,
@@ -351,12 +233,8 @@
     },
     {
       "climb": "F240",
-      "departs": [
-        "LEMD"
-      ],
-      "fix": [
-        "ZMR"
-      ],
+      "departs": ["LEMD"],
+      "fix": ["ZMR"],
       "from": "LEMD_APP",
       "name": "LEMD_DEP_ZMR",
       "priority": 10,

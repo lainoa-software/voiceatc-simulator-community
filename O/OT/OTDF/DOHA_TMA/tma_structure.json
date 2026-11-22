@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "OTHH"
-      ],
+      "airports": ["OTHH"],
       "id": "DOHA_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Doha approach",
-      "frequencies": [
-        "119.725"
-      ],
+      "frequencies": ["119.725"],
       "id": "OTHH_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

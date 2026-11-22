@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVK"
-      ],
+      "airports": ["RPVK"],
       "id": "KALIBO",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Kalibo approach",
-      "frequencies": [
-        "120.400"
-      ],
+      "frequencies": ["120.400"],
       "id": "RPVK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

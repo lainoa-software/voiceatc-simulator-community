@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KDCA"
-      ],
+      "airports": ["KDCA"],
       "id": "1",
       "positions": [
         {
@@ -15,11 +13,7 @@
         }
       ],
       "runways": {
-        "KDCA": [
-          "NORTH",
-          "SOUTH",
-          "NORTH_RW33"
-        ]
+        "KDCA": ["NORTH", "SOUTH", "NORTH_RW33"]
       }
     }
   ],
@@ -27,26 +21,16 @@
   "units": [
     {
       "call_sign": "Potomac Approach",
-      "frequencies": [
-        "119.850",
-        "124.200",
-        "124.700"
-      ],
+      "frequencies": ["119.850", "124.200", "124.700"],
       "id": "KDCA_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KDCA",
       "call_sign": "Washington Tower",
-      "frequencies": [
-        "119.100"
-      ],
+      "frequencies": ["119.100"],
       "id": "KDCA_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

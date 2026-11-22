@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKPU"
-      ],
+      "airports": ["RKPU"],
       "id": "ULSAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Ulsan approach",
-      "frequencies": [
-        "124.250"
-      ],
+      "frequencies": ["124.250"],
       "id": "RKPU_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDG"
-      ],
+      "airports": ["EDDG"],
       "id": "EDDG_APP",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "EDDG": [
-          "25",
-          "07"
-        ]
+        "EDDG": ["25", "07"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Muenster approach",
-      "frequencies": [
-        "129.300"
-      ],
+      "frequencies": ["129.300"],
       "id": "EDDG_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

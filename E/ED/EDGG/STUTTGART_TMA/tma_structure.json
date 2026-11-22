@@ -1,11 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDS",
-        "EDSB",
-        "EDTL"
-      ],
+      "airports": ["EDDS", "EDSB", "EDTL"],
       "id": "EDDS_FULL_APP",
       "positions": [
         {
@@ -17,32 +13,13 @@
         }
       ],
       "runways": {
-        "EDDS": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ],
-        "EDSB": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ],
-        "EDTL": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ]
+        "EDDS": ["25", "07", "21", "03"],
+        "EDSB": ["25", "07", "21", "03"],
+        "EDTL": ["25", "07", "21", "03"]
       }
     },
     {
-      "airports": [
-        "EDDS",
-        "EDSB",
-        "EDTL"
-      ],
+      "airports": ["EDDS", "EDSB", "EDTL"],
       "id": "EDDS_APP",
       "positions": [
         {
@@ -54,26 +31,13 @@
         }
       ],
       "runways": {
-        "EDDS": [
-          "25",
-          "07"
-        ],
-        "EDSB": [
-          "25",
-          "07"
-        ],
-        "EDTL": [
-          "25",
-          "07"
-        ]
+        "EDDS": ["25", "07"],
+        "EDSB": ["25", "07"],
+        "EDTL": ["25", "07"]
       }
     },
     {
-      "airports": [
-        "EDDS",
-        "EDSB",
-        "EDTL"
-      ],
+      "airports": ["EDDS", "EDSB", "EDTL"],
       "id": "EDDS_N_APP",
       "positions": [
         {
@@ -85,26 +49,13 @@
         }
       ],
       "runways": {
-        "EDDS": [
-          "25",
-          "07"
-        ],
-        "EDSB": [
-          "25",
-          "07"
-        ],
-        "EDTL": [
-          "25",
-          "07"
-        ]
+        "EDDS": ["25", "07"],
+        "EDSB": ["25", "07"],
+        "EDTL": ["25", "07"]
       }
     },
     {
-      "airports": [
-        "EDDS",
-        "EDSB",
-        "EDTL"
-      ],
+      "airports": ["EDDS", "EDSB", "EDTL"],
       "id": "EDDS_S_APP",
       "positions": [
         {
@@ -116,24 +67,9 @@
         }
       ],
       "runways": {
-        "EDDS": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ],
-        "EDSB": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ],
-        "EDTL": [
-          "25",
-          "07",
-          "21",
-          "03"
-        ]
+        "EDDS": ["25", "07", "21", "03"],
+        "EDSB": ["25", "07", "21", "03"],
+        "EDTL": ["25", "07", "21", "03"]
       }
     }
   ],
@@ -141,14 +77,9 @@
   "units": [
     {
       "call_sign": "Stuttgart approach",
-      "frequencies": [
-        "125.050",
-        "119.200"
-      ],
+      "frequencies": ["125.050", "119.200"],
       "id": "EDDS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

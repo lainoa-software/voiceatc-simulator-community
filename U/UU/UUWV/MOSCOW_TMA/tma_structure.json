@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "UUEE"
-      ],
+      "airports": ["UUEE"],
       "id": "1",
       "positions": [
         {
@@ -27,14 +25,9 @@
   "units": [
     {
       "call_sign": "Moscow approach",
-      "frequencies": [
-        "134.000",
-        "122.700"
-      ],
+      "frequencies": ["134.000", "122.700"],
       "id": "UUEE_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

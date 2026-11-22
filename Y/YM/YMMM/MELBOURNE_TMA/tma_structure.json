@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "YMML"
-      ],
+      "airports": ["YMML"],
       "id": "MELBOURNE_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Melbourne approach",
-      "frequencies": [
-        "132.000"
-      ],
+      "frequencies": ["132.000"],
       "id": "YMML_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

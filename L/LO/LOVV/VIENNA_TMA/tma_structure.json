@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LOWW"
-      ],
+      "airports": ["LOWW"],
       "id": "DAY_WEST",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "LOWW": [
-          "DAY_WEST"
-        ]
+        "LOWW": ["DAY_WEST"]
       }
     },
     {
-      "airports": [
-        "LOWW"
-      ],
+      "airports": ["LOWW"],
       "id": "DAY_SE",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "LOWW": [
-          "DAY_SE"
-        ]
+        "LOWW": ["DAY_SE"]
       }
     },
     {
-      "airports": [
-        "LOWW"
-      ],
+      "airports": ["LOWW"],
       "id": "NIGHT",
       "positions": [
         {
@@ -55,9 +45,7 @@
         }
       ],
       "runways": {
-        "LOWW": [
-          "NIGHT"
-        ]
+        "LOWW": ["NIGHT"]
       }
     }
   ],
@@ -75,23 +63,14 @@
         "136.250"
       ],
       "id": "LOWW_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "LOWW",
       "call_sign": "Wien Tower",
-      "frequencies": [
-        "119.400",
-        "121.200",
-        "123.800",
-        "124.475"
-      ],
+      "frequencies": ["119.400", "121.200", "123.800", "124.475"],
       "id": "LOWW_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

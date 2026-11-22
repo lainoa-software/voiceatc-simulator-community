@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "CYYZ"
-      ],
+      "airports": ["CYYZ"],
       "id": "TORONTO_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Toronto approach",
-      "frequencies": [
-        "124.475"
-      ],
+      "frequencies": ["124.475"],
       "id": "CYYZ_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

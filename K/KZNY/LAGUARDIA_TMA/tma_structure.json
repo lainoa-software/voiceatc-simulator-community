@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KLGA"
-      ],
+      "airports": ["KLGA"],
       "id": "1",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "New York approach",
-      "frequencies": [
-        "120.800"
-      ],
+      "frequencies": ["120.800"],
       "id": "KLGA_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

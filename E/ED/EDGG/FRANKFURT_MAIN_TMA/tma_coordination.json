@@ -1,88 +1,56 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F110",
-      "fix": [
-        "KERAX"
-      ],
+      "fix": ["KERAX"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_KERAX_25",
       "priority": 10,
-      "runways": [
-        "25L",
-        "25C",
-        "25R"
-      ],
+      "runways": ["25L", "25C", "25R"],
       "to": "EDDF_APP"
     },
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F130",
-      "fix": [
-        "KERAX"
-      ],
+      "fix": ["KERAX"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_KERAX_07",
       "priority": 10,
-      "runways": [
-        "07L",
-        "07C",
-        "07R"
-      ],
+      "runways": ["07L", "07C", "07R"],
       "to": "EDDF_APP"
     },
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F100",
-      "fix": [
-        "OSPUL"
-      ],
+      "fix": ["OSPUL"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_OSPUL",
       "priority": 10,
       "to": "EDDF_APP"
     },
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F110",
-      "fix": [
-        "RAMOB"
-      ],
+      "fix": ["RAMOB"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_RAMOB",
       "priority": 10,
       "to": "EDDF_APP"
     },
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F100",
-      "fix": [
-        "ADNIS"
-      ],
+      "fix": ["ADNIS"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_ADNIS",
       "priority": 10,
       "to": "EDDF_APP"
     },
     {
-      "arrives": [
-        "EDDF"
-      ],
+      "arrives": ["EDDF"],
       "descent": "F110",
-      "fix": [
-        "SPESA"
-      ],
+      "fix": ["SPESA"],
       "from": "EDGG_CTR",
       "name": "EDDF_ARR_SPESA",
       "priority": 10,
@@ -90,12 +58,8 @@
     },
     {
       "climb": "F110",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "AMTIX"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["AMTIX"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_AMTIX",
       "priority": 10,
@@ -103,12 +67,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "KOMIB"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["KOMIB"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_KOMIB",
       "priority": 10,
@@ -116,12 +76,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "ANEKI"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["ANEKI"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_ANEKI",
       "priority": 10,
@@ -129,12 +85,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "SOBRA"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["SOBRA"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_SOBRA",
       "priority": 10,
@@ -142,12 +94,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "ULKIG"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["ULKIG"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_ULKIG",
       "priority": 10,
@@ -155,12 +103,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "OBOKA"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["OBOKA"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_OBOKA",
       "priority": 10,
@@ -168,12 +112,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "MARUN"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["MARUN"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_MARUN",
       "priority": 10,
@@ -181,12 +121,8 @@
     },
     {
       "climb": "F130",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "TOBAK"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["TOBAK"],
       "from": "EDDF_APP",
       "name": "EDDF_DEP_TOBAK",
       "priority": 10,

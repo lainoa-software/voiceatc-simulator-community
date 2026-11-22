@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EFHK"
-      ],
+      "airports": ["EFHK"],
       "id": "1",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "EFHK": [
-          "22 PARA",
-          "04 PARA"
-        ]
+        "EFHK": ["22 PARA", "04 PARA"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Helsinki approach",
-      "frequencies": [
-        "119.100"
-      ],
+      "frequencies": ["119.100"],
       "id": "EFHK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

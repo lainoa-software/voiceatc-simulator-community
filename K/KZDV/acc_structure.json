@@ -51,9 +51,7 @@
         "135.600"
       ],
       "id": "KZDV_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

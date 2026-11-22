@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVI"
-      ],
+      "airports": ["RPVI"],
       "id": "ILOILO",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Iloilo approach",
-      "frequencies": [
-        "121.000"
-      ],
+      "frequencies": ["121.000"],
       "id": "RPVI_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPLB"
-      ],
+      "airports": ["RPLB"],
       "id": "SUBIC",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Subic Bay approach",
-      "frequencies": [
-        "119.200"
-      ],
+      "frequencies": ["119.200"],
       "id": "RPLB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

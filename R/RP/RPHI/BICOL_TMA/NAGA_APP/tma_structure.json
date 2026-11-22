@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPUN"
-      ],
+      "airports": ["RPUN"],
       "id": "NAGA",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Pili approach",
-      "frequencies": [
-        "120.200"
-      ],
+      "frequencies": ["120.200"],
       "id": "RPUN_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,18 +1,14 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LFPG"
-      ],
+      "airports": ["LFPG"],
       "id": "WEST",
       "on_duty": [
         {
           "code": "LFPO_APP",
           "frequency": "123.880",
           "name": "ALL",
-          "sectors": [
-            "LFPOAPP"
-          ],
+          "sectors": ["LFPOAPP"],
           "unit": "LFPO_APP"
         }
       ],
@@ -26,24 +22,18 @@
         }
       ],
       "runways": {
-        "LFPG": [
-          "WEST"
-        ]
+        "LFPG": ["WEST"]
       }
     },
     {
-      "airports": [
-        "LFPG"
-      ],
+      "airports": ["LFPG"],
       "id": "EAST",
       "on_duty": [
         {
           "code": "LFPO_APP",
           "frequency": "123.880",
           "name": "ALL",
-          "sectors": [
-            "LFPOAPP"
-          ],
+          "sectors": ["LFPOAPP"],
           "unit": "LFPO_APP"
         }
       ],
@@ -57,9 +47,7 @@
         }
       ],
       "runways": {
-        "LFPG": [
-          "EAST"
-        ]
+        "LFPG": ["EAST"]
       }
     }
   ],
@@ -77,9 +65,7 @@
         "136.280"
       ],
       "id": "LFPG_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "LFPG",
@@ -94,22 +80,13 @@
         "125.330"
       ],
       "id": "LFPG_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     },
     {
       "call_sign": "Orly Approach",
-      "frequencies": [
-        "123.880",
-        "124.455",
-        "118.855",
-        "120.855"
-      ],
+      "frequencies": ["123.880", "124.455", "118.855", "120.855"],
       "id": "LFPO_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

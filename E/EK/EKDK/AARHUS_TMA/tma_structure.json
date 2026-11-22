@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EKAH"
-      ],
+      "airports": ["EKAH"],
       "id": "AARHUS_TMA_WHOLE_ALL",
       "positions": [
         {
@@ -15,12 +13,7 @@
         }
       ],
       "runways": {
-        "EKAH": [
-          "EKAH_10R",
-          "EKAH_28L",
-          "EKAH_10L",
-          "EKAH_28R"
-        ]
+        "EKAH": ["EKAH_10R", "EKAH_28L", "EKAH_10L", "EKAH_28R"]
       }
     }
   ],
@@ -28,13 +21,9 @@
   "units": [
     {
       "call_sign": "Aarhus approach",
-      "frequencies": [
-        "119.280"
-      ],
+      "frequencies": ["119.280"],
       "id": "EKAH_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

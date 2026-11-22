@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KDFW"
-      ],
+      "airports": ["KDFW"],
       "id": "SOUTH_EAST",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "KDFW": [
-          "SOUTH_EAST"
-        ]
+        "KDFW": ["SOUTH_EAST"]
       }
     },
     {
-      "airports": [
-        "KDFW"
-      ],
+      "airports": ["KDFW"],
       "id": "SOUTH_WEST",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "KDFW": [
-          "SOUTH_WEST"
-        ]
+        "KDFW": ["SOUTH_WEST"]
       }
     },
     {
-      "airports": [
-        "KDFW"
-      ],
+      "airports": ["KDFW"],
       "id": "NORTH_EAST",
       "positions": [
         {
@@ -55,15 +45,11 @@
         }
       ],
       "runways": {
-        "KDFW": [
-          "NORTH_EAST"
-        ]
+        "KDFW": ["NORTH_EAST"]
       }
     },
     {
-      "airports": [
-        "KDFW"
-      ],
+      "airports": ["KDFW"],
       "id": "NORTH_WEST",
       "positions": [
         {
@@ -75,9 +61,7 @@
         }
       ],
       "runways": {
-        "KDFW": [
-          "NORTH_WEST"
-        ]
+        "KDFW": ["NORTH_WEST"]
       }
     }
   ],
@@ -101,23 +85,14 @@
         "135.975"
       ],
       "id": "KDFW_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KDFW",
       "call_sign": "DFW Tower",
-      "frequencies": [
-        "124.150",
-        "126.550",
-        "127.500",
-        "134.900"
-      ],
+      "frequencies": ["124.150", "126.550", "127.500", "134.900"],
       "id": "KDFW_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

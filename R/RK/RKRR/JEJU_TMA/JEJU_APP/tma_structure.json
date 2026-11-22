@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKPC"
-      ],
+      "airports": ["RKPC"],
       "id": "JEJU",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Jeju approach",
-      "frequencies": [
-        "121.200"
-      ],
+      "frequencies": ["121.200"],
       "id": "RKPC_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

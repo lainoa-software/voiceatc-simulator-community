@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KJFK",
-        "KFRG"
-      ],
+      "airports": ["KJFK", "KFRG"],
       "id": "SOUTH_ARR",
       "positions": [
         {
@@ -16,16 +13,11 @@
         }
       ],
       "runways": {
-        "KJFK": [
-          "SOUTH_ARR"
-        ]
+        "KJFK": ["SOUTH_ARR"]
       }
     },
     {
-      "airports": [
-        "KJFK",
-        "KFRG"
-      ],
+      "airports": ["KJFK", "KFRG"],
       "id": "SOUTH_DEP",
       "positions": [
         {
@@ -37,16 +29,11 @@
         }
       ],
       "runways": {
-        "KJFK": [
-          "SOUTH_DEP"
-        ]
+        "KJFK": ["SOUTH_DEP"]
       }
     },
     {
-      "airports": [
-        "KJFK",
-        "KFRG"
-      ],
+      "airports": ["KJFK", "KFRG"],
       "id": "NORTH",
       "positions": [
         {
@@ -58,16 +45,11 @@
         }
       ],
       "runways": {
-        "KJFK": [
-          "NORTH"
-        ]
+        "KJFK": ["NORTH"]
       }
     },
     {
-      "airports": [
-        "KJFK",
-        "KFRG"
-      ],
+      "airports": ["KJFK", "KFRG"],
       "id": "NORTHWEST",
       "positions": [
         {
@@ -79,9 +61,7 @@
         }
       ],
       "runways": {
-        "KJFK": [
-          "NORTHWEST"
-        ]
+        "KJFK": ["NORTHWEST"]
       }
     }
   ],
@@ -99,33 +79,21 @@
         "134.350"
       ],
       "id": "KJFK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KJFK",
       "call_sign": "Kennedy Tower",
-      "frequencies": [
-        "119.100",
-        "123.900"
-      ],
+      "frequencies": ["119.100", "123.900"],
       "id": "KJFK_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     },
     {
       "airport": "KFRG",
       "call_sign": "Republic Tower",
-      "frequencies": [
-        "118.800",
-        "125.200"
-      ],
+      "frequencies": ["118.800", "125.200"],
       "id": "KFRG_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

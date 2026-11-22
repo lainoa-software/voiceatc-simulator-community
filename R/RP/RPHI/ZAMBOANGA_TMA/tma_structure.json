@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPMZ"
-      ],
+      "airports": ["RPMZ"],
       "id": "ZAMBOANGA",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Zamboanga approach",
-      "frequencies": [
-        "122.700"
-      ],
+      "frequencies": ["122.700"],
       "id": "RPMZ_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

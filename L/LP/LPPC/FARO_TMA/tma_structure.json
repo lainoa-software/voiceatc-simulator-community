@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPFR"
-      ],
+      "airports": ["LPFR"],
       "id": "FARO_TMA_SPLIT",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "LPFR": [
-          "LPFR_10",
-          "LPFR_28"
-        ]
+        "LPFR": ["LPFR_10", "LPFR_28"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Faro approach",
-      "frequencies": [
-        "119.405"
-      ],
+      "frequencies": ["119.405"],
       "id": "LPFR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

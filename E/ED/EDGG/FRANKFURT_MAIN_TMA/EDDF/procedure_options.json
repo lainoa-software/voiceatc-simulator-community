@@ -132,9 +132,7 @@
               "spawn_enabled": true
             },
             "SPESA.D": {
-              "join_from": [
-                "MAMBU"
-              ],
+              "join_from": ["MAMBU"],
               "spawn_enabled": true
             },
             "TUTOV.D": {
@@ -267,9 +265,7 @@
           "spawn_enabled": true
         },
         "SPES6D": {
-          "join_from": [
-            "MAMBU"
-          ],
+          "join_from": ["MAMBU"],
           "spawn_enabled": true
         },
         "TUTO1D": {

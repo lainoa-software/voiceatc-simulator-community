@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LEBB"
-      ],
+      "airports": ["LEBB"],
       "id": "1",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "LEBB": [
-          "WEST",
-          "EAST"
-        ]
+        "LEBB": ["WEST", "EAST"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Bilbao approach",
-      "frequencies": [
-        "127.450"
-      ],
+      "frequencies": ["127.450"],
       "id": "LEBB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

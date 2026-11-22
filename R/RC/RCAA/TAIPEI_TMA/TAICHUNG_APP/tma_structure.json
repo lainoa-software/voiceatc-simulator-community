@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCMQ"
-      ],
+      "airports": ["RCMQ"],
       "id": "TAICHUNG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Taichung approach",
-      "frequencies": [
-        "130.100"
-      ],
+      "frequencies": ["130.100"],
       "id": "RCMQ_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "OMAA"
-      ],
+      "airports": ["OMAA"],
       "id": "ABU_DHABI_APP",
       "positions": [
         {
@@ -16,9 +14,7 @@
       ]
     },
     {
-      "airports": [
-        "OMAA"
-      ],
+      "airports": ["OMAA"],
       "id": "ABU_DHABI_CENTRAL_WEST_NORTH_EAST",
       "positions": [
         {
@@ -42,15 +38,9 @@
   "units": [
     {
       "call_sign": "Abu Dhabi approach",
-      "frequencies": [
-        "124.400",
-        "124.625",
-        "135.350"
-      ],
+      "frequencies": ["124.400", "124.625", "135.350"],
       "id": "OMAA_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

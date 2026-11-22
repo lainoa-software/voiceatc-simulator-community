@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVD"
-      ],
+      "airports": ["RPVD"],
       "id": "DUMAGUETE",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Dumaguete approach",
-      "frequencies": [
-        "124.700"
-      ],
+      "frequencies": ["124.700"],
       "id": "RPVD_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

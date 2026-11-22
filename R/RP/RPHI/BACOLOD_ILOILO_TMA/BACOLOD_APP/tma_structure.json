@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVB"
-      ],
+      "airports": ["RPVB"],
       "id": "BACOLOD",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Silay approach",
-      "frequencies": [
-        "121.000"
-      ],
+      "frequencies": ["121.000"],
       "id": "RPVB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

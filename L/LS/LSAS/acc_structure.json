@@ -21,9 +21,7 @@
         "136.015"
       ],
       "id": "LSAS_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

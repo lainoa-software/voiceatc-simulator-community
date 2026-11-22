@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EKRN"
-      ],
+      "airports": ["EKRN"],
       "id": "BORNHOLM_TMA_WHOLE_ALL",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "EKRN": [
-          "EKRN_11",
-          "EKRN_29"
-        ]
+        "EKRN": ["EKRN_11", "EKRN_29"]
       }
     }
   ],
@@ -26,13 +21,9 @@
   "units": [
     {
       "call_sign": "Bornholm approach",
-      "frequencies": [
-        "118.330"
-      ],
+      "frequencies": ["118.330"],
       "id": "EKRN_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

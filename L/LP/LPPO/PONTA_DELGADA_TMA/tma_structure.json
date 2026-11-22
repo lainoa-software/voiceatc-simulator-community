@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPAZ",
-        "LPPD"
-      ],
+      "airports": ["LPAZ", "LPPD"],
       "id": "PONTA_DELGADA_TMA_SPLIT",
       "positions": [
         {
@@ -16,18 +13,8 @@
         }
       ],
       "runways": {
-        "LPAZ": [
-          "LPPD_12",
-          "LPPD_30",
-          "LPAZ_18",
-          "LPAZ_36"
-        ],
-        "LPPD": [
-          "LPPD_12",
-          "LPPD_30",
-          "LPAZ_18",
-          "LPAZ_36"
-        ]
+        "LPAZ": ["LPPD_12", "LPPD_30", "LPAZ_18", "LPAZ_36"],
+        "LPPD": ["LPPD_12", "LPPD_30", "LPAZ_18", "LPAZ_36"]
       }
     }
   ],
@@ -35,13 +22,9 @@
   "units": [
     {
       "call_sign": "Santa Maria approach",
-      "frequencies": [
-        "119.400"
-      ],
+      "frequencies": ["119.400"],
       "id": "LPAZ_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

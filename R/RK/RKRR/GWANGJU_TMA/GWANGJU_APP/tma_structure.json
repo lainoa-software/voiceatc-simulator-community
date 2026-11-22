@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKJJ"
-      ],
+      "airports": ["RKJJ"],
       "id": "GWANGJU",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Gwangju approach",
-      "frequencies": [
-        "130.000"
-      ],
+      "frequencies": ["130.000"],
       "id": "RKJJ_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

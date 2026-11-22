@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCKU"
-      ],
+      "airports": ["RCKU"],
       "id": "CHIAYI",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Chiayi approach",
-      "frequencies": [
-        "120.600"
-      ],
+      "frequencies": ["120.600"],
       "id": "RCKU_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

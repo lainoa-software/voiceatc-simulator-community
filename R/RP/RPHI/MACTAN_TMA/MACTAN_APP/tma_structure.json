@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVM"
-      ],
+      "airports": ["RPVM"],
       "id": "MACTAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Lapu Lapu approach",
-      "frequencies": [
-        "124.700"
-      ],
+      "frequencies": ["124.700"],
       "id": "RPVM_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

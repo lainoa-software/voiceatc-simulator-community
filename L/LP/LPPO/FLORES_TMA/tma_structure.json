@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPCR",
-        "LPFL"
-      ],
+      "airports": ["LPCR", "LPFL"],
       "id": "FLORES_TMA_SPLIT",
       "positions": [
         {
@@ -16,18 +13,8 @@
         }
       ],
       "runways": {
-        "LPCR": [
-          "LPFL_18",
-          "LPFL_36",
-          "LPCR_11",
-          "LPCR_29"
-        ],
-        "LPFL": [
-          "LPFL_18",
-          "LPFL_36",
-          "LPCR_11",
-          "LPCR_29"
-        ]
+        "LPCR": ["LPFL_18", "LPFL_36", "LPCR_11", "LPCR_29"],
+        "LPFL": ["LPFL_18", "LPFL_36", "LPCR_11", "LPCR_29"]
       }
     }
   ],
@@ -35,13 +22,9 @@
   "units": [
     {
       "call_sign": "Corvo approach",
-      "frequencies": [
-        "118.800"
-      ],
+      "frequencies": ["118.800"],
       "id": "LPCR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

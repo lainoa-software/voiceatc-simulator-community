@@ -1,412 +1,199 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A170",
-      "fix": [
-        "BELLS"
-      ],
+      "fix": ["BELLS"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BELLS_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A140",
-      "fix": [
-        "DODJE"
-      ],
+      "fix": ["DODJE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_DODJE_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "WARDZ"
-      ],
+      "fix": ["WARDZ"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_WARDZ_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A120",
-      "fix": [
-        "BRDJE"
-      ],
+      "fix": ["BRDJE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BRDJE_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A190",
-      "fix": [
-        "BOOVE"
-      ],
+      "fix": ["BOOVE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BOOVE_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A120",
-      "fix": [
-        "KNEAD"
-      ],
+      "fix": ["KNEAD"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_KNEAD_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "VKTRY"
-      ],
+      "fix": ["VKTRY"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_VKTRY_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A100",
-      "fix": [
-        "BEWTS"
-      ],
+      "fix": ["BEWTS"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BEWTS_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A090",
-      "fix": [
-        "GREGS"
-      ],
+      "fix": ["GREGS"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_GREGS_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A130",
-      "fix": [
-        "CURLE"
-      ],
+      "fix": ["CURLE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_CURLE_S",
       "priority": 10,
-      "runways": [
-        "17C",
-        "17L",
-        "17R",
-        "18L",
-        "18R",
-        "13R"
-      ],
+      "runways": ["17C", "17L", "17R", "18L", "18R", "13R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A190",
-      "fix": [
-        "BRDJE"
-      ],
+      "fix": ["BRDJE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BRDJE_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A120",
-      "fix": [
-        "HOWDY"
-      ],
+      "fix": ["HOWDY"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_HOWDY_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "DODJE"
-      ],
+      "fix": ["DODJE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_DODJE_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A090",
-      "fix": [
-        "FINGR"
-      ],
+      "fix": ["FINGR"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_FINGR_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "BOOVE"
-      ],
+      "fix": ["BOOVE"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BOOVE_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "KNEAD"
-      ],
+      "fix": ["KNEAD"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_KNEAD_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A180",
-      "fix": [
-        "VKTRY"
-      ],
+      "fix": ["VKTRY"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_VKTRY_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A110",
-      "fix": [
-        "BEWTS"
-      ],
+      "fix": ["BEWTS"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_BEWTS_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
-      "arrives": [
-        "KDFW"
-      ],
+      "arrives": ["KDFW"],
       "descent": "A120",
-      "fix": [
-        "GREGS"
-      ],
+      "fix": ["GREGS"],
       "from": "KZFW_CTR",
       "name": "KDFW_ARR_GREGS_N",
       "priority": 10,
-      "runways": [
-        "35C",
-        "35R",
-        "31R",
-        "35L",
-        "36L",
-        "36R"
-      ],
+      "runways": ["35C", "35R", "31R", "35L", "36L", "36R"],
       "to": "KDFW_APP"
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "AKUNA"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["AKUNA"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_AKUNA",
       "priority": 10,
@@ -414,12 +201,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "ALIAN"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["ALIAN"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_ALIAN",
       "priority": 10,
@@ -427,12 +210,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "ARDIA"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["ARDIA"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_ARDIA",
       "priority": 10,
@@ -440,12 +219,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "BLECO"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["BLECO"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_BLECO",
       "priority": 10,
@@ -453,12 +228,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "DARTZ"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["DARTZ"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_DARTZ",
       "priority": 10,
@@ -466,12 +237,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "FORCK"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["FORCK"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_FORCK",
       "priority": 10,
@@ -479,12 +246,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "GRABE"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["GRABE"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_GRABE",
       "priority": 10,
@@ -492,12 +255,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "HRPER"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["HRPER"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_HRPER",
       "priority": 10,
@@ -505,12 +264,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "HUDAD"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["HUDAD"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_HUDAD",
       "priority": 10,
@@ -518,12 +273,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "JASPA"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["JASPA"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_JASPA",
       "priority": 10,
@@ -531,12 +282,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "KATZZ"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["KATZZ"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_KATZZ",
       "priority": 10,
@@ -544,12 +291,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "KUSSO"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["KUSSO"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_KUSSO",
       "priority": 10,
@@ -557,12 +300,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "LOWGN"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["LOWGN"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_LOWGN",
       "priority": 10,
@@ -570,12 +309,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "MRSSH"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["MRSSH"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_MRSSH",
       "priority": 10,
@@ -583,12 +318,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "NELYN"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["NELYN"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_NELYN",
       "priority": 10,
@@ -596,12 +327,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "SWABR"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["SWABR"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_SWABR",
       "priority": 10,
@@ -609,12 +336,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "TRYTN"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["TRYTN"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_TRYTN",
       "priority": 10,
@@ -622,12 +345,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "WSTEX"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["WSTEX"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_WSTEX",
       "priority": 10,
@@ -635,12 +354,8 @@
     },
     {
       "climb": "A170",
-      "departs": [
-        "KDFW"
-      ],
-      "fix": [
-        "ZACHH"
-      ],
+      "departs": ["KDFW"],
+      "fix": ["ZACHH"],
       "from": "KDFW_APP",
       "name": "KDFW_DEP_ZACHH",
       "priority": 10,

@@ -1,184 +1,99 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F120",
-      "fix": [
-        "KOLIV"
-      ],
+      "fix": ["KOLIV"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_KOLIV_WEST",
       "priority": 10,
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ],
+      "runways": ["26L", "26R", "27L", "27R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F100",
-      "fix": [
-        "KOLIV"
-      ],
+      "fix": ["KOLIV"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_KOLIV_EAST",
       "priority": 10,
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ],
+      "runways": ["08L", "08R", "09L", "09R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F130",
-      "fix": [
-        "DEVIM"
-      ],
+      "fix": ["DEVIM"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_DEVIM_WEST",
       "priority": 10,
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ],
+      "runways": ["26L", "26R", "27L", "27R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F150",
-      "fix": [
-        "DEVIM"
-      ],
+      "fix": ["DEVIM"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_DEVIM_EAST",
       "priority": 10,
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ],
+      "runways": ["08L", "08R", "09L", "09R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F150",
-      "fix": [
-        "NERKI"
-      ],
+      "fix": ["NERKI"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_NERKI_WEST",
       "priority": 10,
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ],
+      "runways": ["26L", "26R", "27L", "27R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F110",
-      "fix": [
-        "NERKI"
-      ],
+      "fix": ["NERKI"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_NERKI_EAST",
       "priority": 10,
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ],
+      "runways": ["08L", "08R", "09L", "09R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F110",
-      "fix": [
-        "URELO"
-      ],
+      "fix": ["URELO"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_URELO_WEST",
       "priority": 10,
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ],
+      "runways": ["26L", "26R", "27L", "27R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F150",
-      "fix": [
-        "URELO"
-      ],
+      "fix": ["URELO"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_URELO_EAST",
       "priority": 10,
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ],
+      "runways": ["08L", "08R", "09L", "09R"],
       "to": "LFPG_APP"
     },
     {
-      "arrives": [
-        "LFPG"
-      ],
+      "arrives": ["LFPG"],
       "descent": "F070",
-      "fix": [
-        "MOBRO"
-      ],
+      "fix": ["MOBRO"],
       "from": "LFFF_CTR",
       "name": "LFPG_ARR_MOBRO_WEST",
       "priority": 10,
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ],
+      "runways": ["26L", "26R", "27L", "27R"],
       "to": "LFPG_APP"
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "OPALE"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["OPALE"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_OPALE",
       "priority": 10,
@@ -186,12 +101,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ATREX"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ATREX"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_ATREX",
       "priority": 10,
@@ -199,12 +110,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "NURMO"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["NURMO"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_NURMO",
       "priority": 10,
@@ -212,12 +119,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "RANUX"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["RANUX"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_RANUX",
       "priority": 10,
@@ -225,12 +128,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "DIKOL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["DIKOL"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_DIKOL",
       "priority": 10,
@@ -238,12 +137,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LANVI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LANVI"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_LANVI",
       "priority": 10,
@@ -251,12 +146,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "BUBLI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["BUBLI"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_BUBLI",
       "priority": 10,
@@ -264,12 +155,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "BAXIR"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["BAXIR"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_BAXIR",
       "priority": 10,
@@ -277,12 +164,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "AGOPA"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["AGOPA"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_AGOPA",
       "priority": 10,
@@ -290,12 +173,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ERIXU"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ERIXU"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_ERIXU",
       "priority": 10,
@@ -303,12 +182,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "OKASI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["OKASI"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_OKASI",
       "priority": 10,
@@ -316,12 +191,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "PILUL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["PILUL"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_PILUL",
       "priority": 10,
@@ -329,12 +200,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LATRA"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LATRA"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_LATRA",
       "priority": 10,
@@ -342,12 +209,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ELCOB"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ELCOB"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_ELCOB",
       "priority": 10,
@@ -355,12 +218,8 @@
     },
     {
       "climb": "F190",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LGL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LGL"],
       "from": "LFPG_APP",
       "name": "LFPG_DEP_LGL",
       "priority": 10,

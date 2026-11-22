@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LEAL",
-        "LEVC"
-      ],
+      "airports": ["LEAL", "LEVC"],
       "id": "1",
       "positions": [
         {
@@ -17,10 +14,7 @@
       ]
     },
     {
-      "airports": [
-        "LEAL",
-        "LEVC"
-      ],
+      "airports": ["LEAL", "LEVC"],
       "id": "3W",
       "positions": [
         {
@@ -44,14 +38,9 @@
   "units": [
     {
       "call_sign": "Alicante approach",
-      "frequencies": [
-        "120.100",
-        "120.400"
-      ],
+      "frequencies": ["120.100", "120.400"],
       "id": "LEAL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

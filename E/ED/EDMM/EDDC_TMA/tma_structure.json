@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDAB",
-        "EDDC"
-      ],
+      "airports": ["EDAB", "EDDC"],
       "id": "1",
       "positions": [
         {
@@ -16,14 +13,8 @@
         }
       ],
       "runways": {
-        "EDAB": [
-          "04",
-          "22"
-        ],
-        "EDDC": [
-          "04",
-          "22"
-        ]
+        "EDAB": ["04", "22"],
+        "EDDC": ["04", "22"]
       }
     }
   ],
@@ -31,13 +22,9 @@
   "units": [
     {
       "call_sign": "Bautzen approach",
-      "frequencies": [
-        "125.875"
-      ],
+      "frequencies": ["125.875"],
       "id": "EDAB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCYU"
-      ],
+      "airports": ["RCYU"],
       "id": "HUALIEN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Hualien approach",
-      "frequencies": [
-        "124.000"
-      ],
+      "frequencies": ["124.000"],
       "id": "RCYU_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

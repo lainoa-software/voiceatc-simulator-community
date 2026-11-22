@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKSS"
-      ],
+      "airports": ["RKSS"],
       "id": "GIMPO",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Seoul approach",
-      "frequencies": [
-        "119.100"
-      ],
+      "frequencies": ["119.100"],
       "id": "RKSS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

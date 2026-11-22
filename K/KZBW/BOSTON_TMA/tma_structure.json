@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KBOS"
-      ],
+      "airports": ["KBOS"],
       "id": "1",
       "positions": [
         {
@@ -15,10 +13,7 @@
         }
       ],
       "runways": {
-        "KBOS": [
-          "NOISE_ABATE",
-          "OVERNIGHT"
-        ]
+        "KBOS": ["NOISE_ABATE", "OVERNIGHT"]
       }
     }
   ],
@@ -26,27 +21,16 @@
   "units": [
     {
       "call_sign": "Boston Approach",
-      "frequencies": [
-        "118.250",
-        "120.600",
-        "127.200"
-      ],
+      "frequencies": ["118.250", "120.600", "127.200"],
       "id": "KBOS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KBOS",
       "call_sign": "Boston Tower",
-      "frequencies": [
-        "128.800",
-        "132.225"
-      ],
+      "frequencies": ["128.800", "132.225"],
       "id": "KBOS_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

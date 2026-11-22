@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPLI"
-      ],
+      "airports": ["RPLI"],
       "id": "LAOAG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Laoag approach",
-      "frequencies": [
-        "122.300"
-      ],
+      "frequencies": ["122.300"],
       "id": "RPLI_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDV",
-        "EDVE"
-      ],
+      "airports": ["EDDV", "EDVE"],
       "id": "1",
       "positions": [
         {
@@ -16,18 +13,8 @@
         }
       ],
       "runways": {
-        "EDDV": [
-          "08",
-          "26",
-          "09",
-          "27"
-        ],
-        "EDVE": [
-          "08",
-          "26",
-          "09",
-          "27"
-        ]
+        "EDDV": ["08", "26", "09", "27"],
+        "EDVE": ["08", "26", "09", "27"]
       }
     }
   ],
@@ -35,13 +22,9 @@
   "units": [
     {
       "call_sign": "Hannover approach",
-      "frequencies": [
-        "118.055"
-      ],
+      "frequencies": ["118.055"],
       "id": "EDDV_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

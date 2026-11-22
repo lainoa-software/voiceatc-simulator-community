@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPMR"
-      ],
+      "airports": ["RPMR"],
       "id": "TAMBLER",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "General Santos City approach",
-      "frequencies": [
-        "119.100"
-      ],
+      "frequencies": ["119.100"],
       "id": "RPMR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

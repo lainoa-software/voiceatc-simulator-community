@@ -46,9 +46,7 @@
         "136.130"
       ],
       "id": "EDGG_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

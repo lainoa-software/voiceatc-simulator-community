@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EKSP"
-      ],
+      "airports": ["EKSP"],
       "id": "SKRYDSTRUP_TMA_WHOLE_ALL",
       "positions": [
         {
@@ -30,13 +28,9 @@
   "units": [
     {
       "call_sign": "Vojens approach",
-      "frequencies": [
-        "124.105"
-      ],
+      "frequencies": ["124.105"],
       "id": "EKSP_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

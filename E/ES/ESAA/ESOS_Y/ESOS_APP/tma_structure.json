@@ -1,11 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "ESOW",
-        "ESSA",
-        "ESSB"
-      ],
+      "airports": ["ESOW", "ESSA", "ESSB"],
       "id": "1",
       "positions": [
         {
@@ -86,11 +82,7 @@
       }
     },
     {
-      "airports": [
-        "ESOW",
-        "ESSA",
-        "ESSB"
-      ],
+      "airports": ["ESOW", "ESSA", "ESSB"],
       "id": "2",
       "positions": [
         {
@@ -182,14 +174,9 @@
   "units": [
     {
       "call_sign": "Stockholm approach",
-      "frequencies": [
-        "126.655",
-        "123.755"
-      ],
+      "frequencies": ["126.655", "123.755"],
       "id": "ESOW_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

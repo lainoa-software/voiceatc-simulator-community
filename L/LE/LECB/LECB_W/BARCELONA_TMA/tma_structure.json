@@ -43,75 +43,56 @@
   ],
   "layouts": [
     {
-      "airports": [
-        "LEBL",
-        "LEGE",
-        "LERS",
-        "LEDA"
-      ],
+      "airports": ["LEBL", "LEGE", "LERS", "LEDA"],
       "id": "2CO",
       "on_duty": [
         {
           "code": "LEBL_TWR",
           "frequency": "118.105",
           "name": "TOWER",
-          "sectors": [
-            "LEBLATZ"
-          ],
+          "sectors": ["LEBLATZ"],
           "unit": "LEBL_TWR"
         },
         {
           "code": "LECB_BKW_CTR",
           "frequency": "134.680",
           "name": "BKW",
-          "sectors": [
-            "LECBBKW"
-          ],
+          "sectors": ["LECBBKW"],
           "unit": "LECB_CTR"
         },
         {
           "code": "LECB_BKE_CTR",
           "frequency": "135.355",
           "name": "BKE",
-          "sectors": [
-            "LECBBKE"
-          ],
+          "sectors": ["LECBBKE"],
           "unit": "LECB_CTR"
         },
         {
           "code": "LECB_DDX_CTR",
           "frequency": "132.580",
           "name": "DDX",
-          "sectors": [
-            "LEBLDDX"
-          ],
+          "sectors": ["LEBLDDX"],
           "unit": "LECB_CTR"
         },
         {
           "code": "LEGE_APP",
           "frequency": "120.905",
           "name": "TOWER",
-          "sectors": [
-            "LEGEAPP"
-          ],
+          "sectors": ["LEGEAPP"],
           "unit": "LEGE_TWR"
         },
         {
           "code": "LERS_APP",
           "frequency": "128.880",
           "name": "TOWER",
-          "sectors": [
-            "LERSAPP"
-          ],
+          "sectors": ["LERSAPP"],
           "unit": "LERS_TWR"
         },
         {
           "code": "LEDA_TWR",
           "frequency": "121.330",
           "name": "TOWER",
-          "sectors": [
-            "LEDACTR"
-          ],
+          "sectors": ["LEDACTR"],
           "unit": "LEDA_TWR"
         }
       ],
@@ -122,9 +103,7 @@
           "name": "FINAL + T1 + T2 + T3 + T4",
           "sector": "LEBLCORE",
           "unit": "LEBL_APP",
-          "zones": [
-            "LEBLCTR"
-          ]
+          "zones": ["LEBLCTR"]
         }
       ]
     }
@@ -133,60 +112,37 @@
   "units": [
     {
       "call_sign": "Barcelona Approach",
-      "frequencies": [
-        "131.125"
-      ],
+      "frequencies": ["131.125"],
       "id": "LEBL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "LEBL",
       "call_sign": "Barcelona Tower",
-      "frequencies": [
-        "118.105",
-        "118.330"
-      ],
+      "frequencies": ["118.105", "118.330"],
       "id": "LEBL_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     },
     {
       "airport": "LEGE",
       "call_sign": "Girona Tower",
-      "frequencies": [
-        "120.905"
-      ],
+      "frequencies": ["120.905"],
       "id": "LEGE_TWR",
-      "services": [
-        "tower",
-        "approach_conventional"
-      ]
+      "services": ["tower", "approach_conventional"]
     },
     {
       "airport": "LERS",
       "call_sign": "Reus Tower",
-      "frequencies": [
-        "128.880"
-      ],
+      "frequencies": ["128.880"],
       "id": "LERS_TWR",
-      "services": [
-        "tower",
-        "approach_conventional"
-      ]
+      "services": ["tower", "approach_conventional"]
     },
     {
       "airport": "LEDA",
       "call_sign": "Lleida Tower",
-      "frequencies": [
-        "121.330"
-      ],
+      "frequencies": ["121.330"],
       "id": "LEDA_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ],
   "zones": [

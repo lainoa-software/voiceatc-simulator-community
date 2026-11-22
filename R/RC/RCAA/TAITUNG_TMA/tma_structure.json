@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCFN"
-      ],
+      "airports": ["RCFN"],
       "id": "TAITUNG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Taitung approach",
-      "frequencies": [
-        "119.400"
-      ],
+      "frequencies": ["119.400"],
       "id": "RCFN_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

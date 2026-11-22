@@ -67,9 +67,7 @@
         "136.600"
       ],
       "id": "EGTT_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

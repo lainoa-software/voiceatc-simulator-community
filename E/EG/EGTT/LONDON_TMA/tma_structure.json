@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EGLL"
-      ],
+      "airports": ["EGLL"],
       "id": "27",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "EGLL": [
-          "27"
-        ]
+        "EGLL": ["27"]
       }
     },
     {
-      "airports": [
-        "EGLL"
-      ],
+      "airports": ["EGLL"],
       "id": "09",
       "positions": [
         {
@@ -35,9 +29,7 @@
         }
       ],
       "runways": {
-        "EGLL": [
-          "09"
-        ]
+        "EGLL": ["09"]
       }
     }
   ],
@@ -45,29 +37,16 @@
   "units": [
     {
       "call_sign": "Heathrow Director",
-      "frequencies": [
-        "119.730",
-        "120.400",
-        "127.525",
-        "134.980"
-      ],
+      "frequencies": ["119.730", "120.400", "127.525", "134.980"],
       "id": "EGLL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "EGLL",
       "call_sign": "Heathrow Tower",
-      "frequencies": [
-        "118.705",
-        "118.505",
-        "124.480"
-      ],
+      "frequencies": ["118.705", "118.505", "124.480"],
       "id": "EGLL_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

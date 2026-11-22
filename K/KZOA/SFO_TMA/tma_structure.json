@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KSFO"
-      ],
+      "airports": ["KSFO"],
       "id": "1WEST",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "KSFO": [
-          "WEST"
-        ]
+        "KSFO": ["WEST"]
       }
     },
     {
-      "airports": [
-        "KSFO"
-      ],
+      "airports": ["KSFO"],
       "id": "1SOUTHEAST",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "KSFO": [
-          "SOUTHEAST"
-        ]
+        "KSFO": ["SOUTHEAST"]
       }
     },
     {
-      "airports": [
-        "KSFO"
-      ],
+      "airports": ["KSFO"],
       "id": "1NIGHT_10",
       "positions": [
         {
@@ -55,9 +45,7 @@
         }
       ],
       "runways": {
-        "KSFO": [
-          "NIGHT_10"
-        ]
+        "KSFO": ["NIGHT_10"]
       }
     }
   ],
@@ -65,26 +53,16 @@
   "units": [
     {
       "call_sign": "NorCal Approach",
-      "frequencies": [
-        "133.950",
-        "128.325",
-        "134.500"
-      ],
+      "frequencies": ["133.950", "128.325", "134.500"],
       "id": "KSFO_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KSFO",
       "call_sign": "San Francisco Tower",
-      "frequencies": [
-        "120.500"
-      ],
+      "frequencies": ["120.500"],
       "id": "KSFO_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

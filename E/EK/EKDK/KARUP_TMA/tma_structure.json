@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EKKA"
-      ],
+      "airports": ["EKKA"],
       "id": "KARUP_TMA_WHOLE_ALL",
       "positions": [
         {
@@ -15,12 +13,7 @@
         }
       ],
       "runways": {
-        "EKKA": [
-          "EKKA_09R",
-          "EKKA_27L",
-          "EKKA_09L",
-          "EKKA_27R"
-        ]
+        "EKKA": ["EKKA_09R", "EKKA_27L", "EKKA_09L", "EKKA_27R"]
       }
     }
   ],
@@ -28,13 +21,9 @@
   "units": [
     {
       "call_sign": "Karup approach",
-      "frequencies": [
-        "120.430"
-      ],
+      "frequencies": ["120.430"],
       "id": "EKKA_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EDDR",
-        "EDFH"
-      ],
+      "airports": ["EDDR", "EDFH"],
       "id": "EDFH_APP",
       "positions": [
         {
@@ -16,25 +13,12 @@
         }
       ],
       "runways": {
-        "EDDR": [
-          "27",
-          "09",
-          "21",
-          "03"
-        ],
-        "EDFH": [
-          "27",
-          "09",
-          "21",
-          "03"
-        ]
+        "EDDR": ["27", "09", "21", "03"],
+        "EDFH": ["27", "09", "21", "03"]
       }
     },
     {
-      "airports": [
-        "EDDR",
-        "EDFH"
-      ],
+      "airports": ["EDDR", "EDFH"],
       "id": "EDFH_EIF_APP",
       "positions": [
         {
@@ -46,21 +30,12 @@
         }
       ],
       "runways": {
-        "EDDR": [
-          "21",
-          "03"
-        ],
-        "EDFH": [
-          "21",
-          "03"
-        ]
+        "EDDR": ["21", "03"],
+        "EDFH": ["21", "03"]
       }
     },
     {
-      "airports": [
-        "EDDR",
-        "EDFH"
-      ],
+      "airports": ["EDDR", "EDFH"],
       "id": "EDFH_PFA_APP",
       "positions": [
         {
@@ -72,14 +47,8 @@
         }
       ],
       "runways": {
-        "EDDR": [
-          "27",
-          "09"
-        ],
-        "EDFH": [
-          "27",
-          "09"
-        ]
+        "EDDR": ["27", "09"],
+        "EDFH": ["27", "09"]
       }
     }
   ],
@@ -87,13 +56,9 @@
   "units": [
     {
       "call_sign": "Saarbruecken approach",
-      "frequencies": [
-        "125.600"
-      ],
+      "frequencies": ["125.600"],
       "id": "EDDR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

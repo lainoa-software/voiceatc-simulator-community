@@ -7,7 +7,7 @@
     },
     "EDDF": {
       "repo_path": ".voiceatc/defaults/E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_options.json",
-      "sha256": "f843dcbe2a54717464e75820c229cc69c96235d05345dec5da5ee95a6f7ee2e2",
+      "sha256": "4eab6759b2ee61d767181736b8626d813886242c942385f21d8949f5218726db",
       "size_bytes": 3604
     },
     "EDDG": {
@@ -277,8 +277,8 @@
     },
     "VTBD": {
       "repo_path": ".voiceatc/defaults/V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json",
-      "sha256": "b9f95ddd4349b3429a0c11dc233d107bfda5db81526603a406d1f8e52331bb9a",
-      "size_bytes": 280
+      "sha256": "db0f826da10c3cf20505bc3c4cd737bca4058abd551e12edd1e1802e623296ad",
+      "size_bytes": 2866
     },
     "VTBS": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_options.json",
@@ -287,8 +287,8 @@
     },
     "WMKK": {
       "repo_path": ".voiceatc/defaults/W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_options.json",
-      "sha256": "d57c1820e5a3fe4027a57e25aaaf8f7db9dc5c580bf03372fa788ca9073f16f7",
-      "size_bytes": 1185
+      "sha256": "90b09610da2724433e9993b52a88223ddeb3dfe4f43c3a8f9d4d53151c735386",
+      "size_bytes": 1557
     },
     "WSSS": {
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json",

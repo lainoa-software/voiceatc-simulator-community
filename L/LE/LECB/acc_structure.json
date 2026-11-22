@@ -3,15 +3,9 @@
   "units": [
     {
       "call_sign": "Barcelona Control",
-      "frequencies": [
-        "132.580",
-        "134.680",
-        "135.355"
-      ],
+      "frequencies": ["132.580", "134.680", "135.355"],
       "id": "LECB_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

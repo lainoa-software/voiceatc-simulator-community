@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "WSSS"
-      ],
+      "airports": ["WSSS"],
       "id": "SINGAPORE_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Singapore approach",
-      "frequencies": [
-        "124.050"
-      ],
+      "frequencies": ["124.050"],
       "id": "WSSS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

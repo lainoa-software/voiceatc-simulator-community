@@ -22,9 +22,7 @@
   "schema_version": 1,
   "stars": {
     "GUPT1H": {
-      "join_from": [
-        "GUPTA"
-      ]
+      "join_from": ["GUPTA"]
     },
     "GUPT3J": {
       "spawn_enabled": false
@@ -33,9 +31,7 @@
       "spawn_enabled": false
     },
     "KAKA1G": {
-      "join_from": [
-        "KAKAK"
-      ]
+      "join_from": ["KAKAK"]
     },
     "KAKA3J": {
       "spawn_enabled": false
@@ -44,9 +40,7 @@
       "spawn_enabled": false
     },
     "NIRE1H": {
-      "join_from": [
-        "NIREN"
-      ]
+      "join_from": ["NIREN"]
     },
     "NIRE3J": {
       "spawn_enabled": false
@@ -55,9 +49,7 @@
       "spawn_enabled": false
     },
     "PUGE1H": {
-      "join_from": [
-        "PUGER"
-      ]
+      "join_from": ["PUGER"]
     },
     "PUGE3J": {
       "spawn_enabled": false
@@ -66,9 +58,7 @@
       "spawn_enabled": false
     },
     "PULI1G": {
-      "join_from": [
-        "PULIP"
-      ]
+      "join_from": ["PULIP"]
     },
     "PULI3J": {
       "spawn_enabled": false
@@ -77,9 +67,7 @@
       "spawn_enabled": false
     },
     "SALA1H": {
-      "join_from": [
-        "SALAX"
-      ]
+      "join_from": ["SALAX"]
     },
     "SALA3J": {
       "spawn_enabled": false
@@ -88,9 +76,7 @@
       "spawn_enabled": false
     },
     "SARO1G": {
-      "join_from": [
-        "SAROX"
-      ]
+      "join_from": ["SAROX"]
     },
     "SARO3J": {
       "spawn_enabled": false

@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKSM"
-      ],
+      "airports": ["RKSM"],
       "id": "SEOUL_AB",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Seoul approach",
-      "frequencies": [
-        "123.800"
-      ],
+      "frequencies": ["123.800"],
       "id": "RKSM_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "VTBD",
-        "VTBS"
-      ],
+      "airports": ["VTBD", "VTBS"],
       "id": "BANGKOK_APP",
       "positions": [
         {
@@ -17,9 +14,7 @@
       ]
     },
     {
-      "airports": [
-        "VTBS"
-      ],
+      "airports": ["VTBS"],
       "id": "BANGKOK_APP_VTBS_ONLY",
       "positions": [
         {
@@ -32,10 +27,7 @@
       ]
     },
     {
-      "airports": [
-        "VTBS",
-        "VTBD"
-      ],
+      "airports": ["VTBS", "VTBD"],
       "id": "BANGKOK_SPLIT_SOUTH",
       "positions": [
         {
@@ -61,21 +53,12 @@
         }
       ],
       "runways": {
-        "VTBD": [
-          "19_20",
-          "21"
-        ],
-        "VTBS": [
-          "19_20",
-          "21"
-        ]
+        "VTBD": ["19_20", "21"],
+        "VTBS": ["19_20", "21"]
       }
     },
     {
-      "airports": [
-        "VTBS",
-        "VTBD"
-      ],
+      "airports": ["VTBS", "VTBD"],
       "id": "BANGKOK_SPLIT_NORTH",
       "positions": [
         {
@@ -101,14 +84,8 @@
         }
       ],
       "runways": {
-        "VTBD": [
-          "01_02",
-          "03"
-        ],
-        "VTBS": [
-          "01_02",
-          "03"
-        ]
+        "VTBD": ["01_02", "03"],
+        "VTBS": ["01_02", "03"]
       }
     }
   ],
@@ -116,15 +93,9 @@
   "units": [
     {
       "call_sign": "Bangkok approach",
-      "frequencies": [
-        "125.200",
-        "119.250",
-        "121.100"
-      ],
+      "frequencies": ["125.200", "119.250", "121.100"],
       "id": "VTBD_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

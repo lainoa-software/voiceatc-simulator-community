@@ -1,65 +1,45 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "KORD"
-      ],
+      "arrives": ["KORD"],
       "descent": "A120",
-      "fix": [
-        "BENKY"
-      ],
+      "fix": ["BENKY"],
       "from": "KZAU_CTR",
       "name": "KORD_ARR_BENKY",
       "priority": 10,
       "to": "KORD_APP"
     },
     {
-      "arrives": [
-        "KORD"
-      ],
+      "arrives": ["KORD"],
       "descent": "A120",
-      "fix": [
-        "SHAIN"
-      ],
+      "fix": ["SHAIN"],
       "from": "KZAU_CTR",
       "name": "KORD_ARR_SHAIN",
       "priority": 10,
       "to": "KORD_APP"
     },
     {
-      "arrives": [
-        "KORD"
-      ],
+      "arrives": ["KORD"],
       "descent": "A110",
-      "fix": [
-        "TRTLL"
-      ],
+      "fix": ["TRTLL"],
       "from": "KZAU_CTR",
       "name": "KORD_ARR_TRTLL",
       "priority": 10,
       "to": "KORD_APP"
     },
     {
-      "arrives": [
-        "KORD"
-      ],
+      "arrives": ["KORD"],
       "descent": "A110",
-      "fix": [
-        "FYTTE"
-      ],
+      "fix": ["FYTTE"],
       "from": "KZAU_CTR",
       "name": "KORD_ARR_FYTTE",
       "priority": 10,
       "to": "KORD_APP"
     },
     {
-      "arrives": [
-        "KORD"
-      ],
+      "arrives": ["KORD"],
       "descent": "A110",
-      "fix": [
-        "KRENA"
-      ],
+      "fix": ["KRENA"],
       "from": "KZAU_CTR",
       "name": "KORD_ARR_KRENA",
       "priority": 10,

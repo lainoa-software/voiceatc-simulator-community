@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKNW"
-      ],
+      "airports": ["RKNW"],
       "id": "WONJU",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Wonju approach",
-      "frequencies": [
-        "130.200"
-      ],
+      "frequencies": ["130.200"],
       "id": "RKNW_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

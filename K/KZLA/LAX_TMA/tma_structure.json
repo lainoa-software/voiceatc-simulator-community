@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KLAX",
-        "KLGB"
-      ],
+      "airports": ["KLAX", "KLGB"],
       "id": "1WEST",
       "positions": [
         {
@@ -16,16 +13,11 @@
         }
       ],
       "runways": {
-        "KLAX": [
-          "WEST"
-        ]
+        "KLAX": ["WEST"]
       }
     },
     {
-      "airports": [
-        "KLAX",
-        "KLGB"
-      ],
+      "airports": ["KLAX", "KLGB"],
       "id": "1EAST",
       "positions": [
         {
@@ -37,16 +29,11 @@
         }
       ],
       "runways": {
-        "KLAX": [
-          "EAST"
-        ]
+        "KLAX": ["EAST"]
       }
     },
     {
-      "airports": [
-        "KLAX",
-        "KLGB"
-      ],
+      "airports": ["KLAX", "KLGB"],
       "id": "1OVER_OCEAN",
       "positions": [
         {
@@ -58,16 +45,11 @@
         }
       ],
       "runways": {
-        "KLAX": [
-          "OVER_OCEAN"
-        ]
+        "KLAX": ["OVER_OCEAN"]
       }
     },
     {
-      "airports": [
-        "KLAX",
-        "KLGB"
-      ],
+      "airports": ["KLAX", "KLGB"],
       "id": "1NIGHT_INBOARD",
       "positions": [
         {
@@ -79,9 +61,7 @@
         }
       ],
       "runways": {
-        "KLAX": [
-          "NIGHT_INBOARD"
-        ]
+        "KLAX": ["NIGHT_INBOARD"]
       }
     }
   ],
@@ -89,41 +69,23 @@
   "units": [
     {
       "call_sign": "SoCal Approach",
-      "frequencies": [
-        "124.900",
-        "124.300",
-        "124.500",
-        "125.350",
-        "128.500"
-      ],
+      "frequencies": ["124.900", "124.300", "124.500", "125.350", "128.500"],
       "id": "KLAX_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KLAX",
       "call_sign": "Los Angeles Tower",
-      "frequencies": [
-        "120.950",
-        "133.900"
-      ],
+      "frequencies": ["120.950", "133.900"],
       "id": "KLAX_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     },
     {
       "airport": "KLGB",
       "call_sign": "Long Beach Tower",
-      "frequencies": [
-        "119.400",
-        "120.500"
-      ],
+      "frequencies": ["119.400", "120.500"],
       "id": "KLGB_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

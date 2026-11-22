@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPGR",
-        "LPLA"
-      ],
+      "airports": ["LPGR", "LPLA"],
       "id": "LAJES_TMA_SPLIT",
       "positions": [
         {
@@ -16,18 +13,8 @@
         }
       ],
       "runways": {
-        "LPGR": [
-          "LPLA_15",
-          "LPLA_33",
-          "LPGR_09",
-          "LPGR_27"
-        ],
-        "LPLA": [
-          "LPLA_15",
-          "LPLA_33",
-          "LPGR_09",
-          "LPGR_27"
-        ]
+        "LPGR": ["LPLA_15", "LPLA_33", "LPGR_09", "LPGR_27"],
+        "LPLA": ["LPLA_15", "LPLA_33", "LPGR_09", "LPGR_27"]
       }
     }
   ],
@@ -35,13 +22,9 @@
   "units": [
     {
       "call_sign": "Graciosa approach",
-      "frequencies": [
-        "135.000"
-      ],
+      "frequencies": ["135.000"],
       "id": "LPGR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

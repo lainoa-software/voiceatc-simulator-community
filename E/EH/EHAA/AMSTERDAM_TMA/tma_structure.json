@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EHAM"
-      ],
+      "airports": ["EHAM"],
       "id": "SOUTH",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "EHAM": [
-          "ARR 18R 18C DEP 24 18L"
-        ]
+        "EHAM": ["ARR 18R 18C DEP 24 18L"]
       }
     },
     {
-      "airports": [
-        "EHAM"
-      ],
+      "airports": ["EHAM"],
       "id": "MIXED",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "EHAM": [
-          "ARR 36R 06 DEP 18L 18C"
-        ]
+        "EHAM": ["ARR 36R 06 DEP 18L 18C"]
       }
     },
     {
-      "airports": [
-        "EHAM"
-      ],
+      "airports": ["EHAM"],
       "id": "NORTH",
       "positions": [
         {
@@ -55,9 +45,7 @@
         }
       ],
       "runways": {
-        "EHAM": [
-          "ARR 36C 36R DEP 36L 36C"
-        ]
+        "EHAM": ["ARR 36C 36R DEP 36L 36C"]
       }
     }
   ],
@@ -65,30 +53,16 @@
   "units": [
     {
       "call_sign": "Schiphol Approach",
-      "frequencies": [
-        "121.205",
-        "118.080",
-        "119.055",
-        "131.155"
-      ],
+      "frequencies": ["121.205", "118.080", "119.055", "131.155"],
       "id": "EHAM_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "EHAM",
       "call_sign": "Schiphol Tower",
-      "frequencies": [
-        "119.230",
-        "118.105",
-        "118.280",
-        "135.110"
-      ],
+      "frequencies": ["119.230", "118.105", "118.280", "135.110"],
       "id": "EHAM_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

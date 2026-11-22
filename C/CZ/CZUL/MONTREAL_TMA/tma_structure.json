@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "CYUL"
-      ],
+      "airports": ["CYUL"],
       "id": "MONTREAL_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Montreal approach",
-      "frequencies": [
-        "118.900"
-      ],
+      "frequencies": ["118.900"],
       "id": "CYUL_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

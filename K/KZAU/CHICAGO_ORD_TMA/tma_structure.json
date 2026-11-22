@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "WEST_FLOW_DUAL",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "WEST_FLOW_DUAL"
-        ]
+        "KORD": ["WEST_FLOW_DUAL"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "WEST_FLOW_TRIPLE",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "WEST_FLOW_TRIPLE"
-        ]
+        "KORD": ["WEST_FLOW_TRIPLE"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "WEST_FLOW_NOISE_ABATEMENT",
       "positions": [
         {
@@ -55,15 +45,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "WEST_FLOW_NOISE_ABATEMENT"
-        ]
+        "KORD": ["WEST_FLOW_NOISE_ABATEMENT"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "EAST_FLOW_DUAL_1",
       "positions": [
         {
@@ -75,15 +61,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "EAST_FLOW_DUAL_1"
-        ]
+        "KORD": ["EAST_FLOW_DUAL_1"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "EAST_FLOW_DUAL_2",
       "positions": [
         {
@@ -95,15 +77,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "EAST_FLOW_DUAL_2"
-        ]
+        "KORD": ["EAST_FLOW_DUAL_2"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "EAST_FLOW_TRIPLE_1",
       "positions": [
         {
@@ -115,15 +93,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "EAST_FLOW_TRIPLE_1"
-        ]
+        "KORD": ["EAST_FLOW_TRIPLE_1"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "EAST_FLOW_TRIPLE_2",
       "positions": [
         {
@@ -135,15 +109,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "EAST_FLOW_TRIPLE_2"
-        ]
+        "KORD": ["EAST_FLOW_TRIPLE_2"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "EAST_FLOW_NOISE_ABATEMENT",
       "positions": [
         {
@@ -155,15 +125,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "EAST_FLOW_NOISE_ABATEMENT"
-        ]
+        "KORD": ["EAST_FLOW_NOISE_ABATEMENT"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "4S",
       "positions": [
         {
@@ -175,15 +141,11 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "4S"
-        ]
+        "KORD": ["4S"]
       }
     },
     {
-      "airports": [
-        "KORD"
-      ],
+      "airports": ["KORD"],
       "id": "22S",
       "positions": [
         {
@@ -195,9 +157,7 @@
         }
       ],
       "runways": {
-        "KORD": [
-          "22S"
-        ]
+        "KORD": ["22S"]
       }
     }
   ],
@@ -205,16 +165,9 @@
   "units": [
     {
       "call_sign": "Chicago Approach",
-      "frequencies": [
-        "119.000",
-        "124.350",
-        "125.700",
-        "133.625"
-      ],
+      "frequencies": ["119.000", "124.350", "125.700", "133.625"],
       "id": "KORD_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KORD",
@@ -231,9 +184,7 @@
         "133.000"
       ],
       "id": "KORD_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

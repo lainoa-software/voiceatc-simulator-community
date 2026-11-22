@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVE"
-      ],
+      "airports": ["RPVE"],
       "id": "CATICLAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Malay approach",
-      "frequencies": [
-        "120.400"
-      ],
+      "frequencies": ["120.400"],
       "id": "RPVE_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

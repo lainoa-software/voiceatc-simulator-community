@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPCS",
-        "LPPT"
-      ],
+      "airports": ["LPCS", "LPPT"],
       "id": "LISBOA_TMA_SPLIT_02",
       "positions": [
         {
@@ -30,23 +27,12 @@
         }
       ],
       "runways": {
-        "LPCS": [
-          "LPPT_02",
-          "LPCS_17",
-          "LPCS_35"
-        ],
-        "LPPT": [
-          "LPPT_02",
-          "LPCS_17",
-          "LPCS_35"
-        ]
+        "LPCS": ["LPPT_02", "LPCS_17", "LPCS_35"],
+        "LPPT": ["LPPT_02", "LPCS_17", "LPCS_35"]
       }
     },
     {
-      "airports": [
-        "LPCS",
-        "LPPT"
-      ],
+      "airports": ["LPCS", "LPPT"],
       "id": "LISBOA_TMA_COMBINED_02",
       "positions": [
         {
@@ -58,23 +44,12 @@
         }
       ],
       "runways": {
-        "LPCS": [
-          "LPPT_02",
-          "LPCS_17",
-          "LPCS_35"
-        ],
-        "LPPT": [
-          "LPPT_02",
-          "LPCS_17",
-          "LPCS_35"
-        ]
+        "LPCS": ["LPPT_02", "LPCS_17", "LPCS_35"],
+        "LPPT": ["LPPT_02", "LPCS_17", "LPCS_35"]
       }
     },
     {
-      "airports": [
-        "LPCS",
-        "LPPT"
-      ],
+      "airports": ["LPCS", "LPPT"],
       "id": "LISBOA_TMA_SPLIT_20",
       "positions": [
         {
@@ -100,23 +75,12 @@
         }
       ],
       "runways": {
-        "LPCS": [
-          "LPPT_20",
-          "LPCS_17",
-          "LPCS_35"
-        ],
-        "LPPT": [
-          "LPPT_20",
-          "LPCS_17",
-          "LPCS_35"
-        ]
+        "LPCS": ["LPPT_20", "LPCS_17", "LPCS_35"],
+        "LPPT": ["LPPT_20", "LPCS_17", "LPCS_35"]
       }
     },
     {
-      "airports": [
-        "LPCS",
-        "LPPT"
-      ],
+      "airports": ["LPCS", "LPPT"],
       "id": "LISBOA_TMA_COMBINED_20",
       "positions": [
         {
@@ -128,16 +92,8 @@
         }
       ],
       "runways": {
-        "LPCS": [
-          "LPPT_20",
-          "LPCS_17",
-          "LPCS_35"
-        ],
-        "LPPT": [
-          "LPPT_20",
-          "LPCS_17",
-          "LPCS_35"
-        ]
+        "LPCS": ["LPPT_20", "LPCS_17", "LPCS_35"],
+        "LPPT": ["LPPT_20", "LPCS_17", "LPCS_35"]
       }
     }
   ],
@@ -145,15 +101,9 @@
   "units": [
     {
       "call_sign": "Cascais approach",
-      "frequencies": [
-        "119.105",
-        "123.980",
-        "125.130"
-      ],
+      "frequencies": ["119.105", "123.980", "125.130"],
       "id": "LPCS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

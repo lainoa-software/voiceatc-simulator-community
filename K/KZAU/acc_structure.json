@@ -73,9 +73,7 @@
         "135.975"
       ],
       "id": "KZAU_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

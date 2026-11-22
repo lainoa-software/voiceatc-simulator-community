@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "CYVR"
-      ],
+      "airports": ["CYVR"],
       "id": "VANCOUVER_APP",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Vancouver approach",
-      "frequencies": [
-        "133.100"
-      ],
+      "frequencies": ["133.100"],
       "id": "CYVR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

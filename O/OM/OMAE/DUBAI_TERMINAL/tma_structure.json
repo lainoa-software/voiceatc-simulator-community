@@ -1,11 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "OMDB",
-        "OMDW",
-        "OMSJ"
-      ],
+      "airports": ["OMDB", "OMDW", "OMSJ"],
       "id": "1",
       "positions": [
         {
@@ -17,18 +13,9 @@
         }
       ],
       "runways": {
-        "OMDB": [
-          "30",
-          "12"
-        ],
-        "OMDW": [
-          "30",
-          "12"
-        ],
-        "OMSJ": [
-          "30",
-          "12"
-        ]
+        "OMDB": ["30", "12"],
+        "OMDW": ["30", "12"],
+        "OMSJ": ["30", "12"]
       }
     }
   ],
@@ -36,13 +23,9 @@
   "units": [
     {
       "call_sign": "Dubai approach",
-      "frequencies": [
-        "124.900"
-      ],
+      "frequencies": ["124.900"],
       "id": "OMDB_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

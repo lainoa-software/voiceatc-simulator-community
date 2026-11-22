@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LPPR"
-      ],
+      "airports": ["LPPR"],
       "id": "PORTO_TMA_SPLIT",
       "positions": [
         {
@@ -22,16 +20,11 @@
         }
       ],
       "runways": {
-        "LPPR": [
-          "LPPR_17",
-          "LPPR_35"
-        ]
+        "LPPR": ["LPPR_17", "LPPR_35"]
       }
     },
     {
-      "airports": [
-        "LPPR"
-      ],
+      "airports": ["LPPR"],
       "id": "PORTO_TMA_COMBINED",
       "positions": [
         {
@@ -43,10 +36,7 @@
         }
       ],
       "runways": {
-        "LPPR": [
-          "LPPR_17",
-          "LPPR_35"
-        ]
+        "LPPR": ["LPPR_17", "LPPR_35"]
       }
     }
   ],
@@ -54,14 +44,9 @@
   "units": [
     {
       "call_sign": "Porto approach",
-      "frequencies": [
-        "120.910",
-        "120.430"
-      ],
+      "frequencies": ["120.910", "120.430"],
       "id": "LPPR_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

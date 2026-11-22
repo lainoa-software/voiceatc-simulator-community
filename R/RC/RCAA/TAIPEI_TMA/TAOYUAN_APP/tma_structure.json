@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCTP"
-      ],
+      "airports": ["RCTP"],
       "id": "TAOYUAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Taipei approach",
-      "frequencies": [
-        "125.100"
-      ],
+      "frequencies": ["125.100"],
       "id": "RCTP_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

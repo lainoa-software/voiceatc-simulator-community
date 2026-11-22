@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "EKBI"
-      ],
+      "airports": ["EKBI"],
       "id": "BILLUND_TMA_WHOLE_ALL",
       "positions": [
         {
@@ -30,13 +28,9 @@
   "units": [
     {
       "call_sign": "Billund approach",
-      "frequencies": [
-        "127.580"
-      ],
+      "frequencies": ["127.580"],
       "id": "EKBI_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

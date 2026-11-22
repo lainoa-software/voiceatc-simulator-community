@@ -62,9 +62,7 @@
         "135.750"
       ],
       "id": "KZDC_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }

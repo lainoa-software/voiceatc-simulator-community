@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKTH"
-      ],
+      "airports": ["RKTH"],
       "id": "POHANG",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Pohang approach",
-      "frequencies": [
-        "124.250"
-      ],
+      "frequencies": ["124.250"],
       "id": "RKTH_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

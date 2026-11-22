@@ -1,52 +1,36 @@
 {
   "agreements": [
     {
-      "arrives": [
-        "KBOS"
-      ],
+      "arrives": ["KBOS"],
       "descent": "A110",
-      "fix": [
-        "PROVI"
-      ],
+      "fix": ["PROVI"],
       "from": "KZBW_CTR",
       "name": "KBOS_ARR_PROVI",
       "priority": 10,
       "to": "KBOS_APP"
     },
     {
-      "arrives": [
-        "KBOS"
-      ],
+      "arrives": ["KBOS"],
       "descent": "A110",
-      "fix": [
-        "JFUND"
-      ],
+      "fix": ["JFUND"],
       "from": "KZBW_CTR",
       "name": "KBOS_ARR_JFUND",
       "priority": 10,
       "to": "KBOS_APP"
     },
     {
-      "arrives": [
-        "KBOS"
-      ],
+      "arrives": ["KBOS"],
       "descent": "A110",
-      "fix": [
-        "OOSHN"
-      ],
+      "fix": ["OOSHN"],
       "from": "KZBW_CTR",
       "name": "KBOS_ARR_OOSHN",
       "priority": 10,
       "to": "KBOS_APP"
     },
     {
-      "arrives": [
-        "KBOS"
-      ],
+      "arrives": ["KBOS"],
       "descent": "A110",
-      "fix": [
-        "JEWIT"
-      ],
+      "fix": ["JEWIT"],
       "from": "KZBW_CTR",
       "name": "KBOS_ARR_JEWIT",
       "priority": 10,

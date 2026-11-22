@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "OERK"
-      ],
+      "airports": ["OERK"],
       "id": "RIYADH_APP",
       "positions": [
         {
@@ -16,9 +14,7 @@
       ]
     },
     {
-      "airports": [
-        "OERK"
-      ],
+      "airports": ["OERK"],
       "id": "RIYADH_EAST_WEST",
       "positions": [
         {
@@ -42,14 +38,9 @@
   "units": [
     {
       "call_sign": "Riyadh approach",
-      "frequencies": [
-        "120.000",
-        "128.500"
-      ],
+      "frequencies": ["120.000", "128.500"],
       "id": "OERK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

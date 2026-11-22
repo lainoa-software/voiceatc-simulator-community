@@ -1,15 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "GCHI",
-        "GCLA",
-        "GCTS",
-        "GCXO",
-        "GCLP",
-        "GCFV",
-        "GCRR"
-      ],
+      "airports": ["GCHI", "GCLA", "GCTS", "GCXO", "GCLP", "GCFV", "GCRR"],
       "id": "A3N",
       "positions": [
         {
@@ -40,15 +32,9 @@
   "units": [
     {
       "call_sign": "El Hierro approach",
-      "frequencies": [
-        "126.100",
-        "124.300",
-        "129.300"
-      ],
+      "frequencies": ["126.100", "124.300", "129.300"],
       "id": "GCHI_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

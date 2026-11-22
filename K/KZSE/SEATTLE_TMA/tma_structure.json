@@ -1,10 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "KSEA",
-        "KBFI"
-      ],
+      "airports": ["KSEA", "KBFI"],
       "id": "1SOUTH_DAY",
       "positions": [
         {
@@ -16,16 +13,11 @@
         }
       ],
       "runways": {
-        "KSEA": [
-          "SOUTH_DAY"
-        ]
+        "KSEA": ["SOUTH_DAY"]
       }
     },
     {
-      "airports": [
-        "KSEA",
-        "KBFI"
-      ],
+      "airports": ["KSEA", "KBFI"],
       "id": "1SOUTH_NIGHT",
       "positions": [
         {
@@ -37,16 +29,11 @@
         }
       ],
       "runways": {
-        "KSEA": [
-          "SOUTH_NIGHT"
-        ]
+        "KSEA": ["SOUTH_NIGHT"]
       }
     },
     {
-      "airports": [
-        "KSEA",
-        "KBFI"
-      ],
+      "airports": ["KSEA", "KBFI"],
       "id": "1NORTH_DAY",
       "positions": [
         {
@@ -58,16 +45,11 @@
         }
       ],
       "runways": {
-        "KSEA": [
-          "NORTH_DAY"
-        ]
+        "KSEA": ["NORTH_DAY"]
       }
     },
     {
-      "airports": [
-        "KSEA",
-        "KBFI"
-      ],
+      "airports": ["KSEA", "KBFI"],
       "id": "1NORTH_NIGHT",
       "positions": [
         {
@@ -79,9 +61,7 @@
         }
       ],
       "runways": {
-        "KSEA": [
-          "NORTH_NIGHT"
-        ]
+        "KSEA": ["NORTH_NIGHT"]
       }
     }
   ],
@@ -101,33 +81,21 @@
         "133.650"
       ],
       "id": "KSEA_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "airport": "KSEA",
       "call_sign": "Seattle Tower",
-      "frequencies": [
-        "119.900",
-        "120.950"
-      ],
+      "frequencies": ["119.900", "120.950"],
       "id": "KSEA_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     },
     {
       "airport": "KBFI",
       "call_sign": "Boeing Tower",
-      "frequencies": [
-        "118.300",
-        "120.600"
-      ],
+      "frequencies": ["118.300", "120.600"],
       "id": "KBFI_TWR",
-      "services": [
-        "tower"
-      ]
+      "services": ["tower"]
     }
   ]
 }

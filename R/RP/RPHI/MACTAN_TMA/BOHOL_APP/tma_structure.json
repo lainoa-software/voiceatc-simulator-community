@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPSP"
-      ],
+      "airports": ["RPSP"],
       "id": "BOHOL",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Bohol Panglao approach",
-      "frequencies": [
-        "124.700"
-      ],
+      "frequencies": ["124.700"],
       "id": "RPSP_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

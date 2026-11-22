@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RKPS"
-      ],
+      "airports": ["RKPS"],
       "id": "SACHEON",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Sacheon approach",
-      "frequencies": [
-        "135.400"
-      ],
+      "frequencies": ["135.400"],
       "id": "RKPS_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

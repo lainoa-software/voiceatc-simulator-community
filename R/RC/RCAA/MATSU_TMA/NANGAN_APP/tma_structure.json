@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RCMT"
-      ],
+      "airports": ["RCMT"],
       "id": "NANGAN",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Matsu approach",
-      "frequencies": [
-        "121.000"
-      ],
+      "frequencies": ["121.000"],
       "id": "RCMT_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

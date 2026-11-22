@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_08L",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_08L"
-        ]
+        "LOXT": ["LOXT_08L"]
       }
     },
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_26R",
       "positions": [
         {
@@ -35,15 +29,11 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_26R"
-        ]
+        "LOXT": ["LOXT_26R"]
       }
     },
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_13",
       "positions": [
         {
@@ -55,15 +45,11 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_13"
-        ]
+        "LOXT": ["LOXT_13"]
       }
     },
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_31",
       "positions": [
         {
@@ -75,15 +61,11 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_31"
-        ]
+        "LOXT": ["LOXT_31"]
       }
     },
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_05",
       "positions": [
         {
@@ -95,15 +77,11 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_05"
-        ]
+        "LOXT": ["LOXT_05"]
       }
     },
     {
-      "airports": [
-        "LOXT"
-      ],
+      "airports": ["LOXT"],
       "id": "TULLN_TMA_WHOLE_LOXT_23",
       "positions": [
         {
@@ -115,9 +93,7 @@
         }
       ],
       "runways": {
-        "LOXT": [
-          "LOXT_23"
-        ]
+        "LOXT": ["LOXT_23"]
       }
     }
   ],
@@ -125,13 +101,9 @@
   "units": [
     {
       "call_sign": "Tulln approach",
-      "frequencies": [
-        "136.130"
-      ],
+      "frequencies": ["136.130"],
       "id": "LOXT_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

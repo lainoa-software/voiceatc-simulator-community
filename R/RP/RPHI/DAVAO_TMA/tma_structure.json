@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPMD"
-      ],
+      "airports": ["RPMD"],
       "id": "DAVAO",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Davao approach",
-      "frequencies": [
-        "122.400"
-      ],
+      "frequencies": ["122.400"],
       "id": "RPMD_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

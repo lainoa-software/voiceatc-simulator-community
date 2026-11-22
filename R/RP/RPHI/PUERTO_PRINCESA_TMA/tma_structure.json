@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "RPVP"
-      ],
+      "airports": ["RPVP"],
       "id": "PUERTO_PRINCESA",
       "positions": [
         {
@@ -20,13 +18,9 @@
   "units": [
     {
       "call_sign": "Puerto Princesa approach",
-      "frequencies": [
-        "122.000"
-      ],
+      "frequencies": ["122.000"],
       "id": "RPVP_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

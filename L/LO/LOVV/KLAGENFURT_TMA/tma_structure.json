@@ -1,9 +1,7 @@
 {
   "layouts": [
     {
-      "airports": [
-        "LOWK"
-      ],
+      "airports": ["LOWK"],
       "id": "KLAGENFURT_TMA_WHOLE_LOWK_10L",
       "positions": [
         {
@@ -15,15 +13,11 @@
         }
       ],
       "runways": {
-        "LOWK": [
-          "LOWK_10L"
-        ]
+        "LOWK": ["LOWK_10L"]
       }
     },
     {
-      "airports": [
-        "LOWK"
-      ],
+      "airports": ["LOWK"],
       "id": "KLAGENFURT_TMA_WHOLE_LOWK_28R",
       "positions": [
         {
@@ -35,9 +29,7 @@
         }
       ],
       "runways": {
-        "LOWK": [
-          "LOWK_28R"
-        ]
+        "LOWK": ["LOWK_28R"]
       }
     }
   ],
@@ -45,13 +37,9 @@
   "units": [
     {
       "call_sign": "Klagenfurt approach",
-      "frequencies": [
-        "123.325"
-      ],
+      "frequencies": ["123.325"],
       "id": "LOWK_APP",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ]
 }

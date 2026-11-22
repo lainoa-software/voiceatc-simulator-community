@@ -4,12 +4,8 @@
     {
       "id": "BCN_CTR",
       "call_sign": "Barcelona Control",
-      "services": [
-        "center"
-      ],
-      "frequencies": [
-        "132.580"
-      ]
+      "services": ["center"],
+      "frequencies": ["132.580"]
     }
   ]
 }

@@ -7,8 +7,8 @@
     },
     "EDDF": {
       "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_options.json",
-      "sha256": "e9234921b31c48a2cb306cb8eef24c5349b50ac3bb320f9fa08b4473d3cce921",
-      "size_bytes": 8457
+      "sha256": "4e81811ed8ff2148de5cf4ad6c174d7b5d62b66a6145ce3e9558bf77c0c0fe56",
+      "size_bytes": 8401
     },
     "EDDG": {
       "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_options.json",
@@ -277,8 +277,8 @@
     },
     "VTBD": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json",
-      "sha256": "28086196ade77d70114f80a2b7208259c63b59b154a31464a4d334f3233cba58",
-      "size_bytes": 326
+      "sha256": "321448c2527e6b707a5d375f320909de5317fd6c511efe3f3a101c2c979bad4f",
+      "size_bytes": 2870
     },
     "VTBS": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_options.json",
@@ -287,8 +287,8 @@
     },
     "WMKK": {
       "repo_path": "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_options.json",
-      "sha256": "a5a6c8da7ef758de49c332dab0ca7d606332c59f4dc99988aff330ce5626e9b6",
-      "size_bytes": 1561
+      "sha256": "f2205f4c6195003fe9d4e0053a9c5dc890b1a94f0f4b4fff2531b82fd87d0d94",
+      "size_bytes": 1449
     },
     "WSSS": {
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json",

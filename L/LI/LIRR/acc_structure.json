@@ -42,9 +42,7 @@
         "135.700"
       ],
       "id": "LIRR_CTR",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     }
   ]
 }
