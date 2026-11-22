@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KLGA"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "KLGA_APP",
+          "frequency": "120.800",
+          "name": "ALL",
+          "sector": "KLGAAPP",
+          "unit": "KLGA_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "New York approach",
+      "frequencies": [
+        "120.800"
+      ],
+      "id": "KLGA_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

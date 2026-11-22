@@ -1,0 +1,25 @@
+{
+  "airport": "EKCH",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "runways": {
+    "22R": {
+      "init_climb": 7000
+    },
+    "22L": {
+      "init_climb": 7000
+    },
+    "04R": {
+      "init_climb": 7000
+    },
+    "04L": {
+      "init_climb": 7000
+    },
+    "12": {
+      "init_climb": 4000
+    },
+    "30": {
+      "init_climb": 4000
+    }
+  }
+}

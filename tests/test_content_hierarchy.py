@@ -173,7 +173,7 @@ class ContentHierarchyTests(unittest.TestCase):
     def test_reports_one_unregistered_scope_block_for_many_files(self) -> None:
         self.write_json("K/KZHU/MKE_TMA/KMKE/runway_configs.json", {"airport": "KMKE"})
         self.write_json("K/KZHU/MKE_TMA/KMKE/procedure_options.json", {"airport": "KMKE"})
-        self.write_json("K/KZHU/MKE_TMA/sector_influence.json", {"sector_id": "X", "airports": ["KMKE"]})
+        self.write_json("K/KZHU/MKE_TMA/tma_structure.json", {"schema": 2, "layouts": [{"positions": [{"airports": ["KMKE"]}]}]})
         report = self.report()
         self.assertIn("K/KZHU/MKE_TMA is not a registered terminal scope (3 files affected).", report)
         self.assertIn('"K/KZHU/MKE_TMA": ["KMKE"],', report)
@@ -274,6 +274,23 @@ class ContentHierarchyTests(unittest.TestCase):
         self.assertTrue(
             any("release-only compatibility alias must not exist in source: K/KA/style.json" in error for error in self.errors())
         )
+
+    def test_accepts_acc_and_definitions_at_fir_depth_and_rejects_elsewhere(self) -> None:
+        self.write_json("K/KZHU/acc_structure.json", {"schema": 2, "units": []})
+        self.write_json("K/KZHU/acc_coordination.json", {"schema": 2, "agreements": []})
+        self.write_json("K/KZHU/sector_definitions.json", {"sector_definitions": []})
+        self.write_json("E/ED/EDGG/acc_structure.json", {"schema": 2, "units": []})
+        self.assertEqual([], self.errors())
+
+        self.write_json("K/KZHU/AUSTIN_TMA/acc_structure.json", {"schema": 2, "units": []})
+        self.assertTrue(any("FIR/ARTCC depth" in error for error in self.errors()))
+
+    def test_rejects_generated_legacy_sector_files_in_source(self) -> None:
+        self.write_json("K/KZHU/AUSTIN_TMA/sector_configs.json", {"sector_configs": []})
+        self.write_json("K/KZHU/AUSTIN_TMA/sector_influence.json", {"sector_influences": []})
+        errors = self.errors()
+        self.assertTrue(any("sector_configs.json" in e and "generated at publish" in e for e in errors), errors)
+        self.assertTrue(any("sector_influence.json" in e and "generated at publish" in e for e in errors), errors)
 
 
 class LaunchPortfolioHierarchyTests(unittest.TestCase):

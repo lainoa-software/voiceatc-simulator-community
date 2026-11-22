@@ -1,0 +1,200 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "RILAX"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_RILAX",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "BERSU"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_BERSU",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "BLM"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_BLM",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "DOPIL"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_DOPIL",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "KELIP"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_KELIP",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "NEGRA"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_NEGRA",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "TRA"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_TRA",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "WIL"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_WIL",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "GIPOL"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_GIPOL",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "arrives": [
+        "LSZH"
+      ],
+      "descent": "F130",
+      "fix": [
+        "AMIKI"
+      ],
+      "from": "LSAS_CTR",
+      "name": "LSZH_ARR_AMIKI",
+      "priority": 10,
+      "to": "LSZH_APP"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LSZH"
+      ],
+      "fix": [
+        "DEGES"
+      ],
+      "from": "LSZH_APP",
+      "name": "LSZH_DEP_DEGES",
+      "priority": 10,
+      "to": "LSAS_CTR"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LSZH"
+      ],
+      "fix": [
+        "VEBIT"
+      ],
+      "from": "LSZH_APP",
+      "name": "LSZH_DEP_VEBIT",
+      "priority": 10,
+      "to": "LSAS_CTR"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LSZH"
+      ],
+      "fix": [
+        "WIL"
+      ],
+      "from": "LSZH_APP",
+      "name": "LSZH_DEP_WIL",
+      "priority": 10,
+      "to": "LSAS_CTR"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LSZH"
+      ],
+      "fix": [
+        "ZUE"
+      ],
+      "from": "LSZH_APP",
+      "name": "LSZH_DEP_ZUE",
+      "priority": 10,
+      "to": "LSAS_CTR"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LSZH"
+      ],
+      "fix": [
+        "GERSA"
+      ],
+      "from": "LSZH_APP",
+      "name": "LSZH_DEP_GERSA",
+      "priority": 10,
+      "to": "LSAS_CTR"
+    }
+  ],
+  "schema": 2
+}

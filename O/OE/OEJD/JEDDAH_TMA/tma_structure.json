@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "OEJN"
+      ],
+      "id": "JEDDAH_APP",
+      "positions": [
+        {
+          "code": "OEJN_APP",
+          "frequency": "124.000",
+          "name": "ALL",
+          "sector": "OEJN_APP",
+          "unit": "OEJN_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Jeddah approach",
+      "frequencies": [
+        "124.000"
+      ],
+      "id": "OEJN_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

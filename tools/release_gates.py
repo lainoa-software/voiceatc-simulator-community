@@ -219,7 +219,13 @@ def apply_gates(
             for kind, file_entry in files.items():
                 repo_path = str(file_entry.get("repo_path", "")) if isinstance(file_entry, dict) else ""
                 paths = [repo_path, sources.get(repo_path, repo_path)]
-                rule = _merge_rules(_matching_gates(dataset_gates, kind=kind, paths=paths))
+                matched_gates = _matching_gates(dataset_gates, kind=kind, paths=paths)
+                if isinstance(file_entry, dict) and any(key in file_entry for key in GATE_RULES):
+                    matched_gates = [
+                        {key: file_entry[key] for key in GATE_RULES if key in file_entry},
+                        *matched_gates,
+                    ]
+                rule = _merge_rules(matched_gates)
                 full_files[kind] = {**file_entry, **rule} if rule else file_entry
                 if rule and not is_default_visible(rule):
                     dropped_kinds.append(kind)

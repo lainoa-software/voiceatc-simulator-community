@@ -1,29 +1,41 @@
 {
-  "symbol_size": 0.75,
-  "traildot_size": 0.15,
-  "symbol_line_width": 1.0,
-  "forecast_symbol": "COOPANS_DAPS",
-  "incoming_symbol": "COOPANS_DAPS",
-  "assumed_symbol": "COOPANS_DAPS",
-  "of_interest_symbol": "COOPANS_DAPS",
   "alien_symbol": "COOPANS_DAPS",
-  "released_symbol": "COOPANS_DAPS",
-  "traildot_symbol": "HISTORY",
+  "assumed_symbol": "COOPANS_DAPS",
   "defined_symbols": {
     "COOPANS_DAPS": {
-      "type": "filled",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
-      "connection_points": [[0, 0]]
-    },
-    "UNCONTROLLED": {
-      "type": "wireframe",
-      "draw": "M 5 5 L 5 -5 L -5 -5 L -5 5 L 5 5",
-      "connection_points": [[0, 0]]
+      "type": "filled"
     },
     "HISTORY": {
-      "type": "filled",
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
-      "connection_points": [[0, 0]]
+      "type": "filled"
+    },
+    "UNCONTROLLED": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M 5 5 L 5 -5 L -5 -5 L -5 5 L 5 5",
+      "type": "wireframe"
     }
-  }
+  },
+  "forecast_symbol": "COOPANS_DAPS",
+  "incoming_symbol": "COOPANS_DAPS",
+  "of_interest_symbol": "COOPANS_DAPS",
+  "released_symbol": "COOPANS_DAPS",
+  "traildot_symbol": "HISTORY"
 }

@@ -173,10 +173,68 @@ class AiracOverridesTests(unittest.TestCase):
         definitions = json.loads(path.read_text())
         definitions["airac_overrides"] = {"latest": deepcopy(definitions)}
         path.write_text(json.dumps(definitions))
-        configs_path = path.with_name("sector_configs.json")
-        configs = json.loads(configs_path.read_text())
-        configs["sector_configs"][0]["sectors"] = [{"sector_ids": ["UNKNOWN"]}]
-        configs_path.write_text(json.dumps(configs))
-        files = {"definitions": path, "configs": configs_path, "influence": path.with_name("sector_influence.json")}
+        tma_path = path.with_name("tma_structure.json")
+        tma_struct = json.loads(tma_path.read_text())
+        tma_struct["layouts"][0]["positions"][0]["sector"] = "UNKNOWN"
+        tma_path.write_text(json.dumps(tma_struct))
+        files = {"definitions": path, "tma_structure": tma_path}
         with self.assertRaisesRegex(ValueError, "undefined sectors.*UNKNOWN"):
             sectors.validate_sector_bundle(path.parent, files, self.root)
+
+    def test_schema2_tma_structure_and_sector_definitions_variants_in_projection_and_full_feed(self):
+        from test_community_release_manifest import build_fixture_repo, MODULE
+        from tools.stable_contract_guard import check_zip_dataset
+        import zipfile
+        build_fixture_repo(self.root)
+        def_path = next(self.root.glob("L/**/MADRID_TMA/sector_definitions.json"))
+        tma_path = def_path.with_name("tma_structure.json")
+
+        defs = json.loads(def_path.read_text())
+        defs["sector_definitions"][0] = {
+            "sector_ids": [defs["sector_definitions"][0]["sector_id"]],
+            "lower_limit": 0,
+            "higher_limit": 24500,
+            "polygon": defs["sector_definitions"][0]["polygon"],
+        }
+        defs_latest = deepcopy(defs)
+        defs_latest["sector_definitions"][0]["higher_limit"] = 26000
+        def_path.write_text(json.dumps({**defs, "airac_overrides": {"latest": defs_latest}}))
+
+        tma = json.loads(tma_path.read_text())
+        tma_latest = deepcopy(tma)
+        tma_latest["layouts"][0]["positions"][0]["frequency"] = "119.200"
+        tma_path.write_text(json.dumps({**tma, "airac_overrides": {"latest": tma_latest}}))
+
+        bundle = MODULE.build_release_bundle(
+            root=self.root, output_dir=self.root / "build", release_tag="daily-2026-10-05",
+            published_at="2026-10-05T00:00:00Z", commit_sha="fixture",
+            download_repo="lainoa-software/voiceatc-simulator-community")
+        manifest = bundle["manifests"]["sector_data"]
+        asset = bundle["assets"]["sector_data_zip"]
+        self.assertEqual(check_zip_dataset("sector_data", manifest, Path(asset["path"])), [])
+
+        def_rel = def_path.relative_to(self.root).as_posix()
+        tma_rel = tma_path.relative_to(self.root).as_posix()
+        with zipfile.ZipFile(asset["path"]) as default_zip:
+            default_defs = json.loads(default_zip.read(def_rel))
+            self.assertNotIn("airac_overrides", default_defs)
+            self.assertEqual("LEMDAAA", default_defs["sector_definitions"][0]["sector_id"])
+
+        full_manifest = bundle["full_manifests"]["sector_data"]
+        madrid_entries = [e for e in full_manifest["entries"] if e["id"] == "L/LE/LECM/LECM_R2/MADRID_TMA"]
+        self.assertEqual(2, len(madrid_entries))
+        legacy_e, s2_e = madrid_entries
+        self.assertNotIn("community.airspace_files", legacy_e.get("requires", []))
+        self.assertIn("community.airspace_files", s2_e["requires"])
+        self.assertIn("community.airac_overrides", s2_e["requires"])
+        self.assertEqual(f"airac_variants/{def_rel}", s2_e["files"]["definitions"]["repo_path"])
+        self.assertEqual(f"airac_variants/{tma_rel}", s2_e["files"]["tma_structure"]["repo_path"])
+
+        full_zip_path = Path(bundle["assets"]["sector_data_full_zip"]["path"])
+        with zipfile.ZipFile(full_zip_path) as full_zip:
+            s2_defs = json.loads(full_zip.read(f"airac_variants/{def_rel}"))
+            self.assertIn("airac_overrides", s2_defs)
+            self.assertEqual(["LEMDAAA"], s2_defs["sector_definitions"][0]["sector_ids"])
+            s2_tma = json.loads(full_zip.read(f"airac_variants/{tma_rel}"))
+            self.assertIn("airac_overrides", s2_tma)
+            self.assertEqual("119.200", s2_tma["airac_overrides"]["latest"]["layouts"][0]["positions"][0]["frequency"])

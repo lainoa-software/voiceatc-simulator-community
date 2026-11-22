@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RPLB"
+      ],
+      "id": "SUBIC",
+      "positions": [
+        {
+          "code": "RPLB_APP",
+          "frequency": "119.200",
+          "name": "ALL",
+          "sector": "RPLB_APP",
+          "unit": "RPLB_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Subic Bay approach",
+      "frequencies": [
+        "119.200"
+      ],
+      "id": "RPLB_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

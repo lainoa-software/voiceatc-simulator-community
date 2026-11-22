@@ -1,0 +1,19 @@
+{
+  "airport": "EDDH",
+  "schema_version": 1,
+  "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
+  "stars": {
+    "BOGM3N": { "spawn_enabled": false },
+    "NOLG3W": { "spawn_enabled": false }
+  },
+  "sids": {
+    "EDDH1B": { "spawn_enabled": false },
+    "EDDH1C": { "spawn_enabled": false },
+    "EDDH1D": { "spawn_enabled": false },
+    "EDDH1G": { "spawn_enabled": false }
+  },
+  "iaps": {},
+  "runways": {},
+  "configs": {}
+}

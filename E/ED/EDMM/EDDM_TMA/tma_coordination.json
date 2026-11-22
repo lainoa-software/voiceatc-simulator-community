@@ -1,0 +1,485 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F140",
+      "fix": [
+        "ROKIL"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_ROKIL_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F160",
+      "fix": [
+        "ROKIL"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_ROKIL_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F170",
+      "fix": [
+        "LANDU"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_LANDU_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F110",
+      "fix": [
+        "LANDU"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_LANDU_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F170",
+      "fix": [
+        "GOMAX"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_GOMAX_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F110",
+      "fix": [
+        "GOMAX"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_GOMAX_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F170",
+      "fix": [
+        "OSTES"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_OSTES_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F110",
+      "fix": [
+        "OSTES"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_OSTES_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F170",
+      "fix": [
+        "MITNU"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_MITNU_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F110",
+      "fix": [
+        "MITNU"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_MITNU_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F130",
+      "fix": [
+        "BURAM"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_BURAM_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F150",
+      "fix": [
+        "BURAM"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_BURAM_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F120",
+      "fix": [
+        "BETOS"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_BETOS_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "arrives": [
+        "EDDM"
+      ],
+      "descent": "F160",
+      "fix": [
+        "BETOS"
+      ],
+      "from": "EDMM_CTR",
+      "name": "EDDM_ARR_BETOS_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDDM_APP"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "AKINI"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_AKINI",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "ANKER"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_ANKER",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "EVIVA"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_EVIVA",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "GIVMI"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_GIVMI",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "INPUD"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_INPUD",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "MIQ"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_MIQ",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "ALG"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_ALG",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "BIBAG"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_BIBAG",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "KIRDI"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_KIRDI",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "MERSI"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_MERSI",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "OLASO"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_OLASO",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F180",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "RIDAR"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_RIDAR_08",
+      "priority": 10,
+      "runways": [
+        "08L",
+        "08R"
+      ],
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F140",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "RIDAR"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_RIDAR_26",
+      "priority": 10,
+      "runways": [
+        "26L",
+        "26R"
+      ],
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F150",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "OBAXA"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_OBAXA",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F150",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "ROTAX"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_ROTAX",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F150",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "TULSI"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_TULSI",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F150",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "TURBU"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_TURBU",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    },
+    {
+      "climb": "F150",
+      "departs": [
+        "EDDM"
+      ],
+      "fix": [
+        "VAVOR"
+      ],
+      "from": "EDDM_APP",
+      "name": "EDDM_DEP_VAVOR",
+      "priority": 10,
+      "to": "EDMM_CTR"
+    }
+  ],
+  "schema": 2
+}

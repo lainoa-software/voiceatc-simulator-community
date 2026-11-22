@@ -1,0 +1,57 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LOWS"
+      ],
+      "id": "SALZBURG_TMA_WHOLE_LOWS_15",
+      "positions": [
+        {
+          "code": "LOWS_APP",
+          "frequency": "123.725",
+          "name": "ALL",
+          "sector": "SALZBURG_TMA_LOWS_15",
+          "unit": "LOWS_APP"
+        }
+      ],
+      "runways": {
+        "LOWS": [
+          "LOWS_15"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOWS"
+      ],
+      "id": "SALZBURG_TMA_WHOLE_LOWS_33",
+      "positions": [
+        {
+          "code": "LOWS_APP",
+          "frequency": "123.725",
+          "name": "ALL",
+          "sector": "SALZBURG_TMA_LOWS_33",
+          "unit": "LOWS_APP"
+        }
+      ],
+      "runways": {
+        "LOWS": [
+          "LOWS_33"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Salzburg approach",
+      "frequencies": [
+        "123.725"
+      ],
+      "id": "LOWS_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

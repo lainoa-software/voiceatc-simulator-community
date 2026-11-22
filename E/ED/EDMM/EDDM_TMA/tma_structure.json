@@ -1,0 +1,206 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EDDM"
+      ],
+      "id": "26",
+      "positions": [
+        {
+          "code": "EDDM_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "EDDMAPP",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "26"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM"
+      ],
+      "id": "08",
+      "positions": [
+        {
+          "code": "EDDM_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "EDDMAPP",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "08"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM"
+      ],
+      "id": "26S_LVP",
+      "positions": [
+        {
+          "code": "EDDM_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "EDDMAPP",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "26S_LVP"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM"
+      ],
+      "id": "08S_LVP",
+      "positions": [
+        {
+          "code": "EDDM_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "EDDMAPP",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "08S_LVP"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM",
+        "EDMA",
+        "EDMO"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "EDDM_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "08",
+          "26"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM",
+        "EDMA",
+        "EDMO"
+      ],
+      "id": "2",
+      "positions": [
+        {
+          "code": "EDDM_DMNAT_APP",
+          "frequency": "123.905",
+          "name": "ALL",
+          "sector": "DMNAT_DMNL_DMSAT_DMSL",
+          "unit": "EDDM_APP"
+        },
+        {
+          "code": "EDDM_DMNH_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "DMNH_DMSH",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "08",
+          "26"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "EDDM",
+        "EDMA",
+        "EDMO"
+      ],
+      "id": "3",
+      "positions": [
+        {
+          "code": "EDDM_DMNH_APP",
+          "frequency": "128.030",
+          "name": "ALL",
+          "sector": "DMNH_DMSH",
+          "unit": "EDDM_APP"
+        },
+        {
+          "code": "EDDM_DMNL_APP",
+          "frequency": "123.905",
+          "name": "ALL",
+          "sector": "DMNL_DMSL",
+          "unit": "EDDM_APP"
+        },
+        {
+          "code": "EDDM_DMNAT_APP",
+          "frequency": "118.830",
+          "name": "ALL",
+          "sector": "DMNAT_DMSAT",
+          "unit": "EDDM_APP"
+        }
+      ],
+      "runways": {
+        "EDDM": [
+          "08",
+          "26"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Munich Approach",
+      "frequencies": [
+        "128.030",
+        "118.830",
+        "120.780",
+        "123.905",
+        "126.455",
+        "127.955",
+        "132.305"
+      ],
+      "id": "EDDM_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "EDDM",
+      "call_sign": "Munich Tower",
+      "frequencies": [
+        "118.705",
+        "119.405",
+        "120.505"
+      ],
+      "id": "EDDM_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

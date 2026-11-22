@@ -37,6 +37,18 @@ ROOT = Path(__file__).resolve().parent.parent
 BLOB_LINK_RE = re.compile(r"/blob/main/([^)#\s]+\.md)")
 RELATIVE_LINK_RE = re.compile(r"\]\((?!https?:)([^)#\s]+\.md)")
 REFERENCE_PAGES = ("Content-Hierarchy.md", "Test-Locally.md")
+SCHEMA2_ADDED_KINDS = frozenset({
+    "tma_structure.json",
+    "tma_coordination.json",
+    "acc_structure.json",
+    "acc_coordination.json",
+})
+SCHEMA2_REMOVED_KINDS = frozenset({
+    "sector_configs.json",
+    "sector_influence.json",
+    "tma.json",
+})
+WIKI_FILE_KINDS = (CONTENT_FILE_NAMES | SCHEMA2_ADDED_KINDS) - SCHEMA2_REMOVED_KINDS
 
 
 def repository_documents(root: Path) -> set[str]:
@@ -66,7 +78,7 @@ def reachable_documents(root: Path, pages: dict[str, str]) -> set[str]:
     return reached
 
 
-def coverage_findings(root: Path, wiki: Path, kinds: set[str] = CONTENT_FILE_NAMES) -> list[str]:
+def coverage_findings(root: Path, wiki: Path, kinds: set[str] = WIKI_FILE_KINDS) -> list[str]:
     pages = wiki_pages(wiki)
     findings = [
         f"{document}: no wiki page links it, directly or through a linked document"

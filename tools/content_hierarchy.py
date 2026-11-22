@@ -34,16 +34,24 @@ AIRPORT_FILE_NAMES = {
 TERMINAL_FILE_NAMES = {
     "mva.json",
     "misc_drawings.json",
-    "sector_configs.json",
     "sector_definitions.json",
+    "tma_structure.json",
+    "tma_coordination.json",
+}
+FIR_FILE_NAMES = {
+    "acc_structure.json",
+    "acc_coordination.json",
+}
+GENERATED_LEGACY_FILE_NAMES = {
+    "sector_configs.json",
     "sector_influence.json",
-    "tma.json",
 }
 # Terminal-area files an airport may also carry in its own folder, for itself
 # only: some sources publish one MVA chart per airport, not one per terminal area.
 AIRPORT_OVERRIDABLE_FILE_NAMES = {"mva.json"}
 PROFILE_FILE_NAMES = {"colors.json", "style.json"}
-CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | PROFILE_FILE_NAMES
+CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | FIR_FILE_NAMES | PROFILE_FILE_NAMES
+INSPECTED_FILE_NAMES = CONTENT_FILE_NAMES | GENERATED_LEGACY_FILE_NAMES
 PLACEHOLDER_RE = re.compile(r"^[A-Z]{1,2}X{2,3}$")
 AIRPORT_RE = re.compile(r"^[A-Z0-9]{4}$")
 NATIONALITY_AREA_RE = re.compile(r"^[A-Z]{2}$")
@@ -189,6 +197,21 @@ def _validate_registry(registry: dict[str, Any]) -> list[str]:
     us_aliases = alias_groups.get("K")
     if isinstance(us_aliases, list) and set(us_aliases) != EXPECTED_US_COLOR_ALIASES:
         errors.append("registry: K color compatibility aliases must contain exactly K/KA through K/KZ")
+    if "legacy_sector_frozen" in compatibility:
+        frozen_list = compatibility.get("legacy_sector_frozen")
+        if not isinstance(frozen_list, list):
+            errors.append("registry: release compatibility legacy_sector_frozen must be an array")
+        else:
+            seen_frozen: set[str] = set()
+            for scope in frozen_list:
+                if not isinstance(scope, str) or scope not in terminals:
+                    errors.append(
+                        f"registry: legacy_sector_frozen entry '{scope}' must be a registered terminal scope"
+                    )
+                elif scope in seen_frozen:
+                    errors.append(f"registry: duplicate legacy_sector_frozen entry '{scope}'")
+                else:
+                    seen_frozen.add(scope)
 
     for ident, entry in operational.items():
         if PLACEHOLDER_RE.fullmatch(ident):
@@ -285,6 +308,20 @@ def _dedupe(findings: list[Finding]) -> list[Finding]:
     return list(unique.values())
 
 
+def _is_fir_scope(scope: str, registry: dict[str, Any]) -> list[str]:
+    operational_ident, errors = _parse_scope(scope, registry, allow_shallow=False)
+    if errors:
+        return errors
+    nationalities, operational, _terminals = _registry_maps(registry)
+    all_nationalities = {area for areas in nationalities.values() for area in areas}
+    parts = scope.split("/")
+    operational_index = 2 if len(parts) > 1 and parts[1] in all_nationalities else 1
+    trailing = parts[operational_index + 1 :]
+    if trailing or operational_ident not in operational:
+        return ["file must sit directly at FIR/ARTCC depth"]
+    return []
+
+
 def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> list[Finding]:
     relative = path.relative_to(root).as_posix()
     findings: list[Finding] = []
@@ -296,15 +333,29 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
         if PLACEHOLDER_RE.fullmatch(part):
             add(f"placeholder identifier '{part}' is prohibited")
 
+    if path.name in GENERATED_LEGACY_FILE_NAMES:
+        add(f"{path.name} is generated at publish and must not exist in source")
+        return _dedupe(findings)
+
     if path.name in PROFILE_FILE_NAMES:
         scope = path.parent.relative_to(root).as_posix()
         for message in _validate_profile_scope(scope, registry):
             add(message)
         return _dedupe(findings)
 
+    if path.name in FIR_FILE_NAMES:
+        scope = path.parent.relative_to(root).as_posix()
+        for message in _is_fir_scope(scope, registry):
+            add(message)
+        return _dedupe(findings)
+
     _nationalities, _operational, terminals = _registry_maps(registry)
     airport_scopes = _airport_scope_map(registry)
     inside_airport_folder = _is_airport_folder(path.parent, root, terminals)
+    if path.name == "sector_definitions.json" and not inside_airport_folder:
+        scope = path.parent.relative_to(root).as_posix()
+        if scope not in terminals and not _is_fir_scope(scope, registry):
+            return _dedupe(findings)
     if path.name in AIRPORT_FILE_NAMES or (inside_airport_folder and path.name in AIRPORT_OVERRIDABLE_FILE_NAMES):
         airport = path.parent.name
         scope = path.parent.parent.relative_to(root).as_posix()
@@ -361,7 +412,7 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
 def collect_findings(root: Path = ROOT, registry_path: Path | None = None) -> list[Finding]:
     registry = load_registry(registry_path or (root / REGISTRY_RELATIVE))
     findings = [Finding(message) for message in _validate_registry(registry)]
-    paths = [path for path in content_files(root, "*.json") if path.name in CONTENT_FILE_NAMES]
+    paths = [path for path in content_files(root, "*.json") if path.name in INSPECTED_FILE_NAMES]
     for path in paths:
         findings.extend(_validate_content_file(path, root, registry))
     compatibility = registry.get("release_compatibility", {})

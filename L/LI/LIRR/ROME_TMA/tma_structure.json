@@ -1,0 +1,67 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LIRF",
+        "LIRA"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "LIRF_APP",
+          "frequency": "125.500",
+          "name": "ALL",
+          "sector": "LIRFAPP",
+          "unit": "LIRF_APP"
+        }
+      ],
+      "runways": {
+        "LIRF": [
+          "SOUTH",
+          "NORTH"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Roma Arrivals",
+      "frequencies": [
+        "125.500",
+        "119.200",
+        "127.950",
+        "131.250"
+      ],
+      "id": "LIRF_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "LIRF",
+      "call_sign": "Fiumicino Tower",
+      "frequencies": [
+        "118.700",
+        "123.725",
+        "127.625"
+      ],
+      "id": "LIRF_TWR",
+      "services": [
+        "tower"
+      ]
+    },
+    {
+      "airport": "LIRA",
+      "call_sign": "Ciampino Tower",
+      "frequencies": [
+        "120.500",
+        "119.405"
+      ],
+      "id": "LIRA_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

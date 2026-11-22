@@ -1,0 +1,38 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EFHK"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "EFHK_APP",
+          "frequency": "119.100",
+          "name": "ALL",
+          "sector": "HKCTAE_HKCTAW_HKTMAL_HKTMAU",
+          "unit": "EFHK_APP"
+        }
+      ],
+      "runways": {
+        "EFHK": [
+          "22 PARA",
+          "04 PARA"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Helsinki approach",
+      "frequencies": [
+        "119.100"
+      ],
+      "id": "EFHK_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

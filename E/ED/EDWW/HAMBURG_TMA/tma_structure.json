@@ -1,0 +1,51 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "EDDH",
+        "EDHI",
+        "EDHL"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "EDDH_APP",
+          "frequency": "120.540",
+          "name": "ALL",
+          "sector": "HAM_HAMW",
+          "unit": "EDDH_APP"
+        }
+      ],
+      "runways": {
+        "EDDH": [
+          "33/23",
+          "23/15",
+          "33/05"
+        ],
+        "EDHI": [
+          "33/23",
+          "23/15",
+          "33/05"
+        ],
+        "EDHL": [
+          "33/23",
+          "23/15",
+          "33/05"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Hamburg approach",
+      "frequencies": [
+        "120.540"
+      ],
+      "id": "EDDH_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

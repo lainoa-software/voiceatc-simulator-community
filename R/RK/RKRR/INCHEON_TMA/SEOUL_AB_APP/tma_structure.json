@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKSM"
+      ],
+      "id": "SEOUL_AB",
+      "positions": [
+        {
+          "code": "RKSM_APP",
+          "frequency": "123.800",
+          "name": "ALL",
+          "sector": "RKSM_APP",
+          "unit": "RKSM_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Seoul approach",
+      "frequencies": [
+        "123.800"
+      ],
+      "id": "RKSM_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

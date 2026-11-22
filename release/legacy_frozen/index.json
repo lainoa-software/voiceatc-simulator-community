@@ -1,0 +1,2932 @@
+{
+  "bundles": {
+    "C/CZ/CZUL/MONTREAL_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b77e7775a814043fe16f75800226eab2b0fbf246a8f4513c41d2f08e4c18a0f6",
+        "tma_structure.json": "c75a6b1a8807f9e711594be449665f8fce645b50abe08b496889ba2b44319e89"
+      }
+    },
+    "C/CZ/CZVR/VANCOUVER_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "4ffe538d2d5a018cbdc84e1231723f155b8f86052e1c1c56be952905a64ff488",
+        "tma_structure.json": "4e203518d6fa94672a6bee1b4ec590c81ebbae6a5599b9acbf07dcd1e6b993f7"
+      }
+    },
+    "C/CZ/CZYZ/TORONTO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "635d2232b43696cd1f775ae257c66dbf7b4d9b4739fd51af77897299da1b2807",
+        "tma_structure.json": "9725ff2883fe2071abe58aff0810934b621ef708e4ecc08bc4971368a1481e4d"
+      }
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "DUS1_DUS2_DUS3_DUS4_DUS5_DUS6": [
+          "DUS1",
+          "DUS2",
+          "DUS3",
+          "DUS4",
+          "DUS5",
+          "DUS6"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "a3b3ba76525180514218513f25b041c3a28b84fcd05335a52e4cb4f8c432783b",
+        "tma_structure.json": "5ee775764bfab7c170975f29c68e4841ac57c7f9f51ad835dbfb38b853b25339"
+      }
+    },
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "ce361e8ba60c41b80ad9a97a79da58a4705d0fd7361522459ff6f954dc0ed510",
+        "tma_coordination.json": "879b29b98837b52cd4ef605a646a88dd9d119af3aef4369c7c8b90487c9e9439",
+        "tma_structure.json": "0c5b6187723f45e913cf336427170b783c0c82356140cea0a138536d3e817579"
+      },
+      "tma_name": "Frankfurt TMA",
+      "unit_aliases": {
+        "EDDF_APP": "DF_APP",
+        "EDDF_TWR": "DF_TWR"
+      }
+    },
+    "E/ED/EDGG/HAHN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "EIF1_EIF2_EIF3": [
+          "EIF1",
+          "EIF2",
+          "EIF3"
+        ],
+        "EIF1_EIF2_EIF3_PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7": [
+          "EIF1",
+          "EIF2",
+          "EIF3",
+          "PFA1",
+          "PFA2",
+          "PFA3",
+          "PFA4",
+          "PFA5",
+          "PFA6",
+          "PFA7"
+        ],
+        "PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7": [
+          "PFA1",
+          "PFA2",
+          "PFA3",
+          "PFA4",
+          "PFA5",
+          "PFA6",
+          "PFA7"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "32bec67d19dc29674c85a13b630c796401ebea868e2ffc7978724e4fb7dfaaa7",
+        "tma_structure.json": "6c12260c6387ce99ef7e94f1f62f5570b4c30d7dfe9cbba733639f43b03f1d39"
+      }
+    },
+    "E/ED/EDGG/KOELN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "DKA1_DKA2_DKA3": [
+          "DKA1",
+          "DKA2",
+          "DKA3"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "077a53d6f492105a0b7ece85c855c7c52fbe14692160cf66c3137ec21427dded",
+        "tma_structure.json": "5ae6ae6a64de55feb5c8c062b274aa5cb539011afeed321d3caf777f6a17113e"
+      }
+    },
+    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "HMM1_HMM2_HMM3_HMM4_HMM5_HMM6": [
+          "HMM1",
+          "HMM2",
+          "HMM3",
+          "HMM4",
+          "HMM5",
+          "HMM6"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "2919a06de6b1779f1b08223cfa71ad645f73d2689ab63ab28caff16885cc5347",
+        "tma_structure.json": "e636955d6c3e842ba7828be1b954467bb7bf482ac9810f2e395b933a0b2027f0"
+      }
+    },
+    "E/ED/EDGG/STUTTGART_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "REU1_REU2": [
+          "REU1",
+          "REU2"
+        ],
+        "REU1_REU2_STG1_STG2_STG3_STG5_STG6": [
+          "REU1",
+          "REU2",
+          "STG1",
+          "STG2",
+          "STG3",
+          "STG5",
+          "STG6"
+        ],
+        "REU1_STG1_STG2_STG3_STG5_STG6": [
+          "REU1",
+          "STG1",
+          "STG2",
+          "STG3",
+          "STG5",
+          "STG6"
+        ],
+        "STG1_STG2_STG3_STG5_STG6": [
+          "STG1",
+          "STG2",
+          "STG3",
+          "STG5",
+          "STG6"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "1495a54c29bb76565090c5175511030485ed9c9d8cf267514556ee39230fd6bc",
+        "sector_definitions.json": "f6e785cbf073ee44d346da92be59d1fee5d5c025ee8f6879666fac2b578a1cc8",
+        "tma_structure.json": "f28935f71a6ad628575024f8840f91214b5fec4b4af4d2050235344122887d69"
+      }
+    },
+    "E/ED/EDMM/EDDC_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "e21cbbe7e6588d568db1a497d4a50dc9834807f3c621a3cc508882aa01b16dbf",
+        "sector_definitions.json": "f6cdc95edbb685553439cf6934153a52fae5dc922da5132b062422193ecb73fd",
+        "tma_structure.json": "16e6c7f9fef6ab335ffb46e15f8b885b62a39d57450035f004c6f58ffca66897"
+      }
+    },
+    "E/ED/EDMM/EDDM_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "sector_aliases": {
+        "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP": [
+          "DMNAT",
+          "DMNH",
+          "DMNL",
+          "DMSAT",
+          "DMSH",
+          "DMSL",
+          "EDDMAPP"
+        ],
+        "DMNAT_DMNL_DMSAT_DMSL": [
+          "DMNAT",
+          "DMNL",
+          "DMSAT",
+          "DMSL"
+        ],
+        "DMNAT_DMSAT": [
+          "DMNAT",
+          "DMSAT"
+        ],
+        "DMNH_DMSH": [
+          "DMNH",
+          "DMSH"
+        ],
+        "DMNL_DMSL": [
+          "DMNL",
+          "DMSL"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "e21cbbe7e6588d568db1a497d4a50dc9834807f3c621a3cc508882aa01b16dbf",
+        "sector_definitions.json": "b6613182627705d43b45494718c104b6a81d9adb7e8d5b5580022be9cf2b088d",
+        "tma_coordination.json": "7b694c2cbf98dc31d97e23b0347348c95a0681a373926a58ad3cfa635835e24e",
+        "tma_structure.json": "4f2f8cbae5f3403dfe6241b2ac3e6bedd143cc3538d572470a4d6bd66ed4e425"
+      },
+      "tma_name": "Munich TMA",
+      "unit_aliases": {
+        "EDDM_APP": "DM_APP",
+        "EDDM_TWR": "DM_TWR"
+      }
+    },
+    "E/ED/EDMM/EDDN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "FRK1_FRK2": [
+          "FRK1",
+          "FRK2"
+        ]
+      },
+      "source_sha256": {
+        "acc_structure.json": "e21cbbe7e6588d568db1a497d4a50dc9834807f3c621a3cc508882aa01b16dbf",
+        "sector_definitions.json": "e1d5d6235e65b432755cbacff5582e0741ad404f50b88e6ae47a50247a21104d",
+        "tma_structure.json": "4c61fd99efb7c6bb477af1ea6b426ff20dbc3ad29ed017638e85a3ea26d64c33"
+      }
+    },
+    "E/ED/EDWW/BERLIN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "DBAN1_DBAN2": [
+          "DBAN1",
+          "DBAN2"
+        ],
+        "DBAN1_DBAN2_DBAS1_DBAS2": [
+          "DBAN1",
+          "DBAN2",
+          "DBAS1",
+          "DBAS2"
+        ],
+        "DBAN1_DBAN2_DBAS1_DBAS2_DBDN1_24_DBDN2_24_DBDS1_24_DBDS2_24": [
+          "DBAN1",
+          "DBAN2",
+          "DBAS1",
+          "DBAS2",
+          "DBDN1-24",
+          "DBDN2-24",
+          "DBDS1-24",
+          "DBDS2-24"
+        ],
+        "DBAN1_DBAN3": [
+          "DBAN1",
+          "DBAN3"
+        ],
+        "DBAN1_DBAN3_DBAS1_DBAS3_DBAS4": [
+          "DBAN1",
+          "DBAN3",
+          "DBAS1",
+          "DBAS3",
+          "DBAS4"
+        ],
+        "DBAN1_DBAN3_DBAS1_DBAS3_DBAS4_DBDN1_06_DBDN2_06_DBDS1_06_DBDS2_06_DBDS3_06": [
+          "DBAN1",
+          "DBAN3",
+          "DBAS1",
+          "DBAS3",
+          "DBAS4",
+          "DBDN1-06",
+          "DBDN2-06",
+          "DBDS1-06",
+          "DBDS2-06",
+          "DBDS3-06"
+        ],
+        "DBAS1_DBAS2": [
+          "DBAS1",
+          "DBAS2"
+        ],
+        "DBAS1_DBAS3_DBAS4": [
+          "DBAS1",
+          "DBAS3",
+          "DBAS4"
+        ],
+        "DBDN1_06_DBDN2_06": [
+          "DBDN1-06",
+          "DBDN2-06"
+        ],
+        "DBDN1_06_DBDN2_06_DBDS1_06_DBDS2_06_DBDS3_06": [
+          "DBDN1-06",
+          "DBDN2-06",
+          "DBDS1-06",
+          "DBDS2-06",
+          "DBDS3-06"
+        ],
+        "DBDN1_24_DBDN2_24": [
+          "DBDN1-24",
+          "DBDN2-24"
+        ],
+        "DBDN1_24_DBDN2_24_DBDS1_24_DBDS2_24": [
+          "DBDN1-24",
+          "DBDN2-24",
+          "DBDS1-24",
+          "DBDS2-24"
+        ],
+        "DBDS1_06_DBDS2_06_DBDS3_06": [
+          "DBDS1-06",
+          "DBDS2-06",
+          "DBDS3-06"
+        ],
+        "DBDS1_24_DBDS2_24": [
+          "DBDS1-24",
+          "DBDS2-24"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "a0be9dd6d2971f04e815da0c9e46a6c2d6b6640b5be143f9054adde941869d9c",
+        "tma_structure.json": "984a146b3912e8efb229238d593512e43147ab64019a221a52c5c680cd6038fe"
+      }
+    },
+    "E/ED/EDWW/BREMEN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "4d66bd2376bab3827f01d30b0dbac048d6d8b43dd5df45da4f1476619898889e",
+        "tma_structure.json": "65e56b23b43097196940ff14aa522896f6623eeb99d671836a2fe823899dcea3"
+      }
+    },
+    "E/ED/EDWW/HAMBURG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "HAM_HAMW": [
+          "HAM",
+          "HAMW"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "b4684bfd47e9781abcd50084f4c0023f007b6778a7f4027e61a2a3761e39f6d5",
+        "tma_structure.json": "1fdf59e3b0ae88a5fb3761c9ce483b10edb13c879f52368e4ce48414dad20758"
+      }
+    },
+    "E/ED/EDWW/HANNOVER_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "1702b46016a4b11ad8c9a8d64d3f26ca93b09bbd25de4a2677d4b7df72b61473",
+        "tma_structure.json": "6941a141b1ea4e12791f522ee34014690fdb99a0744fa2c2dab74def412e61e4"
+      }
+    },
+    "E/EF/EFIN/EFIN_S/HELSINKI_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "HKCTAE_HKCTAW_HKTMAL_HKTMAU": [
+          "HKCTAE",
+          "HKCTAW",
+          "HKTMAL",
+          "HKTMAU"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "47bb78dd387c41ac15154dd0884d8371b1c15630c10a9407ec064ef1f7ce7cfe",
+        "tma_structure.json": "6e8e3fbcdc3f219ef7fb15436ffe210388d3a62db154dfba22a319384a785c56"
+      }
+    },
+    "E/EG/EGTT/LONDON_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "51047d4c148bdca43c72dde8bf6ebcd0108d9ceb8cac91a25e428ed2150b6a81",
+        "sector_definitions.json": "b61c39209333aa374fd0012d8f651d98a3f90aa6f8b56f1c1cfb0bfba6f908d2",
+        "tma_coordination.json": "08494e00daf13bc43b3aea68982da92fbb148213c2f81ef4684873c2847d0ee7",
+        "tma_structure.json": "0430b30a450b8f826c5c6eaa04f6e5b6d5f4d5f1884c7d3cdf07bb707b890214"
+      },
+      "tma_name": "London TMA",
+      "unit_aliases": {
+        "EGLL_APP": "HLR_APP",
+        "EGLL_TWR": "HLR_TWR",
+        "EGTT_CTR": "LON_CTR"
+      }
+    },
+    "E/EH/EHAA/AMSTERDAM_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "331f09ca92dd559bfbc6aaece178a0a6dde8e0136df8a501256ecf3d5b42c5d2",
+        "sector_definitions.json": "f9890dd92055ef15722160cdeea9eda9f5724f6c813027159380a666099b34b4",
+        "tma_coordination.json": "39620f3cba36d0647da2a07678a41c39882a1b7758c5e29c0ab5e6500142b3f0",
+        "tma_structure.json": "f6e8a99ad530202378e945a9e0a508595b0a74cfcc64b22b8227188aa93e9932"
+      },
+      "tma_name": "Amsterdam TMA",
+      "unit_aliases": {
+        "EHAM_APP": "AMS_APP",
+        "EHAM_TWR": "AMS_TWR"
+      }
+    },
+    "E/EK/EKDK/AALBORG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "1070d92b3d77d3998958d0ecbce44c8bc7b8d287d93e6cb4263bbac1372c8701",
+        "tma_structure.json": "493bd2b3f733a534ae56f2876ebd38490623701f15a75e311cf8190f8c5a54dc"
+      }
+    },
+    "E/EK/EKDK/AARHUS_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "d4aa2c5766956eeee550fd1510854cf79c4f2a565e2b08cd56e9ea2478b06bf3",
+        "tma_structure.json": "0145d6d69de85efac6b7b804e00eb037ece8017c54bf3c62d150f8f6b5f1f013"
+      }
+    },
+    "E/EK/EKDK/BILLUND_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "bfeb18a6b2324dc4618679e7b964caccabc1f7d51aec663936bc73ebf95d49be",
+        "tma_structure.json": "c10a47450b373e8199df7ea50af8795b43fa40c1113dd57523edd27c82f9e2e6"
+      }
+    },
+    "E/EK/EKDK/BORNHOLM_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "9dbde113048cc6fb5600eb6a28be57faf04beef41fe9a9b98c07afa70b517640",
+        "tma_structure.json": "3696167c4d0c01ea67f6f080b4c44742020e84f02576c341582ab6972f4d42c3"
+      }
+    },
+    "E/EK/EKDK/COPENHAGEN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "087793b3df47a97aafd5b926c9a809eeeca8a192409608e6b61fd1cfb2789901",
+        "tma_structure.json": "9ba4da16627bff2254b68d4fad91615b079b8e4ff654b057c5b0d8b90ba5cbf5"
+      }
+    },
+    "E/EK/EKDK/KARUP_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "f13fc7372eb51a2cef90989cca26e951e682e0257e3e48306bdd3fbdd8cae3cf",
+        "tma_structure.json": "6113b67930c7f1c8b40fa27f5b9c881d140751d6757a2f45ee6957d51f010c61"
+      }
+    },
+    "E/EK/EKDK/SKRYDSTRUP_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "40d5b76fc436383e14927ee1c984b53da5348894beba02f071632c4d10e98465",
+        "tma_structure.json": "f5f6f7e8a962d8dac8482dc3e4373b1ea44456a7d7db65d06c7f85f22b6f2725"
+      }
+    },
+    "E/EN/ENOR/ENOS/OSLO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "TMA_E": [
+          "TMA E"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "14ec30aaed478f64dc5c7a10477bdf94fc86bff2d59c19550888b05dc4977b8b",
+        "tma_structure.json": "4de9368f000cae08850149746dda7c3fbe4fbf8f9aa0a9741bacd6c7268c2829"
+      }
+    },
+    "E/ES/ESAA/ESMM_23W45/ESGG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "3830ec48df9cef22db8bc87b15f403c279a13dd89ed3d7e48c793931bfeb2c1b",
+        "tma_structure.json": "7215c22480b42d06d47e04fbaef683cb3e64d47a78f6413796dca5545ccd204e"
+      }
+    },
+    "E/ES/ESAA/ESOS_Y/ESOS_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "E_S_W": [
+          "E",
+          "S",
+          "W"
+        ],
+        "S_W": [
+          "S",
+          "W"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "ea593558b83ac7cfd22d7ad93ea35de5dcc71a108f5f944969283b4ec8d014c3",
+        "tma_structure.json": "65e79a06cf9812c52899428de9a1151309cebf4fa459778b303bc71b055ca391"
+      }
+    },
+    "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "76b967486c111bea7a57250e683a1e158250052183901972b89bf8b8faae5bc1",
+        "tma_structure.json": "0796f3bd027fae536be6e4bf62d815fb32f34db0c4580f3062953074deaa16fa"
+      }
+    },
+    "K/KZAU/CHICAGO_ORD_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "a78715336ec5fc9fc6715f5e8373c3a9a6806bd89aba451c7bfba8962e1bbe42",
+        "sector_definitions.json": "fa97d5ff877b794d737fa645fbb4635553bf0f1ec97025e0ddbdbcce8f7553b8",
+        "tma_coordination.json": "fcde9e5975f2c708ba4942ffecd8694ec5eb4adce182a750ca87613f5995d7e6",
+        "tma_structure.json": "337286f0bd4c4612a4b9b058a68f3e3633e3b16658ab72c06b6a7ba2ef88ed99"
+      },
+      "tma_name": "Chicago O'Hare TMA",
+      "unit_aliases": {
+        "KORD_APP": "CHI_APP",
+        "KORD_TWR": "ORD_TWR",
+        "KZAU_CTR": "CHI_CTR"
+      }
+    },
+    "K/KZAU/MILWAUKEE_TMA": {
+      "configs_airport": "KMKE",
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "a78715336ec5fc9fc6715f5e8373c3a9a6806bd89aba451c7bfba8962e1bbe42",
+        "sector_definitions.json": "4a1b2817f37a8d6b763ab5693a3ac22d19e1888cc5ead73cef9a0f2bc1da33c9",
+        "tma_structure.json": "adb14bdfdca8511b7867103e4f9001cd8a079803466b235f67d5164e28fbb73e"
+      }
+    },
+    "K/KZBW/BOSTON_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "4c05aebed3f64d3ab0ebae0360413191d22e1a1506268e3f77810f3ad584d6c3",
+        "sector_definitions.json": "29bb41dec32da1d3c82c55216ab06b6cf1da987fe7a8addbc3efda6117c89eb7",
+        "tma_coordination.json": "159881794913bc3a9a8f766f42e8920935e3aff8244dccc3200db5fde86540bf",
+        "tma_structure.json": "c033d00d8f561e8247493c042993f09946a7bf4959264b3af9173526bafe57e9"
+      },
+      "tma_name": "Boston TMA",
+      "unit_aliases": {
+        "KBOS_APP": "BOS_APP",
+        "KBOS_TWR": "BOS_TWR",
+        "KZBW_CTR": "BOS_CTR"
+      }
+    },
+    "K/KZDC/WASHINGTON_DCA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "6c45db5bbcc4daa9cd6b731efb1fc70591d8b63d8efc4048a5d3187e9502d5c2",
+        "sector_definitions.json": "c73d3f1e24244130addb89039cd96b0993ddc30fa281aec4577ca7854c5ddbda",
+        "tma_coordination.json": "770ca26c16fbc3b3be38f1880c58a57d36deb0334ee1ca6273eb27f94c9b342a",
+        "tma_structure.json": "fbec3b8b3ddfea9967bfd230997fa7cda6584fec33adb6f0139b8f7c95b8d59e"
+      },
+      "tma_name": "Washington National TMA",
+      "unit_aliases": {
+        "KDCA_APP": "DCA_APP",
+        "KDCA_TWR": "DCA_TWR",
+        "KZDC_CTR": "DCA_CTR"
+      }
+    },
+    "K/KZDV/DENVER_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "dd50d27c7738a9fa9a1542cb3b127428b64f593be36edce51042f49a4cbd76c2",
+        "sector_definitions.json": "3fb75211753c5f640a5b3eba29de45e8e73dd735dbb0bbf6b2b10d0a4738954c",
+        "tma_coordination.json": "4e11bda394c84090a7092290f3230af2da19a84532cce0d454e28835e7154762",
+        "tma_structure.json": "bab236eec69b77391c791ead16a409807475369fa26601e854ba6f5e53535e06"
+      },
+      "tma_name": "Denver TMA",
+      "unit_aliases": {
+        "KDEN_APP": "DEN_APP",
+        "KDEN_TWR": "DEN_TWR",
+        "KZDV_CTR": "KZDVCTR"
+      }
+    },
+    "K/KZFW/DFW_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "40401ff9bd0693db7f406174d56e7280a5be5d16b81aaee09a1bc2fa15e56c06",
+        "sector_definitions.json": "db0dfe324ed74367a9ba12e47e6af3a5d2657860c75062cf7e50841c2439d02d",
+        "tma_coordination.json": "35d72ba1993f6fa7c2b6b794ae5dc4c5ea61e81e86a5157cca239105d9acea37",
+        "tma_structure.json": "51bff2d210db6c819c3e8eb0d9b53f6c6588a99b8c174ed463e40f777df7496e"
+      },
+      "tma_name": "Dallas/Fort Worth TMA",
+      "unit_aliases": {
+        "KDFW_APP": "DFW_APP",
+        "KDFW_TWR": "DFW_TWR",
+        "KZFW_CTR": "KZFWCTR"
+      }
+    },
+    "K/KZLA/LAX_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "a037799acd87c906646829b4952f7b02d56a9980d632503699bcf834e6024f83",
+        "sector_definitions.json": "f332049bf7db04bb72a2ee8f8a76069054a16bc06bf08fc8a141113c74841cf6",
+        "tma_coordination.json": "f05f0b422d987865903a929929bde40ff8b2c5d364c1aad3f1080d7b47731634",
+        "tma_structure.json": "ad5901c72a26f5e16dc2ec4ab7f3a2ad6dc4cb22eb5803c57e57e4b6cafb33c4"
+      },
+      "tma_name": "Los Angeles TMA",
+      "unit_aliases": {
+        "KLAX_APP": "LAX_APP",
+        "KLAX_TWR": "LAX_TWR",
+        "KLGB_TWR": "LGB_TWR",
+        "KZLA_CTR": "KZLACTR"
+      }
+    },
+    "K/KZNY/JFK_TMA": {
+      "configs_airport": "KJFK",
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "influence_airport": "KJFK",
+      "source_sha256": {
+        "acc_structure.json": "e8b6014d43cbd1df9bec2b8642f1328e4682b3c39b78473418e34331706058db",
+        "sector_definitions.json": "c4fe17537b436c24e39d7e5555c47f4436631b0463c4a0a7a56d88a0d85ca432",
+        "tma_coordination.json": "d9c609bdc0c371cc4be0fa307094d80a73d0b1af215b9581d443201e72531f13",
+        "tma_structure.json": "0634f66392fd6a85b75510d1ab4bf57f6eecf68e2146bb80206f311e843ea609"
+      },
+      "tma_name": "John F. Kennedy TMA",
+      "unit_aliases": {
+        "KFRG_TWR": "FRG_TWR",
+        "KJFK_APP": "JFK_APP",
+        "KJFK_TWR": "JFK_TWR",
+        "KZNY_CTR": "KZNYCTR"
+      }
+    },
+    "K/KZNY/LAGUARDIA_TMA": {
+      "configs_airport": "KLGA",
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "influence_airport": "KLGA",
+      "source_sha256": {
+        "acc_structure.json": "e8b6014d43cbd1df9bec2b8642f1328e4682b3c39b78473418e34331706058db",
+        "sector_definitions.json": "18bd79ab2058e0dccb5e488eecc6126425b88610ae39ba0fb8c845c673f9a3aa",
+        "tma_structure.json": "30849fd9b4284cda9047a84f6f1a90ab644e5aef61e031fac52b38e0c0504ebb"
+      }
+    },
+    "K/KZOA/SFO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "2170fc070a5b2e43a80ca2bca35ad498d88e8f0fe2a98e68d22d26262b2db295",
+        "sector_definitions.json": "3a5fcf4498dcb4b969d8b271139fae8f01b98492fd0da2aebbedfc3d8f95ad63",
+        "tma_coordination.json": "41e73b59a5df363f27fcf96ea2302652296abb105145d8c0a92aba20e3da2af1",
+        "tma_structure.json": "9ad362468d806916581a5e28afd65b597fa2ce95736ef4a92eda5b08156918cc"
+      },
+      "tma_name": "San Francisco TMA",
+      "unit_aliases": {
+        "KSFO_APP": "SFO_APP",
+        "KSFO_TWR": "SFO_TWR",
+        "KZOA_CTR": "KZOACTR"
+      }
+    },
+    "K/KZSE/SEATTLE_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "6ef69a66e414f41accd5912aebe18f039c39062c134bd1ac17afb154ae081df5",
+        "sector_definitions.json": "769e3a4fb4448ec49b70487d42e28d3b6bcf8aba14188b56ff2cf3d2dbecabcb",
+        "tma_coordination.json": "b83b8ee9f8e466059262851aa25447e57eb64c3a407ca47dcd4577d59f60a7f6",
+        "tma_structure.json": "989b4cdb8516b6448ebaddab0d4b8dbdc5cbf66c1c0739a936c18d02553502cc"
+      },
+      "tma_name": "Seattle TMA",
+      "unit_aliases": {
+        "KBFI_TWR": "BFI_TWR",
+        "KSEA_APP": "SEA_APP",
+        "KSEA_TWR": "SEA_TWR",
+        "KZSE_CTR": "KZSECTR"
+      }
+    },
+    "K/KZTL/ATLANTA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "278bac0542aae478b8d7c4f2073bcf21f0ee2a1a95636bebe1738a4f4e7022ca",
+        "sector_definitions.json": "d9af3177e26897914f6a5c4fe2e0f55d3431ad3adb2c1067d62848dcbe1dc311",
+        "tma_coordination.json": "cf237ca968b44d42cd65e93a43803d40c7f390e4a4c9372ce64f66f85cf59b21",
+        "tma_structure.json": "6e4cbceec34a528e1675dbd3a0ae51b0ca7ea01e2c78ca14c7e181f30adf1abe"
+      },
+      "tma_name": "Atlanta TMA",
+      "unit_aliases": {
+        "KATL_APP": "ATL_APP",
+        "KATL_TWR": "ATL_TWR",
+        "KPDK_TWR": "PDK_TWR",
+        "KZTL_CTR": "ATL_CTR"
+      }
+    },
+    "L/LE/LECB/LECB_E/PALMA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "feb453b506ab223b568159f8f8f3ebeefe30a5bbc22a103d3e315959b92bfdaa",
+        "sector_definitions.json": "ba88948d708c55e2b0787f897959d421b21686cd0f66ee27fbaab6f17b8a83e6",
+        "tma_structure.json": "f27db16dee203d311745be0974af191a88e28053dcf4db399780667690b7ed81"
+      }
+    },
+    "L/LE/LECB/LECB_W/BARCELONA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "feb453b506ab223b568159f8f8f3ebeefe30a5bbc22a103d3e315959b92bfdaa",
+        "sector_definitions.json": "3ce591f6cbcbe27192f78d25f8db6bb7e555272aa1d16671c721d0d1e24563e8",
+        "tma_coordination.json": "f3b6a69d20c27f13b92a49047ebcde3239b2c7f9d7491f247543ee18b5b00a1c",
+        "tma_structure.json": "8ef49a1a357fbc78b53c6c52430f4a9b6c7e1b42e04792136b6fc973c70007e4"
+      },
+      "tma_name": "Barcelona TMA",
+      "unit_aliases": {
+        "LEBL_APP": "BCN_APP",
+        "LEBL_TWR": "BCN_TWR",
+        "LECB_CTR": "BCN_CTR",
+        "LEDA_TWR": "LLE_TWR",
+        "LEGE_TWR": "GIR_TWR",
+        "LERS_TWR": "REU_TWR"
+      }
+    },
+    "L/LE/LECB/LECB_W/VALENCIA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "feb453b506ab223b568159f8f8f3ebeefe30a5bbc22a103d3e315959b92bfdaa",
+        "sector_definitions.json": "a06146b03cb9d883f58bd5a84d1d22160c39aa322a0bfc8927afdb5f3929e747",
+        "tma_structure.json": "eca1048aad5b8895460b8fa2dbbbfd5a96bbc1e89b66e33f19b41a35ed8f0c24"
+      }
+    },
+    "L/LE/LECM/LECM_R1/BILBAO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "0f376f4609d3e79405f098d7841f5f05045cadc2c561e6d554f01f540eca144a",
+        "sector_definitions.json": "0492fd3a1ab5cf3c9f2edb6ffad1f8f08f01650806dc45a56a0e283b5d3058be",
+        "tma_structure.json": "608695f58ad40a06be43c61536e14173e2e6045ce85dcaaf0f889a6d446876ce"
+      }
+    },
+    "L/LE/LECM/LECM_R1/GALICIA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "0f376f4609d3e79405f098d7841f5f05045cadc2c561e6d554f01f540eca144a",
+        "sector_definitions.json": "2468dc861237ca7ee129990557a15b7aac8f13f36145592cb667d6648f210920",
+        "tma_structure.json": "b48b98b210b81d00fd32d6a11e69049b379b78eaafe737a82de7a7721c646f4a"
+      }
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "0f376f4609d3e79405f098d7841f5f05045cadc2c561e6d554f01f540eca144a",
+        "sector_definitions.json": "1fc438fb4112917427daa703009856f4c1790053828c4bbdfb9e0a2b03277d15",
+        "tma_coordination.json": "6ff9729b690d1f05a159643b0f09d809e33729a24ff4b06f1294ae3599677723",
+        "tma_structure.json": "fcf847476ca1b1804e90b9c9dba8b508784640a1597507f22479f2d941a20786"
+      },
+      "tma_name": "Madrid TMA",
+      "unit_aliases": {
+        "LECM_CTR": "MAD_CTR",
+        "LEMD_APP": "MAD_APP",
+        "LEMD_TWR": "MAD_TWR"
+      }
+    },
+    "L/LE/LECM/LECS/MALAGA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "0f376f4609d3e79405f098d7841f5f05045cadc2c561e6d554f01f540eca144a",
+        "sector_definitions.json": "653d68723cdcd13b84aa77d3e119115060f401f00485fe65e6bb290c6dd08a27",
+        "tma_structure.json": "7f561a771a16ca39bcc197fd2cde22af2c5d0ad648c30f8ca4ba2064bfa446f8"
+      }
+    },
+    "L/LE/LECM/LECS/SEVILLA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "0f376f4609d3e79405f098d7841f5f05045cadc2c561e6d554f01f540eca144a",
+        "sector_definitions.json": "ca221d63473ace9f065dd5d058942e538baae51480df6ca0295d05510e90ab90",
+        "tma_structure.json": "eab77457dbdf9caec46e9d950fd682023fa43bfb6f73db44df4445a241bc7393"
+      }
+    },
+    "L/LF/LFFF/PARIS_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "442711261aa8eb6879f21971f546663c7fe6be30195d4bf7dbd0318d05a1ad87",
+        "sector_definitions.json": "0f7bbe280b08d76e373b58ad49b6a4ab4d547df9a75d544f9725941f94938012",
+        "tma_coordination.json": "db755dbbef07503dbe9dc69bd665aa6471c97dfa0c4271b137658db8b0636d49",
+        "tma_structure.json": "c9410f10b3e3bd071a4795966837c9a402138b09464c0ff99052be0a7afb0427"
+      },
+      "tma_name": "Paris TMA",
+      "unit_aliases": {
+        "LFPG_APP": "CDG_APP",
+        "LFPG_TWR": "CDG_TWR",
+        "LFPO_APP": "ORY_APP"
+      }
+    },
+    "L/LI/LIRR/ROME_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "f182a332d4004f90b38731a0e583bb4415fb2f978ab00d48858ea344112d8067",
+        "sector_definitions.json": "95229f71ba4b5cc071971cfef02004096bc7e3d31330835f744b085a5155ce4b",
+        "tma_coordination.json": "785378f4ee377dc5af9876e442c09f7b5fe9ecfca970f6a87b6c14d07ed4e5eb",
+        "tma_structure.json": "3958d8cc8b9797e2c420cbf52a1107ab1db849ecab0b52a2a94b6e18dfd077fe"
+      },
+      "tma_name": "Rome TMA",
+      "unit_aliases": {
+        "LIRA_TWR": "CIA_TWR",
+        "LIRF_APP": "ROM_APP",
+        "LIRF_TWR": "FIU_TWR",
+        "LIRR_CTR": "ROM_CTR"
+      }
+    },
+    "L/LO/LOVV/GRAZ_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "2b17d554991ae0eee26891ebf55dec07f203c1faad81568d0f3b476eac8acab0",
+        "tma_structure.json": "6e03d32e569a5d7895a7f07cc13dddbe7a0ae91a662eddb92287345aed187e59"
+      }
+    },
+    "L/LO/LOVV/INNSBRUCK_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "cacdcc75df0658e1433903dc9575ba4759cec640c3e34a86c1af18861ede5814",
+        "tma_structure.json": "a4ddd2fcae922de42e301b461df3761965b57956eeb1af4717e91af5f7112068"
+      }
+    },
+    "L/LO/LOVV/KLAGENFURT_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "6e940eb0f820fa9b00e09795fa5f1b137ad1d25375a131bd9d40a28a97a6f355",
+        "tma_structure.json": "12aa608acf3c8caf040c53f619547adabbce1984bfc91d3c983932179025e0b2"
+      }
+    },
+    "L/LO/LOVV/LINZ_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "1d6736c561d72a60fec96152fe29762bc1f626893d57a74d7477251dd32156ae",
+        "tma_structure.json": "f19ead143c7d5bb222cb630b71351ccd54a42a1c4abf6c7887adbfc896f1ac33"
+      }
+    },
+    "L/LO/LOVV/SALZBURG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "52e6045474e9ccb400b880e48d8794bc9d6374b21d59d17c6b30e565969e458e",
+        "tma_structure.json": "1af32e7b4817ba37bdd299f883c312a903cb167c9982ec7a8ab939cbb41b3b3b"
+      }
+    },
+    "L/LO/LOVV/TULLN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "695c3cd90a20d03f4a59d97334dbb9a3e83c7915081af769518448d549a90f8a",
+        "tma_structure.json": "bea75ecf314e2e43e0472f6d3f616a37661fd76333e134b0dcc22f697d723098"
+      }
+    },
+    "L/LO/LOVV/VIENNA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "52b0955dd94dbd1c609c2ad6f67c913ee4cfdc8ed7e9dc1d9be0cb78794c5871",
+        "tma_coordination.json": "f8951a3634c54914b23dab8cba5336ee82e964aba884a90b144b39de393ae01d",
+        "tma_structure.json": "ac1901b54be8b984f40a4d60f4d1b20514bb05f8263a4758459da1163d77c5e2"
+      },
+      "tma_name": "Vienna TMA",
+      "unit_aliases": {
+        "LOVV_CTR": "VIE_CTR",
+        "LOWW_APP": "VIE_APP",
+        "LOWW_TWR": "VIE_TWR"
+      }
+    },
+    "L/LO/LOVV/ZELTWEG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "82ab71e107e1d88ef550457ebce65514a9710855559c4e01053080ce31028964",
+        "sector_definitions.json": "e0b413684dea0934ab93f463c685326a817537a841fa960e62ff57ff10445c24",
+        "tma_structure.json": "c9252ad9341bf5e9c4ea448db2d47c83179bafaa81c421336283e9d1daeb466f"
+      }
+    },
+    "L/LP/LPPC/FARO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "610fce78ca6bdda46145f2a243786fab5c511392b891ff8a3dd6c89f8a8f96ca",
+        "tma_structure.json": "1642d9bcd38dec13a7e0b8176954c545c6c80645d17410c4b5f5fdfafc6a307d"
+      }
+    },
+    "L/LP/LPPC/LISBOA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "ARRLI_RWY02_ATME_RWY02_ATMO_RWY02": [
+          "ARRLI_RWY02",
+          "ATME_RWY02",
+          "ATMO_RWY02"
+        ],
+        "ARRLI_RWY20_ATME_RWY20_ATMO_RWY20": [
+          "ARRLI_RWY20",
+          "ATME_RWY20",
+          "ATMO_RWY20"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "b7cbccfa65338b52f681b363eefbbe96137b885dd3e1e8b81632c8c9697a0a64",
+        "tma_structure.json": "c15a48536548bf42f5b4b3bfd17bbf583eeb55a563f444ea1a5f83291e4cd163"
+      }
+    },
+    "L/LP/LPPC/MADEIRA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "eca62099153df25f282fba9cf55eaf5de9c62c05b8ad739b702fdb49dcc7b033",
+        "tma_structure.json": "a53faeecae56f336e1a999f55c047d8f0892b28e6e1c4ce965581e92c4dd1f54"
+      }
+    },
+    "L/LP/LPPC/PORTO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "PRAPP_PRTMA": [
+          "PRAPP",
+          "PRTMA"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "20cc027e0d12eae5537852d11162a9664df875683aa773e386c964e4c4e5ac80",
+        "tma_structure.json": "450412bd154fe15a2755a8fcc56131b666f9a1dbd1049ef225324ab179f731aa"
+      }
+    },
+    "L/LP/LPPO/FLORES_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "da91a8194db9e54340ac9f62cbfc1cd60606f52323b5b45530601a3107af5959",
+        "tma_structure.json": "24f04fc5df134392423315382d96a8724149d36f08fa58ead41933570a6b7d42"
+      }
+    },
+    "L/LP/LPPO/HORTA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "a23655176521242ae3b641f10bf6920c2ab8c79abdf1321402a0703de2b1e1f1",
+        "tma_structure.json": "99675e4849ba3ca927dcddfb8f81e574de95f07a23286d1bb43886232a54488e"
+      }
+    },
+    "L/LP/LPPO/LAJES_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "aaaee69518dcddcb88ecc3ad2379006993f2093d5c3406506941c20232cf7b1a",
+        "tma_structure.json": "3d303cfa5dce3e5308256e07deaa8c392ff7f84724de160f99a05f17f74b9a11"
+      }
+    },
+    "L/LP/LPPO/PONTA_DELGADA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b7d28e6d748516b656b41f2b8c43ec8881368628849644cce3c136d29c9f2186",
+        "tma_structure.json": "1f67969bb7c7e026482e81268414f9c1a4ff07289d8b6b00797a50b8891223fe"
+      }
+    },
+    "L/LS/LSAS/ZURICH_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json",
+        "tma.json"
+      ],
+      "source_sha256": {
+        "acc_structure.json": "074315e9d4bd5b4bf32c5cbe440cea51c8a4e07811e59d3e6a7f2529f083ce1d",
+        "sector_definitions.json": "0ccb260edafc10084aebae71083cea6606c047e32f5e9be566ee8a289298378a",
+        "tma_coordination.json": "61ba27081c82583d245a774aa69784ee35aedc2187343abbbb9baed23fd48622",
+        "tma_structure.json": "72aa008461593905401ab2edf211835778e5a08d81bd38ae02cfaea60a41299b"
+      },
+      "tma_name": "Zurich TMA",
+      "unit_aliases": {
+        "LSAS_CTR": "SWI_CTR",
+        "LSZH_APP": "ZRH_APP",
+        "LSZH_TWR": "ZRH_TWR"
+      }
+    },
+    "L/LT/LTBB/ISTANBUL_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "sector_aliases": {
+        "SAD_NORTH_SCF_NORTH_SED_NORTH_SWD_NORTH": [
+          "SAD NORTH",
+          "SCF NORTH",
+          "SED NORTH",
+          "SWD NORTH"
+        ],
+        "SAD_SOUTH_SCF_SOUTH_SED_SOUTH_SWD_SOUTH": [
+          "SAD SOUTH",
+          "SCF SOUTH",
+          "SED SOUTH",
+          "SWD SOUTH"
+        ]
+      },
+      "source_sha256": {
+        "sector_definitions.json": "417ca76785703a5bc62c2b0f137e1e1d1cb1df88961a6f6691cd7420a8047e93",
+        "tma_structure.json": "71f78517671f092ef8413f742079d894966c10c36078e49279a26944388a8a6d"
+      }
+    },
+    "O/OE/OEJD/JEDDAH_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "8811c7cb1f6d063693bec1cb09fb7cf7971904b7aa2be9773112a2c0ccbfbfd1",
+        "tma_structure.json": "a4f2a6d647134f3009c38e195c42703ff22f0abf902c4425e471bb6e89e8b0d8"
+      }
+    },
+    "O/OE/OEJD/RIYADH_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "5a62ff941bc70a7271835d12e1c62d4a8ca3a5bd3cd92af70f4345d011b36800",
+        "tma_structure.json": "a127e17848beb71c031c4acf0178c511fe2a1867b570977cd429776ac1c37d78"
+      }
+    },
+    "O/OM/OMAE/ABU_DHABI_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "9ac9c6940ebac918204b5d521063bfa5f8fb83227c1f5870b466dfcfcf657113",
+        "tma_structure.json": "23f5a0e7b23cf37d73dda86a0fa18e8ff6850ffbb54ac29d53921ca064ef72ae"
+      }
+    },
+    "O/OM/OMAE/DUBAI_TERMINAL": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "dea5a118e938f6ae448c2a9efd8a71fd110a8cde681881f8dde7abd691a0c758",
+        "tma_structure.json": "d063fba2d5183a8fa56974f52cb0e8f59ff46a4d46afd4888f3c8b9d8b0e8c3b"
+      }
+    },
+    "O/OT/OTDF/DOHA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "5b5df873165be0e8883dd395dd2e6e5cc7a2589ceb9aff844a0e0fab564f4f8d",
+        "tma_structure.json": "e3e8ef9406a749133072a4256fd071cfccb00491014c17fb44ce2755d5650fd8"
+      }
+    },
+    "R/RC/RCAA/HUALIEN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "a6baf93022df5e6e3923c59dca8cad5cbc23d23dd85801e1b343cc4438742336",
+        "tma_structure.json": "f8ef0eaac023e54cd90c152ade61e945410eb5a86ba55191ce8dcf736c9eeb53"
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "278e895c2160ab94606fa3974ca6802fec18cdc83ae820db03f69a4a6afe5e4f",
+        "tma_structure.json": "9ebbd59d1a20f51bb24208013be241b915aa44bca0b298a1710de9d8bb6098e7"
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "c4cf4b3416866abc2c9d71a2ec0283ede0133530e36381c017b21a49e449d8da",
+        "tma_structure.json": "a23410accbf82f3ca0139738271b215c97c647fa553a1a03851b72f393aa2121"
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "4a3d94bf843fa7c398072834ea8ae36adf64bd267a252bea3fa9729e61b9b399",
+        "tma_structure.json": "35e0160b0ecafa451819bba13ba259c1d881e91e8c091fc276881fd956d103e7"
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "d469835c5c4ccd109595eea0773c87712e0c9547f0c51fb7a2977f0a2fecf957",
+        "tma_structure.json": "c4037bad103916183ca69839c1b212b06ab58eab48eb91c30330badbd072082d"
+      }
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "22a42a9a477a72dfd58f4c512f0a6c67bf15639c6f27678dbcc1320d71e94b73",
+        "tma_structure.json": "fb4cbd98058637b33666d90a24b5ece9aee0bd5aac2632f09b564c7b5976f643"
+      }
+    },
+    "R/RC/RCAA/KINMEN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "db1fe07ca3547f324d666f583b469e587be48ff2ec3aeefd9d3746ebda822bba",
+        "tma_structure.json": "28ac495f8ed84b6b7a451c7bd7e0ae43745ea03f2e40b09044302f2b2ac9096c"
+      }
+    },
+    "R/RC/RCAA/MATSU_TMA/BEIGAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "cfaffc5c5b71adfc8b825ce1c5a96388d286cef3cdfbe37191e351ada765c74f",
+        "tma_structure.json": "9e91602e6b85a616370cbe5aacaa75ad8d67d628ede0e2f1c2799191d99a9ff5"
+      }
+    },
+    "R/RC/RCAA/MATSU_TMA/NANGAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "cd66d8ad4d00b5ca85a9f98917444264be0190fe1e22e92a5151d311440334a0",
+        "tma_structure.json": "89d5bc61da801818f85ccda4d4f6653f81e35abfaebcec902005df92aa4518ad"
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "338c1fea1c2cea84b80f6feb5004d7db98e615b3a044fa3d2f0c9a02d70acdc1",
+        "tma_structure.json": "2d560dc4d89598c67a505ec2284c31286b1eb23dfc59c5922101fd10da9acfb6"
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "3f3f1152acaa76798975f17e02e170e695e8e90e9c0a4102e8190e90180f52d0",
+        "tma_structure.json": "db1577e7cf61f08e3feedc37b2450e2159b9485c81e01044634199e19bd118ff"
+      }
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b7bea0db93acb7e6ebdf0f45d79c335a0616e21516e4039aa64410cf6a111185",
+        "tma_structure.json": "8067760225b6ba2349c08a5552a24c6f440a0edef975f8ba3a0ecc9296565fbb"
+      }
+    },
+    "R/RC/RCAA/TAITUNG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "c9c5df28a2c83237d64a19b6087bce236bc514b2129f59529e04c6114f2a7e07",
+        "tma_structure.json": "471109ba4a5bef9bbd9ccdcdc24c9f5ed100424d18f2bc4d6e748cbb736b0360"
+      }
+    },
+    "R/RK/RKRR/DAEGU_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "6a059bda5cb5051d1624d084efcef2f456b922d05d5c55d98122ccd54f7d3393",
+        "tma_structure.json": "1ec0837ee3a69a4d2069bc0d76bd8014995c24ccb3a2f4da1cc1123210434444"
+      }
+    },
+    "R/RK/RKRR/GANGNEUNG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "5d3c9958eb114c6aa3d392795edd731ead2e94f55db4b512e6656003bda5d88f",
+        "tma_structure.json": "ce75580529c7c4d53811cb8c95dd5a9f8b16807948e891c7f421f7f53df25919"
+      }
+    },
+    "R/RK/RKRR/GIMHAE_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "8ea9c469add0efc86d45edaeb466f7e8a53b62a12b151800fa5d05395171f3ab",
+        "tma_structure.json": "01aaddce37f524fa554defac1199806cbdcdf8cd78433103cc909f9ccd117a41"
+      }
+    },
+    "R/RK/RKRR/GUNSAN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "744a110bf717e2e45cf7207f1ded7742e85191b5070c9e03921c1a2b1d9e62a9",
+        "tma_structure.json": "cb71b8cdc4b2e98a1838a59775725bdf932ad54172cf5be01625dfae653fc4a6"
+      }
+    },
+    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b1b1e0f2996c836b5841536ce363866d836fab96c182b65f675f13dd354974c4",
+        "tma_structure.json": "9885302c246e9d4bb178dc8e1d550a5eff39e9f34f3dcc023c9fae952cc9002f"
+      }
+    },
+    "R/RK/RKRR/GWANGJU_TMA/MUAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "cadcf22222e15d16540adedb1c66a2a495c8d3ea40c12cb440d3770344340e8e",
+        "tma_structure.json": "e185d9389f3ab2f03160fb4bfa9728d842075285f622f777c7920e17867d1a87"
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/GIMPO_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "24265c4a1fba67bd6a7ac06f1edb099cd47da5e3ef8344d331d0cd54ca67549b",
+        "tma_structure.json": "904278a1f36f3d088bd4feb07220c9c06e78a6192af591f744f44410b1c9c281"
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "3063b2a223957fe78eba1a04e4abcb771de848ff1f6ef59f2a9ef3aa6d059f3a",
+        "tma_structure.json": "6471196f6ff5706e605458834a719a0b2277a2d64a7890732bb70adbaff7d0f5"
+      }
+    },
+    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "2062bd2ee3ddc30a75f065eb5901b6eb956647b41a2388c479a43fcb53122188",
+        "tma_structure.json": "3ef610e7db883ccaa0be8bd8f36e52886cd2c42bd3f03fcf7a40d92a4edff542"
+      }
+    },
+    "R/RK/RKRR/JEJU_TMA/JEJU_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b95cce71b8a08eb28d714a83ddd72ff4774c444cb5ea2b94b2c68668b23d578b",
+        "tma_structure.json": "a5d687f11139aeac85993ebdfc74d87a3cb2eaa0dee49ad8bad6d5c47a007cb7"
+      }
+    },
+    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "cfd3736524084861a58e8a55edfca9fafcdab32b87ab2bd99ae55a2ce52aef3d",
+        "tma_structure.json": "3d58ec388f36fbc55c42eb247dc69e7bf0f356d3a220119d69b995a6edc122b9"
+      }
+    },
+    "R/RK/RKRR/JUNGWON_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "cf64594937f14d3bbf95974539872e149310de79ed20ba824b4c21b80a67cdbe",
+        "tma_structure.json": "02152a7d04fa374c3d8ee47d60139832a5406a9e926edd4c79beeca2d645320a"
+      }
+    },
+    "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "553108dcd52743fa40eaf3938c7b5522884d18110c326891c94cbb63b76bce9c",
+        "tma_structure.json": "4ff14ecc2594096f0d7359c652cc4dad213572d1823cb612edaba4a957239ce0"
+      }
+    },
+    "R/RK/RKRR/OSAN_TMA/OSAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "1c2cc1208920955c90533a8e3f157d9ce201a0d2a1fc0dadd4a69baff269c767",
+        "tma_structure.json": "5d7ec3f5f79b7998e1545475b045ee766bd61b22e35fef586c88cd7d9db165e7"
+      }
+    },
+    "R/RK/RKRR/POHANG_TMA/POHANG_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "6b7c06ee9037b7a361c26f280ffeadf307263810d5956e9323dedbd50347c363",
+        "tma_structure.json": "c8d6f94b7ee90e48f50179fa2cf9e26ae216e78373473064493479bf1df9b35f"
+      }
+    },
+    "R/RK/RKRR/POHANG_TMA/ULSAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "7f8962687e204dd5b84fa643f196df200143ab7fc3efb797eeec981d25e819e4",
+        "tma_structure.json": "30c872ea91dc5821fa7e31addc2f7194f2b0b8756e666302b095c23eeb9be259"
+      }
+    },
+    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "eee04fc2f5d080cf5ce0d21f56db87d689e432ace1c052f04a400d2366507744",
+        "tma_structure.json": "18e12c47cf517ca243e508b5c558c67a362051b16a554ea95d70ba781b002c6f"
+      }
+    },
+    "R/RK/RKRR/SACHEON_TMA/YEOSU_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "265a0fcb51b22d9f087e07fa10224bc88e37ad1a5bd58250d2446897d45077e6",
+        "tma_structure.json": "11ce6c8aee060d6b8c902f93025c3e209e6f32273443498800dbf555232c180a"
+      }
+    },
+    "R/RK/RKRR/WONJU_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "88f7d6aa445084546ec07af2e9cf94bae716bfc4415a957efe04007f7d41d584",
+        "tma_structure.json": "32f95945e1c5892a9c93a0a4ba82239c180478d938f7f5a6dbaa22be98c469b9"
+      }
+    },
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "d0199b399c75e3ebb229e07126b56d427098a3af5205ab48a28b3ada20176105",
+        "tma_structure.json": "17ba23a2fc0ac5db3f1becbebf01768a5e55740745a6767eac0e6a8e9fbeb964"
+      }
+    },
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "f1ac2705728a52ef5e9edaad37d5bdf6e30a5a09ed06f77a9ddaaf94526cecd1",
+        "tma_structure.json": "6ebe5583c18908dfa3dfc74f672eaad34cb37c65a3aeb914e9b5224d9c4bd568"
+      }
+    },
+    "R/RP/RPHI/BICOL_TMA/BICOL_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "457c096346439bce31073e06706a76476e639fd1b9a9c0d104e52d911633be4c",
+        "tma_structure.json": "5439c6aff5da78048978cb85bb3fc9c99fcc4e7033e3f3f6b4f03bf68d139b2d"
+      }
+    },
+    "R/RP/RPHI/BICOL_TMA/NAGA_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "ef1d5d9a9ab596e097a98d7526e3a6e8dfcb5d7d0fb9d5e6008abb5853c71651",
+        "tma_structure.json": "029b7ebda13cf49adb90637d6fbc0f892065254d38415a7f68c9af248e9123e0"
+      }
+    },
+    "R/RP/RPHI/BUTUAN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "c255327f66decc4c6b4bcac56a5d5afc7049c7349ad038e672c4183b9a168500",
+        "tma_structure.json": "4623c1bbf9cf0cbd3925bb60d337d0e7dadb063db9d187aec0d9eeec5b57c1b2"
+      }
+    },
+    "R/RP/RPHI/CLARK_TMA/CLARK_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "de6780dc254bd921e13a00fa0e23db54194aa9fe902dac5c6580955e9e262649",
+        "tma_structure.json": "65336e76bbfe4156e20abf395f818fde94d620aea4f2951b4668f034049de3cf"
+      }
+    },
+    "R/RP/RPHI/CLARK_TMA/SUBIC_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "5a7db634fd571895100d81897b61aaf018992d573092c0cb9200e5500ab56adb",
+        "tma_structure.json": "4ab97f0915ef1e3ebd3f7651842702379decc065de79152d709d69eb493f4ef4"
+      }
+    },
+    "R/RP/RPHI/DAVAO_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "e1020de8680c4cc7402b9207500a99d0d03d74c202f38a930c803759978ae85d",
+        "tma_structure.json": "bb28a666bf1e570662beeefaa9b7f3b01042daf0de62d1f0554eda775acc5c4a"
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "ec64f6c11aeef495614d4170ab5e55ef9844cb3c2d1e0ddb0ca86b91d1a2217a",
+        "tma_structure.json": "de7aa49031916d4eed372003e344f9f963926fed80baecef8563593c004e7a16"
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/KALIBO_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "4f2bb60549038d1bf506a750034acd97748673c6bd5fb83789218a7d2d1d02de",
+        "tma_structure.json": "d40105da97d9d782b233045c2e01123b4b2458057c89deb4108ef237d9e08640"
+      }
+    },
+    "R/RP/RPHI/KALIBO_TMA/ROXAS_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "9fc9278522a1ce0b4e5776a4d1fe2c0baddda76f720da47256441be4b16590ee",
+        "tma_structure.json": "5b89c11a9778cc47c5dc33d39d3e579229b4d4cd25a2de22d692edb450cb78d2"
+      }
+    },
+    "R/RP/RPHI/LAGUINDINGAN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "44126b1d33879ff98947e4f313963cb8fa84f806c6bfb88b22b6163c1e594f66",
+        "tma_structure.json": "c608f311ff540a7cbc03db9e83734ed6ab0b547d40a6fcc2abfd6b7b22b56947"
+      }
+    },
+    "R/RP/RPHI/LAOAG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "4e3ac7ff92dfc35a28cf90c3e8e006fbec2e23e5e36b9b5051a5ebac1421f762",
+        "tma_structure.json": "e3fe10abfa0d98f5565a4845f5ec0427ff55d2a742722f48df0de264e1ae4644"
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/BOHOL_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "5a02f68cf1c150308dde3a8024bd4c98b91e5aac7a230e2554e0f1e049f9be6d",
+        "tma_structure.json": "00ae75315366c1018fb0151365e460a41cbbee6637d59db5b447f394d4d7bcaf"
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "3829703d316cc26c333ecf5c17b1d50cbe1fbbbad1fd641ed04c1dfa208f62ea",
+        "tma_structure.json": "97f67fb6e0f7409e24dc45da07c7246bf9334fa0c7e6513266f5d16841cef857"
+      }
+    },
+    "R/RP/RPHI/MACTAN_TMA/MACTAN_APP": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "feb39d83b888bf5d7242bc22113f740cd8201c8c2fcff6a247a57e7f26c558cf",
+        "tma_structure.json": "54920e1adaf5e29d278fb7dc867188e658c6fc170ca8a037590428a404505da4"
+      }
+    },
+    "R/RP/RPHI/MANILA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b6ca715487519a852a1b716efe01313605dfaaa639ad02fce667dc543af75ecb",
+        "tma_structure.json": "43f6cdc3d1ce87e80a4ae3f2da841cd4dd8c1b3825d7d7a495e272760a3f6864"
+      }
+    },
+    "R/RP/RPHI/PUERTO_PRINCESA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "d305a1ff22933be17be2f677b7ba35e85a7495740c720133ef628b3f4dd42733",
+        "tma_structure.json": "dab0ba8f279a220a8f2be8433d46c947bc998fec331ebd96f1d4000801eba3ef"
+      }
+    },
+    "R/RP/RPHI/TACLOBAN_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "8cdf79a2c67acd45b2023e24b6e73785596ba592b4c40606d8f229c58b18e12c",
+        "tma_structure.json": "63b4dc5f167353e8d977101b16757b0d6c185f8de7ce97b3376ff2d977c30a52"
+      }
+    },
+    "R/RP/RPHI/TAMBLER_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "51f0c6cac46a67d92838d1b22dedf0c6d49e91371a755ead3128063c627e3fc2",
+        "tma_structure.json": "a8ba6ed5e078da2eba1b345f33710b4677bc42ae14c42a1a5d880e050e168dbf"
+      }
+    },
+    "R/RP/RPHI/ZAMBOANGA_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "8ffd6ab73e64cc5b73249b8eb8f74fbd2e836b51664e810b7ec67e4a81f222b2",
+        "tma_structure.json": "c9cac578db3470d693788c1f13704a2a6c680f08d43a8813dcfab8ac0d518d89"
+      }
+    },
+    "U/UU/UUWV/MOSCOW_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "b2d25320b955789eb55c5cff392d395e1c3d03c4ae16efd7fc56b3be826e0100",
+        "tma_structure.json": "22d4dafb4b10267b3ad3644f1e11ea84ba48aba21cba87ed580b3cedb3a799fc"
+      }
+    },
+    "V/VA/VABF/MUMBAI_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "53eaf85c81af3c1ceac3a5beb3c4442f5c3028e80b08be4e7ff339ea565d261e",
+        "tma_structure.json": "e2e5e03c9cf184b383ab61d4886e3ffe2da68452427d5427217c7a0163c2b2b3"
+      }
+    },
+    "V/VH/VHHK/HONGKONG_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "49136e97914fe69050ed924eaa5a91cb2369266940f5734a17ffe1854468a3be",
+        "tma_structure.json": "65e381aa52e17a6f887de64ba39f11c25ed09769147cfb665d6a85cfc3276f01"
+      }
+    },
+    "V/VT/VTBB/Bangkok_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "00c74c5c1d1c81a0c65a05b49d053487f43d6d0b4db70c84df338c68eb92d709",
+        "tma_structure.json": "4e1b51897b927c1206bab70e4f8dc88c5eed0a81919ab29adfdef14c541497db"
+      }
+    },
+    "W/WS/WSJC/Singapore_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "dc4a4a174e006cd53d195cf61aac3ce0af044825594d074d688d141b7ab5d9e3",
+        "tma_structure.json": "0ebd89ec809ce2ca2c1df9021ff823695a4b12d31f70cf7cb86cc12a5ae32192"
+      }
+    },
+    "Y/YM/YMMM/MELBOURNE_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "97cbe2505abf5c05c6e0334e9d4bb50fc41be8d96c1744605de43b9aab2b44b0",
+        "tma_structure.json": "530a45b16545ff16f3934ff6b50efb255ff713f02d458ef0e4da1142fa06e712"
+      }
+    },
+    "Y/YM/YMMM/SYDNEY_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "617705ec9171021a4b53fd2a65d2494fbef9aaab27e8147b42d7486d69f08031",
+        "tma_structure.json": "654662cec203b14daeb6769ecdb3fbf4f2bea7735fcc05ff26a0f18cc9e489f6"
+      }
+    },
+    "Z/ZG/ZGZU/ZHUHAI_TMA": {
+      "frozen_files": [
+        "sector_configs.json",
+        "sector_definitions.json",
+        "sector_influence.json"
+      ],
+      "source_sha256": {
+        "sector_definitions.json": "bef1317261e0b394cad6abef2fd616699976ddd88600be61a668891fd43e8007",
+        "tma_structure.json": "4e217ba5ee0603f38d791c3098105ea05797543df52a08c8aee5e07f9ff65796"
+      }
+    }
+  },
+  "files": {
+    "C/CZ/CZUL/MONTREAL_TMA/misc_drawings.json": {
+      "frozen_file": "C/CZ/CZUL/MONTREAL_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "e4f24ce57dff394abf8190ebe7f722bb1d38ed5dbbcae677d4d964fa8d78418c"
+    },
+    "C/CZ/CZVR/VANCOUVER_TMA/misc_drawings.json": {
+      "frozen_file": "C/CZ/CZVR/VANCOUVER_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "f38bf233f8774adcc03e9941b4bae8eb82bf09389bf89311c9373d5d117476a2"
+    },
+    "C/CZ/CZYZ/TORONTO_TMA/misc_drawings.json": {
+      "frozen_file": "C/CZ/CZYZ/TORONTO_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "f648374a4e863fd209f5b77ab29f852fdc3b77668c4a20583fdabe8235278e71"
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA/EDDL/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/DUESSELDORF_TMA/EDDL/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "42db460a4815ad783f3c2a02185438481a8660061bf2b3fb66764293d25a5453"
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA/EDLN/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/DUESSELDORF_TMA/EDLN/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "2f62436e2638fd4d0849efaa8486d161c9fadcda6985f64db42a931307b95304"
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA/EDLV/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/DUESSELDORF_TMA/EDLV/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "7150002b13a8bde01aba7974c1a743ab846eb778a05b834d8d080fbccf266484"
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/DUESSELDORF_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "d66d86a4d9a25fd2f91d44ebdafe04a04ee2bf76a67e6ddcae101753846cacb1"
+    },
+    "E/ED/EDGG/DUESSELDORF_TMA/mva.json": {
+      "frozen_file": "E/ED/EDGG/DUESSELDORF_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "5c76b416a43ad043dd63fd4728736fbddfb9f9bd02d3833622dcf30ef4c91af3"
+    },
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "e9234921b31c48a2cb306cb8eef24c5349b50ac3bb320f9fa08b4473d3cce921"
+    },
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/FRANKFURT_MAIN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "29e3dcd9df42af12e1f248d5691897f3db2587fb59b8b9fdbcc672f4f95fc101"
+    },
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA/mva.json": {
+      "frozen_file": "E/ED/EDGG/FRANKFURT_MAIN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "375da203fa0c09fbc3adbe33546d735c7e68e65ddeb7946a741513981c4e39c4"
+    },
+    "E/ED/EDGG/HAHN_TMA/EDDR/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/HAHN_TMA/EDDR/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "61375288e24cf647a4ce57e0c81baa21352b5ad38c9dcd65643086029e2bfe3d"
+    },
+    "E/ED/EDGG/HAHN_TMA/EDFH/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/HAHN_TMA/EDFH/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "f0226af36ab672ba9bce482d2641a2bb5e801a26232b73133c8fc65e77546c60"
+    },
+    "E/ED/EDGG/HAHN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/HAHN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "8da4eaf25ae441218e83cc1b470594f3d748169f9566ad9dda93728d2147c931"
+    },
+    "E/ED/EDGG/KOELN_TMA/EDDK/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/KOELN_TMA/EDDK/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "fa747e2e8bf6213c826e07cd7f8946bb3b26cdf8fbde4f83695bc2b8e230f4fe"
+    },
+    "E/ED/EDGG/KOELN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/KOELN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "adf859af1e67c3916b5d545bff7afde03e53ddb5ec69d2b463c5a7896a9e2da9"
+    },
+    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "50d47a59add09be858f19222238e255263b942b797319627d9875b3fbf63cf21"
+    },
+    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "fbbf0276bdee262495881fa27bad43a0fe2e3bcc0a52aa6556488b1759beea5a"
+    },
+    "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLP/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLP/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "49fcd44a60bb4e6d49155fae9268058bc9722b89b5831666da5544e54d0ee895"
+    },
+    "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLW/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLW/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "563880b4a2886219f2b9bfa3fb83955142363d66de79bba45631c5372e0b3bb3"
+    },
+    "E/ED/EDGG/STUTTGART_TMA/EDDS/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/STUTTGART_TMA/EDDS/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "d9ced9b414596a424a980c6e3f23d52d4d99c27539ff4482052d48e260907232"
+    },
+    "E/ED/EDGG/STUTTGART_TMA/EDSB/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/STUTTGART_TMA/EDSB/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "00a7f7349e2faa345e2167d25a6bb35bc20f0f7b3fc10d38c616bab4711b64cf"
+    },
+    "E/ED/EDGG/STUTTGART_TMA/EDTL/procedure_options.json": {
+      "frozen_file": "E/ED/EDGG/STUTTGART_TMA/EDTL/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "4ac38c20ed97746d67c3e86dcf06de0de007c02e5da3da8892017dcc460ff5b1"
+    },
+    "E/ED/EDGG/STUTTGART_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDGG/STUTTGART_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "4cd19537f4a899d4fe98c0b6954a0064dc5e6022308e0ed66b2a1e788c088d69"
+    },
+    "E/ED/EDMM/EDDC_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDMM/EDDC_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "bb02484b3242322accbdd8ada513d3560e7adace8c904deb2ee16e7dfee462ce"
+    },
+    "E/ED/EDMM/EDDM_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDMM/EDDM_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "bb74a84ae7ea3f376ceb03980097e05635e1402219e7fb248e3fea36b4f995bf"
+    },
+    "E/ED/EDMM/EDDM_TMA/mva.json": {
+      "frozen_file": "E/ED/EDMM/EDDM_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "3fea98ba104b180841c738697270e0776b6332aa1e136b616c54f14fa2569e67"
+    },
+    "E/ED/EDMM/EDDN_TMA/EDDN/procedure_options.json": {
+      "frozen_file": "E/ED/EDMM/EDDN_TMA/EDDN/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "22e6870f722a0b1df1a39f25a445be824327a00f17d9de11a6fa8b8e9071bbac"
+    },
+    "E/ED/EDMM/EDDN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDMM/EDDN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "f6fee453097975b537abb21318a8f56b9a9b318de80cca68b07545db899d33b8"
+    },
+    "E/ED/EDWW/BERLIN_TMA/EDDB/procedure_options.json": {
+      "frozen_file": "E/ED/EDWW/BERLIN_TMA/EDDB/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "47fdd34476089888bcc1980274edf041ad0ca9d35985cf484c25925103152936"
+    },
+    "E/ED/EDWW/BERLIN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDWW/BERLIN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "089ff8ab1654a08a0eac56efb8161ae37c1c2e77bdf44cf6cc8415c89f8f23d4"
+    },
+    "E/ED/EDWW/BERLIN_TMA/mva.json": {
+      "frozen_file": "E/ED/EDWW/BERLIN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "3860faf221160432780fe75eb5e6486ac7d43620fe675b01b2df4acc9b087624"
+    },
+    "E/ED/EDWW/BREMEN_TMA/EDDW/procedure_options.json": {
+      "frozen_file": "E/ED/EDWW/BREMEN_TMA/EDDW/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "9891597cbe4136fdf58942a805996b175c83302cb654663673df44bcb6bcf994"
+    },
+    "E/ED/EDWW/BREMEN_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDWW/BREMEN_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "8cf0ef168c4016f91fa7221c6ddfdcd073d75670a37125e371525ab8d7039cce"
+    },
+    "E/ED/EDWW/HAMBURG_TMA/EDDH/procedure_options.json": {
+      "frozen_file": "E/ED/EDWW/HAMBURG_TMA/EDDH/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "090696a9482a9228c4bbc5d6e924a4128879ef9378a0dea00be810323ef498f9"
+    },
+    "E/ED/EDWW/HAMBURG_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDWW/HAMBURG_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "37a467ebef88af731ff0ed7ab17a14c881b119d0cc5564344352a226d74ab17b"
+    },
+    "E/ED/EDWW/HAMBURG_TMA/mva.json": {
+      "frozen_file": "E/ED/EDWW/HAMBURG_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e55ce656ac16c57b954ee367ad750f9cd31bc0a6a079f0e8e2ae74277680ce26"
+    },
+    "E/ED/EDWW/HANNOVER_TMA/EDDV/procedure_options.json": {
+      "frozen_file": "E/ED/EDWW/HANNOVER_TMA/EDDV/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "5e629373a193e0822163119fa8c46f4afe1927d5505d8527aaa5ef9fb3646b9c"
+    },
+    "E/ED/EDWW/HANNOVER_TMA/EDVE/procedure_options.json": {
+      "frozen_file": "E/ED/EDWW/HANNOVER_TMA/EDVE/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "667577767f05d77e824efa736ba714d3c80977fbfbba5551496faa029cdadc80"
+    },
+    "E/ED/EDWW/HANNOVER_TMA/misc_drawings.json": {
+      "frozen_file": "E/ED/EDWW/HANNOVER_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "83e05b48e65ff7bc5551111796aed422c884e8ff7ef0f3ceb8103e44d1d93a46"
+    },
+    "E/EF/EFIN/EFIN_S/HELSINKI_TMA/misc_drawings.json": {
+      "frozen_file": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "7fcdda24e92de9ebdaf82284179f695fd608b40213b9c5a8ae8f04872e9ffc4c"
+    },
+    "E/EG/EGTT/LONDON_TMA/EGKK/mva.json": {
+      "frozen_file": "E/EG/EGTT/LONDON_TMA/EGKK/mva.json",
+      "kind": "mva",
+      "source_sha256": "bcb48a7fd054d61f352ab50a4ba0aa9cb522a46d29a98e09e038427d662addd9"
+    },
+    "E/EG/EGTT/LONDON_TMA/EGLL/mva.json": {
+      "frozen_file": "E/EG/EGTT/LONDON_TMA/EGLL/mva.json",
+      "kind": "mva",
+      "source_sha256": "fae8242f1c41c6ce1d40ce6b394bccfb60886b1b27c44b68072a78af8c6454ae"
+    },
+    "E/EG/EGTT/LONDON_TMA/EGSS/mva.json": {
+      "frozen_file": "E/EG/EGTT/LONDON_TMA/EGSS/mva.json",
+      "kind": "mva",
+      "source_sha256": "6cffb466d175f8efd8ca1a95c42c265a6b701056a08795924a4d8af1253f249a"
+    },
+    "E/EG/EGTT/LONDON_TMA/misc_drawings.json": {
+      "frozen_file": "E/EG/EGTT/LONDON_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "478b6b54e34192dbff8e9d87f272783ebcb2ab74c4ec2f3862e41d1af10f85cc"
+    },
+    "E/EG/EGTT/MANCHESTER_TMA/EGCC/mva.json": {
+      "frozen_file": "E/EG/EGTT/MANCHESTER_TMA/EGCC/mva.json",
+      "kind": "mva",
+      "source_sha256": "f21e6cf8d1f7e3227c10973a96514922eddbe5ad941b7a79299c1f259620af51"
+    },
+    "E/EH/EHAA/AMSTERDAM_TMA/mva.json": {
+      "frozen_file": "E/EH/EHAA/AMSTERDAM_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "3b1d9ff74b671a9a154fd343353a8554810cee68dc3b6b7d3427d08f63b870f5"
+    },
+    "E/EI/EISN/DUBLIN_TMA/mva.json": {
+      "frozen_file": "E/EI/EISN/DUBLIN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "c0f8c20dfc0209053c66f4ffd2d3fa00786210df1f99df6ab5c3561f0ada2684"
+    },
+    "E/EK/EKDK/AALBORG_TMA/EKYT/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/AALBORG_TMA/EKYT/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "e795873bf2998a7ffddca9baccab64e6452aeb5ab61f78ff197487aa04d3cf88"
+    },
+    "E/EK/EKDK/AARHUS_TMA/EKAH/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/AARHUS_TMA/EKAH/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "169af430a4812585ffa990b2ce3cf11f411410b869922f0dc5b4f98fc36631ce"
+    },
+    "E/EK/EKDK/BILLUND_TMA/EKBI/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/BILLUND_TMA/EKBI/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "74205cba0d1e7751bd84c625eff2a4fa94ad9b663484391b1b61097f9a0ad954"
+    },
+    "E/EK/EKDK/BORNHOLM_TMA/EKRN/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/BORNHOLM_TMA/EKRN/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "c1e2aab31ee4b8e174d93a4853d4e076bac453fc49168a94866c5200218cf877"
+    },
+    "E/EK/EKDK/COPENHAGEN_TMA/EKCH/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/COPENHAGEN_TMA/EKCH/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "87a5602fae6fd3c11987c5477def9a113ae70f93deccf3f73de2b9678e545b53"
+    },
+    "E/EK/EKDK/KARUP_TMA/EKKA/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/KARUP_TMA/EKKA/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "f233d707d1bdb6bea4a607c3777ded53d0bf839608ce0f542deba02f46d409d4"
+    },
+    "E/EK/EKDK/SKRYDSTRUP_TMA/EKSP/procedure_options.json": {
+      "frozen_file": "E/EK/EKDK/SKRYDSTRUP_TMA/EKSP/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "66599765e086ded199ece89f72b54c987eb353d9a13daa47fcd9cf036fd3ad96"
+    },
+    "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_options.json": {
+      "frozen_file": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "c88e1e506643872c99ab112e466e76c98993aec5bf5f87334d456303a1d5beb8"
+    },
+    "E/EN/ENOR/ENOS/OSLO_TMA/misc_drawings.json": {
+      "frozen_file": "E/EN/ENOR/ENOS/OSLO_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "585951f4315daabc2b3929df181283d73e76ba117d87c8243ac1a39eae504d5f"
+    },
+    "E/EN/ENOR/ENOS/OSLO_TMA/mva.json": {
+      "frozen_file": "E/EN/ENOR/ENOS/OSLO_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e55c99241556b2462e6517ba8fc760c9f010fd731326afc1fbd4671bc1e4af14"
+    },
+    "E/ES/ESAA/ESMM_23W45/ESGG_TMA/misc_drawings.json": {
+      "frozen_file": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "3d20dedd6c0683d7dff4b3ef3b6892ac1488a5a560fb84dabfe1dfd21946c881"
+    },
+    "E/ES/ESAA/ESMM_23W45/ESGG_TMA/mva.json": {
+      "frozen_file": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "a1c1f7930245d09d15f94adb036c6dc108a96846148a2563d73a9c1bdf87d553"
+    },
+    "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_options.json": {
+      "frozen_file": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "eb645ffe87be8480e9098f3f18d00db2b48f62130d652b5e584f1cdeb07701dd"
+    },
+    "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/procedure_options.json": {
+      "frozen_file": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "f514fc8b345c1393f6bb98bf32be3b8690467a486ea9fdf548ec9cd6dfb358c5"
+    },
+    "E/ES/ESAA/ESOS_Y/ESOS_APP/misc_drawings.json": {
+      "frozen_file": "E/ES/ESAA/ESOS_Y/ESOS_APP/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "ed1d46e32488e680914784856389af2d46997504e5f4e615ed71a303ec037340"
+    },
+    "E/ES/ESAA/ESOS_Y/ESOS_APP/mva.json": {
+      "frozen_file": "E/ES/ESAA/ESOS_Y/ESOS_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "61187658339f6cb4bad3608affd7e668ada87bfa3afaa06d1ce86687127139d9"
+    },
+    "K/KZAB/PHOENIX_TMA/mva.json": {
+      "frozen_file": "K/KZAB/PHOENIX_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "1dde767e3f52345b9f80f7ae8e5440eef1b410f458e506a7c1b48f49c89bae33"
+    },
+    "K/KZAU/CHICAGO_MDW_TMA/KMDW/procedure_options.json": {
+      "frozen_file": "K/KZAU/CHICAGO_MDW_TMA/KMDW/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "41622a0cddc33ce6f953f32a6d5182386e65577975adf56c6c1e1f726caab4cc"
+    },
+    "K/KZAU/CHICAGO_ORD_TMA/mva.json": {
+      "frozen_file": "K/KZAU/CHICAGO_ORD_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "74cb68e55752459ee8df2eeb1bfe33724f7dddd704fcc13b0969db026efd56e2"
+    },
+    "K/KZAU/MILWAUKEE_TMA/KMKE/procedure_options.json": {
+      "frozen_file": "K/KZAU/MILWAUKEE_TMA/KMKE/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "0b8114051ccbaa22c403b01560228b156d99ad8b09a398d71347340d4eeb624d"
+    },
+    "K/KZAU/MILWAUKEE_TMA/misc_drawings.json": {
+      "frozen_file": "K/KZAU/MILWAUKEE_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "ab3df64285d409745a0e532afc35d5dda8a9d4a92b79fb0db48f757c62a53c1f"
+    },
+    "K/KZBW/BOSTON_TMA/mva.json": {
+      "frozen_file": "K/KZBW/BOSTON_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e62634a1a4ba7faa8340d0866aa8230dc3e539764b8af18d258e3baae176f7ff"
+    },
+    "K/KZDC/DULLES_TMA/mva.json": {
+      "frozen_file": "K/KZDC/DULLES_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e3e8566736cd789b9051494cd7a9420279942a1302ba219e5833a875876154e5"
+    },
+    "K/KZDC/WASHINGTON_DCA_TMA/mva.json": {
+      "frozen_file": "K/KZDC/WASHINGTON_DCA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "7c335a57c5025602f82d244d068813fb10ef841494ece004d7a16addbad38803"
+    },
+    "K/KZDV/DENVER_TMA/mva.json": {
+      "frozen_file": "K/KZDV/DENVER_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "60913b7157286a3d1e1025141f5e895bbed5ee4ad4d5693bed6ead9aa5842d73"
+    },
+    "K/KZFW/DFW_TMA/mva.json": {
+      "frozen_file": "K/KZFW/DFW_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "be462a381de26caa0cbdfbeeeefddde9e1b34123ea56d43c0f3d6033576b82c1"
+    },
+    "K/KZHU/HOUSTON_IAH_TMA/mva.json": {
+      "frozen_file": "K/KZHU/HOUSTON_IAH_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e00e15f964e2a56f030b8b19f3de83d362e4196d77e8dde370749b2657084f27"
+    },
+    "K/KZJX/ORLANDO_TMA/mva.json": {
+      "frozen_file": "K/KZJX/ORLANDO_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "5b969d0a5d8c07d492eed921f62484a8884c60fe3cf4940a9eb5267970f7ef02"
+    },
+    "K/KZLA/LAS_TMA/mva.json": {
+      "frozen_file": "K/KZLA/LAS_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "be5b7a5c20da3a6a9761ba54611e0364138c4ef5f8176ba69fed69612c65b258"
+    },
+    "K/KZLA/LAX_TMA/mva.json": {
+      "frozen_file": "K/KZLA/LAX_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "cd3774a7762c302727caf6e8d85fd62ba1f3b03e9385d5e707a609c99cbfa934"
+    },
+    "K/KZLA/SAN_DIEGO_TMA/mva.json": {
+      "frozen_file": "K/KZLA/SAN_DIEGO_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "3a71a3e437685876e2261010eb13df2764e0c1729a5c7fde441f2440b346c4ec"
+    },
+    "K/KZLC/SALT_LAKE_TMA/mva.json": {
+      "frozen_file": "K/KZLC/SALT_LAKE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "de0911947f0d76c32741054a316c3cf01f5ad0d38b4f54d0bd12cc2bb4e1f5da"
+    },
+    "K/KZMA/MIAMI_TMA/mva.json": {
+      "frozen_file": "K/KZMA/MIAMI_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "d360b061614ff2f96de56465ef0db5e4a46a0f6dda478b53c9c9496f4e6461f0"
+    },
+    "K/KZMP/MINNEAPOLIS_TMA/mva.json": {
+      "frozen_file": "K/KZMP/MINNEAPOLIS_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "c2677943ba3b4ff73c21accb15d08a6bb4b330b16fb434a81b6bf9973961c1d8"
+    },
+    "K/KZNY/JFK_TMA/KJFK/procedure_options.json": {
+      "frozen_file": "K/KZNY/JFK_TMA/KJFK/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "0db83123c8c443ab9633ad121f3397c8ac33168ed20e1c7d87565a902be59353"
+    },
+    "K/KZNY/JFK_TMA/misc_drawings.json": {
+      "frozen_file": "K/KZNY/JFK_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "2d00ec98ade2f0ffd4f4b19da71f7e47d2be0ab489b91c66c6269418acb6ad48"
+    },
+    "K/KZNY/JFK_TMA/mva.json": {
+      "frozen_file": "K/KZNY/JFK_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "80001e64dbf0cfaaa188453544c0dffaa1eb455c8dacfbab5034a52887427f92"
+    },
+    "K/KZNY/LAGUARDIA_TMA/mva.json": {
+      "frozen_file": "K/KZNY/LAGUARDIA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "0afcfddb64086191c9b4dcaf5e8c26566f1fa2a44f536e737d45609586fdb5be"
+    },
+    "K/KZNY/NEWARK_TMA/mva.json": {
+      "frozen_file": "K/KZNY/NEWARK_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "036583e0861fe647b63756760962d91425fbe47e57bc080cd8acf18d6c31668e"
+    },
+    "K/KZNY/PHILADELPHIA_TMA/mva.json": {
+      "frozen_file": "K/KZNY/PHILADELPHIA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "10a3cd67f9ccdea1cd10b015401d531f426bdf4b3f129c138d1214a6d792f83a"
+    },
+    "K/KZOA/SFO_TMA/mva.json": {
+      "frozen_file": "K/KZOA/SFO_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "3020345ddd12dfe84111a2ac125d3425dda5c8c5c58b9f31be69884b72cb8371"
+    },
+    "K/KZOB/DETROIT_TMA/mva.json": {
+      "frozen_file": "K/KZOB/DETROIT_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "70c86720304ac7494cbe55586c6d9e1aa5ecf56aac0c6d626930006ec0e135a2"
+    },
+    "K/KZSE/SEATTLE_TMA/mva.json": {
+      "frozen_file": "K/KZSE/SEATTLE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "a3ed49a3c0346966ad0aa8a2e297cb7944b0b2fce973bb26c8e584600d14d36d"
+    },
+    "K/KZTL/ATLANTA_TMA/misc_drawings.json": {
+      "frozen_file": "K/KZTL/ATLANTA_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "6443829901625a00a7672bbc2d715bce00edaebadc345b9d8bca1afb13b52340"
+    },
+    "K/KZTL/ATLANTA_TMA/mva.json": {
+      "frozen_file": "K/KZTL/ATLANTA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "c5849f48b3acc892f3420dc7138ab4d8561f17bfb12768fe1528b3e6b67e8740"
+    },
+    "K/KZTL/CHARLOTTE_TMA/mva.json": {
+      "frozen_file": "K/KZTL/CHARLOTTE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "54987fef2315b80b424ed8ba6107502e53035a299c2d25b765a1ef0e65056984"
+    },
+    "L/LE/LECB/LECB_E/PALMA_TMA/misc_drawings.json": {
+      "frozen_file": "L/LE/LECB/LECB_E/PALMA_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "459e55901f8a6b064517f92c4dba5bf35bfc6e877aeb95af7232b6c343216bc1"
+    },
+    "L/LE/LECB/LECB_E/PALMA_TMA/mva.json": {
+      "frozen_file": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "032a9369c2478538e7c24967c9ce913978d3afc4b24c58a05d893e6ba1f36252"
+    },
+    "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json": {
+      "frozen_file": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json",
+      "kind": "map_display",
+      "source_sha256": "668ddd0cd28541f66bbb8bd66a7da66be11c63886d127a809c7c7dd9c5226db0"
+    },
+    "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_options.json": {
+      "frozen_file": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "13d29965286f6b4ba703a4653083f926a4aa0d3ddc0701e2b83b9f282273d0fe"
+    },
+    "L/LE/LECB/LECB_W/BARCELONA_TMA/mva.json": {
+      "frozen_file": "L/LE/LECB/LECB_W/BARCELONA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "0aa10d7dadda4e8e70e8a339db8d211be41e541b095ca36a2a986d4bb848808c"
+    },
+    "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json": {
+      "frozen_file": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "32f1bbca89582cefc83f151b20cb18f0189e49a9a02236df7997ad31c1d053bd"
+    },
+    "L/LE/LECM/LECM_R1/BILBAO_TMA/mva.json": {
+      "frozen_file": "L/LE/LECM/LECM_R1/BILBAO_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "b44573edc9a6e07526c28a82e46f10fa0a60beb5f53c56a2b6a5693a25cc4b81"
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/map_display.json": {
+      "frozen_file": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/map_display.json",
+      "kind": "map_display",
+      "source_sha256": "99983088ec14c5f88bf6e25c0749b5759b158a32dac3d213ccdd80182fc86ec6"
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/procedure_options.json": {
+      "frozen_file": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "c4ba3700f2018b693c84919ea50067cd37b42ee2b8fde2709f4b81d090daa4da"
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA/misc_drawings.json": {
+      "frozen_file": "L/LE/LECM/LECM_R2/MADRID_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "53bfde0b5b22542f6e6e6830134d861125ea4d5dcf51cd91b3136db3974c3d2c"
+    },
+    "L/LE/LECM/LECM_R2/MADRID_TMA/mva.json": {
+      "frozen_file": "L/LE/LECM/LECM_R2/MADRID_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "385cc74a12ce7629f17e951cdff6e6e57af5fa7884bfd43c2e8f60665e6d29d1"
+    },
+    "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/procedure_options.json": {
+      "frozen_file": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "772cb504eea28173604c150e643051ec52c748b1dbbc9a68f5fa754cd5dc7755"
+    },
+    "L/LE/LECM/LECS/MALAGA_TMA/mva.json": {
+      "frozen_file": "L/LE/LECM/LECS/MALAGA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "ce57e7ced10511fae98ad402b5b44112e0de2e9d975c81d25581fc158e9a643a"
+    },
+    "L/LE/LECM/LECS/SEVILLA_TMA/mva.json": {
+      "frozen_file": "L/LE/LECM/LECS/SEVILLA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "b9af2480cd03f8988fa0f39fee74708190a8a0d4ebb1227536df7733cb521e6a"
+    },
+    "L/LF/LFFF/PARIS_TMA/LFPG/mva.json": {
+      "frozen_file": "L/LF/LFFF/PARIS_TMA/LFPG/mva.json",
+      "kind": "mva",
+      "source_sha256": "b3a94c5bb2c364d296ae09abf0b388f9459daf619d2eeb1ee8868ba08a37d546"
+    },
+    "L/LF/LFFF/PARIS_TMA/LFPO/mva.json": {
+      "frozen_file": "L/LF/LFFF/PARIS_TMA/LFPO/mva.json",
+      "kind": "mva",
+      "source_sha256": "93d7532c35a71310f357d0655c07ab33815cd46043f89bbd6e797636e4fcdb1f"
+    },
+    "L/LI/LIMM/MILAN_TMA/mva.json": {
+      "frozen_file": "L/LI/LIMM/MILAN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "8d24eb1d65cec1ab077d8ae402fbd75c190e2ece8e1bb0b99e643817d431bd2f"
+    },
+    "L/LI/LIRR/ROME_TMA/mva.json": {
+      "frozen_file": "L/LI/LIRR/ROME_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "64d04292741ea95e4df6be5364542cb1aa17aeafba56b731f50118e78edd154a"
+    },
+    "L/LO/LOVV/VIENNA_TMA/LOWW/procedure_options.json": {
+      "frozen_file": "L/LO/LOVV/VIENNA_TMA/LOWW/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "36d1d2b1b41b208f8b8afa1ab331576f720afd8d6d0adabf0c0512edbcde8477"
+    },
+    "L/LO/LOVV/VIENNA_TMA/mva.json": {
+      "frozen_file": "L/LO/LOVV/VIENNA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "5b697372d2cacb70e12048497d0bfd0fa61cf88880f5c6b7eb794236ad7054da"
+    },
+    "L/LP/LPPC/LISBOA_TMA/LPPT/procedure_options.json": {
+      "frozen_file": "L/LP/LPPC/LISBOA_TMA/LPPT/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "f22625eef00a042d697afc593eeea83742d59290a2de4779deee5f4953d8fee2"
+    },
+    "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json": {
+      "frozen_file": "L/LP/LPPC/PORTO_TMA/LPPR/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "6c9591208b4f732df09d67a66778a059e80657020d38e1241f83c945d83d77f8"
+    },
+    "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_options.json": {
+      "frozen_file": "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "0374a4e83279d151bf9062d62dd26c8e8eae9d28e40cb8c22691833dd18565ef"
+    },
+    "L/LT/LTBB/ISTANBUL_TMA/misc_drawings.json": {
+      "frozen_file": "L/LT/LTBB/ISTANBUL_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "2893856dd89a214cd0b8caa15a26cc1bb6cf36b69c6348ee3694d8d5c6dcd8f0"
+    },
+    "L/LT/LTBB/ISTANBUL_TMA/mva.json": {
+      "frozen_file": "L/LT/LTBB/ISTANBUL_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "21e9600c381350da6fec39d4e8c437af100e183cb318c99117c52744d3e8def1"
+    },
+    "O/OE/OEJD/JEDDAH_TMA/misc_drawings.json": {
+      "frozen_file": "O/OE/OEJD/JEDDAH_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "6ad6d83d5fafdb09d3d51428c4e223a8ee7c74c2ca53f0d6eca1731a43af8a25"
+    },
+    "O/OE/OEJD/RIYADH_TMA/misc_drawings.json": {
+      "frozen_file": "O/OE/OEJD/RIYADH_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "36cad19ebf0a5291364c8a13fe0abfc6b056801a53655ca1e0dbdeab3ff997b5"
+    },
+    "O/OM/OMAE/ABU_DHABI_TMA/misc_drawings.json": {
+      "frozen_file": "O/OM/OMAE/ABU_DHABI_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "123f0663de2ed7f5c0cd0881f396153bc87fffc918e35c88c68c91357ef8bafb"
+    },
+    "O/OM/OMAE/ABU_DHABI_TMA/mva.json": {
+      "frozen_file": "O/OM/OMAE/ABU_DHABI_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "95bed58d19c7fb178e5ecd91ce774980b00e20f117dc9db37a76ba2388bcf057"
+    },
+    "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json": {
+      "frozen_file": "O/OM/OMAE/DUBAI_TERMINAL/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "85fb9be9fc7d59d9964ef8c542cd167a3a2ccbaa0340d8026cf64df7d8c0e727"
+    },
+    "O/OM/OMAE/DUBAI_TERMINAL/mva.json": {
+      "frozen_file": "O/OM/OMAE/DUBAI_TERMINAL/mva.json",
+      "kind": "mva",
+      "source_sha256": "cb50d9ca65df0c076595dfd24ac52e5bbd78d7bb27a30a36f2f568e7d3328115"
+    },
+    "O/OT/OTDF/DOHA_TMA/misc_drawings.json": {
+      "frozen_file": "O/OT/OTDF/DOHA_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "fca5f3f2626090dfa97ff539225d1603a2027cf078672ec7887de182555b015c"
+    },
+    "O/OT/OTDF/DOHA_TMA/mva.json": {
+      "frozen_file": "O/OT/OTDF/DOHA_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "256e37bb4330f8a36dae66eb0af796a450a6883da442d23077e09196e8d554e0"
+    },
+    "P/PA/PAZA/ANCHORAGE_TMA/mva.json": {
+      "frozen_file": "P/PA/PAZA/ANCHORAGE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "389720361c5b6d7c3424dd979ceb61c5bbfab8f84665b606987bee86cf496c0c"
+    },
+    "P/PH/PHZH/PHNL_TMA/mva.json": {
+      "frozen_file": "P/PH/PHZH/PHNL_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "91de5316ebff48a7e048f6b205c81085fef109e314a8bd00976cef67ba9b7bc3"
+    },
+    "R/RC/RCAA/HUALIEN_TMA/mva.json": {
+      "frozen_file": "R/RC/RCAA/HUALIEN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "881606e90547684e24b0584e97365ec20a74eb86cba46cffc4796aa9596d00bb"
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "64cb0246b53cbb6ae60e7362aa555afff7f6d6939f811a0a237386ffd17081c3"
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "8d3ecd5b406b1d9a9a3e4abcaf6628ae3069a3e4da86ff9fe631010fd49118e3"
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "9481fbd4e37effb9e66df97659fb19f23f94b74fdc263f68eed819410b50292a"
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "fba7f72c3f578186ae36a447758b06da619df150ea83f892b6c19e21aac19a26"
+    },
+    "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "08d3336ff81d01a1d91e1f4826954bd5273f51dc5eafd26d9def458e7b1b4baf"
+    },
+    "R/RC/RCAA/KINMEN_TMA/mva.json": {
+      "frozen_file": "R/RC/RCAA/KINMEN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "ba937844d0277c1f53c225aeacae0b776d7ce1ea2b47b6909aac6f227fdc32e5"
+    },
+    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/procedure_options.json": {
+      "frozen_file": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "a788187902b17df84c46ec45f2b314f4dd74628da906e773891435564dfe8632"
+    },
+    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "2ae3f68afb26895e5ea038550f2312d4b0c5be33dec1dcf6197206a4d93159ca"
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "4800d00ac04e22cea0c984398fa9ee99efb48b20b436041f82ca5ffd77ed6a03"
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/procedure_options.json": {
+      "frozen_file": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "c3690db44fb7af7d830fb33fa8ae4903ddd7595f3c6085e15a9a28009ccd6a51"
+    },
+    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/mva.json": {
+      "frozen_file": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "c3cdbf6b5ff0587a60b5004609a19d8cdc793d06cfebe49c4aa086ee819685c5"
+    },
+    "R/RC/RCAA/TAITUNG_TMA/mva.json": {
+      "frozen_file": "R/RC/RCAA/TAITUNG_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "f0420aa55799d0fb6ac684c609e5a166f4d9b154bf740db56a3d0a614ecbf5f1"
+    },
+    "R/RJ/RJJJ/Tokyo_TMA/RJTT/procedure_options.json": {
+      "frozen_file": "R/RJ/RJJJ/Tokyo_TMA/RJTT/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "636acdf3af4d32f348a2e2a341d7f1b7572cc45b4ba459d99765a8994c70c784"
+    },
+    "R/RK/RKRR/DAEGU_TMA/RKTN/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/DAEGU_TMA/RKTN/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "17ad952c17634a9a909814137a31c3713dff96aa7c3602264bd16a9f88690c00"
+    },
+    "R/RK/RKRR/DAEGU_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/DAEGU_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "7785abdbd4f8325703cc38812dafe472805664a266d3eb23f3d8427f5c1fe495"
+    },
+    "R/RK/RKRR/GANGNEUNG_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/GANGNEUNG_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "d0ef387cd75eb3341ddc7de0fb2aa064d76839cdcec6e1bb5dd3c6a0d37a2589"
+    },
+    "R/RK/RKRR/GIMHAE_TMA/RKPK/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/GIMHAE_TMA/RKPK/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "bf7d48aa821d5a2a1f2a2cee4bcbcdb3439903e444951304807be5f154eba5ef"
+    },
+    "R/RK/RKRR/GIMHAE_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/GIMHAE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "c98decd8985fe220513c0e9f02944e7fa8a574c2e18e6890e78bbcae25dd5710"
+    },
+    "R/RK/RKRR/GUNSAN_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/GUNSAN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "83697fd892fea059a1b43f31010d2ed18dd2c4824dc4f96c2559f6ec04b1bb89"
+    },
+    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/RKJJ/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/RKJJ/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "4a574cec936eeade4ee8b2d8d753241163aee557fc0f06750aa04deabb265023"
+    },
+    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "c9a0f2cbf5b016163599fc759ac3346d6f947d52d4c500215501be14a8ac97e2"
+    },
+    "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "be24f37eb615424a2238db51362be8fabb667516bea5eb013e8976ecf3527143"
+    },
+    "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "a10f39e087847fc0316d62c341f46be87dd25efdadb8fee823cb58afcce36024"
+    },
+    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/RKSI/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/RKSI/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "e9930bd24237359aa1ae4bd1e209e245bebacb9eee6f65f34950fd916a77bf31"
+    },
+    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "f55dc6f4e757f6dbc9e65c84c2e89b1cf52ead2f5f8fed063577cbf053d8dbaa"
+    },
+    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/RKSM/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/RKSM/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "7c13bda9f489f9454e002038993456c2e53c233d96df8e8fe144dc9a7ec77ac2"
+    },
+    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "d637abb57b2831c977493b8b04f2a8ce30fa9e5678667e229dedbcaadd65c249"
+    },
+    "R/RK/RKRR/JEJU_TMA/JEJU_APP/RKPC/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/JEJU_TMA/JEJU_APP/RKPC/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "d743405d1dc7d3e84f17542a4433ce4ad420c7e2975041dfc53a29ba09b5e766"
+    },
+    "R/RK/RKRR/JEJU_TMA/JEJU_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/JEJU_TMA/JEJU_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "f263f5f5ea9d8220f5eef32519964cd55a4ee5f9056b5513873785dc7d9ba41b"
+    },
+    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "c8eccdd7e809a542b2f56bfc31facd563a3ce9d6385193029509e4090b971071"
+    },
+    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "7572d39e2d5957fa32bd8e0720462feef9bcba32e8dc64cfb30b766ce94f71db"
+    },
+    "R/RK/RKRR/JUNGWON_TMA/RKTU/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/JUNGWON_TMA/RKTU/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "e4eb27e6d3066c513471adf43794b97d5a2314c2da3875e5f28f557abeef36dc"
+    },
+    "R/RK/RKRR/JUNGWON_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/JUNGWON_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "0ef630d00e4bf843fc188fd80091e6db4e12d01a149e1f4c434cff2cc737a457"
+    },
+    "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "bb7d1efc00753ff1211720ea1817862edc0902bf705f652af3a6185a3ff35ca4"
+    },
+    "R/RK/RKRR/OSAN_TMA/OSAN_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/OSAN_TMA/OSAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "cfd4eaf78c36b4cac85503a66b090996cc9b6dfe340901215b938b4186ca871e"
+    },
+    "R/RK/RKRR/POHANG_TMA/POHANG_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/POHANG_TMA/POHANG_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "780acd9f62294fc12b776731f8d722fc667f2f78b8fb4075c5c8d292cd98dbf6"
+    },
+    "R/RK/RKRR/POHANG_TMA/ULSAN_APP/RKPU/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/RKPU/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "493fa970ed3bd9c050b26a64401beb0f5b30b44432c2bc0980f3b6b6b1cf97bc"
+    },
+    "R/RK/RKRR/POHANG_TMA/ULSAN_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "f7f19a154f1c64a336985c79071968bd5e81601fcec658e2334e008d3711f7e3"
+    },
+    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/RKPS/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/RKPS/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "970e0623869b2a3841bcf537ab246fe0171f81fdd05407c8dfc7415642f8fd21"
+    },
+    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "fc61e3d3b67bebca7cb6e91a112ae7fda0cd1a6408ad990148054e3041cf40aa"
+    },
+    "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/mva.json": {
+      "frozen_file": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/mva.json",
+      "kind": "mva",
+      "source_sha256": "8a828b631dbd774d05acfd4b1b4ee8c4c4f1eeb1e05c134f0ef0a27f3f9c6a6d"
+    },
+    "R/RK/RKRR/ULJIN_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/ULJIN_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "c214190ce12d2694787c983b3348471fbc56801351b10815661e1c0fbb4d3186"
+    },
+    "R/RK/RKRR/WONJU_TMA/RKNW/procedure_options.json": {
+      "frozen_file": "R/RK/RKRR/WONJU_TMA/RKNW/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "2183b03d8ce978c0769a64b54cddbc156b2484f4d5ec8c2c77910e2d23ba2431"
+    },
+    "R/RK/RKRR/WONJU_TMA/mva.json": {
+      "frozen_file": "R/RK/RKRR/WONJU_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e8b39628e1befdcb9687c38e397a355e6acd24c32689d0d2b500158a82e13751"
+    },
+    "U/UU/UUWV/MOSCOW_TMA/mva.json": {
+      "frozen_file": "U/UU/UUWV/MOSCOW_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "ddaf5a136523cd4b745654f8e9e3a8a193baffbc928a6677d3a838f806ed7758"
+    },
+    "V/VA/VABF/MUMBAI_TMA/VABB/procedure_options.json": {
+      "frozen_file": "V/VA/VABF/MUMBAI_TMA/VABB/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "ef77b54e3585444e427b0f70a7e9dee498405bbb5bb0b3ed984883c5e9d702c2"
+    },
+    "V/VH/VHHK/HONGKONG_TMA/VHHH/procedure_options.json": {
+      "frozen_file": "V/VH/VHHK/HONGKONG_TMA/VHHH/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "e9bffddde6d25aa54a7ca8e350941c5dea79dfad9cc8048c1374b35cca5ada31"
+    },
+    "V/VH/VHHK/HONGKONG_TMA/mva.json": {
+      "frozen_file": "V/VH/VHHK/HONGKONG_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "91d60ba87e02c3348ec9c0bbccaa509ad429ba059b8a0f35b4573edc1e8519e8"
+    },
+    "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json": {
+      "frozen_file": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "28086196ade77d70114f80a2b7208259c63b59b154a31464a4d334f3233cba58"
+    },
+    "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_options.json": {
+      "frozen_file": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "f67a351342e13cb109ee1cdef894265325f5e60086494f0878c9be7237cf188e"
+    },
+    "V/VT/VTBB/Bangkok_TMA/misc_drawings.json": {
+      "frozen_file": "V/VT/VTBB/Bangkok_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "7b48f4d17555dd0daf6c60c53edf08023272192f828303d4870812251c914cb0"
+    },
+    "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_options.json": {
+      "frozen_file": "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "a5a6c8da7ef758de49c332dab0ca7d606332c59f4dc99988aff330ce5626e9b6"
+    },
+    "W/WM/WMFC/Kuala_Lumpur_TMA/mva.json": {
+      "frozen_file": "W/WM/WMFC/Kuala_Lumpur_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "e764626087980fdda5083fbbb250314f497d2498137ef82d98a7d584652a4932"
+    },
+    "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json": {
+      "frozen_file": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "db318558406286f9ca03729a5db00443d1f41eda3e4d3f6af9dcdeb0101892df"
+    },
+    "W/WS/WSJC/Singapore_TMA/misc_drawings.json": {
+      "frozen_file": "W/WS/WSJC/Singapore_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "22ae32f064be1b5629b5e8329fb3b65a2c5a7e1736aa5077188b213d3a962e4c"
+    },
+    "Y/YM/YMMM/MELBOURNE_TMA/YMML/procedure_options.json": {
+      "frozen_file": "Y/YM/YMMM/MELBOURNE_TMA/YMML/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "91ead0f0ba8a6c9c93666ac3862765a9432c0333a4b7809eb3e7983f73decf5a"
+    },
+    "Y/YM/YMMM/MELBOURNE_TMA/misc_drawings.json": {
+      "frozen_file": "Y/YM/YMMM/MELBOURNE_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "ab3a57745b933328be26d9de68c5569dbf36e4f80708c7760dbb3c1509f6891b"
+    },
+    "Y/YM/YMMM/MELBOURNE_TMA/mva.json": {
+      "frozen_file": "Y/YM/YMMM/MELBOURNE_TMA/mva.json",
+      "kind": "mva",
+      "source_sha256": "42294e8bc359bcf9b62da956fde35fba5689d0789330b701109f9bca9418d299"
+    },
+    "Y/YM/YMMM/SYDNEY_TMA/YSSY/procedure_options.json": {
+      "frozen_file": "Y/YM/YMMM/SYDNEY_TMA/YSSY/procedure_options.json",
+      "kind": "procedure_options",
+      "source_sha256": "3fe168752be7b7a6ab97eeccd45378f8b6fa7324dfe1f0471652ecbcce39cd37"
+    },
+    "Y/YM/YMMM/SYDNEY_TMA/misc_drawings.json": {
+      "frozen_file": "Y/YM/YMMM/SYDNEY_TMA/misc_drawings.json",
+      "kind": "misc_drawings",
+      "source_sha256": "d0d8b9f31337e50aa1297a6461b29967986c75b8f036bfafefab94e6a6adc8e4"
+    }
+  },
+  "schema_version": 1,
+  "snapshot_commit": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3"
+}

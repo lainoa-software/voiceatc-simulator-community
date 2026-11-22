@@ -1,0 +1,54 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "GCHI",
+        "GCLA",
+        "GCTS",
+        "GCXO",
+        "GCLP",
+        "GCFV",
+        "GCRR"
+      ],
+      "id": "A3N",
+      "positions": [
+        {
+          "code": "GCHI_GCCCINB_APP",
+          "frequency": "126.100",
+          "name": "ALL",
+          "sector": "GCCCINB",
+          "unit": "GCHI_APP"
+        },
+        {
+          "code": "GCLP_GCCCIGC_APP",
+          "frequency": "124.300",
+          "name": "ALL",
+          "sector": "GCCCIGC",
+          "unit": "GCHI_APP"
+        },
+        {
+          "code": "GCFV_GCCCAAC_APP",
+          "frequency": "129.300",
+          "name": "ALL",
+          "sector": "GCCCAAC",
+          "unit": "GCHI_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "El Hierro approach",
+      "frequencies": [
+        "126.100",
+        "124.300",
+        "129.300"
+      ],
+      "id": "GCHI_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

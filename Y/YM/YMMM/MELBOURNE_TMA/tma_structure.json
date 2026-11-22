@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "YMML"
+      ],
+      "id": "MELBOURNE_APP",
+      "positions": [
+        {
+          "code": "YMML_APP",
+          "frequency": "132.000",
+          "name": "ALL",
+          "sector": "YMML_APP",
+          "unit": "YMML_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Melbourne approach",
+      "frequencies": [
+        "132.000"
+      ],
+      "id": "YMML_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

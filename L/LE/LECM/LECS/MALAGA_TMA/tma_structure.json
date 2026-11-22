@@ -1,0 +1,38 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LEMG"
+      ],
+      "id": "1",
+      "positions": [
+        {
+          "code": "LEMG_APP",
+          "frequency": "118.455",
+          "name": "ALL",
+          "sector": "LEMGALL",
+          "unit": "LEMG_APP"
+        }
+      ],
+      "runways": {
+        "LEMG": [
+          "SOUTH",
+          "NORTH"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Malaga approach",
+      "frequencies": [
+        "118.455"
+      ],
+      "id": "LEMG_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

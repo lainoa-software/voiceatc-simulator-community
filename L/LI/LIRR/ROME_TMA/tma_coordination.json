@@ -1,0 +1,96 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F120",
+      "fix": [
+        "GOKBA"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_GOKBA",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F110",
+      "fix": [
+        "ESATU"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_ESATU",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F100",
+      "fix": [
+        "VALMA"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_VALMA",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F100",
+      "fix": [
+        "ESINO"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_ESINO",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F100",
+      "fix": [
+        "RIFFI"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_RIFFI",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "arrives": [
+        "LIRF"
+      ],
+      "descent": "F150",
+      "fix": [
+        "GOPOL"
+      ],
+      "from": "LIRR_CTR",
+      "name": "LIRF_ARR_GOPOL",
+      "priority": 10,
+      "to": "LIRF_APP"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LIRF"
+      ],
+      "fix": [
+        "SOVAN"
+      ],
+      "from": "LIRF_APP",
+      "name": "LIRF_DEP_SOVAN",
+      "priority": 10,
+      "to": "LIRR_CTR"
+    }
+  ],
+  "schema": 2
+}

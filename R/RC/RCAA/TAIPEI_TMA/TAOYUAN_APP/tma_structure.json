@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCTP"
+      ],
+      "id": "TAOYUAN",
+      "positions": [
+        {
+          "code": "RCTP_APP",
+          "frequency": "125.100",
+          "name": "ALL",
+          "sector": "RCTP_APP",
+          "unit": "RCTP_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Taipei approach",
+      "frequencies": [
+        "125.100"
+      ],
+      "id": "RCTP_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

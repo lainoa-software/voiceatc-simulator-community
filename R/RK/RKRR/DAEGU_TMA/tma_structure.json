@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKTN"
+      ],
+      "id": "DAEGU",
+      "positions": [
+        {
+          "code": "RKTN_APP",
+          "frequency": "135.900",
+          "name": "ALL",
+          "sector": "RKTN_APP",
+          "unit": "RKTN_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Daegu approach",
+      "frequencies": [
+        "135.900"
+      ],
+      "id": "RKTN_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

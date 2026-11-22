@@ -1,0 +1,130 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "VTBD",
+        "VTBS"
+      ],
+      "id": "BANGKOK_APP",
+      "positions": [
+        {
+          "code": "VTBD_APP",
+          "frequency": "125.200",
+          "name": "ALL",
+          "sector": "VTBB_APP",
+          "unit": "VTBD_APP"
+        }
+      ]
+    },
+    {
+      "airports": [
+        "VTBS"
+      ],
+      "id": "BANGKOK_APP_VTBS_ONLY",
+      "positions": [
+        {
+          "code": "VTBS_APP",
+          "frequency": "125.200",
+          "name": "ALL",
+          "sector": "VTBS_APP",
+          "unit": "VTBD_APP"
+        }
+      ]
+    },
+    {
+      "airports": [
+        "VTBS",
+        "VTBD"
+      ],
+      "id": "BANGKOK_SPLIT_SOUTH",
+      "positions": [
+        {
+          "code": "VTBS_DEPS_APP",
+          "frequency": "119.250",
+          "name": "ALL",
+          "sector": "VTBS_DEP_S",
+          "unit": "VTBD_APP"
+        },
+        {
+          "code": "VTBS_ARRS_APP",
+          "frequency": "121.100",
+          "name": "ALL",
+          "sector": "VTBS_ARR_S",
+          "unit": "VTBD_APP"
+        },
+        {
+          "code": "VTBD_VTBBAPPS_APP",
+          "frequency": "125.200",
+          "name": "ALL",
+          "sector": "VTBB_APP_S",
+          "unit": "VTBD_APP"
+        }
+      ],
+      "runways": {
+        "VTBD": [
+          "19_20",
+          "21"
+        ],
+        "VTBS": [
+          "19_20",
+          "21"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "VTBS",
+        "VTBD"
+      ],
+      "id": "BANGKOK_SPLIT_NORTH",
+      "positions": [
+        {
+          "code": "VTBS_DEPN_APP",
+          "frequency": "119.250",
+          "name": "ALL",
+          "sector": "VTBS_DEP_N",
+          "unit": "VTBD_APP"
+        },
+        {
+          "code": "VTBS_ARRN_APP",
+          "frequency": "121.100",
+          "name": "ALL",
+          "sector": "VTBS_ARR_N",
+          "unit": "VTBD_APP"
+        },
+        {
+          "code": "VTBD_VTBBAPPN_APP",
+          "frequency": "125.200",
+          "name": "ALL",
+          "sector": "VTBB_APP_N",
+          "unit": "VTBD_APP"
+        }
+      ],
+      "runways": {
+        "VTBD": [
+          "01_02",
+          "03"
+        ],
+        "VTBS": [
+          "01_02",
+          "03"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Bangkok approach",
+      "frequencies": [
+        "125.200",
+        "119.250",
+        "121.100"
+      ],
+      "id": "VTBD_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

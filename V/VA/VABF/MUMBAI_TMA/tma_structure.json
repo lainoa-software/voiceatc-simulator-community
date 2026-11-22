@@ -1,0 +1,40 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "VABB"
+      ],
+      "id": "APP_ONLY",
+      "positions": [
+        {
+          "code": "VABB_APP",
+          "frequency": "127.900",
+          "name": "ALL",
+          "sector": "VABB_APP",
+          "unit": "VABB_APP"
+        }
+      ],
+      "runways": {
+        "VABB": [
+          "RWY27",
+          "RWY09",
+          "RWY14",
+          "RWY32"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Mumbai approach",
+      "frequencies": [
+        "127.900"
+      ],
+      "id": "VABB_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

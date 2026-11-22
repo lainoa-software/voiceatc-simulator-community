@@ -1,0 +1,288 @@
+{
+  "airport": "LOWW",
+  "schema_version": 1,
+  "airac_min": 2503,
+  "defaults": { "init_climb": 5000, "spawn_enabled": true },
+  "stars": {
+    "REKL3W": { "spawn_enabled": false },
+    "TOVK3W": { "spawn_enabled": false },
+    "VENE3W": { "spawn_enabled": false }
+  },
+  "configs": {
+    "DAY_WEST": {
+      "sids": {
+        "AGMI2C": { "spawn_enabled": false },
+        "ASPI2C": { "spawn_enabled": false },
+        "EMKO3C": { "spawn_enabled": false },
+        "EWUK1C": { "spawn_enabled": false },
+        "IMVO3C": { "spawn_enabled": false },
+        "IRGO2C": { "spawn_enabled": false },
+        "ODSU2C": { "spawn_enabled": false },
+        "OSMO2C": { "spawn_enabled": false },
+        "OTGA2C": { "spawn_enabled": false },
+        "UMSU3C": { "spawn_enabled": false },
+        "UNGU2C": { "spawn_enabled": false },
+        "VABG2C": { "spawn_enabled": false }
+      }
+    },
+    "DAY_SE": {
+      "sids": {
+        "ADAM1F": { "spawn_enabled": false },
+        "BUWU1F": { "spawn_enabled": false },
+        "KOXE1F": { "spawn_enabled": false },
+        "LANU1F": { "spawn_enabled": false },
+        "LEDV1F": { "spawn_enabled": false }
+      }
+    },
+    "DAY_CALM": {
+      "sids": {
+        "AGMI2C": { "spawn_enabled": false },
+        "ASPI2C": { "spawn_enabled": false },
+        "EMKO3C": { "spawn_enabled": false },
+        "EWUK1C": { "spawn_enabled": false },
+        "IMVO3C": { "spawn_enabled": false },
+        "IRGO2C": { "spawn_enabled": false },
+        "ODSU2C": { "spawn_enabled": false },
+        "OSMO2C": { "spawn_enabled": false },
+        "OTGA2C": { "spawn_enabled": false },
+        "UMSU3C": { "spawn_enabled": false },
+        "UNGU2C": { "spawn_enabled": false },
+        "VABG2C": { "spawn_enabled": false }
+      }
+    },
+    "NIGHT": {
+      "sids": {
+        "ADAM2C": { "spawn_enabled": false },
+        "ARSI1C": { "spawn_enabled": false },
+        "BUWU1C": { "spawn_enabled": false },
+        "KOXE1C": { "spawn_enabled": false },
+        "LANU2C": { "spawn_enabled": false },
+        "LEDV3C": { "spawn_enabled": false },
+        "LUGE1C": { "spawn_enabled": false },
+        "MEDI1C": { "spawn_enabled": false },
+        "OSPE4C": { "spawn_enabled": false },
+        "RUPE2C": { "spawn_enabled": false },
+        "SOVI1C": { "spawn_enabled": false },
+        "STEI3C": { "spawn_enabled": false }
+      }
+    },
+    "NIGHT_SE": {
+      "sids": {
+        "ADAM1A": { "spawn_enabled": false },
+        "ARSI2A": { "spawn_enabled": false },
+        "ARSI1E": { "spawn_enabled": false },
+        "BUWU2A": { "spawn_enabled": false },
+        "BUWU1E": { "spawn_enabled": false },
+        "KOXE1A": { "spawn_enabled": false },
+        "LANU4A": { "spawn_enabled": false },
+        "LANU1E": { "spawn_enabled": false },
+        "LEDV4A": { "spawn_enabled": false },
+        "LEDV1E": { "spawn_enabled": false },
+        "LUGE2A": { "spawn_enabled": false },
+        "LUGE1E": { "spawn_enabled": false },
+        "MEDI2A": { "spawn_enabled": false },
+        "MEDI1E": { "spawn_enabled": false },
+        "OSPE3A": { "spawn_enabled": false },
+        "OSPE1E": { "spawn_enabled": false },
+        "RUPE2A": { "spawn_enabled": false },
+        "RUPE1E": { "spawn_enabled": false },
+        "SOVI2A": { "spawn_enabled": false },
+        "SOVI1E": { "spawn_enabled": false },
+        "STEI3A": { "spawn_enabled": false },
+        "STEI1E": { "spawn_enabled": false }
+      }
+    }
+  },
+  "airac_overrides": {
+    "bundled": {
+      "airport": "LOWW",
+      "schema_version": 1,
+      "defaults": { "init_climb": 5000, "spawn_enabled": true },
+      "stars": {
+        "REKLU.W": { "spawn_enabled": false },
+        "TOVKA.W": { "spawn_enabled": false },
+        "VENEN.W": { "spawn_enabled": false }
+      },
+      "configs": {
+        "DAY_WEST": {
+          "sids": {
+            "AGMIM.C": { "spawn_enabled": false },
+            "ASPIB.C": { "spawn_enabled": false },
+            "EMKOG.C": { "spawn_enabled": false },
+            "EWUKE.C": { "spawn_enabled": false },
+            "IMVOB.C": { "spawn_enabled": false },
+            "IRGOT.C": { "spawn_enabled": false },
+            "ODSUD.C": { "spawn_enabled": false },
+            "OSMOD.C": { "spawn_enabled": false },
+            "OTGAR.C": { "spawn_enabled": false },
+            "UMSUM.C": { "spawn_enabled": false },
+            "UNGUT.C": { "spawn_enabled": false },
+            "VABGU.C": { "spawn_enabled": false }
+          }
+        },
+        "DAY_SE": {
+          "sids": {
+            "ADAMA.F": { "spawn_enabled": false },
+            "BUWUT.F": { "spawn_enabled": false },
+            "KOXER.F": { "spawn_enabled": false },
+            "LANUX.F": { "spawn_enabled": false },
+            "LEDVA.F": { "spawn_enabled": false }
+          }
+        },
+        "DAY_CALM": {
+          "sids": {
+            "AGMIM.C": { "spawn_enabled": false },
+            "ASPIB.C": { "spawn_enabled": false },
+            "EMKOG.C": { "spawn_enabled": false },
+            "EWUKE.C": { "spawn_enabled": false },
+            "IMVOB.C": { "spawn_enabled": false },
+            "IRGOT.C": { "spawn_enabled": false },
+            "ODSUD.C": { "spawn_enabled": false },
+            "OSMOD.C": { "spawn_enabled": false },
+            "OTGAR.C": { "spawn_enabled": false },
+            "UMSUM.C": { "spawn_enabled": false },
+            "UNGUT.C": { "spawn_enabled": false },
+            "VABGU.C": { "spawn_enabled": false }
+          }
+        },
+        "NIGHT": {
+          "sids": {
+            "ADAMA.C": { "spawn_enabled": false },
+            "ARSIN.C": { "spawn_enabled": false },
+            "BUWUT.C": { "spawn_enabled": false },
+            "KOXER.C": { "spawn_enabled": false },
+            "LANUX.C": { "spawn_enabled": false },
+            "LEDVA.C": { "spawn_enabled": false },
+            "LUGEM.C": { "spawn_enabled": false },
+            "MEDIX.C": { "spawn_enabled": false },
+            "OSPEN.C": { "spawn_enabled": false },
+            "RUPET.C": { "spawn_enabled": false },
+            "SOVIL.C": { "spawn_enabled": false },
+            "STEIN.C": { "spawn_enabled": false }
+          }
+        },
+        "NIGHT_SE": {
+          "sids": {
+            "ADAMA.A": { "spawn_enabled": false },
+            "ARSIN.A": { "spawn_enabled": false },
+            "ARSIN.E": { "spawn_enabled": false },
+            "BUWUT.A": { "spawn_enabled": false },
+            "BUWUT.E": { "spawn_enabled": false },
+            "KOXER.A": { "spawn_enabled": false },
+            "LANUX.A": { "spawn_enabled": false },
+            "LANUX.E": { "spawn_enabled": false },
+            "LEDVA.A": { "spawn_enabled": false },
+            "LEDVA.E": { "spawn_enabled": false },
+            "LUGEM.A": { "spawn_enabled": false },
+            "LUGEM.E": { "spawn_enabled": false },
+            "MEDIX.A": { "spawn_enabled": false },
+            "MEDIX.E": { "spawn_enabled": false },
+            "OSPEN.A": { "spawn_enabled": false },
+            "OSPEN.E": { "spawn_enabled": false },
+            "RUPET.A": { "spawn_enabled": false },
+            "RUPET.E": { "spawn_enabled": false },
+            "SOVIL.A": { "spawn_enabled": false },
+            "SOVIL.E": { "spawn_enabled": false },
+            "STEIN.A": { "spawn_enabled": false },
+            "STEIN.E": { "spawn_enabled": false }
+          }
+        }
+      }
+    },
+    "latest": {
+      "airport": "LOWW",
+      "schema_version": 1,
+      "defaults": { "init_climb": 5000, "spawn_enabled": true },
+      "stars": {
+        "REKLU.W": { "spawn_enabled": false },
+        "TOVKA.W": { "spawn_enabled": false },
+        "VENEN.W": { "spawn_enabled": false }
+      },
+      "configs": {
+        "DAY_WEST": {
+          "sids": {
+            "AGMIM.C": { "spawn_enabled": false },
+            "ASPIB.C": { "spawn_enabled": false },
+            "EMKOG.C": { "spawn_enabled": false },
+            "EWUKE.C": { "spawn_enabled": false },
+            "IMVOB.C": { "spawn_enabled": false },
+            "IRGOT.C": { "spawn_enabled": false },
+            "ODSUD.C": { "spawn_enabled": false },
+            "OSMOD.C": { "spawn_enabled": false },
+            "OTGAR.C": { "spawn_enabled": false },
+            "UMSUM.C": { "spawn_enabled": false },
+            "UNGUT.C": { "spawn_enabled": false },
+            "VABGU.C": { "spawn_enabled": false }
+          }
+        },
+        "DAY_SE": {
+          "sids": {
+            "ADAMA.F": { "spawn_enabled": false },
+            "BUWUT.F": { "spawn_enabled": false },
+            "KOXER.F": { "spawn_enabled": false },
+            "LANUX.F": { "spawn_enabled": false },
+            "LEDVA.F": { "spawn_enabled": false }
+          }
+        },
+        "DAY_CALM": {
+          "sids": {
+            "AGMIM.C": { "spawn_enabled": false },
+            "ASPIB.C": { "spawn_enabled": false },
+            "EMKOG.C": { "spawn_enabled": false },
+            "EWUKE.C": { "spawn_enabled": false },
+            "IMVOB.C": { "spawn_enabled": false },
+            "IRGOT.C": { "spawn_enabled": false },
+            "ODSUD.C": { "spawn_enabled": false },
+            "OSMOD.C": { "spawn_enabled": false },
+            "OTGAR.C": { "spawn_enabled": false },
+            "UMSUM.C": { "spawn_enabled": false },
+            "UNGUT.C": { "spawn_enabled": false },
+            "VABGU.C": { "spawn_enabled": false }
+          }
+        },
+        "NIGHT": {
+          "sids": {
+            "ADAMA.C": { "spawn_enabled": false },
+            "ARSIN.C": { "spawn_enabled": false },
+            "BUWUT.C": { "spawn_enabled": false },
+            "KOXER.C": { "spawn_enabled": false },
+            "LANUX.C": { "spawn_enabled": false },
+            "LEDVA.C": { "spawn_enabled": false },
+            "LUGEM.C": { "spawn_enabled": false },
+            "MEDIX.C": { "spawn_enabled": false },
+            "OSPEN.C": { "spawn_enabled": false },
+            "RUPET.C": { "spawn_enabled": false },
+            "SOVIL.C": { "spawn_enabled": false },
+            "STEIN.C": { "spawn_enabled": false }
+          }
+        },
+        "NIGHT_SE": {
+          "sids": {
+            "ADAMA.A": { "spawn_enabled": false },
+            "ARSIN.A": { "spawn_enabled": false },
+            "ARSIN.E": { "spawn_enabled": false },
+            "BUWUT.A": { "spawn_enabled": false },
+            "BUWUT.E": { "spawn_enabled": false },
+            "KOXER.A": { "spawn_enabled": false },
+            "LANUX.A": { "spawn_enabled": false },
+            "LANUX.E": { "spawn_enabled": false },
+            "LEDVA.A": { "spawn_enabled": false },
+            "LEDVA.E": { "spawn_enabled": false },
+            "LUGEM.A": { "spawn_enabled": false },
+            "LUGEM.E": { "spawn_enabled": false },
+            "MEDIX.A": { "spawn_enabled": false },
+            "MEDIX.E": { "spawn_enabled": false },
+            "OSPEN.A": { "spawn_enabled": false },
+            "OSPEN.E": { "spawn_enabled": false },
+            "RUPET.A": { "spawn_enabled": false },
+            "RUPET.E": { "spawn_enabled": false },
+            "SOVIL.A": { "spawn_enabled": false },
+            "SOVIL.E": { "spawn_enabled": false },
+            "STEIN.A": { "spawn_enabled": false },
+            "STEIN.E": { "spawn_enabled": false }
+          }
+        }
+      }
+    }
+  }
+}

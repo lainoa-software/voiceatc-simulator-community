@@ -1,0 +1,137 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_08R",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_08R",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_08R"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_26L",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_26L",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_26L"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_08L",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_08L",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_08L"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_26R",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_26R",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_26R"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_02",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_02",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_02"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "LOXZ"
+      ],
+      "id": "ZELTWEG_TMA_WHOLE_LOXZ_20",
+      "positions": [
+        {
+          "code": "LOXZ_APP",
+          "frequency": "129.480",
+          "name": "ALL",
+          "sector": "ZELTWEG_TMA_LOXZ_20",
+          "unit": "LOXZ_APP"
+        }
+      ],
+      "runways": {
+        "LOXZ": [
+          "LOXZ_20"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Zeltweg approach",
+      "frequencies": [
+        "129.480"
+      ],
+      "id": "LOXZ_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

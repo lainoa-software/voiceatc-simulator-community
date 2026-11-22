@@ -1,0 +1,428 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F210",
+      "fix": [
+        "ALBER"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_ALBER",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "BISBA"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_BISBA",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "CASPE"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_CASPE",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "GRAUS"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_GRAUS",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "LOBAR"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_LOBAR",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F110",
+      "fix": [
+        "MAMUK"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_MAMUK",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "MARTA"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_MARTA",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "MATEX"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_MATEX",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F160",
+      "fix": [
+        "NEPAL"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_NEPAL",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F160",
+      "fix": [
+        "OSTUR"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_OSTUR",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F230",
+      "fix": [
+        "PUMAL"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_PUMAL",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F200",
+      "fix": [
+        "VERSO"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_VERSO",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "arrives": [
+        "LEBL"
+      ],
+      "descent": "F100",
+      "fix": [
+        "VIBOK"
+      ],
+      "from": "LECB_CTR",
+      "name": "LEBL_ARR_VIBOK",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "GRAUS"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_GRAUS",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LOBAR"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_LOBAR",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "MOPAS"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_MOPAS",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "NATPI"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_NATPI",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "OLOXO"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_OLOXO",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F090",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "MAMUK"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_MAMUK",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F100",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DUQQI"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_DUQQI",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "AGENA"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_AGENA",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DIPES"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_DIPES",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LOTOS"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_LOTOS",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "SENIA"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_SENIA",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DALIN"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_DALIN",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F100",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DUNES"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_DUNES",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LARPA"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEBL_DEP_LARPA",
+      "priority": 10,
+      "to": "LECB_CTR"
+    },
+    {
+      "arrives": [
+        "LEGE"
+      ],
+      "descent": "A060",
+      "fix": [
+        "BANOL"
+      ],
+      "from": "LEBL_APP",
+      "name": "LEGE_ARR_BANOL",
+      "priority": 10,
+      "to": "LEGE_TWR"
+    },
+    {
+      "arrives": [
+        "LERS"
+      ],
+      "descent": "A060",
+      "fix": [
+        "VLA"
+      ],
+      "from": "LEBL_APP",
+      "name": "LERS_ARR_VLA",
+      "priority": 10,
+      "to": "LERS_TWR"
+    },
+    {
+      "arrives": [
+        "LERS"
+      ],
+      "descent": "A060",
+      "fix": [
+        "KERIP"
+      ],
+      "from": "LEBL_APP",
+      "name": "LERS_ARR_KERIP",
+      "priority": 10,
+      "to": "LERS_TWR"
+    },
+    {
+      "arrives": [
+        "LERS"
+      ],
+      "descent": "A060",
+      "fix": [
+        "DISET"
+      ],
+      "from": "LEBL_APP",
+      "name": "LERS_ARR_DISET",
+      "priority": 10,
+      "to": "LERS_TWR"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "LEGE"
+      ],
+      "from": "LEGE_TWR",
+      "name": "LEGE_DEP",
+      "priority": 10,
+      "to": "LEBL_APP"
+    },
+    {
+      "climb": "A050",
+      "departs": [
+        "LERS"
+      ],
+      "from": "LERS_TWR",
+      "name": "LERS_DEP",
+      "priority": 10,
+      "to": "LEBL_APP"
+    }
+  ],
+  "schema": 2
+}

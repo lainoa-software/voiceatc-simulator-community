@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCNN"
+      ],
+      "id": "TAINAN",
+      "positions": [
+        {
+          "code": "RCNN_APP",
+          "frequency": "121.100",
+          "name": "ALL",
+          "sector": "RCNN_APP",
+          "unit": "RCNN_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Tainan approach",
+      "frequencies": [
+        "121.100"
+      ],
+      "id": "RCNN_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

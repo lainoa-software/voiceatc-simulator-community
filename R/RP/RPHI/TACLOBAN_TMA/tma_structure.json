@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RPVA"
+      ],
+      "id": "TACLOBAN",
+      "positions": [
+        {
+          "code": "RPVA_APP",
+          "frequency": "120.800",
+          "name": "ALL",
+          "sector": "RPVA_APP",
+          "unit": "RPVA_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Tacloban approach",
+      "frequencies": [
+        "120.800"
+      ],
+      "id": "RPVA_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

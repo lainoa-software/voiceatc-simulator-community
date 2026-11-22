@@ -1,0 +1,131 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "KJFK",
+        "KFRG"
+      ],
+      "id": "SOUTH_ARR",
+      "positions": [
+        {
+          "code": "KJFK_APP",
+          "frequency": "125.700",
+          "name": "ALL",
+          "sector": "KJFKAPP",
+          "unit": "KJFK_APP"
+        }
+      ],
+      "runways": {
+        "KJFK": [
+          "SOUTH_ARR"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KJFK",
+        "KFRG"
+      ],
+      "id": "SOUTH_DEP",
+      "positions": [
+        {
+          "code": "KJFK_APP",
+          "frequency": "125.700",
+          "name": "ALL",
+          "sector": "KJFKAPP",
+          "unit": "KJFK_APP"
+        }
+      ],
+      "runways": {
+        "KJFK": [
+          "SOUTH_DEP"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KJFK",
+        "KFRG"
+      ],
+      "id": "NORTH",
+      "positions": [
+        {
+          "code": "KJFK_APP",
+          "frequency": "125.700",
+          "name": "ALL",
+          "sector": "KJFKAPP",
+          "unit": "KJFK_APP"
+        }
+      ],
+      "runways": {
+        "KJFK": [
+          "NORTH"
+        ]
+      }
+    },
+    {
+      "airports": [
+        "KJFK",
+        "KFRG"
+      ],
+      "id": "NORTHWEST",
+      "positions": [
+        {
+          "code": "KJFK_APP",
+          "frequency": "125.700",
+          "name": "ALL",
+          "sector": "KJFKAPP",
+          "unit": "KJFK_APP"
+        }
+      ],
+      "runways": {
+        "KJFK": [
+          "NORTHWEST"
+        ]
+      }
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "New York Approach",
+      "frequencies": [
+        "125.700",
+        "118.400",
+        "123.700",
+        "126.800",
+        "128.125",
+        "132.400",
+        "134.350"
+      ],
+      "id": "KJFK_APP",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "airport": "KJFK",
+      "call_sign": "Kennedy Tower",
+      "frequencies": [
+        "119.100",
+        "123.900"
+      ],
+      "id": "KJFK_TWR",
+      "services": [
+        "tower"
+      ]
+    },
+    {
+      "airport": "KFRG",
+      "call_sign": "Republic Tower",
+      "frequencies": [
+        "118.800",
+        "125.200"
+      ],
+      "id": "KFRG_TWR",
+      "services": [
+        "tower"
+      ]
+    }
+  ]
+}

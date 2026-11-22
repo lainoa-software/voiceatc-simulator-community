@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RKJK"
+      ],
+      "id": "GUNSAN",
+      "positions": [
+        {
+          "code": "RKJK_APP",
+          "frequency": "124.100",
+          "name": "ALL",
+          "sector": "RKJK_APP",
+          "unit": "RKJK_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Gunsan approach",
+      "frequencies": [
+        "124.100"
+      ],
+      "id": "RKJK_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}

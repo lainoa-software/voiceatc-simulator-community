@@ -1,0 +1,239 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A130",
+      "fix": [
+        "BULII"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_BULII",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A120",
+      "fix": [
+        "EYESS"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_EYESS",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A110",
+      "fix": [
+        "BILIT"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_BILIT",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A140",
+      "fix": [
+        "ALWYZ"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_ALWYZ",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A130",
+      "fix": [
+        "IRONS"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_IRONS",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A140",
+      "fix": [
+        "AML"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_AML",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A120",
+      "fix": [
+        "SKILS"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_SKILS",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A090",
+      "fix": [
+        "TIKEE"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_TIKEE",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "arrives": [
+        "KDCA"
+      ],
+      "descent": "A140",
+      "fix": [
+        "TRUPS"
+      ],
+      "from": "KZDC_CTR",
+      "name": "KDCA_ARR_TRUPS",
+      "priority": 10,
+      "to": "KDCA_APP"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "AMEEE"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_AMEEE",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F230",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "CLTCH"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_CLTCH",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F230",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "JDUBB"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_JDUBB",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F230",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "SCRAM"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_SCRAM",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "A170",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "DOCTR"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_DOCTR",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "A170",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "HORTO"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_HORTO",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F190",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "SOOKI"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_SOOKI",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F230",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "WYNGS"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_WYNGS",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    },
+    {
+      "climb": "F230",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "REBLL"
+      ],
+      "from": "KDCA_APP",
+      "name": "KDCA_DEP_REBLL",
+      "priority": 10,
+      "to": "KZDC_CTR"
+    }
+  ],
+  "schema": 2
+}

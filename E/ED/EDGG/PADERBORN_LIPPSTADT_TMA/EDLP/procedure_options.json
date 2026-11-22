@@ -1,10 +1,13 @@
 {
-  "airport": "EDLP",
-  "schema_version": 1,
   "airac_min": 2608,
-  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
-  "sids": {},
+  "airport": "EDLP",
+  "defaults": {
+    "init_climb": 5000,
+    "spawn_enabled": true
+  },
   "iaps": {},
-  "runways": {},
-  "configs": {}
+  "runway_configs": {},
+  "runway_ends": {},
+  "schema_version": 1,
+  "sids": {}
 }

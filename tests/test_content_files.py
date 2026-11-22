@@ -29,10 +29,9 @@ REGISTRY = Path("documentation") / "content_hierarchy.json"
 # Every other content kind the enumerators look for, as placeholders at EHAM
 # (the real slice already holds mva.json, runway_configs.json and colors.json).
 CONTENT_NAMES = (
-    "sector_configs.json",
+    "tma_structure.json",
+    "tma_coordination.json",
     "sector_definitions.json",
-    "sector_influence.json",
-    "tma.json",
     "misc_drawings.json",
     "colors.json",
     "style.json",
@@ -97,7 +96,7 @@ class AgentWorktreesAreNotContentTests(unittest.TestCase):
         _seed(self.polluted)
         # A full repository copy as an agent worktree, plus local build output and
         # npm packages, none of which is tracked content.
-        for nested in (".claude/worktrees/x", "build/pr-release", "node_modules/pkg"):
+        for nested in (".claude/worktrees/x", "build/pr-release", "node_modules/pkg", "preserved", "release"):
             _seed(self.polluted / nested)
 
     def test_every_enumerator_ignores_worktrees_and_local_output(self) -> None:

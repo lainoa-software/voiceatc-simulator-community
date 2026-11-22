@@ -1,6 +1,31 @@
 {
   "gates": [
     {
+      "dataset": "sector_data",
+      "kind": "tma",
+      "requires": ["community.tma_file"]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "tma_structure",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "tma_coordination",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "acc_structure",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "acc_coordination",
+      "requires": ["community.airspace_files"]
+    },
+    {
       "dataset": "routes",
       "path": "ROUTES/full/starless_arrivals.tsv",
       "requires": ["routes.starless_arrivals"]

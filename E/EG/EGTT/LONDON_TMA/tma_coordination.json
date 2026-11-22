@@ -1,0 +1,74 @@
+{
+  "agreements": [
+    {
+      "arrives": [
+        "EGLL"
+      ],
+      "descent": "F080",
+      "fix": [
+        "LAM"
+      ],
+      "from": "EGTT_CTR",
+      "name": "EGLL_ARR_LAM",
+      "priority": 10,
+      "to": "EGLL_APP"
+    },
+    {
+      "arrives": [
+        "EGLL"
+      ],
+      "descent": "F080",
+      "fix": [
+        "BNN"
+      ],
+      "from": "EGTT_CTR",
+      "name": "EGLL_ARR_BNN",
+      "priority": 10,
+      "to": "EGLL_APP"
+    },
+    {
+      "arrives": [
+        "EGLL"
+      ],
+      "descent": "F080",
+      "fix": [
+        "BIG"
+      ],
+      "from": "EGTT_CTR",
+      "name": "EGLL_ARR_BIG",
+      "priority": 10,
+      "to": "EGLL_APP"
+    },
+    {
+      "arrives": [
+        "EGLL"
+      ],
+      "descent": "F080",
+      "fix": [
+        "OCK"
+      ],
+      "from": "EGTT_CTR",
+      "name": "EGLL_ARR_OCK",
+      "priority": 10,
+      "to": "EGLL_APP"
+    },
+    {
+      "climb": "F080",
+      "departs": [
+        "EGLL"
+      ],
+      "fix": [
+        "CPT"
+      ],
+      "from": "EGLL_APP",
+      "name": "EGLL_DEP_CPT_09",
+      "priority": 10,
+      "runways": [
+        "09L",
+        "09R"
+      ],
+      "to": "EGTT_CTR"
+    }
+  ],
+  "schema": 2
+}

@@ -1,0 +1,32 @@
+{
+  "layouts": [
+    {
+      "airports": [
+        "RCSS"
+      ],
+      "id": "SONGSHAN",
+      "positions": [
+        {
+          "code": "RCSS_APP",
+          "frequency": "119.700",
+          "name": "ALL",
+          "sector": "RCSS_APP",
+          "unit": "RCSS_APP"
+        }
+      ]
+    }
+  ],
+  "schema": 2,
+  "units": [
+    {
+      "call_sign": "Taipei approach",
+      "frequencies": [
+        "119.700"
+      ],
+      "id": "RCSS_APP",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ]
+}
