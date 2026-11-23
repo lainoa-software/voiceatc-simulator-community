@@ -3,7 +3,12 @@
   "assumed_symbol": "rps",
   "defined_symbols": {
     "rps": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 0 4 L 0 4 L 4 0 L 0 -4 L -4 0 L 0 4",
       "type": "filled"
     }

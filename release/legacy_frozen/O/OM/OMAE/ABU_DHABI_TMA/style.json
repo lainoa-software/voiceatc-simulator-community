@@ -3,17 +3,32 @@
   "assumed_symbol": "controlled",
   "defined_symbols": {
     "controlled": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
       "type": "filled"
     },
     "history": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -1 -2 L 1 -2 L 2 -1 L 2 1 L 1 2 L -1 2 L -2 1 L -2 -1 L -1 -2",
       "type": "filled"
     },
     "uncontrolled": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
       "type": "wireframe"
     }

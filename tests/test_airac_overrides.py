@@ -123,7 +123,7 @@ class AiracOverridesTests(unittest.TestCase):
         from tools.stable_contract_guard import check_zip_dataset
         import zipfile
         build_fixture_repo(self.root)
-        path = next(self.root.glob("L/**/sector_definitions.json"))
+        path = self.root / "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json"
         payload = json.loads(path.read_text())
         replacement = deepcopy(payload)
         replacement["volumes"][0]["higher_limit"] = 26000
@@ -171,7 +171,7 @@ class AiracOverridesTests(unittest.TestCase):
         from tools import sector_data_manifest as sectors
         from test_community_release_manifest import build_fixture_repo
         build_fixture_repo(self.root)
-        path = next(self.root.glob("L/**/sector_definitions.json"))
+        path = self.root / "L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json"
         definitions = json.loads(path.read_text())
         definitions["airac_overrides"] = {"latest": deepcopy(definitions)}
         path.write_text(json.dumps(definitions))

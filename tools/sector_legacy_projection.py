@@ -87,7 +87,12 @@ def _canonical_lf(raw_bytes: bytes) -> bytes:
 
 
 def _sha256_file(path: Path) -> str:
-    return hashlib.sha256(_canonical_lf(path.read_bytes())).hexdigest()
+    """Hash of a source file's content: JSON by its parsed value, so formatting never unfreezes a bundle."""
+    raw = _canonical_lf(path.read_bytes())
+    if path.suffix == ".json":
+        value = json.loads(raw.decode("utf-8-sig"))
+        raw = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
 
 
 def load_frozen_index(root: Path) -> dict[str, dict[str, object]]:

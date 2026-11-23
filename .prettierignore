@@ -1,1 +1,3 @@
 tests/fixtures/tma_cases/cases.json
+# Byte-exact snapshots old builds download; formatting them would change what frozen builds receive.
+release/legacy_frozen/
