@@ -98,11 +98,12 @@
       ]
     },
     {
-      "name": "LEPA_ARR_TOLSO",
+      "name": "PALMA_ARR_TOLSO_BCN_APP",
       "from": "LEBL_APP",
       "to": "LEPA_APP",
       "arrives": [
-        "LEPA"
+        "LEPA",
+        "LEIB"
       ],
       "fix": [
         "TOLSO"
@@ -263,18 +264,6 @@
         "06L",
         "06R"
       ]
-    },
-    {
-      "name": "LEIB_ARR_TOLSO_BCN_APP",
-      "from": "LEBL_APP",
-      "to": "LEPA_APP",
-      "arrives": [
-        "LEIB"
-      ],
-      "fix": [
-        "TOLSO"
-      ],
-      "level": "F190"
     },
     {
       "name": "LEIB_ARR_TOLSO",
