@@ -898,7 +898,7 @@
         "LERS_TWR": "REU_TWR"
       },
       "source_sha256": {
-        "acc_definitions.json": "d3af5bfa0a3698c8cfe8036d274789975ac3a53b44dc1128236e7d960691a153",
+        "acc_definitions.json": "a7e93e84a8d9fbe224fe3fa29da4781525cc9db6103c90b76b4551af396c7544",
         "sector_definitions.json": "7c736d3060f20c6d5116efbc805d19ed348b9f2c40e40f74f517a76a4b0227f2",
         "tma_coordination.json": "0c25867fe0c20a42d81b414244a5ff36371d8e702a2b56792da554b2c8c4c618",
         "tma_definitions.json": "bb06eb85a30205231227b28434ca5c53fb0ffeff838761425b0199d1d700237f",
@@ -927,10 +927,11 @@
       ],
       "legacy_bundle_path": "L/LE/LECB/LECB_E/PALMA_TMA",
       "source_sha256": {
-        "acc_definitions.json": "d3af5bfa0a3698c8cfe8036d274789975ac3a53b44dc1128236e7d960691a153",
-        "sector_definitions.json": "feffa8aeb05cd78cb94afd3a357c360cf320cc82507b4146d110a70a27abedd5",
-        "tma_definitions.json": "5eafde444de5069c3d8687774d8979a7b47616f98313c7b732ec63e3be5fdab8",
-        "tma_layout.json": "863ce12f2ce0ca43e9f1c1b00bde9adabe2aaffa91373588f36838955d533647"
+        "acc_definitions.json": "a7e93e84a8d9fbe224fe3fa29da4781525cc9db6103c90b76b4551af396c7544",
+        "sector_definitions.json": "1e655c21ad0a79169afe3460a2e092da3d69a99f7eb3fd8e095474a8bcad0864",
+        "tma_coordination.json": "8934dcfa6509b110026ceaa6bb71986f8c4c8a007414279883bee9ba450399ee",
+        "tma_definitions.json": "74ad526ad05ac31c39dd5310e8f86f8e795dbda4a3976dab8487fe8e732290ee",
+        "tma_layout.json": "037f259d5fa49aa5f12b2fbba2e15e76b257e54e1928de77b6b9748e14415048"
       }
     },
     "L/LE/LECM/LECM_R1/BILBAO_TMA": {
