@@ -2,107 +2,779 @@
   "schema": 3,
   "agreements": [
     {
-      "name": "W_IBIZA_F150",
-      "from": "LECB_BKW_CTR",
-      "to": "LEIB_APP",
-      "arrives": ["LEIB"],
-      "level": "F150"
-    },
-    {
-      "name": "E_PALMA_F200",
+      "name": "LEPA_ARR_LORES_WEST",
       "from": "LECB_BKE_CTR",
-      "to": "LEPA_LECPAPR_APP",
-      "arrives": ["LEPA"],
-      "level": "F200"
-    },
-    {
-      "name": "E_MENORCA_F070",
-      "from": "LECB_BKE_CTR",
-      "to": "LEMH_TWR",
-      "arrives": ["LEMH"],
-      "level": "F070"
-    },
-    {
-      "name": "E_IBIZA_F210",
-      "from": "LECB_BKE_CTR",
-      "to": "LEPA_LECPAPR_APP",
-      "arrives": ["LEIB"],
-      "level": "F210"
-    },
-    {
-      "name": "PALMA_DEP_BAVER_F180",
-      "from": "LEPA_APP",
-      "to": "LECP_GIX_CTR",
-      "departs": ["LEPA"],
-      "fix": ["BAVER", "EPAMA", "ESPOR", "MEBUT", "OSGAL"],
-      "level": "F180"
-    },
-    {
-      "name": "PALMA_DEP_DRAGO_F240",
-      "from": "LEPA_APP",
-      "to": "LECB_BKW_CTR",
-      "departs": ["LEPA"],
-      "fix": ["DRAGO", "GALAT"],
-      "level": "F240"
-    },
-    {
-      "name": "PALMA_DEP_ISTER_F180",
-      "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
-      "departs": ["LEPA"],
-      "fix": ["ISTER", "MEROS", "MORSS"],
-      "level": "F180"
-    },
-    {
-      "name": "PALMA_DEP_NELUX_IBIZA_ODD",
-      "from": "LEPA_APP",
-      "to": "LEIB_APP",
-      "arrives": ["LEIB"],
-      "departs": ["LEPA"],
-      "fix": ["NELUX"],
-      "level": "ODD"
-    },
-    {
-      "name": "PALMA_DEP_MENORCA_EVEN",
-      "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
-      "arrives": ["LEMH"],
-      "departs": ["LEPA"],
-      "fix": ["CDP", "PTC", "TONIS"],
-      "level": "EVEN"
-    },
-    {
-      "name": "PALMA_OVF_WEST_F170",
-      "from": "LEPA_APP",
-      "to": "LECP_GIX_CTR",
-      "level": "F170"
-    },
-    {
-      "name": "PALMA_OVF_R59A6_IBIZA_F130",
-      "from": "LEPA_APP",
-      "to": "LEIB_APP",
-      "level": "F130"
-    },
-    {
-      "name": "PALMA_OVF_NORTH_F180",
-      "from": "LEPA_APP",
-      "to": "LECB_BKW_CTR",
-      "level": "F180"
-    },
-    {
-      "name": "PALMA_ARR_F190",
-      "from": "LECB_CTR",
       "to": "LEPA_APP",
-      "arrives": ["LEPA"],
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LORES"
+      ],
+      "level": "F200",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_LORES_EAST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LORES"
+      ],
+      "level": "F250",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_KENAS_WEST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "KENAS"
+      ],
+      "level": "F200",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_KENAS_EAST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "KENAS"
+      ],
+      "level": "F250",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_LUNIK_WEST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LUNIK"
+      ],
+      "level": "F200",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_LUNIK_EAST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LUNIK"
+      ],
+      "level": "F250",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_TOLSO",
+      "from": "LEBL_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "TOLSO"
+      ],
       "level": "F190"
     },
     {
-      "name": "PALMA_IBIZA_ARR_ODD",
+      "name": "LEPA_ARR_GODOX_APP",
+      "from": "LECP_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "GODOX"
+      ],
+      "level": "F130"
+    },
+    {
+      "name": "LEPA_ARR_RIXOT",
+      "from": "LECP_MXX_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "RIXOT"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "LEPA_ARR_MORSS",
+      "from": "LECP_MXX_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "MORSS"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "LEPA_ARR_MAMEB",
+      "from": "LECP_MXX_CTR",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "MAMEB"
+      ],
+      "level": "F130"
+    },
+    {
+      "name": "LEPA_ARR_OSGAL_ENTRY",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "OSGAL"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEPA_ARR_OSGAL",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "OSGAL"
+      ],
+      "level": "F130"
+    },
+    {
+      "name": "LEPA_ARR_MEBUT_ENTRY",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEBUT"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEPA_ARR_MEBUT",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEBUT"
+      ],
+      "level": "F100"
+    },
+    {
+      "name": "LEPA_ARR_RUXET_ENTRY",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "RUXET"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEPA_ARR_RUXET",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "RUXET"
+      ],
+      "level": "F100"
+    },
+    {
+      "name": "LEPA_ARR_LAMPA_WEST",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LAMPA"
+      ],
+      "level": "F100",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_ARR_LAMPA_EAST",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "LAMPA"
+      ],
+      "level": "F080",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEIB_ARR_TOLSO_BCN_APP",
+      "from": "LEBL_APP",
+      "to": "LEPA_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "TOLSO"
+      ],
+      "level": "F190"
+    },
+    {
+      "name": "LEIB_ARR_TOLSO",
+      "from": "LECP_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "TOLSO"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "LEIB_ARR_CORDA",
+      "from": "LECP_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "CORDA"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "LEIB_ARR_RIXOT",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "RIXOT"
+      ],
+      "level": "F210"
+    },
+    {
+      "name": "LEIB_ARR_MORSS",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "MORSS"
+      ],
+      "level": "F210"
+    },
+    {
+      "name": "LEIB_ARR_POS",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "POS"
+      ],
+      "level": "F210"
+    },
+    {
+      "name": "LEIB_ARR_INSUB",
+      "from": "LECB_BKW_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "INSUB"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEIB_ARR_RUXET",
+      "from": "LECB_BKW_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "RUXET"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEIB_ARR_VARUT",
+      "from": "LECB_BKW_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "VARUT"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEIB_ARR_NEVIC",
+      "from": "LECP_MXX_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "NEVIC"
+      ],
+      "level": "F230"
+    },
+    {
+      "name": "LEIB_ARR_NELUX",
       "from": "LEPA_APP",
       "to": "LEIB_APP",
-      "arrives": ["LEIB"],
-      "fix": ["ADX", "MJV"],
-      "level": "ODD"
+      "arrives": [
+        "LEIB"
+      ],
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "NELUX"
+      ],
+      "level": "F110"
+    },
+    {
+      "name": "LEMH_ARR_CDP",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "arrives": [
+        "LEMH"
+      ],
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "CDP"
+      ],
+      "level": "F100"
+    },
+    {
+      "name": "LEMH_ARR_TONIS",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "arrives": [
+        "LEMH"
+      ],
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "TONIS"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEMH_ARR_PTC",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "arrives": [
+        "LEMH"
+      ],
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "PTC"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEPA_DEP_DRAGO",
+      "from": "LEPA_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "DRAGO"
+      ],
+      "level": "F160"
+    },
+    {
+      "name": "LEPA_DEP_GALAT",
+      "from": "LEPA_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "GALAT"
+      ],
+      "level": "F160"
+    },
+    {
+      "name": "LEPA_DEP_ESPOR",
+      "from": "LEPA_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "ESPOR"
+      ],
+      "level": "F160"
+    },
+    {
+      "name": "LEPA_DEP_ESPOR_EXIT",
+      "from": "LECP_CTR",
+      "to": "LEBL_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "ESPOR"
+      ],
+      "level": "F180"
+    },
+    {
+      "name": "LEPA_DEP_EPAMA_WEST",
+      "from": "LEPA_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "EPAMA"
+      ],
+      "level": "F120",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_EPAMA_EAST",
+      "from": "LEPA_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "EPAMA"
+      ],
+      "level": "F160",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_BAVER_WEST",
+      "from": "LEPA_APP",
+      "to": "LEIB_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "BAVER"
+      ],
+      "level": "F120",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_BAVER_EAST",
+      "from": "LEPA_APP",
+      "to": "LEIB_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "BAVER"
+      ],
+      "level": "F160",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_MEBUT_WEST",
+      "from": "LEPA_APP",
+      "to": "LEIB_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEBUT"
+      ],
+      "level": "F090",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_MEBUT_EAST",
+      "from": "LEPA_APP",
+      "to": "LEIB_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEBUT"
+      ],
+      "level": "F120",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_OSGAL",
+      "from": "LEPA_APP",
+      "to": "LEIB_APP",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "OSGAL"
+      ],
+      "level": "F120"
+    },
+    {
+      "name": "LEPA_DEP_OSGAL_EXIT",
+      "from": "LEIB_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "OSGAL"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEPA_DEP_MEROS_WEST",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEROS"
+      ],
+      "level": "F140",
+      "runways": [
+        "24L",
+        "24R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_MEROS_EAST",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEROS"
+      ],
+      "level": "F160",
+      "runways": [
+        "06L",
+        "06R"
+      ]
+    },
+    {
+      "name": "LEPA_DEP_ISTER",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "ISTER"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEPA_DEP_MORSS",
+      "from": "LEPA_APP",
+      "to": "LECP_MXX_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MORSS"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_EPAMA",
+      "from": "LEIB_APP",
+      "to": "LECP_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "EPAMA"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_XOSTA",
+      "from": "LEIB_APP",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "XOSTA"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_BAVER",
+      "from": "LEIB_APP",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "BAVER"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_INSUB",
+      "from": "LEIB_APP",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "INSUB"
+      ],
+      "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_KABRE",
+      "from": "LEIB_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "KABRE"
+      ],
+      "level": "F260"
+    },
+    {
+      "name": "LEIB_DEP_MHN",
+      "from": "LEIB_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "MHN"
+      ],
+      "level": "F260"
+    },
+    {
+      "name": "LEIB_DEP_LAMPA",
+      "from": "LEIB_APP",
+      "to": "LEPA_APP",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "LAMPA"
+      ],
+      "level": "F120"
+    },
+    {
+      "name": "LEMH_DEP_LUNIK",
+      "from": "LECP_MXX_CTR",
+      "to": "LEPA_APP",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "LUNIK"
+      ],
+      "level": "F180"
+    },
+    {
+      "name": "LEMH_DEP_LUNIK_EXIT",
+      "from": "LEPA_APP",
+      "to": "LEBL_APP",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "LUNIK"
+      ],
+      "level": "F180"
     }
   ]
 }
