@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EKYT_APP",
+      "call_sign": "Aalborg approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EKYT_APP",
+      "unit": "EKYT_APP",
+      "frequency": "123.980"
+    }
+  ]
+}

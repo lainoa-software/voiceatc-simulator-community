@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPVE_APP": {
+      "CATICLAN": {
+        "positions": {
+          "RPVE_APP": [
+            "RPVE_APP"
+          ]
+        },
+        "airports": [
+          "RPVE"
+        ]
+      }
+    }
+  }
+}

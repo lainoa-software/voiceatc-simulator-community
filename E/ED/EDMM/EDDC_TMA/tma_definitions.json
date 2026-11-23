@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDAB_APP",
+      "call_sign": "Bautzen approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDAB_APP",
+      "unit": "EDAB_APP",
+      "frequency": "125.875"
+    }
+  ]
+}

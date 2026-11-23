@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KRDU",
   "runway_configs": [
     {

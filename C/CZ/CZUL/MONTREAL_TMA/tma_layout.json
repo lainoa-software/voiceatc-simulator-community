@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "CYUL_APP": {
+      "MONTREAL_APP": {
+        "positions": {
+          "CYUL_APP": [
+            "CYUL_APP"
+          ]
+        },
+        "airports": [
+          "CYUL"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKPD_APP": {
+      "JEONGSEOK": {
+        "positions": {
+          "RKPD_APP": [
+            "RKPD_APP"
+          ]
+        },
+        "airports": [
+          "RKPD"
+        ]
+      }
+    }
+  }
+}

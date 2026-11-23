@@ -1,0 +1,184 @@
+{
+  "schema": 3,
+  "airport": "KLGA",
+  "procedures": [
+    {
+      "id": "PARK_VISUAL_31",
+      "name": "Park Visual RWY 31",
+      "aliases": [
+        "park visual",
+        "park visual thirty one"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "PARK VISUAL RWY 31",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00289PARK_VIS31.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "PARKWAY_VISUAL_ROUTE",
+          "runway": "31",
+          "clearance_name": "Park Visual",
+          "entry_point_id": "PACHU",
+          "sight_reference_point_id": "GACAR",
+          "sight_reference": {
+            "name": "the Twin White Tanks",
+            "aliases": [
+              "Twin White Tanks"
+            ],
+            "scope": "point"
+          },
+          "sight_references": {
+            "default_reference_id": "TWIN_WHITE_TANKS",
+            "references": [
+              {
+                "id": "TWIN_WHITE_TANKS",
+                "name": "the Twin White Tanks",
+                "aliases": [
+                  "Twin White Tanks"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "PARK VISUAL RWY 31",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00289PARK_VIS31.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "GACAR"
+                }
+              },
+              {
+                "id": "AIRPORT",
+                "name": "the airport",
+                "aliases": [
+                  "LaGuardia airport"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "PARK VISUAL RWY 31",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00289PARK_VIS31.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "airport"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "PACHU",
+              "name": "PACHU",
+              "type": "track_to_fix",
+              "point": [
+                40.6601638889,
+                -73.9739833333
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 3000
+              }
+            },
+            {
+              "id": "SHAYY",
+              "name": "SHAYY / Seven High Rises",
+              "type": "course_to_fix",
+              "point": [
+                40.6960472222,
+                -73.942975
+              ],
+              "fly_over": true,
+              "course_deg": 45,
+              "reference": "Seven High Rises",
+              "altitude": {
+                "at_or_above_ft": 2500,
+                "recommended": true
+              },
+              "speed": {
+                "at_or_below_kt": 180
+              }
+            },
+            {
+              "id": "GACAR",
+              "name": "GACAR / Twin White Tanks",
+              "type": "course_to_fix",
+              "point": [
+                40.7187388889,
+                -73.91085
+              ],
+              "fly_over": true,
+              "course_deg": 59,
+              "reference": "Twin White Tanks",
+              "altitude": {
+                "at_ft": 2200,
+                "recommended": true
+              },
+              "speed": {
+                "at_or_below_kt": 165
+              }
+            },
+            {
+              "id": "DRRYL",
+              "name": "DRRYL / Flushing Meadows Lake",
+              "type": "course_to_fix",
+              "point": [
+                40.7303138889,
+                -73.8443333333
+              ],
+              "fly_over": true,
+              "course_deg": 89,
+              "reference": "Flushing Meadows Corona Park Lake",
+              "altitude": {
+                "at_ft": 1100,
+                "recommended": true
+              }
+            },
+            {
+              "id": "KEYTH",
+              "name": "KEYTH / Flushing Meadows Round Pond",
+              "type": "course_to_fix",
+              "point": [
+                40.7452888889,
+                -73.8319638889
+              ],
+              "fly_over": true,
+              "course_deg": 44,
+              "reference": "Flushing Meadows Corona Park Round Pond",
+              "altitude": {
+                "at_ft": 700,
+                "recommended": true
+              }
+            },
+            {
+              "id": "DCTRK",
+              "name": "DCTRK / Stadium",
+              "type": "course_to_fix",
+              "point": [
+                40.7625305556,
+                -73.8371388889
+              ],
+              "fly_over": true,
+              "course_deg": 359,
+              "reference": "Stadium",
+              "altitude": {
+                "at_ft": 400,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
+        }
+      ]
+    }
+  ]
+}

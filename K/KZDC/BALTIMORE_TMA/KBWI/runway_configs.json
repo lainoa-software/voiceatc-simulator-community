@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KBWI",
   "runway_configs": [
     {

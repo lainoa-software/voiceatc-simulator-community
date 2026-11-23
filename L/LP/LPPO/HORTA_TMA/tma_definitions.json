@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPHR_APP",
+      "call_sign": "Horta approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPHR_APP",
+      "unit": "LPHR_APP",
+      "frequency": "120.600"
+    }
+  ]
+}

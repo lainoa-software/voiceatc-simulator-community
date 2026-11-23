@@ -1,0 +1,119 @@
+{
+  "schema": 3,
+  "airport": "RJTT",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "AKSELV"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AROSAV"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "MESSEV"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "XACV"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AKSELN"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AROSAN"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "MESSEN"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "XACN"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AKSE2B"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AROS2B"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "MESS2B"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "XAC2B"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AKSE2N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AROS2N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "MESS2N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "XAC2N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SULP1D"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SULP1S"
+      ],
+      "spawn": false
+    }
+  ]
+}

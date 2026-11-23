@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKNY_APP": {
+      "GANGNEUNG": {
+        "positions": {
+          "RKNY_APP": [
+            "RKNY_APP"
+          ]
+        },
+        "airports": [
+          "RKNY"
+        ]
+      }
+    }
+  }
+}

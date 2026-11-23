@@ -1,0 +1,47 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KDFW_APP",
+      "call_sign": "Lone Star Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.100",
+        "118.425",
+        "119.400",
+        "119.875",
+        "124.300",
+        "125.200",
+        "127.075",
+        "133.150",
+        "133.525",
+        "133.625",
+        "135.500",
+        "135.975"
+      ]
+    },
+    {
+      "id": "KDFW_TWR",
+      "call_sign": "DFW Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KDFW",
+      "unassigned_frequencies": [
+        "124.150",
+        "126.550",
+        "127.500",
+        "134.900"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KDFW_APP",
+      "unit": "KDFW_APP",
+      "frequency": "125.025"
+    }
+  ]
+}

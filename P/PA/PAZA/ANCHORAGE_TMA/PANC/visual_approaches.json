@@ -1,0 +1,258 @@
+{
+  "schema": 3,
+  "airport": "PANC",
+  "procedures": [
+    {
+      "id": "HIGHWAY_VISUAL_25R",
+      "name": "Highway Visual RWY 25R",
+      "aliases": [
+        "highway visual",
+        "highway visual twenty five right"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "HIGHWAY VISUAL RWY 25R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "LITTLE_SUSITNA_ENTRY",
+          "runway": "25R",
+          "clearance_name": "Highway Visual",
+          "entry_point_id": "OSPUF",
+          "sight_reference_point_id": "XIBLY",
+          "sight_references": {
+            "default_reference_id": "LITTLE_SUSITNA_MOUTH",
+            "references": [
+              {
+                "id": "LITTLE_SUSITNA_MOUTH",
+                "name": "the mouth of the Little Susitna River",
+                "aliases": [
+                  "Little Susitna River mouth"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "HIGHWAY VISUAL RWY 25R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "OSPUF"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "OSPUF",
+              "name": "Mouth of Little Susitna River / OSPUF",
+              "type": "track_to_fix",
+              "point": [
+                61.2517638889,
+                -150.2956138889
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "IFHIX",
+              "name": "IFHIX",
+              "type": "track_to_fix",
+              "point": [
+                61.125,
+                -150.2333333333
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 5000
+              }
+            },
+            {
+              "id": "EFYEZ",
+              "name": "Shoreline / EFYEZ",
+              "type": "track_to_fix",
+              "point": [
+                61.0936111111,
+                -149.8797222222
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 2600
+              }
+            },
+            {
+              "id": "UHEPU",
+              "name": "O'Malley Road overpass / UHEPU",
+              "type": "track_to_fix",
+              "point": [
+                61.1227777778,
+                -149.8566666667
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 2000
+              }
+            },
+            {
+              "id": "XIBLY",
+              "name": "Dimond Boulevard overpass / XIBLY",
+              "type": "track_to_fix",
+              "point": [
+                61.1447222222,
+                -149.8563888889
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_JOIN_TRACE",
+              "name": "TED 3 DME arc join (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                61.1715344903,
+                -149.8567360469
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_EXIT_TRACE",
+              "name": "TED 3 DME arc final exit (chart-traced)",
+              "type": "dme_arc",
+              "point": [
+                61.2016316379,
+                -149.8836336855
+              ],
+              "fly_over": false,
+              "arc_center": [
+                61.1678666667,
+                -149.9601444444
+              ],
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": {
+            "course_deg": 269.93,
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "POINT_POSSESSION_ENTRY",
+          "runway": "25R",
+          "clearance_name": "Highway Visual",
+          "entry_point_id": "MOPMY",
+          "sight_reference_point_id": "XIBLY",
+          "sight_references": {
+            "default_reference_id": "POINT_POSSESSION",
+            "references": [
+              {
+                "id": "POINT_POSSESSION",
+                "name": "Point Possession",
+                "aliases": [
+                  "the Point Possession"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "HIGHWAY VISUAL RWY 25R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "MOPMY"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "MOPMY",
+              "name": "Point Possession / MOPMY",
+              "type": "track_to_fix",
+              "point": [
+                61.0333333333,
+                -150.3669444444
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 4000
+              }
+            },
+            {
+              "id": "EFYEZ",
+              "name": "Shoreline / EFYEZ",
+              "type": "track_to_fix",
+              "point": [
+                61.0936111111,
+                -149.8797222222
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 2600
+              }
+            },
+            {
+              "id": "UHEPU",
+              "name": "O'Malley Road overpass / UHEPU",
+              "type": "track_to_fix",
+              "point": [
+                61.1227777778,
+                -149.8566666667
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 2000
+              }
+            },
+            {
+              "id": "XIBLY",
+              "name": "Dimond Boulevard overpass / XIBLY",
+              "type": "track_to_fix",
+              "point": [
+                61.1447222222,
+                -149.8563888889
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_JOIN_TRACE",
+              "name": "TED 3 DME arc join (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                61.1715344903,
+                -149.8567360469
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "TED_ARC_EXIT_TRACE",
+              "name": "TED 3 DME arc final exit (chart-traced)",
+              "type": "dme_arc",
+              "point": [
+                61.2016316379,
+                -149.8836336855
+              ],
+              "fly_over": false,
+              "arc_center": [
+                61.1678666667,
+                -149.9601444444
+              ],
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
+            }
+          ],
+          "final": {
+            "course_deg": 269.93,
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}

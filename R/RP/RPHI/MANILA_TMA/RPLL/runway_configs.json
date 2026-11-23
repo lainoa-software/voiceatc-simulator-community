@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RPLL",
   "runway_configs": [
     {

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EKSP_APP",
+      "call_sign": "Vojens approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EKSP_APP",
+      "unit": "EKSP_APP",
+      "frequency": "124.105"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "GCHI_APP",
+      "call_sign": "El Hierro approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "GCHI_GCCCINB_APP",
+      "unit": "GCHI_APP",
+      "frequency": "126.100"
+    },
+    {
+      "call_sign": "GCLP_GCCCIGC_APP",
+      "unit": "GCHI_APP",
+      "frequency": "124.300"
+    },
+    {
+      "call_sign": "GCFV_GCCCAAC_APP",
+      "unit": "GCHI_APP",
+      "frequency": "129.300"
+    }
+  ]
+}

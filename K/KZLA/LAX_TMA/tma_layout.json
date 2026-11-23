@@ -1,0 +1,71 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KLAX_APP": {
+      "1WEST": {
+        "positions": {
+          "KLAX_APP": [
+            "KLAXAPP"
+          ]
+        },
+        "airports": [
+          "KLAX",
+          "KLGB"
+        ],
+        "valid_for_runways": {
+          "KLAX": [
+            "WEST"
+          ]
+        }
+      },
+      "1EAST": {
+        "positions": {
+          "KLAX_APP": [
+            "KLAXAPP"
+          ]
+        },
+        "airports": [
+          "KLAX",
+          "KLGB"
+        ],
+        "valid_for_runways": {
+          "KLAX": [
+            "EAST"
+          ]
+        }
+      },
+      "1OVER_OCEAN": {
+        "positions": {
+          "KLAX_APP": [
+            "KLAXAPP"
+          ]
+        },
+        "airports": [
+          "KLAX",
+          "KLGB"
+        ],
+        "valid_for_runways": {
+          "KLAX": [
+            "OVER_OCEAN"
+          ]
+        }
+      },
+      "1NIGHT_INBOARD": {
+        "positions": {
+          "KLAX_APP": [
+            "KLAXAPP"
+          ]
+        },
+        "airports": [
+          "KLAX",
+          "KLGB"
+        ],
+        "valid_for_runways": {
+          "KLAX": [
+            "NIGHT_INBOARD"
+          ]
+        }
+      }
+    }
+  }
+}

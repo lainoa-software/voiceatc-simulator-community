@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LOWS_APP": {
+      "SALZBURG_TMA_WHOLE_LOWS_15": {
+        "positions": {
+          "LOWS_APP": [
+            "SALZBURG_TMA_LOWS_15"
+          ]
+        },
+        "airports": [
+          "LOWS"
+        ],
+        "valid_for_runways": {
+          "LOWS": [
+            "LOWS_15"
+          ]
+        }
+      },
+      "SALZBURG_TMA_WHOLE_LOWS_33": {
+        "positions": {
+          "LOWS_APP": [
+            "SALZBURG_TMA_LOWS_33"
+          ]
+        },
+        "airports": [
+          "LOWS"
+        ],
+        "valid_for_runways": {
+          "LOWS": [
+            "LOWS_33"
+          ]
+        }
+      }
+    }
+  }
+}

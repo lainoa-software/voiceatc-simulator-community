@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EKRN_APP": {
+      "BORNHOLM_TMA_WHOLE_ALL": {
+        "positions": {
+          "EKRN_APP": [
+            "BORNHOLM_TMA_ALL"
+          ]
+        },
+        "airports": [
+          "EKRN"
+        ],
+        "valid_for_runways": {
+          "EKRN": [
+            "EKRN_11",
+            "EKRN_29"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "airport": "RKPK",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "sids": [
+        "RADA1N"
+      ],
+      "initial_climb_ft": 5000
+    },
+    {
+      "sids": [
+        "RADA1S"
+      ],
+      "initial_climb_ft": 5000
+    }
+  ]
+}

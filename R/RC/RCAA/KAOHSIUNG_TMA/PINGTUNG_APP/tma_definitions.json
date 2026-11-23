@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCDC_APP",
+      "call_sign": "Pingtung approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCDC_APP",
+      "unit": "RCDC_APP",
+      "frequency": "124.700"
+    }
+  ]
+}

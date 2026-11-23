@@ -1,0 +1,57 @@
+{
+  "schema": 3,
+  "airport": "WSSS",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "TEBU1A"
+      ],
+      "join_from": [
+        "ARAMA"
+      ]
+    },
+    {
+      "stars": [
+        "TEBU1B"
+      ],
+      "join_from": [
+        "ARAMA"
+      ]
+    },
+    {
+      "stars": [
+        "LELI3B"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "LEBA2A"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "LEBA3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VOVO1B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VOVO1F"
+      ],
+      "spawn": false
+    }
+  ]
+}

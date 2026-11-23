@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "airport": "VTBD",
+  "airac_min": 2503,
+  "initial_climb_ft": 8000,
+  "exceptions": [
+    {
+      "runways": [
+        "03L"
+      ],
+      "initial_climb_ft": 6000
+    },
+    {
+      "runways": [
+        "03R"
+      ],
+      "initial_climb_ft": 6000
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "LOWS",
   "runway_configs": [
     {

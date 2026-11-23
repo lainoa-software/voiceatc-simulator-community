@@ -1,0 +1,13 @@
+{
+  "schema": 3,
+  "airport": "RKPS",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "sids": [
+        "SAC5"
+      ],
+      "initial_climb_ft": 5400
+    }
+  ]
+}

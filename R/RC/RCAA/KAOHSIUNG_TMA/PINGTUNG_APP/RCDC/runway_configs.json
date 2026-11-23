@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RCDC",
   "runway_configs": [
     {

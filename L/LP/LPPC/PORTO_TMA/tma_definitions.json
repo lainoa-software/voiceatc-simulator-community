@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPPR_APP",
+      "call_sign": "Porto approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPPR_PR_APP",
+      "unit": "LPPR_APP",
+      "frequency": "120.910"
+    },
+    {
+      "call_sign": "LPPR_PRTMA_APP",
+      "unit": "LPPR_APP",
+      "frequency": "120.430"
+    },
+    {
+      "call_sign": "LPPR_APP",
+      "unit": "LPPR_APP",
+      "frequency": "120.910"
+    }
+  ]
+}

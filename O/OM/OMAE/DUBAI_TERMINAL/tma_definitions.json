@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "OMDB_APP",
+      "call_sign": "Dubai approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "OMDB_ARR_APP",
+      "unit": "OMDB_APP",
+      "frequency": "124.900"
+    }
+  ]
+}

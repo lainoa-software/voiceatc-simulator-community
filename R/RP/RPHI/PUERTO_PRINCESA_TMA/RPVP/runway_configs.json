@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RPVP",
   "runway_configs": [
     {

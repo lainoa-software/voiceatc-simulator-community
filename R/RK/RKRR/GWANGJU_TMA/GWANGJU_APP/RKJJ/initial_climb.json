@@ -1,0 +1,13 @@
+{
+  "schema": 3,
+  "airport": "RKJJ",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "sids": [
+        "KWA5"
+      ],
+      "initial_climb_ft": 8000
+    }
+  ]
+}

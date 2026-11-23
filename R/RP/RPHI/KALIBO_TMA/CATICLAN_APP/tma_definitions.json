@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVE_APP",
+      "call_sign": "Malay approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVE_APP",
+      "unit": "RPVE_APP",
+      "frequency": "120.400"
+    }
+  ]
+}

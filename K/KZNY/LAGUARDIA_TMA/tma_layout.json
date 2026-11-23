@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KLGA_APP": {
+      "1": {
+        "positions": {
+          "KLGA_APP": [
+            "KLGAAPP"
+          ]
+        },
+        "airports": [
+          "KLGA"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDL_APP",
+      "call_sign": "Duesseldorf approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDL_APP",
+      "unit": "EDDL_APP",
+      "frequency": "121.355"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEAL_APP",
+      "call_sign": "Alicante approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEAL_APP",
+      "unit": "LEAL_APP",
+      "frequency": "120.100"
+    },
+    {
+      "call_sign": "LEVC_APP",
+      "unit": "LEAL_APP",
+      "frequency": "120.100"
+    },
+    {
+      "call_sign": "LEAL_AAW_APP",
+      "unit": "LEAL_APP",
+      "frequency": "120.400"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPVD_APP": {
+      "DUMAGUETE": {
+        "positions": {
+          "RPVD_APP": [
+            "RPVD_APP"
+          ]
+        },
+        "airports": [
+          "RPVD"
+        ]
+      }
+    }
+  }
+}

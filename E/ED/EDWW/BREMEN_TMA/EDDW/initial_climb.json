@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "EDDW",
+  "airac_min": 2608,
+  "initial_climb_ft": 4000
+}

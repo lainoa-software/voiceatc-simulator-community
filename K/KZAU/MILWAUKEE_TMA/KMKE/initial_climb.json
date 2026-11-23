@@ -1,0 +1,25 @@
+{
+  "schema": 3,
+  "airport": "KMKE",
+  "airac_min": 2606,
+  "exceptions": [
+    {
+      "sids": [
+        "MKE9"
+      ],
+      "initial_climb_ft": 5000
+    },
+    {
+      "sids": [
+        "ACCRA5"
+      ],
+      "initial_climb_ft": 5000
+    },
+    {
+      "sids": [
+        "UECKR6"
+      ],
+      "initial_climb_ft": 5000
+    }
+  ]
+}

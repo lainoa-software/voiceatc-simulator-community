@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKTN_APP",
+      "call_sign": "Daegu approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKTN_APP",
+      "unit": "RKTN_APP",
+      "frequency": "135.900"
+    }
+  ]
+}

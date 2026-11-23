@@ -1,0 +1,22 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LTBA_APP",
+      "call_sign": "Istanbul approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "131.125"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LTBA_APP",
+      "unit": "LTBA_APP",
+      "frequency": "127.100"
+    }
+  ]
+}

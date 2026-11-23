@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LOWL_APP": {
+      "LINZ_TMA_WHOLE_LOWL_08": {
+        "positions": {
+          "LOWL_APP": [
+            "LINZ_TMA_LOWL_08"
+          ]
+        },
+        "airports": [
+          "LOWL"
+        ],
+        "valid_for_runways": {
+          "LOWL": [
+            "LOWL_08"
+          ]
+        }
+      },
+      "LINZ_TMA_WHOLE_LOWL_26": {
+        "positions": {
+          "LOWL_APP": [
+            "LINZ_TMA_LOWL_26"
+          ]
+        },
+        "airports": [
+          "LOWL"
+        ],
+        "valid_for_runways": {
+          "LOWL": [
+            "LOWL_26"
+          ]
+        }
+      }
+    }
+  }
+}

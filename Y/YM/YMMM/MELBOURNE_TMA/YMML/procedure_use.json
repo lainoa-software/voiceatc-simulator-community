@@ -1,0 +1,11 @@
+{
+  "schema": 3,
+  "airport": "YMML",
+  "airac_min": 2610,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    }
+  ]
+}

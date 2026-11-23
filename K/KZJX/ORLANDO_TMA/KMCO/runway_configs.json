@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KMCO",
   "runway_configs": [
     {

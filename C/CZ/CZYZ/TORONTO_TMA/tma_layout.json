@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "CYYZ_APP": {
+      "TORONTO_APP": {
+        "positions": {
+          "CYYZ_APP": [
+            "CYYZ_APP"
+          ]
+        },
+        "airports": [
+          "CYYZ"
+        ]
+      }
+    }
+  }
+}

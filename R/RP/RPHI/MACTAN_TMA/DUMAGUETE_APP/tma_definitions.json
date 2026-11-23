@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVD_APP",
+      "call_sign": "Dumaguete approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVD_APP",
+      "unit": "RPVD_APP",
+      "frequency": "124.700"
+    }
+  ]
+}

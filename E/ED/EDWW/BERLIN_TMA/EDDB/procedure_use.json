@@ -1,0 +1,71 @@
+{
+  "schema": 3,
+  "airport": "EDDB",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ARSA3M"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARSA3Z"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BIKP1M"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GERG3Z"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KISU1K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KISU1Z"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LURO3M"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LURO3Z"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SUKI4K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SUKI4Z"
+      ],
+      "spawn": false
+    }
+  ]
+}

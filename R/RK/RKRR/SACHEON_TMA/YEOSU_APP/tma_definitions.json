@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKJY_APP",
+      "call_sign": "Yeosu approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKJY_APP",
+      "unit": "RKJY_APP",
+      "frequency": "135.400"
+    }
+  ]
+}

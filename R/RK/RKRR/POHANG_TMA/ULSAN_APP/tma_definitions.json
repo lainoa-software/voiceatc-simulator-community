@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKPU_APP",
+      "call_sign": "Ulsan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKPU_APP",
+      "unit": "RKPU_APP",
+      "frequency": "124.250"
+    }
+  ]
+}

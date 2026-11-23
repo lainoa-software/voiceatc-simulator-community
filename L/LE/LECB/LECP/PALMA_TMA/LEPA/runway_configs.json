@@ -1,0 +1,24 @@
+{
+  "schema": 3,
+  "airport": "LEPA",
+  "runway_configs": [
+    {
+      "id": "WLR",
+      "name": "PREFERENTIAL",
+      "arr": "24L",
+      "dep": "24R"
+    },
+    {
+      "id": "ELR",
+      "name": "NON PREFERENTIAL",
+      "arr": "06L",
+      "dep": "06R"
+    },
+    {
+      "id": "WEST_DUAL",
+      "name": "WEST DUAL",
+      "arr": "24R 24L",
+      "dep": "24R"
+    }
+  ]
+}

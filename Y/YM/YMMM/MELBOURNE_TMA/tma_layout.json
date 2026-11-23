@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "YMML_APP": {
+      "MELBOURNE_APP": {
+        "positions": {
+          "YMML_APP": [
+            "YMML_APP"
+          ]
+        },
+        "airports": [
+          "YMML"
+        ]
+      }
+    }
+  }
+}

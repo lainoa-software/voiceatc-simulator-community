@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPMY_APP",
+      "call_sign": "Misamis Oriental approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPMY_APP",
+      "unit": "RPMY_APP",
+      "frequency": "125.500"
+    }
+  ]
+}

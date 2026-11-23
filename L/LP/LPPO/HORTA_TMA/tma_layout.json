@@ -1,0 +1,45 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LPHR_APP": {
+      "HORTA_TMA_SPLIT": {
+        "positions": {
+          "LPHR_APP": [
+            "HRA"
+          ]
+        },
+        "airports": [
+          "LPHR",
+          "LPPI",
+          "LPSJ"
+        ],
+        "valid_for_runways": {
+          "LPHR": [
+            "LPHR_10",
+            "LPHR_28",
+            "LPPI_09",
+            "LPPI_27",
+            "LPSJ_13",
+            "LPSJ_31"
+          ],
+          "LPPI": [
+            "LPHR_10",
+            "LPHR_28",
+            "LPPI_09",
+            "LPPI_27",
+            "LPSJ_13",
+            "LPSJ_31"
+          ],
+          "LPSJ": [
+            "LPHR_10",
+            "LPHR_28",
+            "LPPI_09",
+            "LPPI_27",
+            "LPSJ_13",
+            "LPSJ_31"
+          ]
+        }
+      }
+    }
+  }
+}

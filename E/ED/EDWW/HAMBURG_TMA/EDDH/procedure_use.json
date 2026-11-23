@@ -1,0 +1,47 @@
+{
+  "schema": 3,
+  "airport": "EDDH",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "BOGM3N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "NOLG3W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDH1B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDH1C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDH1D"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDH1G"
+      ],
+      "spawn": false
+    }
+  ]
+}

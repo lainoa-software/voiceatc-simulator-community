@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCBS_APP": {
+      "KINMEN": {
+        "positions": {
+          "RCBS_APP": [
+            "RCBS_APP"
+          ]
+        },
+        "airports": [
+          "RCBS"
+        ]
+      }
+    }
+  }
+}

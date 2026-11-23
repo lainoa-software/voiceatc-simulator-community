@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKTN_APP": {
+      "DAEGU": {
+        "positions": {
+          "RKTN_APP": [
+            "RKTN_APP"
+          ]
+        },
+        "airports": [
+          "RKTN"
+        ]
+      }
+    }
+  }
+}

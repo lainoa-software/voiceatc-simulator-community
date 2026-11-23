@@ -1,0 +1,71 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KJFK_APP": {
+      "SOUTH_ARR": {
+        "positions": {
+          "KJFK_APP": [
+            "KJFKAPP"
+          ]
+        },
+        "airports": [
+          "KJFK",
+          "KFRG"
+        ],
+        "valid_for_runways": {
+          "KJFK": [
+            "SOUTH_ARR"
+          ]
+        }
+      },
+      "SOUTH_DEP": {
+        "positions": {
+          "KJFK_APP": [
+            "KJFKAPP"
+          ]
+        },
+        "airports": [
+          "KJFK",
+          "KFRG"
+        ],
+        "valid_for_runways": {
+          "KJFK": [
+            "SOUTH_DEP"
+          ]
+        }
+      },
+      "NORTH": {
+        "positions": {
+          "KJFK_APP": [
+            "KJFKAPP"
+          ]
+        },
+        "airports": [
+          "KJFK",
+          "KFRG"
+        ],
+        "valid_for_runways": {
+          "KJFK": [
+            "NORTH"
+          ]
+        }
+      },
+      "NORTHWEST": {
+        "positions": {
+          "KJFK_APP": [
+            "KJFKAPP"
+          ]
+        },
+        "airports": [
+          "KJFK",
+          "KFRG"
+        ],
+        "valid_for_runways": {
+          "KJFK": [
+            "NORTHWEST"
+          ]
+        }
+      }
+    }
+  }
+}

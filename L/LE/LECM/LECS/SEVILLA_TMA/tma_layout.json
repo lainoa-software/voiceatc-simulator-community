@@ -1,0 +1,21 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LEJR_APP": {
+      "1": {
+        "positions": {
+          "LEJR_LECSAPT_APP": [
+            "LECSAPT"
+          ],
+          "LEZL_LECSASN_APP": [
+            "LECSASN"
+          ]
+        },
+        "airports": [
+          "LEJR",
+          "LEZL"
+        ]
+      }
+    }
+  }
+}

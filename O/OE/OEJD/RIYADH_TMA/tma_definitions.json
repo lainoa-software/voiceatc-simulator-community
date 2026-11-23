@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "OERK_APP",
+      "call_sign": "Riyadh approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "OERK_APP",
+      "unit": "OERK_APP",
+      "frequency": "120.000"
+    },
+    {
+      "call_sign": "OERK_E_APP",
+      "unit": "OERK_APP",
+      "frequency": "120.000"
+    },
+    {
+      "call_sign": "OERK_W_APP",
+      "unit": "OERK_APP",
+      "frequency": "128.500"
+    }
+  ]
+}

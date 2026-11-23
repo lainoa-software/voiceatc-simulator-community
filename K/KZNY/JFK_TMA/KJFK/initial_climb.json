@@ -1,0 +1,25 @@
+{
+  "schema": 3,
+  "airport": "KJFK",
+  "airac_min": 2607,
+  "exceptions": [
+    {
+      "sids": [
+        "DEEZZ6"
+      ],
+      "initial_climb_ft": 5000
+    },
+    {
+      "sids": [
+        "JFK5"
+      ],
+      "initial_climb_ft": 5000
+    },
+    {
+      "sids": [
+        "SKORR6"
+      ],
+      "initial_climb_ft": 5000
+    }
+  ]
+}

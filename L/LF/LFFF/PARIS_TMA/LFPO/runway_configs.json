@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "LFPO",
   "runway_configs": [
     {

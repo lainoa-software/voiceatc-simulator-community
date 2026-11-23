@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "CYYZ_APP",
+      "call_sign": "Toronto approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "CYYZ_APP",
+      "unit": "CYYZ_APP",
+      "frequency": "124.475"
+    }
+  ]
+}

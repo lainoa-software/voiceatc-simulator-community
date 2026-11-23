@@ -1,0 +1,11 @@
+{
+  "schema": 3,
+  "airport": "EDLP",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    }
+  ]
+}

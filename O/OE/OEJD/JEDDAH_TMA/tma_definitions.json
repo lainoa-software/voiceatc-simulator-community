@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "OEJN_APP",
+      "call_sign": "Jeddah approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "OEJN_APP",
+      "unit": "OEJN_APP",
+      "frequency": "124.000"
+    }
+  ]
+}

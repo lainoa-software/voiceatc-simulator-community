@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPLC_APP",
+      "call_sign": "Pampanga approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPLC_APP",
+      "unit": "RPLC_APP",
+      "frequency": "119.200"
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "schema": 3,
+  "airport": "EDDS",
+  "airac_min": 2604,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "kind": "transitions",
+      "spawn": false
+    },
+    {
+      "stars": [
+        "reut5a"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "teks5a"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "babe1e"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "bads2a"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "dene1e"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "ditb1e"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "gebn1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "krh1e"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "krh1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "lupo1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "nosb1e"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "reut1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "reut5a"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "sul1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "tagi1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "teks1w"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "teks5a"
+      ],
+      "runways": [
+        "07"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "babe1e"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "bads2a"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "dene1e"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ditb1e"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "gebn1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "krh1e"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "krh1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "lupo1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "nosb1e"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "reut1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "reut5a"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "sul1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "tagi1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "teks1w"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "teks5a"
+      ],
+      "runways": [
+        "25"
+      ],
+      "spawn": false
+    }
+  ]
+}

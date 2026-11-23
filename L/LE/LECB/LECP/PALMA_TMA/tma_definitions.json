@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEPA_APP",
+      "call_sign": "Palma De Mallorca approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEPA_LECPAPR_APP",
+      "unit": "LEPA_APP",
+      "frequency": "119.155"
+    },
+    {
+      "call_sign": "LEIB_LECPIXX_APP",
+      "unit": "LEPA_APP",
+      "frequency": "134.825"
+    },
+    {
+      "call_sign": "LEMH_LECPMXX_APP",
+      "unit": "LEPA_APP",
+      "frequency": "121.700"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EKSP_APP": {
+      "SKRYDSTRUP_TMA_WHOLE_ALL": {
+        "positions": {
+          "EKSP_APP": [
+            "SKRYDSTRUP_TMA_ALL"
+          ]
+        },
+        "airports": [
+          "EKSP"
+        ],
+        "valid_for_runways": {
+          "EKSP": [
+            "EKSP_10R",
+            "EKSP_28L",
+            "EKSP_10L",
+            "EKSP_28R",
+            "EKSB_14",
+            "EKSB_32"
+          ]
+        }
+      }
+    }
+  }
+}

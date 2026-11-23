@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPLB_APP": {
+      "SUBIC": {
+        "positions": {
+          "RPLB_APP": [
+            "RPLB_APP"
+          ]
+        },
+        "airports": [
+          "RPLB"
+        ]
+      }
+    }
+  }
+}

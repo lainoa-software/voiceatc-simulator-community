@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOWI_APP",
+      "call_sign": "Innsbruck approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOWI_APP",
+      "unit": "LOWI_APP",
+      "frequency": "128.975"
+    }
+  ]
+}

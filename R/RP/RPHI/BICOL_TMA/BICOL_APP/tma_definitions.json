@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPLK_APP",
+      "call_sign": "Albay approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPLK_APP",
+      "unit": "RPLK_APP",
+      "frequency": "120.200"
+    }
+  ]
+}

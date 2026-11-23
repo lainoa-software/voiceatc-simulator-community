@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCMQ_APP": {
+      "TAICHUNG": {
+        "positions": {
+          "RCMQ_APP": [
+            "RCMQ_APP"
+          ]
+        },
+        "airports": [
+          "RCMQ"
+        ]
+      }
+    }
+  }
+}

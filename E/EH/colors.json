@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "forecast_tfc_color": "a5a5a7",
   "forecast_cs_color": "a5a5a7",
   "incoming_tfc_color": "a5a5a7",

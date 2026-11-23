@@ -1,0 +1,32 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LPAZ_APP": {
+      "PONTA_DELGADA_TMA_SPLIT": {
+        "positions": {
+          "LPAZ_APP": [
+            "PDA"
+          ]
+        },
+        "airports": [
+          "LPAZ",
+          "LPPD"
+        ],
+        "valid_for_runways": {
+          "LPAZ": [
+            "LPPD_12",
+            "LPPD_30",
+            "LPAZ_18",
+            "LPAZ_36"
+          ],
+          "LPPD": [
+            "LPPD_12",
+            "LPPD_30",
+            "LPAZ_18",
+            "LPAZ_36"
+          ]
+        }
+      }
+    }
+  }
+}

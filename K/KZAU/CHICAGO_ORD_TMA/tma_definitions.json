@@ -1,0 +1,43 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KORD_APP",
+      "call_sign": "Chicago Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "124.350",
+        "125.700",
+        "133.625"
+      ]
+    },
+    {
+      "id": "KORD_TWR",
+      "call_sign": "O'Hare Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KORD",
+      "unassigned_frequencies": [
+        "120.750",
+        "119.625",
+        "121.150",
+        "126.800",
+        "126.900",
+        "128.050",
+        "128.150",
+        "132.700",
+        "133.000"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KORD_APP",
+      "unit": "KORD_APP",
+      "frequency": "119.000"
+    }
+  ]
+}

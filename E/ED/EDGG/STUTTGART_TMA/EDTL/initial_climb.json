@@ -1,0 +1,14 @@
+{
+  "schema": 3,
+  "airport": "EDTL",
+  "airac_min": 2608,
+  "initial_climb_ft": 7000,
+  "exceptions": [
+    {
+      "sids": [
+        "NATO1W"
+      ],
+      "initial_climb_ft": 8000
+    }
+  ]
+}

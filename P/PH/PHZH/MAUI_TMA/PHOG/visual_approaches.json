@@ -1,0 +1,171 @@
+{
+  "schema": 3,
+  "airport": "PHOG",
+  "procedures": [
+    {
+      "id": "SMOKE_STACK_VISUAL_02",
+      "name": "Smoke Stack Visual RWY 02",
+      "aliases": [
+        "smoke stack visual",
+        "smoke stacks visual",
+        "smoke stack"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "SMOKE STACK VISUAL RWY 02",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+        "effective_date": "2026-07-09",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "LANAI_ENTRY",
+          "runway": "02",
+          "clearance_name": "Smoke Stack Visual",
+          "entry_point_id": "LNY",
+          "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "sight_references": {
+            "default_reference_id": "SUGAR_MILL_SMOKE_STACKS",
+            "references": [
+              {
+                "id": "SUGAR_MILL_SMOKE_STACKS",
+                "name": "the Sugar Mill Smoke Stacks",
+                "aliases": [
+                  "Smoke Stacks",
+                  "Sugar Mill stacks"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "SMOKE STACK VISUAL RWY 02",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "SMOKESTACK_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "LNY",
+              "name": "Lanai / LNY",
+              "type": "course_to_fix",
+              "point": [
+                20.7645027778,
+                -156.9689
+              ],
+              "fly_over": false,
+              "course_deg": 85,
+              "reference": "LNY VORTAC R-085"
+            },
+            {
+              "id": "MAALAEA_TRACE",
+              "name": "Mid-Maalaea Bay (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.7,
+                -156.5
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "KNUI_TRACE",
+              "name": "KNUI Radio Tower (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.78,
+                -156.48
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "SMOKESTACK_TRACE",
+              "name": "Sugar Mill Smoke Stacks (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.82,
+                -156.47
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "MAKENA_ENTRY",
+          "runway": "02",
+          "clearance_name": "Smoke Stack Visual",
+          "entry_point_id": "MAKENA_TRACE",
+          "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "sight_references": {
+            "default_reference_id": "SUGAR_MILL_SMOKE_STACKS",
+            "references": [
+              {
+                "id": "SUGAR_MILL_SMOKE_STACKS",
+                "name": "the Sugar Mill Smoke Stacks",
+                "aliases": [
+                  "Smoke Stacks",
+                  "Sugar Mill stacks"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "SMOKE STACK VISUAL RWY 02",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "SMOKESTACK_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "MAKENA_TRACE",
+              "name": "Makena (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.63,
+                -156.44
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "KNUI_TRACE",
+              "name": "KNUI Radio Tower (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.78,
+                -156.48
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "SMOKESTACK_TRACE",
+              "name": "Sugar Mill Smoke Stacks (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                20.82,
+                -156.47
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}

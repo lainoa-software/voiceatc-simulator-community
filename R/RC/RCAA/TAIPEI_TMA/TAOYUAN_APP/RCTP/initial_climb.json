@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "RCTP",
+  "airac_min": 2610,
+  "initial_climb_ft": 3000
+}

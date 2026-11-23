@@ -1,0 +1,287 @@
+{
+  "schema": 3,
+  "airport": "KSEA",
+  "procedures": [
+    {
+      "id": "BAY_VISUAL_16RCL",
+      "name": "Bay Visual RWY 16R/C/L",
+      "aliases": [
+        "bay visual",
+        "bay visual sixteen"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "BAY VISUAL RWY 16 R/C/L",
+        "url": "https://aeronav.faa.gov/d-tpp/2610/00582BAY_VIS16RCL.PDF",
+        "effective_date": "2026-10-01",
+        "airac": "2610",
+        "checked_date": "2026-10-08"
+      },
+      "variants": [
+        {
+          "id": "BAY_16R",
+          "runway": "16R",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "sight_references": {
+            "default_reference_id": "ELLIOTT_BAY",
+            "references": [
+              {
+                "id": "ELLIOTT_BAY",
+                "name": "Elliott Bay",
+                "aliases": [
+                  "the middle of Elliott Bay"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "BAY VISUAL RWY 16 R/C/L",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "ELLIOTT_BAY_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.66,
+                -122.44
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle of Elliott Bay, SEA R-329 (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.60446,
+                -122.36282
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 3000,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "Golf course / SEA 8 DME (localizer interception)",
+              "type": "track_to_fix",
+              "point": [
+                47.56861,
+                -122.31694
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 2400,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME",
+              "type": "track_to_fix",
+              "point": [
+                47.53524,
+                -122.31723
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 1900,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "BAY_16C",
+          "runway": "16C",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "sight_references": {
+            "default_reference_id": "ELLIOTT_BAY",
+            "references": [
+              {
+                "id": "ELLIOTT_BAY",
+                "name": "Elliott Bay",
+                "aliases": [
+                  "the middle of Elliott Bay"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "BAY VISUAL RWY 16 R/C/L",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "ELLIOTT_BAY_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.66,
+                -122.44
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle of Elliott Bay, SEA R-329 (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.60446,
+                -122.36282
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 3000,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "Golf course / SEA 8 DME (localizer interception)",
+              "type": "track_to_fix",
+              "point": [
+                47.56871,
+                -122.31006
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 2400,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME",
+              "type": "track_to_fix",
+              "point": [
+                47.53537,
+                -122.31035
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 1900,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "BAY_16L",
+          "runway": "16L",
+          "clearance_name": "Bay Visual",
+          "entry_point_id": "WEST_POINT_TRACE",
+          "sight_reference_point_id": "SEA8_TRACE",
+          "sight_references": {
+            "default_reference_id": "ELLIOTT_BAY",
+            "references": [
+              {
+                "id": "ELLIOTT_BAY",
+                "name": "Elliott Bay",
+                "aliases": [
+                  "the middle of Elliott Bay"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "BAY VISUAL RWY 16 R/C/L",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "ELLIOTT_BAY_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "WEST_POINT_TRACE",
+              "name": "West Point (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.66,
+                -122.44
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "ELLIOTT_BAY_TRACE",
+              "name": "Middle of Elliott Bay, SEA R-329 (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                47.60446,
+                -122.36282
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 3000,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA8_TRACE",
+              "name": "Golf course / SEA 8 DME (localizer interception)",
+              "type": "track_to_fix",
+              "point": [
+                47.56869,
+                -122.30683
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 2400,
+                "recommended": true
+              }
+            },
+            {
+              "id": "SEA6_TRACE",
+              "name": "SEA 6 DME",
+              "type": "track_to_fix",
+              "point": [
+                47.53536,
+                -122.30712
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 1900,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}

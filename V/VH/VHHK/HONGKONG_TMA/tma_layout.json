@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "configurations": {
+    "VHHH_APP": {
+      "HONGKONG": {
+        "positions": {
+          "VHHH_APP": [
+            "VHHH_APP"
+          ]
+        },
+        "airports": [
+          "VHHH"
+        ],
+        "valid_for_runways": {
+          "VHHH": [
+            "07",
+            "25",
+            "07_SEG",
+            "25_SEG",
+            "07L_ONLY",
+            "07C_ONLY",
+            "25R_ONLY",
+            "25C_ONLY"
+          ]
+        }
+      }
+    }
+  }
+}

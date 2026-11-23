@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKSI_APP": {
+      "INCHEON": {
+        "positions": {
+          "RKSI_APP": [
+            "RKSI_APP"
+          ]
+        },
+        "airports": [
+          "RKSI"
+        ]
+      }
+    }
+  }
+}

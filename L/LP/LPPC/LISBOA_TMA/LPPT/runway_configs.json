@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "LPPT",
   "runway_configs": [
     {

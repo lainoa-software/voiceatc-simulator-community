@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPUN_APP": {
+      "NAGA": {
+        "positions": {
+          "RPUN_APP": [
+            "RPUN_APP"
+          ]
+        },
+        "airports": [
+          "RPUN"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LECB_CTR": {
+      "1": {
+        "positions": {
+          "LECB_BKW_CTR": [
+            "LECBBKW"
+          ],
+          "LECB_BKE_CTR": [
+            "LECBBKE"
+          ],
+          "LECB_DDX_CTR": [
+            "LEBLDDX"
+          ]
+        }
+      }
+    }
+  }
+}

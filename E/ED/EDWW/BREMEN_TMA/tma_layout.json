@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDW_APP": {
+      "1": {
+        "positions": {
+          "EDDW_APP": [
+            "FRI"
+          ]
+        },
+        "airports": [
+          "EDDW"
+        ],
+        "valid_for_runways": {
+          "EDDW": [
+            "08",
+            "26"
+          ]
+        }
+      }
+    }
+  }
+}

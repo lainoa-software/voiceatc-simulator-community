@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "WSSS_APP",
+      "call_sign": "Singapore approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "WSSS_APP",
+      "unit": "WSSS_APP",
+      "frequency": "124.050"
+    }
+  ]
+}

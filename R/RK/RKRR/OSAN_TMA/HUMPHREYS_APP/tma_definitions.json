@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKSG_APP",
+      "call_sign": "Camp Humphreys approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKSG_APP",
+      "unit": "RKSG_APP",
+      "frequency": "127.900"
+    }
+  ]
+}

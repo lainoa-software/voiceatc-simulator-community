@@ -1,0 +1,41 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOWW_APP",
+      "call_sign": "Wien Radar",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.775",
+        "119.800",
+        "125.175",
+        "129.050",
+        "134.125",
+        "136.250"
+      ]
+    },
+    {
+      "id": "LOWW_TWR",
+      "call_sign": "Wien Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LOWW",
+      "unassigned_frequencies": [
+        "119.400",
+        "121.200",
+        "123.800",
+        "124.475"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOWW_APP",
+      "unit": "LOWW_APP",
+      "frequency": "134.675"
+    }
+  ]
+}

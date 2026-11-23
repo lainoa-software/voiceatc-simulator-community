@@ -1,0 +1,52 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KSFO_APP": {
+      "1WEST": {
+        "positions": {
+          "KSFO_APP": [
+            "KSFOAPP"
+          ]
+        },
+        "airports": [
+          "KSFO"
+        ],
+        "valid_for_runways": {
+          "KSFO": [
+            "WEST"
+          ]
+        }
+      },
+      "1SOUTHEAST": {
+        "positions": {
+          "KSFO_APP": [
+            "KSFOAPP"
+          ]
+        },
+        "airports": [
+          "KSFO"
+        ],
+        "valid_for_runways": {
+          "KSFO": [
+            "SOUTHEAST"
+          ]
+        }
+      },
+      "1NIGHT_10": {
+        "positions": {
+          "KSFO_APP": [
+            "KSFOAPP"
+          ]
+        },
+        "airports": [
+          "KSFO"
+        ],
+        "valid_for_runways": {
+          "KSFO": [
+            "NIGHT_10"
+          ]
+        }
+      }
+    }
+  }
+}

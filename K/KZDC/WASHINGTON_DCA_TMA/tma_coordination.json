@@ -1,167 +1,221 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["KDCA"],
-      "descent": "A130",
-      "fix": ["BULII"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_BULII",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "BULII"
+      ],
+      "level": "A130"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A120",
-      "fix": ["EYESS"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_EYESS",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "EYESS"
+      ],
+      "level": "A120"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A110",
-      "fix": ["BILIT"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_BILIT",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "BILIT"
+      ],
+      "level": "A110"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A140",
-      "fix": ["ALWYZ"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_ALWYZ",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "ALWYZ"
+      ],
+      "level": "A140"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A130",
-      "fix": ["IRONS"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_IRONS",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "IRONS"
+      ],
+      "level": "A130"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A140",
-      "fix": ["AML"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_AML",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "AML"
+      ],
+      "level": "A140"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A120",
-      "fix": ["SKILS"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_SKILS",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "SKILS"
+      ],
+      "level": "A120"
     },
     {
-      "arrives": ["KDCA"],
-      "descent": "A090",
-      "fix": ["TIKEE"],
-      "from": "KZDC_CTR",
       "name": "KDCA_ARR_TIKEE",
-      "priority": 10,
-      "to": "KDCA_APP"
-    },
-    {
-      "arrives": ["KDCA"],
-      "descent": "A140",
-      "fix": ["TRUPS"],
       "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "TIKEE"
+      ],
+      "level": "A090"
+    },
+    {
       "name": "KDCA_ARR_TRUPS",
-      "priority": 10,
-      "to": "KDCA_APP"
+      "from": "KZDC_CTR",
+      "to": "KDCA_APP",
+      "arrives": [
+        "KDCA"
+      ],
+      "fix": [
+        "TRUPS"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "F190",
-      "departs": ["KDCA"],
-      "fix": ["AMEEE"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_AMEEE",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "AMEEE"
+      ],
+      "level": "F190"
     },
     {
-      "climb": "F230",
-      "departs": ["KDCA"],
-      "fix": ["CLTCH"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_CLTCH",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "CLTCH"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["KDCA"],
-      "fix": ["JDUBB"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_JDUBB",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "JDUBB"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["KDCA"],
-      "fix": ["SCRAM"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_SCRAM",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "SCRAM"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "A170",
-      "departs": ["KDCA"],
-      "fix": ["DOCTR"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_DOCTR",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "DOCTR"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDCA"],
-      "fix": ["HORTO"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_HORTO",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "HORTO"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "F190",
-      "departs": ["KDCA"],
-      "fix": ["SOOKI"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_SOOKI",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "SOOKI"
+      ],
+      "level": "F190"
     },
     {
-      "climb": "F230",
-      "departs": ["KDCA"],
-      "fix": ["WYNGS"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_WYNGS",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "WYNGS"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["KDCA"],
-      "fix": ["REBLL"],
-      "from": "KDCA_APP",
       "name": "KDCA_DEP_REBLL",
-      "priority": 10,
-      "to": "KZDC_CTR"
+      "from": "KDCA_APP",
+      "to": "KZDC_CTR",
+      "departs": [
+        "KDCA"
+      ],
+      "fix": [
+        "REBLL"
+      ],
+      "level": "F230"
     }
-  ],
-  "schema": 2
+  ]
 }

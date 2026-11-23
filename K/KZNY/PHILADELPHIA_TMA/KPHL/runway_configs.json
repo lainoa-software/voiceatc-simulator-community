@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KPHL",
   "runway_configs": [
     {

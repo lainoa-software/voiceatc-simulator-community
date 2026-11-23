@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPMZ_APP": {
+      "ZAMBOANGA": {
+        "positions": {
+          "RPMZ_APP": [
+            "RPMZ_APP"
+          ]
+        },
+        "airports": [
+          "RPMZ"
+        ]
+      }
+    }
+  }
+}

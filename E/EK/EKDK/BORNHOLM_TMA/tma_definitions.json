@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EKRN_APP",
+      "call_sign": "Bornholm approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EKRN_APP",
+      "unit": "EKRN_APP",
+      "frequency": "118.330"
+    }
+  ]
+}

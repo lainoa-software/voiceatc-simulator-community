@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDF_APP": {
+      "07": {
+        "positions": {
+          "EDDF_APP": [
+            "DFAN"
+          ]
+        },
+        "airports": [
+          "EDDF"
+        ],
+        "valid_for_runways": {
+          "EDDF": [
+            "07"
+          ]
+        }
+      },
+      "25": {
+        "positions": {
+          "EDDF_APP": [
+            "DFAN"
+          ]
+        },
+        "airports": [
+          "EDDF"
+        ],
+        "valid_for_runways": {
+          "EDDF": [
+            "25"
+          ]
+        }
+      }
+    }
+  }
+}

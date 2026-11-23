@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPVB_APP": {
+      "BACOLOD": {
+        "positions": {
+          "RPVB_APP": [
+            "RPVB_APP"
+          ]
+        },
+        "airports": [
+          "RPVB"
+        ]
+      }
+    }
+  }
+}

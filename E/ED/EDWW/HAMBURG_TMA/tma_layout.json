@@ -1,0 +1,36 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDH_APP": {
+      "1": {
+        "positions": {
+          "EDDH_APP": [
+            "HAM_HAMW"
+          ]
+        },
+        "airports": [
+          "EDDH",
+          "EDHI",
+          "EDHL"
+        ],
+        "valid_for_runways": {
+          "EDDH": [
+            "33/23",
+            "23/15",
+            "33/05"
+          ],
+          "EDHI": [
+            "33/23",
+            "23/15",
+            "33/05"
+          ],
+          "EDHL": [
+            "33/23",
+            "23/15",
+            "33/05"
+          ]
+        }
+      }
+    }
+  }
+}

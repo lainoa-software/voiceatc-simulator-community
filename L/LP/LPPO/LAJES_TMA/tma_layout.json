@@ -1,0 +1,32 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LPGR_APP": {
+      "LAJES_TMA_SPLIT": {
+        "positions": {
+          "LPGR_APP": [
+            "LAA"
+          ]
+        },
+        "airports": [
+          "LPGR",
+          "LPLA"
+        ],
+        "valid_for_runways": {
+          "LPGR": [
+            "LPLA_15",
+            "LPLA_33",
+            "LPGR_09",
+            "LPGR_27"
+          ],
+          "LPLA": [
+            "LPLA_15",
+            "LPLA_33",
+            "LPGR_09",
+            "LPGR_27"
+          ]
+        }
+      }
+    }
+  }
+}

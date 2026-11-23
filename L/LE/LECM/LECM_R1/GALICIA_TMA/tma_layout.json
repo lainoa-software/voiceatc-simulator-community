@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LECO_APP": {
+      "1": {
+        "positions": {
+          "LECO_APP": [
+            "LECGTMA"
+          ]
+        },
+        "airports": [
+          "LECO",
+          "LEST",
+          "LEVX"
+        ]
+      }
+    }
+  }
+}

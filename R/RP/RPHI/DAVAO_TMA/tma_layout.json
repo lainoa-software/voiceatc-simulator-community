@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPMD_APP": {
+      "DAVAO": {
+        "positions": {
+          "RPMD_APP": [
+            "RPMD_APP"
+          ]
+        },
+        "airports": [
+          "RPMD"
+        ]
+      }
+    }
+  }
+}

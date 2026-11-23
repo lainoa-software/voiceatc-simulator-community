@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "airport": "EDDR",
+  "airac_min": 2608,
+  "initial_climb_ft": 4000,
+  "exceptions": [
+    {
+      "sids": [
+        "GTQ1S"
+      ],
+      "initial_climb_ft": 8000
+    },
+    {
+      "sids": [
+        "GTQ2L"
+      ],
+      "initial_climb_ft": 8000
+    }
+  ]
+}

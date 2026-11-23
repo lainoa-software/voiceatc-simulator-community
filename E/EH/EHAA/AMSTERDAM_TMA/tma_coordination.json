@@ -1,149 +1,197 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["EHAM"],
-      "descent": "F100",
-      "fix": ["ARTIP"],
-      "from": "EHAA_CTR",
       "name": "EHAM_ARR_ARTIP",
-      "priority": 10,
-      "to": "EHAM_APP"
+      "from": "EHAA_CTR",
+      "to": "EHAM_APP",
+      "arrives": [
+        "EHAM"
+      ],
+      "fix": [
+        "ARTIP"
+      ],
+      "level": "F100"
     },
     {
-      "arrives": ["EHAM"],
-      "descent": "F100",
-      "fix": ["SUGOL"],
-      "from": "EHAA_CTR",
       "name": "EHAM_ARR_SUGOL",
-      "priority": 10,
-      "to": "EHAM_APP"
-    },
-    {
-      "arrives": ["EHAM"],
-      "descent": "F100",
-      "fix": ["RIVER"],
       "from": "EHAA_CTR",
+      "to": "EHAM_APP",
+      "arrives": [
+        "EHAM"
+      ],
+      "fix": [
+        "SUGOL"
+      ],
+      "level": "F100"
+    },
+    {
       "name": "EHAM_ARR_RIVER",
-      "priority": 10,
-      "to": "EHAM_APP"
+      "from": "EHAA_CTR",
+      "to": "EHAM_APP",
+      "arrives": [
+        "EHAM"
+      ],
+      "fix": [
+        "RIVER"
+      ],
+      "level": "F100"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["BERGI"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_BERGI",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "BERGI"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["IDRID"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_IDRID",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "IDRID"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["VALKO"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_VALKO",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "VALKO"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["VOLLA"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_VOLLA",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "VOLLA"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["ANDIK"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_ANDIK",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "ANDIK"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["BETUS"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_BETUS",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "BETUS"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["ARNEM"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_ARNEM",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "ARNEM"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["EDUPO"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_EDUPO",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "EDUPO"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["RENDI"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_RENDI",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "RENDI"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["WOODY"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_WOODY",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "WOODY"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["KUDAD"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_KUDAD",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "KUDAD"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["LOPIK"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_LOPIK",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "LOPIK"
+      ],
+      "level": "F090"
     },
     {
-      "climb": "F090",
-      "departs": ["EHAM"],
-      "fix": ["OGINA"],
-      "from": "EHAM_APP",
       "name": "EHAM_DEP_OGINA",
-      "priority": 10,
-      "to": "EHAA_CTR"
+      "from": "EHAM_APP",
+      "to": "EHAA_CTR",
+      "departs": [
+        "EHAM"
+      ],
+      "fix": [
+        "OGINA"
+      ],
+      "level": "F090"
     }
-  ],
-  "schema": 2
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCSS_APP",
+      "call_sign": "Taipei approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCSS_APP",
+      "unit": "RCSS_APP",
+      "frequency": "119.700"
+    }
+  ]
+}

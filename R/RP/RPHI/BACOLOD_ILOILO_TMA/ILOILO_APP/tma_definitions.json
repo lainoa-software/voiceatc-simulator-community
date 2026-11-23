@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVI_APP",
+      "call_sign": "Iloilo approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVI_APP",
+      "unit": "RPVI_APP",
+      "frequency": "121.000"
+    }
+  ]
+}

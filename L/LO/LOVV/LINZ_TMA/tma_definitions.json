@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOWL_APP",
+      "call_sign": "Linz approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOWL_APP",
+      "unit": "LOWL_APP",
+      "frequency": "125.685"
+    }
+  ]
+}

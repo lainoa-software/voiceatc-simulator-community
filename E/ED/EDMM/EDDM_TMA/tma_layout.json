@@ -1,0 +1,130 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDM_APP": {
+      "26": {
+        "positions": {
+          "EDDM_APP": [
+            "EDDMAPP"
+          ]
+        },
+        "airports": [
+          "EDDM"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "26"
+          ]
+        }
+      },
+      "08": {
+        "positions": {
+          "EDDM_APP": [
+            "EDDMAPP"
+          ]
+        },
+        "airports": [
+          "EDDM"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "08"
+          ]
+        }
+      },
+      "26S_LVP": {
+        "positions": {
+          "EDDM_APP": [
+            "EDDMAPP"
+          ]
+        },
+        "airports": [
+          "EDDM"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "26S_LVP"
+          ]
+        }
+      },
+      "08S_LVP": {
+        "positions": {
+          "EDDM_APP": [
+            "EDDMAPP"
+          ]
+        },
+        "airports": [
+          "EDDM"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "08S_LVP"
+          ]
+        }
+      },
+      "1": {
+        "positions": {
+          "EDDM_APP": [
+            "DMNAT_DMNH_DMNL_DMSAT_DMSH_DMSL_EDDMAPP"
+          ]
+        },
+        "airports": [
+          "EDDM",
+          "EDMA",
+          "EDMO"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "08",
+            "26"
+          ]
+        }
+      },
+      "2": {
+        "positions": {
+          "EDDM_DMNAT_APP": [
+            "DMNAT_DMNL_DMSAT_DMSL"
+          ],
+          "EDDM_DMNH_APP": [
+            "DMNH_DMSH"
+          ]
+        },
+        "airports": [
+          "EDDM",
+          "EDMA",
+          "EDMO"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "08",
+            "26"
+          ]
+        }
+      },
+      "3": {
+        "positions": {
+          "EDDM_DMNH_APP": [
+            "DMNH_DMSH"
+          ],
+          "EDDM_DMNL_APP": [
+            "DMNL_DMSL"
+          ],
+          "EDDM_DMNAT_APP": [
+            "DMNAT_DMSAT"
+          ]
+        },
+        "airports": [
+          "EDDM",
+          "EDMA",
+          "EDMO"
+        ],
+        "valid_for_runways": {
+          "EDDM": [
+            "08",
+            "26"
+          ]
+        }
+      }
+    }
+  }
+}

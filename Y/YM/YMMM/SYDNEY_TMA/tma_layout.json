@@ -1,0 +1,30 @@
+{
+  "schema": 3,
+  "configurations": {
+    "YSSY_APP": {
+      "SYDNEY_APP": {
+        "positions": {
+          "YSSY_APP": [
+            "YSSY_APP"
+          ]
+        },
+        "airports": [
+          "YSSY"
+        ]
+      },
+      "SYDNEY_APP_NORTH_SOUTH": {
+        "positions": {
+          "YSSY_N_APP": [
+            "YSSY_N_APP"
+          ],
+          "YSSY_S_APP": [
+            "YSSY_S_APP"
+          ]
+        },
+        "airports": [
+          "YSSY"
+        ]
+      }
+    }
+  }
+}

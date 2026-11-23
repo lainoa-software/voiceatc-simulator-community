@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPMZ_APP",
+      "call_sign": "Zamboanga approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPMZ_APP",
+      "unit": "RPMZ_APP",
+      "frequency": "122.700"
+    }
+  ]
+}

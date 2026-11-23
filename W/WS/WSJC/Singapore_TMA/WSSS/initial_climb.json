@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "WSSS",
+  "airac_min": 2503,
+  "initial_climb_ft": 3000
+}

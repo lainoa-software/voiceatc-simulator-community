@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKPS_APP",
+      "call_sign": "Sacheon approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKPS_APP",
+      "unit": "RKPS_APP",
+      "frequency": "135.400"
+    }
+  ]
+}

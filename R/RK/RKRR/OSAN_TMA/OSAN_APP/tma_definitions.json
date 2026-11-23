@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKSO_APP",
+      "call_sign": "Osan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKSO_APP",
+      "unit": "RKSO_APP",
+      "frequency": "127.900"
+    }
+  ]
+}

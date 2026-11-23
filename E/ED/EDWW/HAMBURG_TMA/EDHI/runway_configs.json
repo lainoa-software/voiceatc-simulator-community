@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "EDHI",
   "runway_configs": [
     {

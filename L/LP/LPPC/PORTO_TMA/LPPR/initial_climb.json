@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "LPPR",
+  "airac_min": 2609,
+  "initial_climb_ft": 10000
+}

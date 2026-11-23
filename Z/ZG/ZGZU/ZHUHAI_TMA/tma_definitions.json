@@ -1,0 +1,22 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "VMMC_APP",
+      "call_sign": "Macao approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "123.950"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "VMMC_APP",
+      "unit": "VMMC_APP",
+      "frequency": "119.025"
+    }
+  ]
+}

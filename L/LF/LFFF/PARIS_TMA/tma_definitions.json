@@ -1,0 +1,61 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LFPG_APP",
+      "call_sign": "De Gaulle Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.155",
+        "119.855",
+        "121.155",
+        "126.430",
+        "126.580",
+        "136.280"
+      ]
+    },
+    {
+      "id": "LFPG_TWR",
+      "call_sign": "De Gaulle Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LFPG",
+      "unassigned_frequencies": [
+        "119.255",
+        "118.655",
+        "119.630",
+        "120.655",
+        "120.905",
+        "123.605",
+        "125.330"
+      ]
+    },
+    {
+      "id": "LFPO_APP",
+      "call_sign": "Orly Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "124.455",
+        "118.855",
+        "120.855"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LFPG_APP",
+      "unit": "LFPG_APP",
+      "frequency": "125.830"
+    },
+    {
+      "call_sign": "LFPO_APP",
+      "unit": "LFPO_APP",
+      "frequency": "123.880"
+    }
+  ]
+}

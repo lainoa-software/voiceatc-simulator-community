@@ -1,12 +1,12 @@
 {
+  "schema": 3,
   "airport": "RKTU",
   "airac_min": 2610,
   "sids": {
     "OSPO1C": {
       "OSPOT": {
         "altitude": {
-          "type": "at",
-          "ft": 6000
+          "at_ft": 6000
         }
       }
     }

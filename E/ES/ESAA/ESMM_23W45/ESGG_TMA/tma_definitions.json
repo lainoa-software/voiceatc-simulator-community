@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "ESGG_APP",
+      "call_sign": "Goteborg approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "ESGG_APP",
+      "unit": "ESGG_APP",
+      "frequency": "124.680"
+    }
+  ]
+}

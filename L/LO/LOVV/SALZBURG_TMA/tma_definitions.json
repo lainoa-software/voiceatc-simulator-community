@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOWS_APP",
+      "call_sign": "Salzburg approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOWS_APP",
+      "unit": "LOWS_APP",
+      "frequency": "123.725"
+    }
+  ]
+}

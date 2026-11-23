@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCFG_APP",
+      "call_sign": "Matsu approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCFG_APP",
+      "unit": "RCFG_APP",
+      "frequency": "121.000"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDS_APP": {
+      "EDDS_FULL_APP": {
+        "positions": {
+          "EDDS_APP": [
+            "REU1_REU2_STG1_STG2_STG3_STG5_STG6"
+          ]
+        },
+        "airports": [
+          "EDDS",
+          "EDSB",
+          "EDTL"
+        ],
+        "valid_for_runways": {
+          "EDDS": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ],
+          "EDSB": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ],
+          "EDTL": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ]
+        }
+      },
+      "EDDS_APP": {
+        "positions": {
+          "EDDS_APP": [
+            "REU1_STG1_STG2_STG3_STG5_STG6"
+          ]
+        },
+        "airports": [
+          "EDDS",
+          "EDSB",
+          "EDTL"
+        ],
+        "valid_for_runways": {
+          "EDDS": [
+            "25",
+            "07"
+          ],
+          "EDSB": [
+            "25",
+            "07"
+          ],
+          "EDTL": [
+            "25",
+            "07"
+          ]
+        }
+      },
+      "EDDS_N_APP": {
+        "positions": {
+          "EDDS_APP": [
+            "STG1_STG2_STG3_STG5_STG6"
+          ]
+        },
+        "airports": [
+          "EDDS",
+          "EDSB",
+          "EDTL"
+        ],
+        "valid_for_runways": {
+          "EDDS": [
+            "25",
+            "07"
+          ],
+          "EDSB": [
+            "25",
+            "07"
+          ],
+          "EDTL": [
+            "25",
+            "07"
+          ]
+        }
+      },
+      "EDDS_S_APP": {
+        "positions": {
+          "EDDS_APP": [
+            "REU1_REU2"
+          ]
+        },
+        "airports": [
+          "EDDS",
+          "EDSB",
+          "EDTL"
+        ],
+        "valid_for_runways": {
+          "EDDS": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ],
+          "EDSB": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ],
+          "EDTL": [
+            "25",
+            "07",
+            "21",
+            "03"
+          ]
+        }
+      }
+    }
+  }
+}

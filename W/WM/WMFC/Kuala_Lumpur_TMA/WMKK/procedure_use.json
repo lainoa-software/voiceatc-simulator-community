@@ -1,0 +1,151 @@
+{
+  "schema": 3,
+  "airport": "WMKK",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "GUPT1H"
+      ],
+      "join_from": [
+        "GUPTA"
+      ]
+    },
+    {
+      "stars": [
+        "GUPT3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "GUPT3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "KAKA1G"
+      ],
+      "join_from": [
+        "KAKAK"
+      ]
+    },
+    {
+      "stars": [
+        "KAKA3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "KAKA3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "NIRE1H"
+      ],
+      "join_from": [
+        "NIREN"
+      ]
+    },
+    {
+      "stars": [
+        "NIRE3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "NIRE3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "PUGE1H"
+      ],
+      "join_from": [
+        "PUGER"
+      ]
+    },
+    {
+      "stars": [
+        "PUGE3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "PUGE3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "PULI1G"
+      ],
+      "join_from": [
+        "PULIP"
+      ]
+    },
+    {
+      "stars": [
+        "PULI3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "PULI3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SALA1H"
+      ],
+      "join_from": [
+        "SALAX"
+      ]
+    },
+    {
+      "stars": [
+        "SALA3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SALA3K"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SARO1G"
+      ],
+      "join_from": [
+        "SAROX"
+      ]
+    },
+    {
+      "stars": [
+        "SARO3J"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SARO3K"
+      ],
+      "spawn": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDR_APP",
+      "call_sign": "Saarbruecken approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDR_APP",
+      "unit": "EDDR_APP",
+      "frequency": "125.600"
+    }
+  ]
+}

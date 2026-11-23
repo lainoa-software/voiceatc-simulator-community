@@ -1,0 +1,25 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LEPA_APP": {
+      "3D": {
+        "positions": {
+          "LEPA_LECPAPR_APP": [
+            "LECPAPR"
+          ],
+          "LEIB_LECPIXX_APP": [
+            "LECPIXX"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      }
+    }
+  }
+}

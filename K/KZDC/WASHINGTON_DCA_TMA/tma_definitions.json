@@ -1,0 +1,34 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KDCA_APP",
+      "call_sign": "Potomac Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "124.200",
+        "124.700"
+      ]
+    },
+    {
+      "id": "KDCA_TWR",
+      "call_sign": "Washington Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KDCA",
+      "unassigned_frequencies": [
+        "119.100"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KDCA_APP",
+      "unit": "KDCA_APP",
+      "frequency": "119.850"
+    }
+  ]
+}

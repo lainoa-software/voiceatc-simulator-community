@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPSP_APP",
+      "call_sign": "Bohol Panglao approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPSP_APP",
+      "unit": "RPSP_APP",
+      "frequency": "124.700"
+    }
+  ]
+}

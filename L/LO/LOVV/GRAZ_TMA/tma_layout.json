@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LOWG_APP": {
+      "GRAZ_TMA_WHOLE_LOWG_16C": {
+        "positions": {
+          "LOWG_APP": [
+            "GRAZ_TMA_LOWG_16C"
+          ]
+        },
+        "airports": [
+          "LOWG"
+        ],
+        "valid_for_runways": {
+          "LOWG": [
+            "LOWG_16C"
+          ]
+        }
+      },
+      "GRAZ_TMA_WHOLE_LOWG_34C": {
+        "positions": {
+          "LOWG_APP": [
+            "GRAZ_TMA_LOWG_34C"
+          ]
+        },
+        "airports": [
+          "LOWG"
+        ],
+        "valid_for_runways": {
+          "LOWG": [
+            "LOWG_34C"
+          ]
+        }
+      }
+    }
+  }
+}

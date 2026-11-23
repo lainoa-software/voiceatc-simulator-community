@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "ESSB",
+  "airac_min": 2607,
+  "initial_climb_ft": 3000
+}

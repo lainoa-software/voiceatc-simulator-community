@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EFHK_APP": {
+      "1": {
+        "positions": {
+          "EFHK_APP": [
+            "HKCTAE_HKCTAW_HKTMAL_HKTMAU"
+          ]
+        },
+        "airports": [
+          "EFHK"
+        ],
+        "valid_for_runways": {
+          "EFHK": [
+            "22 PARA",
+            "04 PARA"
+          ]
+        }
+      }
+    }
+  }
+}

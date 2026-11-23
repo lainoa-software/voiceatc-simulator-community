@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KMIA",
   "runway_configs": [
     {

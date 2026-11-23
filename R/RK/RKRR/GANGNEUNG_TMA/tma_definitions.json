@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKNY_APP",
+      "call_sign": "Yangyang approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKNY_APP",
+      "unit": "RKNY_APP",
+      "frequency": "124.600"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema": 3,
+  "configurations": {
+    "ESGG_APP": {
+      "1": {
+        "positions": {
+          "ESGG_APP": [
+            "GE"
+          ]
+        },
+        "airports": [
+          "ESGG",
+          "ESGT",
+          "ESIB"
+        ],
+        "valid_for_runways": {
+          "ESGG": [
+            "03",
+            "21"
+          ],
+          "ESGT": [
+            "03",
+            "21"
+          ],
+          "ESIB": [
+            "03",
+            "21"
+          ]
+        }
+      }
+    }
+  }
+}

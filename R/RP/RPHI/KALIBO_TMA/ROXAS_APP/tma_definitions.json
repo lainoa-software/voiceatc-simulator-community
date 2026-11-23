@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVR_APP",
+      "call_sign": "Roxas approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVR_APP",
+      "unit": "RPVR_APP",
+      "frequency": "120.400"
+    }
+  ]
+}

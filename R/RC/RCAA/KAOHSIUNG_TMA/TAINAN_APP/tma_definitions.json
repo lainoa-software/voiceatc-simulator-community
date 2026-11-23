@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCNN_APP",
+      "call_sign": "Tainan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCNN_APP",
+      "unit": "RCNN_APP",
+      "frequency": "121.100"
+    }
+  ]
+}

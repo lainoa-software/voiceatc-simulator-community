@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "airport": "EDDR",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "GTQ1M"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOMP2K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOMP2N"
+      ],
+      "spawn": false
+    }
+  ]
+}

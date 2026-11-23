@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPMR_APP",
+      "call_sign": "General Santos City approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPMR_APP",
+      "unit": "RPMR_APP",
+      "frequency": "119.100"
+    }
+  ]
+}

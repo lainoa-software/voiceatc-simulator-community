@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPLI_APP": {
+      "LAOAG": {
+        "positions": {
+          "RPLI_APP": [
+            "RPLI_APP"
+          ]
+        },
+        "airports": [
+          "RPLI"
+        ]
+      }
+    }
+  }
+}

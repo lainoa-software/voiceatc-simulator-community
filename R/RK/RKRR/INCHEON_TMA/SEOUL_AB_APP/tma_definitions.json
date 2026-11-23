@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKSM_APP",
+      "call_sign": "Seoul approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKSM_APP",
+      "unit": "RKSM_APP",
+      "frequency": "123.800"
+    }
+  ]
+}

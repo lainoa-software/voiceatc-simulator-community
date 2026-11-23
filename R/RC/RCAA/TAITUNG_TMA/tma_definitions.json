@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCFN_APP",
+      "call_sign": "Taitung approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCFN_APP",
+      "unit": "RCFN_APP",
+      "frequency": "119.400"
+    }
+  ]
+}

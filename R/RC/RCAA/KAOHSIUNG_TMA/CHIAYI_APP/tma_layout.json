@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCKU_APP": {
+      "CHIAYI": {
+        "positions": {
+          "RCKU_APP": [
+            "RCKU_APP"
+          ]
+        },
+        "airports": [
+          "RCKU"
+        ]
+      }
+    }
+  }
+}

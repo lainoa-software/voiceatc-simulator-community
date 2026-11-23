@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "LEAM",
   "runway_configs": [
     {

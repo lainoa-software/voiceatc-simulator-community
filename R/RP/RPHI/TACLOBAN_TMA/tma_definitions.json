@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVA_APP",
+      "call_sign": "Tacloban approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVA_APP",
+      "unit": "RPVA_APP",
+      "frequency": "120.800"
+    }
+  ]
+}

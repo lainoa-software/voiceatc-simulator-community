@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCTP_APP",
+      "call_sign": "Taipei approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCTP_APP",
+      "unit": "RCTP_APP",
+      "frequency": "125.100"
+    }
+  ]
+}

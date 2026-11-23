@@ -1,0 +1,355 @@
+{
+  "schema": 3,
+  "airport": "KPDX",
+  "procedures": [
+    {
+      "id": "COLUMBIA_VISUAL_10LR",
+      "name": "Columbia Visual RWY 10L/R",
+      "aliases": [
+        "columbia visual",
+        "columbia visual ten left",
+        "columbia visual ten right"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "SAUVIE_10L",
+          "runway": "10L",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SAUVIE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "sight_references": {
+            "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+            "references": [
+              {
+                "id": "INTERSTATE_FIVE_BRIDGE",
+                "name": "the Interstate Five Bridge",
+                "aliases": [
+                  "I-5 Bridge",
+                  "Interstate 5 Bridge"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "I5_BRIDGE_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "SAUVIE_TRACE",
+              "name": "Sauvie Island (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.67,
+                -122.82
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "type": "track_to_fix",
+              "point": [
+                45.6583333333,
+                -122.7725
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 2500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.61,
+                -122.68
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.6,
+                -122.67
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 1400,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "SAUVIE_10R",
+          "runway": "10R",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SAUVIE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "sight_references": {
+            "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+            "references": [
+              {
+                "id": "INTERSTATE_FIVE_BRIDGE",
+                "name": "the Interstate Five Bridge",
+                "aliases": [
+                  "I-5 Bridge",
+                  "Interstate 5 Bridge"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "I5_BRIDGE_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "SAUVIE_TRACE",
+              "name": "Sauvie Island (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.67,
+                -122.82
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "type": "track_to_fix",
+              "point": [
+                45.6583333333,
+                -122.7725
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 2500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.61,
+                -122.68
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.6,
+                -122.67
+              ],
+              "fly_over": true
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "SCAPPOOSE_10L",
+          "runway": "10L",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SCAPPOOSE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "sight_references": {
+            "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+            "references": [
+              {
+                "id": "INTERSTATE_FIVE_BRIDGE",
+                "name": "the Interstate Five Bridge",
+                "aliases": [
+                  "I-5 Bridge",
+                  "Interstate 5 Bridge"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "I5_BRIDGE_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "SCAPPOOSE_TRACE",
+              "name": "Scappoose (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.76,
+                -122.88
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "type": "track_to_fix",
+              "point": [
+                45.6583333333,
+                -122.7725
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 2500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.61,
+                -122.68
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced; RWY 10L cue)",
+              "type": "track_to_fix",
+              "point": [
+                45.6,
+                -122.67
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 1400,
+                "recommended": true
+              }
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        },
+        {
+          "id": "SCAPPOOSE_10R",
+          "runway": "10R",
+          "clearance_name": "Columbia Visual",
+          "entry_point_id": "SCAPPOOSE_TRACE",
+          "sight_reference_point_id": "I5_BRIDGE_TRACE",
+          "sight_references": {
+            "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+            "references": [
+              {
+                "id": "INTERSTATE_FIVE_BRIDGE",
+                "name": "the Interstate Five Bridge",
+                "aliases": [
+                  "I-5 Bridge",
+                  "Interstate 5 Bridge"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "I5_BRIDGE_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "SCAPPOOSE_TRACE",
+              "name": "Scappoose (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.76,
+                -122.88
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "CNFLU",
+              "name": "Confluence of Rivers / CNFLU",
+              "type": "track_to_fix",
+              "point": [
+                45.6583333333,
+                -122.7725
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 2500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "COLUMBIA_RIVER_TRACE",
+              "name": "Columbia River (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.61,
+                -122.68
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "I5_BRIDGE_TRACE",
+              "name": "I-5 Bridge / Pearson area (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                45.6,
+                -122.67
+              ],
+              "fly_over": true
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}

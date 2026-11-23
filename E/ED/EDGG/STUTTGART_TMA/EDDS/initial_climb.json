@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "EDDS",
+  "airac_min": 2604,
+  "initial_climb_ft": 5000
+}

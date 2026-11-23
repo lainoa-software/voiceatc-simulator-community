@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KMKE_APP",
+      "call_sign": "Milwaukee approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KMKE_APP",
+      "unit": "KMKE_APP",
+      "frequency": "118.000"
+    },
+    {
+      "call_sign": "KMKE_MKEE_APP",
+      "unit": "KMKE_APP",
+      "frequency": "118.000"
+    },
+    {
+      "call_sign": "KMKE_MKEW_APP",
+      "unit": "KMKE_APP",
+      "frequency": "126.500"
+    }
+  ]
+}

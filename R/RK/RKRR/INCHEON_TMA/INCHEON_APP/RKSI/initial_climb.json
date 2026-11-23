@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "airport": "RKSI",
+  "airac_min": 2610,
+  "initial_climb_ft": 7000,
+  "exceptions": [
+    {
+      "sids": [
+        "RADA3A"
+      ],
+      "initial_climb_ft": 3000
+    },
+    {
+      "sids": [
+        "RADA3D"
+      ],
+      "initial_climb_ft": 3000
+    }
+  ]
+}

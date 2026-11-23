@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKSO_APP": {
+      "OSAN": {
+        "positions": {
+          "RKSO_APP": [
+            "RKSO_APP"
+          ]
+        },
+        "airports": [
+          "RKSO"
+        ]
+      }
+    }
+  }
+}
