@@ -13,5 +13,8 @@
   "incoming_symbol": "radar_dot",
   "of_interest_symbol": "radar_dot",
   "released_symbol": "radar_dot",
+  "symbol_line_width": 1.0,
+  "symbol_size": 0.85,
+  "traildot_size": 0.1,
   "traildot_symbol": "radar_dot"
 }
