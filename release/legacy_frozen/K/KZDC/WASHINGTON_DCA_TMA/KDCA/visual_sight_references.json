@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "airport": "KDCA",
+  "variants": [
+    {
+      "procedure_id": "MOUNT_VERNON_VISUAL_01",
+      "variant_id": "MOUNT_VERNON_FORWARD_RIVER",
+      "default_reference_id": "MOUNT_VERNON_ABEAM",
+      "references": [
+        {
+          "id": "MOUNT_VERNON_ABEAM",
+          "name": "the Potomac River abeam Mount Vernon",
+          "aliases": ["Mount Vernon abeam"],
+          "geometry": { "kind": "point", "leg_id": "MOUNT_VERNON_ABEAM_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "MOUNT VERNON VISUAL RWY 01",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00443MOUNTVERNON_VIS1.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "RIVER_VISUAL_19",
+      "variant_id": "FORWARD_RIVER_ROUTE",
+      "default_reference_id": "POTOMAC_RIVER",
+      "references": [
+        {
+          "id": "POTOMAC_RIVER",
+          "name": "the Potomac River",
+          "aliases": ["Potomac River"],
+          "geometry": {
+            "kind": "route",
+            "leg_ids": [
+              "AMERICAN_LEGION_DAVID_TAYLOR_TRACE",
+              "DARIC",
+              "CHAIN_BRIDGE_TRACE",
+              "GREYZ",
+              "RORRK",
+              "KEY_BRIDGE_TRACE",
+              "ROOSEVELT_BRIDGE_TRACE",
+              "MEMORIAL_BRIDGE_TRACE",
+              "ROCHAMBEAU_BRIDGE_TRACE"
+            ]
+          },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "RIVER VISUAL RWY 19",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00443RIVER_VIS19.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

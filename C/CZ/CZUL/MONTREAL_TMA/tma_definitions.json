@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "CYUL_APP",
+      "call_sign": "Montreal approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "CYUL_APP",
+      "unit": "CYUL_APP",
+      "frequency": "118.900"
+    }
+  ]
+}

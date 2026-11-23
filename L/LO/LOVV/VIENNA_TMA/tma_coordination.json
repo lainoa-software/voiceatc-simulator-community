@@ -1,176 +1,233 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["LOWW"],
-      "descent": "F170",
-      "fix": ["BARUG"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_BARUG",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "BARUG"
+      ],
+      "level": "F170"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F180",
-      "fix": ["NIGSI"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_NIGSI",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "NIGSI"
+      ],
+      "level": "F180"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F130",
-      "fix": ["MIKOV"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_MIKOV",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "MIKOV"
+      ],
+      "level": "F130"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F180",
-      "fix": ["REKLU"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_REKLU",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "REKLU"
+      ],
+      "level": "F180"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F140",
-      "fix": ["NATEX"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_NATEX",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "NATEX"
+      ],
+      "level": "F140"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F150",
-      "fix": ["LANUX"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_LANUX",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "LANUX"
+      ],
+      "level": "F150"
     },
     {
-      "arrives": ["LOWW"],
-      "descent": "F160",
-      "fix": ["TOVKA"],
-      "from": "LOVV_CTR",
       "name": "LOWW_ARR_TOVKA",
-      "priority": 10,
-      "to": "LOWW_APP"
-    },
-    {
-      "arrives": ["LOWW"],
-      "descent": "F170",
-      "fix": ["MASUR"],
       "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "TOVKA"
+      ],
+      "level": "F160"
+    },
+    {
       "name": "LOWW_ARR_MASUR",
-      "priority": 10,
-      "to": "LOWW_APP"
+      "from": "LOVV_CTR",
+      "to": "LOWW_APP",
+      "arrives": [
+        "LOWW"
+      ],
+      "fix": [
+        "MASUR"
+      ],
+      "level": "F170"
     },
     {
-      "climb": "F165",
-      "departs": ["LOWW"],
-      "fix": ["LANUX"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_LANUX",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "LANUX"
+      ],
+      "level": "F165"
     },
     {
-      "climb": "F240",
-      "departs": ["LOWW"],
-      "fix": ["SOVIL"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_SOVIL",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "SOVIL"
+      ],
+      "level": "F240"
     },
     {
-      "climb": "F240",
-      "departs": ["LOWW"],
-      "fix": ["LUGEM"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_LUGEM",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "LUGEM"
+      ],
+      "level": "F240"
     },
     {
-      "climb": "F240",
-      "departs": ["LOWW"],
-      "fix": ["MEDIX"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_MEDIX",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "MEDIX"
+      ],
+      "level": "F240"
     },
     {
-      "climb": "F240",
-      "departs": ["LOWW"],
-      "fix": ["RUPET"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_RUPET",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "RUPET"
+      ],
+      "level": "F240"
     },
     {
-      "climb": "F240",
-      "departs": ["LOWW"],
-      "fix": ["OSPEN"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_OSPEN",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "OSPEN"
+      ],
+      "level": "F240"
     },
     {
-      "climb": "F230",
-      "departs": ["LOWW"],
-      "fix": ["ADAMA"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_ADAMA",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "ADAMA"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["LOWW"],
-      "fix": ["KOXER"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_KOXER",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "KOXER"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["LOWW"],
-      "fix": ["ARSIN"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_ARSIN",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "ARSIN"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["LOWW"],
-      "fix": ["STEIN"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_STEIN",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "STEIN"
+      ],
+      "level": "F230"
     },
     {
-      "climb": "F230",
-      "departs": ["LOWW"],
-      "fix": ["LEDVA"],
-      "from": "LOWW_APP",
       "name": "LOWW_DEP_LEDVA",
-      "priority": 10,
-      "to": "LOVV_CTR"
+      "from": "LOWW_APP",
+      "to": "LOVV_CTR",
+      "departs": [
+        "LOWW"
+      ],
+      "fix": [
+        "LEDVA"
+      ],
+      "level": "F230"
     }
-  ],
-  "schema": 2
+  ]
 }

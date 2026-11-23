@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "airport": "LLER",
+  "go_arounds": [
+    {
+      "procedure_id": "LLER_ADIVI_RNAV_VISUAL_RWY01",
+      "variant_id": "LLER_RWY01_ADIVI",
+      "runway": "01",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLER - ADIVI RNAV VISUAL RWY 01",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLER_VAC-01-1_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "HOLD_INDEFINITE",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "ER127",
+          "path_term": "TF",
+          "latitude": 29.893,
+          "longitude": 35.0543333333,
+          "altitude1": 3400,
+          "altitude2": 4000,
+          "altitude_desc": "B",
+          "distance": 11.1
+        },
+        {
+          "sequence": 20,
+          "ident": "NURIT",
+          "path_term": "TF",
+          "latitude": 30.0694444444,
+          "longitude": 35.0658333333,
+          "altitude1": 5000,
+          "altitude_desc": "+",
+          "distance": 10.6
+        },
+        {
+          "sequence": 30,
+          "ident": "NURIT",
+          "path_term": "HM",
+          "latitude": 30.0694444444,
+          "longitude": 35.0658333333,
+          "course": 185,
+          "turn_direction": "R",
+          "altitude1": 5000,
+          "altitude2": 10000,
+          "altitude_desc": "B",
+          "speed_limit": 215,
+          "distance": 1.0
+        }
+      ]
+    },
+    {
+      "procedure_id": "LLER_NURIT_RNAV_VISUAL_RWY19",
+      "variant_id": "LLER_RWY19_NURIT",
+      "runway": "19",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLER - NURIT RNAV VISUAL RWY 19",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLER_VAC-19-1_V2_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "HOLD_INDEFINITE",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "ER923",
+          "path_term": "TF",
+          "latitude": 29.55175,
+          "longitude": 34.9650833333,
+          "altitude1": 3000,
+          "altitude_desc": "+"
+        },
+        {
+          "sequence": 20,
+          "ident": "ADIVI",
+          "path_term": "DF",
+          "latitude": 29.7180277778,
+          "longitude": 34.9658888889,
+          "turn_direction": "R",
+          "altitude1": 5000,
+          "altitude_desc": "+",
+          "speed_limit": 185
+        },
+        {
+          "sequence": 30,
+          "ident": "ESHEL",
+          "path_term": "TF",
+          "latitude": 29.8222222222,
+          "longitude": 35.0177777778,
+          "altitude1": 7000,
+          "altitude_desc": "+"
+        },
+        {
+          "sequence": 40,
+          "ident": "NURIT",
+          "path_term": "TF",
+          "latitude": 30.0694444444,
+          "longitude": 35.0658333333,
+          "altitude1": 8000,
+          "altitude_desc": "@"
+        },
+        {
+          "sequence": 50,
+          "ident": "NURIT",
+          "path_term": "HM",
+          "latitude": 30.0694444444,
+          "longitude": 35.0658333333,
+          "course": 185,
+          "turn_direction": "R",
+          "altitude1": 8000,
+          "altitude_desc": "@",
+          "speed_limit": 215,
+          "distance": 1.0
+        }
+      ]
+    }
+  ]
+}

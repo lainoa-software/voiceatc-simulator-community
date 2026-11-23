@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKJJ_APP": {
+      "GWANGJU": {
+        "positions": {
+          "RKJJ_APP": [
+            "RKJJ_APP"
+          ]
+        },
+        "airports": [
+          "RKJJ"
+        ]
+      }
+    }
+  }
+}

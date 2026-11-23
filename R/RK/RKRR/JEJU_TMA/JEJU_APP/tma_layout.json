@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKPC_APP": {
+      "JEJU": {
+        "positions": {
+          "RKPC_APP": [
+            "RKPC_APP"
+          ]
+        },
+        "airports": [
+          "RKPC"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKNW_APP": {
+      "WONJU": {
+        "positions": {
+          "RKNW_APP": [
+            "RKNW_APP"
+          ]
+        },
+        "airports": [
+          "RKNW"
+        ]
+      }
+    }
+  }
+}

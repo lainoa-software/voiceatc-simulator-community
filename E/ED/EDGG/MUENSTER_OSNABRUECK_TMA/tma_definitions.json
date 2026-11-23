@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDG_APP",
+      "call_sign": "Muenster approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDG_APP",
+      "unit": "EDDG_APP",
+      "frequency": "129.300"
+    }
+  ]
+}

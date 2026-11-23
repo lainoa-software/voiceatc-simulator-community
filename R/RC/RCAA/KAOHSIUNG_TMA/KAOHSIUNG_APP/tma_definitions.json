@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCKH_APP",
+      "call_sign": "Kaohsiung approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCKH_APP",
+      "unit": "RCKH_APP",
+      "frequency": "124.700"
+    }
+  ]
+}

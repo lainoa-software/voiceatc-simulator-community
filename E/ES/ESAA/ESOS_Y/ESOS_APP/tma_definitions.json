@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "ESOW_APP",
+      "call_sign": "Stockholm approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "ESOW_APP",
+      "unit": "ESOW_APP",
+      "frequency": "126.655"
+    },
+    {
+      "call_sign": "ESOW_E_APP",
+      "unit": "ESOW_APP",
+      "frequency": "126.655"
+    },
+    {
+      "call_sign": "ESOW_S_APP",
+      "unit": "ESOW_APP",
+      "frequency": "123.755"
+    }
+  ]
+}

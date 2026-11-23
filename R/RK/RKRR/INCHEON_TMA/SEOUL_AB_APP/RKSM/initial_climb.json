@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "airport": "RKSM",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "sids": [
+        "MEESA1"
+      ],
+      "initial_climb_ft": 6000
+    },
+    {
+      "sids": [
+        "YEOJU1"
+      ],
+      "initial_climb_ft": 6500
+    }
+  ]
+}

@@ -62,11 +62,25 @@ from legacy_contract import LEGACY_PROCEDURE_OPTIONS_MANIFEST_SCHEMA_VERSION
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / ".voiceatc" / "procedure_options_manifest.json"
+USE_MANIFEST_PATH = ROOT / ".voiceatc" / "procedure_use_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 OPTIONS_FILENAME = "procedure_options.json"
+USE_FILENAME = "procedure_use.json"
+CLIMB_FILENAME = "initial_climb.json"
+VARIANTS_FILENAME = "departure_variants.json"
 BUCKETS = ("stars", "sids", "iaps")
+USE_BUCKETS = ("sids", "stars", "approaches", "transitions")
+USE_ROW_KINDS = ("all", "sids", "stars", "approaches", "transitions")
 CLIMB_RULE_KINDS = ("route_contains", "aircraft_type", "utc_window", "fallback")
 CLIMB_PATH_TERMS = ("IF", "TF", "DF", "CF", "CA", "VA", "VM", "FM")
+CLIMB_LEG_TYPES = {
+    "initial_fix", "track_to_fix", "direct_to_fix", "course_to_fix",
+    "course_to_altitude", "heading_to_altitude", "heading_to_manual",
+    "course_to_manual", "from_fix_manual", "radius_to_fix", "constant_radius_arc",
+    "arc_to_fix", "dme_arc", "course_to_dme", "course_to_intercept", "course_to_radial",
+    "fix_to_altitude", "track_to_distance", "fix_to_dme", "heading_to_dme",
+    "heading_to_intercept", "heading_to_radial", "hold_manual", "hold_single",
+}
 RUNWAY_TOKEN_RE = re.compile(r"^[0-9]{1,2}[LRCB]?$")
 NAVAID_IDENT_RE = re.compile(r"^[A-Z0-9]{2,8}$")
 ROUTE_KEY_RE = re.compile(r"^[A-Z0-9]{2,5}\.[A-Z]$")
@@ -81,6 +95,18 @@ VALIDATION_REPAIR_HINT = (
 
 def options_files(root: Path = ROOT) -> list[Path]:
     return content_files(root, OPTIONS_FILENAME)
+
+
+def use_files(root: Path = ROOT) -> list[Path]:
+    return content_files(root, USE_FILENAME)
+
+
+def climb_files(root: Path = ROOT) -> list[Path]:
+    return content_files(root, CLIMB_FILENAME)
+
+
+def variant_files(root: Path = ROOT) -> list[Path]:
+    return content_files(root, VARIANTS_FILENAME)
 
 
 def ensure_text_field(value: object, label: str, path: Path) -> str:
@@ -150,15 +176,21 @@ def _validate_containment(assertions: object, where: str, path: Path) -> None:
 def _validate_climb_leg(leg: object, where: str, path: Path) -> None:
     if not isinstance(leg, dict):
         raise ValueError(f"{path}: {where} must be a JSON object")
-    path_term = ensure_text_field(leg.get("path_term"), f"{where}.path_term", path).upper()
-    if path_term not in CLIMB_PATH_TERMS:
-        raise ValueError(f"{path}: {where}.path_term '{path_term}' is unsupported")
+    if "type" in leg:
+        leg_type = ensure_text_field(leg.get("type"), f"{where}.type", path).lower()
+        if leg_type not in CLIMB_LEG_TYPES:
+            raise ValueError(f"{path}: {where}.type '{leg_type}' is unsupported")
+        term = sector_legacy_projection._LEG_TYPE_TO_TERM.get(leg_type, "")
+    else:
+        term = ensure_text_field(leg.get("path_term"), f"{where}.path_term", path).upper()
+        if term not in CLIMB_PATH_TERMS:
+            raise ValueError(f"{path}: {where}.path_term '{term}' is unsupported")
     if "ident" in leg:
         ensure_text_field(leg["ident"], f"{where}.ident", path)
     if "course" in leg:
         _heading(leg["course"], f"{where}.course", path)
-    if path_term in ("CA", "VA", "VM", "FM", "CF") and "course" not in leg:
-        raise ValueError(f"{path}: {where}.course is required for {path_term}")
+    if term in ("CA", "VA", "VM", "FM", "CF") and "course" not in leg:
+        raise ValueError(f"{path}: {where}.course is required for {term}")
     if "turn_direction" in leg:
         turn = ensure_text_field(leg["turn_direction"], f"{where}.turn_direction", path).upper()
         if turn not in ("L", "R"):
@@ -433,20 +465,191 @@ def existing_published_at(path: Path = MANIFEST_PATH) -> str:
     return value
 
 
+def _require_schema3(payload: dict, path: Path) -> None:
+    schema = payload.get("schema")
+    if isinstance(schema, bool) or schema != 3:
+        raise ValueError(f"{path}: 'schema' must be 3")
+
+
+def _reject_route_keys_in_use(document: dict, path: Path) -> None:
+    for index, row in enumerate(document.get("use", []) or []):
+        if not isinstance(row, dict):
+            continue
+        for bucket in ("sids", "stars"):
+            for key in row.get(bucket) or []:
+                if ROUTE_KEY_RE.fullmatch(str(key).strip().upper()):
+                    raise ValueError(
+                        f"{path}: use[{index}].{bucket}.{key} is a digit-free key, which older builds read "
+                        "as a literal name; put it in both airac_overrides tiers and keep exact names "
+                        "at the top level"
+                    )
+
+
+def validate_use_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    raw_bytes = path.read_bytes()
+    canonical_bytes = _canonical_repo_bytes(raw_bytes)
+    try:
+        payload = json.loads(raw_bytes.decode("utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        _require_schema3(document, path)
+        airport = ensure_text_field(document.get("airport"), "airport", path).upper()
+        if airport != path.parent.name.strip().upper():
+            raise ValueError(f"{path}: airport '{airport}' must match parent folder '{path.parent.name}'")
+        use = document.get("use")
+        if not isinstance(use, list):
+            raise ValueError(f"{path}: 'use' must be an array")
+        for idx, row in enumerate(use):
+            if not isinstance(row, dict):
+                raise ValueError(f"{path}: use[{idx}] must be an object")
+            if "kind" in row and row["kind"] not in USE_ROW_KINDS:
+                raise ValueError(f"{path}: use[{idx}].kind is invalid")
+            if "spawn" in row and not isinstance(row["spawn"], bool):
+                raise ValueError(f"{path}: use[{idx}].spawn must be boolean")
+        if not tier:
+            _reject_route_keys_in_use(document, path)
+            result = {
+                "airport": airport,
+                "repo_path": path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(canonical_bytes).hexdigest(),
+                "size_bytes": len(canonical_bytes),
+            }
+    return result
+
+
+def validate_climb_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    raw_bytes = path.read_bytes()
+    canonical_bytes = _canonical_repo_bytes(raw_bytes)
+    try:
+        payload = json.loads(raw_bytes.decode("utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        _require_schema3(document, path)
+        airport = ensure_text_field(document.get("airport"), "airport", path).upper()
+        if airport != path.parent.name.strip().upper():
+            raise ValueError(f"{path}: airport '{airport}' must match parent folder '{path.parent.name}'")
+        if "initial_climb_ft" in document:
+            ic = document["initial_climb_ft"]
+            if isinstance(ic, bool) or not isinstance(ic, int) or ic <= 0:
+                raise ValueError(f"{path}: initial_climb_ft must be a positive integer")
+        if "exceptions" in document:
+            ex_list = document["exceptions"]
+            if not isinstance(ex_list, list):
+                raise ValueError(f"{path}: 'exceptions' must be an array")
+            for idx, ex in enumerate(ex_list):
+                if not isinstance(ex, dict):
+                    raise ValueError(f"{path}: exceptions[{idx}] must be an object")
+                ic = ex.get("initial_climb_ft")
+                if isinstance(ic, bool) or not isinstance(ic, int) or ic <= 0:
+                    raise ValueError(f"{path}: exceptions[{idx}].initial_climb_ft must be a positive integer")
+        if not tier:
+            result = {
+                "airport": airport,
+                "repo_path": path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(canonical_bytes).hexdigest(),
+                "size_bytes": len(canonical_bytes),
+            }
+    return result
+
+
+def validate_variants_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    raw_bytes = path.read_bytes()
+    canonical_bytes = _canonical_repo_bytes(raw_bytes)
+    try:
+        payload = json.loads(raw_bytes.decode("utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        _require_schema3(document, path)
+        airport = ensure_text_field(document.get("airport"), "airport", path).upper()
+        if airport != path.parent.name.strip().upper():
+            raise ValueError(f"{path}: airport '{airport}' must match parent folder '{path.parent.name}'")
+        sids = document.get("sids")
+        if not isinstance(sids, dict):
+            raise ValueError(f"{path}: 'sids' must be an object")
+        for sid_id, sid_entry in sids.items():
+            if not isinstance(sid_entry, dict) or "variants" not in sid_entry:
+                raise ValueError(f"{path}: sids.{sid_id}.variants is required")
+            _validate_climb_variants(sid_entry["variants"], f"sids.{sid_id}.variants", path)
+        if not tier:
+            result = {
+                "airport": airport,
+                "repo_path": path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(canonical_bytes).hexdigest(),
+                "size_bytes": len(canonical_bytes),
+            }
+    return result
+
+
+def build_use_manifest(
+    root: Path = ROOT,
+    published_at: str | None = None,
+) -> dict[str, object]:
+    airports: dict[str, dict[str, object]] = {}
+    for path in use_files(root):
+        entry = validate_use_file(path, root)
+        airport = str(entry["airport"])
+        if airport in airports:
+            raise ValueError(f"duplicate airport '{airport}' across procedure use files")
+        airports[airport] = {
+            "repo_path": entry["repo_path"],
+            "sha256": entry["sha256"],
+            "size_bytes": entry["size_bytes"],
+        }
+    if published_at is None:
+        published_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return {
+        "schema_version": LEGACY_PROCEDURE_OPTIONS_MANIFEST_SCHEMA_VERSION,
+        "repo": REPO_NAME,
+        "airports": dict(sorted(airports.items())),
+        "published_at": published_at,
+    }
+
+
 def build_manifest(
     root: Path = ROOT,
     published_at: str | None = None,
 ) -> dict[str, object]:
     airports: dict[str, dict[str, object]] = {}
+    by_folder: dict[Path, list[tuple[str, Path]]] = {}
+    for path in use_files(root):
+        by_folder.setdefault(path.parent, []).append(("use", path))
+    for path in climb_files(root):
+        by_folder.setdefault(path.parent, []).append(("climb", path))
+    for path in variant_files(root):
+        by_folder.setdefault(path.parent, []).append(("variants", path))
     for path in options_files(root):
-        entry = validate_options_file(path, root)
-        airport = str(entry["airport"])
+        by_folder.setdefault(path.parent, []).append(("legacy", path))
+
+    validators = {
+        "use": validate_use_file,
+        "climb": validate_climb_file,
+        "variants": validate_variants_file,
+        "legacy": validate_options_file,
+    }
+    for folder in sorted(by_folder):
+        entries_for_folder = by_folder[folder]
+        primary_entry: dict[str, object] | None = None
+        for kind, path in entries_for_folder:
+            validated = validators[kind](path, root)
+            if primary_entry is None:
+                primary_entry = validated
+        assert primary_entry is not None
+        airport = str(primary_entry["airport"])
         if airport in airports:
             raise ValueError(f"duplicate airport '{airport}' across procedure options files")
         airports[airport] = {
-            "repo_path": entry["repo_path"],
-            "sha256": entry["sha256"],
-            "size_bytes": entry["size_bytes"],
+            "repo_path": primary_entry["repo_path"],
+            "sha256": primary_entry["sha256"],
+            "size_bytes": primary_entry["size_bytes"],
         }
 
     if published_at is None:
@@ -576,21 +779,34 @@ def main() -> int:
             ap: str(entry["repo_path"])
             for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
         }
+        use_pub_at = published_at
+        if args.preserve_published_at and USE_MANIFEST_PATH.is_file():
+            use_pub_at = existing_published_at(USE_MANIFEST_PATH)
+        use_manifest = build_use_manifest(published_at=use_pub_at)
+        use_default = airac_overrides.publish_raw_manifest(
+            ROOT, USE_MANIFEST_PATH, use_manifest, requires=("community.airspace_files", ROUTE_KEYS_CAPABILITY)
+        )
+        USE_MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
+        USE_MANIFEST_PATH.write_text(
+            json.dumps(use_default, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
+        )
+
         manifest = airac_overrides.publish_raw_manifest(
             ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files", ROUTE_KEYS_CAPABILITY)
         )
         files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
         for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
             orig_repo = source_airports[ap]
+            legacy_repo = f"{orig_repo.rsplit('/', 1)[0]}/{OPTIONS_FILENAME}"
             raw_bytes = _canonical_repo_bytes((ROOT / orig_repo).read_bytes())
             leg_bytes = sector_legacy_projection.project_procedure_options_default_bytes(
-                ROOT, orig_repo, files_index=files_index
+                ROOT, legacy_repo, files_index=files_index
             )
-            if leg_bytes != raw_bytes:
-                dest = ROOT / ".voiceatc" / "defaults" / orig_repo
+            if leg_bytes != raw_bytes or orig_repo != legacy_repo:
+                dest = ROOT / ".voiceatc" / "defaults" / legacy_repo
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(leg_bytes)
-                entry["repo_path"] = f".voiceatc/defaults/{orig_repo}"
+                entry["repo_path"] = f".voiceatc/defaults/{legacy_repo}"
                 entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
                 entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)

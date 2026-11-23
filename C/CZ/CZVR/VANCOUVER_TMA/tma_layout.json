@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "CYVR_APP": {
+      "VANCOUVER_APP": {
+        "positions": {
+          "CYVR_APP": [
+            "CYVR_APP"
+          ]
+        },
+        "airports": [
+          "CYVR"
+        ]
+      }
+    }
+  }
+}

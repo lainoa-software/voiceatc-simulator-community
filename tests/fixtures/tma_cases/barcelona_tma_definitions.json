@@ -1,0 +1,93 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "BCN_APP",
+      "call_sign": "Barcelona Approach",
+      "services": [
+        "approach_radar"
+      ]
+    },
+    {
+      "id": "BCN_TWR",
+      "call_sign": "Barcelona Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LEBL",
+      "unassigned_frequencies": [
+        "118.330"
+      ]
+    },
+    {
+      "id": "GIR_TWR",
+      "call_sign": "Girona Tower",
+      "services": [
+        "tower",
+        "approach_conventional"
+      ],
+      "airport": "LEGE"
+    },
+    {
+      "id": "REU_TWR",
+      "call_sign": "Reus Tower",
+      "services": [
+        "tower",
+        "approach_conventional"
+      ],
+      "airport": "LERS"
+    },
+    {
+      "id": "LLE_TWR",
+      "call_sign": "Lleida Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LEDA"
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEBL_CORE_APP",
+      "unit": "BCN_APP",
+      "frequency": "131.125"
+    },
+    {
+      "call_sign": "LEBL_TWR",
+      "unit": "BCN_TWR",
+      "frequency": "118.105"
+    },
+    {
+      "call_sign": "LEGE_APP",
+      "unit": "GIR_TWR",
+      "frequency": "120.905"
+    },
+    {
+      "call_sign": "LERS_APP",
+      "unit": "REU_TWR",
+      "frequency": "128.880"
+    },
+    {
+      "call_sign": "LEDA_TWR",
+      "unit": "LLE_TWR",
+      "frequency": "121.330"
+    }
+  ],
+  "zones": [
+    {
+      "sector": "LEBLCTR",
+      "kind": "CTR",
+      "airport": "LEBL"
+    },
+    {
+      "sector": "LEBLATZ",
+      "kind": "ATZ",
+      "airport": "LEBL"
+    },
+    {
+      "sector": "LEDACTR",
+      "kind": "CTR",
+      "airport": "LEDA"
+    }
+  ]
+}

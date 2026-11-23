@@ -1,88 +1,91 @@
 {
   "airports": {
     "KASE": {
-      "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_sight_references.json",
-      "sha256": "97830700db836ca785f14a286f6c92a5d38a8720f24afd7b54460fbdff4bc664",
-      "size_bytes": 4665
+      "repo_path": "K/KZDV/ASPEN_TMA/KASE/visual_approaches.json",
+      "sha256": "0189ba241734025c1672390fe547e3721cac46dfe32895a081ad090c23f72716",
+      "size_bytes": 13907
     },
     "KBFI": {
-      "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_sight_references.json",
-      "sha256": "dd57c01cb13451506425592bb60ee31cc03b77f39b9c52fcc2fd5aabad8988bd",
-      "size_bytes": 2019
+      "repo_path": "K/KZSE/SEATTLE_TMA/KBFI/visual_approaches.json",
+      "sha256": "3b4c4f2c62f3525ba88a2e791a37286fee4a40336cb02bbc0cf1ead0f20ada0d",
+      "size_bytes": 8377
     },
     "KBOS": {
-      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_sight_references.json",
-      "sha256": "ec64979943ab25c6f1c9e4c76982d8b26e697432c148bf70047a5b54ff40c2c7",
-      "size_bytes": 707
+      "repo_path": "K/KZBW/BOSTON_TMA/KBOS/visual_approaches.json",
+      "sha256": "7eccd169c45c4fe27898365aa340c617e83dc5d0f00ba6cb19d8e890c3ab60f8",
+      "size_bytes": 3024
     },
     "KDCA": {
-      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_sight_references.json",
-      "sha256": "ddc2f16613e6423389007643d1ffae78d53d3b9a515a08b16ba202a05a52be6c",
-      "size_bytes": 1763
+      "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_approaches.json",
+      "sha256": "a67eda644ee95a5a7b73f2ff92709076321a732cf0274d65c35bab044d2c52da",
+      "size_bytes": 8539
     },
     "KEWR": {
-      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/visual_sight_references.json",
-      "sha256": "c2fb59132d54fc3ae692d55edcfb0790d750660331ddff626cc7ff9e20ef2326",
-      "size_bytes": 757
+      "repo_path": "K/KZNY/NEWARK_TMA/KEWR/visual_approaches.json",
+      "sha256": "3a416fb8c5d259471b02b208249e1e37345c0d3d0e1cc133b36af4c16ead612e",
+      "size_bytes": 4459
     },
     "KJFK": {
-      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_sight_references.json",
-      "sha256": "a33337edb2614c9349ea99123fdc0510471d2214639bb8f0520099cd0484c8f9",
-      "size_bytes": 1354
+      "repo_path": "K/KZNY/JFK_TMA/KJFK/visual_approaches.json",
+      "sha256": "5f9a11d791fcbab3b9dfc5b4ea4059c95e3ac7ca04a2f913e298849f3ad2a30d",
+      "size_bytes": 6160
     },
     "KLGA": {
-      "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_sight_references.json",
-      "sha256": "e9c58cfd17aa5c05bc6e78703a83159dba1fce1e1e1ad3b5620a03cbe9972b96",
-      "size_bytes": 1141
+      "repo_path": "K/KZNY/LAGUARDIA_TMA/KLGA/visual_approaches.json",
+      "sha256": "4939743a8f19044e213ecc4ed79cac660f4849597245098407018b8c9a70ab8d",
+      "size_bytes": 5365
     },
     "KLGB": {
-      "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_sight_references.json",
-      "sha256": "4adf5d700d8b0806efcb840ceefcb09e0fdf8c437d9a44f16d2d8d8440ce3b1d",
-      "size_bytes": 1377
+      "repo_path": "K/KZLA/LAX_TMA/KLGB/visual_approaches.json",
+      "sha256": "eac3574ae6404585026ad221bfe8d65120a1d979bdacdb19c7d9cd690d028801",
+      "size_bytes": 6140
     },
     "KLSV": {
-      "repo_path": "K/KZLA/LAS_TMA/KLSV/visual_sight_references.json",
-      "sha256": "887fa7e926a9f7339a6f7cd013bf7ee186d23c761b2fa8b741ebd23665e5e848",
-      "size_bytes": 1463
+      "repo_path": "K/KZLA/LAS_TMA/KLSV/visual_approaches.json",
+      "sha256": "857e86268fead7b5843059fcc3f4f10295a30086239be7159c944b9f474d122e",
+      "size_bytes": 7529
     },
     "KPDX": {
-      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/visual_sight_references.json",
-      "sha256": "96317e39ba912349705c07cd6fa07284e6d8a7737f2258165c0088877f723fbf",
-      "size_bytes": 2857
+      "repo_path": "K/KZSE/PORTLAND_TMA/KPDX/visual_approaches.json",
+      "sha256": "1b096075e6fa834016f7cd67a974fb30dabde440b224a87b21edc5751f8294ab",
+      "size_bytes": 10607
     },
     "KPHL": {
-      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/visual_sight_references.json",
-      "sha256": "007b3fc81bed372d497b241fc5272d517349ce76215df3a9c8464a5afb61ea25",
-      "size_bytes": 1361
+      "repo_path": "K/KZNY/PHILADELPHIA_TMA/KPHL/visual_approaches.json",
+      "sha256": "ec5dd6677bcdf3081cab384c391ccf1a6c673cbd6d1480665b087f2246975530",
+      "size_bytes": 5922
     },
     "KSAN": {
-      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/visual_sight_references.json",
-      "sha256": "8fb067bb7c159e8e44ce5e94f2aa59184b0677c7aa3b7708edc4fa6fa629bc59",
-      "size_bytes": 771
+      "repo_path": "K/KZLA/SAN_DIEGO_TMA/KSAN/visual_approaches.json",
+      "sha256": "42d462e60ed5e56e1e015cba13e242c7d2a18b6fdda90d9c05e5a8359acf8634",
+      "size_bytes": 5046
     },
     "KSEA": {
-      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/visual_sight_references.json",
-      "sha256": "43545b742f2027eed133beb63fb58dcb57d549a9b9763d9db79242d3fe0cded4",
-      "size_bytes": 1987
+      "repo_path": "K/KZSE/SEATTLE_TMA/KSEA/visual_approaches.json",
+      "sha256": "f53fb07ec16270c989fa51746de3c34d17246551ef31322cd6dde02fac807345",
+      "size_bytes": 8369
     },
     "PANC": {
-      "repo_path": "P/PA/PAZA/ANCHORAGE_TMA/PANC/visual_sight_references.json",
-      "sha256": "7ca054b768e770c07cf3c242d692fa4febbf246d6ca365ecd0838b8cc91a75b5",
-      "size_bytes": 1412
+      "repo_path": "P/PA/PAZA/ANCHORAGE_TMA/PANC/visual_approaches.json",
+      "sha256": "08686868a54c8eb9468f4895e59c85923270b94ea7ba8f49e7d467e2a84928d4",
+      "size_bytes": 7546
     },
     "PHNL": {
-      "repo_path": "P/PH/PHZH/PHNL_TMA/PHNL/visual_sight_references.json",
-      "sha256": "0af5be4da6671406d3de2909fd016f24e24cf1ddd9470ec31ceaea378f566e87",
-      "size_bytes": 1440
+      "repo_path": "P/PH/PHZH/PHNL_TMA/PHNL/visual_approaches.json",
+      "sha256": "21ef9033a2c74652607e9a32b46de4e8908ca7b881e083b9d9d39ac0fd81ce49",
+      "size_bytes": 6888
     },
     "PHOG": {
-      "repo_path": "P/PH/PHZH/MAUI_TMA/PHOG/visual_sight_references.json",
-      "sha256": "0458b548cc3d6a411e906123470df8b1036dd89b3957116082ae829dc156f37f",
-      "size_bytes": 1470
+      "repo_path": "P/PH/PHZH/MAUI_TMA/PHOG/visual_approaches.json",
+      "sha256": "446794d976d0f6c367f7a6be22cab359e75903f017ed59c3ec37b80f17c03db1",
+      "size_bytes": 5041
     }
   },
   "published_at": "2026-09-02T15:01:16Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": ["community.airac_overrides"],
+  "requires": [
+    "community.airac_overrides",
+    "community.airspace_files"
+  ],
   "schema_version": 1
 }

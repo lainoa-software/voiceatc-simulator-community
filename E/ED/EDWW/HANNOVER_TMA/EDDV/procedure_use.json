@@ -1,0 +1,35 @@
+{
+  "schema": 3,
+  "airport": "EDDV",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "EDDV1F"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDV1G"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDV1S"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EDDV1Y"
+      ],
+      "spawn": false
+    }
+  ]
+}

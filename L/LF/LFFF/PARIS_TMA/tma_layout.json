@@ -1,0 +1,46 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LFPG_APP": {
+      "WEST": {
+        "positions": {
+          "LFPG_APP": [
+            "CDGAPP"
+          ]
+        },
+        "airports": [
+          "LFPG"
+        ],
+        "valid_for_runways": {
+          "LFPG": [
+            "WEST"
+          ]
+        }
+      },
+      "EAST": {
+        "positions": {
+          "LFPG_APP": [
+            "CDGAPP"
+          ]
+        },
+        "airports": [
+          "LFPG"
+        ],
+        "valid_for_runways": {
+          "LFPG": [
+            "EAST"
+          ]
+        }
+      }
+    },
+    "LFPO_APP": {
+      "1": {
+        "positions": {
+          "LFPO_APP": [
+            "LFPOAPP"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "configurations": {
+    "BCN_APP": {
+      "2CO": {
+        "positions": {
+          "LEBL_CORE_APP": [
+            "LEBLCORE"
+          ]
+        },
+        "airports": [
+          "LEBL",
+          "LEGE",
+          "LERS",
+          "LEDA"
+        ]
+      }
+    }
+  }
+}

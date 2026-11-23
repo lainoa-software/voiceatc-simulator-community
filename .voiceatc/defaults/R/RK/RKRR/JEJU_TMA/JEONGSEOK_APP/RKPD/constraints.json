@@ -1,0 +1,24 @@
+{
+  "airport": "RKPD",
+  "airac_min": 2610,
+  "stars": {
+    "CJU1T": {
+      "TENUL": {
+        "altitude": {
+          "type": "between",
+          "min_ft": 6000,
+          "max_ft": 7000
+        }
+      }
+    },
+    "UPGO1S": {
+      "TENUL": {
+        "altitude": {
+          "type": "between",
+          "min_ft": 6000,
+          "max_ft": 7000
+        }
+      }
+    }
+  }
+}

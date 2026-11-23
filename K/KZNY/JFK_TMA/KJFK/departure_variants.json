@@ -1,0 +1,204 @@
+{
+  "schema": 3,
+  "airport": "KJFK",
+  "airac_min": 2607,
+  "sids": {
+    "JFK5": {
+      "variants": [
+        {
+          "id": "BREEZY_POINT",
+          "display_name": "BREEZY POINT",
+          "runways": [
+            "31L",
+            "31R"
+          ],
+          "auto_rule": {
+            "kind": "route_contains",
+            "values": [
+              "RNGRR"
+            ]
+          },
+          "legs": [
+            {
+              "type": "course_to_altitude",
+              "course": 314,
+              "altitude": {
+                "at_or_above_ft": 420
+              }
+            },
+            {
+              "type": "direct_to_fix",
+              "ident": "CRI",
+              "turn_direction": "L",
+              "containment": [
+                {
+                  "kind": "east_of_radial",
+                  "navaid": "CRI",
+                  "radial": 39
+                },
+                {
+                  "kind": "max_dme",
+                  "navaid": "JFK",
+                  "distance_nm": 4.5
+                }
+              ]
+            },
+            {
+              "type": "course_to_fix",
+              "ident": "RNGRR",
+              "course": 223,
+              "crossing": {
+                "id": "BREEZY_CROSSING",
+                "altitude": {
+                  "at_or_above_ft": 2500
+                },
+                "first_of": [
+                  {
+                    "kind": "dme",
+                    "navaid": "CRI",
+                    "distance_nm": 3
+                  },
+                  {
+                    "kind": "radial",
+                    "navaid": "JFK",
+                    "radial": 253
+                  }
+                ]
+              }
+            },
+            {
+              "type": "from_fix_manual",
+              "ident": "RNGRR",
+              "course": 223
+            }
+          ]
+        },
+        {
+          "id": "IDLEWILD",
+          "display_name": "IDLEWILD",
+          "runways": [
+            "31L",
+            "31R"
+          ],
+          "auto_rule": {
+            "kind": "aircraft_type",
+            "values": [
+              "PC12"
+            ]
+          },
+          "legs": [
+            {
+              "type": "heading_to_altitude",
+              "course": 90,
+              "turn_direction": "R",
+              "altitude": {
+                "at_or_above_ft": 2000
+              },
+              "containment": [
+                {
+                  "kind": "max_dme",
+                  "navaid": "JFK",
+                  "distance_nm": 2.5
+                }
+              ]
+            },
+            {
+              "type": "heading_to_manual",
+              "course": 90
+            }
+          ]
+        },
+        {
+          "id": "GATEWAY",
+          "display_name": "GATEWAY",
+          "runways": [
+            "31L",
+            "31R"
+          ],
+          "auto_rule": {
+            "kind": "utc_window",
+            "start_minute": 180,
+            "end_minute": 720
+          },
+          "legs": [
+            {
+              "type": "course_to_fix",
+              "course": 232,
+              "turn_direction": "R",
+              "endpoint": {
+                "kind": "radial_dme",
+                "navaid": "JFK",
+                "radial": 232,
+                "distance_nm": 5
+              }
+            },
+            {
+              "type": "heading_to_manual",
+              "course": 219,
+              "turn_direction": "L"
+            }
+          ]
+        },
+        {
+          "id": "CANARSIE",
+          "display_name": "CANARSIE",
+          "runways": [
+            "31L",
+            "31R"
+          ],
+          "auto_rule": {
+            "kind": "fallback"
+          },
+          "legs": [
+            {
+              "type": "course_to_altitude",
+              "course": 314,
+              "altitude": {
+                "at_or_above_ft": 420
+              }
+            },
+            {
+              "type": "direct_to_fix",
+              "ident": "CRI",
+              "turn_direction": "L",
+              "containment": [
+                {
+                  "kind": "east_of_radial",
+                  "navaid": "CRI",
+                  "radial": 39
+                },
+                {
+                  "kind": "max_dme",
+                  "navaid": "JFK",
+                  "distance_nm": 4.5
+                }
+              ]
+            },
+            {
+              "type": "from_fix_manual",
+              "course": 176,
+              "crossing": {
+                "id": "CANARSIE_CROSSING",
+                "altitude": {
+                  "at_or_above_ft": 2500
+                },
+                "first_of": [
+                  {
+                    "kind": "dme",
+                    "navaid": "CRI",
+                    "distance_nm": 2
+                  },
+                  {
+                    "kind": "radial",
+                    "navaid": "JFK",
+                    "radial": 253
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

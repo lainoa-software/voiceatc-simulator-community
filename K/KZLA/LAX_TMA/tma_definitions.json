@@ -1,0 +1,49 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KLAX_APP",
+      "call_sign": "SoCal Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "124.300",
+        "124.500",
+        "125.350",
+        "128.500"
+      ]
+    },
+    {
+      "id": "KLAX_TWR",
+      "call_sign": "Los Angeles Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KLAX",
+      "unassigned_frequencies": [
+        "120.950",
+        "133.900"
+      ]
+    },
+    {
+      "id": "KLGB_TWR",
+      "call_sign": "Long Beach Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KLGB",
+      "unassigned_frequencies": [
+        "119.400",
+        "120.500"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KLAX_APP",
+      "unit": "KLAX_APP",
+      "frequency": "124.900"
+    }
+  ]
+}

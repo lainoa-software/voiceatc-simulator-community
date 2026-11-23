@@ -1,50 +1,65 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["KSFO"],
-      "descent": "A070",
-      "fix": ["ARCHI"],
-      "from": "KZOA_CTR",
       "name": "KSFO_ARR_ARCHI",
-      "priority": 10,
-      "to": "KSFO_APP"
+      "from": "KZOA_CTR",
+      "to": "KSFO_APP",
+      "arrives": [
+        "KSFO"
+      ],
+      "fix": [
+        "ARCHI"
+      ],
+      "level": "A070"
     },
     {
-      "arrives": ["KSFO"],
-      "descent": "A100",
-      "fix": ["PIRAT"],
-      "from": "KZOA_CTR",
       "name": "KSFO_ARR_PIRAT",
-      "priority": 10,
-      "to": "KSFO_APP"
+      "from": "KZOA_CTR",
+      "to": "KSFO_APP",
+      "arrives": [
+        "KSFO"
+      ],
+      "fix": [
+        "PIRAT"
+      ],
+      "level": "A100"
     },
     {
-      "arrives": ["KSFO"],
-      "descent": "A100",
-      "fix": ["ARRTU"],
-      "from": "KZOA_CTR",
       "name": "KSFO_ARR_ARRTU",
-      "priority": 10,
-      "to": "KSFO_APP"
-    },
-    {
-      "arrives": ["KSFO"],
-      "descent": "A110",
-      "fix": ["WPOUT"],
       "from": "KZOA_CTR",
-      "name": "KSFO_ARR_WPOUT",
-      "priority": 10,
-      "to": "KSFO_APP"
+      "to": "KSFO_APP",
+      "arrives": [
+        "KSFO"
+      ],
+      "fix": [
+        "ARRTU"
+      ],
+      "level": "A100"
     },
     {
-      "climb": "A160",
-      "departs": ["KSFO"],
-      "fix": ["SEGUL"],
-      "from": "KSFO_APP",
+      "name": "KSFO_ARR_WPOUT",
+      "from": "KZOA_CTR",
+      "to": "KSFO_APP",
+      "arrives": [
+        "KSFO"
+      ],
+      "fix": [
+        "WPOUT"
+      ],
+      "level": "A110"
+    },
+    {
       "name": "KSFO_DEP_SEGUL",
-      "priority": 10,
-      "to": "KZOA_CTR"
+      "from": "KSFO_APP",
+      "to": "KZOA_CTR",
+      "departs": [
+        "KSFO"
+      ],
+      "fix": [
+        "SEGUL"
+      ],
+      "level": "A160"
     }
-  ],
-  "schema": 2
+  ]
 }

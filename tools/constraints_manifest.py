@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 try:
-    from . import airac_overrides
+    from . import airac_overrides, sector_legacy_projection
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -11,6 +11,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import sector_legacy_projection
     from content_files import content_files
 
 import argparse
@@ -72,17 +73,23 @@ def _validate_constraints_document(payload: dict, path: Path, root: Path, raw_by
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: constraints file must be a JSON object")
 
+    if "schema" in payload:
+        schema = payload["schema"]
+        if isinstance(schema, bool) or schema not in (1, 3):
+            raise ValueError(f"{path}: 'schema' must be 3")
+
     airport = ensure_text_field(payload.get("airport"), "airport", path).upper()
     parent_folder = path.parent.name.strip().upper()
     if airport != parent_folder:
         raise ValueError(f"{path}: airport '{airport}' must match parent folder '{parent_folder}'")
 
+    canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     repo_path = path.relative_to(root).as_posix()
     return {
         "airport": airport,
         "repo_path": repo_path,
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
+        "sha256": hashlib.sha256(canonical).hexdigest(),
+        "size_bytes": len(canonical),
     }
 
 
@@ -239,7 +246,27 @@ def main() -> int:
         return 1
 
     if args.write:
-        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
+        source_airports = {
+            ap: str(entry["repo_path"])
+            for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
+        }
+        manifest = airac_overrides.publish_raw_manifest(
+            ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files",)
+        )
+        files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
+        for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
+            orig_repo = source_airports[ap]
+            raw_bytes = (ROOT / orig_repo).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            leg_bytes = sector_legacy_projection.project_legacy_file_bytes(
+                ROOT, orig_repo, "constraints", files_index=files_index
+            )
+            if leg_bytes != raw_bytes:
+                dest = ROOT / ".voiceatc" / "defaults" / orig_repo
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(leg_bytes)
+                entry["repo_path"] = f".voiceatc/defaults/{orig_repo}"
+                entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
+                entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         print(f"Wrote {MANIFEST_PATH.relative_to(ROOT).as_posix()}")

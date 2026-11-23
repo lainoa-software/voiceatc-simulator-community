@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "YSSY_APP",
+      "call_sign": "Sydney approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "YSSY_APP",
+      "unit": "YSSY_APP",
+      "frequency": "124.400"
+    },
+    {
+      "call_sign": "YSSY_N_APP",
+      "unit": "YSSY_APP",
+      "frequency": "124.400"
+    },
+    {
+      "call_sign": "YSSY_S_APP",
+      "unit": "YSSY_APP",
+      "frequency": "128.300"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "GCLA",
   "runway_configs": [
     {

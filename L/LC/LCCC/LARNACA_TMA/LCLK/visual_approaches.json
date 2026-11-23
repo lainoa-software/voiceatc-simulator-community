@@ -1,0 +1,106 @@
+{
+  "schema": 3,
+  "airport": "LCLK",
+  "procedures": [
+    {
+      "id": "LCLK_ADLAS_RNAV_VISUAL_RWY22",
+      "name": "ADLAS RNAV-to-Visual RWY 22",
+      "aliases": [],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "ICAO",
+      "source": {
+        "authority": "Cyprus DCA AIS",
+        "chart_title": "ADLAS RNAV TO VISUAL RWY 22",
+        "url": "https://www.mcw.gov.cy/mcw/dca/ais/ais.nsf/All/455773618044F4C9C2257C7E00234503/$file/LC_Amdt_A_2026_003_en.pdf?OpenElement",
+        "effective_date": "2026-07-09",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "LCLK_RWY22_ADLAS",
+          "runway": "22",
+          "clearance_name": "ADLAS RNAV-to-Visual RWY 22",
+          "entry_point_id": "ADLAS",
+          "sight_reference_point_id": "LK505",
+          "legs": [
+            {
+              "id": "ADLAS",
+              "name": "ADLAS",
+              "type": "track_to_fix",
+              "point": [
+                34.9620472222,
+                33.3199194444
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_or_above_ft": 6000
+              }
+            },
+            {
+              "id": "KUKUS",
+              "name": "KUKUS",
+              "type": "track_to_fix",
+              "point": [
+                34.9629166667,
+                33.4462138889
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_or_above_ft": 5000
+              },
+              "speed": {
+                "at_or_below_kt": 210
+              }
+            },
+            {
+              "id": "LK511",
+              "name": "LK511",
+              "type": "track_to_fix",
+              "point": [
+                34.9706861111,
+                33.5973194444
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_or_above_ft": 3100
+              },
+              "speed": {
+                "at_or_below_kt": 185
+              }
+            },
+            {
+              "id": "LK509",
+              "name": "LK509",
+              "type": "track_to_fix",
+              "point": [
+                34.9776444444,
+                33.6706944444
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_or_above_ft": 2200
+              }
+            },
+            {
+              "id": "LK505",
+              "name": "LK505",
+              "type": "track_to_fix",
+              "point": [
+                34.9442055556,
+                33.7101222222
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 1600
+              }
+            }
+          ],
+          "final": {
+            "course_deg": 220,
+            "glidepath_deg": 2.75
+          }
+        }
+      ]
+    }
+  ]
+}

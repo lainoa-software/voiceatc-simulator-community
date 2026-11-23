@@ -1,0 +1,84 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EKCH_APP": {
+      "COPENHAGEN_TMA_WHOLE_04": {
+        "positions": {
+          "EKCH_APP": [
+            "COPENHAGEN_TMA_04"
+          ]
+        },
+        "airports": [
+          "EKCH"
+        ],
+        "valid_for_runways": {
+          "EKCH": [
+            "DAY_04",
+            "EKRK_11",
+            "EKRK_29",
+            "EKRK_03",
+            "EKRK_21"
+          ]
+        }
+      },
+      "COPENHAGEN_TMA_WHOLE_22": {
+        "positions": {
+          "EKCH_APP": [
+            "COPENHAGEN_TMA_22"
+          ]
+        },
+        "airports": [
+          "EKCH"
+        ],
+        "valid_for_runways": {
+          "EKCH": [
+            "DAY_22",
+            "NIGHT_22",
+            "EKRK_11",
+            "EKRK_29",
+            "EKRK_03",
+            "EKRK_21"
+          ]
+        }
+      },
+      "COPENHAGEN_TMA_WHOLE_12": {
+        "positions": {
+          "EKCH_APP": [
+            "COPENHAGEN_TMA_12"
+          ]
+        },
+        "airports": [
+          "EKCH"
+        ],
+        "valid_for_runways": {
+          "EKCH": [
+            "EKCH_12",
+            "EKRK_11",
+            "EKRK_29",
+            "EKRK_03",
+            "EKRK_21"
+          ]
+        }
+      },
+      "COPENHAGEN_TMA_WHOLE_30": {
+        "positions": {
+          "EKCH_APP": [
+            "COPENHAGEN_TMA_30"
+          ]
+        },
+        "airports": [
+          "EKCH"
+        ],
+        "valid_for_runways": {
+          "EKCH": [
+            "EKCH_30",
+            "EKRK_11",
+            "EKRK_29",
+            "EKRK_03",
+            "EKRK_21"
+          ]
+        }
+      }
+    }
+  }
+}

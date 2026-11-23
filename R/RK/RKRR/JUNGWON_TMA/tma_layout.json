@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKTU_APP": {
+      "JUNGWON": {
+        "positions": {
+          "RKTU_APP": [
+            "RKTU_APP"
+          ]
+        },
+        "airports": [
+          "RKTU"
+        ]
+      }
+    }
+  }
+}

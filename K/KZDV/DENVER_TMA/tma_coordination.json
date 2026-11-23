@@ -1,257 +1,341 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["AALLE"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_AALLE",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "AALLE"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["LAWGR"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_LAWGR",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "LAWGR"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["CLASH"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_CLASH",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "CLASH"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["NIIXX"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_NIIXX",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "NIIXX"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["SSKII"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_SSKII",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "SSKII"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["TBARR"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_TBARR",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "TBARR"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["FLATI"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_FLATI",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "FLATI"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "F190",
-      "fix": ["LONGZ"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_LONGZ",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "LONGZ"
+      ],
+      "level": "F190"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "A170",
-      "fix": ["RAMMS"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_RAMMS",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "RAMMS"
+      ],
+      "level": "A170"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "A170",
-      "fix": ["LANDR"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_LANDR",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "LANDR"
+      ],
+      "level": "A170"
     },
     {
-      "arrives": ["KDEN"],
-      "descent": "A170",
-      "fix": ["QUAIL"],
-      "from": "KZDV_CTR",
       "name": "KDEN_ARR_QUAIL",
-      "priority": 10,
-      "to": "KDEN_APP"
-    },
-    {
-      "arrives": ["KDEN"],
-      "descent": "A170",
-      "fix": ["LARKS"],
       "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "QUAIL"
+      ],
+      "level": "A170"
+    },
+    {
       "name": "KDEN_ARR_LARKS",
-      "priority": 10,
-      "to": "KDEN_APP"
+      "from": "KZDV_CTR",
+      "to": "KDEN_APP",
+      "arrives": [
+        "KDEN"
+      ],
+      "fix": [
+        "LARKS"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["BAYLR"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_BAYLR",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "BAYLR"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["CONNR"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_CONNR",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "CONNR"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["COORZ"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_COORZ",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "COORZ"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["ZIMMR"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_ZIMMR",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "ZIMMR"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["YAMMI"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_YAMMI",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "YAMMI"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["YOKES"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_YOKES",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "YOKES"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["RIKKK"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_RIKKK",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "RIKKK"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["BRYCC"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_BRYCC",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "BRYCC"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["EEONS"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_EEONS",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "EEONS"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["EMMYS"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_EMMYS",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "EMMYS"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["EPKEE"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_EPKEE",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "EPKEE"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A170",
-      "departs": ["KDEN"],
-      "fix": ["EXTAN"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_EXTAN",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "EXTAN"
+      ],
+      "level": "A170"
     },
     {
-      "climb": "A180",
-      "departs": ["KDEN"],
-      "fix": ["SOLAR"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_SOLAR",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "SOLAR"
+      ],
+      "level": "A180"
     },
     {
-      "climb": "A180",
-      "departs": ["KDEN"],
-      "fix": ["SCAGS"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_SCAGS",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "SCAGS"
+      ],
+      "level": "A180"
     },
     {
-      "climb": "A180",
-      "departs": ["KDEN"],
-      "fix": ["SHOJO"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_SHOJO",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "SHOJO"
+      ],
+      "level": "A180"
     },
     {
-      "climb": "A180",
-      "departs": ["KDEN"],
-      "fix": ["STAKR"],
-      "from": "KDEN_APP",
       "name": "KDEN_DEP_STAKR",
-      "priority": 10,
-      "to": "KZDV_CTR"
+      "from": "KDEN_APP",
+      "to": "KZDV_CTR",
+      "departs": [
+        "KDEN"
+      ],
+      "fix": [
+        "STAKR"
+      ],
+      "level": "A180"
     }
-  ],
-  "schema": 2
+  ]
 }

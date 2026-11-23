@@ -1,0 +1,28 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDN_APP": {
+      "1": {
+        "positions": {
+          "EDDN_APP": [
+            "FRK1_FRK2"
+          ]
+        },
+        "airports": [
+          "EDDN",
+          "EDQM"
+        ],
+        "valid_for_runways": {
+          "EDDN": [
+            "10",
+            "28"
+          ],
+          "EDQM": [
+            "10",
+            "28"
+          ]
+        }
+      }
+    }
+  }
+}

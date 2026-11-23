@@ -1,0 +1,463 @@
+{
+  "schema": 3,
+  "airport": "KASE",
+  "procedures": [
+    {
+      "id": "ROARING_FORK_VISUAL_15",
+      "name": "Roaring Fork Visual RWY 15",
+      "aliases": [
+        "roaring fork visual",
+        "roaring fork"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "ROARING FORK VISUAL RWY 15",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "DBL_R163_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "DBL",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "ASPEN",
+            "references": [
+              {
+                "id": "ASPEN",
+                "name": "Aspen",
+                "aliases": [
+                  "the town of Aspen"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "ASPEN_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "DBL",
+              "name": "Red Table / DBL R-163",
+              "type": "track_to_fix",
+              "point": [
+                39.4393444444,
+                -106.8946805556
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_ft": 12500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "CARBONDALE_BASALT_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CARBONDALE_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "CARBONDALE",
+            "references": [
+              {
+                "id": "CARBONDALE",
+                "name": "Carbondale",
+                "aliases": [
+                  "the town of Carbondale"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "CARBONDALE_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "CARBONDALE_TRACE",
+              "name": "Carbondale (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.396,
+                -107.21
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 10000,
+                "recommended": true
+              }
+            },
+            {
+              "id": "BASALT_TRACE",
+              "name": "Basalt (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.368,
+                -106.825
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 12500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "MT_SOPRIS_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "MT_SOPRIS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "MOUNT_SOPRIS",
+            "references": [
+              {
+                "id": "MOUNT_SOPRIS",
+                "name": "Mount Sopris",
+                "aliases": [
+                  "Sopris"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "MT_SOPRIS_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "MT_SOPRIS_TRACE",
+              "name": "Mount Sopris (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.19,
+                -107.09
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 14500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "CAPITAL_PEAK_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CAPITAL_PEAK_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "CAPITAL_PEAK",
+            "references": [
+              {
+                "id": "CAPITAL_PEAK",
+                "name": "Capital Peak",
+                "aliases": [
+                  "Capital"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "CAPITAL_PEAK_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "CAPITAL_PEAK_TRACE",
+              "name": "Capital Peak (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.15,
+                -107.07
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 15500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "CASTLE_PEAK_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "CASTLE_PEAK_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "CASTLE_PEAK",
+            "references": [
+              {
+                "id": "CASTLE_PEAK",
+                "name": "Castle Peak",
+                "aliases": [
+                  "Castle"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "CASTLE_PEAK_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "CASTLE_PEAK_TRACE",
+              "name": "Castle Peak (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.01,
+                -106.86
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 16000,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "INDEPENDENCE_PASS_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "INDEPENDENCE_PASS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "INDEPENDENCE_PASS",
+            "references": [
+              {
+                "id": "INDEPENDENCE_PASS",
+                "name": "Independence Pass",
+                "aliases": [
+                  "the pass"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "INDEPENDENCE_PASS_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "INDEPENDENCE_PASS_TRACE",
+              "name": "Independence Pass (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.11,
+                -106.56
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 14500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        },
+        {
+          "id": "HOLY_CROSS_RUEDI_ENTRY",
+          "runway": "15",
+          "clearance_name": "Roaring Fork Visual",
+          "entry_point_id": "HOLY_CROSS_TRACE",
+          "sight_reference_point_id": "ASPEN_TRACE",
+          "sight_references": {
+            "default_reference_id": "MOUNT_OF_THE_HOLY_CROSS",
+            "references": [
+              {
+                "id": "MOUNT_OF_THE_HOLY_CROSS",
+                "name": "Mount of the Holy Cross",
+                "aliases": [
+                  "Holy Cross"
+                ],
+                "source": {
+                  "authority": "FAA",
+                  "chart_title": "ROARING FORK VISUAL RWY 15",
+                  "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+                  "airac": "2608",
+                  "checked_date": "2026-09-02"
+                },
+                "geometry": {
+                  "kind": "point",
+                  "leg_id": "HOLY_CROSS_TRACE"
+                }
+              }
+            ]
+          },
+          "legs": [
+            {
+              "id": "HOLY_CROSS_TRACE",
+              "name": "Mount of the Holy Cross (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.47,
+                -106.48
+              ],
+              "fly_over": false,
+              "altitude": {
+                "at_ft": 11500,
+                "recommended": true
+              }
+            },
+            {
+              "id": "RUEDI_TRACE",
+              "name": "Ruedi Reservoir / Hagerman valley cue (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.352,
+                -106.681
+              ],
+              "fly_over": false
+            },
+            {
+              "id": "ASPEN_TRACE",
+              "name": "Aspen / Roaring Fork (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                39.27,
+                -106.86
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3.5
+          }
+        }
+      ]
+    }
+  ]
+}

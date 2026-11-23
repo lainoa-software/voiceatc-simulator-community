@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPCR_APP",
+      "call_sign": "Corvo approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPCR_APP",
+      "unit": "LPCR_APP",
+      "frequency": "118.800"
+    }
+  ]
+}

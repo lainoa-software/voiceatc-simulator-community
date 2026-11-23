@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EKAH_APP",
+      "call_sign": "Aarhus approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EKAH_APP",
+      "unit": "EKAH_APP",
+      "frequency": "119.280"
+    }
+  ]
+}

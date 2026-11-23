@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKPK_APP": {
+      "GIMHAE": {
+        "positions": {
+          "RKPK_APP": [
+            "RKPK_APP"
+          ]
+        },
+        "airports": [
+          "RKPK"
+        ]
+      }
+    }
+  }
+}

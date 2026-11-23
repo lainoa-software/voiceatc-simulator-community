@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "airport": "KLGA",
+  "variants": [
+    {
+      "procedure_id": "PARK_VISUAL_31",
+      "variant_id": "PARKWAY_VISUAL_ROUTE",
+      "default_reference_id": "TWIN_WHITE_TANKS",
+      "references": [
+        {
+          "id": "TWIN_WHITE_TANKS",
+          "name": "the Twin White Tanks",
+          "aliases": ["Twin White Tanks"],
+          "geometry": { "kind": "point", "leg_id": "GACAR" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "PARK VISUAL RWY 31",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00289PARK_VIS31.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        },
+        {
+          "id": "AIRPORT",
+          "name": "the airport",
+          "aliases": ["LaGuardia airport"],
+          "geometry": { "kind": "airport" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "PARK VISUAL RWY 31",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00289PARK_VIS31.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "KJFK",
+  "variants": [
+    {
+      "procedure_id": "PARKWAY_VISUAL_13LR",
+      "variant_id": "PARKWAY_13L",
+      "default_reference_id": "TWIN_STACKS",
+      "references": [
+        {
+          "id": "TWIN_STACKS",
+          "name": "the Twin Stacks",
+          "aliases": ["Twin Stacks"],
+          "geometry": { "kind": "point", "leg_id": "TWIN_STACKS_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "PARKWAY VISUAL RWY 13L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00610PARKWAY_VIS13LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "PARKWAY_VISUAL_13LR",
+      "variant_id": "PARKWAY_13R",
+      "default_reference_id": "CANARSIE_PIER",
+      "references": [
+        {
+          "id": "CANARSIE_PIER",
+          "name": "Canarsie Pier",
+          "aliases": ["the Canarsie Pier"],
+          "geometry": { "kind": "point", "leg_id": "CANARSIE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "PARKWAY VISUAL RWY 13L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00610PARKWAY_VIS13LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDK_APP",
+      "call_sign": "Cologne Bonn approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDK_APP",
+      "unit": "EDDK_APP",
+      "frequency": "135.350"
+    }
+  ]
+}

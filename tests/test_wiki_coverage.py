@@ -74,10 +74,31 @@ class WikiCoverageTests(unittest.TestCase):
         self.page("_Sidebar.md", "`mva.json`")
         self.assertEqual(["mva.json: no wiki guide page names it"], self.findings({"mva.json"}))
 
-    def test_wiki_file_kinds_track_schema2_additions_and_removals(self) -> None:
-        for added in ("tma_structure.json", "tma_coordination.json", "acc_structure.json", "acc_coordination.json"):
+    def test_wiki_file_kinds_track_schema3_additions_and_removals(self) -> None:
+        for added in (
+            "tma_definitions.json",
+            "tma_layout.json",
+            "tma_coordination.json",
+            "acc_definitions.json",
+            "acc_layout.json",
+            "acc_coordination.json",
+            "procedure_use.json",
+            "initial_climb.json",
+            "departure_variants.json",
+            "visual_approaches.json",
+        ):
             self.assertIn(added, WIKI_FILE_KINDS)
-        for removed in ("sector_configs.json", "sector_influence.json", "tma.json"):
+        for removed in (
+            "sector_configs.json",
+            "sector_influence.json",
+            "tma.json",
+            "tma_structure.json",
+            "acc_structure.json",
+            "procedure_options.json",
+            "visual_procedures.json",
+            "visual_go_arounds.json",
+            "visual_sight_references.json",
+        ):
             self.assertNotIn(removed, WIKI_FILE_KINDS)
 
 

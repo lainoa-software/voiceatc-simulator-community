@@ -1,13 +1,14 @@
-"""Reference checker for tma_structure.json / tma_coordination.json, schema 2.
+"""Reference checker for tma_definitions.json / tma_layout.json / tma_coordination.json, schema 3.
 
-Rules and message templates come from tma_rules.json. check(payload, bundle_key,
-sector_ids, acc_units=None, coordination_payload=None) returns every problem as a
-Problem(code, where, value, expected, allowed, file_name), in the order the walk below
-meets them. Both game and community checkers must produce the same (code, where) list
-for every case in tma_cases/cases.json.
+Rules and message templates come from tma_rules.json. check(defs_payload, layout_payload,
+bundle_key, sector_ids, acc_units=None, acc_positions=None, coordination_payload=None,
+sector_catalog=None) returns every problem as a Problem(code, where, value, expected,
+allowed, file_name), in the order the walk below meets them. Both game and community
+checkers must produce the same (code, where) list for every case in tma_cases/cases.json.
 
 check_bundle(bundle_dir) is the community-only entry point: it reads the bundle's own
-sector definitions, coordination file, ancestor acc_structure.json, and runway presets.
+tma_definitions/layout/coordination files, sector definitions, ancestor acc_definitions.json,
+and runway presets.
 """
 from __future__ import annotations
 
@@ -34,27 +35,21 @@ PLAYABLE = [name for name, row in SERVICES.items() if row["playable"]]
 
 ICAO_RE = re.compile(r"^[A-Z0-9]{4}$")
 SECTOR_RE = re.compile(r"^[A-Z0-9_]+$")
-NAME_RE = re.compile(r"^[A-Z0-9]+( \+ [A-Z0-9]+)*$")
-DUTY_NAME_RE = re.compile(r"^[A-Z0-9]+(( \+ | )[A-Z0-9]+)*$")
 ZONE_KINDS: list[str] = list(RULES.get("zone_kinds", []))
 FREQ_RE = re.compile(r"^\d{3}\.\d{3}$")
-LEVEL_RE = re.compile(r"^[FA]\d{3}$")
+LEVEL_RE = re.compile(r"^(?:[FA]\d{3}|EVEN|ODD)$")
 CODE_RE = re.compile(RULES["code_pattern"])
 
 KEYS = {
-    "root": {"schema", "units", "zones", "layouts", "configurations"},
+    "definitions_root": {"schema", "units", "positions", "zones"},
+    "layout_root": {"schema", "configurations", "runway_combinations"},
     "coordination_root": {"schema", "agreements"},
-    "acc_root": {"schema", "units"},
-    "unit": {"id", "call_sign", "services", "airport", "frequencies"},
+    "unit": {"id", "call_sign", "part_of", "title", "services", "airport", "unassigned_frequencies"},
+    "position": {"call_sign", "unit", "frequency"},
     "zone": {"sector", "kind", "airport"},
-    "layout": {"id", "airports", "runways", "positions", "on_duty"},
-    "configuration": {"id", "name", "airports"},
-    "position": {"sector", "name", "code", "unit", "frequency", "zones"},
-    "on_duty": {"unit", "name", "code", "frequency", "sectors"},
-    "agreement": {"name", "from", "to", "departs", "arrives", "fix", "climb", "descent", "priority",
-                  "release_kind", "miles_in_trail", "go_around", "traffic_of_interest", "holding",
-                  "runways"},
-    "go_around": {"to", "climb"},
+    "configuration_entry": {"positions", "airports", "valid_for_runways"},
+    "runway_combination": {"id", "title", "airports"},
+    "agreement": {"name", "from", "to", "arrives", "departs", "fix", "level", "runways"},
 }
 
 
@@ -70,9 +65,14 @@ class Problem:
     def message(self, bundle_key: str) -> str:
         fname = self.file_name or str(RULES["file_name"])
         where = f"{bundle_key}/{fname} {self.where}".strip()
-        return (RULES["messages"][self.code].replace("{where}", where).replace("{value}", self.value)
-                .replace("{expected}", self.expected).replace("{allowed}", self.allowed)
-                .replace("{schema}", str(RULES["schema"])))
+        return (
+            RULES["messages"][self.code]
+            .replace("{where}", where)
+            .replace("{value}", self.value)
+            .replace("{expected}", self.expected)
+            .replace("{allowed}", self.allowed)
+            .replace("{schema}", str(RULES["schema"]))
+        )
 
 
 def _is_whole(value: object) -> bool:
@@ -91,6 +91,15 @@ def _text(value: object) -> str:
     if value is None:
         return "null"
     return json.dumps(value)
+
+
+def _normalize_runway_ident(raw_ident: str) -> str:
+    ident = str(raw_ident).strip().upper()
+    if ident.startswith("RWY"):
+        ident = ident[3:]
+    elif ident.startswith("RW"):
+        ident = ident[2:]
+    return ident.strip()
 
 
 class _Walk:
@@ -161,28 +170,77 @@ def _check_schema(w: _Walk, payload: dict, expected_schema: int) -> bool:
 
 
 def check(
-    payload: object,
+    defs_payload: object,
+    layout_payload: object,
     bundle_key: str,
     sector_ids: set[str],
     acc_units: list[dict] | None = None,
+    acc_positions: list[dict] | None = None,
     coordination_payload: object = None,
+    sector_catalog: dict[str, dict] | None = None,
 ) -> list[Problem]:
-    expected_schema = int(RULES.get("schema", 2))
-    w = _Walk(bundle_key, sector_ids, str(RULES["file_name"]))
-    if not isinstance(payload, dict):
+    expected_schema = int(RULES.get("schema", 3))
+    w = _Walk(bundle_key, sector_ids, str(RULES.get("file_name", "tma_definitions.json")))
+    if not isinstance(defs_payload, dict):
         w.add("TMA_JSON_INVALID", "")
         return w.problems
-    if not _check_schema(w, payload, expected_schema):
+    if not _check_schema(w, defs_payload, expected_schema):
         return w.problems
-    w.keys(payload, "root", "")
-    airports = _derive_airports(payload)
-    units = _units(w, payload, airports, forbid_center=True)
+    w.keys(defs_payload, "definitions_root", "")
+
+    lw = _Walk(bundle_key, sector_ids, str(RULES.get("layout_file_name", "tma_layout.json")))
+    layout: dict = {}
+    if not isinstance(layout_payload, dict):
+        lw.add("TMA_JSON_INVALID", "")
+    else:
+        layout = layout_payload
+        if _check_schema(lw, layout, expected_schema):
+            lw.keys(layout, "layout_root", "")
+
+    airports = _derive_airports(layout)
+    units = _check_units(w, defs_payload, airports, forbid_center=True)
+    positions = _check_positions(w, defs_payload, units)
     _merge_acc_units(units, acc_units or [])
-    zones = _zones(w, payload, airports)
-    _layouts(w, payload, airports, units, zones)
-    _configurations(w, payload, airports)
+    for acc_pos in acc_positions or []:
+        if isinstance(acc_pos, dict):
+            pcs = str(acc_pos.get("call_sign", "")).strip()
+            if pcs:
+                positions[pcs] = acc_pos
+    _check_zones(w, defs_payload, airports)
+    catalog = sector_catalog or {}
+    if layout and not lw.problems:
+        _check_layout(lw, layout, units, positions, catalog)
+        _check_runway_combinations(lw, layout, airports)
+    w.problems.extend(lw.problems)
     if coordination_payload is not None:
-        w.problems.extend(check_coordination(coordination_payload, bundle_key, units))
+        w.problems.extend(check_coordination(coordination_payload, bundle_key, units, "", positions))
+    return w.problems
+
+
+def check_acc(
+    defs_payload: object,
+    layout_payload: object,
+    bundle_key: str,
+    sector_ids: set[str] | None = None,
+    sector_catalog: dict[str, dict] | None = None,
+) -> list[Problem]:
+    expected_schema = int(RULES.get("schema", 3))
+    ids = sector_ids or set()
+    w = _Walk(bundle_key, ids, str(RULES.get("acc_file_name", "acc_definitions.json")))
+    if not isinstance(defs_payload, dict):
+        w.add("TMA_JSON_INVALID", "")
+        return w.problems
+    if not _check_schema(w, defs_payload, expected_schema):
+        return w.problems
+    w.keys(defs_payload, "definitions_root", "")
+    units = _check_units(w, defs_payload, [], forbid_center=False)
+    positions = _check_positions(w, defs_payload, units)
+    if isinstance(layout_payload, dict) and layout_payload:
+        lw = _Walk(bundle_key, ids, str(RULES.get("acc_layout_file_name", "acc_layout.json")))
+        if _check_schema(lw, layout_payload, expected_schema):
+            lw.keys(layout_payload, "layout_root", "")
+            _check_layout(lw, layout_payload, units, positions, sector_catalog or {})
+        w.problems.extend(lw.problems)
     return w.problems
 
 
@@ -191,45 +249,36 @@ def check_coordination(
     bundle_key: str,
     units: dict[str, dict],
     file_name: str = "",
+    positions: dict[str, dict] | None = None,
 ) -> list[Problem]:
     coord_file = file_name or str(RULES.get("coordination_file_name", "tma_coordination.json"))
     w = _Walk(bundle_key, set(), coord_file)
     if not isinstance(payload, dict):
         w.add("TMA_JSON_INVALID", "")
         return w.problems
-    if not _check_schema(w, payload, int(RULES.get("schema", 2))):
+    if not _check_schema(w, payload, int(RULES.get("schema", 3))):
         return w.problems
     w.keys(payload, "coordination_root", "")
-    _agreements(w, payload, units)
+    _check_agreements(w, payload, units, positions or {})
     return w.problems
 
 
-def check_acc_structure(payload: object, bundle_key: str) -> list[Problem]:
-    acc_file = str(RULES.get("acc_file_name", "acc_structure.json"))
-    w = _Walk(bundle_key, set(), acc_file)
-    if not isinstance(payload, dict):
-        w.add("TMA_JSON_INVALID", "")
-        return w.problems
-    if not _check_schema(w, payload, int(RULES.get("schema", 2))):
-        return w.problems
-    w.keys(payload, "acc_root", "")
-    _units(w, payload, [], forbid_center=False)
-    return w.problems
-
-
-def _derive_airports(payload: dict) -> list[str]:
+def _derive_airports(layout: dict) -> list[str]:
     result: list[str] = []
-    raw_layouts = payload.get("layouts", [])
-    if isinstance(raw_layouts, list):
-        for layout in raw_layouts:
-            if not isinstance(layout, dict):
+    configs = layout.get("configurations", {})
+    if isinstance(configs, dict):
+        for unit_cfgs in configs.values():
+            if not isinstance(unit_cfgs, dict):
                 continue
-            raw_apts = layout.get("airports", [])
-            if not isinstance(raw_apts, list):
-                continue
-            for code in raw_apts:
-                if isinstance(code, str) and ICAO_RE.match(code) and code not in result:
-                    result.append(code)
+            for cfg_val in unit_cfgs.values():
+                if not isinstance(cfg_val, dict):
+                    continue
+                apts = cfg_val.get("airports", [])
+                if isinstance(apts, list):
+                    for code_var in apts:
+                        code = str(code_var).strip().upper()
+                        if ICAO_RE.match(code) and code not in result:
+                            result.append(code)
     return result
 
 
@@ -241,28 +290,38 @@ def _merge_acc_units(units: dict[str, dict], acc_units: list[dict]) -> None:
         if not uid or uid in units:
             continue
         raw_services = unit.get("services", [])
-        services = [str(svc) for svc in raw_services] if isinstance(raw_services, list) else []
-        raw_freqs = unit.get("frequencies", [])
-        frequencies = {str(freq) for freq in raw_freqs} if isinstance(raw_freqs, list) else set()
-        units[uid] = {"services": services, "frequencies": frequencies}
+        if isinstance(raw_services, list) and raw_services:
+            services = [str(svc) for svc in raw_services]
+        elif "part_of" in unit:
+            services = ["center"]
+        else:
+            services = []
+        units[uid] = {"services": services}
 
 
-def _units(w: _Walk, payload: dict, airports: list[str], *, forbid_center: bool = True) -> dict[str, dict]:
+def _check_units(w: _Walk, payload: dict, airports: list[str], *, forbid_center: bool = True) -> dict[str, dict]:
     units: dict[str, dict] = {}
-    for i, unit in enumerate(w.array(payload, "units", "")):
-        where = f"units[{i}]"
+    for index, unit in enumerate(w.array(payload, "units", "")):
+        where = f"units[{index}]"
         if not w.keys(unit, "unit", where):
             continue
         unit_id = w.text(unit, "id", where)
         if unit_id:
-            where = f'units[{i}] "{unit_id}"'
+            where = f'units[{index}] "{unit_id}"'
             if unit_id in units:
                 w.add("TMA_ID_DUPLICATE", where, unit_id)
-        w.text(unit, "call_sign", where)
-        services = _services(w, unit, where)
+        has_part_of = "part_of" in unit and bool(str(unit.get("part_of", "")).strip())
+        if has_part_of:
+            if "call_sign" in unit:
+                w.add("TMA_UNIT_PART_OF_CALLSIGN", where, unit_id)
+        else:
+            w.text(unit, "call_sign", where)
+        services = _check_services(w, unit, where, required=not has_part_of)
+        if has_part_of and not services:
+            services = ["center"]
         if forbid_center and "center" in services:
             w.add("TMA_CENTER_IN_TMA", where, unit_id)
-        needing = [name for name in services if SERVICES[name]["needs_airport"]]
+        needing = [name for name in services if bool(SERVICES.get(name, {}).get("needs_airport", False))]
         if needing and "airport" not in unit:
             w.add("TMA_UNIT_AIRPORT_MISSING", where, needing[0])
         if "airport" in unit:
@@ -271,38 +330,85 @@ def _units(w: _Walk, payload: dict, airports: list[str], *, forbid_center: bool 
                 w.add("TMA_AIRPORT_INVALID", f"{where}.airport", apt)
             elif airports and apt not in airports:
                 w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airport", apt)
-        frequencies = [w.frequency(f, f"{where}.frequencies[{j}]")
-                       for j, f in enumerate(w.array(unit, "frequencies", where))]
+        unassigned_freqs: list[str] = []
+        if "unassigned_frequencies" in unit:
+            ufreqs = w.array(unit, "unassigned_frequencies", where, required=False)
+            for fi, freq_val in enumerate(ufreqs):
+                uf = w.frequency(freq_val, f"{where}.unassigned_frequencies[{fi}]")
+                if uf:
+                    unassigned_freqs.append(uf)
         if unit_id and unit_id not in units:
-            units[unit_id] = {"services": services, "frequencies": {f for f in frequencies if f}}
+            units[unit_id] = {
+                "services": services,
+                "part_of": str(unit.get("part_of", "")),
+                "unassigned_freqs": unassigned_freqs,
+            }
+    for uid, uinfo in units.items():
+        p_id = str(uinfo.get("part_of", ""))
+        if p_id and p_id not in units:
+            w.add("TMA_UNIT_PART_OF_UNKNOWN", uid, p_id)
     return units
 
 
-def _services(w: _Walk, unit: dict, where: str) -> list[str]:
+def _check_positions(w: _Walk, payload: dict, units: dict[str, dict]) -> dict[str, dict]:
+    positions: dict[str, dict] = {}
+    rows = w.array(payload, "positions", "", required=False)
+    for index, pos in enumerate(rows):
+        where = f"positions[{index}]"
+        if not w.keys(pos, "position", where):
+            continue
+        cs = w.text(pos, "call_sign", where)
+        if cs:
+            where = f'positions[{index}] "{cs}"'
+            if not CODE_RE.match(cs):
+                w.add("TMA_UNIT_CODE", f"{where}.call_sign", cs)
+            if cs in positions:
+                w.add("TMA_ID_DUPLICATE", where, cs)
+        unit_id = w.text(pos, "unit", where)
+        if unit_id and unit_id not in units:
+            w.add("TMA_UNIT_UNKNOWN", f"{where}.unit", unit_id)
+        freq = w.frequency(pos.get("frequency"), f"{where}.frequency")
+        if freq and unit_id in units:
+            check_uid = unit_id
+            seen_u: set[str] = set()
+            while check_uid and check_uid not in seen_u and check_uid in units:
+                seen_u.add(check_uid)
+                if freq in units[check_uid].get("unassigned_freqs", []):
+                    w.add("TMA_UNASSIGNED_FREQ_USED", check_uid, freq)
+                check_uid = str(units[check_uid].get("part_of", ""))
+        if cs:
+            positions[cs] = {"call_sign": cs, "unit": unit_id, "frequency": freq}
+    return positions
+
+
+def _check_services(w: _Walk, unit: dict, where: str, *, required: bool = True) -> list[str]:
+    if "services" not in unit:
+        if required:
+            w.add("TMA_UNIT_NO_SERVICES", where, allowed=SERVICE_LIST)
+        return []
     raw = unit.get("services")
     if not isinstance(raw, list) or not raw:
         w.add("TMA_UNIT_NO_SERVICES", where, allowed=SERVICE_LIST)
         return []
     known: list[str] = []
-    for j, name in enumerate(raw):
+    for index, name in enumerate(raw):
         if isinstance(name, str) and name in SERVICES:
             known.append(name)
         else:
-            w.add("TMA_UNIT_SERVICE_UNKNOWN", f"{where}.services[{j}]", name, allowed=SERVICE_LIST)
+            w.add("TMA_UNIT_SERVICE_UNKNOWN", f"{where}.services[{index}]", name, allowed=SERVICE_LIST)
     return known
 
 
-def _zones(w: _Walk, payload: dict, airports: list[str]) -> set[str]:
-    """The top-level zones: each a defined sector, CTR or ATZ, of an airport in the file."""
-    zones: set[str] = set()
-    for i, zone in enumerate(w.array(payload, "zones", "", required=False)):
-        where = f"zones[{i}]"
+def _check_zones(w: _Walk, payload: dict, airports: list[str]) -> dict[str, bool]:
+    zones: dict[str, bool] = {}
+    for index, zone in enumerate(w.array(payload, "zones", "", required=False)):
+        where = f"zones[{index}]"
         if not w.keys(zone, "zone", where):
             continue
         sector = w.text(zone, "sector", where)
         defined = False
         if sector:
-            where = f'zones[{i}] "{sector}"'
+            where = f'zones[{index}] "{sector}"'
             if sector in zones:
                 w.add("TMA_ID_DUPLICATE", where, sector)
             elif sector not in w.sector_ids:
@@ -313,232 +419,132 @@ def _zones(w: _Walk, payload: dict, airports: list[str]) -> set[str]:
         if kind and kind not in ZONE_KINDS:
             w.add("TMA_ZONE_KIND", f"{where}.kind", kind, allowed=", ".join(ZONE_KINDS))
         airport = w.text(zone, "airport", where)
-        if airport and airport not in airports:
+        if airport and airports and airport not in airports:
             w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airport", airport)
         if defined:
-            zones.add(sector)
+            zones[sector] = True
     return zones
 
 
-def _layouts(w: _Walk, payload: dict, _airports: list[str], units: dict[str, dict], zones: set[str]) -> None:
-    seen: set[str] = set()
-    for i, layout in enumerate(w.array(payload, "layouts", "")):
-        where = f"layouts[{i}]"
-        if not w.keys(layout, "layout", where):
+def _check_layout(
+    w: _Walk,
+    layout: dict,
+    units: dict[str, dict],
+    positions: dict[str, dict],
+    sector_catalog: dict[str, dict],
+) -> None:
+    if "configurations" not in layout or not isinstance(layout["configurations"], dict):
+        w.add("TMA_FIELD_MISSING", "", "configurations")
+        return
+    cfgs = layout["configurations"]
+    for uid_var, ucfgs in cfgs.items():
+        uid = str(uid_var)
+        uwhere = f"configurations.{uid}"
+        if uid not in units:
+            w.add("TMA_UNIT_UNKNOWN", uwhere, uid)
+        if not isinstance(ucfgs, dict) or not ucfgs:
+            w.add("TMA_FIELD_SHAPE", uwhere, "a non-empty map of configurations")
             continue
-        layout_id = w.text(layout, "id", where)
-        if layout_id:
-            where = f'layouts[{i}] "{layout_id}"'
-            if layout_id in seen:
-                w.add("TMA_ID_DUPLICATE", where, layout_id)
-            seen.add(layout_id)
-        layout_airports = _layout_airports(w, layout, where)
-        _runways(w, layout, where, layout_airports)
-        sectors: set[str] = set()
-        for k, position in enumerate(w.array(layout, "positions", where)):
-            _position(w, position, f"{where}.positions[{k}]", units, sectors, zones)
-        _on_duty(w, layout, where, units, sectors)
+        for cid_var, cfg_entry in ucfgs.items():
+            cid = str(cid_var)
+            cwhere = f"{uwhere}.{cid}"
+            if not w.keys(cfg_entry, "configuration_entry", cwhere):
+                continue
+            pos_map = cfg_entry.get("positions")
+            if not isinstance(pos_map, dict) or not pos_map:
+                w.add("TMA_FIELD_SHAPE", f"{cwhere}.positions", "a non-empty map of position to sector ids")
+                continue
+            claimed: dict[str, bool] = {}
+            for cs_var, sids in pos_map.items():
+                cs = str(cs_var)
+                if cs not in positions:
+                    w.add("TMA_UNIT_UNKNOWN", f"{cwhere}.positions.{cs}", cs)
+                if not isinstance(sids, list) or not sids:
+                    w.add("TMA_FIELD_SHAPE", f"{cwhere}.positions.{cs}", "a non-empty list of sector ids")
+                    continue
+                for s_var in sids:
+                    sid = str(s_var)
+                    spot = f"{cwhere}.positions.{cs}"
+                    if w.sector_ids and sid not in w.sector_ids and sid not in sector_catalog:
+                        w.add("TMA_SECTOR_UNDEFINED", spot, sid)
+                    else:
+                        _claim_expanded(w, claimed, sid, spot, sector_catalog)
 
 
-def _layout_airports(w: _Walk, layout: dict, where: str) -> list[str]:
+def _claim_expanded(
+    w: _Walk, claimed: dict[str, bool], sid: str, where: str, catalog: dict[str, dict]
+) -> None:
+    entry = catalog.get(sid, {})
+    made_of = entry.get("made_of") if isinstance(entry, dict) else None
+    if isinstance(made_of, list) and made_of:
+        for child in made_of:
+            _claim_expanded(w, claimed, str(child), where, catalog)
+        return
+    if sid in claimed:
+        w.add("TMA_SECTOR_TWICE", where, sid)
+    else:
+        claimed[sid] = True
+
+
+def _check_runway_combinations(w: _Walk, layout: dict, airports: list[str]) -> None:
+    rows = w.array(layout, "runway_combinations", "", required=False)
+    seen: set[str] = set()
+    for index, row in enumerate(rows):
+        where = f"runway_combinations[{index}]"
+        if not w.keys(row, "runway_combination", where):
+            continue
+        rid = w.text(row, "id", where)
+        if rid:
+            where = f'runway_combinations[{index}] "{rid}"'
+            if rid in seen:
+                w.add("TMA_ID_DUPLICATE", where, rid)
+            seen.add(rid)
+        w.text(row, "title", where)
+        named = row.get("airports", {})
+        if not isinstance(named, dict) or not named:
+            w.add("TMA_FIELD_SHAPE", f"{where}.airports", "a map of ICAO to runway preset id")
+            continue
+        for code_var in named:
+            code = str(code_var)
+            if airports and code not in airports:
+                w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airports", code)
+
+
+def _check_agreement_fixes(w: _Walk, row: dict, where: str) -> list[str]:
+    if "fix" not in row:
+        return [""]
+    raw_fix = row["fix"]
+    if not isinstance(raw_fix, list) or not raw_fix:
+        w.add("TMA_FIELD_SHAPE", f"{where}.fix", "a non-empty array")
+        return [""]
     out: list[str] = []
-    seen: set[str] = set()
-    for offset, code in enumerate(w.array(layout, "airports", where)):
-        at = f"{where}.airports[{offset}]"
-        if not isinstance(code, str) or not ICAO_RE.match(code):
-            w.add("TMA_AIRPORT_INVALID", at, code)
-        elif code in seen:
-            w.add("TMA_ID_DUPLICATE", at, code)
+    for idx, item in enumerate(raw_fix):
+        if not isinstance(item, str) or not item.strip():
+            w.add("TMA_FIELD_SHAPE", f"{where}.fix[{idx}]", "a non-empty string")
         else:
-            seen.add(code)
-            out.append(code)
-    return out
+            token = item.strip().upper()
+            if token not in out:
+                out.append(token)
+    return out if out else [""]
 
 
-def _runways(w: _Walk, layout: dict, where: str, airports: list[str]) -> None:
-    if "runways" not in layout:
-        return
-    runways = layout["runways"]
-    if not isinstance(runways, dict) or not runways:
-        w.add("TMA_FIELD_SHAPE", f"{where}.runways", "an object of airport to runway preset ids")
-        return
-    for code in sorted(str(k) for k in runways):
-        if airports and code not in airports:
-            w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.runways", code)
-        presets = runways[code]
-        if not isinstance(presets, list) or not presets or not all(isinstance(p, str) and p.strip() for p in presets):
-            w.add("TMA_FIELD_SHAPE", f"{where}.runways.{code}", "a non-empty array of runway preset ids")
-
-
-def _position(w: _Walk, position: object, where: str, units: dict[str, dict],
-              sectors: set[str], zones: set[str]) -> None:
-    if not w.keys(position, "position", where):
-        return
-    _position_sector(w, position, where, sectors)
-    if "name" not in position:
-        w.add("TMA_FIELD_MISSING", where, "name")
-    elif not isinstance(position["name"], str) or not NAME_RE.match(position["name"]):
-        w.add("TMA_POSITION_NAME", f"{where}.name", position["name"])
-    _code(w, position, where)
-    unit_id = w.text(position, "unit", where)
-    unit = units.get(unit_id)
-    if unit_id and unit is None:
-        w.add("TMA_UNIT_UNKNOWN", f"{where}.unit", unit_id)
-    elif unit is not None and not any(name in PLAYABLE for name in unit["services"]):
-        w.add("TMA_POSITION_NOT_PLAYABLE", f"{where}.unit", unit_id, allowed=", ".join(PLAYABLE))
-    if "frequency" not in position:
-        w.add("TMA_FIELD_MISSING", where, "frequency")
-    else:
-        frequency = w.frequency(position["frequency"], f"{where}.frequency")
-        if frequency and unit is not None and frequency not in unit["frequencies"]:
-            w.add("TMA_POSITION_FREQUENCY_NOT_UNITS", f"{where}.frequency", frequency, expected=unit_id)
-    for m, zone_id in enumerate(w.array(position, "zones", where, required=False)):
-        at = f"{where}.zones[{m}]"
-        if not isinstance(zone_id, str) or zone_id not in zones:
-            w.add("TMA_ZONE_UNKNOWN", at, zone_id)
-        else:
-            _claim(w, sectors, zone_id, at)
-
-
-def _on_duty(w: _Walk, layout: dict, where: str, units: dict[str, dict], sectors: set[str]) -> None:
-    """The other units working the combination: known units on their own frequencies, on free sectors."""
-    for k, row in enumerate(w.array(layout, "on_duty", where, required=False)):
-        at = f"{where}.on_duty[{k}]"
-        if not w.keys(row, "on_duty", at):
-            continue
-        unit_id = w.text(row, "unit", at)
-        unit = units.get(unit_id)
-        if unit_id and unit is None:
-            w.add("TMA_UNIT_UNKNOWN", f"{at}.unit", unit_id)
-        if "name" not in row:
-            w.add("TMA_FIELD_MISSING", at, "name")
-        elif not isinstance(row["name"], str) or not DUTY_NAME_RE.match(row["name"]):
-            w.add("TMA_ON_DUTY_NAME", f"{at}.name", row["name"])
-        _code(w, row, at)
-        if "frequency" not in row:
-            w.add("TMA_FIELD_MISSING", at, "frequency")
-        else:
-            frequency = w.frequency(row["frequency"], f"{at}.frequency")
-            if frequency and unit is not None and frequency not in unit["frequencies"]:
-                w.add("TMA_POSITION_FREQUENCY_NOT_UNITS", f"{at}.frequency", frequency, expected=unit_id)
-        for m, sector in enumerate(w.array(row, "sectors", at)):
-            spot = f"{at}.sectors[{m}]"
-            if not isinstance(sector, str) or sector not in w.sector_ids:
-                w.add("TMA_SECTOR_UNDEFINED", spot, sector)
-            else:
-                _claim(w, sectors, sector, spot)
-
-
-def _code(w: _Walk, entry: dict, where: str) -> None:
-    """A position's or on_duty unit's code: its ICAO, words joined by "_", then TWR, APP or CTR."""
-    if "code" not in entry:
-        w.add("TMA_FIELD_MISSING", where, "code")
-    elif not isinstance(entry["code"], str) or not CODE_RE.match(entry["code"]):
-        w.add("TMA_UNIT_CODE", f"{where}.code", entry["code"])
-
-
-def _claim(w: _Walk, sectors: set[str], sector: str, where: str) -> None:
-    """One worker per sector in a layout, positions and on_duty entries together."""
-    if sector in sectors:
-        w.add("TMA_SECTOR_TWICE", where, sector)
-    else:
-        sectors.add(sector)
-
-
-def _position_sector(w: _Walk, position: dict, where: str, sectors: set[str]) -> None:
-    if "sector" not in position:
-        w.add("TMA_FIELD_MISSING", where, "sector")
-        return
-    sector = position["sector"]
-    if not isinstance(sector, str) or not SECTOR_RE.match(sector):
-        w.add("TMA_POSITION_ONE_SECTOR", f"{where}.sector", sector)
-    elif sector not in w.sector_ids:
-        w.add("TMA_SECTOR_UNDEFINED", f"{where}.sector", sector)
-    else:
-        _claim(w, sectors, sector, f"{where}.sector")
-
-
-def _configurations(w: _Walk, payload: dict, airports: list[str]) -> None:
-    """One runway preset id per airport of the file, in every configuration."""
-    seen: set[str] = set()
-    for i, row in enumerate(w.array(payload, "configurations", "", required=False)):
-        where = f"configurations[{i}]"
-        if not w.keys(row, "configuration", where):
-            continue
-        configuration_id = w.text(row, "id", where)
-        if configuration_id:
-            where = f'configurations[{i}] "{configuration_id}"'
-            if configuration_id in seen:
-                w.add("TMA_ID_DUPLICATE", where, configuration_id)
-            seen.add(configuration_id)
-        w.text(row, "name", where)
-        _configuration_airports(w, row, where, airports)
-
-
-def _configuration_airports(w: _Walk, row: dict, where: str, airports: list[str]) -> None:
-    if "airports" not in row:
-        w.add("TMA_FIELD_MISSING", where, "airports")
-        return
-    named = row["airports"]
-    if not isinstance(named, dict) or not named:
-        w.add("TMA_FIELD_SHAPE", f"{where}.airports", "an object of airport to runway preset id")
-        return
-    for code in sorted(str(key) for key in named):
-        if code not in airports:
-            w.add("TMA_AIRPORT_NOT_IN_TMA", f"{where}.airports", code)
-        preset = named[code]
-        if not isinstance(preset, str) or not preset.strip():
-            w.add("TMA_FIELD_SHAPE", f"{where}.airports.{code}", "a runway preset id")
-    for code in airports:
-        if code not in named:
-            w.add("TMA_FIELD_MISSING", f"{where}.airports", code)
-
-
-def _runway_keys(raw) -> list[str]:
-    """A row's runway ends as tie keys; "*" for a row naming none, which matches every runway."""
+def _runway_keys(raw: object) -> list[str]:
     keys: list[str] = []
     if isinstance(raw, list):
         for value in raw:
-            runway = str(value).strip().upper()
-            if runway.startswith("RWY"):
-                runway = runway[3:]
-            elif runway.startswith("RW"):
-                runway = runway[2:]
-            runway = runway.strip()
+            runway = _normalize_runway_ident(str(value))
             if runway and runway not in keys:
                 keys.append(runway)
     return keys or ["*"]
 
 
 def _tied_row(taken: dict[str, str], runways: list[str]) -> str:
-    """The row already in this slot that a flow on one of `runways` would also match, else ""."""
     for runway in runways:
         if runway in taken:
-            return taken[runway]
+            return str(taken[runway])
         if runway == "*" and taken:
-            return next(iter(taken.values()))
-    return taken.get("*", "")
-
-
-def _check_agreement_fixes(w: _Walk, row: dict, where: str) -> list[str]:
-    if _departure_without_fix(row):
-        return [""]
-    if "fix" not in row:
-        w.add("TMA_FIELD_MISSING", where, "fix")
-        return [""]
-    raw_fix = row["fix"]
-    if not isinstance(raw_fix, list) or not raw_fix:
-        w.add("TMA_FIELD_SHAPE", f"{where}.fix", "a non-empty array")
-        return [""]
-    fixes: list[str] = []
-    for index, item in enumerate(raw_fix):
-        if not isinstance(item, str) or not item.strip():
-            w.add("TMA_FIELD_SHAPE", f"{where}.fix[{index}]", "a non-empty string")
-        else:
-            token = item.strip().upper()
-            if token not in fixes:
-                fixes.append(token)
-    return fixes if fixes else [""]
+            return str(next(iter(taken.values())))
+    return str(taken.get("*", ""))
 
 
 def _agreement_codes(raw: list) -> list[str]:
@@ -550,102 +556,77 @@ def _agreement_codes(raw: list) -> list[str]:
     return codes
 
 
-def _agreement_flows(departs: list[str], arrives: list[str], levels: list[str]) -> list[str]:
-    flows: list[str] = []
-    if departs and ("climb" in levels or ("descent" not in levels and not arrives)):
-        flows.append("DEP")
-    if arrives and ("descent" in levels or ("climb" not in levels and not departs)):
-        flows.append("ARR")
-    if not flows:
-        if departs:
-            flows.append("DEP")
-        if arrives:
-            flows.append("ARR")
-    return flows
-
-
 def _pairs_match(a_orig: str, a_dest: str, b_orig: str, b_dest: str) -> bool:
     orig_ok = a_orig == "*" or b_orig == "*" or a_orig == b_orig
     dest_ok = a_dest == "*" or b_dest == "*" or a_dest == b_dest
     return orig_ok and dest_ok
 
 
-def _agreements(w: _Walk, payload: dict, units: dict[str, dict]) -> None:
-    covered: dict[tuple[str, str, str, str, int], dict[tuple[str, str], dict[str, str]]] = {}
-    for i, row in enumerate(w.array(payload, "agreements", "", required=False)):
-        where = f"agreements[{i}]"
+def _check_agreements(
+    w: _Walk,
+    payload: dict,
+    units: dict[str, dict],
+    positions: dict[str, dict],
+) -> None:
+    covered: dict[str, dict[str, dict[str, str]]] = {}
+    rows = w.array(payload, "agreements", "", required=False)
+    for index, row in enumerate(rows):
+        where = f"agreements[{index}]"
         if not w.keys(row, "agreement", where):
             continue
         name = w.text(row, "name", where)
         if name:
-            where = f'agreements[{i}] "{name}"'
+            where = f'agreements[{index}] "{name}"'
         ends = [w.text(row, key, where) for key in ("from", "to")]
-        for key, unit_id in zip(("from", "to"), ends):
-            if unit_id and unit_id not in units:
-                w.add("TMA_UNIT_UNKNOWN", f"{where}.{key}", unit_id)
+        for key, eid in zip(("from", "to"), ends):
+            if eid and eid not in units and eid not in positions:
+                w.add("TMA_UNIT_UNKNOWN", f"{where}.{key}", eid)
         if ends[0] and ends[0] == ends[1]:
             w.add("TMA_AGREEMENT_SAME_UNIT", where, name)
         fixes = _check_agreement_fixes(w, row, where)
         departs = _agreement_codes(w.array(row, "departs", where, required=False))
         arrives = _agreement_codes(w.array(row, "arrives", where, required=False))
-        if not departs and not arrives:
-            w.add("TMA_AGREEMENT_NO_TRAFFIC", where, name)
-        levels = [key for key in ("climb", "descent") if key in row]
-        if not levels:
+        if "level" not in row:
             w.add("TMA_AGREEMENT_NO_LEVEL", where, name)
-        for key in levels:
-            w.level(row[key], f"{where}.{key}")
-        priority = row.get("priority")
-        if not _is_whole(priority) or priority < 0:
-            w.add("TMA_FIELD_SHAPE", f"{where}.priority", "a whole number, 0 or more")
         else:
-            runways = _runway_keys(row.get("runways", []))
-            origs = departs or ["*"]
-            dests = arrives or ["*"]
-            tied_reported: set[str] = set()
-            for flow_kind in _agreement_flows(departs, arrives, levels):
-                for fix_token in fixes:
-                    slot = (ends[0], ends[1], flow_kind, fix_token, int(priority))
-                    bucket = covered.setdefault(slot, {})
-                    for orig in origs:
-                        for dest in dests:
-                            for (existing_orig, existing_dest), taken in bucket.items():
-                                if not _pairs_match(orig, dest, existing_orig, existing_dest):
-                                    continue
-                                other = _tied_row(taken, runways)
-                                if other and other not in tied_reported:
-                                    tied_reported.add(other)
-                                    w.add("TMA_AGREEMENT_PRIORITY_TIE", where, name, expected=other)
-                            taken = bucket.setdefault((orig, dest), {})
-                            for runway in runways:
-                                taken.setdefault(runway, name)
-        if "release_kind" in row:
-            w.text(row, "release_kind", where)
-        if "holding" in row:
-            w.text(row, "holding", where)
-        trail = row.get("miles_in_trail", 0)
-        if not isinstance(trail, (int, float)) or isinstance(trail, bool) or trail < 0:
-            w.add("TMA_FIELD_SHAPE", f"{where}.miles_in_trail", "a number, 0 or more")
-        w.array(row, "traffic_of_interest", where, required=False)
-        w.array(row, "runways", where, required=False)
-        go_around = row.get("go_around")
-        if go_around is not None and w.keys(go_around, "go_around", f"{where}.go_around"):
-            target = w.text(go_around, "to", f"{where}.go_around")
-            if target and target not in units:
-                w.add("TMA_UNIT_UNKNOWN", f"{where}.go_around.to", target)
-            if "climb" in go_around:
-                w.level(go_around["climb"], f"{where}.go_around.climb")
+            w.level(row["level"], f"{where}.level")
+        rwys = w.array(row, "runways", where, required=False)
+        rwy_keys = _runway_keys(rwys)
+        pos_ends = sum(1 for eid in ends if eid in positions and eid not in units)
+        rank = pos_ends * 4 + (2 if rwys else 0) + (1 if "fix" in row else 0)
+        origs = departs or ["*"]
+        dests = arrives or ["*"]
+        flow_kind = (
+            "PARITY"
+            if (not departs and not arrives)
+            else (
+                "DEP"
+                if (departs and not arrives)
+                else ("ARR" if (arrives and not departs) else "BOTH")
+            )
+        )
+        tied_reported: dict[str, bool] = {}
+        for fix_token in fixes:
+            slot = f"{ends[0]}|{ends[1]}|{flow_kind}|{fix_token}|{rank}"
+            bucket = covered.setdefault(slot, {})
+            for orig in origs:
+                for dest in dests:
+                    for existing_key, existing_taken in bucket.items():
+                        parts = existing_key.split("|")
+                        if not _pairs_match(orig, dest, parts[0], parts[1]):
+                            continue
+                        other = _tied_row(existing_taken, rwy_keys)
+                        if other and other not in tied_reported:
+                            tied_reported[other] = True
+                            w.add("TMA_AGREEMENT_TIE", where, name, expected=other)
+                    pair_key = f"{orig}|{dest}"
+                    taken = bucket.setdefault(pair_key, {})
+                    for runway in rwy_keys:
+                        taken.setdefault(runway, name)
 
 
-def _departure_without_fix(row: dict) -> bool:
-    """A row that only sends traffic away may leave ``fix`` out: it states one level for every
-    route leaving that airport, and the hand-off is where the flow leaves the from unit's air,
-    which the runtime finds without a fix. An arrival row always names its fix."""
-    return "fix" not in row and "departs" in row and "arrives" not in row
-
-
-def _ancestor_acc_units(bundle_dir: Path) -> list[dict]:
-    acc_name = str(RULES.get("acc_file_name", "acc_structure.json"))
+def _ancestor_acc(bundle_dir: Path) -> tuple[list[dict], list[dict]]:
+    acc_name = str(RULES.get("acc_file_name", "acc_definitions.json"))
     cur = bundle_dir.resolve().parent
     while cur != cur.parent:
         acc_path = cur / acc_name
@@ -653,64 +634,60 @@ def _ancestor_acc_units(bundle_dir: Path) -> list[dict]:
             try:
                 doc = json.loads(acc_path.read_text(encoding="utf-8"))
             except (OSError, ValueError):
-                return []
-            if isinstance(doc, dict) and isinstance(doc.get("units"), list):
-                return [u for u in doc["units"] if isinstance(u, dict)]
-            return []
+                return [], []
+            if isinstance(doc, dict):
+                raw_units = doc.get("units", [])
+                raw_positions = doc.get("positions", [])
+                return (
+                    [u for u in raw_units if isinstance(u, dict)] if isinstance(raw_units, list) else [],
+                    [p for p in raw_positions if isinstance(p, dict)] if isinstance(raw_positions, list) else [],
+                )
+            return [], []
         cur = cur.parent
-    return []
+    return [], []
 
 
-def check_bundle(bundle_dir: Path) -> list[str]:
-    """Every problem sentence for ``<bundle_dir>/tma_structure.json``, in walk order; empty when absent."""
-    path = bundle_dir / RULES["file_name"]
-    if not path.is_file():
-        return []
-    bundle_key = bundle_dir.name
-    try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, ValueError):
-        return [Problem("TMA_JSON_INVALID", "").message(bundle_key)]
-    coord_name = str(RULES.get("coordination_file_name", "tma_coordination.json"))
-    coord_path = bundle_dir / coord_name
-    coordination_payload: object = None
-    if coord_path.is_file():
-        try:
-            coordination_payload = json.loads(coord_path.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            coordination_payload = []
-    acc_units = _ancestor_acc_units(bundle_dir)
-    problems = check(payload, bundle_key, _sector_ids(bundle_dir), acc_units, coordination_payload)
-    problems.extend(_unknown_runway_presets(payload, bundle_dir))
-    return [problem.message(bundle_key) for problem in problems]
-
-
-def _sector_ids(bundle_dir: Path) -> set[str]:
+def _sector_ids_and_catalog(bundle_dir: Path) -> tuple[set[str], dict[str, dict]]:
     try:
         document = json.loads((bundle_dir / "sector_definitions.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
-        return set()
+        return set(), {}
     if not isinstance(document, dict):
-        return set()
+        return set(), {}
     definitions = airac_overrides.resolve(document, "")
-    rows = definitions.get("sector_definitions", definitions.get("definitions", definitions.get("sectors", [])))
-    if not isinstance(rows, list):
-        return set()
     out: set[str] = set()
-    for row in rows:
-        if not isinstance(row, dict):
-            continue
-        raw_ids = row.get("sector_ids")
-        if isinstance(raw_ids, list):
-            for item in raw_ids:
-                tok = str(item).strip().upper()
-                if tok:
-                    out.add(tok)
-        else:
+    catalog: dict[str, dict] = {}
+    sectors = definitions.get("sectors")
+    if isinstance(sectors, dict):
+        for sid, entry in sectors.items():
+            tok = str(sid).strip().upper()
+            if tok:
+                out.add(tok)
+                if isinstance(entry, dict):
+                    catalog[tok] = entry
+    rows = definitions.get("volumes", definitions.get("sector_definitions", definitions.get("definitions", [])))
+    if isinstance(rows, list):
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            raw_ids = row.get("sector_ids")
+            if isinstance(raw_ids, list):
+                for item in raw_ids:
+                    tok = str(item).strip().upper()
+                    if tok:
+                        out.add(tok)
+            else:
+                val = _row_value(row).strip().upper()
+                if val:
+                    out.add(val)
+    elif isinstance(sectors, list):
+        for row in sectors:
+            if not isinstance(row, dict):
+                continue
             val = _row_value(row).strip().upper()
             if val:
                 out.add(val)
-    return out
+    return out, catalog
 
 
 def _row_value(row: dict) -> str:
@@ -720,25 +697,65 @@ def _row_value(row: dict) -> str:
     return ""
 
 
-def _unknown_runway_presets(payload: object, bundle_dir: Path) -> list[Problem]:
-    """Every runway preset a layout asks for that the airport's runway_configs.json lacks."""
-    if not isinstance(payload, dict) or not isinstance(payload.get("layouts"), list):
+def _unknown_runway_presets(layout: object, bundle_dir: Path) -> list[Problem]:
+    """Every runway preset valid_for_runways or runway_combinations asks for that runway_configs.json lacks."""
+    if not isinstance(layout, dict):
         return []
     problems: list[Problem] = []
-    for index, layout in enumerate(payload["layouts"]):
-        if not isinstance(layout, dict) or not isinstance(layout.get("runways"), dict):
-            continue
-        layout_id = layout.get("id")
-        where = f'layouts[{index}] "{layout_id}"' if isinstance(layout_id, str) and layout_id else f"layouts[{index}]"
-        for code in sorted(layout["runways"]):
-            presets = layout["runways"][code]
-            if not ICAO_RE.fullmatch(code) or not isinstance(presets, list):
+    layout_fname = str(RULES.get("layout_file_name", "tma_layout.json"))
+    configs = layout.get("configurations")
+    if isinstance(configs, dict):
+        for uid in sorted(str(k) for k in configs):
+            ucfgs = configs.get(uid)
+            if not isinstance(ucfgs, dict):
                 continue
-            known = _preset_ids(bundle_dir / code)
-            for preset in presets:
-                if isinstance(preset, str) and preset not in known:
+            for cid in sorted(str(k) for k in ucfgs):
+                entry = ucfgs.get(cid)
+                if not isinstance(entry, dict):
+                    continue
+                valid_rwys = entry.get("valid_for_runways")
+                if not isinstance(valid_rwys, dict):
+                    continue
+                for code in sorted(str(k) for k in valid_rwys):
+                    presets = valid_rwys.get(code)
+                    if not ICAO_RE.fullmatch(code) or not isinstance(presets, list):
+                        continue
+                    known = _preset_ids(bundle_dir / code)
+                    for preset in presets:
+                        if isinstance(preset, str) and preset not in known:
+                            problems.append(
+                                Problem(
+                                    "TMA_RUNWAY_PRESET_UNKNOWN",
+                                    f"configurations.{uid}.{cid}.valid_for_runways.{code}",
+                                    preset,
+                                    expected=code,
+                                    file_name=layout_fname,
+                                )
+                            )
+    combos = layout.get("runway_combinations")
+    if isinstance(combos, list):
+        for idx, row in enumerate(combos):
+            if not isinstance(row, dict):
+                continue
+            rid = row.get("id")
+            where = f'runway_combinations[{idx}] "{rid}"' if isinstance(rid, str) and rid else f"runway_combinations[{idx}]"
+            airports = row.get("airports")
+            if not isinstance(airports, dict):
+                continue
+            for code in sorted(str(k) for k in airports):
+                preset = airports.get(code)
+                if not ICAO_RE.fullmatch(code) or not isinstance(preset, str) or not preset.strip():
+                    continue
+                known = _preset_ids(bundle_dir / code)
+                if preset not in known:
                     problems.append(
-                        Problem("TMA_RUNWAY_PRESET_UNKNOWN", f"{where}.runways.{code}", preset, expected=code)
+                        Problem(
+                            "TMA_RUNWAY_PRESET_UNKNOWN",
+                            f"{where}.airports.{code}",
+                            preset,
+                            expected=code,
+                            file_name=layout_fname,
+                        )
                     )
     return problems
 
@@ -754,3 +771,47 @@ def _preset_ids(airport_dir: Path) -> set[str]:
     if not isinstance(rows, list):
         return set()
     return {str(row["id"]) for row in rows if isinstance(row, dict) and "id" in row}
+
+
+def check_bundle(bundle_dir: Path) -> list[str]:
+    """Every problem sentence for `<bundle_dir>/tma_definitions.json` + `tma_layout.json`, in walk order; empty when absent."""
+    defs_name = str(RULES.get("file_name", "tma_definitions.json"))
+    layout_name = str(RULES.get("layout_file_name", "tma_layout.json"))
+    coord_name = str(RULES.get("coordination_file_name", "tma_coordination.json"))
+
+    defs_path = bundle_dir / defs_name
+    layout_path = bundle_dir / layout_name
+    if not defs_path.is_file() and not layout_path.is_file():
+        return []
+    bundle_key = bundle_dir.name
+    try:
+        defs_payload: object = json.loads(defs_path.read_text(encoding="utf-8")) if defs_path.is_file() else []
+    except (OSError, ValueError):
+        return [Problem("TMA_JSON_INVALID", "", file_name=defs_name).message(bundle_key)]
+    try:
+        layout_payload: object = json.loads(layout_path.read_text(encoding="utf-8")) if layout_path.is_file() else []
+    except (OSError, ValueError):
+        layout_payload = []
+
+    coord_path = bundle_dir / coord_name
+    coordination_payload: object = None
+    if coord_path.is_file():
+        try:
+            coordination_payload = json.loads(coord_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            coordination_payload = []
+
+    sector_ids, sector_catalog = _sector_ids_and_catalog(bundle_dir)
+    acc_units, acc_positions = _ancestor_acc(bundle_dir)
+    problems = check(
+        defs_payload,
+        layout_payload,
+        bundle_key,
+        sector_ids,
+        acc_units,
+        acc_positions,
+        coordination_payload,
+        sector_catalog,
+    )
+    problems.extend(_unknown_runway_presets(layout_payload, bundle_dir))
+    return [problem.message(bundle_key) for problem in problems]

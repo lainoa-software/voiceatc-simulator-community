@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "airport": "EDVE",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "HLZ1C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "HLZ1K"
+      ],
+      "spawn": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCTP_APP": {
+      "TAOYUAN": {
+        "positions": {
+          "RCTP_APP": [
+            "RCTP_APP"
+          ]
+        },
+        "airports": [
+          "RCTP"
+        ]
+      }
+    }
+  }
+}

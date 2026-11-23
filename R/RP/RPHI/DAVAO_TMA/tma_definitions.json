@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPMD_APP",
+      "call_sign": "Davao approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPMD_APP",
+      "unit": "RPMD_APP",
+      "frequency": "122.400"
+    }
+  ]
+}

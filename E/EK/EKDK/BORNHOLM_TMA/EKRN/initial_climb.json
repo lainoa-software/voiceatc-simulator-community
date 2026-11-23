@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "EKRN",
+  "airac_min": 2610,
+  "initial_climb_ft": 4000
+}

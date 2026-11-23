@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCBS_APP",
+      "call_sign": "Kinmen approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCBS_APP",
+      "unit": "RCBS_APP",
+      "frequency": "124.600"
+    }
+  ]
+}

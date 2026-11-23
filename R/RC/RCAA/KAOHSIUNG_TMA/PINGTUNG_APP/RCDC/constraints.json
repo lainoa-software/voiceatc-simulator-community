@@ -1,12 +1,12 @@
 {
+  "schema": 3,
   "airport": "RCDC",
   "airac_min": 2610,
   "stars": {
     "TNN": {
       "YUNAN": {
         "altitude": {
-          "type": "at_or_above",
-          "ft": 3000
+          "at_or_above_ft": 3000
         }
       }
     }

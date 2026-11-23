@@ -1,0 +1,202 @@
+{
+  "airports": {
+    "EDDB": {
+      "repo_path": "E/ED/EDWW/BERLIN_TMA/EDDB/procedure_use.json",
+      "sha256": "374f5061fdb15843fbeb78e964a9f099e10125b40f769ced9b96883da2909b38",
+      "size_bytes": 889
+    },
+    "EDDF": {
+      "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_use.json",
+      "sha256": "38db40701fbb4b6ebecf151c1eee612ac8f19b9fac973cae23e9d4f9152a381d",
+      "size_bytes": 13690
+    },
+    "EDDG": {
+      "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_use.json",
+      "sha256": "2f306aaefb64228acedca72cbbfe6909754231a0b41cf5236e57ce6ea491cfef",
+      "size_bytes": 433
+    },
+    "EDDH": {
+      "repo_path": "E/ED/EDWW/HAMBURG_TMA/EDDH/procedure_use.json",
+      "sha256": "1bbd8f1cf381733908c3547fe8ce322590ec42223ebc250c405ee438531ecba9",
+      "size_bytes": 587
+    },
+    "EDDK": {
+      "repo_path": "E/ED/EDGG/KOELN_TMA/EDDK/procedure_use.json",
+      "sha256": "cb2e4f1e644f987c93ba7a986a59b739419b03bc04b14bddd5ee52fae8c914d4",
+      "size_bytes": 957
+    },
+    "EDDL": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDDL/procedure_use.json",
+      "sha256": "a251244a889062e5b58615466b231f91f2833471fa99a2bca747abc9bb7201e2",
+      "size_bytes": 509
+    },
+    "EDDN": {
+      "repo_path": "E/ED/EDMM/EDDN_TMA/EDDN/procedure_use.json",
+      "sha256": "599e8ded9de5b3e1f7f184f61c077868743a5e9413d694061ea01d3258efe9df",
+      "size_bytes": 2685
+    },
+    "EDDR": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/EDDR/procedure_use.json",
+      "sha256": "d6d65efbe2bb514abd33c450efd763c7815c22c8d232a9316d991a649cc1e8e0",
+      "size_bytes": 356
+    },
+    "EDDS": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDDS/procedure_use.json",
+      "sha256": "f90cdf96fb66fb862b3b5311490cc7328fc6a1ec6a97a56ebafb46146c9f14c2",
+      "size_bytes": 3866
+    },
+    "EDDV": {
+      "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDDV/procedure_use.json",
+      "sha256": "bde8c6ce6cdadff6a0d9ef8d92360386c11ceefb729859fa7e714231c8a3109f",
+      "size_bytes": 433
+    },
+    "EDDW": {
+      "repo_path": "E/ED/EDWW/BREMEN_TMA/EDDW/procedure_use.json",
+      "sha256": "ee919612e836e8d04f7801191f981369881520aec8c93f27d11ef4bdac5fead2",
+      "size_bytes": 356
+    },
+    "EDFH": {
+      "repo_path": "E/ED/EDGG/HAHN_TMA/EDFH/procedure_use.json",
+      "sha256": "1364e8b7144e6454e64b6f9f272858d09e0501baa6000a271fc687b49258bb97",
+      "size_bytes": 659
+    },
+    "EDLN": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDLN/procedure_use.json",
+      "sha256": "06c923b2070bc33a29bd032616b434d7fa9471778107fa7a20ea0c26fb1d27a9",
+      "size_bytes": 129
+    },
+    "EDLP": {
+      "repo_path": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLP/procedure_use.json",
+      "sha256": "0cd7e75312d880f14cc4a39b346eb5766a8c240180a2620bb5769c9441a935f0",
+      "size_bytes": 129
+    },
+    "EDLV": {
+      "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDLV/procedure_use.json",
+      "sha256": "c3f34ae5ef7aba6521972a9ec017bb6289754e98ccecc4f26a4df4698f8c8bad",
+      "size_bytes": 129
+    },
+    "EDLW": {
+      "repo_path": "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA/EDLW/procedure_use.json",
+      "sha256": "fb575c8793bdeb8d2b4b6be3d3a0c0e127c6c98670575bf4924ee667617f4907",
+      "size_bytes": 129
+    },
+    "EDSB": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDSB/procedure_use.json",
+      "sha256": "88b6721d7e950c8ba11b972ecb7c92d256ccaff6b6628063eb372c0e597dec01",
+      "size_bytes": 432
+    },
+    "EDTL": {
+      "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDTL/procedure_use.json",
+      "sha256": "81a6ece31f0c3ac2cac94ee236e4769c115d4c75fac5d746f2e9a8176a395a94",
+      "size_bytes": 506
+    },
+    "EDVE": {
+      "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDVE/procedure_use.json",
+      "sha256": "d6d54a9f10bbff0ba44d30a9900e49d1043d72bc3351601136dccf96441b856d",
+      "size_bytes": 279
+    },
+    "ENGM": {
+      "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_use.json",
+      "sha256": "038948879642649eb74551d9002fe2e6272c592d0a6bd3f93721250283e32923",
+      "size_bytes": 1309
+    },
+    "ESSA": {
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_use.json",
+      "sha256": "2a345a73cf5b8dd5fe5d6fc01a3a3fcb7205e5552d3141846bea48ca6dc79835",
+      "size_bytes": 7948
+    },
+    "ESSB": {
+      "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/procedure_use.json",
+      "sha256": "ab4e570c3472ddb9d0d98e9912aceeba113bdf0ecaae4eb5a777c57197ec5aaa",
+      "size_bytes": 129
+    },
+    "KMDW": {
+      "repo_path": "K/KZAU/CHICAGO_MDW_TMA/KMDW/procedure_use.json",
+      "sha256": "7c517ad3ef0c368794b4979be3cfa31133765a0f2b6cfdbef37a979d6437ba14",
+      "size_bytes": 129
+    },
+    "KMKE": {
+      "repo_path": "K/KZAU/MILWAUKEE_TMA/KMKE/procedure_use.json",
+      "sha256": "62474fd3c9cd8491816376cb80a3864967be09ac769b3cb63ad8746acf31484a",
+      "size_bytes": 129
+    },
+    "LEBL": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_use.json",
+      "sha256": "7317992e4e72356a9c46223aac8abea34a4855f0bc3dc8ccc759f6a3ddb253d2",
+      "size_bytes": 2241
+    },
+    "LEMD": {
+      "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/procedure_use.json",
+      "sha256": "b3187809e0c4b6e9132df8fdec0134d86327c433f59d9f55fd7519e2d7206a8e",
+      "size_bytes": 6917
+    },
+    "LEZG": {
+      "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/procedure_use.json",
+      "sha256": "55d3726a655f4e6683f35bc334abe1abc1ab524b4d96a66358b7b5fc2b61189f",
+      "size_bytes": 2435
+    },
+    "LOWW": {
+      "repo_path": "L/LO/LOVV/VIENNA_TMA/LOWW/procedure_use.json",
+      "sha256": "712ba3e32715bf1710779cf85d895c27741b1fe4c6a0f70d9353ab1660451fd6",
+      "size_bytes": 29089
+    },
+    "LTFM": {
+      "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_use.json",
+      "sha256": "bd4793d45dfd95342b59b5fa55b1b4bb43d1502c35362355cc0b1de710d6406e",
+      "size_bytes": 2660
+    },
+    "RCSS": {
+      "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/procedure_use.json",
+      "sha256": "78f44a5b53b95c47c562501722ff8e9fd3ffa6788fd21f378aef5dde0b093b1c",
+      "size_bytes": 227
+    },
+    "RJTT": {
+      "repo_path": "R/RJ/RJJJ/Tokyo_TMA/RJTT/procedure_use.json",
+      "sha256": "f60355330a56be09e3452bfcff7604f8e3c16876ed61ef3beea06e88734e2340",
+      "size_bytes": 1509
+    },
+    "VHHH": {
+      "repo_path": "V/VH/VHHK/HONGKONG_TMA/VHHH/procedure_use.json",
+      "sha256": "6988fe82952e91b8a5bafada479b613d4bd952c192b30fecd2cad99794cbdeff",
+      "size_bytes": 3700
+    },
+    "VTBD": {
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_use.json",
+      "sha256": "e470a8e4f1ac86442b39ddde21c68b30db707c625795c446b10a15748d562ea0",
+      "size_bytes": 4845
+    },
+    "VTBS": {
+      "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_use.json",
+      "sha256": "279c4d0e689d6995b15d9cede524de4b7c09f91cd5e09d10e47664f34647d3fa",
+      "size_bytes": 129
+    },
+    "WMKK": {
+      "repo_path": "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_use.json",
+      "sha256": "9be91a7b28a1b1252c39822325f6cb5daa9ed8ef7b6eca66abe75473f7b42c9c",
+      "size_bytes": 1914
+    },
+    "WSSS": {
+      "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_use.json",
+      "sha256": "de90a24bf72694b29274e7d1a39f8aa9f3518c230b5607c8633a7c4de44e2552",
+      "size_bytes": 714
+    },
+    "YMML": {
+      "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/YMML/procedure_use.json",
+      "sha256": "542d430ce82a684e15e9a16ffa48ad9cca66547c95ae9fcbff204b01a1a67acb",
+      "size_bytes": 129
+    },
+    "YSSY": {
+      "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/procedure_use.json",
+      "sha256": "4089e61fa2ee15b498b7deca72b76c3d1298f398f8e15ae46b4988c00a6f014b",
+      "size_bytes": 129
+    }
+  },
+  "published_at": "2026-11-21T08:15:36Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "requires": [
+    "community.airac_overrides",
+    "community.airspace_files",
+    "community.procedure_route_keys"
+  ],
+  "schema_version": 1
+}

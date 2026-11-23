@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEMG_APP",
+      "call_sign": "Malaga approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEMG_APP",
+      "unit": "LEMG_APP",
+      "frequency": "118.455"
+    }
+  ]
+}

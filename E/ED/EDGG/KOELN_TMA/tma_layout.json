@@ -1,0 +1,25 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDK_APP": {
+      "EDDK_APP": {
+        "positions": {
+          "EDDK_APP": [
+            "DKA1_DKA2_DKA3"
+          ]
+        },
+        "airports": [
+          "EDDK"
+        ],
+        "valid_for_runways": {
+          "EDDK": [
+            "31",
+            "13",
+            "1306",
+            "3124"
+          ]
+        }
+      }
+    }
+  }
+}

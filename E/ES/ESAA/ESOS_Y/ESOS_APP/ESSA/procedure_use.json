@@ -1,0 +1,614 @@
+{
+  "schema": 3,
+  "airport": "ESSA",
+  "airac_min": 2606,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "MENG2C"
+      ],
+      "runways": [
+        "01L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "HAPZ1G"
+      ],
+      "runways": [
+        "19R"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ELTO2H"
+      ],
+      "runways": [
+        "26"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS4L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BABA4L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "INWI1L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KOGA4L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NOSL6L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PETE2L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RESN4L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOVR5L"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN6Q"
+      ],
+      "configs": [
+        "11"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL6Q"
+      ],
+      "configs": [
+        "11"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN6Q"
+      ],
+      "configs": [
+        "11"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ROKN6Q"
+      ],
+      "configs": [
+        "11"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS6E"
+      ],
+      "configs": [
+        "15A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "INWI1E"
+      ],
+      "configs": [
+        "15A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NOSL6E"
+      ],
+      "configs": [
+        "15A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PETE2E"
+      ],
+      "configs": [
+        "15A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN6Q"
+      ],
+      "configs": [
+        "15B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS6E"
+      ],
+      "configs": [
+        "15B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL6Q"
+      ],
+      "configs": [
+        "15B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN6Q"
+      ],
+      "configs": [
+        "15B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN6Q"
+      ],
+      "configs": [
+        "15C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL6Q"
+      ],
+      "configs": [
+        "15C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN6Q"
+      ],
+      "configs": [
+        "15C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ROKN6Q"
+      ],
+      "configs": [
+        "15C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN4R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BABA4R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL4R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN4R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUMA6R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ROKN4R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TALE6R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOVR5R"
+      ],
+      "configs": [
+        "4"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN4R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BABA4R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL4R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN4R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUMA6R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ROKN4R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TALE6R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOVR5R"
+      ],
+      "configs": [
+        "5"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS4L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BABA4L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "INWI1L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUMA6R"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NOSL6L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PETE2L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TALE6R"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TOVR5L"
+      ],
+      "configs": [
+        "7"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS6E"
+      ],
+      "configs": [
+        "8"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "INWI1E"
+      ],
+      "configs": [
+        "8"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NOSL6E"
+      ],
+      "configs": [
+        "8"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PETE2E"
+      ],
+      "configs": [
+        "8"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS6E"
+      ],
+      "configs": [
+        "9A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "INWI1E"
+      ],
+      "configs": [
+        "9A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NOSL6E"
+      ],
+      "configs": [
+        "9A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PETE2E"
+      ],
+      "configs": [
+        "9A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN6Q"
+      ],
+      "configs": [
+        "9B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARS6E"
+      ],
+      "configs": [
+        "9B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL6Q"
+      ],
+      "configs": [
+        "9B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN6Q"
+      ],
+      "configs": [
+        "9B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABEN6Q"
+      ],
+      "configs": [
+        "9C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DIGL6Q"
+      ],
+      "configs": [
+        "9C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GALN6Q"
+      ],
+      "configs": [
+        "9C"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ROKN6Q"
+      ],
+      "configs": [
+        "9C"
+      ],
+      "spawn": false
+    }
+  ]
+}

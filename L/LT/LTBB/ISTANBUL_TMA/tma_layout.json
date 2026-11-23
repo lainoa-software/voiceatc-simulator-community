@@ -1,0 +1,79 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LTBA_APP": {
+      "1": {
+        "positions": {
+          "LTBA_APP": [
+            "IST"
+          ]
+        },
+        "airports": [
+          "LTBA",
+          "LTFJ",
+          "LTFM"
+        ],
+        "valid_for_runways": {
+          "LTBA": [
+            "NORTH",
+            "SOUTH"
+          ],
+          "LTFJ": [
+            "NORTH",
+            "SOUTH"
+          ],
+          "LTFM": [
+            "NORTH",
+            "SOUTH"
+          ]
+        }
+      },
+      "2N": {
+        "positions": {
+          "LTBA_APP": [
+            "SAD_NORTH_SCF_NORTH_SED_NORTH_SWD_NORTH"
+          ]
+        },
+        "airports": [
+          "LTBA",
+          "LTFJ",
+          "LTFM"
+        ],
+        "valid_for_runways": {
+          "LTBA": [
+            "NORTH"
+          ],
+          "LTFJ": [
+            "NORTH"
+          ],
+          "LTFM": [
+            "NORTH"
+          ]
+        }
+      },
+      "2S": {
+        "positions": {
+          "LTBA_APP": [
+            "SAD_SOUTH_SCF_SOUTH_SED_SOUTH_SWD_SOUTH"
+          ]
+        },
+        "airports": [
+          "LTBA",
+          "LTFJ",
+          "LTFM"
+        ],
+        "valid_for_runways": {
+          "LTBA": [
+            "SOUTH"
+          ],
+          "LTFJ": [
+            "SOUTH"
+          ],
+          "LTFM": [
+            "SOUTH"
+          ]
+        }
+      }
+    }
+  }
+}

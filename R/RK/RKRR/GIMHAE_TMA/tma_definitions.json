@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKPK_APP",
+      "call_sign": "Busan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKPK_APP",
+      "unit": "RKPK_APP",
+      "frequency": "125.500"
+    }
+  ]
+}

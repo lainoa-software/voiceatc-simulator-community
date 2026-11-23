@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "airport": "RKPC",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "sids": [
+        "CJU3L"
+      ],
+      "initial_climb_ft": 9000
+    },
+    {
+      "sids": [
+        "IPDA1L"
+      ],
+      "initial_climb_ft": 9000
+    }
+  ]
+}

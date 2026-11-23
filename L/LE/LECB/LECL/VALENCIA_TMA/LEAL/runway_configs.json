@@ -1,0 +1,18 @@
+{
+  "schema": 3,
+  "airport": "LEAL",
+  "runway_configs": [
+    {
+      "id": "EAST",
+      "name": "PREFERENTIAL",
+      "arr": "10",
+      "dep": "10"
+    },
+    {
+      "id": "WEST",
+      "name": "NON PREFERENTIAL",
+      "arr": "28",
+      "dep": "28"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
 {
+  "schema": 3,
   "airport": "YSSY",
   "airac_min": 2611,
   "sids": {
     "AVMOV1": {
       "OGESO": {
         "altitude": {
-          "type": "between",
-          "min_ft": 10000,
-          "max_ft": 11000
+          "at_or_above_ft": 10000,
+          "at_or_below_ft": 11000
         }
       }
     }

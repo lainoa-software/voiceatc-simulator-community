@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RCKH",
   "runway_configs": [
     {

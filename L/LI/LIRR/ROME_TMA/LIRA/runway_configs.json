@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "LIRA",
   "runway_configs": [
     {

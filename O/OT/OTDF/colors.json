@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "bg_color": "0f0f12",
   "assumed_tfc_color": "e1bf00",
   "incoming_tfc_color": "11dbff",

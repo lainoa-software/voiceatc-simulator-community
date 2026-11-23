@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDW_APP",
+      "call_sign": "Bremen approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDW_APP",
+      "unit": "EDDW_APP",
+      "frequency": "124.800"
+    }
+  ]
+}

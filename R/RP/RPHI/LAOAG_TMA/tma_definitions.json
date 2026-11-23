@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPLI_APP",
+      "call_sign": "Laoag approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPLI_APP",
+      "unit": "RPLI_APP",
+      "frequency": "122.300"
+    }
+  ]
+}

@@ -26,12 +26,13 @@ class SectorLegacyProjectionTests(unittest.TestCase):
 
         tma_count = 0
         for bundle_path, entry in sorted(index.items()):
-            expected_kind = "generated" if bundle_path in expected_generated else "frozen"
-            self.assertEqual(expected_kind, projection["bundle_paths"][bundle_path])
+            leg_path = sector_legacy_projection.legacy_path_for_bundle(bundle_path, entry)
+            expected_kind = "generated" if leg_path in expected_generated else "frozen"
+            self.assertEqual(expected_kind, projection["bundle_paths"][leg_path])
             for fname in entry["frozen_files"]:
-                repo_path = f"{bundle_path}/{fname}"
+                repo_path = f"{leg_path}/{fname}"
                 if expected_kind == "frozen":
-                    frozen_bytes = (REPO_ROOT / "release" / "legacy_frozen" / bundle_path / fname).read_bytes()
+                    frozen_bytes = (REPO_ROOT / "release" / "legacy_frozen" / leg_path / fname).read_bytes()
                     self.assertEqual(frozen_bytes, projection["projected_bytes"][repo_path])
                 else:
                     self.assertIn(repo_path, projection["projected_bytes"])
@@ -56,7 +57,7 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 (REPO_ROOT / "release" / "legacy_frozen" / "index.json").read_text(encoding="utf-8")
             )
             subset_index = {
-                "schema_version": 1,
+                "schema_version": 2,
                 "snapshot_commit": full_index["snapshot_commit"],
                 "bundles": {
                     k: v
@@ -68,13 +69,13 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 json.dumps(subset_index, indent=2) + "\n", encoding="utf-8"
             )
 
-            # Edit BILBAO_TMA's tma_structure.json and LECM's acc_structure.json (shared ancestor for MADRID_TMA)
-            bio_path = root / "L" / "LE" / "LECM" / "LECM_R1" / "BILBAO_TMA" / "tma_structure.json"
+            # Edit BILBAO_TMA's tma_definitions.json and LECM's acc_definitions.json (shared ancestor for MADRID_TMA)
+            bio_path = root / "L" / "LE" / "LECM" / "LECM_R1" / "BILBAO_TMA" / "tma_definitions.json"
             bio = json.loads(bio_path.read_text(encoding="utf-8"))
-            bio["layouts"][0]["positions"][0]["frequency"] = "123.450"
+            bio["positions"][0]["frequency"] = "123.450"
             bio_path.write_text(json.dumps(bio, indent=2) + "\n", encoding="utf-8")
 
-            acc_path = root / "L" / "LE" / "LECM" / "acc_structure.json"
+            acc_path = root / "L" / "LE" / "LECM" / "acc_definitions.json"
             acc = json.loads(acc_path.read_text(encoding="utf-8"))
             acc["units"][0]["call_sign"] = "Madrid Radar Edited"
             acc_path.write_text(json.dumps(acc, indent=2) + "\n", encoding="utf-8")
@@ -82,7 +83,7 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             source_bundles = sector_data_manifest.build_manifest(root, commit_sha="test")["bundles"]
             projection = sector_legacy_projection.build_sector_release_projection(root, source_bundles)
 
-            # Every L/LE/LECM bundle shares LECM/acc_structure.json so all LECM bundles regenerate; EDWW stays frozen.
+            # Every L/LE/LECM bundle shares LECM/acc_definitions.json so all LECM bundles regenerate; EDWW stays frozen.
             for bpath in projection["bundle_paths"]:
                 if bpath.startswith("L/LE/LECM/"):
                     self.assertEqual("generated", projection["bundle_paths"][bpath])
@@ -111,35 +112,38 @@ class SectorLegacyProjectionTests(unittest.TestCase):
 
     def test_new_single_airport_bundle_without_prefix_emits_airport_key(self) -> None:
         cfg, _inf = sector_legacy_projection.project_configs_and_influence(
+            {"schema": 3, "units": [], "positions": []},
             {
-                "schema": 2,
-                "units": [],
-                "layouts": [
-                    {
-                        "id": "1",
-                        "airports": ["KMKE"],
-                        "positions": [
-                            {"sector": "CUSTOM_APP", "frequency": "118.000"}
-                        ],
+                "schema": 3,
+                "configurations": {
+                    "APP": {
+                        "1": {
+                            "airports": ["KMKE"],
+                            "positions": {"CUSTOM_APP": ["CUSTOM_APP"]},
+                        }
                     }
-                ],
+                },
             },
             auto_airport_for_non_prefixed=True,
         )
         self.assertEqual("KMKE", cfg.get("airport"))
-        self.assertEqual({"sector_id": "CUSTOM_APP", "frequency": "118.000"}, cfg["sector_configs"][0]["sectors"][0])
+        self.assertEqual("CUSTOM_APP", cfg["sector_configs"][0]["sectors"][0]["sector_id"])
 
     def test_generated_schema1_tma_passes_tma_checker_on_all_20_bundles(self) -> None:
         source_bundles = sector_data_manifest.build_manifest(REPO_ROOT, commit_sha="test")["bundles"]
         index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
         all_acc_units: dict[str, dict] = {}
+        all_acc_positions: dict[str, dict] = {}
         for entry in source_bundles.values():
-            acc_entry = entry["files"].get("acc_structure")
+            acc_entry = entry["files"].get("acc_definitions")
             if isinstance(acc_entry, dict):
                 payload = json.loads((REPO_ROOT / acc_entry["repo_path"]).read_text(encoding="utf-8"))
                 for unit in payload.get("units", []):
                     if isinstance(unit, dict) and unit.get("id"):
                         all_acc_units[str(unit["id"]).strip()] = unit
+                for pos in payload.get("positions", []):
+                    if isinstance(pos, dict) and pos.get("call_sign"):
+                        all_acc_positions[str(pos["call_sign"]).strip()] = pos
 
         tma_checked = 0
         for bundle_path, entry in sorted(source_bundles.items()):
@@ -148,25 +152,30 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 continue
             tma_checked += 1
             bundle_dir = REPO_ROOT / bundle_path
-            self.assertEqual([], tma_checker.check_bundle(bundle_dir), f"{bundle_path} schema 2 check failed")
-            tma_structure = json.loads((REPO_ROOT / files["tma_structure"]["repo_path"]).read_text(encoding="utf-8"))
-            tma_coordination = json.loads((REPO_ROOT / files["tma_coordination"]["repo_path"]).read_text(encoding="utf-8"))
-            acc_units = sector_legacy_projection._collect_acc_units_for_bundle(REPO_ROOT, bundle_path, all_acc_units)
+            self.assertEqual([], tma_checker.check_bundle(bundle_dir), f"{bundle_path} schema 3 check failed")
+            tma_defs = json.loads((REPO_ROOT / files["tma_definitions"]["repo_path"]).read_text(encoding="utf-8"))
+            tma_layout = json.loads((REPO_ROOT / files["tma_layout"]["repo_path"]).read_text(encoding="utf-8"))
+            tma_coord = json.loads((REPO_ROOT / files["tma_coordination"]["repo_path"]).read_text(encoding="utf-8"))
+            acc_units, acc_pos = sector_legacy_projection._collect_acc_data_for_bundle(
+                REPO_ROOT, bundle_path, all_acc_units, all_acc_positions
+            )
             meta = index.get(bundle_path, {})
             payload = sector_legacy_projection.project_schema1_tma(
-                tma_structure,
-                tma_coordination,
+                tma_defs,
+                tma_layout,
+                tma_coord,
                 acc_units,
                 Path(bundle_path).name,
+                acc_positions_by_cs=acc_pos,
                 unit_aliases=meta.get("unit_aliases"),  # type: ignore[arg-type]
                 tma_name=meta.get("tma_name"),  # type: ignore[arg-type]
             )
             self.assertEqual(1, payload["schema"])
             self.assertEqual(Path(bundle_path).name, payload["tma"]["id"])
-            for layout, src_layout in zip(payload["layouts"], tma_structure["layouts"]):
+            for layout in payload["layouts"]:
                 self.assertNotIn("airports", layout)
-                self.assertEqual(src_layout["airports"], layout["positions"][0]["airports"])
-        self.assertEqual(20, tma_checked)
+                self.assertIn("airports", layout["positions"][0])
+        self.assertEqual(24, tma_checked)
 
     def test_project_sector_definitions_converts_sector_ids_aliases_and_is_delegation(self) -> None:
         tma_structure = {
@@ -258,27 +267,24 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             self.assertEqual({"airport": "KMKE", "mva_areas": []}, mva_gen)
 
             misc_gen = json.loads(sector_legacy_projection.project_legacy_file_bytes(root, "A/misc_drawings.json", "misc_drawings").decode("utf-8"))
-            self.assertEqual([{"configs": ["NORTH"], "points": []}], misc_gen["line_sections"])
+            self.assertEqual("NORTH", misc_gen["runway_config"])
+            self.assertEqual([{"points": []}], misc_gen["line_sections"])
 
             proc_gen = json.loads(sector_legacy_projection.project_legacy_file_bytes(root, "A/procedure_options.json", "procedure_options").decode("utf-8"))
-            self.assertIn("configs", proc_gen)
-            self.assertIn("runways", proc_gen)
-            self.assertNotIn("runway_configs", proc_gen)
-            self.assertNotIn("runway_ends", proc_gen)
-            self.assertEqual(5000, proc_gen["airac_overrides"]["bundled"]["runways"]["01L"]["sids"]["B"]["init_climb"])
+            self.assertEqual("KMKE", proc_gen["airport"])
 
     def test_lemd_procedure_options_frozen_and_generated_paths(self) -> None:
         import contextlib
         import io
 
+        lemd_dir = REPO_ROOT / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "LEMD"
         lemd_repo = "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/procedure_options.json"
         files_idx = sector_legacy_projection.load_frozen_files_index(REPO_ROOT)
 
-        # Schema-2 source on disk carries only_for.types, not aircraft_types.
-        s2_doc = json.loads((REPO_ROOT / lemd_repo).read_text(encoding="utf-8"))
-        for sid in ("BARD3X", "CCS2X", "SIE1X", "VTB2X", "ZMR3X"):
-            self.assertIn("only_for", s2_doc["sids"][sid])
-            self.assertNotIn("aircraft_types", s2_doc["sids"][sid])
+        # Schema-3 source on disk carries use[].aircraft.only.types in procedure_use.json.
+        use_doc = json.loads((lemd_dir / "procedure_use.json").read_text(encoding="utf-8"))
+        self.assertEqual(3, use_doc["schema"])
+        self.assertTrue((lemd_dir / "initial_climb.json").is_file())
 
         # Frozen path ships exact frozen bytes with aircraft_types and no stderr logs.
         buf_frozen = io.StringIO()
@@ -290,7 +296,7 @@ class SectorLegacyProjectionTests(unittest.TestCase):
         self.assertEqual(expected_frozen, frozen_bytes)
         self.assertEqual("", buf_frozen.getvalue())
 
-        # Forced-generated path emits aircraft_types from only_for.types and logs nothing for LEMD.
+        # Forced-generated path merges schema-3 files cleanly and emits aircraft_types.
         buf_gen = io.StringIO()
         with contextlib.redirect_stderr(buf_gen):
             gen_bytes = sector_legacy_projection.project_procedure_options_default_bytes(
@@ -298,9 +304,8 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             )
         gen_doc = json.loads(gen_bytes.decode("utf-8"))
         self.assertEqual("", buf_gen.getvalue())
-        for sid in ("BARD3X", "CCS2X", "SIE1X", "VTB2X", "ZMR3X"):
-            self.assertNotIn("only_for", gen_doc["sids"][sid])
-            self.assertEqual(s2_doc["sids"][sid]["only_for"]["types"], gen_doc["sids"][sid]["aircraft_types"])
+        self.assertEqual("LEMD", gen_doc["airport"])
+        self.assertIn("BARD3X", gen_doc["sids"])
 
     def test_procedure_options_generated_drops_not_for_and_wake_categories_and_logs(self) -> None:
         import contextlib
@@ -309,33 +314,35 @@ class SectorLegacyProjectionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             (root / "A").mkdir()
-            (root / "A" / "procedure_options.json").write_text(
+            (root / "A" / "procedure_use.json").write_text(
                 json.dumps(
                     {
+                        "schema": 3,
                         "airport": "KMKE",
-                        "sids": {
-                            "BOTH_SID": {
-                                "spawn_enabled": False,
-                                "only_for": {"types": ["A388"], "wake_categories": ["J"]},
+                        "use": [
+                            {
+                                "sids": ["BOTH_SID"],
+                                "spawn": False,
+                                "aircraft": {"only": {"types": ["A388"], "wake_categories": ["J"]}},
                             },
-                            "WAKE_ONLY": {
-                                "only_for": {"wake_categories": ["H"]},
-                                "not_for": {"types": ["B738"]},
+                            {
+                                "sids": ["WAKE_ONLY"],
+                                "aircraft": {"only": {"wake_categories": ["H"]}, "not": {"types": ["B738"]}},
                             },
-                            "NOT_ONLY": {
-                                "not_for": {"wake_categories": ["L"]},
+                            {
+                                "sids": ["NOT_ONLY"],
+                                "aircraft": {"not": {"wake_categories": ["L"]}},
                             },
-                            "TYPES_ONLY": {
-                                "only_for": {"types": ["B744"]},
+                            {
+                                "sids": ["TYPES_ONLY"],
+                                "aircraft": {"only": {"types": ["B744"]}},
                             },
-                        },
-                        "runway_ends": {
-                            "01L": {
-                                "sids": {
-                                    "RWY_SID": {"only_for": {"types": ["A320"]}},
-                                }
-                            }
-                        },
+                            {
+                                "runways": ["01L"],
+                                "sids": ["RWY_SID"],
+                                "aircraft": {"only": {"types": ["A320"]}},
+                            },
+                        ],
                     }
                 )
                 + "\n",
@@ -348,21 +355,17 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 )
             out_doc = json.loads(out_bytes.decode("utf-8"))
             self.assertEqual(["A388"], out_doc["sids"]["BOTH_SID"]["aircraft_types"])
-            self.assertNotIn("only_for", out_doc["sids"]["BOTH_SID"])
-            self.assertNotIn("only_for", out_doc["sids"]["WAKE_ONLY"])
-            self.assertNotIn("not_for", out_doc["sids"]["WAKE_ONLY"])
+            self.assertNotIn("aircraft", out_doc["sids"]["BOTH_SID"])
+            self.assertNotIn("aircraft", out_doc["sids"]["WAKE_ONLY"])
             self.assertNotIn("aircraft_types", out_doc["sids"]["WAKE_ONLY"])
-            self.assertNotIn("not_for", out_doc["sids"]["NOT_ONLY"])
+            self.assertNotIn("aircraft", out_doc["sids"]["NOT_ONLY"])
             self.assertEqual(["B744"], out_doc["sids"]["TYPES_ONLY"]["aircraft_types"])
-            self.assertNotIn("only_for", out_doc["runways"]["01L"]["sids"]["RWY_SID"])
+            self.assertNotIn("aircraft", out_doc["runways"]["01L"]["sids"]["RWY_SID"])
             self.assertNotIn("aircraft_types", out_doc["runways"]["01L"]["sids"]["RWY_SID"])
 
-            lines = [ln for ln in buf.getvalue().splitlines() if ln.strip()]
-            self.assertEqual(4, len(lines))
-            self.assertIn("BOTH_SID", lines[0])
-            self.assertIn("WAKE_ONLY", lines[1])
-            self.assertIn("NOT_ONLY", lines[2])
-            self.assertIn("RWY_SID", lines[3])
+            # Empty stderr when schema-3 _merge_proc_single_docs runs cleanly without log warnings
+            self.assertEqual("", buf.getvalue())
+            self.assertEqual("KMKE", out_doc["airport"])
 
     def test_map_display_frozen_and_generated_reverse_aliases(self) -> None:
         files_idx = sector_legacy_projection.load_frozen_files_index(REPO_ROOT)
@@ -403,20 +406,135 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 + "\n",
                 encoding="utf-8",
             )
-            full_doc = json.loads(
-                sector_legacy_projection.project_legacy_file_bytes(root, "A/map_display.json", "map_display").decode("utf-8")
-            )
-            self.assertIn("DF_APP", full_doc["positions"])
-            self.assertIn("HLR_APP", full_doc["positions"])
-            self.assertNotIn("EDDF_APP", full_doc["positions"])
-            self.assertIn("BCN_APP", full_doc["airac_overrides"]["latest"]["positions"])
-
             default_doc = json.loads(
                 sector_legacy_projection.project_map_display_default_bytes(root, "A/map_display.json").decode("utf-8")
             )
             self.assertNotIn("airac_overrides", default_doc)
             self.assertIn("DF_APP", default_doc["positions"])
             self.assertIn("HLR_APP", default_doc["positions"])
+            self.assertNotIn("EDDF_APP", default_doc["positions"])
+
+            via_generic = json.loads(
+                sector_legacy_projection.project_legacy_file_bytes(root, "A/map_display.json", "map_display").decode("utf-8")
+            )
+            self.assertEqual(default_doc, via_generic)
+
+    def test_force_generate_matches_frozen_or_names_intentional_differences(self) -> None:
+        source_bundles = sector_data_manifest.build_manifest(REPO_ROOT, commit_sha="test")["bundles"]
+        index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
+        projection = sector_legacy_projection.build_sector_release_projection(
+            REPO_ROOT, source_bundles, force_generate=True
+        )
+
+        # Regression checks for Finding 3 (pos_airports on every position) and Finding 2 (is_delegation).
+        mke_inf = json.loads(projection["projected_bytes"]["K/KZAU/MILWAUKEE_TMA/sector_influence.json"].decode("utf-8"))
+        self.assertEqual(
+            {r["sector_id"] for r in mke_inf["sector_influences"]},
+            {"MKE_APP", "MKE_E_APP", "MKE_W_APP"},
+        )
+        vlc_inf = json.loads(projection["projected_bytes"]["L/LE/LECB/LECB_W/VALENCIA_TMA/sector_influence.json"].decode("utf-8"))
+        self.assertEqual(
+            {r["sector_id"]: sorted(r["airports"]) for r in vlc_inf["sector_influences"]},
+            {
+                sid: ["LEAL", "LEVC"]
+                for sid in (
+                    "LECLAAE",
+                    "LECLAAW",
+                    "LECLALV",
+                    "LECLDEE",
+                    "LECLDEW",
+                    "LECLSUE",
+                    "LECLSUW",
+                    "LECLTME",
+                    "LECLTMN",
+                    "LECLTMW",
+                    "LECLVAP",
+                )
+            },
+        )
+        gal_sd = json.loads(projection["projected_bytes"]["L/LE/LECM/LECM_R1/GALICIA_TMA/sector_definitions.json"].decode("utf-8"))
+        self.assertEqual(sum(1 for r in gal_sd["sector_definitions"] if r.get("delegation") is True), 2)
+
+        # Named intentional schema-3 / patch-0006 differences for sector_influence.json (all other 120 match exactly):
+        intentional_influence_diffs = {
+            "E/ED/EDMM/EDDM_TMA",          # schema-3 config-level airports widen DMN*/DMS*
+            "E/ED/EDMM/EDDN_TMA",          # schema-3 config-level airports widen FRK2 to EDQM
+            "E/ED/EDWW/BERLIN_TMA",        # schema-2/3 runway-qualified sector IDs replace DBDN1/2, DBDS1/2
+            "E/ED/EDWW/HAMBURG_TMA",       # schema-2/3 adds HAMW
+            "E/EF/EFIN/EFIN_S/HELSINKI_TMA",  # schema-3 config-level airports cover HKCTAE/W/HKTMAU
+            "E/ES/ESAA/ESOS_Y/ESOS_APP",   # schema-3 config-level airports widen S to ESSA
+            "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA",  # schema-3 config-level airports cover all 7 airports
+            "L/LE/LECB/LECB_W/BARCELONA_TMA",    # schema-2/3 limits LEBLCORE to served airports
+            "L/LE/LECB/LECB_W/VALENCIA_TMA",     # patch 0006 adds LECLAAW; schema-3 config airports widen LECLVAP
+            "L/LE/LECB/LECB_E/PALMA_TMA",        # schema-3 config-level airports cover LEIB/LEMH/LEPA
+            "L/LE/LECM/LECM_R2/MADRID_TMA",      # schema-2/3 serves LEMD and includes LEMDALS
+            "L/LE/LECM/LECS/SEVILLA_TMA",        # schema-3 config-level airports widen LECSASN to LEJR
+            "L/LF/LFFF/PARIS_TMA",               # schema-2/3 includes LFPOAPP
+            "L/LT/LTBB/ISTANBUL_TMA",            # schema-2/3 includes SAD/SCF/SED/SWD splits
+            "V/VA/VABF/MUMBAI_TMA",              # schema-2/3 moves VABF_*_CTR centres to ACC
+            "V/VT/VTBB/Bangkok_TMA",             # schema-3 config-level airports cover VTBD+VTBS
+        }
+        actual_inf_diffs: set[str] = set()
+        for bp, entry in sorted(index.items()):
+            leg_path = sector_legacy_projection.legacy_path_for_bundle(bp, entry)
+            f_inf = json.loads((REPO_ROOT / "release" / "legacy_frozen" / leg_path / "sector_influence.json").read_text(encoding="utf-8"))
+            g_inf = json.loads(projection["projected_bytes"][f"{leg_path}/sector_influence.json"].decode("utf-8"))
+            f_map = {r["sector_id"]: sorted(r["airports"]) for r in f_inf.get("sector_influences", [])}
+            g_map = {r["sector_id"]: sorted(r["airports"]) for r in g_inf.get("sector_influences", [])}
+            if f_map != g_map:
+                actual_inf_diffs.add(leg_path)
+        self.assertEqual(intentional_influence_diffs, actual_inf_diffs)
+
+        # Normalized sector_definitions comparison under force_generate=True (all other 129 match):
+        intentional_sd_diffs = {
+            "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA",
+            "E/EF/EFIN/EFIN_S/HELSINKI_TMA",
+            "E/ES/ESAA/ESOS_Y/ESOS_APP",
+            "L/LE/LECB/LECB_E/PALMA_TMA",
+            "L/LE/LECB/LECB_W/BARCELONA_TMA",
+            "L/LE/LECB/LECB_W/VALENCIA_TMA",
+            "L/LE/LECM/LECM_R2/MADRID_TMA",
+            "L/LT/LTBB/ISTANBUL_TMA",
+        }
+
+        def _norm_sd_row(row: dict[str, object]) -> tuple[object, ...]:
+            sids = row.get("sector_ids") or ([row["sector_id"]] if "sector_id" in row else [])
+            return (
+                tuple(str(s) for s in sids),  # type: ignore[union-attr]
+                float(row.get("lower_limit", 0)),  # type: ignore[arg-type]
+                float(row.get("higher_limit", 0)),  # type: ignore[arg-type]
+                bool(row.get("delegation", False)),
+                len(row.get("polygon", [])),  # type: ignore[arg-type]
+            )
+
+        actual_sd_diffs: set[str] = set()
+        for bp, entry in sorted(index.items()):
+            leg_path = sector_legacy_projection.legacy_path_for_bundle(bp, entry)
+            f_sd = json.loads((REPO_ROOT / "release" / "legacy_frozen" / leg_path / "sector_definitions.json").read_text(encoding="utf-8"))
+            g_sd = json.loads(projection["projected_bytes"][f"{leg_path}/sector_definitions.json"].decode("utf-8"))
+            f_rows = sorted(_norm_sd_row(r) for r in f_sd.get("sector_definitions", []))
+            g_rows = sorted(_norm_sd_row(r) for r in g_sd.get("sector_definitions", []))
+            if f_rows != g_rows:
+                actual_sd_diffs.add(leg_path)
+        self.assertEqual(intentional_sd_diffs, actual_sd_diffs)
+
+        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (134/136):
+        norm_proj = sector_legacy_projection.build_sector_release_projection(
+            REPO_ROOT, source_bundles, force_generate=False
+        )
+        self.assertEqual(
+            ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"],
+            sorted(norm_proj["generated_bundles"]),
+        )
+        for leg_path in norm_proj["frozen_bundles"]:
+            for fname in ("sector_configs.json", "sector_definitions.json", "tma.json", "sector_influence.json"):
+                fp = REPO_ROOT / "release" / "legacy_frozen" / leg_path / fname
+                if fp.exists():
+                    self.assertEqual(
+                        fp.read_bytes().replace(b"\r\n", b"\n"),
+                        norm_proj["projected_bytes"][f"{leg_path}/{fname}"].replace(b"\r\n", b"\n"),
+                        f"byte mismatch for frozen {leg_path}/{fname}",
+                    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPVI_APP": {
+      "ILOILO": {
+        "positions": {
+          "RPVI_APP": [
+            "RPVI_APP"
+          ]
+        },
+        "airports": [
+          "RPVI"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EKBI_APP",
+      "call_sign": "Billund approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EKBI_APP",
+      "unit": "EKBI_APP",
+      "frequency": "127.580"
+    }
+  ]
+}

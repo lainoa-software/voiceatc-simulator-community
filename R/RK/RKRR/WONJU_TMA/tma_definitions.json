@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKNW_APP",
+      "call_sign": "Wonju approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKNW_APP",
+      "unit": "RKNW_APP",
+      "frequency": "130.200"
+    }
+  ]
+}

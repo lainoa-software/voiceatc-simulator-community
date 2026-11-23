@@ -1,0 +1,25 @@
+{
+  "schema": 3,
+  "configurations": {
+    "VABB_APP": {
+      "APP_ONLY": {
+        "positions": {
+          "VABB_APP": [
+            "VABB_APP"
+          ]
+        },
+        "airports": [
+          "VABB"
+        ],
+        "valid_for_runways": {
+          "VABB": [
+            "RWY27",
+            "RWY09",
+            "RWY14",
+            "RWY32"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "airport": "KASE",
+  "variants": [
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "DBL_R163_ENTRY",
+      "default_reference_id": "ASPEN",
+      "references": [
+        {
+          "id": "ASPEN",
+          "name": "Aspen",
+          "aliases": ["the town of Aspen"],
+          "geometry": { "kind": "point", "leg_id": "ASPEN_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "CARBONDALE_BASALT_ENTRY",
+      "default_reference_id": "CARBONDALE",
+      "references": [
+        {
+          "id": "CARBONDALE",
+          "name": "Carbondale",
+          "aliases": ["the town of Carbondale"],
+          "geometry": { "kind": "point", "leg_id": "CARBONDALE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "MT_SOPRIS_ENTRY",
+      "default_reference_id": "MOUNT_SOPRIS",
+      "references": [
+        {
+          "id": "MOUNT_SOPRIS",
+          "name": "Mount Sopris",
+          "aliases": ["Sopris"],
+          "geometry": { "kind": "point", "leg_id": "MT_SOPRIS_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "CAPITAL_PEAK_ENTRY",
+      "default_reference_id": "CAPITAL_PEAK",
+      "references": [
+        {
+          "id": "CAPITAL_PEAK",
+          "name": "Capital Peak",
+          "aliases": ["Capital"],
+          "geometry": { "kind": "point", "leg_id": "CAPITAL_PEAK_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "CASTLE_PEAK_ENTRY",
+      "default_reference_id": "CASTLE_PEAK",
+      "references": [
+        {
+          "id": "CASTLE_PEAK",
+          "name": "Castle Peak",
+          "aliases": ["Castle"],
+          "geometry": { "kind": "point", "leg_id": "CASTLE_PEAK_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "INDEPENDENCE_PASS_ENTRY",
+      "default_reference_id": "INDEPENDENCE_PASS",
+      "references": [
+        {
+          "id": "INDEPENDENCE_PASS",
+          "name": "Independence Pass",
+          "aliases": ["the pass"],
+          "geometry": { "kind": "point", "leg_id": "INDEPENDENCE_PASS_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "ROARING_FORK_VISUAL_15",
+      "variant_id": "HOLY_CROSS_RUEDI_ENTRY",
+      "default_reference_id": "MOUNT_OF_THE_HOLY_CROSS",
+      "references": [
+        {
+          "id": "MOUNT_OF_THE_HOLY_CROSS",
+          "name": "Mount of the Holy Cross",
+          "aliases": ["Holy Cross"],
+          "geometry": { "kind": "point", "leg_id": "HOLY_CROSS_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "ROARING FORK VISUAL RWY 15",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/05889ROARINGFORK_VIS15.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

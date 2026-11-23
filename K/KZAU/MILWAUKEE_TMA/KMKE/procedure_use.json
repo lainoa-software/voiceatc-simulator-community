@@ -1,0 +1,11 @@
+{
+  "schema": 3,
+  "airport": "KMKE",
+  "airac_min": 2606,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    }
+  ]
+}

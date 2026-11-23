@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCYU_APP",
+      "call_sign": "Hualien approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCYU_APP",
+      "unit": "RCYU_APP",
+      "frequency": "124.000"
+    }
+  ]
+}

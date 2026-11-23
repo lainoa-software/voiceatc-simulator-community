@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KLGA_APP",
+      "call_sign": "New York approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KLGA_APP",
+      "unit": "KLGA_APP",
+      "frequency": "120.800"
+    }
+  ]
+}

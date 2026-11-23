@@ -3,43 +3,96 @@
     {
       "dataset": "sector_data",
       "kind": "tma",
-      "requires": ["community.tma_file"]
+      "requires": [
+        "community.tma_file"
+      ]
     },
     {
       "dataset": "sector_data",
-      "kind": "tma_structure",
-      "requires": ["community.airspace_files"]
+      "kind": "tma_definitions",
+      "requires": [
+        "community.airspace_files"
+      ]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "tma_layout",
+      "requires": [
+        "community.airspace_files"
+      ]
     },
     {
       "dataset": "sector_data",
       "kind": "tma_coordination",
-      "requires": ["community.airspace_files"]
+      "requires": [
+        "community.airspace_files"
+      ]
     },
     {
       "dataset": "sector_data",
-      "kind": "acc_structure",
-      "requires": ["community.airspace_files"]
+      "kind": "acc_definitions",
+      "requires": [
+        "community.airspace_files"
+      ]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "acc_layout",
+      "requires": [
+        "community.airspace_files"
+      ]
     },
     {
       "dataset": "sector_data",
       "kind": "acc_coordination",
-      "requires": ["community.airspace_files"]
+      "requires": [
+        "community.airspace_files"
+      ]
+    },
+    {
+      "dataset": "sector_data",
+      "kind": "definitions_schema3",
+      "requires": [
+        "community.airspace_files"
+      ]
+    },
+    {
+      "dataset": "sector_data",
+      "path": "L/LE/LECB/LECP/*",
+      "requires": [
+        "community.airspace_files"
+      ]
+    },
+    {
+      "dataset": "sector_data",
+      "path": "L/LE/LECB/LECL/*",
+      "requires": [
+        "community.airspace_files"
+      ]
     },
     {
       "dataset": "routes",
       "path": "ROUTES/full/starless_arrivals.tsv",
-      "requires": ["routes.starless_arrivals"]
+      "requires": [
+        "routes.starless_arrivals"
+      ]
     },
     {
       "dataset": "routes",
       "path": "ROUTES/full/short_hop_direct.tsv",
-      "requires": ["routes.short_hop_direct"]
+      "requires": [
+        "routes.short_hop_direct"
+      ]
     },
     {
       "dataset": "routes",
       "path": "ROUTES/full/route_rules.tsv",
-      "requires": ["routes.route_rules"],
-      "channels": ["closed-beta"]
+      "requires": [
+        "routes.route_rules"
+      ],
+      "channels": [
+        "closed-beta"
+      ]
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDS_APP",
+      "call_sign": "Stuttgart approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "119.200"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDS_APP",
+      "unit": "EDDS_APP",
+      "frequency": "125.050"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCMQ_APP",
+      "call_sign": "Taichung approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCMQ_APP",
+      "unit": "RCMQ_APP",
+      "frequency": "130.100"
+    }
+  ]
+}

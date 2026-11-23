@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKTU_APP",
+      "call_sign": "Cheongju approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKTU_APP",
+      "unit": "RKTU_APP",
+      "frequency": "134.000"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDG_APP": {
+      "EDDG_APP": {
+        "positions": {
+          "EDDG_APP": [
+            "HMM1_HMM2_HMM3_HMM4_HMM5_HMM6"
+          ]
+        },
+        "airports": [
+          "EDDG"
+        ],
+        "valid_for_runways": {
+          "EDDG": [
+            "25",
+            "07"
+          ]
+        }
+      }
+    }
+  }
+}

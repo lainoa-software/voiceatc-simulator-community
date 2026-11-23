@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDV_APP",
+      "call_sign": "Hannover approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDV_APP",
+      "unit": "EDDV_APP",
+      "frequency": "118.055"
+    }
+  ]
+}

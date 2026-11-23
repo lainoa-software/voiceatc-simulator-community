@@ -1,0 +1,49 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPCS_APP",
+      "call_sign": "Cascais approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPCS_ATMERWY02_APP",
+      "unit": "LPCS_APP",
+      "frequency": "119.105"
+    },
+    {
+      "call_sign": "LPCS_ATMORWY02_APP",
+      "unit": "LPCS_APP",
+      "frequency": "123.980"
+    },
+    {
+      "call_sign": "LPCS_ARRLIRWY02_APP",
+      "unit": "LPCS_APP",
+      "frequency": "125.130"
+    },
+    {
+      "call_sign": "LPCS_APP",
+      "unit": "LPCS_APP",
+      "frequency": "119.105"
+    },
+    {
+      "call_sign": "LPCS_ATMERWY20_APP",
+      "unit": "LPCS_APP",
+      "frequency": "119.105"
+    },
+    {
+      "call_sign": "LPCS_ATMORWY20_APP",
+      "unit": "LPCS_APP",
+      "frequency": "123.980"
+    },
+    {
+      "call_sign": "LPCS_ARRLIRWY20_APP",
+      "unit": "LPCS_APP",
+      "frequency": "125.130"
+    }
+  ]
+}

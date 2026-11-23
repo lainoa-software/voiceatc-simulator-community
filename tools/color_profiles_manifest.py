@@ -37,6 +37,7 @@ FILE_KIND_BY_NAME = {file_name: kind for kind, file_name in PROFILE_FILE_NAMES.i
 FILE_KIND_ORDER = ("colors", "style")
 ALLOWED_SCOPE_DEPTHS = {1, 2, 3, 4, 5}
 LEGACY_ALLOWED_SCOPE_DEPTHS = {2, 3, 4, 5}
+SKINNED_SCOPES = frozenset({"E/ED", "K", "L/LE"})
 HIERARCHY_REGISTRY_PATH = Path("documentation") / "content_hierarchy.json"
 EXPECTED_US_RELEASE_ALIASES = {f"K/K{chr(letter)}" for letter in range(ord("A"), ord("Z") + 1)}
 HEX_COLOR_RE = re.compile(r"^[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$")
@@ -85,16 +86,23 @@ def validate_colors_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
     if not payload:
         raise ValueError(f"{path}: colors.json must not be empty")
+    if "schema" in payload:
+        schema = payload["schema"]
+        if isinstance(schema, bool) or schema != 3:
+            raise ValueError(f"{path}: 'schema' must be 3")
 
     for key, value in payload.items():
+        if key == "schema":
+            continue
         if not isinstance(key, str) or not key.endswith("_color"):
             raise ValueError(f"{path}: colors.json only accepts top-level '*_color' keys")
         _validate_hex_color(value, key, path)
 
+    canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {
         "repo_path": safe_repo_path(path, root),
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
+        "sha256": hashlib.sha256(canonical).hexdigest(),
+        "size_bytes": len(canonical),
     }
 
 
@@ -102,8 +110,14 @@ def validate_style_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
     if not payload:
         raise ValueError(f"{path}: style.json must not be empty")
+    if "schema" in payload:
+        schema = payload["schema"]
+        if isinstance(schema, bool) or schema != 3:
+            raise ValueError(f"{path}: 'schema' must be 3")
 
     for key, value in payload.items():
+        if key == "schema":
+            continue
         if key == "defined_symbols":
             if not isinstance(value, dict) or not value:
                 raise ValueError(f"{path}: 'defined_symbols' must be a non-empty object")
@@ -153,16 +167,23 @@ def validate_style_file(path: Path, root: Path = ROOT) -> dict[str, object]:
         if not isinstance(value, str) or not value.strip():
             raise ValueError(f"{path}: '{key}' must be a non-empty string")
 
+    canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {
         "repo_path": safe_repo_path(path, root),
-        "sha256": hashlib.sha256(raw_bytes).hexdigest(),
-        "size_bytes": len(raw_bytes),
+        "sha256": hashlib.sha256(canonical).hexdigest(),
+        "size_bytes": len(canonical),
     }
 
 
 def validate_profile_directory(profile_dir: Path, profile_files: dict[str, Path], root: Path = ROOT) -> dict[str, object]:
     scope_path = safe_repo_path(profile_dir, root)
     _validate_scope_depth(scope_path, profile_dir)
+    if (root / "release" / "legacy_frozen" / "index.json").is_file() and (
+        scope_path in SKINNED_SCOPES or any(scope_path.startswith(s + "/") for s in SKINNED_SCOPES)
+    ):
+        raise ValueError(
+            f"{scope_path}: uses a built-in radar skin; active colors.json/style.json must not live here"
+        )
 
     if "colors" not in profile_files:
         raise ValueError(f"{scope_path}: missing color profile files: colors")
@@ -275,9 +296,104 @@ def _validate_release_projection(profiles: dict[str, object], archive_sources: d
         raise ValueError("release color manifest paths do not match archive source mappings")
 
 
+def _legacy_frozen_profiles(root: Path) -> tuple[dict[str, dict[str, object]], dict[str, bytes]]:
+    """Return (profiles_by_scope, generated_bytes) for legacy release projection from frozen index."""
+    index_path = root / "release" / "legacy_frozen" / "index.json"
+    if not index_path.is_file():
+        return {}, {}
+    payload = json.loads(index_path.read_text(encoding="utf-8"))
+    files = payload.get("files", {})
+    if not isinstance(files, dict):
+        return {}, {}
+
+    profiles: dict[str, dict[str, object]] = {}
+    legacy_sources: dict[str, bytes] = {}
+    for repo_path, meta in files.items():
+        if not isinstance(meta, dict):
+            continue
+        kind = meta.get("kind")
+        if kind not in PROFILE_FILE_NAMES:
+            continue
+        frozen_rel = str(meta.get("frozen_file", ""))
+        frozen_path = root / "release" / "legacy_frozen" / frozen_rel
+        if not frozen_rel or not frozen_path.is_file():
+            continue
+        sources = meta.get("sources")
+        is_legacy_only = bool(meta.get("legacy_only"))
+        sources_fresh = is_legacy_only or (
+            isinstance(sources, dict)
+            and all(
+                (root / str(srel)).is_file()
+                and hashlib.sha256(
+                    (root / str(srel)).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+                ).hexdigest()
+                == str(ssha)
+                for srel, ssha in sources.items()
+            )
+        )
+        if not sources_fresh:
+            continue
+        raw = frozen_path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        scope = str(repo_path).rsplit("/", 1)[0]
+        entry = {
+            "repo_path": str(repo_path),
+            "sha256": hashlib.sha256(raw).hexdigest(),
+            "size_bytes": len(raw),
+            "_source_file": f"release/legacy_frozen/{frozen_rel}",
+        }
+        profiles.setdefault(scope, {"files": {}})["files"][kind] = entry  # type: ignore[index]
+        legacy_sources[str(repo_path)] = raw
+    return profiles, legacy_sources
+
+
 def build_release_projection(root: Path = ROOT, commit_sha: str | None = None) -> dict[str, object]:
     source_manifest = build_manifest(root, commit_sha=commit_sha)
-    source_profiles = source_manifest["profiles"]
+    raw_source_profiles = source_manifest["profiles"]
+    frozen_profiles, _frozen_raw = _legacy_frozen_profiles(root)
+
+    # Merge canonical source profiles (projecting schema-3 -> frozen or schema-stripped legacy)
+    # with legacy_only skinned compatibility profiles from release/legacy_frozen/.
+    source_profiles: dict[str, dict[str, object]] = {}
+    source_on_disk: dict[str, str] = {}
+    generated_bytes: dict[str, bytes] = {}
+    for scope, profile_variant in raw_source_profiles.items():
+        if not isinstance(profile_variant, dict) or not isinstance(profile_variant.get("files"), dict):
+            raise ValueError(f"source color scope '{scope}' has invalid files")
+        frozen_scope_files = (frozen_profiles.get(scope) or {}).get("files", {})  # type: ignore[union-attr]
+        out_files: dict[str, object] = {}
+        for kind, entry in profile_variant["files"].items():
+            repo_path = str(entry["repo_path"])
+            f_entry = frozen_scope_files.get(kind) if isinstance(frozen_scope_files, dict) else None
+            if isinstance(f_entry, dict):
+                source_on_disk[repo_path] = str(f_entry["_source_file"])
+                out_files[kind] = {k: v for k, v in f_entry.items() if k != "_source_file"}
+            else:
+                src_doc = json.loads((root / repo_path).read_text(encoding="utf-8"))
+                if isinstance(src_doc, dict) and "schema" in src_doc:
+                    stripped = {k: v for k, v in src_doc.items() if k != "schema"}
+                    raw = (json.dumps(stripped, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+                    generated_bytes[repo_path] = raw
+                    source_on_disk[repo_path] = repo_path
+                    out_files[kind] = {
+                        "repo_path": repo_path,
+                        "sha256": hashlib.sha256(raw).hexdigest(),
+                        "size_bytes": len(raw),
+                    }
+                else:
+                    source_on_disk[repo_path] = repo_path
+                    out_files[kind] = dict(entry)
+        source_profiles[scope] = {"files": out_files}
+
+    for scope, f_profile in frozen_profiles.items():
+        if scope in source_profiles:
+            continue
+        out_files = {}
+        for kind, f_entry in f_profile["files"].items():  # type: ignore[union-attr]
+            repo_path = str(f_entry["repo_path"])
+            source_on_disk[repo_path] = str(f_entry["_source_file"])
+            out_files[kind] = {k: v for k, v in f_entry.items() if k != "_source_file"}
+        source_profiles[scope] = {"files": out_files}
+
     alias_groups = _release_alias_groups(root)
     missing_sources = set(alias_groups) - set(source_profiles)
     if missing_sources:
@@ -298,11 +414,11 @@ def build_release_projection(root: Path = ROOT, commit_sha: str | None = None) -
                 repo_path = str(entry["repo_path"])
                 if repo_path in archive_sources:
                     raise ValueError(f"duplicate release archive path '{repo_path}'")
-                archive_sources[repo_path] = repo_path
+                archive_sources[repo_path] = source_on_disk.get(repo_path, repo_path)
             continue
 
         for alias in aliases:
-            if alias in source_profiles or alias in profiles:
+            if alias in raw_source_profiles or alias in profiles:
                 raise ValueError(f"release color alias collides with source scope '{alias}'")
             alias_files: dict[str, object] = {}
             for kind, entry in files.items():
@@ -315,16 +431,19 @@ def build_release_projection(root: Path = ROOT, commit_sha: str | None = None) -
                 alias_entry = dict(entry)
                 alias_entry["repo_path"] = archive_path
                 alias_files[kind] = alias_entry
-                archive_sources[archive_path] = source_path
+                archive_sources[archive_path] = source_on_disk.get(source_path, source_path)
             profiles[alias] = {"files": alias_files}
 
     sorted_profiles = dict(sorted(profiles.items()))
     sorted_archive_sources = dict(sorted(archive_sources.items()))
     _validate_release_projection(sorted_profiles, sorted_archive_sources)
-    return {
+    result: dict[str, object] = {
         "profiles": sorted_profiles,
         "archive_sources": sorted_archive_sources,
     }
+    if generated_bytes:
+        result["generated_bytes"] = generated_bytes
+    return result
 
 
 def main() -> int:

@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "OMAA_APP",
+      "call_sign": "Abu Dhabi approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "OMAA_APP",
+      "unit": "OMAA_APP",
+      "frequency": "124.400"
+    },
+    {
+      "call_sign": "OMAA_CW_APP",
+      "unit": "OMAA_APP",
+      "frequency": "124.625"
+    },
+    {
+      "call_sign": "OMAA_NE_APP",
+      "unit": "OMAA_APP",
+      "frequency": "135.350"
+    }
+  ]
+}

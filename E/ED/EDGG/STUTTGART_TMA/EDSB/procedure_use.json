@@ -1,0 +1,35 @@
+{
+  "schema": 3,
+  "airport": "EDSB",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "GAGS5N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GAGS6P"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "STR6P"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "TUBL9N"
+      ],
+      "spawn": false
+    }
+  ]
+}

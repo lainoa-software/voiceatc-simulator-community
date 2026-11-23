@@ -1,0 +1,27 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EKBI_APP": {
+      "BILLUND_TMA_WHOLE_ALL": {
+        "positions": {
+          "EKBI_APP": [
+            "BILLUND_TMA_ALL"
+          ]
+        },
+        "airports": [
+          "EKBI"
+        ],
+        "valid_for_runways": {
+          "EKBI": [
+            "EKBI_09",
+            "EKBI_27",
+            "EKEB_08",
+            "EKEB_26",
+            "EKVD_07",
+            "EKVD_25"
+          ]
+        }
+      }
+    }
+  }
+}

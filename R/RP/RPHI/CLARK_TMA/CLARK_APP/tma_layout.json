@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPLC_APP": {
+      "CLARK": {
+        "positions": {
+          "RPLC_APP": [
+            "RPLC_APP"
+          ]
+        },
+        "airports": [
+          "RPLC"
+        ]
+      }
+    }
+  }
+}

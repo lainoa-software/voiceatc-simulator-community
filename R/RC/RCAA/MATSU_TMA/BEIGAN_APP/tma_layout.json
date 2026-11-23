@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCFG_APP": {
+      "BEIGAN": {
+        "positions": {
+          "RCFG_APP": [
+            "RCFG_APP"
+          ]
+        },
+        "airports": [
+          "RCFG"
+        ]
+      }
+    }
+  }
+}

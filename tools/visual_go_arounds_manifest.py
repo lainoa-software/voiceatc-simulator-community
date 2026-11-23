@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 try:
-    from . import airac_overrides
+    from . import airac_overrides, sector_legacy_projection
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -12,6 +12,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import sector_legacy_projection
     from content_files import content_files
 
 import argparse
@@ -232,6 +233,8 @@ def _validate_leg(value: object, where: str, path: Path, prior_sequence: int) ->
 def _visual_keys(path: Path, tier: str = "") -> dict[tuple[str, str], str]:
     source = path.with_name("visual_procedures.json")
     if not source.is_file():
+        source = path.with_name("visual_approaches.json")
+    if not source.is_file():
         raise ValueError(f"{path}: sibling visual_procedures.json is required")
     payload = airac_overrides.resolve(json.loads(source.read_text(encoding="utf-8")), tier)
     result: dict[tuple[str, str], str] = {}
@@ -313,18 +316,47 @@ def _validate_go_around_document(payload: dict, path: Path, root: Path, raw_byte
     }
 
 
+def _validate_go_arounds_in_approaches(path: Path, root: Path) -> dict[str, object] | None:
+    raw_bytes = path.read_bytes()
+    payload = json.loads(raw_bytes.decode("utf-8"))
+    result: dict[str, object] | None = None
+    for tier, document in airac_overrides.documents(payload):
+        _vis, ga_doc, _sr = sector_legacy_projection._convert_visual_approaches_single(document)
+        if ga_doc is None:
+            continue
+        checked = _validate_go_around_document(ga_doc, path, root, raw_bytes, tier)
+        if not tier:
+            result = checked
+    return result
+
+
 def build_manifest(root: Path = ROOT, published_at: str | None = None) -> dict[str, object]:
     airports: dict[str, dict[str, object]] = {}
-    for path in go_around_files(root):
-        result = validate_go_around_file(path, root)
-        airport = str(result["airport"])
-        if airport in airports:
-            raise ValueError(f"duplicate airport '{airport}' across visual go-around files")
-        airports[airport] = {
-            "repo_path": result["repo_path"],
-            "sha256": result["sha256"],
-            "size_bytes": result["size_bytes"],
-        }
+    standalone = go_around_files(root)
+    if standalone:
+        for path in standalone:
+            result = validate_go_around_file(path, root)
+            airport = str(result["airport"])
+            if airport in airports:
+                raise ValueError(f"duplicate airport '{airport}' across visual go-around files")
+            airports[airport] = {
+                "repo_path": result["repo_path"],
+                "sha256": result["sha256"],
+                "size_bytes": result["size_bytes"],
+            }
+    else:
+        for path in content_files(root, "visual_approaches.json"):
+            result = _validate_go_arounds_in_approaches(path, root)
+            if result is None:
+                continue
+            airport = str(result["airport"])
+            if airport in airports:
+                raise ValueError(f"duplicate airport '{airport}' across visual go-around files")
+            airports[airport] = {
+                "repo_path": result["repo_path"],
+                "sha256": result["sha256"],
+                "size_bytes": result["size_bytes"],
+            }
     return {
         "schema_version": LEGACY_VISUAL_SCHEMA_VERSION,
         "repo": REPO_NAME,
@@ -356,7 +388,11 @@ def validate_existing_manifest(root: Path = ROOT) -> int:
     airports = _object(payload.get("airports"), "manifest.airports", path)
     published_at = str(payload.get("published_at", ""))
     _date(published_at[:10], "manifest.published_at", path)
-    if airports != build_manifest(root, published_at)["airports"]:
+    expected_airports = build_manifest(root, published_at)["airports"]
+    if go_around_files(root):
+        if airports != expected_airports:
+            raise ValueError(f"{path}: manifest drift; run python tools/visual_go_arounds_manifest.py --write")
+    elif set(airports) != set(expected_airports):
         raise ValueError(f"{path}: manifest drift; run python tools/visual_go_arounds_manifest.py --write")
     for airport, value in airports.items():
         entry = _object(value, f"airports.{airport}", path)
@@ -364,6 +400,9 @@ def validate_existing_manifest(root: Path = ROOT) -> int:
         candidate = _safe_path(str(entry.get("repo_path", "")), root)
         if not candidate.is_file() or candidate.name != "visual_go_arounds.json":
             raise ValueError(f"{path}: unsafe or missing source path for '{airport}'")
+        canonical = _canonical_repo_bytes(candidate.read_bytes())
+        if entry.get("sha256") != hashlib.sha256(canonical).hexdigest() or entry.get("size_bytes") != len(canonical):
+            raise ValueError(f"{path}: manifest drift for '{airport}'; run python tools/visual_go_arounds_manifest.py --write")
     return len(airports)
 
 
@@ -391,7 +430,28 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
     if args.write:
-        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
+        source_airports = {
+            ap: str(entry["repo_path"])
+            for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
+        }
+        manifest = airac_overrides.publish_raw_manifest(
+            ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files",)
+        )
+        files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
+        for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
+            orig_repo = source_airports[ap]
+            legacy_repo = f"{orig_repo.rsplit('/', 1)[0]}/visual_go_arounds.json"
+            raw_bytes = _canonical_repo_bytes((ROOT / orig_repo).read_bytes())
+            leg_bytes = sector_legacy_projection.project_legacy_file_bytes(
+                ROOT, legacy_repo, "visual_go_arounds", files_index=files_index
+            )
+            if leg_bytes != raw_bytes or orig_repo != legacy_repo:
+                dest = ROOT / ".voiceatc" / "defaults" / legacy_repo
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(leg_bytes)
+                entry["repo_path"] = f".voiceatc/defaults/{legacy_repo}"
+                entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
+                entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
         print(f"Wrote {MANIFEST_PATH.relative_to(ROOT).as_posix()}")

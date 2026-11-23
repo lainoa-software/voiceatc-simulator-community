@@ -1,0 +1,48 @@
+{
+  "schema": 3,
+  "configurations": {
+    "MAD_APP": {
+      "1AND": {
+        "positions": {
+          "LEMD_ALN_APP": [
+            "LEMDALN",
+            "LEMDCTR"
+          ]
+        },
+        "airports": [
+          "LEMD"
+        ],
+        "valid_for_runways": {
+          "LEMD": [
+            "NORTH"
+          ]
+        }
+      },
+      "1ASD": {
+        "positions": {
+          "LEMD_ALS_APP": [
+            "LEMDALS",
+            "LEMDCTR"
+          ]
+        },
+        "airports": [
+          "LEMD"
+        ],
+        "valid_for_runways": {
+          "LEMD": [
+            "SOUTH"
+          ]
+        }
+      }
+    },
+    "BAR_TWR": {
+      "1": {
+        "positions": {
+          "LEMD_TWR": [
+            "LEMDATZ"
+          ]
+        }
+      }
+    }
+  }
+}

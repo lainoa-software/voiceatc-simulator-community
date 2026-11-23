@@ -1,0 +1,11 @@
+{
+  "schema": 3,
+  "airport": "VTBS",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    }
+  ]
+}

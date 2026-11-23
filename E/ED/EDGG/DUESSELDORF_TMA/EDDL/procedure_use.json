@@ -1,0 +1,41 @@
+{
+  "schema": 3,
+  "airport": "EDDL",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "KETE1K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KETE1U"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KETE1X"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KETE1Y"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "MODR2K"
+      ],
+      "spawn": false
+    }
+  ]
+}

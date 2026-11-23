@@ -1,0 +1,26 @@
+{
+  "schema": 3,
+  "airport": "EDDN",
+  "airac_min": 2608,
+  "initial_climb_ft": 7000,
+  "exceptions": [
+    {
+      "runways": [
+        "10"
+      ],
+      "sids": [
+        "NUB1A"
+      ],
+      "initial_climb_ft": 6000
+    },
+    {
+      "runways": [
+        "28"
+      ],
+      "sids": [
+        "NUB1B"
+      ],
+      "initial_climb_ft": 6000
+    }
+  ]
+}

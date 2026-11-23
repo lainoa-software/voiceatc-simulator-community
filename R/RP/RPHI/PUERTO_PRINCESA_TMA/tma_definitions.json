@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVP_APP",
+      "call_sign": "Puerto Princesa approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVP_APP",
+      "unit": "RPVP_APP",
+      "frequency": "122.000"
+    }
+  ]
+}

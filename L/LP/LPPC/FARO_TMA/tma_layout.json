@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LPFR_APP": {
+      "FARO_TMA_SPLIT": {
+        "positions": {
+          "LPFR_APP": [
+            "FRTMA"
+          ]
+        },
+        "airports": [
+          "LPFR"
+        ],
+        "valid_for_runways": {
+          "LPFR": [
+            "LPFR_10",
+            "LPFR_28"
+          ]
+        }
+      }
+    }
+  }
+}

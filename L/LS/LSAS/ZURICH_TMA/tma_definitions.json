@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LSZH_APP",
+      "call_sign": "Zurich Arrival",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "120.755",
+        "125.330",
+        "130.560"
+      ]
+    },
+    {
+      "id": "LSZH_TWR",
+      "call_sign": "Zurich Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LSZH",
+      "unassigned_frequencies": [
+        "118.100",
+        "119.700",
+        "120.230"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LSZH_APP",
+      "unit": "LSZH_APP",
+      "frequency": "135.230"
+    }
+  ]
+}

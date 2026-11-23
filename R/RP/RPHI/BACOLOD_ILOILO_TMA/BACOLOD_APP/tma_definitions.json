@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPVB_APP",
+      "call_sign": "Silay approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPVB_APP",
+      "unit": "RPVB_APP",
+      "frequency": "121.000"
+    }
+  ]
+}

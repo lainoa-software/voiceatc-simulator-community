@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCSS_APP": {
+      "SONGSHAN": {
+        "positions": {
+          "RCSS_APP": [
+            "RCSS_APP"
+          ]
+        },
+        "airports": [
+          "RCSS"
+        ]
+      }
+    }
+  }
+}

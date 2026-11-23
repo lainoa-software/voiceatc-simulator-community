@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RCSS",
   "runway_configs": [
     {

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPFR_APP",
+      "call_sign": "Faro approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPFR_APP",
+      "unit": "LPFR_APP",
+      "frequency": "119.405"
+    }
+  ]
+}

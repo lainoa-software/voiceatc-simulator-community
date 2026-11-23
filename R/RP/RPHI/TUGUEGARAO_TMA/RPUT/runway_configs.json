@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RPUT",
   "runway_configs": [
     {

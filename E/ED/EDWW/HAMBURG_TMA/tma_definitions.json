@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDH_APP",
+      "call_sign": "Hamburg approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDH_APP",
+      "unit": "EDDH_APP",
+      "frequency": "120.540"
+    }
+  ]
+}

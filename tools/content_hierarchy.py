@@ -25,31 +25,43 @@ REGISTRY_PATH = ROOT / REGISTRY_RELATIVE
 AIRPORT_FILE_NAMES = {
     "runway_configs.json",
     "constraints.json",
-    "procedure_options.json",
+    "procedure_use.json",
+    "initial_climb.json",
+    "departure_variants.json",
+    "visual_approaches.json",
     "map_display.json",
-    "visual_procedures.json",
-    "visual_go_arounds.json",
-    "visual_sight_references.json",
 }
 TERMINAL_FILE_NAMES = {
     "mva.json",
     "misc_drawings.json",
     "sector_definitions.json",
-    "tma_structure.json",
+    "tma_definitions.json",
+    "tma_layout.json",
     "tma_coordination.json",
+    "map_display.json",
 }
 FIR_FILE_NAMES = {
-    "acc_structure.json",
+    "acc_definitions.json",
+    "acc_layout.json",
     "acc_coordination.json",
+    "map_display.json",
 }
 GENERATED_LEGACY_FILE_NAMES = {
     "sector_configs.json",
     "sector_influence.json",
+    "tma.json",
+    "tma_structure.json",
+    "acc_structure.json",
+    "procedure_options.json",
+    "visual_procedures.json",
+    "visual_go_arounds.json",
+    "visual_sight_references.json",
 }
 # Terminal-area files an airport may also carry in its own folder, for itself
 # only: some sources publish one MVA chart per airport, not one per terminal area.
 AIRPORT_OVERRIDABLE_FILE_NAMES = {"mva.json"}
 PROFILE_FILE_NAMES = {"colors.json", "style.json"}
+SKINNED_SCOPES = frozenset({"E/ED", "K", "L/LE"})
 CONTENT_FILE_NAMES = AIRPORT_FILE_NAMES | TERMINAL_FILE_NAMES | FIR_FILE_NAMES | PROFILE_FILE_NAMES
 INSPECTED_FILE_NAMES = CONTENT_FILE_NAMES | GENERATED_LEGACY_FILE_NAMES
 PLACEHOLDER_RE = re.compile(r"^[A-Z]{1,2}X{2,3}$")
@@ -339,8 +351,24 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
 
     if path.name in PROFILE_FILE_NAMES:
         scope = path.parent.relative_to(root).as_posix()
+        if (root / "release" / "legacy_frozen" / "index.json").is_file() and (
+            scope in SKINNED_SCOPES or any(scope.startswith(s + "/") for s in SKINNED_SCOPES)
+        ):
+            add(f"profile scope '{scope}' uses a built-in radar skin and must live only in release/legacy_frozen")
+            return _dedupe(findings)
         for message in _validate_profile_scope(scope, registry):
             add(message)
+        return _dedupe(findings)
+
+    _nationalities, _operational, terminals = _registry_maps(registry)
+    airport_scopes = _airport_scope_map(registry)
+    inside_airport_folder = _is_airport_folder(path.parent, root, terminals)
+    if path.name == "map_display.json" and not inside_airport_folder:
+        scope = path.parent.relative_to(root).as_posix()
+        if scope in terminals or not _is_fir_scope(scope, registry):
+            return _dedupe(findings)
+        for msg in _parse_scope(scope, registry, allow_shallow=False)[1]:
+            add(msg)
         return _dedupe(findings)
 
     if path.name in FIR_FILE_NAMES:
@@ -349,14 +377,13 @@ def _validate_content_file(path: Path, root: Path, registry: dict[str, Any]) -> 
             add(message)
         return _dedupe(findings)
 
-    _nationalities, _operational, terminals = _registry_maps(registry)
-    airport_scopes = _airport_scope_map(registry)
-    inside_airport_folder = _is_airport_folder(path.parent, root, terminals)
     if path.name == "sector_definitions.json" and not inside_airport_folder:
         scope = path.parent.relative_to(root).as_posix()
         if scope not in terminals and not _is_fir_scope(scope, registry):
             return _dedupe(findings)
-    if path.name in AIRPORT_FILE_NAMES or (inside_airport_folder and path.name in AIRPORT_OVERRIDABLE_FILE_NAMES):
+    if (path.name in AIRPORT_FILE_NAMES and path.name != "map_display.json") or inside_airport_folder and path.name in (
+        AIRPORT_OVERRIDABLE_FILE_NAMES | {"map_display.json"}
+    ):
         airport = path.parent.name
         scope = path.parent.parent.relative_to(root).as_posix()
         _ident, scope_errors = _parse_scope(scope, registry, allow_shallow=False)
@@ -419,7 +446,9 @@ def collect_findings(root: Path = ROOT, registry_path: Path | None = None) -> li
     alias_groups = compatibility.get("color_profile_aliases", {}) if isinstance(compatibility, dict) else {}
     if isinstance(alias_groups, dict):
         for source_scope, aliases in alias_groups.items():
-            if not (root / str(source_scope) / "colors.json").is_file():
+            active_src = (root / str(source_scope) / "colors.json").is_file()
+            frozen_src = (root / "release" / "legacy_frozen" / str(source_scope) / "colors.json").is_file()
+            if not active_src and not frozen_src:
                 findings.append(Finding(f"release compatibility source '{source_scope}' is missing colors.json"))
             if not isinstance(aliases, list):
                 continue
@@ -430,6 +459,41 @@ def collect_findings(root: Path = ROOT, registry_path: Path | None = None) -> li
                         findings.append(
                             Finding(f"release-only compatibility alias must not exist in source: {alias}/{file_name}")
                         )
+    # Every container folder between FIR and TMA must name a unit in the FIR's acc_definitions.json.
+    nationalities, _operational, terminals = _registry_maps(registry)
+    all_nationalities = {area for areas in nationalities.values() for area in areas}
+    checked_containers: set[str] = set()
+    for scope in sorted(terminals):
+        parts = scope.split("/")
+        op_idx = 2 if len(parts) > 1 and parts[1] in all_nationalities else 1
+        trailing = parts[op_idx + 1 :]
+        if len(trailing) != 2:
+            continue
+        container = trailing[0]
+        fir_rel = "/".join(parts[: op_idx + 1])
+        key = f"{fir_rel}/{container}"
+        if key in checked_containers:
+            continue
+        checked_containers.add(key)
+        acc_path = root / fir_rel / "acc_definitions.json"
+        if not acc_path.is_file():
+            continue
+        try:
+            acc_doc = json.loads(acc_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        unit_ids = {
+            str(u.get("id", "")).strip()
+            for u in acc_doc.get("units", [])
+            if isinstance(u, dict) and u.get("id")
+        }
+        if container not in unit_ids and f"{container}_CTR" not in unit_ids:
+            findings.append(
+                Finding(
+                    f"container folder '{container}' must name a unit in {fir_rel}/acc_definitions.json",
+                    key,
+                )
+            )
     return findings
 
 

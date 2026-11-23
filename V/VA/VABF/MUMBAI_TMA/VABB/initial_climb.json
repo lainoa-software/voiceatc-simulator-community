@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "VABB",
+  "airac_min": 2609,
+  "initial_climb_ft": 9000
+}

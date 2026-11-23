@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "CYVR_APP",
+      "call_sign": "Vancouver approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "CYVR_APP",
+      "unit": "CYVR_APP",
+      "frequency": "133.100"
+    }
+  ]
+}

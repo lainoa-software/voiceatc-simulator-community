@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCMT_APP",
+      "call_sign": "Matsu approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCMT_APP",
+      "unit": "RCMT_APP",
+      "frequency": "121.000"
+    }
+  ]
+}

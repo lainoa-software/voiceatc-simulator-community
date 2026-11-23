@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKJK_APP",
+      "call_sign": "Gunsan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKJK_APP",
+      "unit": "RKJK_APP",
+      "frequency": "124.100"
+    }
+  ]
+}

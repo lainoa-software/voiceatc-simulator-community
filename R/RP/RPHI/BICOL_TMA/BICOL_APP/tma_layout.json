@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPLK_APP": {
+      "BICOL": {
+        "positions": {
+          "RPLK_APP": [
+            "RPLK_APP"
+          ]
+        },
+        "airports": [
+          "RPLK"
+        ]
+      }
+    }
+  }
+}

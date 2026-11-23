@@ -1,0 +1,217 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDDB_APP": {
+      "EDDB_N_APP_06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN3"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_N_APP_24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN2"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_S_APP_06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAS1_DBAS3_DBAS4"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_S_APP_24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAS1_DBAS2"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_N_DEP_06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDN1_06_DBDN2_06"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_N_DEP_24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDN1_24_DBDN2_24"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_S_DEP_06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDS1_06_DBDS2_06_DBDS3_06"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_S_DEP_24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDS1_24_DBDS2_24"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_FULL_APP-06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN3_DBAS1_DBAS3_DBAS4_DBDN1_06_DBDN2_06_DBDS1_06_DBDS2_06_DBDS3_06"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_FULL_APP-24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN2_DBAS1_DBAS2_DBDN1_24_DBDN2_24_DBDS1_24_DBDS2_24"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_A_APP-06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN3_DBAS1_DBAS3_DBAS4"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_A_APP-24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBAN1_DBAN2_DBAS1_DBAS2"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      },
+      "EDDB_DEP-06": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDN1_06_DBDN2_06_DBDS1_06_DBDS2_06_DBDS3_06"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "06"
+          ]
+        }
+      },
+      "EDDB_DEP-24": {
+        "positions": {
+          "EDDB_APP": [
+            "DBDN1_24_DBDN2_24_DBDS1_24_DBDS2_24"
+          ]
+        },
+        "airports": [
+          "EDDB"
+        ],
+        "valid_for_runways": {
+          "EDDB": [
+            "24"
+          ]
+        }
+      }
+    }
+  }
+}

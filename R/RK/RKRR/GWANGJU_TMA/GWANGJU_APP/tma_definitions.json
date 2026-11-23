@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKJJ_APP",
+      "call_sign": "Gwangju approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKJJ_APP",
+      "unit": "RKJJ_APP",
+      "frequency": "130.000"
+    }
+  ]
+}

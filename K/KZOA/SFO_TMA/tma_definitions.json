@@ -1,0 +1,34 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KSFO_APP",
+      "call_sign": "NorCal Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "128.325",
+        "134.500"
+      ]
+    },
+    {
+      "id": "KSFO_TWR",
+      "call_sign": "San Francisco Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KSFO",
+      "unassigned_frequencies": [
+        "120.500"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KSFO_APP",
+      "unit": "KSFO_APP",
+      "frequency": "133.950"
+    }
+  ]
+}

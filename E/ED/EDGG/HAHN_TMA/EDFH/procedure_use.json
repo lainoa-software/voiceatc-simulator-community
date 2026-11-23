@@ -1,0 +1,53 @@
+{
+  "schema": 3,
+  "airport": "EDFH",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ABSI4K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ABSI4L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IDAR9L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO3G"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO3S"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OLIV3S"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RUDO1Y"
+      ],
+      "spawn": false
+    }
+  ]
+}

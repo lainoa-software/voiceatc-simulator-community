@@ -438,6 +438,7 @@ def build_release_bundle(
     sector_projected_bytes: dict[str, bytes] = sector_projection["projected_bytes"]
     misc_drawings_base_manifest = misc_drawings_manifest.build_manifest(root, commit_sha=commit_sha)
     color_profiles_projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
+    color_canonical_manifest = color_profiles_manifest.build_manifest(root, commit_sha=commit_sha)
 
     # Channel gates: the default view (what every live build reads) drops gated
     # entries (any `requires`, or channels short of all three); the full view keeps them all.
@@ -472,6 +473,9 @@ def build_release_bundle(
     sector_default_sources, sector_full_sources = airac_overrides.project_sector_feed(
         root, gated["sector_data"], projected_bytes=sector_projected_bytes
     )
+    runway_generated_bytes, runway_full_sources = sector_legacy_projection.project_release_dataset_feeds(
+        root, gated["runway_configs"], kind="runway_configs"
+    )
     mva_generated_bytes, mva_full_sources = sector_legacy_projection.project_release_dataset_feeds(
         root, gated["mva"], kind="mva"
     )
@@ -495,7 +499,7 @@ def build_release_bundle(
     }
 
     mva_repo_paths = sorted({str(entry["repo_path"]) for entry in mva_airports.values()})
-    runway_repo_paths = [str(entry["repo_path"]) for entry in runway_airports.values()]
+    runway_repo_paths = sorted({str(entry["repo_path"]) for entry in runway_airports.values()})
     misc_drawings_repo_paths = sorted({str(entry["repo_path"]) for entry in misc_drawings_airports.values()})
     mva_asset = build_deterministic_zip_from_sources(
         root,
@@ -503,7 +507,12 @@ def build_release_bundle(
         output_dir / mva_asset_name,
         generated_bytes=mva_generated_bytes,
     )
-    runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
+    runway_asset = build_deterministic_zip_from_sources(
+        root,
+        {p: p for p in runway_repo_paths},
+        output_dir / runway_asset_name,
+        generated_bytes=runway_generated_bytes,
+    )
     sector_data_asset = build_deterministic_zip_from_sources(
         root,
         sector_default_sources,
@@ -516,11 +525,56 @@ def build_release_bundle(
         output_dir / misc_drawings_asset_name,
         generated_bytes=misc_generated_bytes,
     )
+    color_generated_bytes = color_profiles_projection.get("generated_bytes") or {}
     color_profiles_asset = build_deterministic_zip_from_sources(
         root,
         color_default_sources,
         output_dir / color_profiles_asset_name,
+        generated_bytes=color_generated_bytes,
     )
+
+    color_canonical_profiles = color_canonical_manifest["profiles"]
+    color_full_sources = dict(color_archive_sources)
+    color_full_generated = dict(color_generated_bytes)
+    gated_color_full = release_gates.apply_gates(
+        "color_profiles",
+        color_canonical_profiles,
+        gates=gates,
+        required_kinds=("colors",),
+    )
+    color_full_entries: list[object] = list(gated["color_profiles"]["full_entries"])
+    for entry in gated_color_full["full_entries"]:
+        if isinstance(entry, dict):
+            reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
+            updated = dict(entry)
+            files = entry.get("files")
+            if isinstance(files, dict):
+                updated_files: dict[str, object] = {}
+                for fkind, fentry in files.items():
+                    if isinstance(fentry, dict) and fentry.get("repo_path"):
+                        orig_path = str(fentry["repo_path"])
+                        variant_path = (
+                            orig_path
+                            if orig_path.startswith("airac_variants/")
+                            else f"airac_variants/{orig_path}"
+                        )
+                        raw_bytes = (
+                            (root / orig_path).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+                        )
+                        color_full_generated[variant_path] = raw_bytes
+                        color_full_sources[variant_path] = variant_path
+                        clean_f = dict(fentry)
+                        clean_f["repo_path"] = variant_path
+                        updated_files[fkind] = clean_f
+                    else:
+                        updated_files[fkind] = fentry
+                updated["files"] = updated_files
+            updated["requires"] = sorted(
+                set(reqs) | {sector_legacy_projection.AIRSPACE_FILES_CAPABILITY}
+            )
+            color_full_entries.append(updated)
+        else:
+            color_full_entries.append(entry)
 
     full_assets = {
         "mva": build_deterministic_zip_from_sources(
@@ -529,10 +583,11 @@ def build_release_bundle(
             output_dir / _full_asset_name(mva_asset_name),
             generated_bytes=mva_generated_bytes,
         ),
-        "runway_configs": build_deterministic_zip(
+        "runway_configs": build_deterministic_zip_from_sources(
             root,
-            airac_overrides.full_repo_paths(gated["runway_configs"]),
+            runway_full_sources,
             output_dir / _full_asset_name(runway_asset_name),
+            generated_bytes=runway_generated_bytes,
         ),
         "sector_data": build_deterministic_zip_from_sources(
             root,
@@ -548,14 +603,19 @@ def build_release_bundle(
         ),
         "color_profiles": build_deterministic_zip_from_sources(
             root,
-            color_archive_sources,
+            color_full_sources,
             output_dir / _full_asset_name(color_profiles_asset_name),
+            generated_bytes=color_full_generated,
         ),
     }
     full_manifests = {
         dataset: release_gates.build_full_manifest(
             dataset=dataset,
-            full_entries=gated[dataset]["full_entries"],
+            full_entries=(
+                color_full_entries
+                if dataset == "color_profiles"
+                else gated[dataset]["full_entries"]
+            ),
             repo=REPO_NAME,
             release_tag=release_tag,
             commit_sha=commit_sha,

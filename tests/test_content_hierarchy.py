@@ -172,8 +172,11 @@ class ContentHierarchyTests(unittest.TestCase):
 
     def test_reports_one_unregistered_scope_block_for_many_files(self) -> None:
         self.write_json("K/KZHU/MKE_TMA/KMKE/runway_configs.json", {"airport": "KMKE"})
-        self.write_json("K/KZHU/MKE_TMA/KMKE/procedure_options.json", {"airport": "KMKE"})
-        self.write_json("K/KZHU/MKE_TMA/tma_structure.json", {"schema": 2, "layouts": [{"positions": [{"airports": ["KMKE"]}]}]})
+        self.write_json("K/KZHU/MKE_TMA/KMKE/procedure_use.json", {"schema": 3, "airport": "KMKE", "use": []})
+        self.write_json(
+            "K/KZHU/MKE_TMA/tma_layout.json",
+            {"schema": 3, "configurations": {"MKE_APP": {"1": {"airports": ["KMKE"], "positions": {"KMKE_APP": ["MKE"]}}}}},
+        )
         report = self.report()
         self.assertIn("K/KZHU/MKE_TMA is not a registered terminal scope (3 files affected).", report)
         self.assertIn('"K/KZHU/MKE_TMA": ["KMKE"],', report)
@@ -276,14 +279,21 @@ class ContentHierarchyTests(unittest.TestCase):
         )
 
     def test_accepts_acc_and_definitions_at_fir_depth_and_rejects_elsewhere(self) -> None:
-        self.write_json("K/KZHU/acc_structure.json", {"schema": 2, "units": []})
-        self.write_json("K/KZHU/acc_coordination.json", {"schema": 2, "agreements": []})
-        self.write_json("K/KZHU/sector_definitions.json", {"sector_definitions": []})
-        self.write_json("E/ED/EDGG/acc_structure.json", {"schema": 2, "units": []})
+        self.write_json("K/KZHU/acc_definitions.json", {"schema": 3, "units": [], "positions": []})
+        self.write_json("K/KZHU/acc_layout.json", {"schema": 3, "configurations": {}})
+        self.write_json("K/KZHU/acc_coordination.json", {"schema": 3, "agreements": []})
+        self.write_json("K/KZHU/sector_definitions.json", {"schema": 3, "sectors": {}, "volumes": []})
+        self.write_json("E/ED/EDGG/acc_definitions.json", {"schema": 3, "units": [], "positions": []})
         self.assertEqual([], self.errors())
 
-        self.write_json("K/KZHU/AUSTIN_TMA/acc_structure.json", {"schema": 2, "units": []})
+        self.write_json("K/KZHU/AUSTIN_TMA/acc_definitions.json", {"schema": 3, "units": [], "positions": []})
         self.assertTrue(any("FIR/ARTCC depth" in error for error in self.errors()))
+
+    def test_container_folder_must_match_fir_acc_unit(self) -> None:
+        self.write_json("E/ES/ESAA/acc_definitions.json", {"schema": 3, "units": [{"id": "ESAA_CTR"}], "positions": []})
+        self.assertTrue(any("container folder 'ESOS_Y'" in error for error in self.errors()))
+        self.write_json("E/ES/ESAA/acc_definitions.json", {"schema": 3, "units": [{"id": "ESOS_Y_CTR"}], "positions": []})
+        self.assertEqual([], self.errors())
 
     def test_rejects_generated_legacy_sector_files_in_source(self) -> None:
         self.write_json("K/KZHU/AUSTIN_TMA/sector_configs.json", {"sector_configs": []})

@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EGLL_APP": {
+      "27": {
+        "positions": {
+          "EGLL_INT_APP": [
+            "EGLLINT27"
+          ]
+        },
+        "airports": [
+          "EGLL"
+        ],
+        "valid_for_runways": {
+          "EGLL": [
+            "27"
+          ]
+        }
+      },
+      "09": {
+        "positions": {
+          "EGLL_INT_APP": [
+            "EGLLINT27"
+          ]
+        },
+        "airports": [
+          "EGLL"
+        ],
+        "valid_for_runways": {
+          "EGLL": [
+            "09"
+          ]
+        }
+      }
+    }
+  }
+}

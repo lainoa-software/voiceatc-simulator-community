@@ -1,0 +1,77 @@
+{
+  "schema": 3,
+  "airport": "EDDK",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "COL1R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "COL4X"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KUMI1R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO1N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO1U"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO1X"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO1Y"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NVO3W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PODI1R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "WIPU1R"
+      ],
+      "spawn": false
+    }
+  ]
+}

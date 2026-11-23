@@ -1,0 +1,26 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KATL_APP": {
+      "1": {
+        "positions": {
+          "KATL_APP": [
+            "ATL"
+          ]
+        },
+        "airports": [
+          "KATL",
+          "KPDK"
+        ],
+        "valid_for_runways": {
+          "KATL": [
+            "WEST DUAL",
+            "EAST DUAL",
+            "WEST TRIPS",
+            "EAST TRIPS"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "schema": 3,
+  "configurations": {
+    "BCN_APP": {
+      "2CO": {
+        "positions": {
+          "LEBL_CORE_APP": [
+            "LEBLCORE",
+            "LEBLCTR"
+          ]
+        },
+        "airports": [
+          "LEBL",
+          "LEGE",
+          "LERS",
+          "LEDA"
+        ]
+      }
+    },
+    "BCN_TWR": {
+      "1": {
+        "positions": {
+          "LEBL_TWR": [
+            "LEBLATZ"
+          ]
+        }
+      }
+    },
+    "GIR_TWR": {
+      "1": {
+        "positions": {
+          "LEGE_APP": [
+            "LEGEAPP"
+          ]
+        }
+      }
+    },
+    "REU_TWR": {
+      "1": {
+        "positions": {
+          "LERS_APP": [
+            "LERSAPP"
+          ]
+        }
+      }
+    },
+    "LLE_TWR": {
+      "1": {
+        "positions": {
+          "LEDA_TWR": [
+            "LEDACTR"
+          ]
+        }
+      }
+    }
+  },
+  "runway_combinations": [
+    {
+      "id": "WEST",
+      "title": "West",
+      "airports": {
+        "LEBL": "WRL",
+        "LEGE": "SOUTH",
+        "LERS": "WEST",
+        "LEDA": "31"
+      }
+    },
+    {
+      "id": "EAST",
+      "title": "East",
+      "airports": {
+        "LEBL": "ELR",
+        "LEGE": "NORTH",
+        "LERS": "EAST",
+        "LEDA": "13"
+      }
+    },
+    {
+      "id": "NIGHT",
+      "title": "Night",
+      "airports": {
+        "LEBL": "ENR",
+        "LEGE": "NORTH",
+        "LERS": "EAST",
+        "LEDA": "13"
+      }
+    },
+    {
+      "id": "NIGHT WEST",
+      "title": "Night west",
+      "airports": {
+        "LEBL": "WLL",
+        "LEGE": "SOUTH",
+        "LERS": "WEST",
+        "LEDA": "31"
+      }
+    }
+  ]
+}

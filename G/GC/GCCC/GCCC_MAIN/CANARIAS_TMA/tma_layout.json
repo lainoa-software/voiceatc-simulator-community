@@ -1,0 +1,29 @@
+{
+  "schema": 3,
+  "configurations": {
+    "GCHI_APP": {
+      "A3N": {
+        "positions": {
+          "GCHI_GCCCINB_APP": [
+            "GCCCINB"
+          ],
+          "GCLP_GCCCIGC_APP": [
+            "GCCCIGC"
+          ],
+          "GCFV_GCCCAAC_APP": [
+            "GCCCAAC"
+          ]
+        },
+        "airports": [
+          "GCHI",
+          "GCLA",
+          "GCTS",
+          "GCXO",
+          "GCLP",
+          "GCFV",
+          "GCRR"
+        ]
+      }
+    }
+  }
+}

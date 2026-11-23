@@ -18,10 +18,27 @@
     }
   },
   "nationality_areas": {
-    "C": ["CZ"],
-    "E": ["EB", "ED", "EF", "EG", "EH", "EI", "EK", "EN", "EP", "ES"],
-    "F": ["FA"],
-    "G": ["GC"],
+    "C": [
+      "CZ"
+    ],
+    "E": [
+      "EB",
+      "ED",
+      "EF",
+      "EG",
+      "EH",
+      "EI",
+      "EK",
+      "EN",
+      "EP",
+      "ES"
+    ],
+    "F": [
+      "FA"
+    ],
+    "G": [
+      "GC"
+    ],
     "K": [],
     "L": [
       "LC",
@@ -37,15 +54,46 @@
       "LS",
       "LT"
     ],
-    "O": ["OE", "OM", "OT"],
-    "P": ["PA", "PG", "PH"],
-    "R": ["RC", "RK", "RJ", "RP"],
-    "T": ["TJ"],
-    "U": ["UK", "UL", "UM", "UU"],
-    "V": ["VA", "VH", "VT"],
-    "W": ["WS", "WM"],
-    "Y": ["YM"],
-    "Z": ["ZG"]
+    "O": [
+      "OE",
+      "OM",
+      "OT"
+    ],
+    "P": [
+      "PA",
+      "PG",
+      "PH"
+    ],
+    "R": [
+      "RC",
+      "RK",
+      "RJ",
+      "RP"
+    ],
+    "T": [
+      "TJ"
+    ],
+    "U": [
+      "UK",
+      "UL",
+      "UM",
+      "UU"
+    ],
+    "V": [
+      "VA",
+      "VH",
+      "VT"
+    ],
+    "W": [
+      "WS",
+      "WM"
+    ],
+    "Y": [
+      "YM"
+    ],
+    "Z": [
+      "ZG"
+    ]
   },
   "release_compatibility": {
     "color_profile_aliases": {
@@ -81,118 +129,435 @@
     "retention": "until_explicit_deprecation"
   },
   "operational_areas": {
-    "CZUL": { "authority": "navigraph_2607", "kind": "fir" },
-    "CZVR": { "authority": "navigraph_2607", "kind": "fir" },
-    "CZYZ": { "authority": "navigraph_2607", "kind": "fir" },
-    "EBBU": { "authority": "navigraph_2607", "kind": "fir" },
-    "EDGG": { "authority": "navigraph_2607", "kind": "fir" },
-    "EDMM": { "authority": "navigraph_2607", "kind": "fir" },
-    "EDWW": { "authority": "navigraph_2607", "kind": "fir" },
-    "EFIN": { "authority": "navigraph_2607", "kind": "fir" },
-    "EGTT": { "authority": "navigraph_2607", "kind": "fir" },
-    "EHAA": { "authority": "navigraph_2607", "kind": "fir" },
-    "EISN": { "authority": "navigraph_2607", "kind": "fir" },
-    "EKDK": { "authority": "navigraph_2607", "kind": "fir" },
-    "ENOR": { "authority": "navigraph_2607", "kind": "fir" },
-    "EPWW": { "authority": "navigraph_2607", "kind": "fir" },
-    "ESAA": { "authority": "navigraph_2607", "kind": "fir" },
-    "FACA": { "authority": "navigraph_2503", "kind": "fir" },
-    "GCCC": { "authority": "navigraph_2607", "kind": "fir" },
-    "KZAB": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZAU": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZBW": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZDC": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZDV": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZFW": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZHU": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZID": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZJX": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZKC": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZLA": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZLC": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZMA": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZME": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZMP": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZNY": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZOA": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZOB": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZSE": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "KZTL": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "LCCC": { "authority": "navigraph_2607", "kind": "fir" },
-    "LECB": { "authority": "navigraph_2607", "kind": "fir" },
-    "LECM": { "authority": "navigraph_2607", "kind": "fir" },
-    "LFMM": { "authority": "navigraph_2607", "kind": "fir" },
-    "LFFF": { "authority": "navigraph_2607", "kind": "fir" },
-    "LGGG": { "authority": "navigraph_2607", "kind": "fir" },
-    "LHCC": { "authority": "navigraph_2503", "kind": "fir" },
-    "LIMM": { "authority": "navigraph_2607", "kind": "fir" },
-    "LIRR": { "authority": "navigraph_2607", "kind": "fir" },
-    "LLLL": { "authority": "navigraph_2607", "kind": "fir" },
-    "LOVV": { "authority": "navigraph_2607", "kind": "fir" },
-    "LPPC": { "authority": "navigraph_2607", "kind": "fir" },
-    "LPPO": { "authority": "navigraph_2607", "kind": "fir" },
-    "LRBB": { "authority": "navigraph_2607", "kind": "fir" },
-    "LSAS": { "authority": "navigraph_2607", "kind": "fir" },
-    "LTBB": { "authority": "navigraph_2607", "kind": "fir" },
-    "OEJD": { "authority": "navigraph_2607", "kind": "fir" },
-    "OMAE": { "authority": "navigraph_2607", "kind": "fir" },
-    "OTDF": { "authority": "navigraph_2607", "kind": "fir" },
-    "PAZA": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "PHZH": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "RCAA": { "authority": "navigraph_2607", "kind": "fir" },
-    "RKRR": { "authority": "navigraph_2607", "kind": "fir" },
-    "RPHI": { "authority": "navigraph_2607", "kind": "fir" },
-    "RJJJ": { "authority": "navigraph_2607", "kind": "fir" },
-    "TJZS": { "authority": "faa_nasr_2026_07_09", "kind": "artcc" },
-    "UKBV": { "authority": "navigraph_2503", "kind": "fir" },
-    "ULLL": { "authority": "navigraph_2503", "kind": "fir" },
-    "UMKK": { "authority": "navigraph_2607", "kind": "fir" },
-    "UUWV": { "authority": "navigraph_2607", "kind": "fir" },
-    "VABF": { "authority": "navigraph_2607", "kind": "fir" },
-    "VHHK": { "authority": "navigraph_2607", "kind": "fir" },
-    "VTBB": { "authority": "navigraph_2607", "kind": "fir" },
-    "WSJC": { "authority": "navigraph_2607", "kind": "fir" },
-    "WMFC": { "authority": "navigraph_2607", "kind": "fir" },
-    "YMMM": { "authority": "navigraph_2607", "kind": "fir" },
-    "ZGZU": { "authority": "navigraph_2607", "kind": "fir" }
+    "CZUL": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "CZVR": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "CZYZ": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EBBU": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EDGG": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EDMM": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EDWW": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EFIN": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EGTT": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EHAA": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EISN": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EKDK": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "ENOR": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "EPWW": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "ESAA": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "FACA": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
+    },
+    "GCCC": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "KZAB": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZAU": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZBW": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZDC": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZDV": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZFW": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZHU": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZID": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZJX": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZKC": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZLA": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZLC": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZMA": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZME": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZMP": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZNY": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZOA": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZOB": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZSE": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "KZTL": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "LCCC": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LECB": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LECM": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LFMM": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LFFF": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LGGG": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LHCC": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
+    },
+    "LIMM": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LIRR": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LLLL": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LOVV": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LPPC": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LPPO": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LRBB": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LSAS": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LTBB": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "OEJD": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "OMAE": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "OTDF": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "PAZA": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "PHZH": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "RCAA": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "RKRR": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "RPHI": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "RJJJ": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "TJZS": {
+      "authority": "faa_nasr_2026_07_09",
+      "kind": "artcc"
+    },
+    "UKBV": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
+    },
+    "ULLL": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
+    },
+    "UMKK": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "UUWV": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "VABF": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "VHHK": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "VTBB": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "WSJC": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "WMFC": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "YMMM": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "ZGZU": {
+      "authority": "navigraph_2607",
+      "kind": "fir"
+    }
   },
   "terminal_scopes": {
-    "C/CZ/CZUL/MONTREAL_TMA": ["CYUL"],
-    "C/CZ/CZVR/VANCOUVER_TMA": ["CYVR"],
-    "C/CZ/CZYZ/TORONTO_TMA": ["CYYZ"],
-    "E/EB/EBBU/BRUSSELS_TMA": ["EBBR"],
-    "E/ED/EDGG/DUESSELDORF_TMA": ["EDDL", "EDLN", "EDLV"],
-    "E/ED/EDGG/FRANKFURT_MAIN_TMA": ["EDDF"],
-    "E/ED/EDGG/HAHN_TMA": ["EDDR", "EDFH"],
-    "E/ED/EDGG/KOELN_TMA": ["EDDK"],
-    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA": ["EDDG"],
-    "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA": ["EDLP", "EDLW"],
-    "E/ED/EDGG/STUTTGART_TMA": ["EDDS", "EDSB", "EDTL"],
-    "E/ED/EDMM/EDDC_TMA": ["EDAB", "EDDC", "EDDP"],
-    "E/ED/EDMM/EDDM_TMA": ["EDDM", "EDMA", "EDMO"],
-    "E/ED/EDMM/EDDN_TMA": ["EDDN", "EDQM"],
-    "E/ED/EDWW/BERLIN_TMA": ["EDDB"],
-    "E/ED/EDWW/HAMBURG_TMA": ["EDDH", "EDHI", "EDHL"],
-    "E/ED/EDWW/HANNOVER_TMA": ["EDDV", "EDVE"],
-    "E/ED/EDWW/BREMEN_TMA": ["EDDW"],
-    "E/ED/EDWW/SYLT_TMA": ["EDXW"],
-    "E/EF/EFIN/EFIN_S/HELSINKI_TMA": ["EFHK"],
-    "E/EG/EGTT/LONDON_TMA": ["EGKK", "EGLL", "EGSS", "EGWU"],
-    "E/EG/EGTT/MANCHESTER_TMA": ["EGCC", "EGGP"],
-    "E/EH/EHAA/AMSTERDAM_TMA": ["EHAM"],
-    "E/EI/EISN/DUBLIN_TMA": ["EIDW"],
-    "E/EK/EKDK/AALBORG_TMA": ["EKYT"],
-    "E/EK/EKDK/AARHUS_TMA": ["EKAH"],
-    "E/EK/EKDK/BILLUND_TMA": ["EKBI"],
-    "E/EK/EKDK/BORNHOLM_TMA": ["EKRN"],
-    "E/EK/EKDK/COPENHAGEN_TMA": ["EKCH"],
-    "E/EK/EKDK/KARUP_TMA": ["EKKA"],
-    "E/EK/EKDK/SKRYDSTRUP_TMA": ["EKSP"],
-    "E/EN/ENOR/ENOS/OSLO_TMA": ["ENGM", "ENKJ"],
-    "E/EP/EPWW/WARSAW_TMA": ["EPWA"],
-    "E/EP/EPWW/KRAKOW_TMA": ["EPKK"],
-    "E/ES/ESAA/ESMM_23W45/ESGG_TMA": ["ESGG", "ESGT", "ESIB"],
-    "E/ES/ESAA/ESOS_Y/ESOS_APP": ["ESOW", "ESSA", "ESSB"],
+    "C/CZ/CZUL/MONTREAL_TMA": [
+      "CYUL"
+    ],
+    "C/CZ/CZVR/VANCOUVER_TMA": [
+      "CYVR"
+    ],
+    "C/CZ/CZYZ/TORONTO_TMA": [
+      "CYYZ"
+    ],
+    "E/EB/EBBU/BRUSSELS_TMA": [
+      "EBBR"
+    ],
+    "E/ED/EDGG/DUESSELDORF_TMA": [
+      "EDDL",
+      "EDLN",
+      "EDLV"
+    ],
+    "E/ED/EDGG/FRANKFURT_MAIN_TMA": [
+      "EDDF"
+    ],
+    "E/ED/EDGG/HAHN_TMA": [
+      "EDDR",
+      "EDFH"
+    ],
+    "E/ED/EDGG/KOELN_TMA": [
+      "EDDK"
+    ],
+    "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA": [
+      "EDDG"
+    ],
+    "E/ED/EDGG/PADERBORN_LIPPSTADT_TMA": [
+      "EDLP",
+      "EDLW"
+    ],
+    "E/ED/EDGG/STUTTGART_TMA": [
+      "EDDS",
+      "EDSB",
+      "EDTL"
+    ],
+    "E/ED/EDMM/EDDC_TMA": [
+      "EDAB",
+      "EDDC",
+      "EDDP"
+    ],
+    "E/ED/EDMM/EDDM_TMA": [
+      "EDDM",
+      "EDMA",
+      "EDMO"
+    ],
+    "E/ED/EDMM/EDDN_TMA": [
+      "EDDN",
+      "EDQM"
+    ],
+    "E/ED/EDWW/BERLIN_TMA": [
+      "EDDB"
+    ],
+    "E/ED/EDWW/HAMBURG_TMA": [
+      "EDDH",
+      "EDHI",
+      "EDHL"
+    ],
+    "E/ED/EDWW/HANNOVER_TMA": [
+      "EDDV",
+      "EDVE"
+    ],
+    "E/ED/EDWW/BREMEN_TMA": [
+      "EDDW"
+    ],
+    "E/ED/EDWW/SYLT_TMA": [
+      "EDXW"
+    ],
+    "E/EF/EFIN/EFIN_S/HELSINKI_TMA": [
+      "EFHK"
+    ],
+    "E/EG/EGTT/LONDON_TMA": [
+      "EGKK",
+      "EGLL",
+      "EGSS",
+      "EGWU"
+    ],
+    "E/EG/EGTT/MANCHESTER_TMA": [
+      "EGCC",
+      "EGGP"
+    ],
+    "E/EH/EHAA/AMSTERDAM_TMA": [
+      "EHAM"
+    ],
+    "E/EI/EISN/DUBLIN_TMA": [
+      "EIDW"
+    ],
+    "E/EK/EKDK/AALBORG_TMA": [
+      "EKYT"
+    ],
+    "E/EK/EKDK/AARHUS_TMA": [
+      "EKAH"
+    ],
+    "E/EK/EKDK/BILLUND_TMA": [
+      "EKBI"
+    ],
+    "E/EK/EKDK/BORNHOLM_TMA": [
+      "EKRN"
+    ],
+    "E/EK/EKDK/COPENHAGEN_TMA": [
+      "EKCH"
+    ],
+    "E/EK/EKDK/KARUP_TMA": [
+      "EKKA"
+    ],
+    "E/EK/EKDK/SKRYDSTRUP_TMA": [
+      "EKSP"
+    ],
+    "E/EN/ENOR/ENOS/OSLO_TMA": [
+      "ENGM",
+      "ENKJ"
+    ],
+    "E/EP/EPWW/WARSAW_TMA": [
+      "EPWA"
+    ],
+    "E/EP/EPWW/KRAKOW_TMA": [
+      "EPKK"
+    ],
+    "E/ES/ESAA/ESMM_23W45/ESGG_TMA": [
+      "ESGG",
+      "ESGT",
+      "ESIB"
+    ],
+    "E/ES/ESAA/ESOS_Y/ESOS_APP": [
+      "ESOW",
+      "ESSA",
+      "ESSB"
+    ],
     "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA": [
       "GCFV",
       "GCHI",
@@ -202,60 +567,175 @@
       "GCTS",
       "GCXO"
     ],
-    "K/KZAB/PHOENIX_TMA": ["KPHX"],
-    "K/KZAU/CHICAGO_MDW_TMA": ["KMDW"],
-    "K/KZAU/CHICAGO_ORD_TMA": ["KORD"],
-    "K/KZAU/MILWAUKEE_TMA": ["KMKE"],
-    "K/KZBW/BOSTON_TMA": ["KBOS"],
-    "K/KZDC/BALTIMORE_TMA": ["KBWI"],
-    "K/KZDC/DULLES_TMA": ["KIAD"],
-    "K/KZDC/RALEIGH_TMA": ["KRDU"],
-    "K/KZDC/WASHINGTON_DCA_TMA": ["KDCA"],
-    "K/KZDV/ASPEN_TMA": ["KASE"],
-    "K/KZDV/DENVER_TMA": ["KDEN"],
-    "K/KZFW/DALLAS_LOVE_TMA": ["KDAL"],
-    "K/KZFW/DFW_TMA": ["KDFW"],
-    "K/KZHU/AUSTIN_TMA": ["KAUS"],
-    "K/KZHU/HOUSTON_HOBBY_TMA": ["KHOU"],
-    "K/KZHU/HOUSTON_IAH_TMA": ["KIAH"],
-    "K/KZHU/NEW_ORLEANS_TMA": ["KMSY"],
-    "K/KZHU/SAN_ANTONIO_TMA": ["KSAT"],
-    "K/KZID/CINCINNATI_TMA": ["KCVG"],
-    "K/KZID/COLUMBUS_TMA": ["KCMH"],
-    "K/KZID/INDIANAPOLIS_TMA": ["KIND"],
-    "K/KZJX/ORLANDO_TMA": ["KMCO"],
-    "K/KZKC/KANSAS_CITY_TMA": ["KMCI"],
-    "K/KZKC/ST_LOUIS_TMA": ["KSTL"],
-    "K/KZLA/LAS_TMA": ["KLAS", "KLSV"],
-    "K/KZLA/LAX_TMA": ["KLAX", "KLGB"],
-    "K/KZLA/SANTA_ANA_TMA": ["KSNA"],
-    "K/KZLA/SAN_DIEGO_TMA": ["KSAN"],
-    "K/KZLC/SALT_LAKE_TMA": ["KSLC"],
-    "K/KZMA/FORT_LAUDERDALE_TMA": ["KFLL"],
-    "K/KZMA/FORT_MYERS_TMA": ["KRSW"],
-    "K/KZMA/MIAMI_TMA": ["KMIA"],
-    "K/KZMA/TAMPA_TMA": ["KTPA"],
-    "K/KZME/NASHVILLE_TMA": ["KBNA"],
-    "K/KZMP/MINNEAPOLIS_TMA": ["KMSP"],
-    "K/KZNY/JFK_TMA": ["KFRG", "KJFK"],
-    "K/KZNY/LAGUARDIA_TMA": ["KLGA"],
-    "K/KZNY/NEWARK_TMA": ["KEWR"],
-    "K/KZNY/PHILADELPHIA_TMA": ["KPHL"],
-    "K/KZNY/WILKES_BARRE_TMA": ["KAVP"],
-    "K/KZOA/OAKLAND_TMA": ["KOAK"],
-    "K/KZOA/SACRAMENTO_TMA": ["KSMF"],
-    "K/KZOA/SAN_JOSE_TMA": ["KSJC"],
-    "K/KZOA/SFO_TMA": ["KSFO"],
-    "K/KZOB/CLEVELAND_TMA": ["KCLE"],
-    "K/KZOB/DETROIT_TMA": ["KDTW"],
-    "K/KZOB/PITTSBURGH_TMA": ["KPIT"],
-    "K/KZSE/PORTLAND_TMA": ["KPDX"],
-    "K/KZSE/SEATTLE_TMA": ["KBFI", "KSEA"],
-    "K/KZTL/ATLANTA_TMA": ["KATL", "KPDK"],
-    "K/KZTL/CHARLOTTE_TMA": ["KCLT"],
-    "L/LC/LCCC/LARNACA_TMA": ["LCLK"],
-    "L/LC/LCCC/PAPHOS_TMA": ["LCPH"],
-    "L/LE/LECB/LECB_E/PALMA_TMA": ["LEIB", "LEMH", "LEPA"],
+    "K/KZAB/PHOENIX_TMA": [
+      "KPHX"
+    ],
+    "K/KZAU/CHICAGO_MDW_TMA": [
+      "KMDW"
+    ],
+    "K/KZAU/CHICAGO_ORD_TMA": [
+      "KORD"
+    ],
+    "K/KZAU/MILWAUKEE_TMA": [
+      "KMKE"
+    ],
+    "K/KZBW/BOSTON_TMA": [
+      "KBOS"
+    ],
+    "K/KZDC/BALTIMORE_TMA": [
+      "KBWI"
+    ],
+    "K/KZDC/DULLES_TMA": [
+      "KIAD"
+    ],
+    "K/KZDC/RALEIGH_TMA": [
+      "KRDU"
+    ],
+    "K/KZDC/WASHINGTON_DCA_TMA": [
+      "KDCA"
+    ],
+    "K/KZDV/ASPEN_TMA": [
+      "KASE"
+    ],
+    "K/KZDV/DENVER_TMA": [
+      "KDEN"
+    ],
+    "K/KZFW/DALLAS_LOVE_TMA": [
+      "KDAL"
+    ],
+    "K/KZFW/DFW_TMA": [
+      "KDFW"
+    ],
+    "K/KZHU/AUSTIN_TMA": [
+      "KAUS"
+    ],
+    "K/KZHU/HOUSTON_HOBBY_TMA": [
+      "KHOU"
+    ],
+    "K/KZHU/HOUSTON_IAH_TMA": [
+      "KIAH"
+    ],
+    "K/KZHU/NEW_ORLEANS_TMA": [
+      "KMSY"
+    ],
+    "K/KZHU/SAN_ANTONIO_TMA": [
+      "KSAT"
+    ],
+    "K/KZID/CINCINNATI_TMA": [
+      "KCVG"
+    ],
+    "K/KZID/COLUMBUS_TMA": [
+      "KCMH"
+    ],
+    "K/KZID/INDIANAPOLIS_TMA": [
+      "KIND"
+    ],
+    "K/KZJX/ORLANDO_TMA": [
+      "KMCO"
+    ],
+    "K/KZKC/KANSAS_CITY_TMA": [
+      "KMCI"
+    ],
+    "K/KZKC/ST_LOUIS_TMA": [
+      "KSTL"
+    ],
+    "K/KZLA/LAS_TMA": [
+      "KLAS",
+      "KLSV"
+    ],
+    "K/KZLA/LAX_TMA": [
+      "KLAX",
+      "KLGB"
+    ],
+    "K/KZLA/SANTA_ANA_TMA": [
+      "KSNA"
+    ],
+    "K/KZLA/SAN_DIEGO_TMA": [
+      "KSAN"
+    ],
+    "K/KZLC/SALT_LAKE_TMA": [
+      "KSLC"
+    ],
+    "K/KZMA/FORT_LAUDERDALE_TMA": [
+      "KFLL"
+    ],
+    "K/KZMA/FORT_MYERS_TMA": [
+      "KRSW"
+    ],
+    "K/KZMA/MIAMI_TMA": [
+      "KMIA"
+    ],
+    "K/KZMA/TAMPA_TMA": [
+      "KTPA"
+    ],
+    "K/KZME/NASHVILLE_TMA": [
+      "KBNA"
+    ],
+    "K/KZMP/MINNEAPOLIS_TMA": [
+      "KMSP"
+    ],
+    "K/KZNY/JFK_TMA": [
+      "KFRG",
+      "KJFK"
+    ],
+    "K/KZNY/LAGUARDIA_TMA": [
+      "KLGA"
+    ],
+    "K/KZNY/NEWARK_TMA": [
+      "KEWR"
+    ],
+    "K/KZNY/PHILADELPHIA_TMA": [
+      "KPHL"
+    ],
+    "K/KZNY/WILKES_BARRE_TMA": [
+      "KAVP"
+    ],
+    "K/KZOA/OAKLAND_TMA": [
+      "KOAK"
+    ],
+    "K/KZOA/SACRAMENTO_TMA": [
+      "KSMF"
+    ],
+    "K/KZOA/SAN_JOSE_TMA": [
+      "KSJC"
+    ],
+    "K/KZOA/SFO_TMA": [
+      "KSFO"
+    ],
+    "K/KZOB/CLEVELAND_TMA": [
+      "KCLE"
+    ],
+    "K/KZOB/DETROIT_TMA": [
+      "KDTW"
+    ],
+    "K/KZOB/PITTSBURGH_TMA": [
+      "KPIT"
+    ],
+    "K/KZSE/PORTLAND_TMA": [
+      "KPDX"
+    ],
+    "K/KZSE/SEATTLE_TMA": [
+      "KBFI",
+      "KSEA"
+    ],
+    "K/KZTL/ATLANTA_TMA": [
+      "KATL",
+      "KPDK"
+    ],
+    "K/KZTL/CHARLOTTE_TMA": [
+      "KCLT"
+    ],
+    "L/LC/LCCC/LARNACA_TMA": [
+      "LCLK"
+    ],
+    "L/LC/LCCC/PAPHOS_TMA": [
+      "LCPH"
+    ],
+    "L/LE/LECB/LECP/PALMA_TMA": [
+      "LEIB",
+      "LEMH",
+      "LEPA"
+    ],
     "L/LE/LECB/LECB_W/BARCELONA_TMA": [
       "LEBL",
       "LEDA",
@@ -264,8 +744,15 @@
       "LERS",
       "LESU"
     ],
-    "L/LE/LECB/LECB_W/VALENCIA_TMA": ["LEAL", "LECH", "LEMI", "LEVC"],
-    "L/LE/LECM/LECM_R1/ASTURIAS_TMA": ["LEAS"],
+    "L/LE/LECB/LECL/VALENCIA_TMA": [
+      "LEAL",
+      "LECH",
+      "LEMI",
+      "LEVC"
+    ],
+    "L/LE/LECM/LECM_R1/ASTURIAS_TMA": [
+      "LEAS"
+    ],
     "L/LE/LECM/LECM_R1/BILBAO_TMA": [
       "LEBB",
       "LEPP",
@@ -274,7 +761,11 @@
       "LEVT",
       "LEXJ"
     ],
-    "L/LE/LECM/LECM_R1/GALICIA_TMA": ["LECO", "LEST", "LEVX"],
+    "L/LE/LECM/LECM_R1/GALICIA_TMA": [
+      "LECO",
+      "LEST",
+      "LEVX"
+    ],
     "L/LE/LECM/LECM_R2/MADRID_TMA": [
       "LECU",
       "LEGT",
@@ -283,114 +774,349 @@
       "LETO",
       "LEVD"
     ],
-    "L/LE/LECM/LECM_R2/ZARAGOZA_TMA": ["LEZG"],
-    "L/LE/LECM/LECS/MALAGA_TMA": ["LEAM", "LEMG"],
-    "L/LE/LECM/LECS/SEVILLA_TMA": ["LEGR", "LEJR", "LEZL"],
-    "L/LF/LFFF/PARIS_TMA": ["LFPG", "LFPO"],
-    "L/LF/LFMM/NICE_TMA": ["LFMN"],
-    "L/LG/LGGG/ATHENS_TMA": ["LGAV"],
-    "L/LI/LIMM/MILAN_TMA": ["LIMC"],
-    "L/LI/LIMM/PISA_TMA": ["LIRP"],
-    "L/LI/LIRR/ROME_TMA": ["LIRA", "LIRF"],
-    "L/LL/LLLL/EILAT_TMA": ["LLER"],
-    "L/LL/LLLL/TEL_AVIV_TMA": ["LLBG"],
-    "L/LO/LOVV/GRAZ_TMA": ["LOWG"],
-    "L/LO/LOVV/INNSBRUCK_TMA": ["LOWI"],
-    "L/LO/LOVV/KLAGENFURT_TMA": ["LOWK"],
-    "L/LO/LOVV/LINZ_TMA": ["LOWL"],
-    "L/LO/LOVV/SALZBURG_TMA": ["LOWS"],
-    "L/LO/LOVV/TULLN_TMA": ["LOXT"],
-    "L/LO/LOVV/VIENNA_TMA": ["LOWW"],
-    "L/LO/LOVV/ZELTWEG_TMA": ["LOXZ"],
-    "L/LP/LPPC/MADEIRA_TMA": ["LPMA", "LPPS"],
-    "L/LP/LPPC/LISBOA_TMA": ["LPPT", "LPCS"],
-    "L/LP/LPPC/PORTO_TMA": ["LPPR"],
-    "L/LP/LPPC/FARO_TMA": ["LPFR"],
-    "L/LP/LPPO/FLORES_TMA": ["LPCR", "LPFL"],
-    "L/LP/LPPO/HORTA_TMA": ["LPHR", "LPPI", "LPSJ"],
-    "L/LP/LPPO/LAJES_TMA": ["LPGR", "LPLA"],
-    "L/LP/LPPO/PONTA_DELGADA_TMA": ["LPAZ", "LPPD"],
-    "L/LR/LRBB/BUCHAREST_TMA": ["LROP"],
-    "L/LS/LSAS/ZURICH_TMA": ["LSZH"],
-    "L/LT/LTBB/ISTANBUL_TMA": ["LTBA", "LTFJ", "LTFM"],
-    "L/LH/LHCC/BUDAPEST_TMA": ["LHBP"],
-    "O/OE/OEJD/JEDDAH_TMA": ["OEJN"],
-    "O/OE/OEJD/RIYADH_TMA": ["OERK"],
-    "O/OM/OMAE/ABU_DHABI_TMA": ["OMAA"],
-    "O/OM/OMAE/DUBAI_TERMINAL": ["OMDB", "OMDW", "OMSJ"],
-    "O/OT/OTDF/DOHA_TMA": ["OTHH"],
-    "P/PA/PAZA/ANCHORAGE_TMA": ["PANC"],
-    "P/PH/PHZH/MAUI_TMA": ["PHOG"],
-    "P/PH/PHZH/PHNL_TMA": ["PHNL"],
-    "R/RJ/RJJJ/Tokyo_TMA": ["RJTT"],
-    "T/TJ/TJZS/SAN_JUAN_TMA": ["TJSJ"],
-    "U/UM/UMKK/KALININGRAD_TMA": ["UMKK"],
-    "U/UU/UUWV/MOSCOW_TMA": ["UUEE"],
-    "U/UL/ULLL/ST_PETERSBURG_CTR": ["ULLI"],
-    "U/UK/UKBV/KYIV_BORYSPIL_TMA": ["UKBB"],
-    "V/VH/VHHK/HONGKONG_TMA": ["VHHH"],
-    "V/VA/VABF/MUMBAI_TMA": ["VABB"],
-    "V/VT/VTBB/Bangkok_TMA": ["VTBD", "VTBS"],
-    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP": ["RCTP"],
-    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP": ["RCSS"],
-    "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP": ["RCMQ"],
-    "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP": ["RCKH"],
-    "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP": ["RCNN"],
-    "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP": ["RCKU"],
-    "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP": ["RCQC"],
-    "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP": ["RCDC"],
-    "R/RC/RCAA/HUALIEN_TMA": ["RCYU"],
-    "R/RC/RCAA/TAITUNG_TMA": ["RCFN"],
-    "R/RC/RCAA/KINMEN_TMA": ["RCBS"],
-    "R/RC/RCAA/MATSU_TMA/NANGAN_APP": ["RCMT"],
-    "R/RC/RCAA/MATSU_TMA/BEIGAN_APP": ["RCFG"],
-    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP": ["RKSI"],
-    "R/RK/RKRR/INCHEON_TMA/GIMPO_APP": ["RKSS"],
-    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP": ["RKSM"],
-    "R/RK/RKRR/OSAN_TMA/OSAN_APP": ["RKSO"],
-    "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP": ["RKSG"],
-    "R/RK/RKRR/JUNGWON_TMA": ["RKTU"],
-    "R/RK/RKRR/WONJU_TMA": ["RKNW"],
-    "R/RK/RKRR/GANGNEUNG_TMA": ["RKNY"],
-    "R/RK/RKRR/POHANG_TMA/POHANG_APP": ["RKTH"],
-    "R/RK/RKRR/POHANG_TMA/ULSAN_APP": ["RKPU"],
-    "R/RK/RKRR/GIMHAE_TMA": ["RKPK"],
-    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP": ["RKPS"],
-    "R/RK/RKRR/SACHEON_TMA/YEOSU_APP": ["RKJY"],
-    "R/RK/RKRR/DAEGU_TMA": ["RKTN"],
-    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP": ["RKJJ"],
-    "R/RK/RKRR/GWANGJU_TMA/MUAN_APP": ["RKJB"],
-    "R/RK/RKRR/GUNSAN_TMA": ["RKJK"],
-    "R/RK/RKRR/JEJU_TMA/JEJU_APP": ["RKPC"],
-    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP": ["RKPD"],
-    "R/RK/RKRR/ULJIN_TMA": ["RKTL"],
-    "R/RP/RPHI/MANILA_TMA": ["RPLL"],
-    "R/RP/RPHI/CLARK_TMA/CLARK_APP": ["RPLC"],
-    "R/RP/RPHI/CLARK_TMA/SUBIC_APP": ["RPLB"],
-    "R/RP/RPHI/LAOAG_TMA": ["RPLI"],
-    "R/RP/RPHI/BICOL_TMA/BICOL_APP": ["RPLK"],
-    "R/RP/RPHI/BICOL_TMA/NAGA_APP": ["RPUN"],
-    "R/RP/RPHI/MACTAN_TMA/MACTAN_APP": ["RPVM"],
-    "R/RP/RPHI/MACTAN_TMA/BOHOL_APP": ["RPSP"],
-    "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP": ["RPVD"],
-    "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP": ["RPVB"],
-    "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP": ["RPVI"],
-    "R/RP/RPHI/KALIBO_TMA/KALIBO_APP": ["RPVK"],
-    "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP": ["RPVE"],
-    "R/RP/RPHI/KALIBO_TMA/ROXAS_APP": ["RPVR"],
-    "R/RP/RPHI/PUERTO_PRINCESA_TMA": ["RPVP"],
-    "R/RP/RPHI/TACLOBAN_TMA": ["RPVA"],
-    "R/RP/RPHI/DAVAO_TMA": ["RPMD"],
-    "R/RP/RPHI/LAGUINDINGAN_TMA": ["RPMY"],
-    "R/RP/RPHI/TAMBLER_TMA": ["RPMR"],
-    "R/RP/RPHI/ZAMBOANGA_TMA": ["RPMZ"],
-    "R/RP/RPHI/BUTUAN_TMA": ["RPME"],
-    "R/RP/RPHI/TUGUEGARAO_TMA": ["RPUT"],
-    "W/WS/WSJC/Singapore_TMA": ["WSSS"],
-    "W/WM/WMFC/Kuala_Lumpur_TMA": ["WMKK"],
-    "Y/YM/YMMM/MELBOURNE_TMA": ["YMML"],
-    "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
-    "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"],
-    "F/FA/FACA/CAPE_TOWN_CTR": ["FACT"]
+    "L/LE/LECM/LECM_R2/ZARAGOZA_TMA": [
+      "LEZG"
+    ],
+    "L/LE/LECM/LECS/MALAGA_TMA": [
+      "LEAM",
+      "LEMG"
+    ],
+    "L/LE/LECM/LECS/SEVILLA_TMA": [
+      "LEGR",
+      "LEJR",
+      "LEZL"
+    ],
+    "L/LF/LFFF/PARIS_TMA": [
+      "LFPG",
+      "LFPO"
+    ],
+    "L/LF/LFMM/NICE_TMA": [
+      "LFMN"
+    ],
+    "L/LG/LGGG/ATHENS_TMA": [
+      "LGAV"
+    ],
+    "L/LI/LIMM/MILAN_TMA": [
+      "LIMC"
+    ],
+    "L/LI/LIMM/PISA_TMA": [
+      "LIRP"
+    ],
+    "L/LI/LIRR/ROME_TMA": [
+      "LIRA",
+      "LIRF"
+    ],
+    "L/LL/LLLL/EILAT_TMA": [
+      "LLER"
+    ],
+    "L/LL/LLLL/TEL_AVIV_TMA": [
+      "LLBG"
+    ],
+    "L/LO/LOVV/GRAZ_TMA": [
+      "LOWG"
+    ],
+    "L/LO/LOVV/INNSBRUCK_TMA": [
+      "LOWI"
+    ],
+    "L/LO/LOVV/KLAGENFURT_TMA": [
+      "LOWK"
+    ],
+    "L/LO/LOVV/LINZ_TMA": [
+      "LOWL"
+    ],
+    "L/LO/LOVV/SALZBURG_TMA": [
+      "LOWS"
+    ],
+    "L/LO/LOVV/TULLN_TMA": [
+      "LOXT"
+    ],
+    "L/LO/LOVV/VIENNA_TMA": [
+      "LOWW"
+    ],
+    "L/LO/LOVV/ZELTWEG_TMA": [
+      "LOXZ"
+    ],
+    "L/LP/LPPC/MADEIRA_TMA": [
+      "LPMA",
+      "LPPS"
+    ],
+    "L/LP/LPPC/LISBOA_TMA": [
+      "LPPT",
+      "LPCS"
+    ],
+    "L/LP/LPPC/PORTO_TMA": [
+      "LPPR"
+    ],
+    "L/LP/LPPC/FARO_TMA": [
+      "LPFR"
+    ],
+    "L/LP/LPPO/FLORES_TMA": [
+      "LPCR",
+      "LPFL"
+    ],
+    "L/LP/LPPO/HORTA_TMA": [
+      "LPHR",
+      "LPPI",
+      "LPSJ"
+    ],
+    "L/LP/LPPO/LAJES_TMA": [
+      "LPGR",
+      "LPLA"
+    ],
+    "L/LP/LPPO/PONTA_DELGADA_TMA": [
+      "LPAZ",
+      "LPPD"
+    ],
+    "L/LR/LRBB/BUCHAREST_TMA": [
+      "LROP"
+    ],
+    "L/LS/LSAS/ZURICH_TMA": [
+      "LSZH"
+    ],
+    "L/LT/LTBB/ISTANBUL_TMA": [
+      "LTBA",
+      "LTFJ",
+      "LTFM"
+    ],
+    "L/LH/LHCC/BUDAPEST_TMA": [
+      "LHBP"
+    ],
+    "O/OE/OEJD/JEDDAH_TMA": [
+      "OEJN"
+    ],
+    "O/OE/OEJD/RIYADH_TMA": [
+      "OERK"
+    ],
+    "O/OM/OMAE/ABU_DHABI_TMA": [
+      "OMAA"
+    ],
+    "O/OM/OMAE/DUBAI_TERMINAL": [
+      "OMDB",
+      "OMDW",
+      "OMSJ"
+    ],
+    "O/OT/OTDF/DOHA_TMA": [
+      "OTHH"
+    ],
+    "P/PA/PAZA/ANCHORAGE_TMA": [
+      "PANC"
+    ],
+    "P/PH/PHZH/MAUI_TMA": [
+      "PHOG"
+    ],
+    "P/PH/PHZH/PHNL_TMA": [
+      "PHNL"
+    ],
+    "R/RJ/RJJJ/Tokyo_TMA": [
+      "RJTT"
+    ],
+    "T/TJ/TJZS/SAN_JUAN_TMA": [
+      "TJSJ"
+    ],
+    "U/UM/UMKK/KALININGRAD_TMA": [
+      "UMKK"
+    ],
+    "U/UU/UUWV/MOSCOW_TMA": [
+      "UUEE"
+    ],
+    "U/UL/ULLL/ST_PETERSBURG_CTR": [
+      "ULLI"
+    ],
+    "U/UK/UKBV/KYIV_BORYSPIL_TMA": [
+      "UKBB"
+    ],
+    "V/VH/VHHK/HONGKONG_TMA": [
+      "VHHH"
+    ],
+    "V/VA/VABF/MUMBAI_TMA": [
+      "VABB"
+    ],
+    "V/VT/VTBB/Bangkok_TMA": [
+      "VTBD",
+      "VTBS"
+    ],
+    "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP": [
+      "RCTP"
+    ],
+    "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP": [
+      "RCSS"
+    ],
+    "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP": [
+      "RCMQ"
+    ],
+    "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP": [
+      "RCKH"
+    ],
+    "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP": [
+      "RCNN"
+    ],
+    "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP": [
+      "RCKU"
+    ],
+    "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP": [
+      "RCQC"
+    ],
+    "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP": [
+      "RCDC"
+    ],
+    "R/RC/RCAA/HUALIEN_TMA": [
+      "RCYU"
+    ],
+    "R/RC/RCAA/TAITUNG_TMA": [
+      "RCFN"
+    ],
+    "R/RC/RCAA/KINMEN_TMA": [
+      "RCBS"
+    ],
+    "R/RC/RCAA/MATSU_TMA/NANGAN_APP": [
+      "RCMT"
+    ],
+    "R/RC/RCAA/MATSU_TMA/BEIGAN_APP": [
+      "RCFG"
+    ],
+    "R/RK/RKRR/INCHEON_TMA/INCHEON_APP": [
+      "RKSI"
+    ],
+    "R/RK/RKRR/INCHEON_TMA/GIMPO_APP": [
+      "RKSS"
+    ],
+    "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP": [
+      "RKSM"
+    ],
+    "R/RK/RKRR/OSAN_TMA/OSAN_APP": [
+      "RKSO"
+    ],
+    "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP": [
+      "RKSG"
+    ],
+    "R/RK/RKRR/JUNGWON_TMA": [
+      "RKTU"
+    ],
+    "R/RK/RKRR/WONJU_TMA": [
+      "RKNW"
+    ],
+    "R/RK/RKRR/GANGNEUNG_TMA": [
+      "RKNY"
+    ],
+    "R/RK/RKRR/POHANG_TMA/POHANG_APP": [
+      "RKTH"
+    ],
+    "R/RK/RKRR/POHANG_TMA/ULSAN_APP": [
+      "RKPU"
+    ],
+    "R/RK/RKRR/GIMHAE_TMA": [
+      "RKPK"
+    ],
+    "R/RK/RKRR/SACHEON_TMA/SACHEON_APP": [
+      "RKPS"
+    ],
+    "R/RK/RKRR/SACHEON_TMA/YEOSU_APP": [
+      "RKJY"
+    ],
+    "R/RK/RKRR/DAEGU_TMA": [
+      "RKTN"
+    ],
+    "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP": [
+      "RKJJ"
+    ],
+    "R/RK/RKRR/GWANGJU_TMA/MUAN_APP": [
+      "RKJB"
+    ],
+    "R/RK/RKRR/GUNSAN_TMA": [
+      "RKJK"
+    ],
+    "R/RK/RKRR/JEJU_TMA/JEJU_APP": [
+      "RKPC"
+    ],
+    "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP": [
+      "RKPD"
+    ],
+    "R/RK/RKRR/ULJIN_TMA": [
+      "RKTL"
+    ],
+    "R/RP/RPHI/MANILA_TMA": [
+      "RPLL"
+    ],
+    "R/RP/RPHI/CLARK_TMA/CLARK_APP": [
+      "RPLC"
+    ],
+    "R/RP/RPHI/CLARK_TMA/SUBIC_APP": [
+      "RPLB"
+    ],
+    "R/RP/RPHI/LAOAG_TMA": [
+      "RPLI"
+    ],
+    "R/RP/RPHI/BICOL_TMA/BICOL_APP": [
+      "RPLK"
+    ],
+    "R/RP/RPHI/BICOL_TMA/NAGA_APP": [
+      "RPUN"
+    ],
+    "R/RP/RPHI/MACTAN_TMA/MACTAN_APP": [
+      "RPVM"
+    ],
+    "R/RP/RPHI/MACTAN_TMA/BOHOL_APP": [
+      "RPSP"
+    ],
+    "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP": [
+      "RPVD"
+    ],
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP": [
+      "RPVB"
+    ],
+    "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP": [
+      "RPVI"
+    ],
+    "R/RP/RPHI/KALIBO_TMA/KALIBO_APP": [
+      "RPVK"
+    ],
+    "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP": [
+      "RPVE"
+    ],
+    "R/RP/RPHI/KALIBO_TMA/ROXAS_APP": [
+      "RPVR"
+    ],
+    "R/RP/RPHI/PUERTO_PRINCESA_TMA": [
+      "RPVP"
+    ],
+    "R/RP/RPHI/TACLOBAN_TMA": [
+      "RPVA"
+    ],
+    "R/RP/RPHI/DAVAO_TMA": [
+      "RPMD"
+    ],
+    "R/RP/RPHI/LAGUINDINGAN_TMA": [
+      "RPMY"
+    ],
+    "R/RP/RPHI/TAMBLER_TMA": [
+      "RPMR"
+    ],
+    "R/RP/RPHI/ZAMBOANGA_TMA": [
+      "RPMZ"
+    ],
+    "R/RP/RPHI/BUTUAN_TMA": [
+      "RPME"
+    ],
+    "R/RP/RPHI/TUGUEGARAO_TMA": [
+      "RPUT"
+    ],
+    "W/WS/WSJC/Singapore_TMA": [
+      "WSSS"
+    ],
+    "W/WM/WMFC/Kuala_Lumpur_TMA": [
+      "WMKK"
+    ],
+    "Y/YM/YMMM/MELBOURNE_TMA": [
+      "YMML"
+    ],
+    "Y/YM/YMMM/SYDNEY_TMA": [
+      "YSSY"
+    ],
+    "Z/ZG/ZGZU/ZHUHAI_TMA": [
+      "VMMC"
+    ],
+    "F/FA/FACA/CAPE_TOWN_CTR": [
+      "FACT"
+    ]
   }
 }

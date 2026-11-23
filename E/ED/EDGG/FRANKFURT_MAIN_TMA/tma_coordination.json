@@ -1,133 +1,183 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["EDDF"],
-      "descent": "F110",
-      "fix": ["KERAX"],
-      "from": "EDGG_CTR",
       "name": "EDDF_ARR_KERAX_25",
-      "priority": 10,
-      "runways": ["25L", "25C", "25R"],
-      "to": "EDDF_APP"
+      "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "KERAX"
+      ],
+      "level": "F110",
+      "runways": [
+        "25L",
+        "25C",
+        "25R"
+      ]
     },
     {
-      "arrives": ["EDDF"],
-      "descent": "F130",
-      "fix": ["KERAX"],
-      "from": "EDGG_CTR",
       "name": "EDDF_ARR_KERAX_07",
-      "priority": 10,
-      "runways": ["07L", "07C", "07R"],
-      "to": "EDDF_APP"
+      "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "KERAX"
+      ],
+      "level": "F130",
+      "runways": [
+        "07L",
+        "07C",
+        "07R"
+      ]
     },
     {
-      "arrives": ["EDDF"],
-      "descent": "F100",
-      "fix": ["OSPUL"],
-      "from": "EDGG_CTR",
       "name": "EDDF_ARR_OSPUL",
-      "priority": 10,
-      "to": "EDDF_APP"
+      "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "OSPUL"
+      ],
+      "level": "F100"
     },
     {
-      "arrives": ["EDDF"],
-      "descent": "F110",
-      "fix": ["RAMOB"],
-      "from": "EDGG_CTR",
       "name": "EDDF_ARR_RAMOB",
-      "priority": 10,
-      "to": "EDDF_APP"
+      "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "RAMOB"
+      ],
+      "level": "F110"
     },
     {
-      "arrives": ["EDDF"],
-      "descent": "F100",
-      "fix": ["ADNIS"],
-      "from": "EDGG_CTR",
       "name": "EDDF_ARR_ADNIS",
-      "priority": 10,
-      "to": "EDDF_APP"
-    },
-    {
-      "arrives": ["EDDF"],
-      "descent": "F110",
-      "fix": ["SPESA"],
       "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "ADNIS"
+      ],
+      "level": "F100"
+    },
+    {
       "name": "EDDF_ARR_SPESA",
-      "priority": 10,
-      "to": "EDDF_APP"
+      "from": "EDGG_CTR",
+      "to": "EDDF_APP",
+      "arrives": [
+        "EDDF"
+      ],
+      "fix": [
+        "SPESA"
+      ],
+      "level": "F110"
     },
     {
-      "climb": "F110",
-      "departs": ["EDDF"],
-      "fix": ["AMTIX"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_AMTIX",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "AMTIX"
+      ],
+      "level": "F110"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["KOMIB"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_KOMIB",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "KOMIB"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["ANEKI"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_ANEKI",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "ANEKI"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["SOBRA"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_SOBRA",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "SOBRA"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["ULKIG"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_ULKIG",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "ULKIG"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["OBOKA"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_OBOKA",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "OBOKA"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["MARUN"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_MARUN",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "MARUN"
+      ],
+      "level": "F130"
     },
     {
-      "climb": "F130",
-      "departs": ["EDDF"],
-      "fix": ["TOBAK"],
-      "from": "EDDF_APP",
       "name": "EDDF_DEP_TOBAK",
-      "priority": 10,
-      "to": "EDGG_CTR"
+      "from": "EDDF_APP",
+      "to": "EDGG_CTR",
+      "departs": [
+        "EDDF"
+      ],
+      "fix": [
+        "TOBAK"
+      ],
+      "level": "F130"
     }
-  ],
-  "schema": 2
+  ]
 }

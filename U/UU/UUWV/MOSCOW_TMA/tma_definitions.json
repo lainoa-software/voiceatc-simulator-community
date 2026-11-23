@@ -1,0 +1,24 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "UUEE_APP",
+      "call_sign": "Moscow approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "UUEE_MSK_APP",
+      "unit": "UUEE_APP",
+      "frequency": "134.000"
+    },
+    {
+      "call_sign": "UUEE_APP",
+      "unit": "UUEE_APP",
+      "frequency": "122.700"
+    }
+  ]
+}

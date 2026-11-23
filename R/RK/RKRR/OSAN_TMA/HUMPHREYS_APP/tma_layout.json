@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKSG_APP": {
+      "HUMPHREYS": {
+        "positions": {
+          "RKSG_APP": [
+            "RKSG_APP"
+          ]
+        },
+        "airports": [
+          "RKSG"
+        ]
+      }
+    }
+  }
+}

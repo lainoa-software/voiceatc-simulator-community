@@ -1,0 +1,35 @@
+{
+  "schema": 3,
+  "airport": "EDDG",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "AMSA1Y"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DOME3Y"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "DOME3Z"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSNA1Z"
+      ],
+      "spawn": false
+    }
+  ]
+}

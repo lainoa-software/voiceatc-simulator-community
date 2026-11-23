@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "airport": "RCSS",
+  "airac_min": 2610,
+  "use": [
+    {
+      "sids": [
+        "RONE1A"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "XEBE1A"
+      ],
+      "spawn": false
+    }
+  ]
+}

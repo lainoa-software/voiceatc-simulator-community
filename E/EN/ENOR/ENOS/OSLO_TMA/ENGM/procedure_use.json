@@ -1,0 +1,101 @@
+{
+  "schema": 3,
+  "airport": "ENGM",
+  "airac_min": 2606,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "MASE4A"
+      ],
+      "runways": [
+        "01L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OKSA4A"
+      ],
+      "runways": [
+        "01L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VEMI5A"
+      ],
+      "runways": [
+        "01L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ATLA9B"
+      ],
+      "runways": [
+        "01R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EVTO9B"
+      ],
+      "runways": [
+        "01R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ATLA3C"
+      ],
+      "runways": [
+        "19L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EVTO3C"
+      ],
+      "runways": [
+        "19L"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "MASE6D"
+      ],
+      "runways": [
+        "19R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OKSA6D"
+      ],
+      "runways": [
+        "19R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VEMI1D"
+      ],
+      "runways": [
+        "19R"
+      ],
+      "spawn": false
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "schema": 3,
+  "airport": "KSFO",
+  "procedures": [
+    {
+      "id": "QUIET_BRIDGE_VISUAL_28R",
+      "name": "Quiet Bridge Visual RWY 28R",
+      "aliases": [
+        "quiet bridge visual",
+        "quiet bridge"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "QUIET BRIDGE VISUAL RWY 28R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375QUIETBRIDGE_VIS28R.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "SOUTH_ENTRY",
+          "runway": "28R",
+          "clearance_name": "Quiet Bridge Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "SAPPP_TRACE",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "type": "track_to_fix",
+              "point": [
+                37.3749027778,
+                -122.11875
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 6000
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "type": "track_to_fix",
+              "point": [
+                37.4507111111,
+                -122.1447472222
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 5000
+              }
+            },
+            {
+              "id": "JANYY",
+              "name": "JANYY / San Mateo Bridge",
+              "type": "track_to_fix",
+              "point": [
+                37.5568166667,
+                -122.1795555556
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 3000
+              }
+            },
+            {
+              "id": "RAACL_TRACE",
+              "name": "RAACL (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.599,
+                -122.275
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 1800
+              }
+            },
+            {
+              "id": "SHLTN_TRACE",
+              "name": "SHLTN (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.606,
+                -122.325
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "SAPPP_TRACE",
+              "name": "SAPPP (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.61,
+                -122.35
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
+        },
+        {
+          "id": "EAST_ENTRY",
+          "runway": "28R",
+          "clearance_name": "Quiet Bridge Visual",
+          "entry_point_id": "ARCHI",
+          "sight_reference_point_id": "SAPPP_TRACE",
+          "legs": [
+            {
+              "id": "ARCHI",
+              "name": "ARCHI",
+              "type": "track_to_fix",
+              "point": [
+                37.4907972222,
+                -121.8755416667
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 7000
+              }
+            },
+            {
+              "id": "TRBOW_TRACE",
+              "name": "TRBOW (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.53,
+                -121.97
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 6000
+              }
+            },
+            {
+              "id": "GAROW",
+              "name": "GAROW / Salt Ponds",
+              "type": "track_to_fix",
+              "point": [
+                37.5253611111,
+                -122.0825083333
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 4000
+              }
+            },
+            {
+              "id": "JANYY",
+              "name": "JANYY / San Mateo Bridge",
+              "type": "track_to_fix",
+              "point": [
+                37.5568166667,
+                -122.1795555556
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 3000
+              }
+            },
+            {
+              "id": "RAACL_TRACE",
+              "name": "RAACL (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.599,
+                -122.275
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 1800
+              }
+            },
+            {
+              "id": "SHLTN_TRACE",
+              "name": "SHLTN (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.606,
+                -122.325
+              ],
+              "fly_over": true
+            },
+            {
+              "id": "SAPPP_TRACE",
+              "name": "SAPPP (chart-traced)",
+              "type": "track_to_fix",
+              "point": [
+                37.61,
+                -122.35
+              ],
+              "fly_over": false
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "TIPP_TOE_VISUAL_28LR",
+      "name": "Tipp Toe Visual RWY 28L/R",
+      "aliases": [
+        "tipp toe visual",
+        "tipp toe"
+      ],
+      "classification": "charted_ifr_visual",
+      "policy_profile": "FAA",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-24"
+      },
+      "variants": [
+        {
+          "id": "TIPP_TOE_28L",
+          "runway": "28L",
+          "clearance_name": "Tipp Toe Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "CHERA",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "type": "track_to_fix",
+              "point": [
+                37.3749027778,
+                -122.11875
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 6000
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "type": "track_to_fix",
+              "point": [
+                37.4507111111,
+                -122.1447472222
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 5000
+              }
+            },
+            {
+              "id": "CHERA",
+              "name": "CHERA",
+              "type": "course_to_fix",
+              "point": [
+                37.4810805556,
+                -122.1582833333
+              ],
+              "fly_over": true,
+              "course_deg": 310,
+              "reference": "I-SFO localizer"
+            }
+          ],
+          "final": {
+            "glidepath_deg": 2.85
+          },
+          "go_around": {
+            "terminal_policy": "REQUEST_INSTRUCTIONS",
+            "source": {
+              "authority": "FAA",
+              "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+              "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+              "effective_date": "2026-08-06",
+              "airac": "2608",
+              "checked_date": "2026-08-27"
+            },
+            "legs": [
+              {
+                "sequence": 10,
+                "type": "heading_to_altitude",
+                "ident": "RW28L",
+                "course": 265,
+                "altitude": {
+                  "at_ft": 3000
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "TIPP_TOE_28R",
+          "runway": "28R",
+          "clearance_name": "Tipp Toe Visual",
+          "entry_point_id": "EDDYY",
+          "sight_reference_point_id": "CHERA",
+          "legs": [
+            {
+              "id": "EDDYY",
+              "name": "EDDYY",
+              "type": "track_to_fix",
+              "point": [
+                37.3749027778,
+                -122.11875
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 6000
+              }
+            },
+            {
+              "id": "SIDBY",
+              "name": "SIDBY",
+              "type": "track_to_fix",
+              "point": [
+                37.4507111111,
+                -122.1447472222
+              ],
+              "fly_over": true,
+              "altitude": {
+                "at_or_above_ft": 5000
+              }
+            },
+            {
+              "id": "CHERA",
+              "name": "CHERA",
+              "type": "course_to_fix",
+              "point": [
+                37.4810805556,
+                -122.1582833333
+              ],
+              "fly_over": true,
+              "course_deg": 310,
+              "reference": "I-GWQ localizer"
+            }
+          ],
+          "final": {
+            "glidepath_deg": 3
+          },
+          "go_around": {
+            "terminal_policy": "REQUEST_INSTRUCTIONS",
+            "source": {
+              "authority": "FAA",
+              "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+              "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+              "effective_date": "2026-08-06",
+              "airac": "2608",
+              "checked_date": "2026-08-27"
+            },
+            "legs": [
+              {
+                "sequence": 10,
+                "type": "heading_to_altitude",
+                "ident": "RW28R",
+                "course": 280,
+                "altitude": {
+                  "at_ft": 3000
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

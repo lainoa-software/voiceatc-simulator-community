@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "OEJN_APP": {
+      "JEDDAH_APP": {
+        "positions": {
+          "OEJN_APP": [
+            "OEJN_APP"
+          ]
+        },
+        "airports": [
+          "OEJN"
+        ]
+      }
+    }
+  }
+}

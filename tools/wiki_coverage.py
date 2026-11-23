@@ -37,18 +37,30 @@ ROOT = Path(__file__).resolve().parent.parent
 BLOB_LINK_RE = re.compile(r"/blob/main/([^)#\s]+\.md)")
 RELATIVE_LINK_RE = re.compile(r"\]\((?!https?:)([^)#\s]+\.md)")
 REFERENCE_PAGES = ("Content-Hierarchy.md", "Test-Locally.md")
-SCHEMA2_ADDED_KINDS = frozenset({
-    "tma_structure.json",
+SCHEMA3_ADDED_KINDS = frozenset({
+    "tma_definitions.json",
+    "tma_layout.json",
     "tma_coordination.json",
-    "acc_structure.json",
+    "acc_definitions.json",
+    "acc_layout.json",
     "acc_coordination.json",
+    "procedure_use.json",
+    "initial_climb.json",
+    "departure_variants.json",
+    "visual_approaches.json",
 })
-SCHEMA2_REMOVED_KINDS = frozenset({
+SCHEMA3_REMOVED_KINDS = frozenset({
     "sector_configs.json",
     "sector_influence.json",
     "tma.json",
+    "tma_structure.json",
+    "acc_structure.json",
+    "procedure_options.json",
+    "visual_procedures.json",
+    "visual_go_arounds.json",
+    "visual_sight_references.json",
 })
-WIKI_FILE_KINDS = (CONTENT_FILE_NAMES | SCHEMA2_ADDED_KINDS) - SCHEMA2_REMOVED_KINDS
+WIKI_FILE_KINDS = (CONTENT_FILE_NAMES | SCHEMA3_ADDED_KINDS) - SCHEMA3_REMOVED_KINDS
 
 
 def repository_documents(root: Path) -> set[str]:

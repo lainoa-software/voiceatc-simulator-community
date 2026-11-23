@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOXT_APP",
+      "call_sign": "Tulln approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOXT_APP",
+      "unit": "LOXT_APP",
+      "frequency": "136.130"
+    }
+  ]
+}

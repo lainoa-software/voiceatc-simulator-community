@@ -1,0 +1,209 @@
+{
+  "schema": 3,
+  "airport": "EDDN",
+  "airac_min": 2608,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "BOLS1C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ERET1C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ERL2C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "NUB1A"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "RODI1C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "SUKA1C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "SULU1C"
+      ],
+      "runways": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "BOLS1G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ERET1G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "ERL2G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "NUB1B"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "RODI1G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "SUKA1G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "sids": [
+        "SULU1G"
+      ],
+      "runways": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "DODA1T"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "LETK1T"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "PIVI1T"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "UPAL1T"
+      ],
+      "configs": [
+        "10"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "DODA1V"
+      ],
+      "configs": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "LETK1V"
+      ],
+      "configs": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "PIVI1V"
+      ],
+      "configs": [
+        "28"
+      ],
+      "spawn": true
+    },
+    {
+      "stars": [
+        "UPAL1V"
+      ],
+      "configs": [
+        "28"
+      ],
+      "spawn": true
+    }
+  ]
+}

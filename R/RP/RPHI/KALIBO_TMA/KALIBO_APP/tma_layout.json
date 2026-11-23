@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPVK_APP": {
+      "KALIBO": {
+        "positions": {
+          "RPVK_APP": [
+            "RPVK_APP"
+          ]
+        },
+        "airports": [
+          "RPVK"
+        ]
+      }
+    }
+  }
+}

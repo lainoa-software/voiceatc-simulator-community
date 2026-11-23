@@ -1,0 +1,100 @@
+{
+  "schema": 3,
+  "agreements": [
+    {
+      "name": "W_BORDEAUX_EVEN",
+      "from": "LECB_BKW_CTR",
+      "to": "LFBB_CTR",
+      "level": "EVEN"
+    },
+    {
+      "name": "W_E_BOUNDARY_EVEN",
+      "from": "LECB_BKW_CTR",
+      "to": "LECB_BKE_CTR",
+      "level": "EVEN"
+    },
+    {
+      "name": "W_PALMA_F250",
+      "from": "LECB_BKW_CTR",
+      "to": "LECP_GIX_CTR",
+      "arrives": [
+        "LEPA"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "W_ALGERIA_ODD",
+      "from": "LECB_BKW_CTR",
+      "to": "DAAA_CTR",
+      "level": "ODD"
+    },
+    {
+      "name": "W_SEVILLA_ODD",
+      "from": "LECB_BKW_CTR",
+      "to": "LECS_CTR",
+      "level": "ODD"
+    },
+    {
+      "name": "W_ALMERIA_ALBACETE_EVEN",
+      "from": "LECB_BKW_CTR",
+      "to": "LECS_CTR",
+      "arrives": [
+        "LEAM",
+        "LEAB"
+      ],
+      "level": "EVEN"
+    },
+    {
+      "name": "W_MADRID_ODD",
+      "from": "LECB_BKW_CTR",
+      "to": "LECM_R2_CTR",
+      "level": "ODD"
+    },
+    {
+      "name": "W_MADRID_ASTRO_EVEN",
+      "from": "LECB_BKW_CTR",
+      "to": "LECM_R2_CTR",
+      "fix": [
+        "ASTRO",
+        "MANDY"
+      ],
+      "level": "EVEN"
+    },
+    {
+      "name": "W_MADRID_TMA_F330",
+      "from": "LECB_BKW_CTR",
+      "to": "LECM_R2_CTR",
+      "arrives": [
+        "LEMD"
+      ],
+      "level": "F330"
+    },
+    {
+      "name": "W_ZARAGOZA_F210",
+      "from": "LECB_BKW_CTR",
+      "to": "LEZG_APP",
+      "arrives": [
+        "LEZG"
+      ],
+      "level": "F210"
+    },
+    {
+      "name": "E_MARSEILLE_EVEN",
+      "from": "LECB_BKE_CTR",
+      "to": "LFMM_S_CTR",
+      "level": "EVEN"
+    },
+    {
+      "name": "E_ALGERIA_ODD",
+      "from": "LECB_BKE_CTR",
+      "to": "DAAA_CTR",
+      "level": "ODD"
+    },
+    {
+      "name": "E_W_BOUNDARY_ODD",
+      "from": "LECB_BKE_CTR",
+      "to": "LECB_BKW_CTR",
+      "level": "ODD"
+    }
+  ]
+}

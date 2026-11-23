@@ -1,24 +1,45 @@
 {
+  "schema": 3,
   "alien_symbol": "plus",
   "assumed_symbol": "diamond_filled",
   "defined_symbols": {
     "diamond": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 0 -5 L 5 0 L 0 5 L -5 0 L 0 -5",
       "type": "wireframe"
     },
     "diamond_filled": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 0 -5 L 5 0 L 0 5 L -5 0 L 0 -5",
       "type": "filled"
     },
     "history": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
       "type": "filled"
     },
     "plus": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M -4 0 L 4 0 M 0 -4 L 0 4",
       "type": "wireframe"
     }

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "airport": "KBFI",
+  "variants": [
+    {
+      "procedure_id": "HARBOR_VISUAL_14R",
+      "variant_id": "NORTHWEST_HOOD_CANAL",
+      "default_reference_id": "HARBOR_ISLAND",
+      "references": [
+        {
+          "id": "HARBOR_ISLAND",
+          "name": "Harbor Island",
+          "aliases": ["the Harbor Island"],
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "HARBOR VISUAL RWY 14R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00384HARBOR_VIS14R.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "HARBOR_VISUAL_14R",
+      "variant_id": "NORTH_LAKE_WASHINGTON",
+      "default_reference_id": "HARBOR_ISLAND",
+      "references": [
+        {
+          "id": "HARBOR_ISLAND",
+          "name": "Harbor Island",
+          "aliases": ["the Harbor Island"],
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "HARBOR VISUAL RWY 14R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00384HARBOR_VIS14R.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "HARBOR_VISUAL_14R",
+      "variant_id": "SOUTH_VASHON",
+      "default_reference_id": "HARBOR_ISLAND",
+      "references": [
+        {
+          "id": "HARBOR_ISLAND",
+          "name": "Harbor Island",
+          "aliases": ["the Harbor Island"],
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "HARBOR VISUAL RWY 14R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00384HARBOR_VIS14R.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

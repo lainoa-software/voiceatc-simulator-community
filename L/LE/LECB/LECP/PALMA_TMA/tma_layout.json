@@ -1,0 +1,120 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LEPA_APP": {
+      "1A": {
+        "positions": {
+          "LEPA_LECPAPR_APP": [
+            "LECPALP"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ]
+      },
+      "3D": {
+        "positions": {
+          "LEIB_LECPIXX_APP": [
+            "LECPIXX"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
+          ],
+          "LEPA_LECPAPR_APP": [
+            "LECPAPR"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      },
+      "N5": {
+        "positions": {
+          "LEIB_LECPIXX_APP": [
+            "LECPIXX"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
+          ],
+          "LEPA_FNL_APP": [
+            "LECPF12"
+          ],
+          "LEPA_LECPAPR_APP": [
+            "LECPAPR"
+          ],
+          "LEPA_LL2_APP": [
+            "LECPF2X"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      },
+      "N6-24": {
+        "positions": {
+          "LEIB_LECPIXX_APP": [
+            "LECPIXX"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
+          ],
+          "LEPA_DEP_APP": [
+            "LECPDWX"
+          ],
+          "LEPA_FNL_APP": [
+            "LECPF12"
+          ],
+          "LEPA_LECPAPR_APP": [
+            "LECPAPR"
+          ],
+          "LEPA_LL2_APP": [
+            "LECPF2X"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "WLR",
+            "WEST_DUAL"
+          ]
+        }
+      },
+      "N6-06": {
+        "positions": {
+          "LEIB_LECPIXX_APP": [
+            "LECPIXX"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
+          ],
+          "LEPA_DEP_APP": [
+            "LECPDEX"
+          ],
+          "LEPA_FNL_APP": [
+            "LECPF12"
+          ],
+          "LEPA_LECPAPR_APP": [
+            "LECPAPR"
+          ],
+          "LEPA_LL2_APP": [
+            "LECPF2X"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "ELR"
+          ]
+        }
+      }
+    }
+  }
+}

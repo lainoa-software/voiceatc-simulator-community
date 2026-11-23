@@ -1,0 +1,43 @@
+{
+  "schema": 3,
+  "airport": "EKCH",
+  "airac_min": 2610,
+  "exceptions": [
+    {
+      "runways": [
+        "04L"
+      ],
+      "initial_climb_ft": 7000
+    },
+    {
+      "runways": [
+        "04R"
+      ],
+      "initial_climb_ft": 7000
+    },
+    {
+      "runways": [
+        "12"
+      ],
+      "initial_climb_ft": 4000
+    },
+    {
+      "runways": [
+        "22L"
+      ],
+      "initial_climb_ft": 7000
+    },
+    {
+      "runways": [
+        "22R"
+      ],
+      "initial_climb_ft": 7000
+    },
+    {
+      "runways": [
+        "30"
+      ],
+      "initial_climb_ft": 4000
+    }
+  ]
+}

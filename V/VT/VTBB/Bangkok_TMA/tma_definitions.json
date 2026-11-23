@@ -1,0 +1,54 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "VTBD_APP",
+      "call_sign": "Bangkok approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "VTBD_APP",
+      "unit": "VTBD_APP",
+      "frequency": "125.200"
+    },
+    {
+      "call_sign": "VTBS_APP",
+      "unit": "VTBD_APP",
+      "frequency": "125.200"
+    },
+    {
+      "call_sign": "VTBS_DEPS_APP",
+      "unit": "VTBD_APP",
+      "frequency": "119.250"
+    },
+    {
+      "call_sign": "VTBS_ARRS_APP",
+      "unit": "VTBD_APP",
+      "frequency": "121.100"
+    },
+    {
+      "call_sign": "VTBD_VTBBAPPS_APP",
+      "unit": "VTBD_APP",
+      "frequency": "125.200"
+    },
+    {
+      "call_sign": "VTBS_DEPN_APP",
+      "unit": "VTBD_APP",
+      "frequency": "119.250"
+    },
+    {
+      "call_sign": "VTBS_ARRN_APP",
+      "unit": "VTBD_APP",
+      "frequency": "121.100"
+    },
+    {
+      "call_sign": "VTBD_VTBBAPPN_APP",
+      "unit": "VTBD_APP",
+      "frequency": "125.200"
+    }
+  ]
+}

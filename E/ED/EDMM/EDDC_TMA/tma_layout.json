@@ -1,0 +1,28 @@
+{
+  "schema": 3,
+  "configurations": {
+    "EDAB_APP": {
+      "1": {
+        "positions": {
+          "EDAB_APP": [
+            "SAS"
+          ]
+        },
+        "airports": [
+          "EDAB",
+          "EDDC"
+        ],
+        "valid_for_runways": {
+          "EDAB": [
+            "04",
+            "22"
+          ],
+          "EDDC": [
+            "04",
+            "22"
+          ]
+        }
+      }
+    }
+  }
+}

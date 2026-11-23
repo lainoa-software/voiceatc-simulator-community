@@ -61,39 +61,44 @@ def great_circle_distance_nm(
     return EARTH_RADIUS_NM * 2.0 * math.asin(math.sqrt(haversine))
 
 
-def valid_tma_structure() -> dict[str, object]:
+def valid_tma_definitions() -> dict[str, object]:
     return {
-        "schema": 2,
+        "schema": 3,
         "units": [
             {
                 "id": "LEMD_APP",
                 "call_sign": "Madrid Approach",
                 "services": ["approach_radar"],
-                "frequencies": ["119.100"],
             }
         ],
-        "layouts": [
+        "positions": [
             {
-                "id": "CFG_1",
-                "airports": ["LEMD"],
-                "runways": {"LEMD": ["NORTH"]},
-                "positions": [
-                    {
-                        "sector": "LEMDAAA",
-                        "name": "ALL",
-                        "code": "LEMD_APP",
-                        "unit": "LEMD_APP",
-                        "frequency": "119.100",
-                    }
-                ],
+                "call_sign": "LEMD_APP",
+                "unit": "LEMD_APP",
+                "frequency": "119.100",
             }
         ],
     }
 
 
+def valid_tma_layout() -> dict[str, object]:
+    return {
+        "schema": 3,
+        "configurations": {
+            "LEMD_APP": {
+                "CFG_1": {
+                    "positions": {"LEMD_APP": ["LEMDAAA"]},
+                    "airports": ["LEMD"],
+                    "valid_for_runways": {"LEMD": ["NORTH"]},
+                }
+            }
+        },
+    }
+
+
 def valid_tma_coordination() -> dict[str, object]:
     return {
-        "schema": 2,
+        "schema": 3,
         "agreements": [
             {
                 "name": "LEMD_ARR",
@@ -101,22 +106,27 @@ def valid_tma_coordination() -> dict[str, object]:
                 "to": "LEMD_APP",
                 "arrives": ["LEMD"],
                 "fix": ["ASBIN"],
-                "descent": "F130",
-                "priority": 10,
+                "level": "F130",
             }
         ],
     }
 
 
-def valid_acc_structure() -> dict[str, object]:
+def valid_acc_definitions() -> dict[str, object]:
     return {
-        "schema": 2,
+        "schema": 3,
         "units": [
             {
                 "id": "LECM_CTR",
                 "call_sign": "Madrid Control",
                 "services": ["center"],
-                "frequencies": ["133.755"],
+            }
+        ],
+        "positions": [
+            {
+                "call_sign": "LECM_CTR",
+                "unit": "LECM_CTR",
+                "frequency": "133.755",
             }
         ],
     }
@@ -124,14 +134,21 @@ def valid_acc_structure() -> dict[str, object]:
 
 def valid_sector_definitions() -> dict[str, object]:
     return {
-        "sector_definitions": [
+        "schema": 3,
+        "sectors": {
+            "LEMDAAA": {
+                "name": "AAA",
+                "title": "Madrid (LEMDAAA)",
+            }
+        },
+        "volumes": [
             {
-                "sector_id": "LEMDAAA",
+                "sector_ids": ["LEMDAAA"],
                 "lower_limit": 0,
                 "higher_limit": 24500,
                 "polygon": [[40.0, -3.8], [40.1, -3.7], [40.2, -3.8]],
             }
-        ]
+        ],
     }
 
 
@@ -142,9 +159,9 @@ class SectorDataManifestTests(unittest.TestCase):
             "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA",
             "K/KZNY/JFK_TMA",
             "K/KZNY/LAGUARDIA_TMA",
-            "L/LE/LECB/LECB_E/PALMA_TMA",
+            "L/LE/LECB/LECP/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
-            "L/LE/LECB/LECB_W/VALENCIA_TMA",
+            "L/LE/LECB/LECL/VALENCIA_TMA",
             "L/LE/LECM/LECM_R1/BILBAO_TMA",
             "L/LE/LECM/LECM_R1/GALICIA_TMA",
             "L/LE/LECM/LECM_R2/MADRID_TMA",
@@ -160,15 +177,16 @@ class SectorDataManifestTests(unittest.TestCase):
     def test_kjfk_bundle_combines_all_playable_jfk_airspace(self) -> None:
         bundle = REPO_ROOT / "K" / "KZNY" / "JFK_TMA"
         definitions = json.loads((bundle / "sector_definitions.json").read_text(encoding="utf-8"))
-        tma_structure = json.loads((bundle / "tma_structure.json").read_text(encoding="utf-8"))
+        tma_layout = json.loads((bundle / "tma_layout.json").read_text(encoding="utf-8"))
 
-        self.assertEqual("KJFK", definitions["airport"])
         forbidden_metadata = {"source", "provenance", "retrieval", "citation", "licensing"}
         self.assertTrue(forbidden_metadata.isdisjoint(definitions))
+        self.assertEqual(3, definitions["schema"])
+        self.assertIn("KJFKAPP", definitions["sectors"])
 
-        sector_definitions = definitions["sector_definitions"]
-        self.assertEqual(1, len(sector_definitions))
-        sector = sector_definitions[0]
+        volumes = definitions["volumes"]
+        self.assertEqual(1, len(volumes))
+        sector = volumes[0]
         self.assertEqual(["KJFKAPP"], sector["sector_ids"])
         self.assertEqual(0, sector["lower_limit"])
         self.assertEqual(19000, sector["higher_limit"])
@@ -247,25 +265,26 @@ class SectorDataManifestTests(unittest.TestCase):
                 f"Expected {point_name} to remain outside the combined JFK envelope",
             )
 
-        positions = tma_structure["layouts"][0]["positions"]
-        self.assertEqual("KJFKAPP", positions[0]["sector"])
-        self.assertEqual({"KJFK", "KFRG"}, set(tma_structure["layouts"][0]["airports"]))
-        self.assertNotIn("airports", positions[0])
+        south_arr = tma_layout["configurations"]["KJFK_APP"]["SOUTH_ARR"]
+        self.assertEqual(["KJFKAPP"], south_arr["positions"]["KJFK_APP"])
+        self.assertEqual({"KJFK", "KFRG"}, set(south_arr["airports"]))
 
     def test_klga_bundle_uses_simaware_lga_envelope(self) -> None:
         bundle = REPO_ROOT / "K" / "KZNY" / "LAGUARDIA_TMA"
         definitions = json.loads((bundle / "sector_definitions.json").read_text(encoding="utf-8"))
-        tma_structure = json.loads((bundle / "tma_structure.json").read_text(encoding="utf-8"))
+        tma_defs = json.loads((bundle / "tma_definitions.json").read_text(encoding="utf-8"))
+        tma_layout = json.loads((bundle / "tma_layout.json").read_text(encoding="utf-8"))
         mva = json.loads((bundle / "mva.json").read_text(encoding="utf-8"))
 
-        self.assertEqual("KLGA", definitions["airport"])
         forbidden_metadata = {"source", "provenance", "retrieval", "citation", "licensing"}
         self.assertTrue(forbidden_metadata.isdisjoint(definitions))
         self.assertTrue(forbidden_metadata.isdisjoint(mva))
+        self.assertEqual(3, definitions["schema"])
+        self.assertIn("KLGAAPP", definitions["sectors"])
 
-        sector_definitions = definitions["sector_definitions"]
-        self.assertEqual(1, len(sector_definitions))
-        sector = sector_definitions[0]
+        volumes = definitions["volumes"]
+        self.assertEqual(1, len(volumes))
+        sector = volumes[0]
         self.assertEqual(["KLGAAPP"], sector["sector_ids"])
         self.assertEqual(0, sector["lower_limit"])
         self.assertEqual(19000, sector["higher_limit"])
@@ -293,16 +312,14 @@ class SectorDataManifestTests(unittest.TestCase):
         self.assertLessEqual(maximum_distance_nm, 58.5)
 
         self.assertTrue(polygon_contains(polygon, KLGA_LATITUDE, KLGA_LONGITUDE))
-        # Geometry may cover satellites; influence is the ownership authority.
         self.assertTrue(polygon_contains(polygon, 41.0669, -73.7076))  # KHPN
         self.assertTrue(polygon_contains(polygon, 41.3715, -73.4822))  # KDXR
         self.assertFalse(polygon_contains(polygon, KJFK_LATITUDE, KJFK_LONGITUDE))
 
-        pos = tma_structure["layouts"][0]["positions"][0]
-        self.assertEqual("KLGAAPP", pos["sector"])
-        self.assertEqual("120.800", pos["frequency"])
-        self.assertEqual(["KLGA"], tma_structure["layouts"][0]["airports"])
-        self.assertNotIn("airports", pos)
+        cfg = tma_layout["configurations"]["KLGA_APP"]["1"]
+        self.assertEqual(["KLGAAPP"], cfg["positions"]["KLGA_APP"])
+        self.assertEqual("120.800", tma_defs["positions"][0]["frequency"])
+        self.assertEqual(["KLGA"], cfg["airports"])
 
         self.assertEqual("KLGA", mva["airports"][0])
         area_ids = [area["area_id"] for area in mva["mva_areas"]]
@@ -319,7 +336,7 @@ class SectorDataManifestTests(unittest.TestCase):
             root = Path(tmp_dir)
             bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
             bundle.mkdir(parents=True, exist_ok=True)
-            (bundle / "tma_structure.json").write_text(json.dumps(valid_tma_structure()), encoding="utf-8")
+            (bundle / "tma_definitions.json").write_text(json.dumps(valid_tma_definitions()), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "missing sector bundle files"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
 
@@ -328,7 +345,8 @@ class SectorDataManifestTests(unittest.TestCase):
             root = Path(tmp_dir)
             bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
             bundle.mkdir(parents=True, exist_ok=True)
-            (bundle / "tma_structure.json").write_text("{bad json", encoding="utf-8")
+            (bundle / "tma_definitions.json").write_text("{bad json", encoding="utf-8")
+            (bundle / "tma_layout.json").write_text(json.dumps(valid_tma_layout()), encoding="utf-8")
             (bundle / "sector_definitions.json").write_text(json.dumps(valid_sector_definitions()), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "invalid JSON"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
@@ -339,19 +357,21 @@ class SectorDataManifestTests(unittest.TestCase):
             bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
             bundle.mkdir(parents=True, exist_ok=True)
             bad_definitions = valid_sector_definitions()
-            bad_definitions["sector_definitions"][0]["polygon"] = [[40.0, -3.8], [40.1, -3.7]]
-            (bundle / "tma_structure.json").write_text(json.dumps(valid_tma_structure()), encoding="utf-8")
+            bad_definitions["volumes"][0]["polygon"] = [[40.0, -3.8], [40.1, -3.7]]
+            (bundle / "tma_definitions.json").write_text(json.dumps(valid_tma_definitions()), encoding="utf-8")
+            (bundle / "tma_layout.json").write_text(json.dumps(valid_tma_layout()), encoding="utf-8")
             (bundle / "sector_definitions.json").write_text(json.dumps(bad_definitions), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "at least 3 points"):
                 MODULE.build_manifest(root, commit_sha="test-commit")
 
     def test_rejects_legacy_sector_configs_and_influence_in_source(self) -> None:
-        for fname in ("sector_configs.json", "sector_influence.json"):
+        for fname in ("sector_configs.json", "sector_influence.json", "tma_structure.json"):
             with self.subTest(file=fname), tempfile.TemporaryDirectory() as tmp_dir:
                 root = Path(tmp_dir)
                 bundle = root / "L" / "LE" / "TEST" / "TEST_TMA"
                 bundle.mkdir(parents=True, exist_ok=True)
-                (bundle / "tma_structure.json").write_text(json.dumps(valid_tma_structure()), encoding="utf-8")
+                (bundle / "tma_definitions.json").write_text(json.dumps(valid_tma_definitions()), encoding="utf-8")
+                (bundle / "tma_layout.json").write_text(json.dumps(valid_tma_layout()), encoding="utf-8")
                 (bundle / "sector_definitions.json").write_text(json.dumps(valid_sector_definitions()), encoding="utf-8")
                 (bundle / fname).write_text("{}", encoding="utf-8")
                 with self.assertRaisesRegex(ValueError, "generated at publish"):
@@ -371,11 +391,11 @@ class SectorDataManifestTests(unittest.TestCase):
             root = Path(tmp_dir)
             fir = root / "L" / "LE" / "LECM"
             fir.mkdir(parents=True, exist_ok=True)
-            (fir / "acc_structure.json").write_text(json.dumps(valid_acc_structure()), encoding="utf-8")
+            (fir / "acc_definitions.json").write_text(json.dumps(valid_acc_definitions()), encoding="utf-8")
             manifest = MODULE.build_manifest(root, commit_sha="test-commit")
             files = manifest["bundles"]["L/LE/LECM"]["files"]
-            self.assertEqual(["community.airspace_files"], files["acc_structure"]["requires"])
-            self.assertEqual("L/LE/LECM/acc_structure.json", files["acc_structure"]["repo_path"])
+            self.assertEqual(["community.airspace_files"], files["acc_definitions"]["requires"])
+            self.assertEqual("L/LE/LECM/acc_definitions.json", files["acc_definitions"]["repo_path"])
 
     def test_valid_tma_bundle_records_airspace_capability(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -384,15 +404,16 @@ class SectorDataManifestTests(unittest.TestCase):
             shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA", bundle)
             manifest = MODULE.build_manifest(root, commit_sha="test-commit")
             files = manifest["bundles"]["L/LE/BARCELONA_TMA"]["files"]
-            self.assertEqual(["community.airspace_files"], files["tma_structure"]["requires"])
+            self.assertEqual(["community.airspace_files"], files["tma_definitions"]["requires"])
+            self.assertEqual(["community.airspace_files"], files["tma_layout"]["requires"])
             self.assertEqual(["community.airspace_files"], files["tma_coordination"]["requires"])
-            self.assertEqual("L/LE/BARCELONA_TMA/tma_structure.json", files["tma_structure"]["repo_path"])
+            self.assertEqual("L/LE/BARCELONA_TMA/tma_definitions.json", files["tma_definitions"]["repo_path"])
 
     def definitions_error(self, polygon: list[list[float]]) -> str | None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             path = Path(tmp_dir) / "sector_definitions.json"
             definitions = valid_sector_definitions()
-            definitions["sector_definitions"][0]["polygon"] = polygon
+            definitions["volumes"][0]["polygon"] = polygon
             path.write_text(json.dumps(definitions), encoding="utf-8")
             try:
                 MODULE.validate_sector_definitions_file(path, Path(tmp_dir))

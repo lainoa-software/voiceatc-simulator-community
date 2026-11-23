@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "EDDS",
   "runway_configs": [
     {

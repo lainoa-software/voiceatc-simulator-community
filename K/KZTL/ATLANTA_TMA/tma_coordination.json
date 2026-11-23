@@ -1,221 +1,293 @@
 {
+  "schema": 3,
   "agreements": [
     {
-      "arrives": ["KATL"],
-      "descent": "A130",
-      "fix": ["CHPPR"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_CHPPR",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "CHPPR"
+      ],
+      "level": "A130"
     },
     {
-      "arrives": ["KATL"],
-      "descent": "A120",
-      "fix": ["GLAVN"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_GLAVN",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "GLAVN"
+      ],
+      "level": "A120"
     },
     {
-      "arrives": ["KATL"],
-      "descent": "A140",
-      "fix": ["HOBTT"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_HOBTT",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "HOBTT"
+      ],
+      "level": "A140"
     },
     {
-      "arrives": ["KATL"],
-      "descent": "A120",
-      "fix": ["JJEDI"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_JJEDI",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "JJEDI"
+      ],
+      "level": "A120"
     },
     {
-      "arrives": ["KATL"],
-      "descent": "A130",
-      "fix": ["ONDRE"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_ONDRE",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "ONDRE"
+      ],
+      "level": "A130"
     },
     {
-      "arrives": ["KATL"],
-      "descent": "A120",
-      "fix": ["OZZZI"],
-      "from": "KZTL_CTR",
       "name": "KATL_ARR_OZZZI",
-      "priority": 10,
-      "to": "KATL_APP"
-    },
-    {
-      "arrives": ["KATL"],
-      "descent": "A140",
-      "fix": ["GNDLF"],
       "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "OZZZI"
+      ],
+      "level": "A120"
+    },
+    {
       "name": "KATL_ARR_GNDLF",
-      "priority": 10,
-      "to": "KATL_APP"
+      "from": "KZTL_CTR",
+      "to": "KATL_APP",
+      "arrives": [
+        "KATL"
+      ],
+      "fix": [
+        "GNDLF"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["BANNG"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_BANNG",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "BANNG"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["CUTTN"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_CUTTN",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "CUTTN"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["HAALO"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_HAALO",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "HAALO"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["JACCC"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_JACCC",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "JACCC"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["KAJIN"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_KAJIN",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "KAJIN"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["NASSA"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_NASSA",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "NASSA"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["PADGT"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_PADGT",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "PADGT"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["PENCL"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_PENCL",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "PENCL"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["PHIIL"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_PHIIL",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "PHIIL"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["PLMMR"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_PLMMR",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "PLMMR"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["POUNC"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_POUNC",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "POUNC"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["SMKEY"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_SMKEY",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "SMKEY"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["SMLTZ"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_SMLTZ",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "SMLTZ"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["VARNM"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_VARNM",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "VARNM"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["VRSTY"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_VRSTY",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "VRSTY"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["GAIRY"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_GAIRY",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "GAIRY"
+      ],
+      "level": "A140"
     },
     {
-      "climb": "A140",
-      "departs": ["KATL"],
-      "fix": ["ZELAN"],
-      "from": "KATL_APP",
       "name": "KATL_DEP_ZELAN",
-      "priority": 10,
-      "to": "KZTL_CTR"
+      "from": "KATL_APP",
+      "to": "KZTL_CTR",
+      "departs": [
+        "KATL"
+      ],
+      "fix": [
+        "ZELAN"
+      ],
+      "level": "A140"
     }
-  ],
-  "schema": 2
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDN_APP",
+      "call_sign": "Nuernberg approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDN_APP",
+      "unit": "EDDN_APP",
+      "frequency": "129.525"
+    }
+  ]
+}

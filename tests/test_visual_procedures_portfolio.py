@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def airport_file(icao: str) -> dict[str, object]:
-    matches = [path for path in content_files(ROOT, "visual_procedures.json") if path.parent.name == icao]
+    matches = [path for path in content_files(ROOT, "visual_approaches.json") if path.parent.name == icao]
     if len(matches) != 1:
         raise AssertionError(f"expected one {icao} visual file, found {len(matches)}")
     return json.loads(matches[0].read_text(encoding="utf-8"))
@@ -17,7 +17,7 @@ def airport_file(icao: str) -> dict[str, object]:
 
 class VisualProceduresPortfolioTests(unittest.TestCase):
     def test_launch_portfolio_counts_are_stable(self) -> None:
-        files = content_files(ROOT, "visual_procedures.json")
+        files = content_files(ROOT, "visual_approaches.json")
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in files]
         procedures = [procedure for payload in payloads for procedure in payload["procedures"]]
         variants = [variant for procedure in procedures for variant in procedure["variants"]]
@@ -26,7 +26,7 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
         self.assertEqual(54, len(variants))
 
     def test_published_procedures_omit_retired_availability_data(self) -> None:
-        files = content_files(ROOT, "visual_procedures.json")
+        files = content_files(ROOT, "visual_approaches.json")
         payloads = [json.loads(path.read_text(encoding="utf-8")) for path in files]
         procedures = [procedure for payload in payloads for procedure in payload["procedures"]]
         self.assertTrue(procedures)
@@ -68,7 +68,7 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
         self.assertEqual(
             {"CHAIN_BRIDGE_TRACE": 1800, "RORRK": 1500, "KEY_BRIDGE_TRACE": 900},
             {
-                leg_id: river_legs[leg_id]["altitude"]["value_ft"]
+                leg_id: river_legs[leg_id]["altitude"]["at_ft"]
                 for leg_id in ["CHAIN_BRIDGE_TRACE", "RORRK", "KEY_BRIDGE_TRACE"]
             },
         )
@@ -102,9 +102,9 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
         )
         self.assertEqual("STEPN", branch["entry_point_id"])
         downwind, base, final = legs[0:3], legs[2:5], legs[4:6]
-        self.assertTrue(all(a["longitude"] < b["longitude"] for a, b in zip(downwind, downwind[1:])))
-        self.assertTrue(all(a["latitude"] > b["latitude"] for a, b in zip(base, base[1:])))
-        self.assertTrue(all(a["longitude"] > b["longitude"] for a, b in zip(final, final[1:])))
+        self.assertTrue(all(a["point"][1] < b["point"][1] for a, b in zip(downwind, downwind[1:])))
+        self.assertTrue(all(a["point"][0] > b["point"][0] for a, b in zip(base, base[1:])))
+        self.assertTrue(all(a["point"][1] > b["point"][1] for a, b in zip(final, final[1:])))
         self.assertEqual(
             ["OKAIN", "CIJHI"],
             [leg["id"] for leg in variants["OKAIN_ENTRY"]["legs"]],
@@ -135,7 +135,7 @@ class VisualProceduresPortfolioTests(unittest.TestCase):
             if variant["id"] in expected_altitudes:
                 self.assertEqual(
                     expected_altitudes[variant["id"]],
-                    variant["legs"][0]["altitude"]["value_ft"],
+                    variant["legs"][0]["altitude"]["at_ft"],
                 )
 
 

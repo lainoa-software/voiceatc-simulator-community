@@ -1,0 +1,20 @@
+{
+  "schema": 3,
+  "configurations": {
+    "UUEE_APP": {
+      "1": {
+        "positions": {
+          "UUEE_MSK_APP": [
+            "MSK_APP"
+          ],
+          "UUEE_APP": [
+            "UUEE_APP"
+          ]
+        },
+        "airports": [
+          "UUEE"
+        ]
+      }
+    }
+  }
+}

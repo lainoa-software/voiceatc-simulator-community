@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LPGR_APP",
+      "call_sign": "Graciosa approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LPGR_APP",
+      "unit": "LPGR_APP",
+      "frequency": "135.000"
+    }
+  ]
+}

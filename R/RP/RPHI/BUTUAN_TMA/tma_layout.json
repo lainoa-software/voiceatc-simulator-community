@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPME_APP": {
+      "BUTUAN": {
+        "positions": {
+          "RPME_APP": [
+            "RPME_APP"
+          ]
+        },
+        "airports": [
+          "RPME"
+        ]
+      }
+    }
+  }
+}

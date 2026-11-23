@@ -1,0 +1,18 @@
+{
+  "schema": 3,
+  "airport": "LOWW",
+  "airac_min": 2503,
+  "initial_climb_ft": 5000,
+  "airac_overrides": {
+    "bundled": {
+      "schema": 3,
+      "airport": "LOWW",
+      "initial_climb_ft": 5000
+    },
+    "latest": {
+      "schema": 3,
+      "airport": "LOWW",
+      "initial_climb_ft": 5000
+    }
+  }
+}

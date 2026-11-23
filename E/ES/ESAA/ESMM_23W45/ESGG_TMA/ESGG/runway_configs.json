@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "ESGG",
   "runway_configs": [
     {

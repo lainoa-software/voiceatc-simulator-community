@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPMY_APP": {
+      "LAGUINDINGAN": {
+        "positions": {
+          "RPMY_APP": [
+            "RPMY_APP"
+          ]
+        },
+        "airports": [
+          "RPMY"
+        ]
+      }
+    }
+  }
+}

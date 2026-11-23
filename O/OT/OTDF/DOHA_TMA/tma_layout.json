@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "OTHH_APP": {
+      "DOHA_APP": {
+        "positions": {
+          "OTHH_APP": [
+            "OTHH_APP"
+          ]
+        },
+        "airports": [
+          "OTHH"
+        ]
+      }
+    }
+  }
+}

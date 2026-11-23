@@ -1,0 +1,6 @@
+{
+  "schema": 3,
+  "airport": "ENGM",
+  "airac_min": 2606,
+  "initial_climb_ft": 7000
+}

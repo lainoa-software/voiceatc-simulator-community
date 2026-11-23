@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "assumed_tfc_color": "ffffff",
   "assumed_cs_color": "ffffff",
   "incoming_tfc_color": "00ff00",
@@ -9,7 +10,6 @@
   "of_interest_tfc_color": "fdff20",
   "selected_tfc_color": "ffffff",
   "dragging_tfc_color": "ffffff",
-
   "alert_color": "ff3232",
   "bg_color": "747474",
   "controlled_sector_color": "4a4a4a",

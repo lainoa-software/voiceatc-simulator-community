@@ -1,0 +1,23 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KBOS_APP": {
+      "1": {
+        "positions": {
+          "KBOS_APP": [
+            "BOS"
+          ]
+        },
+        "airports": [
+          "KBOS"
+        ],
+        "valid_for_runways": {
+          "KBOS": [
+            "NOISE_ABATE",
+            "OVERNIGHT"
+          ]
+        }
+      }
+    }
+  }
+}

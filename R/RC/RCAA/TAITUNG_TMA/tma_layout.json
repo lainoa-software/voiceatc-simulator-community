@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCFN_APP": {
+      "TAITUNG": {
+        "positions": {
+          "RCFN_APP": [
+            "RCFN_APP"
+          ]
+        },
+        "airports": [
+          "RCFN"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "ENGM_APP",
+      "call_sign": "Oslo approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "ENGM_APP",
+      "unit": "ENGM_APP",
+      "frequency": "120.455"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LOWK_APP": {
+      "KLAGENFURT_TMA_WHOLE_LOWK_10L": {
+        "positions": {
+          "LOWK_APP": [
+            "KLAGENFURT_TMA_LOWK_10L"
+          ]
+        },
+        "airports": [
+          "LOWK"
+        ],
+        "valid_for_runways": {
+          "LOWK": [
+            "LOWK_10L"
+          ]
+        }
+      },
+      "KLAGENFURT_TMA_WHOLE_LOWK_28R": {
+        "positions": {
+          "LOWK_APP": [
+            "KLAGENFURT_TMA_LOWK_28R"
+          ]
+        },
+        "airports": [
+          "LOWK"
+        ],
+        "valid_for_runways": {
+          "LOWK": [
+            "LOWK_28R"
+          ]
+        }
+      }
+    }
+  }
+}

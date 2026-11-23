@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCKH_APP": {
+      "KAOHSIUNG": {
+        "positions": {
+          "RCKH_APP": [
+            "RCKH_APP"
+          ]
+        },
+        "airports": [
+          "RCKH"
+        ]
+      }
+    }
+  }
+}

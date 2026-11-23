@@ -1,0 +1,48 @@
+{
+  "schema": 3,
+  "configurations": {
+    "KMKE_APP": {
+      "1": {
+        "positions": {
+          "KMKE_APP": [
+            "MKE_APP"
+          ]
+        },
+        "airports": [
+          "KMKE"
+        ],
+        "valid_for_runways": {
+          "KMKE": [
+            "01",
+            "07",
+            "19",
+            "25",
+            "Overnight"
+          ]
+        }
+      },
+      "2": {
+        "positions": {
+          "KMKE_MKEE_APP": [
+            "MKE_E_APP"
+          ],
+          "KMKE_MKEW_APP": [
+            "MKE_W_APP"
+          ]
+        },
+        "airports": [
+          "KMKE"
+        ],
+        "valid_for_runways": {
+          "KMKE": [
+            "01",
+            "07",
+            "19",
+            "25",
+            "Overnight"
+          ]
+        }
+      }
+    }
+  }
+}

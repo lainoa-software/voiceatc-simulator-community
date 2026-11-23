@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "YMML_APP",
+      "call_sign": "Melbourne approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "YMML_APP",
+      "unit": "YMML_APP",
+      "frequency": "132.000"
+    }
+  ]
+}

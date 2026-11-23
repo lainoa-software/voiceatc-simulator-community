@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "KCVG",
   "runway_configs": [
     {

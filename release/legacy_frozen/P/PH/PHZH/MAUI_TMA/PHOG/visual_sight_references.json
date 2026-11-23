@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "PHOG",
+  "variants": [
+    {
+      "procedure_id": "SMOKE_STACK_VISUAL_02",
+      "variant_id": "LANAI_ENTRY",
+      "default_reference_id": "SUGAR_MILL_SMOKE_STACKS",
+      "references": [
+        {
+          "id": "SUGAR_MILL_SMOKE_STACKS",
+          "name": "the Sugar Mill Smoke Stacks",
+          "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
+          "geometry": { "kind": "point", "leg_id": "SMOKESTACK_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "SMOKE STACK VISUAL RWY 02",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "SMOKE_STACK_VISUAL_02",
+      "variant_id": "MAKENA_ENTRY",
+      "default_reference_id": "SUGAR_MILL_SMOKE_STACKS",
+      "references": [
+        {
+          "id": "SUGAR_MILL_SMOKE_STACKS",
+          "name": "the Sugar Mill Smoke Stacks",
+          "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
+          "geometry": { "kind": "point", "leg_id": "SMOKESTACK_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "SMOKE STACK VISUAL RWY 02",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00762SMOKESTACK_VIS2.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

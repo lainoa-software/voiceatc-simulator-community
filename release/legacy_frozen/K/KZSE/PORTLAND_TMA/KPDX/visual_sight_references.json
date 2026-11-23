@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "airport": "KPDX",
+  "variants": [
+    {
+      "procedure_id": "COLUMBIA_VISUAL_10LR",
+      "variant_id": "SAUVIE_10L",
+      "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+      "references": [
+        {
+          "id": "INTERSTATE_FIVE_BRIDGE",
+          "name": "the Interstate Five Bridge",
+          "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "COLUMBIA_VISUAL_10LR",
+      "variant_id": "SAUVIE_10R",
+      "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+      "references": [
+        {
+          "id": "INTERSTATE_FIVE_BRIDGE",
+          "name": "the Interstate Five Bridge",
+          "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "COLUMBIA_VISUAL_10LR",
+      "variant_id": "SCAPPOOSE_10L",
+      "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+      "references": [
+        {
+          "id": "INTERSTATE_FIVE_BRIDGE",
+          "name": "the Interstate Five Bridge",
+          "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "COLUMBIA_VISUAL_10LR",
+      "variant_id": "SCAPPOOSE_10R",
+      "default_reference_id": "INTERSTATE_FIVE_BRIDGE",
+      "references": [
+        {
+          "id": "INTERSTATE_FIVE_BRIDGE",
+          "name": "the Interstate Five Bridge",
+          "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "COLUMBIA VISUAL RWY 10L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00330COLUMBIA_VIS10LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

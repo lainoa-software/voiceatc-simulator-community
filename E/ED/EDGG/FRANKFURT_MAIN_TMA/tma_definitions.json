@@ -1,0 +1,43 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EDDF_APP",
+      "call_sign": "Frankfurt Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.505",
+        "119.030",
+        "120.155",
+        "125.355",
+        "126.555",
+        "127.280",
+        "136.130"
+      ]
+    },
+    {
+      "id": "EDDF_TWR",
+      "call_sign": "Frankfurt Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "EDDF",
+      "unassigned_frequencies": [
+        "118.780",
+        "119.905",
+        "124.855",
+        "127.330",
+        "136.500"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EDDF_APP",
+      "unit": "EDDF_APP",
+      "frequency": "120.805"
+    }
+  ]
+}

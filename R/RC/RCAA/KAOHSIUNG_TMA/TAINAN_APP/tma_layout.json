@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCNN_APP": {
+      "TAINAN": {
+        "positions": {
+          "RCNN_APP": [
+            "RCNN_APP"
+          ]
+        },
+        "airports": [
+          "RCNN"
+        ]
+      }
+    }
+  }
+}

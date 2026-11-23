@@ -1,0 +1,30 @@
+{
+  "schema": 3,
+  "configurations": {
+    "OMAA_APP": {
+      "ABU_DHABI_APP": {
+        "positions": {
+          "OMAA_APP": [
+            "OMAA_APP"
+          ]
+        },
+        "airports": [
+          "OMAA"
+        ]
+      },
+      "ABU_DHABI_CENTRAL_WEST_NORTH_EAST": {
+        "positions": {
+          "OMAA_CW_APP": [
+            "OMAA_CW_APP"
+          ],
+          "OMAA_NE_APP": [
+            "OMAA_NE_APP"
+          ]
+        },
+        "airports": [
+          "OMAA"
+        ]
+      }
+    }
+  }
+}

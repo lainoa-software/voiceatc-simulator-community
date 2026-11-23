@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKPD_APP",
+      "call_sign": "Jeju approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKPD_APP",
+      "unit": "RKPD_APP",
+      "frequency": "121.200"
+    }
+  ]
+}

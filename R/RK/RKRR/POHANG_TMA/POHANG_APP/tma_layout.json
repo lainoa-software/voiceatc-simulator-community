@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKTH_APP": {
+      "POHANG": {
+        "positions": {
+          "RKTH_APP": [
+            "RKTH_APP"
+          ]
+        },
+        "airports": [
+          "RKTH"
+        ]
+      }
+    }
+  }
+}

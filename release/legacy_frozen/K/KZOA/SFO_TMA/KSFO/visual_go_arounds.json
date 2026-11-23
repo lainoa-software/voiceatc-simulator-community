@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "airport": "KSFO",
+  "go_arounds": [
+    {
+      "procedure_id": "TIPP_TOE_VISUAL_28LR",
+      "variant_id": "TIPP_TOE_28L",
+      "runway": "28L",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "REQUEST_INSTRUCTIONS",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "RW28L",
+          "path_term": "VA",
+          "course": 265,
+          "altitude1": 3000,
+          "altitude_desc": "@"
+        }
+      ]
+    },
+    {
+      "procedure_id": "TIPP_TOE_VISUAL_28LR",
+      "variant_id": "TIPP_TOE_28R",
+      "runway": "28R",
+      "source": {
+        "authority": "FAA",
+        "chart_title": "TIPP TOE VISUAL RWY 28L/R",
+        "url": "https://aeronav.faa.gov/d-tpp/2608/00375TIPPTOE_VIS28LR.PDF",
+        "effective_date": "2026-08-06",
+        "airac": "2608",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "REQUEST_INSTRUCTIONS",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "RW28R",
+          "path_term": "VA",
+          "course": 280,
+          "altitude1": 3000,
+          "altitude_desc": "@"
+        }
+      ]
+    }
+  ]
+}

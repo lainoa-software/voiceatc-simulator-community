@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RPMR_APP": {
+      "TAMBLER": {
+        "positions": {
+          "RPMR_APP": [
+            "RPMR_APP"
+          ]
+        },
+        "airports": [
+          "RPMR"
+        ]
+      }
+    }
+  }
+}

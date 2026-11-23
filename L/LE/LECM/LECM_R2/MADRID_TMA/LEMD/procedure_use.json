@@ -1,0 +1,463 @@
+{
+  "schema": 3,
+  "airport": "LEMD",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "sids": [
+        "BARD3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BARD3N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BARD3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BARD3X"
+      ],
+      "spawn": false,
+      "aircraft": {
+        "only": {
+          "types": [
+            "AN72",
+            "DC85",
+            "DC86",
+            "DC87",
+            "A124",
+            "H25A",
+            "A346",
+            "IL62",
+            "A388",
+            "IL96",
+            "B721",
+            "B722",
+            "L101",
+            "B731",
+            "B732",
+            "MD11",
+            "B741",
+            "B742",
+            "B743",
+            "B748",
+            "B744",
+            "B74D",
+            "B74R",
+            "B74S",
+            "SBR1",
+            "DC10",
+            "T134",
+            "YK42"
+          ]
+        }
+      }
+    },
+    {
+      "sids": [
+        "BARD6W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "CCS2X"
+      ],
+      "spawn": false,
+      "aircraft": {
+        "only": {
+          "types": [
+            "AN72",
+            "DC85",
+            "DC86",
+            "DC87",
+            "A124",
+            "H25A",
+            "A346",
+            "IL62",
+            "A388",
+            "IL96",
+            "B721",
+            "B722",
+            "L101",
+            "B731",
+            "B732",
+            "MD11",
+            "B741",
+            "B742",
+            "B743",
+            "B748",
+            "B744",
+            "B74D",
+            "B74R",
+            "B74S",
+            "SBR1",
+            "DC10",
+            "T134",
+            "YK42"
+          ]
+        }
+      }
+    },
+    {
+      "sids": [
+        "CCS4B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "CCS4N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "CCS4V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "CCS5W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEMD1B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEMD1N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEMD1V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEMD1W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NAND3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NAND3N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NAND3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "NAND6W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PINA3N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PINA3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PINA4B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PINA4N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "PINA7W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO3N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO4N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO6W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RBO7W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SIE1X"
+      ],
+      "spawn": false,
+      "aircraft": {
+        "only": {
+          "types": [
+            "AN72",
+            "DC85",
+            "DC86",
+            "DC87",
+            "A124",
+            "H25A",
+            "A346",
+            "IL62",
+            "A388",
+            "IL96",
+            "B721",
+            "B722",
+            "L101",
+            "B731",
+            "B732",
+            "MD11",
+            "B741",
+            "B742",
+            "B743",
+            "B748",
+            "B744",
+            "B74D",
+            "B74R",
+            "B74S",
+            "SBR1",
+            "DC10",
+            "T134",
+            "YK42"
+          ]
+        }
+      }
+    },
+    {
+      "sids": [
+        "SIE2N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SIE2U"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SIE3W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SIE4B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SIE5V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB1R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB2N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB2R"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB2X"
+      ],
+      "spawn": false,
+      "aircraft": {
+        "only": {
+          "types": [
+            "AN72",
+            "DC85",
+            "DC86",
+            "DC87",
+            "A124",
+            "H25A",
+            "A346",
+            "IL62",
+            "A388",
+            "IL96",
+            "B721",
+            "B722",
+            "L101",
+            "B731",
+            "B732",
+            "MD11",
+            "B741",
+            "B742",
+            "B743",
+            "B748",
+            "B744",
+            "B74D",
+            "B74R",
+            "B74S",
+            "SBR1",
+            "DC10",
+            "T134",
+            "YK42"
+          ]
+        }
+      }
+    },
+    {
+      "sids": [
+        "VTB3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VTB7W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ZMR2N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ZMR3B"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ZMR3V"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ZMR3W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ZMR3X"
+      ],
+      "spawn": false,
+      "aircraft": {
+        "only": {
+          "types": [
+            "AN72",
+            "DC85",
+            "DC86",
+            "DC87",
+            "A124",
+            "H25A",
+            "A346",
+            "IL62",
+            "A388",
+            "IL96",
+            "B721",
+            "B722",
+            "L101",
+            "B731",
+            "B732",
+            "MD11",
+            "B741",
+            "B742",
+            "B743",
+            "B748",
+            "B744",
+            "B74D",
+            "B74R",
+            "B74S",
+            "SBR1",
+            "DC10",
+            "T134",
+            "YK42"
+          ]
+        }
+      }
+    }
+  ]
+}

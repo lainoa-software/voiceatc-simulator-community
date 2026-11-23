@@ -1,0 +1,38 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "EHAM_APP",
+      "call_sign": "Schiphol Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.080",
+        "119.055",
+        "131.155"
+      ]
+    },
+    {
+      "id": "EHAM_TWR",
+      "call_sign": "Schiphol Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "EHAM",
+      "unassigned_frequencies": [
+        "119.230",
+        "118.105",
+        "118.280",
+        "135.110"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "EHAM_APP",
+      "unit": "EHAM_APP",
+      "frequency": "121.205"
+    }
+  ]
+}

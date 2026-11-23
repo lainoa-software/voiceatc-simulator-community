@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RPVB",
   "runway_configs": [
     {

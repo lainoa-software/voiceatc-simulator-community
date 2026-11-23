@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RCQC_APP",
+      "call_sign": "Magong approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RCQC_APP",
+      "unit": "RCQC_APP",
+      "frequency": "128.100"
+    }
+  ]
+}

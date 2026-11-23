@@ -1,0 +1,41 @@
+{
+  "alien_symbol": "COOPANS_DAPS",
+  "assumed_symbol": "COOPANS_DAPS",
+  "defined_symbols": {
+    "COOPANS_DAPS": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M -5 -5 L 5 -5 L 5 5 L -5 5 L -5 -5",
+      "type": "filled"
+    },
+    "HISTORY": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
+      "type": "filled"
+    },
+    "UNCONTROLLED": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M 5 5 L 5 -5 L -5 -5 L -5 5 L 5 5",
+      "type": "wireframe"
+    }
+  },
+  "forecast_symbol": "COOPANS_DAPS",
+  "incoming_symbol": "COOPANS_DAPS",
+  "of_interest_symbol": "COOPANS_DAPS",
+  "released_symbol": "COOPANS_DAPS",
+  "traildot_symbol": "HISTORY"
+}

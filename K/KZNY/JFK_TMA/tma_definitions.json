@@ -1,0 +1,51 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "KJFK_APP",
+      "call_sign": "New York Approach",
+      "services": [
+        "approach_radar"
+      ],
+      "unassigned_frequencies": [
+        "118.400",
+        "123.700",
+        "126.800",
+        "128.125",
+        "132.400",
+        "134.350"
+      ]
+    },
+    {
+      "id": "KJFK_TWR",
+      "call_sign": "Kennedy Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KJFK",
+      "unassigned_frequencies": [
+        "119.100",
+        "123.900"
+      ]
+    },
+    {
+      "id": "KFRG_TWR",
+      "call_sign": "Republic Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "KFRG",
+      "unassigned_frequencies": [
+        "118.800",
+        "125.200"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "KJFK_APP",
+      "unit": "KJFK_APP",
+      "frequency": "125.700"
+    }
+  ]
+}

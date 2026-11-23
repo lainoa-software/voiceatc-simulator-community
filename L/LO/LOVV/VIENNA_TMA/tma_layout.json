@@ -1,0 +1,52 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LOWW_APP": {
+      "DAY_WEST": {
+        "positions": {
+          "LOWW_APP": [
+            "VIENNA_TMA_DAY_WEST"
+          ]
+        },
+        "airports": [
+          "LOWW"
+        ],
+        "valid_for_runways": {
+          "LOWW": [
+            "DAY_WEST"
+          ]
+        }
+      },
+      "DAY_SE": {
+        "positions": {
+          "LOWW_APP": [
+            "VIENNA_TMA_DAY_SE"
+          ]
+        },
+        "airports": [
+          "LOWW"
+        ],
+        "valid_for_runways": {
+          "LOWW": [
+            "DAY_SE"
+          ]
+        }
+      },
+      "NIGHT": {
+        "positions": {
+          "LOWW_APP": [
+            "VIENNA_TMA_NIGHT"
+          ]
+        },
+        "airports": [
+          "LOWW"
+        ],
+        "valid_for_runways": {
+          "LOWW": [
+            "NIGHT"
+          ]
+        }
+      }
+    }
+  }
+}

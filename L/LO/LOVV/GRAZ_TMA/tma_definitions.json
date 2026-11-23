@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LOWG_APP",
+      "call_sign": "Graz approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LOWG_APP",
+      "unit": "LOWG_APP",
+      "frequency": "119.300"
+    }
+  ]
+}

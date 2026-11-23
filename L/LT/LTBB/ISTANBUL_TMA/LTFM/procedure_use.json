@@ -1,0 +1,209 @@
+{
+  "schema": 3,
+  "airport": "LTFM",
+  "airac_min": 2707,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "AYTE1C"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AYTE1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AYTE1N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AYTE1Q"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "AYTE1R"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "DRAM1C"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "DRAM1P"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ERSE1C"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ERSE1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ERSE1P"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ERSE1Q"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "ERSE1R"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "INBE1C"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "INBE1P"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "KANQ1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "KANQ1N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "NUGB1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "NUGB1N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RILE1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RILE1N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RIXE1M"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RIXE1N"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RIXE1P"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "RIXE1W"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SISP1C"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "SISP1P"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ASFO1G"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ELCA1K"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "GAPD1G"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IST1N"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IST1P"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IST1S"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LESG1G"
+      ],
+      "spawn": false
+    }
+  ]
+}

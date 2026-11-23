@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "RKSM",
   "runway_configs": [
     {

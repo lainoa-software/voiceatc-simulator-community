@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "VHHH_APP",
+      "call_sign": "Hong Kong approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "VHHH_APP",
+      "unit": "VHHH_APP",
+      "frequency": "119.100"
+    }
+  ]
+}

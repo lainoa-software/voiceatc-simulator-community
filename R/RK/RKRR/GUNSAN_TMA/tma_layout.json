@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RKJK_APP": {
+      "GUNSAN": {
+        "positions": {
+          "RKJK_APP": [
+            "RKJK_APP"
+          ]
+        },
+        "airports": [
+          "RKJK"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RPME_APP",
+      "call_sign": "Butuan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RPME_APP",
+      "unit": "RPME_APP",
+      "frequency": "121.300"
+    }
+  ]
+}

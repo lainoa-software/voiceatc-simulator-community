@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "configurations": {
+    "RCQC_APP": {
+      "MAGONG": {
+        "positions": {
+          "RCQC_APP": [
+            "RCQC_APP"
+          ]
+        },
+        "airports": [
+          "RCQC"
+        ]
+      }
+    }
+  }
+}

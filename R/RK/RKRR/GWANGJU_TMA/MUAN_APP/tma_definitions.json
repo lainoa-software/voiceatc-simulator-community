@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "RKJB_APP",
+      "call_sign": "Muan approach",
+      "services": [
+        "approach_radar"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "RKJB_APP",
+      "unit": "RKJB_APP",
+      "frequency": "120.475"
+    }
+  ]
+}
