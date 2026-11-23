@@ -11,10 +11,7 @@
           "id": "MOUNT_VERNON_ABEAM",
           "name": "the Potomac River abeam Mount Vernon",
           "aliases": ["Mount Vernon abeam"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "MOUNT_VERNON_ABEAM_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "MOUNT_VERNON_ABEAM_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "MOUNT VERNON VISUAL RWY 01",

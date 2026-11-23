@@ -23,10 +23,6 @@
           "clearance_name": "Highway Visual",
           "entry_point_id": "OSPUF",
           "sight_reference_point_id": "XIBLY",
-          "final": {
-            "course_deg": 269.93,
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "OSPUF",
@@ -98,14 +94,15 @@
               "latitude": 61.2016316379,
               "longitude": -149.8836336855,
               "fly_over": false,
-              "arc_radius_nm": 3.0,
-              "turn_direction": "L",
               "arc_center": {
                 "latitude": 61.1678666667,
                 "longitude": -149.9601444444
-              }
+              },
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
             }
-          ]
+          ],
+          "final": { "course_deg": 269.93, "glidepath_deg": 3.0 }
         },
         {
           "id": "POINT_POSSESSION_ENTRY",
@@ -113,10 +110,6 @@
           "clearance_name": "Highway Visual",
           "entry_point_id": "MOPMY",
           "sight_reference_point_id": "XIBLY",
-          "final": {
-            "course_deg": 269.93,
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "MOPMY",
@@ -180,14 +173,15 @@
               "latitude": 61.2016316379,
               "longitude": -149.8836336855,
               "fly_over": false,
-              "arc_radius_nm": 3.0,
-              "turn_direction": "L",
               "arc_center": {
                 "latitude": 61.1678666667,
                 "longitude": -149.9601444444
-              }
+              },
+              "arc_radius_nm": 3.0,
+              "turn_direction": "L"
             }
-          ]
+          ],
+          "final": { "course_deg": 269.93, "glidepath_deg": 3.0 }
         }
       ]
     }

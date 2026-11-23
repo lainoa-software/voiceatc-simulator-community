@@ -11,10 +11,7 @@
           "id": "HARBOR_ISLAND",
           "name": "Harbor Island",
           "aliases": ["the Harbor Island"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "HARBOR_ISLAND_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "HARBOR VISUAL RWY 14R",
@@ -34,10 +31,7 @@
           "id": "HARBOR_ISLAND",
           "name": "Harbor Island",
           "aliases": ["the Harbor Island"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "HARBOR_ISLAND_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "HARBOR VISUAL RWY 14R",
@@ -57,10 +51,7 @@
           "id": "HARBOR_ISLAND",
           "name": "Harbor Island",
           "aliases": ["the Harbor Island"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "HARBOR_ISLAND_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "HARBOR_ISLAND_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "HARBOR VISUAL RWY 14R",

@@ -23,9 +23,6 @@
           "clearance_name": "Stadium Visual",
           "entry_point_id": "TEB",
           "sight_reference_point_id": "CHUMR",
-          "final": {
-            "glidepath_deg": 3
-          },
           "legs": [
             {
               "id": "TEB",
@@ -117,7 +114,10 @@
                 "kind": "at"
               }
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }

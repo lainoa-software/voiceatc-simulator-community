@@ -1,11 +1,13 @@
 {
   "airport": "LTFM",
+  "schema_version": 1,
   "airac_min": 2707,
+  "defaults": { "spawn_enabled": true },
   "stars": {
-    "AYTE1C": {
+    "RILE1N": {
       "spawn_enabled": false
     },
-    "AYTE1M": {
+    "AYTE1C": {
       "spawn_enabled": false
     },
     "AYTE1N": {
@@ -14,109 +16,99 @@
     "AYTE1Q": {
       "spawn_enabled": false
     },
-    "AYTE1R": {
-      "spawn_enabled": false
-    },
     "DRAM1C": {
-      "spawn_enabled": false
-    },
-    "DRAM1P": {
-      "spawn_enabled": false
-    },
-    "ERSE1C": {
-      "spawn_enabled": false
-    },
-    "ERSE1M": {
-      "spawn_enabled": false
-    },
-    "ERSE1P": {
-      "spawn_enabled": false
-    },
-    "ERSE1Q": {
-      "spawn_enabled": false
-    },
-    "ERSE1R": {
       "spawn_enabled": false
     },
     "INBE1C": {
       "spawn_enabled": false
     },
-    "INBE1P": {
+    "SISP1C": {
       "spawn_enabled": false
     },
-    "KANQ1M": {
+    "ERSE1C": {
+      "spawn_enabled": false
+    },
+    "ERSE1Q": {
       "spawn_enabled": false
     },
     "KANQ1N": {
       "spawn_enabled": false
     },
-    "NUGB1M": {
-      "spawn_enabled": false
-    },
     "NUGB1N": {
-      "spawn_enabled": false
-    },
-    "RILE1M": {
-      "spawn_enabled": false
-    },
-    "RILE1N": {
-      "spawn_enabled": false
-    },
-    "RIXE1M": {
       "spawn_enabled": false
     },
     "RIXE1N": {
       "spawn_enabled": false
     },
-    "RIXE1P": {
+
+    "RILE1M": {
+      "spawn_enabled": false
+    },
+    "AYTE1R": {
+      "spawn_enabled": false
+    },
+    "AYTE1M": {
+      "spawn_enabled": false
+    },
+    "DRAM1P": {
+      "spawn_enabled": false
+    },
+    "INBE1P": {
+      "spawn_enabled": false
+    },
+    "SISP1P": {
+      "spawn_enabled": false
+    },
+    "ERSE1R": {
+      "spawn_enabled": false
+    },
+    "ERSE1P": {
+      "spawn_enabled": false
+    },
+    "ERSE1M": {
+      "spawn_enabled": false
+    },
+    "KANQ1M": {
+      "spawn_enabled": false
+    },
+    "NUGB1M": {
       "spawn_enabled": false
     },
     "RIXE1W": {
       "spawn_enabled": false
     },
-    "SISP1C": {
+    "RIXE1P": {
       "spawn_enabled": false
     },
-    "SISP1P": {
+    "RIXE1M": {
       "spawn_enabled": false
     }
   },
   "sids": {
-    "ASFO1G": {
-      "spawn_enabled": false
-    },
     "ELCA1K": {
-      "spawn_enabled": false
-    },
-    "GAPD1G": {
-      "spawn_enabled": false
-    },
-    "IST1N": {
-      "spawn_enabled": false
-    },
-    "IST1P": {
       "spawn_enabled": false
     },
     "IST1S": {
       "spawn_enabled": false
     },
+    "IST1P": {
+      "spawn_enabled": false
+    },
+    "IST1N": {
+      "spawn_enabled": false
+    },
+    "GAPD1G": {
+      "spawn_enabled": false
+    },
     "LESG1G": {
+      "spawn_enabled": false
+    },
+    "ASFO1G": {
       "spawn_enabled": false
     }
   },
-  "defaults": {
-    "spawn_enabled": true
-  },
+  "iaps": {},
   "runways": {
-    "16R": {
-      "init_climb": 4000
-    },
-    "17R": {
-      "init_climb": 5000
-    },
-    "18": {
-      "init_climb": 8000
-    },
     "34R": {
       "init_climb": 4000
     },
@@ -124,6 +116,15 @@
       "init_climb": 5000
     },
     "36": {
+      "init_climb": 8000
+    },
+    "16R": {
+      "init_climb": 4000
+    },
+    "17R": {
+      "init_climb": 5000
+    },
+    "18": {
       "init_climb": 8000
     }
   }

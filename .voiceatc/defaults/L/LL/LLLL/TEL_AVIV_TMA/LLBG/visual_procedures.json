@@ -22,9 +22,6 @@
           "clearance_name": "GAVRI Visual RWY 30",
           "entry_point_id": "LIMKO",
           "sight_reference_point_id": "GAVRI",
-          "final": {
-            "course_deg": 296
-          },
           "legs": [
             {
               "id": "LIMKO",
@@ -112,7 +109,10 @@
                 "kind": "at_or_below"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 296
+          }
         }
       ]
     },
@@ -136,9 +136,6 @@
           "clearance_name": "NAMIM Visual RWY 21 from TADOV",
           "entry_point_id": "TADOV",
           "sight_reference_point_id": "NAMIM",
-          "final": {
-            "course_deg": 204
-          },
           "legs": [
             {
               "id": "TADOV",
@@ -198,7 +195,10 @@
                 "kind": "at_or_below"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 204
+          }
         },
         {
           "id": "LLBG_RWY21_NAMIM_GINTU",
@@ -206,9 +206,6 @@
           "clearance_name": "NAMIM Visual RWY 21 from GINTU",
           "entry_point_id": "GINTU",
           "sight_reference_point_id": "NAMIM",
-          "final": {
-            "course_deg": 204
-          },
           "legs": [
             {
               "id": "GINTU",
@@ -298,7 +295,10 @@
                 "kind": "at_or_below"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 204
+          }
         }
       ]
     },
@@ -322,9 +322,6 @@
           "clearance_name": "ROMIE Visual RWY 30",
           "entry_point_id": "BG304",
           "sight_reference_point_id": "ROMIE",
-          "final": {
-            "course_deg": 296
-          },
           "legs": [
             {
               "id": "BG304",
@@ -411,7 +408,10 @@
                 "kind": "at_or_above"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 296
+          }
         }
       ]
     }

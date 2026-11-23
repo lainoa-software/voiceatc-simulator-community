@@ -11,10 +11,7 @@
           "id": "INTERSTATE_FIVE_BRIDGE",
           "name": "the Interstate Five Bridge",
           "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "I5_BRIDGE_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -34,10 +31,7 @@
           "id": "INTERSTATE_FIVE_BRIDGE",
           "name": "the Interstate Five Bridge",
           "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "I5_BRIDGE_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -57,10 +51,7 @@
           "id": "INTERSTATE_FIVE_BRIDGE",
           "name": "the Interstate Five Bridge",
           "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "I5_BRIDGE_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -80,10 +71,7 @@
           "id": "INTERSTATE_FIVE_BRIDGE",
           "name": "the Interstate Five Bridge",
           "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "I5_BRIDGE_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "I5_BRIDGE_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "COLUMBIA VISUAL RWY 10L/R",

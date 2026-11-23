@@ -11,10 +11,7 @@
           "id": "BOSTON_LIGHT",
           "name": "Boston Light",
           "aliases": ["the Boston Light lighthouse"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "LYHTT"
-          },
+          "geometry": { "kind": "point", "leg_id": "LYHTT" },
           "source": {
             "authority": "FAA",
             "chart_title": "LIGHT VISUAL RWY 33L",

@@ -22,9 +22,6 @@
           "clearance_name": "ADIVI Visual RWY 01",
           "entry_point_id": "ESHEL",
           "sight_reference_point_id": "ADIVI",
-          "final": {
-            "course_deg": 9
-          },
           "legs": [
             {
               "id": "ESHEL",
@@ -106,7 +103,10 @@
                 "kind": "at_or_below"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 9
+          }
         }
       ]
     },
@@ -130,9 +130,6 @@
           "clearance_name": "NURIT Visual RWY 19",
           "entry_point_id": "NURIT",
           "sight_reference_point_id": "NURIT",
-          "final": {
-            "course_deg": 189
-          },
           "legs": [
             {
               "id": "NURIT",
@@ -205,7 +202,10 @@
                 "kind": "at_or_above"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 189
+          }
         }
       ]
     }

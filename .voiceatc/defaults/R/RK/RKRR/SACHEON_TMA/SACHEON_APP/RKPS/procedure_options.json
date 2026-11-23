@@ -1,5 +1,6 @@
 {
   "airport": "RKPS",
+  "schema_version": 1,
   "airac_min": 2610,
   "sids": {
     "SAC5": {

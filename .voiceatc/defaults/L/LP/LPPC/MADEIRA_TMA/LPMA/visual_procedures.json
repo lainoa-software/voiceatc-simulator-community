@@ -22,9 +22,6 @@
           "clearance_name": "Visual RWY 05",
           "entry_point_id": "GELO",
           "sight_reference_point_id": "ROSRO",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "GELO",
@@ -52,7 +49,10 @@
                 "kind": "at_or_above"
               }
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 3.0
+          }
         }
       ]
     }

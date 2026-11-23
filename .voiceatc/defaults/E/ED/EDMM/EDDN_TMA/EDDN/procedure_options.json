@@ -1,9 +1,21 @@
 {
   "airport": "EDDN",
+  "schema_version": 1,
   "airac_min": 2608,
+  "defaults": {
+    "spawn_enabled": true,
+    "init_climb": 7000
+  },
+  "stars": {},
+  "sids": {},
+  "iaps": {},
   "runways": {
     "10": {
       "sids": {
+        "NUB1A": {
+          "spawn_enabled": true,
+          "init_climb": 6000
+        },
         "BOLS1C": {
           "spawn_enabled": true
         },
@@ -12,10 +24,6 @@
         },
         "ERL2C": {
           "spawn_enabled": true
-        },
-        "NUB1A": {
-          "spawn_enabled": true,
-          "init_climb": 6000
         },
         "RODI1C": {
           "spawn_enabled": true
@@ -30,6 +38,10 @@
     },
     "28": {
       "sids": {
+        "NUB1B": {
+          "spawn_enabled": true,
+          "init_climb": 6000
+        },
         "BOLS1G": {
           "spawn_enabled": true
         },
@@ -38,10 +50,6 @@
         },
         "ERL2G": {
           "spawn_enabled": true
-        },
-        "NUB1B": {
-          "spawn_enabled": true,
-          "init_climb": 6000
         },
         "RODI1G": {
           "spawn_enabled": true
@@ -57,6 +65,7 @@
   },
   "configs": {
     "10": {
+      "sids": {},
       "stars": {
         "DODA1T": {
           "spawn_enabled": true
@@ -73,6 +82,7 @@
       }
     },
     "28": {
+      "sids": {},
       "stars": {
         "DODA1V": {
           "spawn_enabled": true
@@ -88,9 +98,5 @@
         }
       }
     }
-  },
-  "defaults": {
-    "init_climb": 7000,
-    "spawn_enabled": true
   }
 }

@@ -2,123 +2,123 @@
   "airports": {
     "KASE": {
       "repo_path": ".voiceatc/defaults/K/KZDV/ASPEN_TMA/KASE/visual_procedures.json",
-      "sha256": "b70edcf86bba0bdb45d3d6855c0bbf1b82635cab18095b3fb5096deae81d95af",
-      "size_bytes": 8337
+      "sha256": "0f86d07d9c90593260f1f55afb970759557e73a34aa0d4886ad4800831e4393b",
+      "size_bytes": 8313
     },
     "KBFI": {
       "repo_path": ".voiceatc/defaults/K/KZSE/SEATTLE_TMA/KBFI/visual_procedures.json",
-      "sha256": "74c70e8051add008e9edd65ee610de0c018f0be916128a8eeb08b0d177d72492",
-      "size_bytes": 6035
+      "sha256": "dc902c91c99199cbe07d16ad4eae191d5d296401c8ac984676ea20bcfdb2eb4d",
+      "size_bytes": 5909
     },
     "KBOS": {
       "repo_path": ".voiceatc/defaults/K/KZBW/BOSTON_TMA/KBOS/visual_procedures.json",
-      "sha256": "56b28db2508d78d62a9c741270454d153a75591bb50cb51b2baad497fd59d4aa",
-      "size_bytes": 2394
+      "sha256": "9f64dde7546d45b65718def4cef2637eb0126899195877807d66e975574908a4",
+      "size_bytes": 2370
     },
     "KDCA": {
       "repo_path": ".voiceatc/defaults/K/KZDC/WASHINGTON_DCA_TMA/KDCA/visual_procedures.json",
-      "sha256": "b7e684bb2fde5381d9b1ede7699a0d480ba389ee1e05f4abb6285e93080dd513",
-      "size_bytes": 6496
+      "sha256": "3ee7ced7d422f1cf6fe7f0af4d39fb42e12216f79cf3708e311d59509c400e14",
+      "size_bytes": 6392
     },
     "KEWR": {
       "repo_path": ".voiceatc/defaults/K/KZNY/NEWARK_TMA/KEWR/visual_procedures.json",
-      "sha256": "50dcdd9b91d012ec636a6089386c111ad6beccc1774a5cf03542bdbbcea3926a",
-      "size_bytes": 3875
+      "sha256": "2bcb94fc03511e5d63c311da3326eba0a3c7a616798fb51cad9c3b188300ee51",
+      "size_bytes": 3851
     },
     "KJFK": {
       "repo_path": ".voiceatc/defaults/K/KZNY/JFK_TMA/KJFK/visual_procedures.json",
-      "sha256": "4d8da49b85091f140745cd73598bcdfc2bd15ba050f87d2302ad637b2f3666c6",
+      "sha256": "926d5f372efc6606c608266f4782b3b8c106f3b1dc9a75b141543d8e83109d73",
       "size_bytes": 4643
     },
     "KLGA": {
       "repo_path": ".voiceatc/defaults/K/KZNY/LAGUARDIA_TMA/KLGA/visual_procedures.json",
-      "sha256": "b013cd50531da5307e98a35c4be4ee7c7df8da323c85f88c96d82e718c566e58",
-      "size_bytes": 4262
+      "sha256": "8d92f544c857e6853f1624d21a26632b0ef391bd5187f3ea9d44e304cfdbbb2c",
+      "size_bytes": 4210
     },
     "KLGB": {
       "repo_path": ".voiceatc/defaults/K/KZLA/LAX_TMA/KLGB/visual_procedures.json",
-      "sha256": "f4fc4219293e6ca49a58421ae39ca5dc71afbd2849df2e4f24624595ab279560",
-      "size_bytes": 4530
+      "sha256": "959192e1f79239f7bee375cfe7626a73526698b077dea36983959adc1b4c321c",
+      "size_bytes": 4462
     },
     "KLSV": {
       "repo_path": ".voiceatc/defaults/K/KZLA/LAS_TMA/KLSV/visual_procedures.json",
-      "sha256": "26f67c36f9ee12838bd07cf989f71710e100e1688648a8da7b8b9d1cbe37eeea",
-      "size_bytes": 6033
+      "sha256": "6f32a6dfde4c22a2174078fb78776d3ee3e16b186ad28e93f27a8ae14c96186f",
+      "size_bytes": 5941
     },
     "KPDX": {
       "repo_path": ".voiceatc/defaults/K/KZSE/PORTLAND_TMA/KPDX/visual_procedures.json",
-      "sha256": "cbf6857964a2f70a40f4747ba83ac32e10498fb88c440a505118cc58f5f72697",
-      "size_bytes": 7037
+      "sha256": "ac4490878a7af16c38bba3fc5a8954b8f6fdb23fae8f986cd3899c76f24b99f7",
+      "size_bytes": 6949
     },
     "KPHL": {
       "repo_path": ".voiceatc/defaults/K/KZNY/PHILADELPHIA_TMA/KPHL/visual_procedures.json",
-      "sha256": "e64f4d353b8318d388fff95586dd57605bbdf6292b5ecb61adfeedc8e443372c",
-      "size_bytes": 4580
+      "sha256": "872e3b60fd44e7cb556691a1560e4febf2b46653904d34a886d8fccd6a975e12",
+      "size_bytes": 4512
     },
     "KSAN": {
       "repo_path": ".voiceatc/defaults/K/KZLA/SAN_DIEGO_TMA/KSAN/visual_procedures.json",
-      "sha256": "6f1d68d998f415e3af957706ad028f46a7600fe9fec2d17d5c2bf0eb516cecf3",
-      "size_bytes": 4343
+      "sha256": "ddc62b41237432aac26e41759ea2530de4b0e610995e8c712b862603ad70f16d",
+      "size_bytes": 4319
     },
     "KSEA": {
       "repo_path": ".voiceatc/defaults/K/KZSE/SEATTLE_TMA/KSEA/visual_procedures.json",
-      "sha256": "44af4733822150008e07a2cd51fbcae3cdaea10689d33becc9cc66b14d3710f2",
-      "size_bytes": 6061
+      "sha256": "879c8b286db95a8f9526e5414dab9e67f2eb033733e99f5531c9ce016f64ae0c",
+      "size_bytes": 6037
     },
     "KSFO": {
       "repo_path": ".voiceatc/defaults/K/KZOA/SFO_TMA/KSFO/visual_procedures.json",
-      "sha256": "5dd31373ca5313d7cc82717829b0aa62020f32debd01a7dc1b5988ee5c93b88f",
-      "size_bytes": 9225
+      "sha256": "b4ac7c624942beb8ae2d8871ede22b6cb2cb9398edc517f7d43750f0eb9b8760",
+      "size_bytes": 9177
     },
     "LCLK": {
       "repo_path": ".voiceatc/defaults/L/LC/LCCC/LARNACA_TMA/LCLK/visual_procedures.json",
-      "sha256": "cada70e0d48dffcacc371988f6a20fd3b9e57bda340bc798a15e67b9b54bbc48",
+      "sha256": "3e012ea7f5a331d13abbc79c5ce918fa65a236c226c0365f4df574d4dc69b04d",
       "size_bytes": 3245
     },
     "LCPH": {
       "repo_path": ".voiceatc/defaults/L/LC/LCCC/PAPHOS_TMA/LCPH/visual_procedures.json",
-      "sha256": "d1a3788989242df00f5cac626d9fe2ba817731193ba446802d1cf2941d809394",
+      "sha256": "f26ba4b1d5d0ad3e37fbf0a955c9ccb02b2c41c6c4dc59765eb252ec02d1ea16",
       "size_bytes": 3437
     },
     "LFMN": {
       "repo_path": ".voiceatc/defaults/L/LF/LFMM/NICE_TMA/LFMN/visual_procedures.json",
-      "sha256": "4b293710a9b8cf28dc09eb70e26fc92f08eb5479b6abdc68f1f5fd22fed57836",
+      "sha256": "b8645a2970b25bdd78e4d058768a4abba0ac39ccc6199a152df3503fd70f57da",
       "size_bytes": 1775
     },
     "LLBG": {
       "repo_path": ".voiceatc/defaults/L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_procedures.json",
-      "sha256": "f614df9165e12c00a7630a3c027378050d76812f26cef990741029e274d84c62",
+      "sha256": "2e64602a759e4c0d72870164b9e470446b0e42988b2f9d5f135e95f3a1fee665",
       "size_bytes": 12471
     },
     "LLER": {
       "repo_path": ".voiceatc/defaults/L/LL/LLLL/EILAT_TMA/LLER/visual_procedures.json",
-      "sha256": "9f8062befa076697b2b055b4076c6ad2a07f0c0af3292b248eebb506c3544c96",
+      "sha256": "f3a87f7b854e81876eca82544e4a7041e4fe84cf21a3bfd4d03ae03e99725da6",
       "size_bytes": 6316
     },
     "LPMA": {
       "repo_path": ".voiceatc/defaults/L/LP/LPPC/MADEIRA_TMA/LPMA/visual_procedures.json",
-      "sha256": "1ba123fa5ca9fa154b46025fcb3fd409e5c6a3477be3d8a06c2a94bac32f9e8a",
+      "sha256": "fa026537925561c0663c343971ad0ec3813587a6baff69819c32b40f436487cd",
       "size_bytes": 1691
     },
     "PANC": {
       "repo_path": ".voiceatc/defaults/P/PA/PAZA/ANCHORAGE_TMA/PANC/visual_procedures.json",
-      "sha256": "64b2db28fd56d8244cd077aa06b43c0a9b5a9eb26b4b0558e399c95ed4ba761d",
-      "size_bytes": 6116
+      "sha256": "39931f95b05f9fe9d3141afb79d0b83496259cc1f4ba82e6e71291c8974f6a32",
+      "size_bytes": 6024
     },
     "PHNL": {
       "repo_path": ".voiceatc/defaults/P/PH/PHZH/PHNL_TMA/PHNL/visual_procedures.json",
-      "sha256": "d5648dda1a5a6d97b1840e81fb786dddbbf81f97b865f3853da60bc3d7fa896e",
-      "size_bytes": 5162
+      "sha256": "4e4aac10663d44ddda8b6f01ebf069d7eb608b90adb2c56aa525f3996ff7e448",
+      "size_bytes": 5106
     },
     "PHOG": {
       "repo_path": ".voiceatc/defaults/P/PH/PHZH/MAUI_TMA/PHOG/visual_procedures.json",
-      "sha256": "2cee4572b253aeae4142ddec03549fb679015ce3be0c24f8894bd6ef1c4c740e",
-      "size_bytes": 3167
+      "sha256": "d32528e984c653d9625e25b2842e7f1e939332d3091f58a3641ca1a4801e3f34",
+      "size_bytes": 3091
     },
     "TJSJ": {
       "repo_path": ".voiceatc/defaults/T/TJ/TJZS/SAN_JUAN_TMA/TJSJ/visual_procedures.json",
-      "sha256": "85a170707bb09e28c85c64c63887d4d02d916b7b88efd85341a1270b57d85518",
-      "size_bytes": 2350
+      "sha256": "bb056bf57fe50329df7a655df9f132a30844a671c83a5ec0e6e83d4fc578b1fa",
+      "size_bytes": 2304
     }
   },
   "published_at": "2026-09-02T20:08:46Z",

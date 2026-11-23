@@ -11,10 +11,7 @@
           "id": "DELAWARE_RIVER",
           "name": "the Delaware River",
           "aliases": ["Delaware River"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "DELAWARE_RIVER_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "DELAWARE_RIVER_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "RIVER VISUAL RWY 09L/R",
@@ -34,10 +31,7 @@
           "id": "DELAWARE_RIVER",
           "name": "the Delaware River",
           "aliases": ["Delaware River"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "DELAWARE_RIVER_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "DELAWARE_RIVER_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "RIVER VISUAL RWY 09L/R",

@@ -23,9 +23,6 @@
           "clearance_name": "LA River Visual",
           "entry_point_id": "PADDR",
           "sight_reference_point_id": "FREEWAY_JUNCTION_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "PADDR",
@@ -77,7 +74,8 @@
               "longitude": -118.17,
               "fly_over": false
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         },
         {
           "id": "ALBAS_ENTRY",
@@ -85,9 +83,6 @@
           "clearance_name": "LA River Visual",
           "entry_point_id": "ALBAS",
           "sight_reference_point_id": "FREEWAY_JUNCTION_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "ALBAS",
@@ -139,7 +134,8 @@
               "longitude": -118.17,
               "fly_over": false
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         }
       ]
     }

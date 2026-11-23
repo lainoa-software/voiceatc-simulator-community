@@ -1,22 +1,15 @@
 {
   "airport": "EDSB",
+  "schema_version": 1,
   "airac_min": 2608,
+  "defaults": { "spawn_enabled": true, "init_climb": 7000 },
   "sids": {
-    "GAGS5N": {
-      "spawn_enabled": false
-    },
-    "GAGS6P": {
-      "spawn_enabled": false
-    },
-    "STR6P": {
-      "spawn_enabled": false
-    },
-    "TUBL9N": {
-      "spawn_enabled": false
-    }
+    "GAGS6P": { "spawn_enabled": false },
+    "GAGS5N": { "spawn_enabled": false },
+    "STR6P": { "spawn_enabled": false },
+    "TUBL9N": { "spawn_enabled": false }
   },
-  "defaults": {
-    "init_climb": 7000,
-    "spawn_enabled": true
-  }
+  "iaps": {},
+  "runways": {},
+  "configs": {}
 }

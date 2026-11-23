@@ -22,9 +22,6 @@
           "clearance_name": "Environment Visual RWY 04L",
           "entry_point_id": "MN04A",
           "sight_reference_point_id": "MN04A",
-          "final": {
-            "course_deg": 42
-          },
           "legs": [
             {
               "id": "MN04A",
@@ -34,7 +31,10 @@
               "longitude": 7.1538888889,
               "fly_over": false
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 42
+          }
         },
         {
           "id": "LFMN_RWY04R",
@@ -42,9 +42,6 @@
           "clearance_name": "Environment Visual RWY 04R",
           "entry_point_id": "MN04A",
           "sight_reference_point_id": "MN04A",
-          "final": {
-            "course_deg": 42
-          },
           "legs": [
             {
               "id": "MN04A",
@@ -54,7 +51,10 @@
               "longitude": 7.1538888889,
               "fly_over": false
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 42
+          }
         }
       ]
     }

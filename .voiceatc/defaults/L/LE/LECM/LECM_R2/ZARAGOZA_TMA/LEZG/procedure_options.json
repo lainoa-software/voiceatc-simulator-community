@@ -1,6 +1,10 @@
 {
   "airport": "LEZG",
+  "schema_version": 1,
   "airac_min": 2503,
+  "defaults": {
+    "spawn_enabled": true
+  },
   "stars": {
     "AL2DCA": {
       "spawn_enabled": false
@@ -93,7 +97,6 @@
       "spawn_enabled": false
     }
   },
-  "defaults": {
-    "spawn_enabled": true
-  }
+  "sids": {},
+  "iaps": {}
 }

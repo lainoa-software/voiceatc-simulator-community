@@ -11,10 +11,7 @@
           "id": "ELLIOTT_BAY",
           "name": "Elliott Bay",
           "aliases": ["the middle of Elliott Bay"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "ELLIOTT_BAY_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "BAY VISUAL RWY 16 R/C/L",
@@ -34,10 +31,7 @@
           "id": "ELLIOTT_BAY",
           "name": "Elliott Bay",
           "aliases": ["the middle of Elliott Bay"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "ELLIOTT_BAY_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "BAY VISUAL RWY 16 R/C/L",
@@ -57,10 +51,7 @@
           "id": "ELLIOTT_BAY",
           "name": "Elliott Bay",
           "aliases": ["the middle of Elliott Bay"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "ELLIOTT_BAY_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "BAY VISUAL RWY 16 R/C/L",

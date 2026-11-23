@@ -11,10 +11,7 @@
           "id": "TWIN_WHITE_TANKS",
           "name": "the Twin White Tanks",
           "aliases": ["Twin White Tanks"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "GACAR"
-          },
+          "geometry": { "kind": "point", "leg_id": "GACAR" },
           "source": {
             "authority": "FAA",
             "chart_title": "PARK VISUAL RWY 31",
@@ -27,9 +24,7 @@
           "id": "AIRPORT",
           "name": "the airport",
           "aliases": ["LaGuardia airport"],
-          "geometry": {
-            "kind": "airport"
-          },
+          "geometry": { "kind": "airport" },
           "source": {
             "authority": "FAA",
             "chart_title": "PARK VISUAL RWY 31",

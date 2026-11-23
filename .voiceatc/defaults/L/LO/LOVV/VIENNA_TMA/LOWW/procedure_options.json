@@ -1,6 +1,11 @@
 {
   "airport": "LOWW",
+  "schema_version": 1,
   "airac_min": 2503,
+  "defaults": {
+    "init_climb": 5000,
+    "spawn_enabled": true
+  },
   "stars": {
     "REKL3W": {
       "spawn_enabled": false
@@ -13,7 +18,7 @@
     }
   },
   "configs": {
-    "DAY_CALM": {
+    "DAY_WEST": {
       "sids": {
         "AGMI2C": {
           "spawn_enabled": false
@@ -72,7 +77,7 @@
         }
       }
     },
-    "DAY_WEST": {
+    "DAY_CALM": {
       "sids": {
         "AGMI2C": {
           "spawn_enabled": false
@@ -157,74 +162,70 @@
         "ADAM1A": {
           "spawn_enabled": false
         },
-        "ARSI1E": {
-          "spawn_enabled": false
-        },
         "ARSI2A": {
           "spawn_enabled": false
         },
-        "BUWU1E": {
+        "ARSI1E": {
           "spawn_enabled": false
         },
         "BUWU2A": {
           "spawn_enabled": false
         },
-        "KOXE1A": {
+        "BUWU1E": {
           "spawn_enabled": false
         },
-        "LANU1E": {
+        "KOXE1A": {
           "spawn_enabled": false
         },
         "LANU4A": {
           "spawn_enabled": false
         },
-        "LEDV1E": {
+        "LANU1E": {
           "spawn_enabled": false
         },
         "LEDV4A": {
           "spawn_enabled": false
         },
-        "LUGE1E": {
+        "LEDV1E": {
           "spawn_enabled": false
         },
         "LUGE2A": {
           "spawn_enabled": false
         },
-        "MEDI1E": {
+        "LUGE1E": {
           "spawn_enabled": false
         },
         "MEDI2A": {
           "spawn_enabled": false
         },
-        "OSPE1E": {
+        "MEDI1E": {
           "spawn_enabled": false
         },
         "OSPE3A": {
           "spawn_enabled": false
         },
-        "RUPE1E": {
+        "OSPE1E": {
           "spawn_enabled": false
         },
         "RUPE2A": {
           "spawn_enabled": false
         },
-        "SOVI1E": {
+        "RUPE1E": {
           "spawn_enabled": false
         },
         "SOVI2A": {
           "spawn_enabled": false
         },
-        "STEI1E": {
+        "SOVI1E": {
           "spawn_enabled": false
         },
         "STEI3A": {
           "spawn_enabled": false
+        },
+        "STEI1E": {
+          "spawn_enabled": false
         }
       }
     }
-  },
-  "defaults": {
-    "init_climb": 5000,
-    "spawn_enabled": true
   }
 }

@@ -1,5 +1,6 @@
 {
   "airport": "RKPU",
+  "schema_version": 1,
   "airac_min": 2610,
   "sids": {
     "APAR1A": {

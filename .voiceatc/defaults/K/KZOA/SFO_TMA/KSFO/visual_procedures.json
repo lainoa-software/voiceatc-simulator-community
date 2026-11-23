@@ -23,9 +23,6 @@
           "clearance_name": "Quiet Bridge Visual",
           "entry_point_id": "EDDYY",
           "sight_reference_point_id": "SAPPP_TRACE",
-          "final": {
-            "glidepath_deg": 3
-          },
           "legs": [
             {
               "id": "EDDYY",
@@ -95,7 +92,10 @@
               "longitude": -122.35,
               "fly_over": false
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
         },
         {
           "id": "EAST_ENTRY",
@@ -103,9 +103,6 @@
           "clearance_name": "Quiet Bridge Visual",
           "entry_point_id": "ARCHI",
           "sight_reference_point_id": "SAPPP_TRACE",
-          "final": {
-            "glidepath_deg": 3
-          },
           "legs": [
             {
               "id": "ARCHI",
@@ -188,7 +185,10 @@
               "longitude": -122.35,
               "fly_over": false
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     },
@@ -213,9 +213,6 @@
           "clearance_name": "Tipp Toe Visual",
           "entry_point_id": "EDDYY",
           "sight_reference_point_id": "CHERA",
-          "final": {
-            "glidepath_deg": 2.85
-          },
           "legs": [
             {
               "id": "EDDYY",
@@ -253,7 +250,10 @@
               "course_deg": 310,
               "reference": "I-SFO localizer"
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 2.85
+          }
         },
         {
           "id": "TIPP_TOE_28R",
@@ -261,9 +261,6 @@
           "clearance_name": "Tipp Toe Visual",
           "entry_point_id": "EDDYY",
           "sight_reference_point_id": "CHERA",
-          "final": {
-            "glidepath_deg": 3
-          },
           "legs": [
             {
               "id": "EDDYY",
@@ -301,7 +298,10 @@
               "course_deg": 310,
               "reference": "I-GWQ localizer"
             }
-          ]
+          ],
+          "final": {
+            "glidepath_deg": 3
+          }
         }
       ]
     }

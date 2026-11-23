@@ -11,10 +11,7 @@
           "id": "SUGAR_MILL_SMOKE_STACKS",
           "name": "the Sugar Mill Smoke Stacks",
           "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "SMOKESTACK_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "SMOKESTACK_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "SMOKE STACK VISUAL RWY 02",
@@ -34,10 +31,7 @@
           "id": "SUGAR_MILL_SMOKE_STACKS",
           "name": "the Sugar Mill Smoke Stacks",
           "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
-          "geometry": {
-            "kind": "point",
-            "leg_id": "SMOKESTACK_TRACE"
-          },
+          "geometry": { "kind": "point", "leg_id": "SMOKESTACK_TRACE" },
           "source": {
             "authority": "FAA",
             "chart_title": "SMOKE STACK VISUAL RWY 02",

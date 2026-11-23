@@ -22,10 +22,6 @@
           "clearance_name": "ADLAS RNAV-to-Visual RWY 22",
           "entry_point_id": "ADLAS",
           "sight_reference_point_id": "LK505",
-          "final": {
-            "course_deg": 220,
-            "glidepath_deg": 2.75
-          },
           "legs": [
             {
               "id": "ADLAS",
@@ -102,7 +98,11 @@
                 "kind": "at"
               }
             }
-          ]
+          ],
+          "final": {
+            "course_deg": 220,
+            "glidepath_deg": 2.75
+          }
         }
       ]
     }

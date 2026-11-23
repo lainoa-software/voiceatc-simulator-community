@@ -1,87 +1,35 @@
 {
   "airport": "WMKK",
+  "schema_version": 1,
   "airac_min": 2503,
-  "stars": {
-    "GUPT1H": {
-      "join_from": ["GUPTA"]
-    },
-    "GUPT3J": {
-      "spawn_enabled": false
-    },
-    "GUPT3K": {
-      "spawn_enabled": false
-    },
-    "KAKA1G": {
-      "join_from": ["KAKAK"]
-    },
-    "KAKA3J": {
-      "spawn_enabled": false
-    },
-    "KAKA3K": {
-      "spawn_enabled": false
-    },
-    "NIRE1H": {
-      "join_from": ["NIREN"]
-    },
-    "NIRE3J": {
-      "spawn_enabled": false
-    },
-    "NIRE3K": {
-      "spawn_enabled": false
-    },
-    "PUGE1H": {
-      "join_from": ["PUGER"]
-    },
-    "PUGE3J": {
-      "spawn_enabled": false
-    },
-    "PUGE3K": {
-      "spawn_enabled": false
-    },
-    "PULI1G": {
-      "join_from": ["PULIP"]
-    },
-    "PULI3J": {
-      "spawn_enabled": false
-    },
-    "PULI3K": {
-      "spawn_enabled": false
-    },
-    "SALA1H": {
-      "join_from": ["SALAX"]
-    },
-    "SALA3J": {
-      "spawn_enabled": false
-    },
-    "SALA3K": {
-      "spawn_enabled": false
-    },
-    "SARO1G": {
-      "join_from": ["SAROX"]
-    },
-    "SARO3J": {
-      "spawn_enabled": false
-    },
-    "SARO3K": {
-      "spawn_enabled": false
-    }
-  },
-  "defaults": {
-    "init_climb": 5000,
-    "spawn_enabled": true
-  },
+  "defaults": { "spawn_enabled": true, "init_climb": 5000 },
   "runways": {
-    "14R": {
-      "init_climb": 6000
-    },
-    "15": {
-      "init_climb": 5000
-    },
-    "32L": {
-      "init_climb": 7000
-    },
-    "33": {
-      "init_climb": 6000
-    }
+    "32L": { "init_climb": 7000 },
+    "33": { "init_climb": 6000 },
+    "14R": { "init_climb": 6000 },
+    "15": { "init_climb": 5000 }
+  },
+  "stars": {
+    "GUPT3J": { "spawn_enabled": false },
+    "KAKA3J": { "spawn_enabled": false },
+    "NIRE3J": { "spawn_enabled": false },
+    "PUGE3J": { "spawn_enabled": false },
+    "PULI3J": { "spawn_enabled": false },
+    "SALA3J": { "spawn_enabled": false },
+    "SARO3J": { "spawn_enabled": false },
+    "GUPT3K": { "spawn_enabled": false },
+    "KAKA3K": { "spawn_enabled": false },
+    "NIRE3K": { "spawn_enabled": false },
+    "PUGE3K": { "spawn_enabled": false },
+    "PULI3K": { "spawn_enabled": false },
+    "SALA3K": { "spawn_enabled": false },
+    "SARO3K": { "spawn_enabled": false },
+    "KAKA1G": { "join_from": ["KAKAK"] },
+    "PULI1G": { "join_from": ["PULIP"] },
+    "SARO1G": { "join_from": ["SAROX"] },
+    "GUPT1H": { "join_from": ["GUPTA"] },
+    "NIRE1H": { "join_from": ["NIREN"] },
+    "PUGE1H": { "join_from": ["PUGER"] },
+    "SALA1H": { "join_from": ["SALAX"] }
   }
 }

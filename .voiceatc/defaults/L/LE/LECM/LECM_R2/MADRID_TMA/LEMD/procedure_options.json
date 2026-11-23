@@ -1,6 +1,12 @@
 {
   "airport": "LEMD",
+  "schema_version": 1,
   "airac_min": 2503,
+  "defaults": {
+    "spawn_enabled": true,
+    "init_climb": 13000
+  },
+  "stars": {},
   "sids": {
     "BARD3B": {
       "spawn_enabled": false
@@ -294,8 +300,5 @@
       ]
     }
   },
-  "defaults": {
-    "init_climb": 13000,
-    "spawn_enabled": true
-  }
+  "iaps": {}
 }

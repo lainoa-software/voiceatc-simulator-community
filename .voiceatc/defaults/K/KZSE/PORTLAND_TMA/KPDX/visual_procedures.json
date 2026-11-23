@@ -27,9 +27,6 @@
           "clearance_name": "Columbia Visual",
           "entry_point_id": "SAUVIE_TRACE",
           "sight_reference_point_id": "I5_BRIDGE_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "SAUVIE_TRACE",
@@ -73,7 +70,8 @@
                 "kind": "at"
               }
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         },
         {
           "id": "SAUVIE_10R",
@@ -81,9 +79,6 @@
           "clearance_name": "Columbia Visual",
           "entry_point_id": "SAUVIE_TRACE",
           "sight_reference_point_id": "I5_BRIDGE_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "SAUVIE_TRACE",
@@ -122,7 +117,8 @@
               "longitude": -122.67,
               "fly_over": true
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         },
         {
           "id": "SCAPPOOSE_10L",
@@ -130,9 +126,6 @@
           "clearance_name": "Columbia Visual",
           "entry_point_id": "SCAPPOOSE_TRACE",
           "sight_reference_point_id": "I5_BRIDGE_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "SCAPPOOSE_TRACE",
@@ -176,7 +169,8 @@
                 "kind": "at"
               }
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         },
         {
           "id": "SCAPPOOSE_10R",
@@ -184,9 +178,6 @@
           "clearance_name": "Columbia Visual",
           "entry_point_id": "SCAPPOOSE_TRACE",
           "sight_reference_point_id": "I5_BRIDGE_TRACE",
-          "final": {
-            "glidepath_deg": 3.0
-          },
           "legs": [
             {
               "id": "SCAPPOOSE_TRACE",
@@ -225,7 +216,8 @@
               "longitude": -122.67,
               "fly_over": true
             }
-          ]
+          ],
+          "final": { "glidepath_deg": 3.0 }
         }
       ]
     }

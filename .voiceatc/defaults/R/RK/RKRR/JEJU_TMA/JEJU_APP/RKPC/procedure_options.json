@@ -1,5 +1,6 @@
 {
   "airport": "RKPC",
+  "schema_version": 1,
   "airac_min": 2610,
   "sids": {
     "CJU3L": {
