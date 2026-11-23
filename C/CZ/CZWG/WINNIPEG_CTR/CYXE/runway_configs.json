@@ -1,0 +1,29 @@
+{
+  "airport": "CYXE",
+  "runway_configs": [
+    {
+      "id": "WEST_FLOW",
+      "name": "West Flow",
+      "arr": "27",
+      "dep": "27"
+    },
+    {
+      "id": "EAST_FLOW",
+      "name": "East Flow",
+      "arr": "09",
+      "dep": "09"
+    },
+    {
+      "id": "NORTH_FLOW",
+      "name": "North Flow",
+      "arr": "33",
+      "dep": "33"
+    },
+    {
+      "id": "SOUTH_FLOW",
+      "name": "South Flow",
+      "arr": "15",
+      "dep": "15"
+    }
+  ]
+}
