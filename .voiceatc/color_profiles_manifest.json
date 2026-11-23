@@ -1,7 +1,7 @@
 {
   "asset_name": "color-profiles-2611.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/color-profiles-2611.zip",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/color-profiles-2611.zip",
   "profile_count": 51,
   "profiles": {
     "C/CZ": {
@@ -13,8 +13,8 @@
         },
         "style": {
           "repo_path": "C/CZ/style.json",
-          "sha256": "b5f86bb4c09cf51d7414ba311410feb97342df0c01784de6777ec5543fc36711",
-          "size_bytes": 873
+          "sha256": "7aafac3dc81697d6624a3c314e71a105eb690d7222423aa3661ca48a7f6894a0",
+          "size_bytes": 983
         }
       }
     },
@@ -27,8 +27,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDGG/style.json",
-          "sha256": "5ff37d320733bb5e3b8562e936d25f27e4f9476ba45015b8396e8e324c1da544",
-          "size_bytes": 435
+          "sha256": "cd9ffb9426f2197b00da847fc800830f1f046bfceeaa616f62ebce48cc1e6030",
+          "size_bytes": 407
         }
       }
     },
@@ -41,8 +41,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDMM/style.json",
-          "sha256": "34bb3a91791bcddcffe1b3cfe2895469391dbcb758eb5ca8bfda9c4a2fa5e95d",
-          "size_bytes": 434
+          "sha256": "106f6470029ac9e03d86df819cd319b8303c120b4a535de299faef6d3623f3f2",
+          "size_bytes": 406
         }
       }
     },
@@ -55,8 +55,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDWW/style.json",
-          "sha256": "5ff37d320733bb5e3b8562e936d25f27e4f9476ba45015b8396e8e324c1da544",
-          "size_bytes": 435
+          "sha256": "cd9ffb9426f2197b00da847fc800830f1f046bfceeaa616f62ebce48cc1e6030",
+          "size_bytes": 407
         }
       }
     },
@@ -64,13 +64,13 @@
       "files": {
         "colors": {
           "repo_path": "E/EF/EFIN/colors.json",
-          "sha256": "aadacbd49816dbb1b052d810334dafd8b2794f4e918b66cb98aa38b21fd1c318",
-          "size_bytes": 773
+          "sha256": "5b97931edc03b44f78bdcc80c04ff3856ebb487129ebfb123568da276cdb1597",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "E/EF/EFIN/style.json",
-          "sha256": "c19778e08bd151792c6a833884d8b457c6289fe8ef59b3a0fda24e6354d40d25",
-          "size_bytes": 765
+          "sha256": "728d4174fe330739eb4b7136fc05735a63ed6c56636c98fee3c14cda1f1ad02a",
+          "size_bytes": 827
         }
       }
     },
@@ -92,8 +92,8 @@
         },
         "style": {
           "repo_path": "E/EK/style.json",
-          "sha256": "32682eec7993e8d618657030bcb37d4e01ae0132f89db284605df3f150370f33",
-          "size_bytes": 781
+          "sha256": "b36967d4dd51a6138c3b4aa13d17c92645c216dd75efcd64864b751e3a41342a",
+          "size_bytes": 843
         }
       }
     },
@@ -101,13 +101,13 @@
       "files": {
         "colors": {
           "repo_path": "E/EN/ENOR/ENOS/colors.json",
-          "sha256": "880ce2e2ecfcc0dd903cd5f144ba79310dc6b8e002fe8228f041f6302d360479",
-          "size_bytes": 773
+          "sha256": "6c43c33adc5affb350c7bb7f93d10c624e563f1ed3d589f1029688896aad2d55",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "E/EN/ENOR/ENOS/style.json",
-          "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       }
     },
@@ -115,13 +115,13 @@
       "files": {
         "colors": {
           "repo_path": "E/ES/colors.json",
-          "sha256": "aeed89b391c9c60ca4629138da5c804249bc3e3ee87207b2046daccd46d0660b",
-          "size_bytes": 933
+          "sha256": "deb03239a16830258a86f3752445fa9cf3975b4fdda0b0b99e1d1fd6d8c2f109",
+          "size_bytes": 932
         },
         "style": {
           "repo_path": "E/ES/style.json",
-          "sha256": "057da9d01ae77dc07a83d4f9664dac3a33e2537ef8c9414d5bba5aaa18dbbe2b",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       }
     },
@@ -134,8 +134,8 @@
         },
         "style": {
           "repo_path": "G/GC/style.json",
-          "sha256": "cb9cbd350082b410e1c91c36c854664b8a24c0e22249bdf3ede375b62bc1f9e5",
-          "size_bytes": 855
+          "sha256": "de198381bd12d66a6b3a02bfc743241d8bb692a7953f1ffb4d9af1c5f019b702",
+          "size_bytes": 917
         }
       }
     },
@@ -148,8 +148,8 @@
         },
         "style": {
           "repo_path": "K/KA/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -162,8 +162,8 @@
         },
         "style": {
           "repo_path": "K/KB/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -176,8 +176,8 @@
         },
         "style": {
           "repo_path": "K/KC/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -190,8 +190,8 @@
         },
         "style": {
           "repo_path": "K/KD/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -204,8 +204,8 @@
         },
         "style": {
           "repo_path": "K/KE/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -218,8 +218,8 @@
         },
         "style": {
           "repo_path": "K/KF/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -232,8 +232,8 @@
         },
         "style": {
           "repo_path": "K/KG/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -246,8 +246,8 @@
         },
         "style": {
           "repo_path": "K/KH/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -260,8 +260,8 @@
         },
         "style": {
           "repo_path": "K/KI/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -274,8 +274,8 @@
         },
         "style": {
           "repo_path": "K/KJ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -288,8 +288,8 @@
         },
         "style": {
           "repo_path": "K/KK/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -302,8 +302,8 @@
         },
         "style": {
           "repo_path": "K/KL/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -316,8 +316,8 @@
         },
         "style": {
           "repo_path": "K/KM/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -330,8 +330,8 @@
         },
         "style": {
           "repo_path": "K/KN/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -344,8 +344,8 @@
         },
         "style": {
           "repo_path": "K/KO/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -358,8 +358,8 @@
         },
         "style": {
           "repo_path": "K/KP/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -372,8 +372,8 @@
         },
         "style": {
           "repo_path": "K/KQ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -386,8 +386,8 @@
         },
         "style": {
           "repo_path": "K/KR/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -400,8 +400,8 @@
         },
         "style": {
           "repo_path": "K/KS/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -414,8 +414,8 @@
         },
         "style": {
           "repo_path": "K/KT/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -428,8 +428,8 @@
         },
         "style": {
           "repo_path": "K/KU/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -442,8 +442,8 @@
         },
         "style": {
           "repo_path": "K/KV/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -456,8 +456,8 @@
         },
         "style": {
           "repo_path": "K/KW/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -470,8 +470,8 @@
         },
         "style": {
           "repo_path": "K/KX/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -484,8 +484,8 @@
         },
         "style": {
           "repo_path": "K/KY/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -498,8 +498,8 @@
         },
         "style": {
           "repo_path": "K/KZ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       }
     },
@@ -512,8 +512,8 @@
         },
         "style": {
           "repo_path": "L/LE/style.json",
-          "sha256": "cb9cbd350082b410e1c91c36c854664b8a24c0e22249bdf3ede375b62bc1f9e5",
-          "size_bytes": 855
+          "sha256": "de198381bd12d66a6b3a02bfc743241d8bb692a7953f1ffb4d9af1c5f019b702",
+          "size_bytes": 917
         }
       }
     },
@@ -526,8 +526,8 @@
         },
         "style": {
           "repo_path": "L/LO/style.json",
-          "sha256": "c00495e3fb16d84b7359bf0b50b52c803236fc20888c707d1084118b483e50d3",
-          "size_bytes": 7986
+          "sha256": "aacc949ef49853e43820211354971caaca8848ff82a0ff88b0ca9877abfe8d1f",
+          "size_bytes": 8186
         }
       }
     },
@@ -540,8 +540,8 @@
         },
         "style": {
           "repo_path": "L/LP/style.json",
-          "sha256": "d6d3f54129b6dc2a4f831614005533a45c7afc6c793a8380be3ae00a975efae4",
-          "size_bytes": 10562
+          "sha256": "95f656b5f717ba0a2d6cc242b12fa202062b0672b86df97aedd65b6d481f2cf5",
+          "size_bytes": 10900
         }
       }
     },
@@ -549,13 +549,13 @@
       "files": {
         "colors": {
           "repo_path": "L/LT/colors.json",
-          "sha256": "b8766a6c44e6af4f3aca7effd6463b549089d77df6c3ecf4341da0d3cf8f1233",
-          "size_bytes": 933
+          "sha256": "12c29bc17d612a4c8de85122279fa30432290f177dcd7cf7c5a546481af9787d",
+          "size_bytes": 932
         },
         "style": {
           "repo_path": "L/LT/style.json",
-          "sha256": "057da9d01ae77dc07a83d4f9664dac3a33e2537ef8c9414d5bba5aaa18dbbe2b",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       }
     },
@@ -568,8 +568,8 @@
         },
         "style": {
           "repo_path": "O/OE/OEJD/style.json",
-          "sha256": "12dd704c922e46e6b0a847582d9d15f0793c6cc931bffe763b27c528f295fd41",
-          "size_bytes": 968
+          "sha256": "052d4adf357935d8119d36c8b6eb1b8367a0ba7208dbe6677d747d596a15980f",
+          "size_bytes": 1079
         }
       }
     },
@@ -582,8 +582,8 @@
         },
         "style": {
           "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/style.json",
-          "sha256": "1099b6b54457336c11d725955685a88c092f436f23106ebc976f0f050f69914d",
-          "size_bytes": 799
+          "sha256": "f7353c9d2533837d4ab576986d135ab466e00ceafd2dc8ce2904d605da9a5f8c",
+          "size_bytes": 863
         }
       }
     },
@@ -591,13 +591,13 @@
       "files": {
         "colors": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/colors.json",
-          "sha256": "42bcea9b690bd967674669f3137c6cd93df2a4577f7aad0242493e1bb42d1a95",
-          "size_bytes": 734
+          "sha256": "1934644266276a780198c6fb284eb646b33d5e3e68080b491b89407aa4904652",
+          "size_bytes": 730
         },
         "style": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/style.json",
-          "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       }
     },
@@ -610,8 +610,8 @@
         },
         "style": {
           "repo_path": "O/OT/OTDF/style.json",
-          "sha256": "2dbc1b4eec91af1373f21a2fe5039b1f41e0274bc9498aa3c4fc459008669947",
-          "size_bytes": 764
+          "sha256": "8f77296e5ba7784ef7a248fd68f68dd0dde118cb3bbf7b167c28256857ce9372",
+          "size_bytes": 829
         }
       }
     },
@@ -624,8 +624,8 @@
         },
         "style": {
           "repo_path": "P/PA/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       }
     },
@@ -638,8 +638,8 @@
         },
         "style": {
           "repo_path": "P/PG/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       }
     },
@@ -652,8 +652,8 @@
         },
         "style": {
           "repo_path": "P/PH/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       }
     },
@@ -661,13 +661,13 @@
       "files": {
         "colors": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/colors.json",
-          "sha256": "b663de2d6d5f94254cfbfa9f518d5c5af94a35af75e385389bbef49223f645d6",
-          "size_bytes": 773
+          "sha256": "7d902e89549736fce9dbc5aa86dc807c005da820f638cd2742abc443d49127d2",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       }
     },
@@ -675,13 +675,13 @@
       "files": {
         "colors": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/colors.json",
-          "sha256": "df93e5d67a2dab1c298f69f6112583fc5248d525efe72cc7655bce02ce76fd88",
-          "size_bytes": 773
+          "sha256": "be7f845d3f5c17ba4023d2d2d8a62f3bbe3dfbcf9b7a3a7e73e3ac227a44ccb7",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       }
     },
@@ -689,13 +689,13 @@
       "files": {
         "colors": {
           "repo_path": "V/VH/VHHK/HONGKONG_TMA/colors.json",
-          "sha256": "393d459d5fd11d584bde83a0a28dce322aa2d87dc482faa3b0ce8446a8474c27",
-          "size_bytes": 773
+          "sha256": "450a16c440cb16c84cab1d82335b90adbb0babfb652046274dd259b5f1a6301c",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "V/VH/VHHK/HONGKONG_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       }
     },
@@ -708,16 +708,16 @@
         },
         "style": {
           "repo_path": "Y/YM/YMMM/style.json",
-          "sha256": "ac24f1e942744e5d02f519ae7c0f8162048866abef25a4e06a4c2afb1be8e9f2",
-          "size_bytes": 957
+          "sha256": "03c47f0127ef7ecf2ad93a30916b34c40e7e5533fda8a5e9679ae35801a23161",
+          "size_bytes": 1068
         }
       }
     }
   },
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "bc0f2aed638213520c563ad0c23ccf74965799e1ad5d6a94c796a9b15ed9e04e",
-  "size_bytes": 50390
+  "sha256": "a5b196b56dbd32445d7679830f30f35a05c12536ba4937dc7d79f55cb251e4bf",
+  "size_bytes": 40178
 }

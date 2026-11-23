@@ -187,7 +187,7 @@
       "size_bytes": 52568
     },
     "LEMH": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/misc_drawings.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/misc_drawings.json",
       "sha256": "9d2b3f962137221749ec51c41783e4b996256ea60367a5fe86e3bc076ae03e1b",
       "size_bytes": 4526
     },
@@ -268,12 +268,12 @@
     }
   },
   "asset_name": "misc-drawings-2611.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/misc-drawings-2611.zip",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/misc-drawings-2611.zip",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f77a98fd66cd1fcd45504a32fcefc74501aa26494c0ead965ee30d0a5f4ea0a5",
-  "size_bytes": 425970
+  "sha256": "4f8ad2a112217a5de0355ee2fdcc91cfae7c9772930f91bca1fb228c420569d2",
+  "size_bytes": 425966
 }

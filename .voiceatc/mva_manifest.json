@@ -202,7 +202,7 @@
       "size_bytes": 219224
     },
     "LEAL": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/mva.json",
       "sha256": "30e9573cbac5d8b3a328e79ceb7bc84f2e85c199921d231287e241f43353dae3",
       "size_bytes": 29103
     },
@@ -217,7 +217,7 @@
       "size_bytes": 52108
     },
     "LEIB": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/mva.json",
       "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
       "size_bytes": 35958
     },
@@ -237,17 +237,17 @@
       "size_bytes": 18750
     },
     "LEMH": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/mva.json",
       "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
       "size_bytes": 35958
     },
     "LEPA": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/mva.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/mva.json",
       "sha256": "70aa30bf57ad669da851afd42628752c97d3aaac8fd2e13ad5e507d8d5e8b959",
       "size_bytes": 35958
     },
     "LEVC": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/mva.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/mva.json",
       "sha256": "30e9573cbac5d8b3a328e79ceb7bc84f2e85c199921d231287e241f43353dae3",
       "size_bytes": 29103
     },
@@ -498,12 +498,12 @@
     }
   },
   "asset_name": "mva-2611.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/mva-2611.zip",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/mva-2611.zip",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "fa7e19ad838c8fdc5e0e6a06369f4f338adb7f0ca2d6bb44a618aa988e2f540f",
-  "size_bytes": 1718639
+  "sha256": "0878d87db79ad70f69113f747e168aae6c6711502c69c518fb7becba54199c9c",
+  "size_bytes": 1718631
 }

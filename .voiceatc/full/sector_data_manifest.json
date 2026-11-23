@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -26,6 +26,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/C/CZ/CZUL/MONTREAL_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8e8e842232214a577f69ef726e9c0e83d2319ee039fe5b54023b828399b18246",
+          "size_bytes": 94761
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/C/CZ/CZUL/MONTREAL_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "19329b5c61f24b194c4db14ce34ec1b6628eb9965a585a0e89cc0179786ce127",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/C/CZ/CZUL/MONTREAL_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "240b3c1cfffff713666f5b4aab7bb435e60ec8a7124a2dc821dcc28d001da1e7",
+          "size_bytes": 199
+        }
+      },
+      "id": "C/CZ/CZUL/MONTREAL_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/sector_configs.json",
           "sha256": "9535e87bd7db22c51bf5875d310377ada9d308e0b94832f40071f6f29653f02d",
@@ -43,6 +67,30 @@
         }
       },
       "id": "C/CZ/CZVR/VANCOUVER_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/C/CZ/CZVR/VANCOUVER_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9e8779cb8298b58382f39485836db32960f88d84086a81018d6c72e0066a1227",
+          "size_bytes": 430913
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/C/CZ/CZVR/VANCOUVER_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4a2373e72b36f7ceff5fc00bd46f417082e90d94012037e62bcdcb78709b716",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/C/CZ/CZVR/VANCOUVER_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e2420d1ce2f3abbfdfa6ffff42a00ffaf5ccfa1554c70f8f6106e4fc751e48bd",
+          "size_bytes": 200
+        }
+      },
+      "id": "C/CZ/CZVR/VANCOUVER_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -66,6 +114,42 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/C/CZ/CZYZ/TORONTO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6b4313222427967cecf8e23141249486852a63648ddcb7034038ef5ef00b2e40",
+          "size_bytes": 76597
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/C/CZ/CZYZ/TORONTO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "af3521c8d1913507ad09766ba1a2c138e3a3fdcb72a776c3616e3b1e8584c446",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/C/CZ/CZYZ/TORONTO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "959e2640b5d3eff8eb42150b3c7e4ef6952af64921b51c584b272d8e0ccdf8a2",
+          "size_bytes": 198
+        }
+      },
+      "id": "C/CZ/CZYZ/TORONTO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a9e974d96494eb1790dfce954110c862937133f1145240201a4b5350fc359f75",
+          "size_bytes": 957
+        }
+      },
+      "id": "E/ED/EDGG",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/sector_configs.json",
           "sha256": "664a215ab39a251ebab874c7c1c145e7fb319696585814fe2ba66816194f92a8",
@@ -83,6 +167,30 @@
         }
       },
       "id": "E/ED/EDGG/DUESSELDORF_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/DUESSELDORF_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e2848424225f9d22c32246cce7ae014824ed45b2203ae1dd88abcb799951ceee",
+          "size_bytes": 3233
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/DUESSELDORF_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6cca1fd2c7370d5cc3bcd9c058cf6dbdc75a1b1bb9e4b56fb559ad7149e1b42b",
+          "size_bytes": 272
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/DUESSELDORF_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0883e0a32bc1daabc78182d673ee0f076b652597a6ed4e773a6e53a651e8884d",
+          "size_bytes": 381
+        }
+      },
+      "id": "E/ED/EDGG/DUESSELDORF_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -112,6 +220,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/FRANKFURT_MAIN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7a044cbf1d14b118b5af24f2146e66e7e8ffc26f7cdf804a57edbf326647d447",
+          "size_bytes": 11772
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/E/ED/EDGG/FRANKFURT_MAIN_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3f496065edf16be7e578e8d99b4c1326d3716c2194b42f267fff91a885dbdb13",
+          "size_bytes": 2478
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/FRANKFURT_MAIN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "814bdb2a246b1af306209a468daf39bca3293afe0c1977de9f0068660d5fe500",
+          "size_bytes": 710
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/FRANKFURT_MAIN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "adf581860d09d8f11afbdd8219876bdfd1749fb4e162a18f4c150c82f6af20ba",
+          "size_bytes": 436
+        }
+      },
+      "id": "E/ED/EDGG/FRANKFURT_MAIN_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDGG/HAHN_TMA/sector_configs.json",
           "sha256": "d9e5a8e62f78e1d468186144eefb1bd203450ad7eb23da6eafe5f2e0133cc725",
@@ -129,6 +267,30 @@
         }
       },
       "id": "E/ED/EDGG/HAHN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/HAHN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1462c1c7533d69234823aa4ec94c9975f19676c20f1278453a3e072f79f2debf",
+          "size_bytes": 7078
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/HAHN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0836a8972a979e36d86da9a72ea27a64dfdf6ef8eef6a7145e2aa807fe4d44fa",
+          "size_bytes": 273
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/HAHN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "82153b89014831d7e779e8d6436b926816d08f996ed2196baa5a0de1a9d4cb45",
+          "size_bytes": 893
+        }
+      },
+      "id": "E/ED/EDGG/HAHN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -152,6 +314,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/KOELN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "513313db4c54ee3ea55104f3227fe9787cf033ec2b5b6ed32ecb5a4c1be7babb",
+          "size_bytes": 2937
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/KOELN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "355b3024c11ae9959d69f3e9ca4d1db12fd7fea664055af24ddc0a00a7a6d9aa",
+          "size_bytes": 273
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/KOELN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "29324f934b5d460d88e1a79813855fa74a8873208a93b74f8a0599689e649574",
+          "size_bytes": 290
+        }
+      },
+      "id": "E/ED/EDGG/KOELN_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/sector_configs.json",
           "sha256": "5b75cbea77e9d453f74f3db6b816c1db18ac8e58847b315bfa7511481d6fb8e3",
@@ -169,6 +355,30 @@
         }
       },
       "id": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c1122885ee7317f32412f90f0a9c465420b801f2a597b995a1ffb6ee23f0fb35",
+          "size_bytes": 3244
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c3ac887d5535c38eb9cea5acf67633d1e116e9ea2932d8a2596f3ea8afb4c913",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1333fdfcfc05b68f8e1f640f6c5fd82f5bf0e57442f48da6af919b370195fc9c",
+          "size_bytes": 289
+        }
+      },
+      "id": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -192,6 +402,42 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/STUTTGART_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "07f0b6255daaef3fe46a39498c7b7cfac67134e48bd7814183b431f30c3ce84c",
+          "size_bytes": 5481
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDGG/STUTTGART_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a8cc0d9007c13f92bb0533ec8a6f995369049057dc3964d67d59f9e3da5c268d",
+          "size_bytes": 315
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDGG/STUTTGART_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f55a5175da2118d09297324b980ac68deafee5cad01a718234b4f9f2f10b7a50",
+          "size_bytes": 1333
+        }
+      },
+      "id": "E/ED/EDGG/STUTTGART_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d2bbcbf6331e1f34162ec27e669351fbb8e793a6546622a7396b9dc44f316915",
+          "size_bytes": 634
+        }
+      },
+      "id": "E/ED/EDMM",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDMM/EDDC_TMA/sector_configs.json",
           "sha256": "8b255dbeae6c2272d814ec07b6380aca663ff1a82a62898539a709a17311af0b",
@@ -209,6 +455,30 @@
         }
       },
       "id": "E/ED/EDMM/EDDC_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDC_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "46d36f450cfd7af31b8ede5ef122471cbcdd70e6edb303ff424f10e7db4971c7",
+          "size_bytes": 810
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDC_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d90fc8c61d17af422dcbbc9781ae6dabc0ef1df7ab73f9c854c922dd98ba8719",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDC_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "902427102235894f3c59f23a0fc83e5e5bfe5a807972754c096c391ff30ea69d",
+          "size_bytes": 296
+        }
+      },
+      "id": "E/ED/EDMM/EDDC_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -238,6 +508,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "921d38cc1e06901f3ddbce0772fdb435231b994e04888fcfe235a6f6d8323aa5",
+          "size_bytes": 139971
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ee05fbfd2eab15f607eeaaf4cf3007bc700637ec8df043c352cd290500254b16",
+          "size_bytes": 5984
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6875fe7e782942cc958f970c5ca03ae6ae36458a28269932da17270022b92807",
+          "size_bytes": 909
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "91fbf406c138a949dcb8ced994a9982181114aa24925ae97d87aa2e1a82acc41",
+          "size_bytes": 1648
+        }
+      },
+      "id": "E/ED/EDMM/EDDM_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDMM/EDDN_TMA/sector_configs.json",
           "sha256": "7688afa57ee740424dbe6d543ae8ed093cb8307b7d24c759e5b782a32420b7ec",
@@ -255,6 +555,30 @@
         }
       },
       "id": "E/ED/EDMM/EDDN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b9b47c5b79243cda561b7a9c915a4f48650db2d067791b2098c18fe8318a41f0",
+          "size_bytes": 2313
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f636029d8bb0e0f4a8d163baac9445fea2c58a9b3361bf1dd77f6bf1fb676f5b",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDMM/EDDN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1b234efd72da38b57ec557b889e4eaf6cc7ef97edb660814001ea4c0ee75acc4",
+          "size_bytes": 302
+        }
+      },
+      "id": "E/ED/EDMM/EDDN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -278,6 +602,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/BERLIN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bfddbbab279d5d62ee2be706bab09035b5b7c4086035b57e02c12902c1ae8edb",
+          "size_bytes": 12110
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/BERLIN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "68d4406a392b7ce10a5158f4d0966077822105d1cc6e4a46ce5dda0683a8c6ea",
+          "size_bytes": 357
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDWW/BERLIN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d461b50beb7d76b616e65b79cf07ad9e846a9c70f9789b1a417a3a2a3fae66db",
+          "size_bytes": 3183
+        }
+      },
+      "id": "E/ED/EDWW/BERLIN_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDWW/BREMEN_TMA/sector_configs.json",
           "sha256": "ea37ac14a4079eb81c1118ae425592cf6abe1ae3dcebaa01fc91aee655ba2444",
@@ -295,6 +643,30 @@
         }
       },
       "id": "E/ED/EDWW/BREMEN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/BREMEN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7b6adb1e94b0f97e0bdbb3ed5e2458aedb1b9ac9da0a4cc6702c9a49c7d96ff8",
+          "size_bytes": 1340
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/BREMEN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f07350d11341fb5510098871b102638ed03538c5ea3f9333340ddd1df68a8abe",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDWW/BREMEN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "26557e973b147615be8660939e7e3346c38d01169b8b66c9c4f85fee3015076e",
+          "size_bytes": 256
+        }
+      },
+      "id": "E/ED/EDWW/BREMEN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -318,6 +690,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/HAMBURG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "930b02407c6ed6c4c41ce84f3274851af559ea2827ceb6b109c4a8c770679ed7",
+          "size_bytes": 1470
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/HAMBURG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f05a187713ffcfbc75a8b3f485a1268eb91f8326b7dc0dfe911f91a0b87a5e0f",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDWW/HAMBURG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9ed36e467439e6185fb9206ab8e41f3cdcc408b335dbd99edd603f6d50ad1646",
+          "size_bytes": 386
+        }
+      },
+      "id": "E/ED/EDWW/HAMBURG_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ED/EDWW/HANNOVER_TMA/sector_configs.json",
           "sha256": "45c24960fc4b405bee9d38b2e646e83c0827e4fecf48540bce04e68fd3526bee",
@@ -338,6 +734,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/HANNOVER_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "be4657da2f4046106987e6aa8f192e75bd2dabdee76fac5ae6de2a001f87a2a9",
+          "size_bytes": 1327
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ED/EDWW/HANNOVER_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6c99fd9aee9e78ab0d8cef24fc40b015e866454be6150b3e4095f6d4e811170d",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ED/EDWW/HANNOVER_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "10ef3207276823a5df2c0170ea133c34074b6ae2029f14211c312da44f8f7a20",
+          "size_bytes": 320
+        }
+      },
+      "id": "E/ED/EDWW/HANNOVER_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EF/EFIN/EFIN_S/HELSINKI_TMA/sector_configs.json",
           "sha256": "5d8df3557c2a0716ffbebb33794d194d5154a4078b6868d48aeeee9360ae4c68",
@@ -355,6 +775,42 @@
         }
       },
       "id": "E/EF/EFIN/EFIN_S/HELSINKI_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EF/EFIN/EFIN_S/HELSINKI_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2cf1be846c81cc6860868c617938929d06b64617c1fb50484f59dd98d8c8f2a9",
+          "size_bytes": 2885
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EF/EFIN/EFIN_S/HELSINKI_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1fe2b1281284beac751f746161424236fdb7a9b829bc6596dc162db6790804e6",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EF/EFIN/EFIN_S/HELSINKI_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5b41bc235491af4cbc4d166bd3d11ac7a129951fcc1265dac20a3f01c43a6203",
+          "size_bytes": 290
+        }
+      },
+      "id": "E/EF/EFIN/EFIN_S/HELSINKI_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/E/EG/EGTT/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0e0a6689ab951c45c68a831f4143029d3eecc98804bb04832dd9faacdb9f694f",
+          "size_bytes": 1358
+        }
+      },
+      "id": "E/EG/EGTT",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -384,6 +840,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EG/EGTT/LONDON_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1b81654f3ff1263473bd06e1a5ce7201c640b404c9fbfbb3d148d387d184c359",
+          "size_bytes": 39820
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/E/EG/EGTT/LONDON_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7351279f3495917b15b8a6ae884fc22f439c3e103366c8d7761aaa22deaff65f",
+          "size_bytes": 896
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EG/EGTT/LONDON_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4396b3a4d18a9fc17a6d5034ebb52cf572076d34b28e5ee81dcd5657e3c98e57",
+          "size_bytes": 534
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EG/EGTT/LONDON_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3bd738d4d0c3791385f6165d4c26747f128ab8b83a88986b5ad0553a514da9ed",
+          "size_bytes": 454
+        }
+      },
+      "id": "E/EG/EGTT/LONDON_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/E/EH/EHAA/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ac3e6e908baf12eb56eee2ee3cf8b55f38c1eb3f22794e7af3dffda8ea86d37a",
+          "size_bytes": 447
+        }
+      },
+      "id": "E/EH/EHAA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EH/EHAA/AMSTERDAM_TMA/sector_configs.json",
           "sha256": "f86ff86f57c488f9d4737d0c241925eb9a8e696a1916acc5d23da9a569713575",
@@ -410,6 +908,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EH/EHAA/AMSTERDAM_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f93e49e62506066292828ddd4331e7ff1985a860009ab096ec84729a6ab31482",
+          "size_bytes": 22115
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/E/EH/EHAA/AMSTERDAM_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0413e479d48dc3aaab63889420d45cdd4427c0bbb5d3fd2d5ec15b4595ca0197",
+          "size_bytes": 2728
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EH/EHAA/AMSTERDAM_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2f02c5563a1db5768c589ca5dbfb210c11ebc9b770fc4018d095c2796ae417d2",
+          "size_bytes": 541
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EH/EHAA/AMSTERDAM_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "93c4b69570f8262e9aa073b866106015fea4545a9c60df2eaeefa467e9be20e7",
+          "size_bytes": 699
+        }
+      },
+      "id": "E/EH/EHAA/AMSTERDAM_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EK/EKDK/AALBORG_TMA/sector_configs.json",
           "sha256": "07b054752998d3492599a2f38c7375be7761dca5e77e655ba00f95624ec0c1d9",
@@ -427,6 +955,30 @@
         }
       },
       "id": "E/EK/EKDK/AALBORG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/AALBORG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5d631bc53071bc20eb0de247d149163db2570866ae6e1b26b9696687ce14d6b5",
+          "size_bytes": 2376
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/AALBORG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4cecf5cc06f4322ce2c8ac64636a5d24fbe00b5d4406ec585dd88d4ee2883244",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/AALBORG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0f25819fc4cbd0f4ac45f266b633f3dd7278eef5bd58e952096217e00f385595",
+          "size_bytes": 324
+        }
+      },
+      "id": "E/EK/EKDK/AALBORG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -450,6 +1002,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/AARHUS_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c7672aa394d2d690828ffcff4284d1229c7c0a1a64531b1be976b09d61d134e6",
+          "size_bytes": 1918
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/AARHUS_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fbdee517fd66a91f3b6033315566b792b714e53ff5872982041ed5ed953425a0",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/AARHUS_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1dc5cd4d73a8904bebc98a6cfb681b59eb17d0a54c152d9a8b572402c51d9450",
+          "size_bytes": 322
+        }
+      },
+      "id": "E/EK/EKDK/AARHUS_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EK/EKDK/BILLUND_TMA/sector_configs.json",
           "sha256": "d8f4c705b9c8f319d7cf13b902ee77af51f75f6a78d37fd5d6ba06983f38ad53",
@@ -467,6 +1043,30 @@
         }
       },
       "id": "E/EK/EKDK/BILLUND_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/BILLUND_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4db47ecfdcb28c24dad6006bd791b966a47d746d1384cb89e179bcf626808ae0",
+          "size_bytes": 5310
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/BILLUND_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "efb46d5b676d79238884ec90ff739a3014ada293fd884f0fea2b7c86687433b2",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/BILLUND_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0a00bb32a0c0fc93bad27b93d15b757b59dda6599098a1d8a9fe62947f0e99cc",
+          "size_bytes": 426
+        }
+      },
+      "id": "E/EK/EKDK/BILLUND_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -490,6 +1090,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/BORNHOLM_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5fae910b9413e2e62aed15d28c6563ff615ac928495e334b64d1e46f423908c3",
+          "size_bytes": 11608
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/BORNHOLM_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f190feefaf0cd2e495aed0bb8fe6714a91844fa111a19c4df4a61528492f0f7d",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/BORNHOLM_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9cc6332ae1189b0b50933db2d2929cea84e370229fc7786dedfe2cf97beb0fcd",
+          "size_bytes": 300
+        }
+      },
+      "id": "E/EK/EKDK/BORNHOLM_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/sector_configs.json",
           "sha256": "1284e344935110aabd3965a34696dc730de79d92d2581f14443c427bfed36eab",
@@ -507,6 +1131,30 @@
         }
       },
       "id": "E/EK/EKDK/COPENHAGEN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/COPENHAGEN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c6792db891b0478e8a3872d8be63dff9fbafd72513b62e08ff61ae79dec108db",
+          "size_bytes": 37753
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/COPENHAGEN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "782db584e8261b17e7a61544297fd7590c6ff188277fb7c80f25878e63d70b39",
+          "size_bytes": 271
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/COPENHAGEN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e6379b3546f684f822aabc8e3d45fc9f1789486a635f0c2f58e92ff74ac7827a",
+          "size_bytes": 1230
+        }
+      },
+      "id": "E/EK/EKDK/COPENHAGEN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -530,6 +1178,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/KARUP_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5175057becc19b23a0387d39c42a48f9149decf6ea0662dde8cc99ac15bf3021",
+          "size_bytes": 1753
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/KARUP_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "74a6eee13db415f3a7ebc4ee0466505ae36b6678df798582f856eaf417dc89c7",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/KARUP_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "07ac2be147b6df782215b4a2435005667be95dd53032f7661349b9cee1cbfab7",
+          "size_bytes": 320
+        }
+      },
+      "id": "E/EK/EKDK/KARUP_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/EK/EKDK/SKRYDSTRUP_TMA/sector_configs.json",
           "sha256": "b16e4fdce391586b52fbec2ef9ac858280441533dddefe820e85f5711282b472",
@@ -547,6 +1219,30 @@
         }
       },
       "id": "E/EK/EKDK/SKRYDSTRUP_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/SKRYDSTRUP_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "35c5e9a50af71e576aeb02b7ae08bffbeb57ad69a014eac4ede1ef2fe9dd3d50",
+          "size_bytes": 3016
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EK/EKDK/SKRYDSTRUP_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "226d30202d6446240c769e7a32bc436ee0f308310b06d094775b90be85c89073",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EK/EKDK/SKRYDSTRUP_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f94559abc4fb349474d028948bf8e0aca03dfe508d4714bd6208cf9ea4925896",
+          "size_bytes": 436
+        }
+      },
+      "id": "E/EK/EKDK/SKRYDSTRUP_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -570,6 +1266,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/EN/ENOR/ENOS/OSLO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3d706e5c26214c94e5b40dea48f5a61d1cae200529c0fa3a12d26215cfbc8bd9",
+          "size_bytes": 1867
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/EN/ENOR/ENOS/OSLO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "555d888fca5cca90d9c5588b63f4113c0a45ae28ab6a8bdbf3efa09dc6f9ec17",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/EN/ENOR/ENOS/OSLO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2faa69c1a7498479de59fc9e27b3c714bbbc64fa716d91787ddc4618ea28623a",
+          "size_bytes": 318
+        }
+      },
+      "id": "E/EN/ENOR/ENOS/OSLO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "E/ES/ESAA/ESMM_23W45/ESGG_TMA/sector_configs.json",
           "sha256": "9a633c7f03d754e786aacf93bad8b211b78db4ce7a7fe2884a707c2d7a8a88b5",
@@ -587,6 +1307,30 @@
         }
       },
       "id": "E/ES/ESAA/ESMM_23W45/ESGG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESMM_23W45/ESGG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "44bd3278fc980de476db96451e51aed2036cc71212d7188784c756790f8a5955",
+          "size_bytes": 1673
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESMM_23W45/ESGG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f355753c1d9de8d7e4453a278cbac29172c19cabba2725b286dfac5125769164",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESMM_23W45/ESGG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "db73a9d7fb23a40092ec9a87ce92d3c762ec90d8f7b52430682419244a341745",
+          "size_bytes": 335
+        }
+      },
+      "id": "E/ES/ESAA/ESMM_23W45/ESGG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -610,6 +1354,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESOS_Y/ESOS_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5151da999a6dae90a4f5af1d85ab0c8f82b2fc52e17a612e98cf9d783af3ce83",
+          "size_bytes": 6165
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESOS_Y/ESOS_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e5efc812f70536bad3b52c807c467d4032e58b2c0f6060da17a9ad1aeac6e9f2",
+          "size_bytes": 472
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/E/ES/ESAA/ESOS_Y/ESOS_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6603f27c444bcf45607fd38cb2f19d41ddff7d3ec931aa24d381ffe9faf75da2",
+          "size_bytes": 2769
+        }
+      },
+      "id": "E/ES/ESAA/ESOS_Y/ESOS_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/sector_configs.json",
           "sha256": "05165be9dac5fd3b0fd71cc2063eab975687c04905a8e9f5d44e2a01bb084f13",
@@ -627,6 +1395,42 @@
         }
       },
       "id": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b857745dbf6e0317ae2532dbbe7faa5f0c0d880a0000c9a9d75ddfb273c99512",
+          "size_bytes": 10668
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0ab1ac428cbac6b47d1f9e160666b426b1b61241e51fb05c17714247ed5e9dae",
+          "size_bytes": 492
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bb86af56415f61c0d791e30cf8b51efd4c43855d96c1c040f57750e157eb9d33",
+          "size_bytes": 331
+        }
+      },
+      "id": "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZAU/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "963a78033b19ba251981a26450d0ad4124002650fc82c84a54637ef6c1c0a4bb",
+          "size_bytes": 1472
+        }
+      },
+      "id": "K/KZAU",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -656,23 +1460,89 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZAU/CHICAGO_ORD_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8e6d2bb4fe22f35e59d025d16e2cb6adf6f653d57962e78289f756f7ac8ae18a",
+          "size_bytes": 6581
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZAU/CHICAGO_ORD_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b5fb93c6e7cb192b20fd15d28ba71592e27882bcfb52a29d3462a0cf46b0ff56",
+          "size_bytes": 880
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZAU/CHICAGO_ORD_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "742a7a0b75daf1d48ae7a5f317303f996f2acf133823bda7761d1151b74d03b5",
+          "size_bytes": 673
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZAU/CHICAGO_ORD_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "098b217f9c2ebbd5a836660504c36d863d22e05992c5c3897ab6f05a689f8c77",
+          "size_bytes": 2204
+        }
+      },
+      "id": "K/KZAU/CHICAGO_ORD_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_configs.json",
-          "sha256": "8f14986275bf7275a88ecc1ecd91a42a88c81704426ab74d5a76118912d76117",
-          "size_bytes": 581
+          "sha256": "a1905bc6c2ce4cf7f706505c15328b2fc4622a0371b2e3cf397d01efdb0a0e30",
+          "size_bytes": 680
         },
         "definitions": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_definitions.json",
-          "sha256": "a14698996357c59e18d68e917a17aa35ca5f2162a3c142e1338acc35bd2f3d49",
-          "size_bytes": 5147
+          "sha256": "bc7ce6bf4fe4a9bbb166170aacdd45c09b9d598671c09bdba57ff932ba3d8509",
+          "size_bytes": 8117
         },
         "influence": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_influence.json",
-          "sha256": "8d7f35dd0598e5b07cbe1703bf2d8e7c3d4c80abf54774d37853cf77f4d4824d",
-          "size_bytes": 246
+          "sha256": "412048bb72d09bf132e81490f4c86cb47848ccabae221243e918036489437be5",
+          "size_bytes": 294
         }
       },
       "id": "K/KZAU/MILWAUKEE_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZAU/MILWAUKEE_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0204bcebb50f1cc83bb018c793e4e1c8d49431a8b2e7870c160a10edab3519c6",
+          "size_bytes": 5417
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZAU/MILWAUKEE_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "677c6b287a1e70fc7b1a807da8818c045834ff3c30b1bd8a5943af69fa1a86a6",
+          "size_bytes": 478
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZAU/MILWAUKEE_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d478fec3b34783b2fcc188cb536fcfb4e8613994be72ab1563b9eea9d88d2ab3",
+          "size_bytes": 551
+        }
+      },
+      "id": "K/KZAU/MILWAUKEE_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZBW/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a823db4b96ce5ffcd57ee9fc8666e95c333e9b69a4a76fb472f6a408aef81c40",
+          "size_bytes": 958
+        }
+      },
+      "id": "K/KZBW",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -702,6 +1572,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZBW/BOSTON_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b9f830543ed9dfb9c5e86d9520c766e6e5c5b94a81ffb9ce80b7de336be00566",
+          "size_bytes": 1066
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZBW/BOSTON_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "234fe9d0e2c9d769c37ce620935b954795f10bbfeba5861b3f283364c9d8d7cb",
+          "size_bytes": 712
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZBW/BOSTON_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7db86c652dfbd1d9a9a788e98b4b17217522b1667b9c67bc6a3f91826f555c67",
+          "size_bytes": 504
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZBW/BOSTON_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "aaef312692158e1941f17e8cbb32e33274fe6379b933aee7127ec78032a321a1",
+          "size_bytes": 272
+        }
+      },
+      "id": "K/KZBW/BOSTON_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZDC/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9ffae7a5bc1ba7ea0990d6b15dd5e7193cdd8d2f98c3b4336eef0b9995c0473e",
+          "size_bytes": 1266
+        }
+      },
+      "id": "K/KZDC",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZDC/WASHINGTON_DCA_TMA/sector_configs.json",
           "sha256": "22a316d2a2a0ac2b743a77022eac86bf5c9ff86ce5c0776d1404a5a407fc765a",
@@ -725,6 +1637,48 @@
         }
       },
       "id": "K/KZDC/WASHINGTON_DCA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZDC/WASHINGTON_DCA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3ada52ce49b8d00f5f390f813b12b80eaf3e6c08955a0000d2b3daf8d203b177",
+          "size_bytes": 52078
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZDC/WASHINGTON_DCA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "30e8c7e6f48561b5e0ca429f95c85efc9a7fae54535b65afa3b08464fc061e72",
+          "size_bytes": 3060
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZDC/WASHINGTON_DCA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2e58d30a1be3a88fd179130b29d473315d388ce9d0b1ad85644283667b11f606",
+          "size_bytes": 498
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZDC/WASHINGTON_DCA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8662509dfcdb20b366cff0b2278e26f73bbc2c14b015c22951283adee79d1f36",
+          "size_bytes": 276
+        }
+      },
+      "id": "K/KZDC/WASHINGTON_DCA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZDV/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4dbd054ce100ca52dabd85889b5c98f9ec08fe4e89ad6f02b671ce8a2d8aa585",
+          "size_bytes": 1053
+        }
+      },
+      "id": "K/KZDV",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -754,6 +1708,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZDV/DENVER_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "aabec6d52fe3960ec91705fd8722a63c98cfe6622a56846ffffb8f40580d132d",
+          "size_bytes": 40377
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZDV/DENVER_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b8cc73edf60ec0840431ba6532899fa622941758785dd593255df48cfb0b420b",
+          "size_bytes": 4744
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZDV/DENVER_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "142359ac357b1f58277480c14d14bbf4c5d80c2fcb30abd00b4d72109dfb2ba9",
+          "size_bytes": 548
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZDV/DENVER_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "68d91c1139a17e90a5308532ed386a2b6126e150ae8b50f58befbb5d8a022cd4",
+          "size_bytes": 679
+        }
+      },
+      "id": "K/KZDV/DENVER_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZFW/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "efbdf4acc7a05eb59fbb16905adbb37b9d58bf1f0a13da61fed337bbdc89c712",
+          "size_bytes": 1209
+        }
+      },
+      "id": "K/KZFW",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZFW/DFW_TMA/sector_configs.json",
           "sha256": "d88e2108600a809c8a04a94767e52d44d68cf92dbea2a8a66c7be3b593d94891",
@@ -777,6 +1773,48 @@
         }
       },
       "id": "K/KZFW/DFW_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZFW/DFW_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f52b0041e2dec7fba4a7f8e09bfe53b40b33ef6deedbdf2c0b5af8267d29b742",
+          "size_bytes": 529
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZFW/DFW_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2845a2bd26e472967258f909319fd1863f77f7b1b16ece58eb9471ced30373c0",
+          "size_bytes": 7621
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZFW/DFW_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "63e9ae1b9734987d7302c9fac1c5004c2ca42857e206a0bf839d6582c8ad5131",
+          "size_bytes": 740
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZFW/DFW_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3d5faf20dbd258ab384f0c012f4d0b815ad4838481fd846362e7d289522c4130",
+          "size_bytes": 880
+        }
+      },
+      "id": "K/KZFW/DFW_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZLA/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "abe20e684161b2a053b4cc46d74816f81863ae72963e066fd1ec38624b878b54",
+          "size_bytes": 906
+        }
+      },
+      "id": "K/KZLA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -806,6 +1844,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZLA/LAX_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c755de6aebfa968ddd04446edecdefd0a4c2ad268e96a553f3fffa306d7b0a41",
+          "size_bytes": 5739
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZLA/LAX_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "56dc9889e12e01ca4ca3148bc526435353d7f2e39203d8c90bc63222f44e6ba7",
+          "size_bytes": 6750
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZLA/LAX_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3c09e300045a19eee9b7da696c3094465fce1a5778a953dd80df52855a2d8a67",
+          "size_bytes": 715
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZLA/LAX_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "311056d3879b3f3a7955eaa725c5e7e27db29a840b53600e02540b1a34895daa",
+          "size_bytes": 898
+        }
+      },
+      "id": "K/KZLA/LAX_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZNY/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "389735b149f29989ed7bd66b8998759a07579607434427e3f8bef7860ea4f261",
+          "size_bytes": 903
+        }
+      },
+      "id": "K/KZNY",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZNY/JFK_TMA/sector_configs.json",
           "sha256": "4ff18e6c46320f4f9aff827327042fc64e984e92e9cbce85d4c79aca0f333aaa",
@@ -832,6 +1912,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZNY/JFK_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c7cef59047f9cb84c3c36519ad2dd01b47fee123b5546968cb703d172a61c3e8",
+          "size_bytes": 1727
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZNY/JFK_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "545507ab0890196a999cc1dcbab436d0655f5a1f9906e88b64cf5267d9afb964",
+          "size_bytes": 876
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZNY/JFK_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "17d901b38f2e6fdb96a442d2ca86a7eeea453fa3cd9cca04d7663f74add4f632",
+          "size_bytes": 790
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZNY/JFK_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2df9b4e3835951551cce86024e4ff8b180b42ac396327a4c036b82eb552044da",
+          "size_bytes": 896
+        }
+      },
+      "id": "K/KZNY/JFK_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZNY/LAGUARDIA_TMA/sector_configs.json",
           "sha256": "f5859add8059a2c9d74a9eac46003e1c9e89f80df0acca29bca42e129b9725ca",
@@ -849,6 +1959,42 @@
         }
       },
       "id": "K/KZNY/LAGUARDIA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZNY/LAGUARDIA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3046096e039e7455b84a7d00746be8b4a2c30636c5b40588765db6c966f5ab33",
+          "size_bytes": 2237
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZNY/LAGUARDIA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "413f523e3e50954481207e4d929a0b932561dd938e221713bb63954c4caf8a43",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZNY/LAGUARDIA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "db7ae23909af630e7497ff8907515e5600183e876db512084f841d08df4afb45",
+          "size_bytes": 187
+        }
+      },
+      "id": "K/KZNY/LAGUARDIA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZOA/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "49fbf68745dc3f3bafa081c271845b1d88c1148486bb46663acc8aac04cc7217",
+          "size_bytes": 693
+        }
+      },
+      "id": "K/KZOA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -878,6 +2024,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZOA/SFO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "519e8206e561dcb4eb26d6bb18a8e7c888df1076a7f63ad817e9f360827cf6ca",
+          "size_bytes": 1958
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZOA/SFO_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1849d4ac41ed26e98284eb629a2716a59359353aa23066e17e74139b36ddcefa",
+          "size_bytes": 880
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZOA/SFO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "06edb0761fa2fda0e2d59872a47533b93b62bc77f5f3c831e6c8ab42412f3df8",
+          "size_bytes": 500
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZOA/SFO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "739e1e59079245ddddd85db3fbf843af181b35984c145fa4a1b686d5085dc4a0",
+          "size_bytes": 662
+        }
+      },
+      "id": "K/KZOA/SFO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZSE/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2926f54bce3d128f008813715a8c288a2c8761a46d15a089e79abf55c3b7addc",
+          "size_bytes": 731
+        }
+      },
+      "id": "K/KZSE",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZSE/SEATTLE_TMA/sector_configs.json",
           "sha256": "a882c1add95a6d3e631767ebaebc41e56207f7d7951c07a2bdb699c90925005c",
@@ -904,6 +2092,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZSE/SEATTLE_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "58b33f8a5089e36f012ec19869fe4ac26775d5344a64ecabce8b32ec82b42183",
+          "size_bytes": 1760
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZSE/SEATTLE_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9a45d7f49d29756816c827a06474670869cc251715f8d16c7a70ce343cee77c6",
+          "size_bytes": 2384
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZSE/SEATTLE_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7c7ea1c7d31b1b6871985d3a6465f187f9a41102283a7cd243e04547f0c00760",
+          "size_bytes": 825
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZSE/SEATTLE_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d4316988d978491371ac97453ec8881c21a0d8928bede48cd94be2d5e0544be5",
+          "size_bytes": 916
+        }
+      },
+      "id": "K/KZSE/SEATTLE_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/K/KZTL/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "10a44bcb622be9992d4b2e62155647ea68ba1d0d74e14036cfe420d8874bb7ef",
+          "size_bytes": 1244
+        }
+      },
+      "id": "K/KZTL",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "K/KZTL/ATLANTA_TMA/sector_configs.json",
           "sha256": "cfc45d09a82464b4f992265ac383574e2351c31e48f7d25b9e520277f6cfa124",
@@ -927,6 +2157,66 @@
         }
       },
       "id": "K/KZTL/ATLANTA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/K/KZTL/ATLANTA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "32dbdc25f6af02fdd5090fa771ce0416dde0f6e7f1fb40d82938b0d66a3d0291",
+          "size_bytes": 906
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/K/KZTL/ATLANTA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8d9596a78d4233611ca126e34d42bf3d3a79a60c8b9af9bfc4c5ac6dc7d3ea96",
+          "size_bytes": 4072
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/K/KZTL/ATLANTA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "03903abf2ef389cc255cc6e777d1bf31f375a5898a68c08e02dd2a1b810df71f",
+          "size_bytes": 852
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/K/KZTL/ATLANTA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8cd082eb46a531b0094582f2a9ee0af6fcc954a921674e49ebe8fbe89a5fbf4b",
+          "size_bytes": 306
+        }
+      },
+      "id": "K/KZTL/ATLANTA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_coordination": {
+          "repo_path": "airac_variants/L/LE/LECB/acc_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2c67e608024d64bf2d9d39c56b4df2934fb95718aa6529014a5e16c46a0535b1",
+          "size_bytes": 1799
+        },
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4f7bcdf86fe37d2fa34ef10376d1c96014a83b9164a486580a8c8d0f55f530be",
+          "size_bytes": 1505
+        },
+        "acc_layout": {
+          "repo_path": "airac_variants/L/LE/LECB/acc_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "880184515532ce58406cfb6f60d80df177018639fb95d6594208088383b357e8",
+          "size_bytes": 409
+        },
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a53d28d584cfabd240b8f1e30bf691774ccc1519dbda39c7016d0cf9b49e01c2",
+          "size_bytes": 49478
+        }
+      },
+      "id": "L/LE/LECB",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -976,23 +2266,143 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "daebe582039516b43db008ae396d569f962a3621a9ea9074ed38f17ef495fbd2",
+          "size_bytes": 91206
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "683ae5164312f5e91a83364e2ed7f79fa1d89da28b7a3692de27827b306813c0",
+          "size_bytes": 5826
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0440c1bb97387eb5a6d8f730aafe593a46d9daadadf18981b00f79ce4b6a8cf0",
+          "size_bytes": 2310
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7f774bf652a94bf5985e6681376cc83ecef45cdcbedadaa24b570cf5264f96bb",
+          "size_bytes": 3293
+        }
+      },
+      "id": "L/LE/LECB/LECB_W/BARCELONA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_configs.json",
-          "sha256": "a872ce293e977789900dd6e2e625945656ac4130dc3ef8411ae01c79c3743d8c",
-          "size_bytes": 348
+          "sha256": "f9dc810018aaa171f23d0f44329554ca388e39ed2137c33785feb26726063b30",
+          "size_bytes": 1738
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_definitions.json",
-          "sha256": "758d11f7020a0f322e9513c8a098333ef4a7a1c818e007956741147fd88b6e43",
-          "size_bytes": 11214
+          "sha256": "db914c0d2ae4b9856b336362e6d645a2cc1988a5a2a1413d142a061b655a3d7f",
+          "size_bytes": 44074
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_influence.json",
-          "sha256": "d0ca5e05390470f7248948de502fd8a4778d7a24eb1357bc93156f50a89572c9",
-          "size_bytes": 180
+          "sha256": "635ac22f2db32a4e70c153177727ae8b8201313d7bd8bca4c9ea69bf44912586",
+          "size_bytes": 1154
         }
       },
       "id": "L/LE/LECB/LECB_W/VALENCIA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECL/VALENCIA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "562663957ec1b57b0aa95e83898ec7b31e199ba4cf5d502ba7b77b7b59a84b49",
+          "size_bytes": 25366
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECB/LECL/VALENCIA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "04ff2908c926c0cdfdf12a8a24b502f2649f034a23b809721cb41378bc3dca00",
+          "size_bytes": 346
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECL/VALENCIA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "545a774c9c34d135d00dab9800c1958d595dae23dc0132b7d705afe8a545856f",
+          "size_bytes": 811
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECB/LECL/VALENCIA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "38af2e62dc7667d7b052d25c386cc900321ec3edc369d1e46cd526ae02b96635",
+          "size_bytes": 1172
+        }
+      },
+      "id": "L/LE/LECB/LECL/VALENCIA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECP/PALMA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0df42d021aec20befc771eeaf83817412844b91072866bc28a7b92349d82f028",
+          "size_bytes": 23721
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECB/LECP/PALMA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "15495091d2148384ff26c4b496748e654f2625e9fe1cd72166a4a9aa761c1602",
+          "size_bytes": 2368
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECP/PALMA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2dae3726a78c872b482b9264af811ce7f2f7cea96e8d5955ce0fcb96ef5bfd1a",
+          "size_bytes": 1471
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECB/LECP/PALMA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1cfa1b66bc091f40e63efec03bd17bafd88f2781cba6d45b5c63aaddcea11362",
+          "size_bytes": 1551
+        }
+      },
+      "id": "L/LE/LECB/LECP/PALMA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_coordination": {
+          "repo_path": "airac_variants/L/LE/LECM/acc_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4e0ad45d705337f9261c209ac7024fe128606dbbef89814d03fc4bb12747dbcc",
+          "size_bytes": 6259
+        },
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "da9e3db653df7341a1ef4c08be9838ed6a173e06ba15127276e86f77b26133c6",
+          "size_bytes": 2235
+        },
+        "acc_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/acc_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "edd7ba8029f834deae28934f2529ce57232836fdc711eadc1dc462c00e48ce50",
+          "size_bytes": 1030
+        },
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "884f3c1f4ee41e07f2cc559fd5c89adff9958e1febbad4a5e4e77d91933a1ccd",
+          "size_bytes": 96665
+        }
+      },
+      "id": "L/LE/LECM",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1016,6 +2426,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/BILBAO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a04811e84f48ef3522a7db45239a9ba673a2f451cb99f958c9f69ae863f783bf",
+          "size_bytes": 944
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/BILBAO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "77e1c99b9d902c38893c4dd8e962449a705966bd2fe00a1f1ad7d40cfadb9826",
+          "size_bytes": 271
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/BILBAO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1726be259ec4480ad83f7aaabb0682bc16d73542e1e58515de617797a6460100",
+          "size_bytes": 268
+        }
+      },
+      "id": "L/LE/LECM/LECM_R1/BILBAO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LE/LECM/LECM_R1/GALICIA_TMA/sector_configs.json",
           "sha256": "6c5a3c7775cc44ac885bfb51cca06cf201e4358fffef5b80d440d1aa4835add3",
@@ -1033,6 +2467,30 @@
         }
       },
       "id": "L/LE/LECM/LECM_R1/GALICIA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/GALICIA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "aa62a01aca5fcbb4850e05a512c479a3659768168d0d023c333e5ea43005dc1b",
+          "size_bytes": 29071
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/GALICIA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ecb88c399d5a8b45fa2425ecde1ec6bdbad549b5d0c9c0f4b27b3ebfaa441ec8",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R1/GALICIA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8e732bdb3eb4748582edf61d1f06781ad554049b339933e36435ff37d0d50c22",
+          "size_bytes": 203
+        }
+      },
+      "id": "L/LE/LECM/LECM_R1/GALICIA_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1062,6 +2520,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R2/MADRID_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "603e17017b027104376b5697beb6f6a7a0e1eb679aa891be51e857b4b569a2f0",
+          "size_bytes": 27577
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R2/MADRID_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "af4f1bc7809267dbab837182f634f40e280f37a47c01a2213796ae066f1ad12a",
+          "size_bytes": 5654
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R2/MADRID_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b537f5f89a5151152ca1eab25216bf83b071abfe4a1a87e0ee217d8d8f7780a7",
+          "size_bytes": 1568
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/LECM_R2/MADRID_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3742fdfd3df5372b9060ca3a00a36f229b998d6d5e3d859808e1c597a7af6570",
+          "size_bytes": 1243
+        }
+      },
+      "id": "L/LE/LECM/LECM_R2/MADRID_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LE/LECM/LECS/MALAGA_TMA/sector_configs.json",
           "sha256": "f90f4d3b657a2089c6134832179d32f97eee39b93773fef1edeed3dfa7bb906e",
@@ -1082,6 +2570,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/MALAGA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3e71aa78c812745b17be0459fcda7f1e8d6ffe808aad217138dae038f01d962c",
+          "size_bytes": 5376
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/MALAGA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1cea3c3ff107e6e53794d382afcc55a3f9eaf844bfe34ef9ce4cde6b3a4f8652",
+          "size_bytes": 186
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/MALAGA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5dc187847a089254b3c3f718c4a21ab9dc0436d5173631d99fe726c266bae8da",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/MALAGA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d7cf0a8847d4c1a6380638d4d56e32eb6b9bba8c9c50c5131f5c9e7c54ebab7a",
+          "size_bytes": 266
+        }
+      },
+      "id": "L/LE/LECM/LECS/MALAGA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LE/LECM/LECS/SEVILLA_TMA/sector_configs.json",
           "sha256": "c57b13f285dca006ac2becc3ecdd548278f293497c573aa15d8073e44ab3b2e4",
@@ -1099,6 +2617,48 @@
         }
       },
       "id": "L/LE/LECM/LECS/SEVILLA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/SEVILLA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c116e369e678e73068fd06fcd9d584453f2df2890d46d79be63142d86dae6267",
+          "size_bytes": 12281
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/SEVILLA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "26e52ea73fdfd6f2315a84a4d41baf80cbc1f3682337a1c7a97a48f1ade76fbe",
+          "size_bytes": 215
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/SEVILLA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9702794894bd6bdc9514bde56d2b2e7f95b9a6814ff68085fc96fd47fec7d53d",
+          "size_bytes": 381
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECM/LECS/SEVILLA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d21db68b2a1cd2e967928005e55b098aea68e47c4c65a2c1a2a1dff8b66247ed",
+          "size_bytes": 382
+        }
+      },
+      "id": "L/LE/LECM/LECS/SEVILLA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LF/LFFF/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ff6c0360113bb6955b7f422133cb54e07f311d0647a3e9f19a2fbfafb01df053",
+          "size_bytes": 996
+        }
+      },
+      "id": "L/LF/LFFF",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1128,6 +2688,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LF/LFFF/PARIS_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9ad00966c044bee25c421fe4e580d9b6f61a788969fdf24d9e3533dfbd058596",
+          "size_bytes": 59554
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LF/LFFF/PARIS_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "783c4b7172be99eda838f215ac83b8e9c9b1ee65fe9df64aa87453d915108f2a",
+          "size_bytes": 4536
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LF/LFFF/PARIS_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "296158b8b254e7a385ea77eb5638684908f1cf1c46a58563902300a4bfe5bfb9",
+          "size_bytes": 1005
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LF/LFFF/PARIS_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a30a720f32e9ab872f8ed33a06b79db223b5533ba418254d78c2355d8a71028f",
+          "size_bytes": 561
+        }
+      },
+      "id": "L/LF/LFFF/PARIS_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LI/LIRR/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d74ca4f420db414987c40971c2c30387ff09918be0d1fe45097785c697457ca7",
+          "size_bytes": 879
+        }
+      },
+      "id": "L/LI/LIRR",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LI/LIRR/ROME_TMA/sector_configs.json",
           "sha256": "2af0b5a7d805f54331e112dee260a87126ee7a86c150e1899cf0aba434c5a854",
@@ -1154,6 +2756,48 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LI/LIRR/ROME_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1600ce1857c36bd97c4145b4f3f38a9285452660b70671c16175c0fce5433e09",
+          "size_bytes": 12428
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LI/LIRR/ROME_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b926621785da5a30adf73d75478067ad8297869d13be17fcce20bca5835d1b3a",
+          "size_bytes": 1216
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LI/LIRR/ROME_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5aa0a05abdc963d2ea60f395574d9f00b12b0ac0d0b63e4752d6554ed9d7ca12",
+          "size_bytes": 710
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LI/LIRR/ROME_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fe16c3418a744efb50f9f021b65aca0c78e874c36ba3ae36738495686e52db2e",
+          "size_bytes": 274
+        }
+      },
+      "id": "L/LI/LIRR/ROME_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3835a5578f0c6a758f3544f82c76dee0a9f36ee515eecd66a664b9270b8e4739",
+          "size_bytes": 765
+        }
+      },
+      "id": "L/LO/LOVV",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/GRAZ_TMA/sector_configs.json",
           "sha256": "4c967c1aa5e53fd95f427d2931eaae5986dfc8733e57e590fb8ddd1ea68fbc8c",
@@ -1171,6 +2815,30 @@
         }
       },
       "id": "L/LO/LOVV/GRAZ_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/GRAZ_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1159aa78fad421bcc4126b812f5db30346a51ee3bb6864bb699c92c3a005972f",
+          "size_bytes": 13584
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/GRAZ_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8716f5572f943b399bae34ff3d573d8cc1f0f7361af9b73fbc9af540340f942b",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/GRAZ_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f35a58d4e4d94aab491e8208688e11dbde159f3af144f0f65ff81d969e032984",
+          "size_bytes": 516
+        }
+      },
+      "id": "L/LO/LOVV/GRAZ_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1194,6 +2862,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/INNSBRUCK_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "cbe2b6d59149b18be6cb0772b10ecea1e0a9b69eec6fc3908bfd1d8380a1899f",
+          "size_bytes": 8174
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/INNSBRUCK_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7513fbb342aa9b69bcd7cf6db1751daf80ca5db5107aa176f4ed876578154514",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/INNSBRUCK_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "26410af6cae4a7cdbd525e44d7a7271ec4ee53fcc076bd329e4fb3616d8f7337",
+          "size_bytes": 530
+        }
+      },
+      "id": "L/LO/LOVV/INNSBRUCK_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/KLAGENFURT_TMA/sector_configs.json",
           "sha256": "a7535a5c21792a9db54c181806fa3cdb65c14e51041d183837bf380346629337",
@@ -1211,6 +2903,30 @@
         }
       },
       "id": "L/LO/LOVV/KLAGENFURT_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/KLAGENFURT_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c87d4e3df63cc4a34f16bac761117a91bccc0483778443337bc0d354be0beb2f",
+          "size_bytes": 8598
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/KLAGENFURT_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b17a6eec5a46745a54ce7e2dd620037688658a2b79fcca48ae60baa29cf62699",
+          "size_bytes": 271
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/KLAGENFURT_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6a20115a9ffc5f05075deef1fdc393d2f8b17076f6bdce37cf4ca882c5aafbd6",
+          "size_bytes": 540
+        }
+      },
+      "id": "L/LO/LOVV/KLAGENFURT_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1234,6 +2950,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/LINZ_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8dd3e4ae335ea44f98c32efe4a76dc4c5803e485d8a54de5660c1e1caaa41af4",
+          "size_bytes": 4246
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/LINZ_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c651aa2e958d2c2aba16d545b68da475f7675ae3f1ca699b268aa0ede94c5615",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/LINZ_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "da8b58c47217371b05e29f03cb1dda3a29e29e28e2c2f3add281b543ef398a5d",
+          "size_bytes": 510
+        }
+      },
+      "id": "L/LO/LOVV/LINZ_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/SALZBURG_TMA/sector_configs.json",
           "sha256": "52a6c2e73680e1c4108c220c452d08a257a5cfd6818b73569c0f547f59f904bd",
@@ -1254,6 +2994,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/SALZBURG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "481d288218c6012ebc61e8fb41914bcaecea375214fe28c0a8e8d8fc4864d53d",
+          "size_bytes": 2168
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/SALZBURG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "24009f5491ba568c21cd78cfd818a6464de3392a3b0235d038e48460d449f0d1",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/SALZBURG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "206e581e0d0b0dc3d93c72b6966af05c9bbb198233cbf901edd3891c3e1f3529",
+          "size_bytes": 526
+        }
+      },
+      "id": "L/LO/LOVV/SALZBURG_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/TULLN_TMA/sector_configs.json",
           "sha256": "4920412c116dfadf3fa731837ad49847ea7ad3518a8f5b64b13351f4449e9e42",
@@ -1271,6 +3035,30 @@
         }
       },
       "id": "L/LO/LOVV/TULLN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/TULLN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d366dc78d044577746637b7372d7c07ddcb3cf0c72d4174802f8cc05d23c23b2",
+          "size_bytes": 13430
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/TULLN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5716cd0e2659a2119670f6c2c6d6e2e87ab7771ad4a21d33f8d126c0b30c81e3",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/TULLN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "253d390716ce20d19b7327f3dfc8bd9b5dda7514325d14bb8544bf36fee51441",
+          "size_bytes": 1412
+        }
+      },
+      "id": "L/LO/LOVV/TULLN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1300,6 +3088,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a845be48c5ad41ab760dab4c294e1ac23f621dc19ed4b78adfdc079323afe08c",
+          "size_bytes": 24052
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bf9360d185ce841f27b4ebd23d5145e276d8d25e28ae7645d51755b193ce9d0a",
+          "size_bytes": 3232
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d9a9bd5784c866c74b18d3c365c9c1bc5a819ed137bab2b439494117eaef88d5",
+          "size_bytes": 619
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ebdbcbc1afdfef2794ca29592dc20517bb7083b957ca40480d3a95b8af24220e",
+          "size_bytes": 686
+        }
+      },
+      "id": "L/LO/LOVV/VIENNA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LO/LOVV/ZELTWEG_TMA/sector_configs.json",
           "sha256": "d6556f988cd1b6d3c1b1a8a0b3909c466d3a49934f4a87dfdcff56f9f5647a20",
@@ -1317,6 +3135,30 @@
         }
       },
       "id": "L/LO/LOVV/ZELTWEG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/ZELTWEG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b3279d8b001d0b964223d4297dcb69edd063a553ff358a8dd38c88abfbb4b1f5",
+          "size_bytes": 8250
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LO/LOVV/ZELTWEG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2f7f3ae534ae5b8e696930ffcfe3ac8f7fd8d54ff457af2e1aa0af23bc1c3954",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LO/LOVV/ZELTWEG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d6e0e3729e5c694215598e63e3727dd7073320390c36a36553088f8f9aa70916",
+          "size_bytes": 1442
+        }
+      },
+      "id": "L/LO/LOVV/ZELTWEG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1340,6 +3182,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/FARO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5f8554b54fac0942fd6c4c580b1e9263a128aa9ea5fe1bdbf5fbff6ed5e437d1",
+          "size_bytes": 43540
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/FARO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2913eeb68d3576a3b53175b5cbbe5014abd0457d6cb132b9ceb224220ee0dc06",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPC/FARO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ffd561ec396e6033c7bfe292bc006f019321bee72f4ba4c1529022072fe5ca64",
+          "size_bytes": 281
+        }
+      },
+      "id": "L/LP/LPPC/FARO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LP/LPPC/LISBOA_TMA/sector_configs.json",
           "sha256": "296adc8476d65c380be1de510447e47e3c382e1cf75a5a8d608e0657aec6e0b2",
@@ -1357,6 +3223,30 @@
         }
       },
       "id": "L/LP/LPPC/LISBOA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/LISBOA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9fad782adfece1afec8ac313733e3c50c5cfcdac2a93d9ea6a510ff6b33ae884",
+          "size_bytes": 93447
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/LISBOA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "efe9012fe1134f8f8c9543f470f24d85013441f44a33e1d5f91f642c0ef5c51d",
+          "size_bytes": 924
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPC/LISBOA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3f70d02d9a2642fbfc0943a7476445e25e6e1b501de97c195c648918645d7ac9",
+          "size_bytes": 1516
+        }
+      },
+      "id": "L/LP/LPPC/LISBOA_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1380,6 +3270,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/MADEIRA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "673a3f2dc3892d2adb7409ddd15e28ecfb293e0dd59fe8cbf9b90c75d7b9bc66",
+          "size_bytes": 45135
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/MADEIRA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "570c7af20fc7e37fe7a06416ef8dd94c8981cbf82063c8cd3103d50f4ba419bd",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPC/MADEIRA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "39089fb39c19e9892de5d8ea92f7bd4748310fedb3aa18cfc6c2b29828433581",
+          "size_bytes": 378
+        }
+      },
+      "id": "L/LP/LPPC/MADEIRA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LP/LPPC/PORTO_TMA/sector_configs.json",
           "sha256": "6e36c0347f240da41b33b805c7f316c30d3348fef2605d0d66d1f5c99a9fadc1",
@@ -1397,6 +3311,30 @@
         }
       },
       "id": "L/LP/LPPC/PORTO_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/PORTO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5859194dbc7b209d2b40855badeea3b69e5dd7e39f5098531556bdba5a7bf3c5",
+          "size_bytes": 37774
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPC/PORTO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ff4a0ab4c5243a5204f596d7efb6610be485b0cb1dceb78e62bd06a72e158cdd",
+          "size_bytes": 473
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPC/PORTO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c024d380942b5c2d7db49c9c2220398c0ef1af45866ef1007afcb0eec1c6beab",
+          "size_bytes": 547
+        }
+      },
+      "id": "L/LP/LPPC/PORTO_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1420,6 +3358,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/FLORES_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fa6089821080735cc32681be5a22eaac8ac8a60eebd2bf1a02f89fa6f617e60a",
+          "size_bytes": 1384
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/FLORES_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "576f7b22495b83d8eb6522bde3b9817c7a82111371131432402430ef638b6aa7",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPO/FLORES_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "80129b84dd6d7a2777c255b9acd62c5bcee9b74334a701335642e198a5b65b4c",
+          "size_bytes": 375
+        }
+      },
+      "id": "L/LP/LPPO/FLORES_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LP/LPPO/HORTA_TMA/sector_configs.json",
           "sha256": "dfed4e80afe62bb5ee0b6fd1c29c7f5ecb5a7b58cdfb317516d04505ce5891d5",
@@ -1437,6 +3399,30 @@
         }
       },
       "id": "L/LP/LPPO/HORTA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/HORTA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f8f0b5bd40841f028259bd13df91e1ca794d4524d48430fb59150af90c10f7eb",
+          "size_bytes": 29751
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/HORTA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "019a4064ee646e797d411548012ae9009a57a52c422a0e1d398834fc424085c9",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPO/HORTA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "67516635c9c1a755ce2f677577788d35aa217dfc30f4f67114acbbd5a111103c",
+          "size_bytes": 764
+        }
+      },
+      "id": "L/LP/LPPO/HORTA_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1460,6 +3446,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/LAJES_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5d0d3e274172307314b361f76357dd2187cad1ac34e2133a63fad3d7483d137e",
+          "size_bytes": 2632
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/LAJES_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0648e174bc01704e017fecd2b15f40df668e4cbd53d077d33a2f747e6ccaabb2",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPO/LAJES_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7c36950f973b36ac913770f891076e9d098570ad548e860c8694e7bb2d0cd677",
+          "size_bytes": 374
+        }
+      },
+      "id": "L/LP/LPPO/LAJES_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LP/LPPO/PONTA_DELGADA_TMA/sector_configs.json",
           "sha256": "0e1788468183bd4feaf7e279e19a2465c2c9d365b559a2eb73ff31c5df601a1d",
@@ -1477,6 +3487,42 @@
         }
       },
       "id": "L/LP/LPPO/PONTA_DELGADA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/PONTA_DELGADA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c28a4c1e196d149afa9173ad2860c148d8105aaaa8aaebede29a080bc575bbe9",
+          "size_bytes": 40717
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LP/LPPO/PONTA_DELGADA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1cb007fc9ada174452ff9644ebb72a02f61f51ff2537c9ce6ff75ea4b5ba06d6",
+          "size_bytes": 272
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LP/LPPO/PONTA_DELGADA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c100f032c23e0c83caf19734cb4ba7882bfa210f0cea225f81b0bcfaea838aef",
+          "size_bytes": 382
+        }
+      },
+      "id": "L/LP/LPPO/PONTA_DELGADA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LS/LSAS/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "718b94ba6b9bd515de1dd12ab7c4aec01b568974cc4ffffcd9f5246a703e4cc0",
+          "size_bytes": 481
+        }
+      },
+      "id": "L/LS/LSAS",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1506,6 +3552,36 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LS/LSAS/ZURICH_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9311efdcc2ff4300d881b29673261de1d379f5bfea06a64395fbca494cac49ba",
+          "size_bytes": 14234
+        },
+        "tma_coordination": {
+          "repo_path": "airac_variants/L/LS/LSAS/ZURICH_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "09b18116a5a3741adf1d2546be11349c05fbfbdcce85ccfdb7910d9bbaba2d8a",
+          "size_bytes": 2540
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LS/LSAS/ZURICH_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4f55eba4c0117b1615aee9e28650b78c87d6ab4c923cf1692c36d82e1500066",
+          "size_bytes": 525
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LS/LSAS/ZURICH_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "00cb284637bf2c0be975d1fd188b1bfe8eef08a9c3a214da4655212895f9196a",
+          "size_bytes": 277
+        }
+      },
+      "id": "L/LS/LSAS/ZURICH_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "L/LT/LTBB/ISTANBUL_TMA/sector_configs.json",
           "sha256": "a13cd0bea59842c2b93dfad3aabc5ceb87a45e4f047a15c08668559a7e3ec51b",
@@ -1523,6 +3599,30 @@
         }
       },
       "id": "L/LT/LTBB/ISTANBUL_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LT/LTBB/ISTANBUL_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9efdfa50f6d2a1fbabe9e41a486a124ec50d643fb91f15f0f962e7563f5ee7a9",
+          "size_bytes": 7942
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LT/LTBB/ISTANBUL_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5d79dbef9597eea0256917f2708665991292068f800d8f249e0c89b6c541febf",
+          "size_bytes": 314
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LT/LTBB/ISTANBUL_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2dad6feffa11173f9aef9e1186dcb2c815cfd76ed0616417809ec4c77490c5e8",
+          "size_bytes": 946
+        }
+      },
+      "id": "L/LT/LTBB/ISTANBUL_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1546,6 +3646,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/O/OE/OEJD/JEDDAH_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2846137db76ed6320ee2720522693890f7529da05305e3adbf38517f52dd718e",
+          "size_bytes": 45539
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/O/OE/OEJD/JEDDAH_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4cefdb914fda8ee3d613e040971c1743166292d8dd421b7466428c7f22c9e48f",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/O/OE/OEJD/JEDDAH_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9682aede492ebd21928a50c399ef29b8084ca88161244a9498f0ec5a15dde8fb",
+          "size_bytes": 197
+        }
+      },
+      "id": "O/OE/OEJD/JEDDAH_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "O/OE/OEJD/RIYADH_TMA/sector_configs.json",
           "sha256": "009201d7a4f4a94822a19a2ca50f149ac98f04ac4056dce15a4732bd796afdbf",
@@ -1563,6 +3687,30 @@
         }
       },
       "id": "O/OE/OEJD/RIYADH_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/O/OE/OEJD/RIYADH_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8538c3fca8421bd8bf482a7623c89c62f1a0e90b599c59941c0ec40dfbceb85e",
+          "size_bytes": 282322
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/O/OE/OEJD/RIYADH_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "14d867330cd478e9fcd2aa1fc05c5f608776bf8fc29341b0756e1f883c02794c",
+          "size_bytes": 469
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/O/OE/OEJD/RIYADH_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "859a88ae6779faaaaa2a70059d5044f431dd1b22813cd651a369aa1df5fbe0f4",
+          "size_bytes": 376
+        }
+      },
+      "id": "O/OE/OEJD/RIYADH_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1586,6 +3734,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "52ac648678c55309792c8c220570cb09322366387305736745f2f2a4cf26d21b",
+          "size_bytes": 85551
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "dcf0e9b07ec1a7fc8b390627b5e1779f12a485565cf8e82dfe9e39b6e46019c7",
+          "size_bytes": 474
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fa2e9cfce5230bd850e9a381198bad66eb8af483ab9c52e6692413a0fbe72365",
+          "size_bytes": 400
+        }
+      },
+      "id": "O/OM/OMAE/ABU_DHABI_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/sector_configs.json",
           "sha256": "162cc3cd23f3509d602f0dc8368ae4e56e0b2ea72b9190ed7ad01a0c3b9d6c9f",
@@ -1603,6 +3775,30 @@
         }
       },
       "id": "O/OM/OMAE/DUBAI_TERMINAL"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "43ae9de00bb21d4700953eda5f5d0d9fccfa231b2a43a9a363d347fa68e6910c",
+          "size_bytes": 1480
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4d0d5c12d2905349fc08ddb262ce6ed9c824b5a875d361936fedd7090031d8cd",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "619a0c3ca5c672be7aef9f0dd1e8e15c7cd09f7f8fbadd8fbc2c4602d54d2ea8",
+          "size_bytes": 344
+        }
+      },
+      "id": "O/OM/OMAE/DUBAI_TERMINAL",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1626,6 +3822,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/O/OT/OTDF/DOHA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2d878f6e1a24581ae03a85f8ed41f90e6283a2f11b36114c695f1e4182b786b7",
+          "size_bytes": 18819
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/O/OT/OTDF/DOHA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4fec51f3bf9faf7879a231e77e30f8263b360867319dab1bb5e6ad4448eb8e0",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/O/OT/OTDF/DOHA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8406a13ace60353c5f3e2c1f70768632a4635b4e262cabd87ad5e1cfcf490279",
+          "size_bytes": 195
+        }
+      },
+      "id": "O/OT/OTDF/DOHA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/HUALIEN_TMA/sector_configs.json",
           "sha256": "9f0cfd4a29238c12143086d2d9986ffc71c63c0b14af5635c42982c753d593a9",
@@ -1643,6 +3863,30 @@
         }
       },
       "id": "R/RC/RCAA/HUALIEN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/HUALIEN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0f4d1d8f0cc36c17883f774222ec0b7b60ca90e1a4fe2c648722b086d60a22a2",
+          "size_bytes": 630
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/HUALIEN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a0017d32f42e7ff9f67422d39cd08cad68d203832efcd8c2fc81eb90b2d156d0",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/HUALIEN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "eec53f9969a5f03270ccf5ffbd27538d4a776878666878f6b6a62c7b129da9bb",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RC/RCAA/HUALIEN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1666,6 +3910,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "493a12ef2a3e711687cebea19f940d6cf16c06ad33e05ad4c71b9c7ba842fab2",
+          "size_bytes": 740
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "12852f286f6eaa7d7ceb90ef570a969b5e3d938bcb7bfa5376140782a3e1da86",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0bc19dceeafb014c76182186845deac13e2f115c9c13c6c0235673fdf9304390",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/KAOHSIUNG_TMA/CHIAYI_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/sector_configs.json",
           "sha256": "f396fb6fe8b051dd532e5238eaac02489b2dd717ad265bcef8eaada32585e49c",
@@ -1683,6 +3951,30 @@
         }
       },
       "id": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8c0faa6880ffd6cf4f1542841d61a4540eea84ea1032200af2cb6359e4a1bc10",
+          "size_bytes": 740
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3aa6e5b4c732dc6aa5b2b06aead84fc1d7810c7af462da50da54e4370fe78b87",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f5e97cb70a7a35f2367f4913d185526450f55aa0341134dbbc51d32017d1e5b4",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1706,6 +3998,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "419917ee474d55ae42e9a08c7f57cf44b12545cc68fd6517fa19dfee6d4646b8",
+          "size_bytes": 740
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e3adac9d3ca17511a91cba5bb3a20a576817a18caf5009ae335d8001991e3195",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c4e45747f7bdd5c4648642d0ab8ddba49127e444191251a4649d8795a9d45a58",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/KAOHSIUNG_TMA/MAGONG_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/sector_configs.json",
           "sha256": "10396ae03bfab51b55dc17c5c15f7484a13b11beb91995d350be2c071b79b793",
@@ -1723,6 +4039,30 @@
         }
       },
       "id": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3a1f4b18a41acf72b1ce122a62b3e905ce8d0f08d65b76cee527237d07dc9b27",
+          "size_bytes": 740
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "82ac1fed8032bbb6232fd9acd093107fbe2fa86c4d4a06df2b3546f317068f57",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "be91d9750877ba28d9254d230e3a6fb9d70edb2927b10194cf3a9a3b92166a35",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1746,6 +4086,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1275e05fbbbb2755c99fdcfa2aaf938b4eb35a71a6a4e609faa13ab3b934f548",
+          "size_bytes": 740
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "126209b443c9df76a36322bc3156db79ff4585668ace0242d8b70a81f4dc729f",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c450827ab28c0f2228677d0e55a3ec6f75885bc702e3a63fb32ca29ca39edfc4",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/KAOHSIUNG_TMA/TAINAN_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/KINMEN_TMA/sector_configs.json",
           "sha256": "1e490abfab1ec630f8be7b68cadc2eee3aead02e74c5456d1fd5d81a1b7cd563",
@@ -1763,6 +4127,30 @@
         }
       },
       "id": "R/RC/RCAA/KINMEN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KINMEN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6cf9ea5eac4766a5109c5172906f38704d370435286778e3005af13b08383c0a",
+          "size_bytes": 566
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/KINMEN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2a6955bde42dc2370423ea1db548a5a35fb4a804c7864da0f55af736cdcf0fd2",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/KINMEN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bea216abdcc89b217bc57c256e587f36b3df619ff0d920bf978eae8c934f28af",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/KINMEN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1786,6 +4174,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/BEIGAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9d02857b59ddd41faf0147a2c0812716e022297d0bf6e92ad1bdcef3bf160c32",
+          "size_bytes": 618
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/BEIGAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "79cb15d6473f00ca2ad51d90293c511489201f1e60d2a6a26a04cd2bac4e52b1",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/BEIGAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0fb59fdf5483408a12db645227f4931b89e7f5e34330121fcc50004b7597d498",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/MATSU_TMA/BEIGAN_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/MATSU_TMA/NANGAN_APP/sector_configs.json",
           "sha256": "492e2a7587445df9e1cc5de224279cb766b33b79134b60eff71b6ed83811de50",
@@ -1803,6 +4215,30 @@
         }
       },
       "id": "R/RC/RCAA/MATSU_TMA/NANGAN_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/NANGAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b46b0ea91523ad412e8b4a391deabdeed357d1faed6678d256f0f5abfe2aa92e",
+          "size_bytes": 618
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/NANGAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "33e2ef1ea59d678f982f9dc29cca683fa0c042e61c5fa7c63a76d1f422cd708a",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/MATSU_TMA/NANGAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e968d5be1585da45e628365cc777cd86631d868154f5aa2114f5948aad757513",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RC/RCAA/MATSU_TMA/NANGAN_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1826,6 +4262,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bf5e316a3fc52ef9c5737ecd6ab5c141372ee01330eede44e2d529599e3b3678",
+          "size_bytes": 860
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f618b8bc57941eec765219799e612ade3ee1970b0954c6ab50633898045de5c6",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "41489173b1ef3a997752ca3fc5401bf013167e5ddac7cedad8a7def6a725c94e",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/sector_configs.json",
           "sha256": "72d2d9f1e58b83b85707c15fc0b74d053ea377eefeead7b35e1d14df671f2940",
@@ -1843,6 +4303,30 @@
         }
       },
       "id": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "dbaa404ccca2d87fc732c14e50edd6298955b5045a700501145f07b88f672a44",
+          "size_bytes": 860
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "94f8262cd4f4bb90fe6f3f607e82636c7be2850f7e26956c2aef4304f64492e0",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e68758f989f94ea933697caf4df47da4580238637442fa4c61b078dc3cc06266",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RC/RCAA/TAIPEI_TMA/TAICHUNG_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1866,6 +4350,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "14aafc7db57a45bf9882db2eac0e0d9da9157fb559c49e82425732a0c06c3341",
+          "size_bytes": 860
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "88e135f4a7d2a1235fa52e83a056a59f19619cf086eba0123dd63b16ba55b9d0",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a9a2dac36f1d63de04647f418734953b5f6922a0c1a32dae5dd5c89c1a7cfaba",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RC/RCAA/TAITUNG_TMA/sector_configs.json",
           "sha256": "c1622b8ee1a2014c20353a2da42354541d34d1192437861550c7bcf5a469cf54",
@@ -1883,6 +4391,30 @@
         }
       },
       "id": "R/RC/RCAA/TAITUNG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAITUNG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d9cf557d1a4e82fdba1a09dc527d7272c566f4c24c2952a63570a3e5b1caf201",
+          "size_bytes": 665
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAITUNG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "655acfac8e93ebb944e3732b07ba9186b1a0074a3a69694a8f4de24c2cba4be8",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAITUNG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c1ccf8f42c2b4e0534675c9fd4ab58467b7b14fa75eab0c0055a5dc04512b3c0",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RC/RCAA/TAITUNG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1906,6 +4438,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/DAEGU_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "05f6b7b2c65d65d3c2d2889f10fe701283e50f4fb38295cfc70b0ffc5c6faf67",
+          "size_bytes": 892
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/DAEGU_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6a26172180c3185d26d1b9879a13b13d616895225834b240635e221645575b9a",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/DAEGU_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8a0f656ac6f5a99b391fc7e291172e6886d04a1112fbc04dc63615758304f3c5",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RK/RKRR/DAEGU_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/GANGNEUNG_TMA/sector_configs.json",
           "sha256": "4fde641ec60be192a58028c6961f9dfd0e23c7a86b9881a5f20251264881d850",
@@ -1923,6 +4479,30 @@
         }
       },
       "id": "R/RK/RKRR/GANGNEUNG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GANGNEUNG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "02fd9455aab659f964dfec1005cbb32549cfc485673c69e417f2615238ce7086",
+          "size_bytes": 616
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GANGNEUNG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f73798ee5c6a0089226ac7c9a5a825ea20ec9f1bd8040bd68afc95ef573efe12",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/GANGNEUNG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4cdaf41e254731aed3448a54ed8c2de1f5c2e7ce580c9dddd22f77728044fc7c",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RK/RKRR/GANGNEUNG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1946,6 +4526,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GIMHAE_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "afe9671948a178f4a6d0540338b5b191ed792a1bb7d978fd5d26c060dba30ec3",
+          "size_bytes": 644
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GIMHAE_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "03f741f195a216f15bae83134889eea45f7420a9b29205fe5b6220ae25b06cfa",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/GIMHAE_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "85ab158f96d218363d1007dc6c9ec3747efdbefcf0287d702ca9e72a5e88fdcc",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RK/RKRR/GIMHAE_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/GUNSAN_TMA/sector_configs.json",
           "sha256": "6c71fd270b1482f538d8dcd4205a2c9f1e8b5b15003073d0af172b840012bb46",
@@ -1963,6 +4567,30 @@
         }
       },
       "id": "R/RK/RKRR/GUNSAN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GUNSAN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9792aeddc86ce8ca7090b269c21aeb8014b263228c8535459e47ee95619ff17b",
+          "size_bytes": 644
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GUNSAN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6850a14aef1aec5b4abf01c645928f68089655b3a66848470ade08a69a61e3d3",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/GUNSAN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e71361c84006590603d99dc6f2d4bf8f415dd28161d707befaf3dc87936e6d66",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RK/RKRR/GUNSAN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -1986,6 +4614,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3a449ea7d803f2d7df7f38f7043af526c617f3db0d503fde9e397666da63e36c",
+          "size_bytes": 566
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "57b9339f9bafc7af709269bc11d6136c190b24b2f09354a041dfdc662fa0e89d",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "dd217f0f5d581fc72982c542a91f48ea375445e92b863bf9a7b9b63a7c36bbc1",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP/sector_configs.json",
           "sha256": "363ce50bc36ec762cd526e8e94d4c372816901d9d7cc7a90b71bd4405c84f9c7",
@@ -2003,6 +4655,30 @@
         }
       },
       "id": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/MUAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "35d17eaa2deca25586ffd5bd86c9abec9b5acd5934d3678c4efc4cf08b598d1c",
+          "size_bytes": 566
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/MUAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "05a32e9d34af51c43f929c0b2406a4572d622395ac2cfec11808caa0b15c833d",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/GWANGJU_TMA/MUAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4f3a55198838ea16913fccae17925ab097d28996e3d5144f2b40ac133a2c51de",
+          "size_bytes": 191
+        }
+      },
+      "id": "R/RK/RKRR/GWANGJU_TMA/MUAN_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2026,6 +4702,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/GIMPO_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5d30b7e98335afffc073d6a4a9193d0e5d7faa849de490792ffe2872a9b5b2ab",
+          "size_bytes": 2273
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/GIMPO_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "04067e6905b29643c37760eb90010883bb5387ac6fcf8577cace6dbfdb98d70d",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/GIMPO_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ec53c98f6f4d8e59c16fe61ae467eddd9d8ec3055de6938c6ec0b5ff97fa0bed",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RK/RKRR/INCHEON_TMA/GIMPO_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/sector_configs.json",
           "sha256": "27e0dd8f1b98ef203cbd67bb6a7a673dc1a0a955c8572066ed815190a23d042d",
@@ -2043,6 +4743,30 @@
         }
       },
       "id": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/INCHEON_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "811a1a792e5d178e8567d90624fb62495cda2d73ea60bf0fa93e4465092e9b45",
+          "size_bytes": 2273
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/INCHEON_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "87ed9b64383a4da33b21d1d7189396263e454e05ae42905f9a54eada1d9a0f77",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/INCHEON_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b048aa429ef390a5dcfdb1593782abb9500717d9896ae1079bc360cecd2ccb32",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2066,6 +4790,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "09a34b8a8cb2382e209691e0b5bd7250414424bb6e8017370e3f36f88e2b7572",
+          "size_bytes": 2273
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d7078a961747c79d2d06f690631e92c16a89fe984213d5af3459824754e37a9c",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "353dd1a49f04aab753b9d48848eef1b902dfe931ceb33367666dac60aa8f9235",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/sector_configs.json",
           "sha256": "35468a80cd4a2bb3fd6db11d7c9556426a5637f0ac9cf96102e8f44e18cf3cbf",
@@ -2083,6 +4831,30 @@
         }
       },
       "id": "R/RK/RKRR/JEJU_TMA/JEJU_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEJU_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0b5ebf9e8e814d7b4b4def250bf3a3158943cb5e13de42c19e9b9803138ea24b",
+          "size_bytes": 805
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEJU_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3b2cd0f1604e5e9945899e3f6bffdd503cbc2b488fb9674016151e4627de95e1",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEJU_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "69a294b37df55016a0824196eb6ea1d31f8b8d62d38b6f961862a49e6783389b",
+          "size_bytes": 191
+        }
+      },
+      "id": "R/RK/RKRR/JEJU_TMA/JEJU_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2106,6 +4878,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "64fef545514d226c1b6c15350c6674f03601c71f353ea6ed97efae656a30489f",
+          "size_bytes": 805
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bdd9dd87aca177b244f19e03bd2fa83e6f93646e0c3a41764659e9281633e801",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "188de6e5b2a4e02669251f54b74269f0131203e7771f338e37df38b9eaa6964c",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/JUNGWON_TMA/sector_configs.json",
           "sha256": "0fc7b2c078f68aa7677f8fd607ee3a87ea874837b68713590441630d7d9eaf0d",
@@ -2123,6 +4919,30 @@
         }
       },
       "id": "R/RK/RKRR/JUNGWON_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JUNGWON_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "461f3faf80eeb4a093a55e560ef76c75beac9fe7d79ff550b65ffdf9898580ca",
+          "size_bytes": 1692
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/JUNGWON_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "52cb37c672bc8ba348b1ef53df9f0e18c05de5c82f44ffd74a2d9459c703f06b",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/JUNGWON_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "be0d2dc47a41c083f9af99870f4da5d91f590e9550255da7ef4b52bbfdaf7c71",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RK/RKRR/JUNGWON_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2146,6 +4966,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "1ab1fe43564339c815e467ab1293a7c5eadac0dead1e0e686ac53770ed414c32",
+          "size_bytes": 2000
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a75eed2b4dc4dd58c8f4144290b86c7aacab13341f73de51eb61d43cb9eae05a",
+          "size_bytes": 275
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "df624f4ac110bfd5292821f876ba4789fb39b13694d99f05a52ec8fbedbb915e",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RK/RKRR/OSAN_TMA/HUMPHREYS_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/OSAN_TMA/OSAN_APP/sector_configs.json",
           "sha256": "c95c591afe1bc7a48a6ed67738f339c329c68ba3a30e4e8e4b252eaefbbfcb3d",
@@ -2163,6 +5007,30 @@
         }
       },
       "id": "R/RK/RKRR/OSAN_TMA/OSAN_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/OSAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c6736ac35b297845d6b8cfbdd811663cb618b0dbfe6e0c4cdf2469655fd0117f",
+          "size_bytes": 2000
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/OSAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ad18faee280f69e20cb6c648b7b8c581559a670ac74033b8240776b5a3efa63c",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/OSAN_TMA/OSAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ca0ae017392b566326a06ac9bc333043a6b7f5ff801de4631fea4947cd137e49",
+          "size_bytes": 191
+        }
+      },
+      "id": "R/RK/RKRR/OSAN_TMA/OSAN_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2186,6 +5054,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/POHANG_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "19492f8936c085792a98d6392096782521c5963044d775a8da94a00890f40c6f",
+          "size_bytes": 813
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/POHANG_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d725b076c7f9801f70aaf4c808b47dda6ebbeec9dd050d93701a3b1643a8ca01",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/POHANG_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fe5f9e9134428b36d32e13224ffb15666953bc904930a45def10056ba49eb19e",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RK/RKRR/POHANG_TMA/POHANG_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/sector_configs.json",
           "sha256": "986bc00c007f903c44b5a8384100e6927334c20ebb736562218bdaa598aa85f7",
@@ -2203,6 +5095,30 @@
         }
       },
       "id": "R/RK/RKRR/POHANG_TMA/ULSAN_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/ULSAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "293a098a026917caa2a4445179077d700337c9a46fdf2bcb1d8d7c545976fdbc",
+          "size_bytes": 813
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/ULSAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3236319614f99d89ae004d80a01f09028751f476114074bf35f88d356f976a5c",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/POHANG_TMA/ULSAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5cfeb0e88dfe83479ca4f19677c268c922c81529017bf98c8a67e99837b3c755",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RK/RKRR/POHANG_TMA/ULSAN_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2226,6 +5142,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/SACHEON_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "969eefe9cac14b84554a128275c251fe87d6fe5a912c42530f97e5979d1b0f49",
+          "size_bytes": 566
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/SACHEON_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8aea93c78ea2d3cd62a3299e181c29abb077cb604259d1be34a5832dae2f058c",
+          "size_bytes": 268
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/SACHEON_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "cc5b93c554d2d2b82a3a102511eae79016850b5785fd4a2bee0b3adc0803ec54",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP/sector_configs.json",
           "sha256": "50982be87a9c5f626194f77e917b23b0fa2bc5b91778d2f437c11675d525ed7d",
@@ -2243,6 +5183,30 @@
         }
       },
       "id": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/YEOSU_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3ec01117ae0f5fee83bbe04496cd4646d260ff926d2899ba66a9d4c1439f8c3c",
+          "size_bytes": 566
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/YEOSU_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "39ce3523202ecc5d135e8e79cdb9c1410cb03fb5a59779a084737cfbc6cac2fe",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/SACHEON_TMA/YEOSU_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9ed8f84604beefdcb6addc0d7224432b5e153c874e3ddedf0b641ff3f6acbda3",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RK/RKRR/SACHEON_TMA/YEOSU_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2266,6 +5230,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/WONJU_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a6cff2612a03e0b9f6ad28bc8a4df37b1935b7583e07bf5e9f5ef63dbdbedab4",
+          "size_bytes": 644
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RK/RKRR/WONJU_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5fe99784a8bf5f60a6c1386c4462ee7eb17a7e59af003b7f95cc6df0bb18e1bc",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RK/RKRR/WONJU_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a6656bd3583aa3c4961515fe4f497de00b01fb6198a30cdc77b40769a1380bfc",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RK/RKRR/WONJU_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/sector_configs.json",
           "sha256": "3bba741fcd130f808f861fd3c4e4ec5b716b73cab32c223a3704e438b9d84e49",
@@ -2283,6 +5271,30 @@
         }
       },
       "id": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "73aebdb266895d40782505ae8cf6eef8dbf725b8d223f5f543e88051428aa6c3",
+          "size_bytes": 1244
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "84b124dec3407cbeb40196b03e54869c4e3ed86d2a8dc362a46112217854c092",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9d616e4867f3f3ad19aa5b28d4cbfaae479a44262687cf4d802cad10c95724e6",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RP/RPHI/BACOLOD_ILOILO_TMA/BACOLOD_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2306,6 +5318,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "836c6cbcba8056b6926dafba8d89eaf0b0ec54931fa7602e7e8c6d63c3955014",
+          "size_bytes": 1244
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ac733f2e4f04b64a5b3e8b61ffbfe0ff4c82a27f2ccf059acd746bbf4f1ff546",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f0911fe0546db66f7341d96b72ff5fd2b800389ea8e9cdb795a525d51411b52f",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RP/RPHI/BACOLOD_ILOILO_TMA/ILOILO_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/BICOL_TMA/BICOL_APP/sector_configs.json",
           "sha256": "5ad5a0974b2f931811992d1b0772c69d32d4508310f780c87044aa12862b41cf",
@@ -2323,6 +5359,30 @@
         }
       },
       "id": "R/RP/RPHI/BICOL_TMA/BICOL_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/BICOL_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2b5d726ae41aa441d13f2cd3688fb065e232ba7b0ea99d0f2b490a7e7cee3a0d",
+          "size_bytes": 488
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/BICOL_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3c732b27ae5af743bdad606b5113ed9f212c7875aae0b5e52a72dc6270359390",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/BICOL_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "30d1408eb255f417f056130b146e421f1f868d60b79a4ca78a3e9b364330c4a6",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/BICOL_TMA/BICOL_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2346,6 +5406,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/NAGA_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6d9de546b3bba778e9bec9f43582eee5509640660b600508fe8f028abe029204",
+          "size_bytes": 488
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/NAGA_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "54d4354d0b79ab8e98d3ffe49f804bc55ad1249769601bd68c7255cbab891222",
+          "size_bytes": 265
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/BICOL_TMA/NAGA_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "98885ab9582a751e1a8c58a331510dfd0a3f071b2a56df9c3d8b0df2c484cfbd",
+          "size_bytes": 191
+        }
+      },
+      "id": "R/RP/RPHI/BICOL_TMA/NAGA_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/BUTUAN_TMA/sector_configs.json",
           "sha256": "535c5526bcc3103385c49405a281f7288dcf61590bcbf361ad060e76c71279d8",
@@ -2363,6 +5447,30 @@
         }
       },
       "id": "R/RP/RPHI/BUTUAN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BUTUAN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3920fe369509939d357ed07a6507baa5b713c635f2410dcbe925db743f0ee0c4",
+          "size_bytes": 1127
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/BUTUAN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "775fdd7277a65ff040dbe87fb6c5cd08e706f8a45f86761915c42454bffc9afe",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/BUTUAN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f211977bc3b8f553fab4d13934f4837e4ce29491bd1be24e52a92b36b8fd90d5",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RP/RPHI/BUTUAN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2386,6 +5494,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/CLARK_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7fdd1b78585ca022c851d639f839025a9c2cf686d2b22e629289eafd1c700d16",
+          "size_bytes": 863
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/CLARK_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "06a8b9b756db4307a9ee09276359d3ee27d275b32277da488fea9740f6512c45",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/CLARK_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7bfddd914bfc440d91728b89fbea1a13a07cbdb2bfe06712d7a47bd1ab92b1f2",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/CLARK_TMA/CLARK_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/CLARK_TMA/SUBIC_APP/sector_configs.json",
           "sha256": "c47b9100caeb4c00252054f478f82453015fbd5c9b25315092e50f95e7e5dd0b",
@@ -2403,6 +5535,30 @@
         }
       },
       "id": "R/RP/RPHI/CLARK_TMA/SUBIC_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/SUBIC_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9d35d69b2be631ac2af6f5b059de7dba54b46bcf0e78952be6b1c1978f521eee",
+          "size_bytes": 863
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/SUBIC_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "76ee96dfd02f2c70d67b2cde890fc6ac3a8e0486bc988d191a7a274a3d0c0d53",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/CLARK_TMA/SUBIC_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0a96653a7d46345a83fd162737b331d897e9f3a8419e3fb086b61dd8a6758dfd",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/CLARK_TMA/SUBIC_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2426,6 +5582,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/DAVAO_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "347d0ec80a7a34cfe60139909962ee5819dcafa551558e40fccc48d4f65be1a1",
+          "size_bytes": 553
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/DAVAO_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "0ec4282b70ec103d486906a2d5734331a495b99e0343b392471cc672e5d1e3a8",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/DAVAO_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4b385e49e2969a077c532d32d4f67ef83cd9419c437e3942ff195e43ffcf8114",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/DAVAO_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/sector_configs.json",
           "sha256": "7bce2f43ca54c28a42be7476f0493340005d51aaed1655df40f5a6e985b36fac",
@@ -2443,6 +5623,30 @@
         }
       },
       "id": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "30d66b9c6c6b4a6d625e5b25b2eb0948b4f67c85bfbac863dc23399c0c5da966",
+          "size_bytes": 470
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a9415451a4b998f7ed4fb7d5af943596a896f8b9bf5e4a27b55423949b9b4004",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/CATICLAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9703a576b1d772e22f4061321e91f3c817ffbb2913a832f576032b94064c49e3",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RP/RPHI/KALIBO_TMA/CATICLAN_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2466,6 +5670,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/KALIBO_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "224effc43ae2a22f78fca94c7a5c1e62ae19bb337ac500b703abd2b01b61c602",
+          "size_bytes": 470
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/KALIBO_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7581018dd965a3514cf57aaeb2ec284b86558671ec75c3d24741063d67a9e021",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/KALIBO_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "4914ed7f3e488f4ddfa58bddd348efcb93f706dbae7ebebfbe858c20e316de74",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RP/RPHI/KALIBO_TMA/KALIBO_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP/sector_configs.json",
           "sha256": "f3db383ce1baa51ea2af88d325052a7a388ae36bb4ec2b0fccb35c87910009c4",
@@ -2483,6 +5711,30 @@
         }
       },
       "id": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/ROXAS_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fc22f231078b5cd5130329530e970693beb255b22f002042a24e9f7093d7ee11",
+          "size_bytes": 470
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/ROXAS_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "39a3664a91389cbeb468abe7fe5a2b9a8073a570bd594c3affe64f4ac2221c65",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/KALIBO_TMA/ROXAS_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "92a1f337b0dacedd93ae68880f4e1076ead89b0390be1cc8c365e2d4a865e4f2",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/KALIBO_TMA/ROXAS_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2506,6 +5758,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAGUINDINGAN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d8a86a47a367fe55a77f69c1e07f6e28fd0e919ee5ba0e11c3f0d176d44a04d7",
+          "size_bytes": 482
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAGUINDINGAN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "92490d5f1f9b41c73e13e88c55dc5a2958f6c65e2995b6e22587b38737d5ebe2",
+          "size_bytes": 277
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAGUINDINGAN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "850a6c03ff48641ca89b213ada2cc043318084a8343c8d86301b5805af50970b",
+          "size_bytes": 199
+        }
+      },
+      "id": "R/RP/RPHI/LAGUINDINGAN_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/LAOAG_TMA/sector_configs.json",
           "sha256": "3036317d200623b4fbca315c2a9eb3d74f7e0560ad7049d236ba7c7a15ea01d8",
@@ -2523,6 +5799,30 @@
         }
       },
       "id": "R/RP/RPHI/LAOAG_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAOAG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a3a006da1d7274b99ed5015b3dfeb3f3c990d7598dab5cb5477cf5849bd2e73f",
+          "size_bytes": 4839
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAOAG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9342cc25c4e7dcf3ef2d767f0c88bcb7bea0a44a83e986bb31b854f022597a18",
+          "size_bytes": 266
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/LAOAG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8e7d7a86326755eac4ed5d0ddb75a091a26df9b7573c3076d57c42d79e5f1c2c",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/LAOAG_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2546,6 +5846,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/BOHOL_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7f82a37b73d830ce207e2868f29f13e64408cb388d01f5a7f71316e0f9bc2be4",
+          "size_bytes": 3983
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/BOHOL_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "721740a9a2318d2a6669ee8991954dddf667d737c2c5d3bb8eac59ef274c9e08",
+          "size_bytes": 274
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/BOHOL_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "cbe0e6fa8f815129d0cb2f8723e1c93f0d6b63ada4cb3cec3450cebb1a56748b",
+          "size_bytes": 192
+        }
+      },
+      "id": "R/RP/RPHI/MACTAN_TMA/BOHOL_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/sector_configs.json",
           "sha256": "ea23199f8661fc2d0358ffef623be52db821e9264bc2cf0208cc7d743273aca1",
@@ -2563,6 +5887,30 @@
         }
       },
       "id": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "9f1d70eab3c2368c42ad4f7bb909e4fcbda5ebed4160f1003f5d1bafff743f33",
+          "size_bytes": 3983
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2fd10f50d22ec08c3fe5e789f03390543e100ad640ce11db4d76f9879f764f4b",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e1cc642550e5357275804ade2ffe9c5f685929748ba62c61087af4603a153ebb",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RP/RPHI/MACTAN_TMA/DUMAGUETE_APP",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2586,6 +5934,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/MACTAN_APP/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7067386dce508d4ae4eb3e9094bffa2b939c93128a03aa571f2dfa6f825e6b78",
+          "size_bytes": 3983
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/MACTAN_APP/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8400297fc4571bc084deaf36b5dd5efd6ed06845b667a441871ce1143be61235",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/MACTAN_TMA/MACTAN_APP/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "a3917850ebf2864beec22907db905144fe5c48f89bdc161ba07773640946b594",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RP/RPHI/MACTAN_TMA/MACTAN_APP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/MANILA_TMA/sector_configs.json",
           "sha256": "8bd1cdc48a0fd6f60ca652347aebfcf4dd6412d894bfb35edee2ed3be770a767",
@@ -2603,6 +5975,30 @@
         }
       },
       "id": "R/RP/RPHI/MANILA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MANILA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ba36bba3005df36628a7065f7345d48419f1c611fb5a659c5a4f929d9e95c45a",
+          "size_bytes": 3301
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/MANILA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7575a69ff222ba5fa78f10efb1e2d937f0d2c56941e6c9dc965960745380804f",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/MANILA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4ee81c5cabc6941a33f2a24ba90bb0a5425e1191fd3a971d63b7a72959661c0",
+          "size_bytes": 193
+        }
+      },
+      "id": "R/RP/RPHI/MANILA_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2626,6 +6022,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/PUERTO_PRINCESA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bf82b2642235fc278a0d045f7fff8de9d3ed2437ff1eabf10fc3755da3c858f2",
+          "size_bytes": 5093
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/PUERTO_PRINCESA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6dc6c1b298f5425537e04fd09f5cf5628d45033fa589f279c5c5a1861e8778da",
+          "size_bytes": 276
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/PUERTO_PRINCESA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "474e294b202f75efc978148597430936a9e54a89f28da1b7cc8b44cb4f23f7eb",
+          "size_bytes": 202
+        }
+      },
+      "id": "R/RP/RPHI/PUERTO_PRINCESA_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/TACLOBAN_TMA/sector_configs.json",
           "sha256": "7b338901550599178fc2d0c48009b94a159fda8fa1a979ebf91c7e42c735387b",
@@ -2643,6 +6063,30 @@
         }
       },
       "id": "R/RP/RPHI/TACLOBAN_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/TACLOBAN_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6e77986903d81549de5b28fc2744bc169a9e2044ce1ee1ad01f730e14d826508",
+          "size_bytes": 1023
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/TACLOBAN_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "68a272e101f9e73ed4c3084cb3c51724966a103fc8a270ee3b5a34d839a12598",
+          "size_bytes": 269
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/TACLOBAN_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "5715997c09bf872bb37a1c2ef42d82048683af2590798d6ac0ff56c4d105c7b5",
+          "size_bytes": 195
+        }
+      },
+      "id": "R/RP/RPHI/TACLOBAN_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2666,6 +6110,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/TAMBLER_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "cb3402d460d131961d32a7126d2623b8fd886068c1b90a35a8a02d8aed13b4f1",
+          "size_bytes": 499
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/TAMBLER_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f490d0e85e377862ce41c9951759a74f5f02a8051266cd7b7dfcf06a29d453c7",
+          "size_bytes": 280
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/TAMBLER_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b3cb987e8295102d0308e3ffacf8350e317535617917ed653ab516818a648375",
+          "size_bytes": 194
+        }
+      },
+      "id": "R/RP/RPHI/TAMBLER_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "R/RP/RPHI/ZAMBOANGA_TMA/sector_configs.json",
           "sha256": "679c01ee08085f5f4f6738059b261b3e1a87c7c8d2353d49a60fa5f9becba26e",
@@ -2683,6 +6151,30 @@
         }
       },
       "id": "R/RP/RPHI/ZAMBOANGA_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/ZAMBOANGA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "32dd91d98a3144c17f5f1e2f61c6fd8e36c19aa27890f90e8a7f4e5bed27b734",
+          "size_bytes": 3011
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/R/RP/RPHI/ZAMBOANGA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "dc4ed983d1c07a7fefde807602ea5bb749bbff237603acf7475714d143293366",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/R/RP/RPHI/ZAMBOANGA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d56e10e00b3d3f5487a5a9f8ca461c561cf7d60c524307c7da03d96636b3f8f5",
+          "size_bytes": 196
+        }
+      },
+      "id": "R/RP/RPHI/ZAMBOANGA_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2706,6 +6198,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/U/UU/UUWV/MOSCOW_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "ca83fe2e2c72fb6cb21e79d00798f9a1a8f69d998108c5f4309bc92c866272f1",
+          "size_bytes": 1583
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/U/UU/UUWV/MOSCOW_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b076ca772adcc552f19817f09be12696cf50b5d04fc4cf6b7bb4ce2797fbcd85",
+          "size_bytes": 370
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/U/UU/UUWV/MOSCOW_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "3d799c6aa87f1cb3d4ab95f54b4047a0388df5e7fdd1e6848d852fd1ca6446ce",
+          "size_bytes": 227
+        }
+      },
+      "id": "U/UU/UUWV/MOSCOW_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "V/VA/VABF/MUMBAI_TMA/sector_configs.json",
           "sha256": "ea7188b95911e4fd61c9b31638c24e0587f2ca84dd7b302372a826b57205b37d",
@@ -2723,6 +6239,30 @@
         }
       },
       "id": "V/VA/VABF/MUMBAI_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/V/VA/VABF/MUMBAI_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e5b7a1ebeaf100cbd743541c0eed9ab1faf55d2ff8da2a15c722210d1f577d94",
+          "size_bytes": 137060
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/V/VA/VABF/MUMBAI_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "2eed231e1af2d56e614be2ffcc3d2d20e4a204f950272122543eee29a9e5eaaa",
+          "size_bytes": 267
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/V/VA/VABF/MUMBAI_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4206847a23c3ab936708bd034dc4fd62781daf029e39af27fe8c4f0ac0af986",
+          "size_bytes": 292
+        }
+      },
+      "id": "V/VA/VABF/MUMBAI_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2746,6 +6286,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f6a4bd5c55f2bfa0a838cc354c50ccf84143a6939505de62d37d6c42e114b305",
+          "size_bytes": 3268
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "16348ba65920c99a6a49a9bb2ccbdab1e3fcc7c089f1298a9b349495bc566afe",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "bd84b6846481b596af715033e0ec93a7a1e695228646e06f17c04b7a5bc1d7fd",
+          "size_bytes": 444
+        }
+      },
+      "id": "V/VH/VHHK/HONGKONG_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "V/VT/VTBB/Bangkok_TMA/sector_configs.json",
           "sha256": "cd9f8bce770602e76c140a712b767c5b5d3538ccb4064cbbbfbaaa394878c756",
@@ -2763,6 +6327,30 @@
         }
       },
       "id": "V/VT/VTBB/Bangkok_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/V/VT/VTBB/Bangkok_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "89f8d81360e15f8a2a721c065870dc5344a560ca26cef52ae4f33006f89c080d",
+          "size_bytes": 312046
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/V/VT/VTBB/Bangkok_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b386da51c242b01585ba4f2fea3c820889f4823e1010858734ee58bf9bd61439",
+          "size_bytes": 999
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/V/VT/VTBB/Bangkok_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "6352b85ded3fdbbf757c90d6769c98676eb158b772a6de679e0965fa29d15830",
+          "size_bytes": 1054
+        }
+      },
+      "id": "V/VT/VTBB/Bangkok_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2786,6 +6374,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/W/WS/WSJC/Singapore_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "23b4e14e07b0e4f6ecaf0c56ac95fcf2063755ae23d216304df14db3145e848d",
+          "size_bytes": 12505
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/W/WS/WSJC/Singapore_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "178bc005cb4a5b7bd608645997a4e7569212d904cb54e5f6bd743a115c79f861",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/W/WS/WSJC/Singapore_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c6683d68aebbca243429170161755905195d244d2e0528cb07b4625ecefbbe44",
+          "size_bytes": 200
+        }
+      },
+      "id": "W/WS/WSJC/Singapore_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/sector_configs.json",
           "sha256": "f3d9a37fe65ea4a6c2d8f50c7ce99a96d1961c4cda9c58ffde2f323f2e2bf8bd",
@@ -2803,6 +6415,30 @@
         }
       },
       "id": "Y/YM/YMMM/MELBOURNE_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/Y/YM/YMMM/MELBOURNE_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "aa1a08e3f7c727b10ffa3c11503c0747c28bc6639c402f03d12359a341105429",
+          "size_bytes": 111491
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/Y/YM/YMMM/MELBOURNE_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "c83359aff9e3a246c9127d8657535f6adbe62adac068f49f5123371509f04a62",
+          "size_bytes": 270
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/Y/YM/YMMM/MELBOURNE_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f4b900a586ad34de846b4681ed0f8f644d35ce407573015d1145bd9680ad2bee",
+          "size_bytes": 200
+        }
+      },
+      "id": "Y/YM/YMMM/MELBOURNE_TMA",
+      "requires": ["community.airspace_files"]
     },
     {
       "files": {
@@ -2826,6 +6462,30 @@
     },
     {
       "files": {
+        "definitions": {
+          "repo_path": "airac_variants/Y/YM/YMMM/SYDNEY_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "66de37d657ab29bf82b289e8945b5891237615a30c48df29989c049f7b7c760e",
+          "size_bytes": 475800
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/Y/YM/YMMM/SYDNEY_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "801a62fc379abe48be111b8e44026bfa5226ba57a8a65e1c53b946ab70b8e01c",
+          "size_bytes": 469
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/Y/YM/YMMM/SYDNEY_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e63f762fe72e08fe49566fcf9e06bb8ae2dd4f1965b13f3ed6f75b8ac3054962",
+          "size_bytes": 382
+        }
+      },
+      "id": "Y/YM/YMMM/SYDNEY_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
         "configs": {
           "repo_path": "Z/ZG/ZGZU/ZHUHAI_TMA/sector_configs.json",
           "sha256": "49dfe88d1edb145548f4f76ecbf7aed65db0987112e1c3d86ea98102e23e9924",
@@ -2843,13 +6503,37 @@
         }
       },
       "id": "Z/ZG/ZGZU/ZHUHAI_TMA"
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/Z/ZG/ZGZU/ZHUHAI_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "26ed58dee1c9fb5c9d4fbeef0c156ec3615d09e4754e8324cff15bef87e64806",
+          "size_bytes": 4982
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/Z/ZG/ZGZU/ZHUHAI_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "b9266dd942d7ad9c481fbfc1dd5b5fe95c6903c6ec94ecb0898d557ebc158f57",
+          "size_bytes": 311
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/Z/ZG/ZGZU/ZHUHAI_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "d27800dd372918f96677546e12de634c1de55a5e8ec78e137185f19373ae4d3f",
+          "size_bytes": 470
+        }
+      },
+      "id": "Z/ZG/ZGZU/ZHUHAI_TMA",
+      "requires": ["community.airspace_files"]
     }
   ],
-  "entry_count": 136,
-  "generated_at": "2026-11-22T07:58:12Z",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "entry_count": 292,
+  "generated_at": "2026-11-23T08:45:48Z",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "ed27b8625a6f13264442f489a7c45c4ecc9f3b5eb0ebc81ba7ab82ca69b2a805",
-  "size_bytes": 601020
+  "sha256": "767e9edd5063d5ca649a54814a5443fa92ceedcbce917973425db01b7a514c92",
+  "size_bytes": 1385877
 }

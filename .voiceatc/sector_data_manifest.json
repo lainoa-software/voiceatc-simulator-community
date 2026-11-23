@@ -595,18 +595,18 @@
       "files": {
         "configs": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_configs.json",
-          "sha256": "8f14986275bf7275a88ecc1ecd91a42a88c81704426ab74d5a76118912d76117",
-          "size_bytes": 581
+          "sha256": "a1905bc6c2ce4cf7f706505c15328b2fc4622a0371b2e3cf397d01efdb0a0e30",
+          "size_bytes": 680
         },
         "definitions": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_definitions.json",
-          "sha256": "a14698996357c59e18d68e917a17aa35ca5f2162a3c142e1338acc35bd2f3d49",
-          "size_bytes": 5147
+          "sha256": "bc7ce6bf4fe4a9bbb166170aacdd45c09b9d598671c09bdba57ff932ba3d8509",
+          "size_bytes": 8117
         },
         "influence": {
           "repo_path": "K/KZAU/MILWAUKEE_TMA/sector_influence.json",
-          "sha256": "8d7f35dd0598e5b07cbe1703bf2d8e7c3d4c80abf54774d37853cf77f4d4824d",
-          "size_bytes": 246
+          "sha256": "412048bb72d09bf132e81490f4c86cb47848ccabae221243e918036489437be5",
+          "size_bytes": 294
         }
       }
     },
@@ -842,18 +842,18 @@
       "files": {
         "configs": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_configs.json",
-          "sha256": "a872ce293e977789900dd6e2e625945656ac4130dc3ef8411ae01c79c3743d8c",
-          "size_bytes": 348
+          "sha256": "f9dc810018aaa171f23d0f44329554ca388e39ed2137c33785feb26726063b30",
+          "size_bytes": 1738
         },
         "definitions": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_definitions.json",
-          "sha256": "758d11f7020a0f322e9513c8a098333ef4a7a1c818e007956741147fd88b6e43",
-          "size_bytes": 11214
+          "sha256": "db914c0d2ae4b9856b336362e6d645a2cc1988a5a2a1413d142a061b655a3d7f",
+          "size_bytes": 44074
         },
         "influence": {
           "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/sector_influence.json",
-          "sha256": "d0ca5e05390470f7248948de502fd8a4778d7a24eb1357bc93156f50a89572c9",
-          "size_bytes": 180
+          "sha256": "635ac22f2db32a4e70c153177727ae8b8201313d7bd8bca4c9ea69bf44912586",
+          "size_bytes": 1154
         }
       }
     },
@@ -2587,12 +2587,12 @@
       }
     }
   },
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/sector-data-2611.zip",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/sector-data-2611.zip",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "bc8a21ad49ecadd50c0a195a3aa7e8f2c860ce8c1819ea87779dab027ec16e5e",
-  "size_bytes": 580434
+  "sha256": "6526d5fddb2db3b721b839c5d5b2cea0095644aff0c2827ff9477d7c3ad6d9ce",
+  "size_bytes": 581594
 }

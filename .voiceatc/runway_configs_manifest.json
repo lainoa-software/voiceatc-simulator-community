@@ -557,7 +557,7 @@
       "size_bytes": 490
     },
     "LEAL": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEAL/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/LEAL/runway_configs.json",
       "sha256": "2ad5b160f30bcdd7582bad7c3a071c74a68bdc95d254a9940f993a345becc508",
       "size_bytes": 254
     },
@@ -582,7 +582,7 @@
       "size_bytes": 491
     },
     "LECH": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LECH/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/LECH/runway_configs.json",
       "sha256": "ffa38006314f9dffb45818d784cf272aafdda4b3ba7f4feaa8de2c0aa0942dbe",
       "size_bytes": 254
     },
@@ -612,7 +612,7 @@
       "size_bytes": 226
     },
     "LEIB": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEIB/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/LEIB/runway_configs.json",
       "sha256": "d658d61f92449986221f9f643df828321c768b9a6bd4e954958d8c8f5d1ad0df",
       "size_bytes": 254
     },
@@ -637,17 +637,17 @@
       "size_bytes": 256
     },
     "LEMH": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEMH/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/LEMH/runway_configs.json",
       "sha256": "6ffdccda2ce63287b6b9e26aaab0376930753f5fdcea0318fd179839c829f66f",
       "size_bytes": 238
     },
     "LEMI": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEMI/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/LEMI/runway_configs.json",
       "sha256": "514110b2359d240856798949dac359f1471e826d3aac30e7352f5ffb37c2efd9",
       "size_bytes": 254
     },
     "LEPA": {
-      "repo_path": "L/LE/LECB/LECB_E/PALMA_TMA/LEPA/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECP/PALMA_TMA/LEPA/runway_configs.json",
       "sha256": "725bfc058370e7b1cc494df09e6b12859c5537d540a8495bd007787f777d64ce",
       "size_bytes": 364
     },
@@ -687,7 +687,7 @@
       "size_bytes": 226
     },
     "LEVC": {
-      "repo_path": "L/LE/LECB/LECB_W/VALENCIA_TMA/LEVC/runway_configs.json",
+      "repo_path": "L/LE/LECB/LECL/VALENCIA_TMA/LEVC/runway_configs.json",
       "sha256": "2af12b208ffedd2d01955ac401e50635a11e999f6684123e587fcb780b0b5566",
       "size_bytes": 254
     },
@@ -1288,12 +1288,12 @@
     }
   },
   "asset_name": "runway-configs-2611.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/runway-configs-2611.zip",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/runway-configs-2611.zip",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "f06b89080eba4662172a584306f27f1495c6da8858883e5fd2cd0a8df38941b5",
-  "size_bytes": 79690
+  "sha256": "feaac2e68bad31d3dfc94ffde6616446522632aea5a1a8758ad7fa224e8c23c0",
+  "size_bytes": 79662
 }

@@ -1,8 +1,8 @@
 {
   "asset_name": "color-profiles-2611-full.zip",
-  "commit_sha": "dc9ce5c2e2c92e40c1257aa3c4c864ca1374aae3",
+  "commit_sha": "65ac0de3be387ca941929d6b5316459626dc6da1",
   "dataset": "color_profiles",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-22/color-profiles-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/color-profiles-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -13,8 +13,8 @@
         },
         "style": {
           "repo_path": "C/CZ/style.json",
-          "sha256": "b5f86bb4c09cf51d7414ba311410feb97342df0c01784de6777ec5543fc36711",
-          "size_bytes": 873
+          "sha256": "7aafac3dc81697d6624a3c314e71a105eb690d7222423aa3661ca48a7f6894a0",
+          "size_bytes": 983
         }
       },
       "id": "C/CZ"
@@ -28,8 +28,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDGG/style.json",
-          "sha256": "5ff37d320733bb5e3b8562e936d25f27e4f9476ba45015b8396e8e324c1da544",
-          "size_bytes": 435
+          "sha256": "cd9ffb9426f2197b00da847fc800830f1f046bfceeaa616f62ebce48cc1e6030",
+          "size_bytes": 407
         }
       },
       "id": "E/ED/EDGG"
@@ -43,8 +43,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDMM/style.json",
-          "sha256": "34bb3a91791bcddcffe1b3cfe2895469391dbcb758eb5ca8bfda9c4a2fa5e95d",
-          "size_bytes": 434
+          "sha256": "106f6470029ac9e03d86df819cd319b8303c120b4a535de299faef6d3623f3f2",
+          "size_bytes": 406
         }
       },
       "id": "E/ED/EDMM"
@@ -58,8 +58,8 @@
         },
         "style": {
           "repo_path": "E/ED/EDWW/style.json",
-          "sha256": "5ff37d320733bb5e3b8562e936d25f27e4f9476ba45015b8396e8e324c1da544",
-          "size_bytes": 435
+          "sha256": "cd9ffb9426f2197b00da847fc800830f1f046bfceeaa616f62ebce48cc1e6030",
+          "size_bytes": 407
         }
       },
       "id": "E/ED/EDWW"
@@ -68,13 +68,13 @@
       "files": {
         "colors": {
           "repo_path": "E/EF/EFIN/colors.json",
-          "sha256": "aadacbd49816dbb1b052d810334dafd8b2794f4e918b66cb98aa38b21fd1c318",
-          "size_bytes": 773
+          "sha256": "5b97931edc03b44f78bdcc80c04ff3856ebb487129ebfb123568da276cdb1597",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "E/EF/EFIN/style.json",
-          "sha256": "c19778e08bd151792c6a833884d8b457c6289fe8ef59b3a0fda24e6354d40d25",
-          "size_bytes": 765
+          "sha256": "728d4174fe330739eb4b7136fc05735a63ed6c56636c98fee3c14cda1f1ad02a",
+          "size_bytes": 827
         }
       },
       "id": "E/EF/EFIN"
@@ -98,8 +98,8 @@
         },
         "style": {
           "repo_path": "E/EK/style.json",
-          "sha256": "32682eec7993e8d618657030bcb37d4e01ae0132f89db284605df3f150370f33",
-          "size_bytes": 781
+          "sha256": "b36967d4dd51a6138c3b4aa13d17c92645c216dd75efcd64864b751e3a41342a",
+          "size_bytes": 843
         }
       },
       "id": "E/EK"
@@ -108,13 +108,13 @@
       "files": {
         "colors": {
           "repo_path": "E/EN/ENOR/ENOS/colors.json",
-          "sha256": "880ce2e2ecfcc0dd903cd5f144ba79310dc6b8e002fe8228f041f6302d360479",
-          "size_bytes": 773
+          "sha256": "6c43c33adc5affb350c7bb7f93d10c624e563f1ed3d589f1029688896aad2d55",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "E/EN/ENOR/ENOS/style.json",
-          "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       },
       "id": "E/EN/ENOR/ENOS"
@@ -123,13 +123,13 @@
       "files": {
         "colors": {
           "repo_path": "E/ES/colors.json",
-          "sha256": "aeed89b391c9c60ca4629138da5c804249bc3e3ee87207b2046daccd46d0660b",
-          "size_bytes": 933
+          "sha256": "deb03239a16830258a86f3752445fa9cf3975b4fdda0b0b99e1d1fd6d8c2f109",
+          "size_bytes": 932
         },
         "style": {
           "repo_path": "E/ES/style.json",
-          "sha256": "057da9d01ae77dc07a83d4f9664dac3a33e2537ef8c9414d5bba5aaa18dbbe2b",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       },
       "id": "E/ES"
@@ -143,8 +143,8 @@
         },
         "style": {
           "repo_path": "G/GC/style.json",
-          "sha256": "cb9cbd350082b410e1c91c36c854664b8a24c0e22249bdf3ede375b62bc1f9e5",
-          "size_bytes": 855
+          "sha256": "de198381bd12d66a6b3a02bfc743241d8bb692a7953f1ffb4d9af1c5f019b702",
+          "size_bytes": 917
         }
       },
       "id": "G/GC"
@@ -158,8 +158,8 @@
         },
         "style": {
           "repo_path": "K/KA/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KA"
@@ -173,8 +173,8 @@
         },
         "style": {
           "repo_path": "K/KB/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KB"
@@ -188,8 +188,8 @@
         },
         "style": {
           "repo_path": "K/KC/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KC"
@@ -203,8 +203,8 @@
         },
         "style": {
           "repo_path": "K/KD/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KD"
@@ -218,8 +218,8 @@
         },
         "style": {
           "repo_path": "K/KE/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KE"
@@ -233,8 +233,8 @@
         },
         "style": {
           "repo_path": "K/KF/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KF"
@@ -248,8 +248,8 @@
         },
         "style": {
           "repo_path": "K/KG/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KG"
@@ -263,8 +263,8 @@
         },
         "style": {
           "repo_path": "K/KH/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KH"
@@ -278,8 +278,8 @@
         },
         "style": {
           "repo_path": "K/KI/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KI"
@@ -293,8 +293,8 @@
         },
         "style": {
           "repo_path": "K/KJ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KJ"
@@ -308,8 +308,8 @@
         },
         "style": {
           "repo_path": "K/KK/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KK"
@@ -323,8 +323,8 @@
         },
         "style": {
           "repo_path": "K/KL/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KL"
@@ -338,8 +338,8 @@
         },
         "style": {
           "repo_path": "K/KM/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KM"
@@ -353,8 +353,8 @@
         },
         "style": {
           "repo_path": "K/KN/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KN"
@@ -368,8 +368,8 @@
         },
         "style": {
           "repo_path": "K/KO/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KO"
@@ -383,8 +383,8 @@
         },
         "style": {
           "repo_path": "K/KP/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KP"
@@ -398,8 +398,8 @@
         },
         "style": {
           "repo_path": "K/KQ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KQ"
@@ -413,8 +413,8 @@
         },
         "style": {
           "repo_path": "K/KR/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KR"
@@ -428,8 +428,8 @@
         },
         "style": {
           "repo_path": "K/KS/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KS"
@@ -443,8 +443,8 @@
         },
         "style": {
           "repo_path": "K/KT/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KT"
@@ -458,8 +458,8 @@
         },
         "style": {
           "repo_path": "K/KU/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KU"
@@ -473,8 +473,8 @@
         },
         "style": {
           "repo_path": "K/KV/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KV"
@@ -488,8 +488,8 @@
         },
         "style": {
           "repo_path": "K/KW/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KW"
@@ -503,8 +503,8 @@
         },
         "style": {
           "repo_path": "K/KX/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KX"
@@ -518,8 +518,8 @@
         },
         "style": {
           "repo_path": "K/KY/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KY"
@@ -533,8 +533,8 @@
         },
         "style": {
           "repo_path": "K/KZ/style.json",
-          "sha256": "a9c291d65a3af02d30f945a97eea05e0a59fe41619ff4f3bead12edf851ba8f1",
-          "size_bytes": 2013
+          "sha256": "f3e509ceec41af63bc37c660287081cfef3e34a8a589a7c04924444c67aa628c",
+          "size_bytes": 823
         }
       },
       "id": "K/KZ"
@@ -548,8 +548,8 @@
         },
         "style": {
           "repo_path": "L/LE/style.json",
-          "sha256": "cb9cbd350082b410e1c91c36c854664b8a24c0e22249bdf3ede375b62bc1f9e5",
-          "size_bytes": 855
+          "sha256": "de198381bd12d66a6b3a02bfc743241d8bb692a7953f1ffb4d9af1c5f019b702",
+          "size_bytes": 917
         }
       },
       "id": "L/LE"
@@ -563,8 +563,8 @@
         },
         "style": {
           "repo_path": "L/LO/style.json",
-          "sha256": "c00495e3fb16d84b7359bf0b50b52c803236fc20888c707d1084118b483e50d3",
-          "size_bytes": 7986
+          "sha256": "aacc949ef49853e43820211354971caaca8848ff82a0ff88b0ca9877abfe8d1f",
+          "size_bytes": 8186
         }
       },
       "id": "L/LO"
@@ -578,8 +578,8 @@
         },
         "style": {
           "repo_path": "L/LP/style.json",
-          "sha256": "d6d3f54129b6dc2a4f831614005533a45c7afc6c793a8380be3ae00a975efae4",
-          "size_bytes": 10562
+          "sha256": "95f656b5f717ba0a2d6cc242b12fa202062b0672b86df97aedd65b6d481f2cf5",
+          "size_bytes": 10900
         }
       },
       "id": "L/LP"
@@ -588,13 +588,13 @@
       "files": {
         "colors": {
           "repo_path": "L/LT/colors.json",
-          "sha256": "b8766a6c44e6af4f3aca7effd6463b549089d77df6c3ecf4341da0d3cf8f1233",
-          "size_bytes": 933
+          "sha256": "12c29bc17d612a4c8de85122279fa30432290f177dcd7cf7c5a546481af9787d",
+          "size_bytes": 932
         },
         "style": {
           "repo_path": "L/LT/style.json",
-          "sha256": "057da9d01ae77dc07a83d4f9664dac3a33e2537ef8c9414d5bba5aaa18dbbe2b",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       },
       "id": "L/LT"
@@ -608,8 +608,8 @@
         },
         "style": {
           "repo_path": "O/OE/OEJD/style.json",
-          "sha256": "12dd704c922e46e6b0a847582d9d15f0793c6cc931bffe763b27c528f295fd41",
-          "size_bytes": 968
+          "sha256": "052d4adf357935d8119d36c8b6eb1b8367a0ba7208dbe6677d747d596a15980f",
+          "size_bytes": 1079
         }
       },
       "id": "O/OE/OEJD"
@@ -623,8 +623,8 @@
         },
         "style": {
           "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/style.json",
-          "sha256": "1099b6b54457336c11d725955685a88c092f436f23106ebc976f0f050f69914d",
-          "size_bytes": 799
+          "sha256": "f7353c9d2533837d4ab576986d135ab466e00ceafd2dc8ce2904d605da9a5f8c",
+          "size_bytes": 863
         }
       },
       "id": "O/OM/OMAE/ABU_DHABI_TMA"
@@ -633,13 +633,13 @@
       "files": {
         "colors": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/colors.json",
-          "sha256": "42bcea9b690bd967674669f3137c6cd93df2a4577f7aad0242493e1bb42d1a95",
-          "size_bytes": 734
+          "sha256": "1934644266276a780198c6fb284eb646b33d5e3e68080b491b89407aa4904652",
+          "size_bytes": 730
         },
         "style": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/style.json",
-          "sha256": "c912e801e8158bc4ba1a18bf8964f34cd1400c0f5425f2ed427ee1ef699a66bd",
-          "size_bytes": 434
+          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
+          "size_bytes": 404
         }
       },
       "id": "O/OM/OMAE/DUBAI_TERMINAL"
@@ -653,8 +653,8 @@
         },
         "style": {
           "repo_path": "O/OT/OTDF/style.json",
-          "sha256": "2dbc1b4eec91af1373f21a2fe5039b1f41e0274bc9498aa3c4fc459008669947",
-          "size_bytes": 764
+          "sha256": "8f77296e5ba7784ef7a248fd68f68dd0dde118cb3bbf7b167c28256857ce9372",
+          "size_bytes": 829
         }
       },
       "id": "O/OT/OTDF"
@@ -668,8 +668,8 @@
         },
         "style": {
           "repo_path": "P/PA/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       },
       "id": "P/PA"
@@ -683,8 +683,8 @@
         },
         "style": {
           "repo_path": "P/PG/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       },
       "id": "P/PG"
@@ -698,8 +698,8 @@
         },
         "style": {
           "repo_path": "P/PH/style.json",
-          "sha256": "eb7a0fd18d9f43a9f3cbead3201c73bd70f05c4f5c9cb11671862b6291753f30",
-          "size_bytes": 1846
+          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
+          "size_bytes": 701
         }
       },
       "id": "P/PH"
@@ -708,13 +708,13 @@
       "files": {
         "colors": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/colors.json",
-          "sha256": "b663de2d6d5f94254cfbfa9f518d5c5af94a35af75e385389bbef49223f645d6",
-          "size_bytes": 773
+          "sha256": "7d902e89549736fce9dbc5aa86dc807c005da820f638cd2742abc443d49127d2",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       },
       "id": "R/RC/RCAA/TAIPEI_TMA"
@@ -723,13 +723,13 @@
       "files": {
         "colors": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/colors.json",
-          "sha256": "df93e5d67a2dab1c298f69f6112583fc5248d525efe72cc7655bce02ce76fd88",
-          "size_bytes": 773
+          "sha256": "be7f845d3f5c17ba4023d2d2d8a62f3bbe3dfbcf9b7a3a7e73e3ac227a44ccb7",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       },
       "id": "R/RK/RKRR/INCHEON_TMA"
@@ -738,13 +738,13 @@
       "files": {
         "colors": {
           "repo_path": "V/VH/VHHK/HONGKONG_TMA/colors.json",
-          "sha256": "393d459d5fd11d584bde83a0a28dce322aa2d87dc482faa3b0ce8446a8474c27",
-          "size_bytes": 773
+          "sha256": "450a16c440cb16c84cab1d82335b90adbb0babfb652046274dd259b5f1a6301c",
+          "size_bytes": 769
         },
         "style": {
           "repo_path": "V/VH/VHHK/HONGKONG_TMA/style.json",
-          "sha256": "3eae6544f5b079300255e2a2b383a3e4050e8d5f69e55a8013d40d73841a8f4d",
-          "size_bytes": 854
+          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
+          "size_bytes": 823
         }
       },
       "id": "V/VH/VHHK/HONGKONG_TMA"
@@ -758,18 +758,349 @@
         },
         "style": {
           "repo_path": "Y/YM/YMMM/style.json",
-          "sha256": "ac24f1e942744e5d02f519ae7c0f8162048866abef25a4e06a4c2afb1be8e9f2",
-          "size_bytes": 957
+          "sha256": "03c47f0127ef7ecf2ad93a30916b34c40e7e5533fda8a5e9679ae35801a23161",
+          "size_bytes": 1068
         }
       },
       "id": "Y/YM/YMMM"
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/C/CZ/colors.json",
+          "sha256": "6c4105a418fd24cd9e8086de27e623806d9d9eaf037188a488f1dfa53ed9f102",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/C/CZ/style.json",
+          "sha256": "7ce96b888ea91ce2ef4b0f0f37a33ffb076cbf1833a47fc7c234c5934e6d7caf",
+          "size_bytes": 814
+        }
+      },
+      "id": "C/CZ",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/E/EF/EFIN/colors.json",
+          "sha256": "2ce550e0a30783702d99172136a6b1a829f7887697c5e39e681b4a2ebc5add46",
+          "size_bytes": 784
+        },
+        "style": {
+          "repo_path": "airac_variants/E/EF/EFIN/style.json",
+          "sha256": "61255ecc4454141649664c204ba2e838fd12fd7a236f5569996684a2432d1902",
+          "size_bytes": 704
+        }
+      },
+      "id": "E/EF/EFIN",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/E/EH/colors.json",
+          "sha256": "8b16e5d06c0645f7ef0ba24f5a209c9b3de7f7796da9aaa6634bbc97dacafc82",
+          "size_bytes": 1016
+        }
+      },
+      "id": "E/EH",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/E/EK/colors.json",
+          "sha256": "c92606c13757881f428c4010220fa2318e91ec4edecbebbb60b69e803d32a086",
+          "size_bytes": 1055
+        },
+        "style": {
+          "repo_path": "airac_variants/E/EK/style.json",
+          "sha256": "2587b838229bd2ddca2ca9e2f4731512e95429fc501aab9b281f94414da3b241",
+          "size_bytes": 720
+        }
+      },
+      "id": "E/EK",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/E/EN/ENOR/ENOS/colors.json",
+          "sha256": "1a489a6319bf075b65e9d67db35d0e57756045cffe50857d5a9f50eb0bc90420",
+          "size_bytes": 784
+        },
+        "style": {
+          "repo_path": "airac_variants/E/EN/ENOR/ENOS/style.json",
+          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
+          "size_bytes": 373
+        }
+      },
+      "id": "E/EN/ENOR/ENOS",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/E/ES/colors.json",
+          "sha256": "b8d6574ca7459e7ad1081781171911b85f8604417b16f7db79d4a01423e1089a",
+          "size_bytes": 947
+        },
+        "style": {
+          "repo_path": "airac_variants/E/ES/style.json",
+          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
+          "size_bytes": 373
+        }
+      },
+      "id": "E/ES",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/G/GC/colors.json",
+          "sha256": "0f9fdfd4e264b6dc9a29b2b43505f2fc2d438f60bc63a6dee35071ae64b57c74",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/G/GC/style.json",
+          "sha256": "6d4442c24540b7a93693a4751e521ebed950d606f77ad97a1084ecc96b55fcc1",
+          "size_bytes": 794
+        }
+      },
+      "id": "G/GC",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/L/LO/colors.json",
+          "sha256": "d7bd7c64a58e89bcc00e35e0dd956964a6f7ccd4adaaca261c692755f28d07ad",
+          "size_bytes": 1055
+        },
+        "style": {
+          "repo_path": "airac_variants/L/LO/style.json",
+          "sha256": "08f96ad79406dddc900304709b83bf0bc9e56039f81e029c40f972b0025948e4",
+          "size_bytes": 7925
+        }
+      },
+      "id": "L/LO",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/L/LP/colors.json",
+          "sha256": "7970c196ab13e19d26c6bc759981972576fd474f88924228da799d6a68e75671",
+          "size_bytes": 1055
+        },
+        "style": {
+          "repo_path": "airac_variants/L/LP/style.json",
+          "sha256": "ede975a6be6404242c107998993aeb22904219da283f9d6816b754fd93c3d3da",
+          "size_bytes": 10501
+        }
+      },
+      "id": "L/LP",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/L/LT/colors.json",
+          "sha256": "660c0fbcb61016f3f73519ade0cb4e9dfb5d2d480905372cbbbc72b6d4a0d952",
+          "size_bytes": 947
+        },
+        "style": {
+          "repo_path": "airac_variants/L/LT/style.json",
+          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
+          "size_bytes": 373
+        }
+      },
+      "id": "L/LT",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/O/OE/OEJD/colors.json",
+          "sha256": "8ff0906f874a8b7c5deffcc5a056bb701a80e1d79b86bb8b61b5531b50cbc1a0",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/O/OE/OEJD/style.json",
+          "sha256": "f478bec15afedf659c8d5bcdacbe2a08a6dbf009b802b19b108db4a773696ee7",
+          "size_bytes": 910
+        }
+      },
+      "id": "O/OE/OEJD",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/colors.json",
+          "sha256": "8788f8c7ef954a5b7909c524e7e70f9fbdd19948ae070063cfd72ea1ead765a4",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/style.json",
+          "sha256": "2a4f9a282c3e04f32f5935c86cd65788d369d9576b5f1886157822d631c99f68",
+          "size_bytes": 740
+        }
+      },
+      "id": "O/OM/OMAE/ABU_DHABI_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/colors.json",
+          "sha256": "3ee9bb2dd247492a6e40e36847a59f903fb0c95e927418f2c97ecbbd1061f2a8",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/style.json",
+          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
+          "size_bytes": 373
+        }
+      },
+      "id": "O/OM/OMAE/DUBAI_TERMINAL",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/O/OT/OTDF/colors.json",
+          "sha256": "c274df8d0d0901450cba176639e4d4f7dd6e766c006ccb03a8ef832d63da98a0",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/O/OT/OTDF/style.json",
+          "sha256": "03138257753b7428a789c896b4edc70c3cbd1b67f2cb57b35150ec581f60695c",
+          "size_bytes": 706
+        }
+      },
+      "id": "O/OT/OTDF",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/P/PA/colors.json",
+          "sha256": "b99395575c2134f80551e123954c6a95c343de6368ab2d04087a10fac66309d3",
+          "size_bytes": 947
+        },
+        "style": {
+          "repo_path": "airac_variants/P/PA/style.json",
+          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
+          "size_bytes": 624
+        }
+      },
+      "id": "P/PA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/P/PG/colors.json",
+          "sha256": "b99395575c2134f80551e123954c6a95c343de6368ab2d04087a10fac66309d3",
+          "size_bytes": 947
+        },
+        "style": {
+          "repo_path": "airac_variants/P/PG/style.json",
+          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
+          "size_bytes": 624
+        }
+      },
+      "id": "P/PG",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/P/PH/colors.json",
+          "sha256": "b99395575c2134f80551e123954c6a95c343de6368ab2d04087a10fac66309d3",
+          "size_bytes": 947
+        },
+        "style": {
+          "repo_path": "airac_variants/P/PH/style.json",
+          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
+          "size_bytes": 624
+        }
+      },
+      "id": "P/PH",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/colors.json",
+          "sha256": "897a12e33400d4ec49cddd9831fe16a7efc91b0718e153ed2bae55e2b2841e0a",
+          "size_bytes": 784
+        },
+        "style": {
+          "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/style.json",
+          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
+          "size_bytes": 792
+        }
+      },
+      "id": "R/RC/RCAA/TAIPEI_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/colors.json",
+          "sha256": "ff61a3cb427329966ef996340ceaddc6c6d6677a19ef95e73866e5a84b03e18f",
+          "size_bytes": 784
+        },
+        "style": {
+          "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/style.json",
+          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
+          "size_bytes": 792
+        }
+      },
+      "id": "R/RK/RKRR/INCHEON_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/colors.json",
+          "sha256": "b4651e83b0dab8426194c2af103a7982f82a70c389ab6f78c4145c6fb78abc9b",
+          "size_bytes": 784
+        },
+        "style": {
+          "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/style.json",
+          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
+          "size_bytes": 792
+        }
+      },
+      "id": "V/VH/VHHK/HONGKONG_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "colors": {
+          "repo_path": "airac_variants/Y/YM/YMMM/colors.json",
+          "sha256": "681e62c882ed033878863aa9e31799260c769e36223e4028bd7386702e926867",
+          "size_bytes": 745
+        },
+        "style": {
+          "repo_path": "airac_variants/Y/YM/YMMM/style.json",
+          "sha256": "1f9560485781ebc36de2ded39746f3e5ee4b01239cddfad9e37619d351400062",
+          "size_bytes": 899
+        }
+      },
+      "id": "Y/YM/YMMM",
+      "requires": ["community.airspace_files"]
     }
   ],
-  "entry_count": 51,
-  "generated_at": "2026-11-22T07:58:12Z",
-  "published_at": "2026-11-22T07:58:12Z",
-  "release_tag": "daily-2026-11-22",
+  "entry_count": 72,
+  "generated_at": "2026-11-23T08:45:48Z",
+  "published_at": "2026-11-23T08:45:48Z",
+  "release_tag": "daily-2026-11-23",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "bc0f2aed638213520c563ad0c23ccf74965799e1ad5d6a94c796a9b15ed9e04e",
-  "size_bytes": 50390
+  "sha256": "4399073d783d5b7b6f521c4ab2b91aee1ff3f077100cff3716b55885fa7f9d45",
+  "size_bytes": 59145
 }
