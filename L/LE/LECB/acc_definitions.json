@@ -42,6 +42,11 @@
       "call_sign": "LECP_GXX_CTR",
       "unit": "LECP_CTR",
       "frequency": "121.300"
+    },
+    {
+      "call_sign": "LECP_TXX_CTR",
+      "unit": "LECP_CTR",
+      "frequency": "129.255"
     }
   ]
 }

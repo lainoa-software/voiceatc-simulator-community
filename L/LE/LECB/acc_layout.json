@@ -7,7 +7,8 @@
           "LECB_BKW_CTR": ["LECBBKW"],
           "LECB_BKE_CTR": ["LECBBKE"],
           "LECB_DDX_CTR": ["LEBLDDX"],
-          "LECP_GXX_CTR": ["LECPGXX"]
+          "LECP_GXX_CTR": ["LECPGXX"],
+          "LECP_TXX_CTR": ["LECPTXX"]
         }
       }
     }
