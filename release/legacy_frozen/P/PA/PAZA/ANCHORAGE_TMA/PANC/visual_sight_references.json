@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "PANC",
+  "variants": [
+    {
+      "procedure_id": "HIGHWAY_VISUAL_25R",
+      "variant_id": "LITTLE_SUSITNA_ENTRY",
+      "default_reference_id": "LITTLE_SUSITNA_MOUTH",
+      "references": [
+        {
+          "id": "LITTLE_SUSITNA_MOUTH",
+          "name": "the mouth of the Little Susitna River",
+          "aliases": ["Little Susitna River mouth"],
+          "geometry": { "kind": "point", "leg_id": "OSPUF" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "HIGHWAY VISUAL RWY 25R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "HIGHWAY_VISUAL_25R",
+      "variant_id": "POINT_POSSESSION_ENTRY",
+      "default_reference_id": "POINT_POSSESSION",
+      "references": [
+        {
+          "id": "POINT_POSSESSION",
+          "name": "Point Possession",
+          "aliases": ["the Point Possession"],
+          "geometry": { "kind": "point", "leg_id": "MOPMY" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "HIGHWAY VISUAL RWY 25R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/01500HIGHWAY_VIS25R.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

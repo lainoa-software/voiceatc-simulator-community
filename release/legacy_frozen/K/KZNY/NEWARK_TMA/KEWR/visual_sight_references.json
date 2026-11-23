@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "airport": "KEWR",
+  "variants": [
+    {
+      "procedure_id": "STADIUM_VISUAL_29",
+      "variant_id": "STADIUM_MAIN",
+      "default_reference_id": "MEADOWLANDS_SPORTS_COMPLEX",
+      "references": [
+        {
+          "id": "MEADOWLANDS_SPORTS_COMPLEX",
+          "name": "the Meadowlands Sports Complex",
+          "aliases": ["Meadowlands", "the sports complex"],
+          "geometry": { "kind": "point", "leg_id": "GIMEE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "STADIUM VISUAL RWY 29",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00285STADIUM_VIS29.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

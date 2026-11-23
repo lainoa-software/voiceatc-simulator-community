@@ -1,0 +1,21 @@
+{
+  "alien_symbol": "rps",
+  "assumed_symbol": "rps",
+  "defined_symbols": {
+    "rps": {
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
+      "draw": "M -2 -2 L -2 2 L 2 2 L 2 -2 L -2 -2",
+      "type": "filled"
+    }
+  },
+  "forecast_symbol": "rps",
+  "incoming_symbol": "rps",
+  "of_interest_symbol": "rps",
+  "released_symbol": "rps",
+  "traildot_symbol": "rps"
+}

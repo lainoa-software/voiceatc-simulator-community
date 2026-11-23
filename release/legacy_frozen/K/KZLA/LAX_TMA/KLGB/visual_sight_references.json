@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "KLGB",
+  "variants": [
+    {
+      "procedure_id": "LA_RIVER_VISUAL_12",
+      "variant_id": "PADDR_ENTRY",
+      "default_reference_id": "VINCENT_THOMAS_BRIDGE",
+      "references": [
+        {
+          "id": "VINCENT_THOMAS_BRIDGE",
+          "name": "the Vincent Thomas Bridge",
+          "aliases": ["Vincent Thomas Bridge"],
+          "geometry": { "kind": "point", "leg_id": "VINCENT_THOMAS_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "LA RIVER VISUAL RWY 12",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00236LARIVER_VIS12.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "LA_RIVER_VISUAL_12",
+      "variant_id": "ALBAS_ENTRY",
+      "default_reference_id": "QUEEN_MARY",
+      "references": [
+        {
+          "id": "QUEEN_MARY",
+          "name": "the Queen Mary",
+          "aliases": ["Queen Mary"],
+          "geometry": { "kind": "point", "leg_id": "QUEEN_MARY_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "LA RIVER VISUAL RWY 12",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00236LARIVER_VIS12.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Project schema-2 sector bundles back into legacy files for default and tma_file feeds.
+"""Project schema-3 bundles and dataset files back into legacy shapes for older builds.
 
 Default (legacy) builds read ``sector_configs.json`` and ``sector_influence.json``
-at each terminal bundle path, and ``community.tma_file`` builds read schema-1
-``tma.json`` from the full feed. Neither exists in schema-2 source.
+and scalar ``sector_definitions.json`` at each terminal bundle path, while
+``community.tma_file`` builds read schema-1 ``tma.json`` from the full feed.
+Skinned countries' legacy ``colors.json``/``style.json``, ``procedure_options.json``,
+``constraints.json``, ``map_display.json``, and ``visual_*.json`` also ship through
+this projection for older builds.
 
 ``release/legacy_frozen/`` holds the verbatim legacy bytes captured from ``main``
-before the schema-2 layout conversion for every bundle that published them, plus
-``release/legacy_frozen/index.json`` recording each bundle's schema-2 source
-hashes. When a bundle's current schema-2 source files match the index, publish
-ships the frozen bytes verbatim; edited or new bundles fall back to generating
-legacy files from schema 2.
+plus ``release/legacy_frozen/index.json`` recording each bundle/file's schema-3
+source hashes. When source hashes match the index, publish ships frozen bytes
+verbatim; edited or new sources regenerate the legacy shapes from schema 3.
 """
 from __future__ import annotations
 
@@ -37,6 +38,43 @@ FROZEN_INDEX_PATH = FROZEN_DIR / "index.json"
 TMA_FILE_CAPABILITY = "community.tma_file"
 AIRSPACE_FILES_CAPABILITY = "community.airspace_files"
 
+_BUNDLE_PATH_TO_LEGACY = {
+    "L/LE/LECB/LECP/PALMA_TMA": "L/LE/LECB/LECB_E/PALMA_TMA",
+    "L/LE/LECB/LECL/VALENCIA_TMA": "L/LE/LECB/LECB_W/VALENCIA_TMA",
+}
+_LEGACY_TO_BUNDLE_PATH = {v: k for k, v in _BUNDLE_PATH_TO_LEGACY.items()}
+
+_LEG_TYPE_TO_TERM = {
+    "initial_fix": "IF",
+    "track_to_fix": "TF",
+    "direct_to_fix": "DF",
+    "course_to_fix": "CF",
+    "course_to_altitude": "CA",
+    "heading_to_altitude": "VA",
+    "heading_to_manual": "VM",
+    "course_to_manual": "FM",
+    "radius_to_fix": "RF",
+    "arc_to_fix": "AF",
+}
+
+
+def legacy_path_for_bundle(bundle_path: str, index_entry: dict[str, object] | None = None) -> str:
+    if isinstance(index_entry, dict) and index_entry.get("legacy_bundle_path"):
+        return str(index_entry["legacy_bundle_path"])
+    return _BUNDLE_PATH_TO_LEGACY.get(bundle_path, bundle_path)
+
+
+def schema3_path_for_legacy_bundle(legacy_bundle_path: str) -> str:
+    return _LEGACY_TO_BUNDLE_PATH.get(legacy_bundle_path, legacy_bundle_path)
+
+
+def _canonical_lf(raw_bytes: bytes) -> bytes:
+    return raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
+def _sha256_file(path: Path) -> str:
+    return hashlib.sha256(_canonical_lf(path.read_bytes())).hexdigest()
+
 
 def load_frozen_index(root: Path) -> dict[str, dict[str, object]]:
     index_path = root / FROZEN_INDEX_PATH
@@ -44,17 +82,6 @@ def load_frozen_index(root: Path) -> dict[str, dict[str, object]]:
         return {}
     payload = json.loads(index_path.read_text(encoding="utf-8"))
     bundles = payload.get("bundles", {})
-    return bundles if isinstance(bundles, dict) else {}
-
-
-def load_frozen_files_index(root: Path) -> dict[str, dict[str, object]]:
-    """Return per-file frozen snapshot metadata keyed by repo_path."""
-    index_path = root / FROZEN_INDEX_PATH
-    if not index_path.is_file():
-        return {}
-    payload = json.loads(index_path.read_text(encoding="utf-8"))
-    files = payload.get("files", {})
-    return files if isinstance(files, dict) else {}
     if not isinstance(bundles, dict):
         return {}
     return {
@@ -64,18 +91,31 @@ def load_frozen_files_index(root: Path) -> dict[str, dict[str, object]]:
     }
 
 
-def _find_ancestor_acc_structure(root: Path, bundle_path: str) -> Path | None:
+def load_frozen_files_index(root: Path) -> dict[str, dict[str, object]]:
+    """Return per-file frozen snapshot metadata keyed by legacy repo_path."""
+    index_path = root / FROZEN_INDEX_PATH
+    if not index_path.is_file():
+        return {}
+    payload = json.loads(index_path.read_text(encoding="utf-8"))
+    files = payload.get("files", {})
+    if not isinstance(files, dict):
+        return {}
+    return {
+        str(k).strip().replace("\\", "/"): v
+        for k, v in files.items()
+        if isinstance(v, dict)
+    }
+
+
+def _find_ancestor_acc_definitions(root: Path, bundle_path: str) -> Path | None:
     cur = (root / bundle_path).parent
     while cur != root and cur.parent != cur:
-        acc_path = cur / "acc_structure.json"
-        if acc_path.is_file():
-            return acc_path
+        for fname in ("acc_definitions.json", "acc_structure.json"):
+            cand = cur / fname
+            if cand.is_file():
+                return cand
         cur = cur.parent
     return None
-
-
-def _sha256_file(path: Path) -> str:
-    return hashlib.sha256(_canonical_lf(path.read_bytes())).hexdigest()
 
 
 def bundle_source_hashes(
@@ -83,19 +123,20 @@ def bundle_source_hashes(
     bundle_path: str,
     src_files: dict[str, object],
 ) -> dict[str, str]:
-    """SHA-256 hashes of a terminal bundle's schema-2 source files and ancestor acc_structure."""
+    """SHA-256 hashes of a terminal bundle's schema-3 source files and ancestor acc_definitions."""
     hashes: dict[str, str] = {}
     for kind, fname in (
-        ("tma_structure", "tma_structure.json"),
+        ("tma_definitions", "tma_definitions.json"),
+        ("tma_layout", "tma_layout.json"),
         ("definitions", "sector_definitions.json"),
         ("tma_coordination", "tma_coordination.json"),
     ):
         entry = src_files.get(kind)
         if isinstance(entry, dict) and entry.get("repo_path"):
             hashes[fname] = _sha256_file(root / str(entry["repo_path"]))
-    acc_path = _find_ancestor_acc_structure(root, bundle_path)
+    acc_path = _find_ancestor_acc_definitions(root, bundle_path)
     if acc_path is not None:
-        hashes["acc_structure.json"] = _sha256_file(acc_path)
+        hashes[acc_path.name] = _sha256_file(acc_path)
     return dict(sorted(hashes.items()))
 
 
@@ -105,36 +146,166 @@ def _resolve_default_doc(document: dict) -> dict:
     return document
 
 
-def _derive_served_airports(tma_structure: dict) -> list[str]:
+def _pos_lookup(tma_defs: dict) -> dict[str, dict]:
+    by_cs: dict[str, dict] = {}
+    for pos in tma_defs.get("positions", []):
+        if isinstance(pos, dict) and pos.get("call_sign"):
+            by_cs[str(pos["call_sign"]).strip()] = pos
+    return by_cs
+
+
+def _unit_lookup(tma_defs: dict) -> dict[str, dict]:
+    by_id: dict[str, dict] = {}
+    for unit in tma_defs.get("units", []):
+        if isinstance(unit, dict) and unit.get("id"):
+            by_id[str(unit["id"]).strip()] = unit
+    return by_id
+
+
+def _zone_sector_set(tma_defs: dict) -> set[str]:
+    out: set[str] = set()
+    for z in tma_defs.get("zones", []):
+        if isinstance(z, dict) and z.get("sector"):
+            out.add(str(z["sector"]).strip().upper())
+    return out
+
+
+def _derive_served_airports(tma_defs: dict, tma_layout: dict | None = None) -> list[str]:
     airports: list[str] = []
-    for layout in tma_structure.get("layouts", []):
-        if not isinstance(layout, dict):
-            continue
-        for airport in layout.get("airports", []):
-            code = str(airport).strip().upper()
-            if code and code not in airports:
-                airports.append(code)
-    for unit in tma_structure.get("units", []):
+    if tma_layout is not None:
+        layout_doc = _resolve_default_doc(tma_layout)
+        configs_by_unit = layout_doc.get("configurations", {})
+        if isinstance(configs_by_unit, dict):
+            for unit_cfgs in configs_by_unit.values():
+                if not isinstance(unit_cfgs, dict):
+                    continue
+                for cfg in unit_cfgs.values():
+                    if not isinstance(cfg, dict):
+                        continue
+                    for airport in cfg.get("airports", []):
+                        code = str(airport).strip().upper()
+                        if code and code not in airports:
+                            airports.append(code)
+    for unit in tma_defs.get("units", []):
         if not isinstance(unit, dict):
             continue
-        services = unit.get("services", [])
-        if isinstance(services, list) and "tower" in services and "airport" in unit:
-            code = str(unit["airport"]).strip().upper()
-            if code and code not in airports:
-                airports.append(code)
+        code = str(unit.get("airport", "")).strip().upper()
+        if code and code not in airports:
+            airports.append(code)
+    for zone in tma_defs.get("zones", []):
+        if not isinstance(zone, dict):
+            continue
+        code = str(zone.get("airport", "")).strip().upper()
+        if code and code not in airports:
+            airports.append(code)
     return airports
 
 
+def _schema3_layouts(
+    tma_defs: dict,
+    tma_layout: dict,
+    *,
+    acc_positions_by_cs: dict[str, dict] | None = None,
+) -> tuple[list[dict], list[dict]]:
+    """Return (radar_layouts, tower_zone_layouts) normalized cleanly for legacy projection."""
+    defs_doc = _resolve_default_doc(tma_defs)
+    layout_doc = _resolve_default_doc(tma_layout)
+    zones_set = _zone_sector_set(defs_doc)
+    pos_by_cs = _pos_lookup(defs_doc)
+    if acc_positions_by_cs:
+        for k, v in acc_positions_by_cs.items():
+            pos_by_cs.setdefault(k, v)
+    unit_by_id = _unit_lookup(defs_doc)
+    served = _derive_served_airports(defs_doc, layout_doc)
+
+    radar_layouts: list[dict] = []
+    tower_layouts: list[dict] = []
+    configs_by_unit = layout_doc.get("configurations", {})
+    if not isinstance(configs_by_unit, dict):
+        return radar_layouts, tower_layouts
+
+    for owner_unit_id, unit_cfgs in configs_by_unit.items():
+        if not isinstance(unit_cfgs, dict):
+            continue
+        owner_unit = unit_by_id.get(str(owner_unit_id).strip(), {})
+        for cfg_id, cfg in unit_cfgs.items():
+            if not isinstance(cfg, dict):
+                continue
+            raw_positions = cfg.get("positions", {})
+            if not isinstance(raw_positions, dict):
+                continue
+            cfg_airports = [
+                str(a).strip().upper()
+                for a in cfg.get("airports", [])
+                if str(a).strip()
+            ]
+            if not cfg_airports:
+                apt = str(owner_unit.get("airport", "")).strip().upper()
+                if apt:
+                    cfg_airports = [apt]
+                elif len(served) == 1:
+                    cfg_airports = list(served)
+            positions_out: list[dict] = []
+            zone_positions_out: list[dict] = []
+            for cs, raw_secs in raw_positions.items():
+                cs_str = str(cs).strip()
+                pinfo = pos_by_cs.get(cs_str, {})
+                secs = [str(s).strip().upper() for s in raw_secs if str(s).strip()] if isinstance(raw_secs, list) else []
+                primary = [s for s in secs if s not in zones_set]
+                attached_zones = [s for s in secs if s in zones_set]
+                uid = str(pinfo.get("unit", owner_unit_id)).strip()
+                freq = str(pinfo.get("frequency", "")).strip()
+                pos_name = str(pinfo.get("name", "")).strip() or (primary[0] if primary else cs_str)
+                if primary:
+                    positions_out.append({
+                        "sector": "~".join(primary) if len(primary) > 1 else primary[0],
+                        "sectors_list": primary,
+                        "name": pos_name,
+                        "code": cs_str,
+                        "unit": uid,
+                        "frequency": freq,
+                        "zones": attached_zones,
+                    })
+                elif attached_zones:
+                    zone_positions_out.append({
+                        "unit": uid,
+                        "name": str(pinfo.get("name", "TWR")).strip() or "TWR",
+                        "code": cs_str,
+                        "frequency": freq,
+                        "sectors": attached_zones,
+                    })
+            layout_row = {
+                "id": str(cfg_id).strip(),
+                "owner_unit": str(owner_unit_id).strip(),
+                "airports": cfg_airports,
+                "runways": cfg.get("valid_for_runways", cfg.get("runways", {})),
+                "positions": positions_out,
+                "on_duty": cfg.get("on_duty", []),
+            }
+            if positions_out:
+                radar_layouts.append(layout_row)
+            elif zone_positions_out:
+                tower_layouts.append({"id": str(cfg_id).strip(), "zones_on_duty": zone_positions_out})
+    return radar_layouts, tower_layouts
+
+
 def project_configs_and_influence(
-    tma_structure: dict,
+    tma_defs: dict,
+    tma_layout: dict | None = None,
     *,
     sector_aliases: dict[str, list[str]] | None = None,
     configs_airport: str | None = None,
     influence_airport: str | None = None,
     auto_airport_for_non_prefixed: bool = False,
 ) -> tuple[dict, dict]:
-    """Generate (sector_configs_payload, sector_influence_payload) from schema-2 tma_structure."""
-    tma_doc = _resolve_default_doc(tma_structure)
+    """Generate (sector_configs_payload, sector_influence_payload) from schema-3 TMA files."""
+    defs_doc = _resolve_default_doc(tma_defs)
+    if tma_layout is None:
+        # Compatibility if schema-2 layout list already passed directly
+        radar_layouts = defs_doc.get("layouts", [])
+    else:
+        radar_layouts, _ = _schema3_layouts(defs_doc, tma_layout)
+
     aliases = {
         str(k).strip().upper(): [str(item).strip().upper() for item in v if str(item).strip()]
         for k, v in (sector_aliases or {}).items()
@@ -145,7 +316,7 @@ def project_configs_and_influence(
     influence_order: list[str] = []
     influence_airports: dict[str, list[str]] = {}
 
-    for layout in tma_doc.get("layouts", []):
+    for layout in radar_layouts:
         if not isinstance(layout, dict):
             continue
         config_id = str(layout.get("id", "")).strip().upper()
@@ -170,11 +341,15 @@ def project_configs_and_influence(
         for pos_idx, pos in enumerate(layout.get("positions", [])):
             if not isinstance(pos, dict):
                 continue
-            raw_sector = str(pos.get("sector", "")).strip().upper()
-            if raw_sector in aliases and aliases[raw_sector]:
-                parts = list(aliases[raw_sector])
+            raw_list = pos.get("sectors_list")
+            if isinstance(raw_list, list) and len(raw_list) > 1:
+                parts = [str(s).strip().upper() for s in raw_list if str(s).strip()]
             else:
-                parts = [part.strip() for part in raw_sector.split("~") if part.strip()]
+                raw_sector = str(pos.get("sector", "")).strip().upper()
+                if raw_sector in aliases and aliases[raw_sector]:
+                    parts = list(aliases[raw_sector])
+                else:
+                    parts = [part.strip() for part in raw_sector.split("~") if part.strip()]
             if not parts:
                 continue
             has_delim = any(ch in parts[0] for ch in (" ", "\t", ",", ";", "|", "+"))
@@ -207,7 +382,7 @@ def project_configs_and_influence(
         if influence_airports[sid]
     ]
 
-    served_airports = _derive_served_airports(tma_doc)
+    served_airports = _derive_served_airports(defs_doc, tma_layout)
     cfg_payload: dict[str, object] = {}
     resolved_cfg_apt = (configs_airport or "").strip().upper()
     if resolved_cfg_apt and (not served_airports or resolved_cfg_apt in served_airports):
@@ -235,131 +410,211 @@ def _derive_tma_name(bundle_key: str) -> str:
     return bundle_key.replace("_", " ").title()
 
 
-def _referenced_unit_ids(tma_structure: dict, tma_coordination: dict | None) -> set[str]:
-    needed: set[str] = set()
-    for layout in tma_structure.get("layouts", []):
-        if not isinstance(layout, dict):
+def _agreement_specificity(row: dict) -> int:
+    score = 0
+    if row.get("runways"):
+        score += 20
+    if row.get("fix"):
+        score += 10
+    if row.get("departs") and row.get("arrives"):
+        score += 5
+    return score
+
+
+def project_schema1_tma(
+    tma_defs: dict,
+    tma_layout: dict | None,
+    tma_coordination: dict | None,
+    acc_units_by_id: dict[str, dict],
+    bundle_key: str,
+    *,
+    acc_positions_by_cs: dict[str, dict] | None = None,
+    unit_aliases: dict[str, str] | None = None,
+    tma_name: str | None = None,
+) -> dict:
+    """Reconstruct a schema-1 tma.json payload from schema-3 files and ACC center units."""
+    defs_doc = _resolve_default_doc(tma_defs)
+    if tma_layout is not None:
+        radar_layouts, tower_layouts = _schema3_layouts(
+            defs_doc, tma_layout, acc_positions_by_cs=acc_positions_by_cs
+        )
+    else:
+        radar_layouts = deepcopy(defs_doc.get("layouts", []))
+        tower_layouts = []
+
+    # Reconstruct schema-1 units with populated `frequencies` arrays
+    freqs_by_unit: dict[str, list[str]] = {}
+    for pos in defs_doc.get("positions", []):
+        if isinstance(pos, dict) and pos.get("unit") and pos.get("frequency"):
+            uid = str(pos["unit"]).strip()
+            fq = str(pos["frequency"]).strip()
+            freqs_by_unit.setdefault(uid, [])
+            if fq not in freqs_by_unit[uid]:
+                freqs_by_unit[uid].append(fq)
+
+    units: list[dict] = []
+    present_ids: set[str] = set()
+    for raw_u in defs_doc.get("units", []):
+        if not isinstance(raw_u, dict) or not raw_u.get("id"):
             continue
+        u = deepcopy(raw_u)
+        uid = str(u["id"]).strip()
+        present_ids.add(uid)
+        merged_freqs: list[str] = list(freqs_by_unit.get(uid, []))
+        for fq in u.pop("unassigned_frequencies", []) or []:
+            fq_s = str(fq).strip()
+            if fq_s and fq_s not in merged_freqs:
+                merged_freqs.append(fq_s)
+        for fq in u.get("frequencies", []) or []:
+            fq_s = str(fq).strip()
+            if fq_s and fq_s not in merged_freqs:
+                merged_freqs.append(fq_s)
+        if merged_freqs:
+            u["frequencies"] = merged_freqs
+        u.pop("part_of", None)
+        u.pop("title", None)
+        units.append(u)
+
+    referenced: set[str] = set()
+    for layout in radar_layouts:
         for pos in layout.get("positions", []):
-            if isinstance(pos, dict) and pos.get("unit"):
-                needed.add(str(pos["unit"]).strip())
+            if pos.get("unit"):
+                referenced.add(str(pos["unit"]).strip())
         for duty in layout.get("on_duty", []):
             if isinstance(duty, dict) and duty.get("unit"):
-                needed.add(str(duty["unit"]).strip())
+                referenced.add(str(duty["unit"]).strip())
+    for tl in tower_layouts:
+        for d in tl.get("zones_on_duty", []):
+            if d.get("unit"):
+                referenced.add(str(d["unit"]).strip())
     if isinstance(tma_coordination, dict):
         for agr in tma_coordination.get("agreements", []):
             if not isinstance(agr, dict):
                 continue
             for key in ("from", "to"):
                 if agr.get(key):
-                    needed.add(str(agr[key]).strip())
-            go_around = agr.get("go_around")
-            if isinstance(go_around, dict) and go_around.get("to"):
-                needed.add(str(go_around["to"]).strip())
-    return {uid for uid in needed if uid}
+                    referenced.add(str(agr[key]).strip())
+            ga = agr.get("go_around")
+            if isinstance(ga, dict) and ga.get("to"):
+                referenced.add(str(ga["to"]).strip())
 
-
-def _safe_unit_aliases(
-    units: list[dict],
-    referenced: set[str],
-    raw_aliases: dict[str, str] | None,
-) -> dict[str, str]:
-    if not raw_aliases:
-        return {}
-    present_ids = {str(u.get("id", "")).strip() for u in units if u.get("id")} | referenced
-    candidate = {
-        str(k).strip(): str(v).strip()
-        for k, v in raw_aliases.items()
-        if str(k).strip() and str(v).strip()
-    }
-    mapped_targets: dict[str, str] = {}
-    safe: dict[str, str] = {}
-    for uid in sorted(present_ids):
-        target = candidate.get(uid, uid)
-        if target in mapped_targets and mapped_targets[target] != uid:
-            return {}
-        mapped_targets[target] = uid
-        if target != uid:
-            safe[uid] = target
-    return safe
-
-
-def project_schema1_tma(
-    tma_structure: dict,
-    tma_coordination: dict | None,
-    acc_units_by_id: dict[str, dict],
-    bundle_key: str,
-    *,
-    unit_aliases: dict[str, str] | None = None,
-    tma_name: str | None = None,
-) -> dict:
-    """Reconstruct a schema-1 tma.json payload from schema-2 files and ACC center units."""
-    tma_doc = _resolve_default_doc(tma_structure)
-    units = [deepcopy(unit) for unit in tma_doc.get("units", []) if isinstance(unit, dict)]
-    present_ids = {str(unit.get("id", "")).strip() for unit in units}
-    referenced = _referenced_unit_ids(tma_doc, tma_coordination)
     for uid in sorted(referenced):
         if uid not in present_ids and uid in acc_units_by_id:
-            units.append(deepcopy(acc_units_by_id[uid]))
+            acc_u = deepcopy(acc_units_by_id[uid])
+            acc_u.pop("part_of", None)
+            acc_u.pop("title", None)
+            if "frequencies" not in acc_u:
+                acc_freqs = list(acc_u.pop("unassigned_frequencies", []) or [])
+                if acc_positions_by_cs:
+                    for p in acc_positions_by_cs.values():
+                        if str(p.get("unit", "")).strip() == uid and p.get("frequency"):
+                            fq_s = str(p["frequency"]).strip()
+                            if fq_s not in acc_freqs:
+                                acc_freqs.append(fq_s)
+                if acc_freqs:
+                    acc_u["frequencies"] = acc_freqs
+            units.append(acc_u)
             present_ids.add(uid)
 
-    aliases = _safe_unit_aliases(units, referenced, unit_aliases)
+    aliases: dict[str, str] = {}
+    if unit_aliases:
+        for k, v in unit_aliases.items():
+            aliases[str(k).strip()] = str(v).strip()
+
     for unit in units:
         uid = str(unit.get("id", "")).strip()
         if uid in aliases:
             unit["id"] = aliases[uid]
 
-    layouts = deepcopy(tma_doc.get("layouts", []))
-    for layout in layouts:
-        if not isinstance(layout, dict):
-            continue
-        layout_airports = [
-            str(airport).strip().upper()
-            for airport in layout.pop("airports", [])
-            if str(airport).strip()
-        ]
-        positions = layout.get("positions", [])
-        if isinstance(positions, list) and positions and isinstance(positions[0], dict) and layout_airports:
-            positions[0]["airports"] = layout_airports
-        for pos in positions:
-            if isinstance(pos, dict) and pos.get("unit"):
-                uid = str(pos["unit"]).strip()
-                if uid in aliases:
-                    pos["unit"] = aliases[uid]
-        for duty in layout.get("on_duty", []):
-            if isinstance(duty, dict) and duty.get("unit"):
-                uid = str(duty["unit"]).strip()
-                if uid in aliases:
-                    duty["unit"] = aliases[uid]
+    default_on_duty: list[dict] = []
+    seen_duty_codes: set[str] = set()
+    for tl in tower_layouts:
+        for d in tl.get("zones_on_duty", []):
+            code = str(d.get("code", "")).strip()
+            if code and code not in seen_duty_codes:
+                seen_duty_codes.add(code)
+                entry = deepcopy(d)
+                if entry.get("unit") in aliases:
+                    entry["unit"] = aliases[entry["unit"]]
+                default_on_duty.append(entry)
+
+    layouts_out: list[dict] = []
+    for layout in radar_layouts:
+        l_out: dict[str, object] = {"id": layout["id"]}
+        if layout.get("runways"):
+            l_out["runways"] = deepcopy(layout["runways"])
+        positions_out: list[dict] = []
+        for idx, pos in enumerate(layout.get("positions", [])):
+            p_out = {
+                "sector": str(pos.get("sector", "")).split("~")[0],
+                "name": pos.get("name", ""),
+                "code": pos.get("code", ""),
+                "unit": aliases.get(str(pos.get("unit", "")), str(pos.get("unit", ""))),
+                "frequency": pos.get("frequency", ""),
+            }
+            if pos.get("zones"):
+                p_out["zones"] = list(pos["zones"])
+            if idx == 0 and layout.get("airports"):
+                p_out["airports"] = list(layout["airports"])
+            positions_out.append(p_out)
+        l_out["positions"] = positions_out
+        on_duty = []
+        for duty in layout.get("on_duty", []) or default_on_duty:
+            if not isinstance(duty, dict):
+                continue
+            d_copy = deepcopy(duty)
+            if d_copy.get("unit") in aliases:
+                d_copy["unit"] = aliases[d_copy["unit"]]
+            on_duty.append(d_copy)
+        if on_duty:
+            l_out["on_duty"] = on_duty
+        layouts_out.append(l_out)
 
     resolved_name = (tma_name or "").strip() or _derive_tma_name(bundle_key)
     out: dict[str, object] = {
         "schema": 1,
         "tma": {"id": bundle_key, "name": resolved_name},
-        "airports": _derive_served_airports(tma_doc),
+        "airports": _derive_served_airports(defs_doc, tma_layout),
         "units": units,
     }
-    if "zones" in tma_doc:
-        out["zones"] = deepcopy(tma_doc["zones"])
-    out["layouts"] = layouts
-    if "configurations" in tma_doc:
-        out["configurations"] = deepcopy(tma_doc["configurations"])
+    if "zones" in defs_doc:
+        out["zones"] = deepcopy(defs_doc["zones"])
+    out["layouts"] = layouts_out
     if isinstance(tma_coordination, dict) and tma_coordination.get("agreements"):
         agreements_out: list[dict] = []
-        for agr in tma_coordination["agreements"]:
+        for idx, agr in enumerate(tma_coordination["agreements"]):
             if not isinstance(agr, dict):
                 continue
             row = deepcopy(agr)
             for key in ("from", "to"):
-                if row.get(key):
-                    uid = str(row[key]).strip()
-                    if uid in aliases:
-                        row[key] = aliases[uid]
-            go_around = row.get("go_around")
-            if isinstance(go_around, dict) and go_around.get("to"):
-                uid = str(go_around["to"]).strip()
-                if uid in aliases:
-                    go_around["to"] = aliases[uid]
+                if row.get(key) in aliases:
+                    row[key] = aliases[row[key]]
+            if "level" in row:
+                lvl = row.pop("level")
+                rel = str(row.pop("release", "")).strip()
+                has_dep = bool(row.get("departs"))
+                has_arr = bool(row.get("arrives"))
+                if has_dep and not has_arr:
+                    row["climb"] = lvl
+                elif has_arr and not has_dep:
+                    row["descent"] = lvl
+                elif rel == "climb":
+                    row["climb"] = lvl
+                elif rel == "descent":
+                    row["descent"] = lvl
+                else:
+                    row["climb"] = lvl
+                    row["descent"] = lvl
+                if rel and "release_kind" not in row:
+                    row["release_kind"] = rel
+            if "priority" not in row:
+                row["priority"] = 10 + _agreement_specificity(row)
+            ga = row.get("go_around")
+            if isinstance(ga, dict):
+                if ga.get("to") in aliases:
+                    ga["to"] = aliases[ga["to"]]
+                if "level" in ga and "climb" not in ga:
+                    ga["climb"] = ga.pop("level")
             fix = row.get("fix")
             if isinstance(fix, list) and len(fix) == 1:
                 row["fix"] = fix[0]
@@ -368,15 +623,21 @@ def project_schema1_tma(
     return out
 
 
-def _collect_acc_units_for_bundle(root: Path, bundle_path: str, all_acc_units: dict[str, dict]) -> dict[str, dict]:
-    merged = dict(all_acc_units)
-    acc_path = _find_ancestor_acc_structure(root, bundle_path)
+def _collect_acc_data_for_bundle(
+    root: Path, bundle_path: str, all_acc_units: dict[str, dict], all_acc_positions: dict[str, dict]
+) -> tuple[dict[str, dict], dict[str, dict]]:
+    merged_units = dict(all_acc_units)
+    merged_positions = dict(all_acc_positions)
+    acc_path = _find_ancestor_acc_definitions(root, bundle_path)
     if acc_path is not None:
         payload = json.loads(acc_path.read_text(encoding="utf-8"))
         for unit in payload.get("units", []):
             if isinstance(unit, dict) and unit.get("id"):
-                merged[str(unit["id"]).strip()] = unit
-    return merged
+                merged_units[str(unit["id"]).strip()] = unit
+        for pos in payload.get("positions", []):
+            if isinstance(pos, dict) and pos.get("call_sign"):
+                merged_positions[str(pos["call_sign"]).strip()] = pos
+    return merged_units, merged_positions
 
 
 def _file_entry(repo_path: str, raw_bytes: bytes, *, requires: list[str] | None = None) -> dict[str, object]:
@@ -415,23 +676,28 @@ def _frozen_files_if_fresh(
     if not required <= frozen_set:
         return None
 
-    frozen_dir = root / FROZEN_DIR / bundle_path
+    frozen_rel_dir = legacy_path_for_bundle(bundle_path, index_entry)
+    frozen_dir = root / FROZEN_DIR / frozen_rel_dir
     loaded: dict[str, bytes] = {}
     for fname in sorted(frozen_set):
         fpath = frozen_dir / fname
         if not fpath.is_file():
             return None
-        loaded[fname] = fpath.read_bytes()
+        loaded[fname] = _canonical_lf(fpath.read_bytes())
     return loaded
 
 
-def _canonical_lf(raw_bytes: bytes) -> bytes:
-    return raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-
-
-def _tma_position_ids(tma_structure: dict[str, object]) -> list[str]:
+def _tma_position_ids(tma_defs: dict[str, object], tma_layout: dict[str, object] | None = None) -> list[str]:
     pos_ids: list[str] = []
-    for layout in tma_structure.get("layouts", []) or []:  # type: ignore[union-attr]
+    if tma_layout is not None:
+        radar_layouts, _ = _schema3_layouts(tma_defs, tma_layout)
+        for layout in radar_layouts:
+            for pos in layout.get("positions", []) or []:
+                sid = str(pos.get("sector", "")).strip()
+                if sid and sid not in pos_ids:
+                    pos_ids.append(sid)
+        return pos_ids
+    for layout in tma_defs.get("layouts", []) or []:  # type: ignore[union-attr]
         if not isinstance(layout, dict):
             continue
         for pos in layout.get("positions", []) or []:
@@ -483,8 +749,8 @@ def _convert_definitions_doc(
     all_pos_ids: list[str],
     aliases: dict[str, list[str]],
 ) -> dict[str, object]:
-    out = deepcopy(doc)
-    raw_rows = out.get("sector_definitions")
+    raw_rows = doc.get("volumes") if "volumes" in doc else doc.get("sector_definitions")
+    out: dict[str, object] = {}
     if isinstance(raw_rows, list):
         used_counts: dict[tuple[str, ...], int] = {}
         new_rows: list[object] = []
@@ -507,14 +773,14 @@ def _convert_definitions_doc(
                     if "delegation" not in row:
                         item["delegation"] = bool(v)
                 else:
-                    item[k] = v
+                    item[k] = deepcopy(v)
             if "sector_id" not in item:
                 item["sector_id"] = sector_id
             new_rows.append(item)
         out["sector_definitions"] = new_rows
-    if isinstance(out.get("airac_overrides"), dict):
+    if isinstance(doc.get("airac_overrides"), dict):
         overrides: dict[str, object] = {}
-        for tier, tier_doc in out["airac_overrides"].items():  # type: ignore[union-attr]
+        for tier, tier_doc in doc["airac_overrides"].items():  # type: ignore[union-attr]
             if isinstance(tier_doc, dict):
                 overrides[tier] = _convert_definitions_doc(tier_doc, all_pos_ids, aliases)
             else:
@@ -525,20 +791,18 @@ def _convert_definitions_doc(
 
 def project_sector_definitions(
     definitions_doc: dict[str, object],
-    tma_structure: dict[str, object],
+    tma_defs: dict[str, object],
+    tma_layout: dict[str, object] | None = None,
     *,
     sector_aliases: dict[str, list[str]] | None = None,
 ) -> bytes:
-    """Project schema-2 sector_definitions.json back to scalar legacy sector_id rows."""
-    all_pos_ids = _tma_position_ids(tma_structure)
+    """Project schema-3 sector_definitions.json back to scalar legacy sector_id rows."""
+    all_pos_ids = _tma_position_ids(tma_defs, tma_layout)
     converted = _convert_definitions_doc(definitions_doc, all_pos_ids, sector_aliases or {})
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
-def _convert_with_airac_overrides(
-    doc: dict[str, object],
-    convert_single,
-) -> dict[str, object]:
+def _convert_with_airac_overrides(doc: dict[str, object], convert_single) -> dict[str, object]:
     out = convert_single(doc)
     overrides = out.get("airac_overrides")
     if isinstance(overrides, dict):
@@ -552,6 +816,8 @@ def _convert_with_airac_overrides(
 def _convert_mva_single(doc: dict[str, object]) -> dict[str, object]:
     out: dict[str, object] = {}
     for k, v in doc.items():
+        if k == "schema":
+            continue
         if k == "airports" and "airport" not in doc:
             if isinstance(v, list) and len(v) == 1:
                 out["airport"] = v[0]
@@ -562,8 +828,11 @@ def _convert_mva_single(doc: dict[str, object]) -> dict[str, object]:
     return out
 
 
+def _convert_colors_or_style_single(doc: dict[str, object]) -> dict[str, object]:
+    return {k: deepcopy(v) for k, v in doc.items() if k != "schema"}
+
+
 def project_mva_payload(doc: dict[str, object]) -> bytes:
-    """Convert schema-2 mva.json ('airports') to legacy ('airport')."""
     converted = _convert_with_airac_overrides(doc, _convert_mva_single)
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
@@ -579,13 +848,38 @@ def _convert_misc_row(row: dict[str, object]) -> dict[str, object]:
 
 
 def _convert_misc_dataset(ds: dict[str, object]) -> dict[str, object]:
-    out = deepcopy(ds)
+    out = {k: deepcopy(v) for k, v in ds.items() if k != "schema"}
+    item_cfgs: list[list[object]] = []
+    all_items_have_cfg = True
+    item_count = 0
     for section in ("line_sections", "filled_polygons", "labels"):
         rows = out.get(section)
         if isinstance(rows, list):
-            out[section] = [
-                _convert_misc_row(row) if isinstance(row, dict) else row for row in rows
-            ]
+            converted_rows = [_convert_misc_row(row) if isinstance(row, dict) else row for row in rows]
+            out[section] = converted_rows
+            for r in converted_rows:
+                if isinstance(r, dict):
+                    item_count += 1
+                    cfgs = r.get("configs")
+                    if isinstance(cfgs, list) and cfgs:
+                        item_cfgs.append(cfgs)
+                    else:
+                        all_items_have_cfg = False
+    if (
+        "runway_config" not in out
+        and item_count > 0
+        and all_items_have_cfg
+        and len(item_cfgs) == item_count
+        and all(c == item_cfgs[0] for c in item_cfgs)
+    ):
+        shared = item_cfgs[0]
+        out["runway_config"] = shared[0] if len(shared) == 1 else list(shared)
+        for section in ("line_sections", "filled_polygons", "labels"):
+            rows = out.get(section)
+            if isinstance(rows, list):
+                for r in rows:
+                    if isinstance(r, dict):
+                        r.pop("configs", None)
     return out
 
 
@@ -600,126 +894,271 @@ def _convert_misc_single(doc: dict[str, object]) -> dict[str, object]:
 
 
 def project_misc_drawings_payload(doc: dict[str, object]) -> bytes:
-    """Convert schema-2 misc_drawings.json ('runway_configs') to legacy ('configs')."""
     converted = _convert_with_airac_overrides(doc, _convert_misc_single)
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
-def _convert_proc_sid_entry(
-    entry: dict[str, object],
-    *,
-    allow_aircraft_types: bool,
-    sid_label: str,
-    dropped_sids: list[tuple[str, list[str]]] | None,
-) -> dict[str, object]:
-    out_entry: dict[str, object] = {}
-    reasons: list[str] = []
-    for k, v in entry.items():
-        if k == "not_for":
-            reasons.append("not_for")
-            continue
-        if k == "only_for":
-            if allow_aircraft_types and isinstance(v, dict):
-                types = v.get("types")
-                if isinstance(types, list) and types and "aircraft_types" not in entry:
-                    out_entry["aircraft_types"] = deepcopy(types)
-                wakes = v.get("wake_categories")
-                if "wake_categories" in v and (not isinstance(wakes, list) or len(wakes) > 0):
-                    reasons.append("only_for.wake_categories")
-            else:
-                if not isinstance(v, dict) or v.get("types") or v.get("wake_categories"):
-                    reasons.append("only_for")
-            continue
-        out_entry[k] = deepcopy(v)
-    if reasons and dropped_sids is not None:
-        dropped_sids.append((sid_label, reasons))
-    return out_entry
+def _convert_alt_speed_to_legacy_constraint(spec: dict, unit_suffix: str) -> dict:
+    if unit_suffix == "ft":
+        if "at_ft" in spec:
+            return {"type": "at", "ft": spec["at_ft"]}
+        if "at_or_above_ft" in spec and "at_or_below_ft" in spec:
+            return {"type": "between", "min_ft": spec["at_or_above_ft"], "max_ft": spec["at_or_below_ft"]}
+        if "at_or_above_ft" in spec:
+            return {"type": "at_or_above", "ft": spec["at_or_above_ft"]}
+        if "at_or_below_ft" in spec:
+            return {"type": "at_or_below", "ft": spec["at_or_below_ft"]}
+    else:
+        if "at_kt" in spec:
+            return {"type": "at", "kt": spec["at_kt"]}
+        if "at_or_above_kt" in spec and "at_or_below_kt" in spec:
+            return {"type": "between", "min_kt": spec["at_or_above_kt"], "max_kt": spec["at_or_below_kt"]}
+        if "at_or_above_kt" in spec:
+            return {"type": "at_or_above", "kt": spec["at_or_above_kt"]}
+        if "at_or_below_kt" in spec:
+            return {"type": "at_or_below", "kt": spec["at_or_below_kt"]}
+    return deepcopy(spec)
 
 
-def _convert_proc_sids_bucket(
-    sids: object,
-    *,
-    allow_aircraft_types: bool,
-    prefix: str,
-    dropped_sids: list[tuple[str, list[str]]] | None,
-) -> object:
-    if not isinstance(sids, dict):
-        return deepcopy(sids)
-    out: dict[str, object] = {}
-    for sid_id, entry in sids.items():
-        if isinstance(entry, dict):
-            label = f"{prefix}{sid_id}" if prefix else str(sid_id)
-            out[sid_id] = _convert_proc_sid_entry(
-                entry,
-                allow_aircraft_types=allow_aircraft_types,
-                sid_label=label,
-                dropped_sids=dropped_sids,
-            )
-        else:
-            out[sid_id] = deepcopy(entry)
-    return out
-
-
-def _convert_proc_overrides(
-    overrides: object,
-    *,
-    axis_name: str,
-    dropped_sids: list[tuple[str, list[str]]] | None,
-) -> object:
-    if not isinstance(overrides, dict):
-        return deepcopy(overrides)
-    out: dict[str, object] = {}
-    for override_key, override_payload in overrides.items():
-        if not isinstance(override_payload, dict):
-            out[override_key] = deepcopy(override_payload)
-            continue
-        tier_out: dict[str, object] = {}
-        for k, v in override_payload.items():
-            if k == "sids":
-                tier_out[k] = _convert_proc_sids_bucket(
-                    v,
-                    allow_aircraft_types=False,
-                    prefix=f"{axis_name}.{override_key}.sids.",
-                    dropped_sids=dropped_sids,
-                )
-            else:
-                tier_out[k] = deepcopy(v)
-        out[override_key] = tier_out
-    return out
-
-
-def _convert_proc_single(
-    doc: dict[str, object],
-    *,
-    dropped_sids: list[tuple[str, list[str]]] | None = None,
-) -> dict[str, object]:
+def _convert_constraints_single(doc: dict[str, object]) -> dict[str, object]:
     out: dict[str, object] = {}
     for k, v in doc.items():
-        if k == "runway_configs" and "configs" not in doc:
-            out["configs"] = _convert_proc_overrides(
-                v, axis_name="configs", dropped_sids=dropped_sids
-            )
-        elif k == "runway_ends" and "runways" not in doc:
-            out["runways"] = _convert_proc_overrides(
-                v, axis_name="runways", dropped_sids=dropped_sids
-            )
-        elif k in ("configs", "runways"):
-            out[k] = _convert_proc_overrides(
-                v, axis_name=k, dropped_sids=dropped_sids
-            )
-        elif k == "sids":
-            out[k] = _convert_proc_sids_bucket(
-                v, allow_aircraft_types=True, prefix="", dropped_sids=dropped_sids
-            )
+        if k == "schema":
+            continue
+        if k in ("sids", "stars", "approaches", "iaps") and isinstance(v, dict):
+            dst_key = "iaps" if k == "approaches" else k
+            bucket_out: dict[str, object] = {}
+            for proc_id, fixes in v.items():
+                if not isinstance(fixes, dict):
+                    bucket_out[proc_id] = deepcopy(fixes)
+                    continue
+                fixes_out: dict[str, object] = {}
+                for fix_id, rule in fixes.items():
+                    if not isinstance(rule, dict):
+                        fixes_out[fix_id] = deepcopy(rule)
+                        continue
+                    r_out: dict[str, object] = {}
+                    if isinstance(rule.get("altitude"), dict):
+                        r_out["altitude"] = _convert_alt_speed_to_legacy_constraint(rule["altitude"], "ft")
+                    if isinstance(rule.get("speed"), dict):
+                        r_out["speed"] = _convert_alt_speed_to_legacy_constraint(rule["speed"], "kt")
+                    fixes_out[fix_id] = r_out
+                bucket_out[proc_id] = fixes_out
+            out[dst_key] = bucket_out
         else:
             out[k] = deepcopy(v)
     return out
 
 
-def project_procedure_options_payload(doc: dict[str, object]) -> bytes:
-    """Convert schema-2 procedure_options.json ('runway_configs'/'runway_ends'/'only_for') to legacy."""
-    converted = _convert_with_airac_overrides(doc, _convert_proc_single)
+def project_constraints_payload(doc: dict[str, object]) -> bytes:
+    converted = _convert_with_airac_overrides(doc, _convert_constraints_single)
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def _convert_climb_leg_to_legacy(leg: dict) -> dict:
+    out: dict[str, object] = {}
+    leg_type = str(leg.get("type", "")).strip()
+    out["path_term"] = _LEG_TYPE_TO_TERM.get(leg_type, leg_type.upper())
+    for k in ("ident", "course", "turn_direction", "distance_nm", "recommended_navaid", "endpoint"):
+        if k in leg and leg[k] is not None:
+            out[k] = deepcopy(leg[k])
+    if isinstance(leg.get("altitude"), dict):
+        alt = leg["altitude"]
+        if "at_or_above_ft" in alt and "at_or_below_ft" in alt:
+            out["altitude_description"] = "B"
+            out["altitude1"] = alt["at_or_above_ft"]
+            out["altitude2"] = alt["at_or_below_ft"]
+        elif "at_or_above_ft" in alt:
+            out["altitude_description"] = "+"
+            out["altitude1"] = alt["at_or_above_ft"]
+        elif "at_or_below_ft" in alt:
+            out["altitude_description"] = "-"
+            out["altitude1"] = alt["at_or_below_ft"]
+        elif "at_ft" in alt:
+            out["altitude_description"] = "@"
+            out["altitude1"] = alt["at_ft"]
+    if isinstance(leg.get("speed"), dict) and "at_or_below_kt" in leg["speed"]:
+        out["speed_limit"] = leg["speed"]["at_or_below_kt"]
+    if isinstance(leg.get("crossing"), dict):
+        cr = leg["crossing"]
+        c_out: dict[str, object] = {}
+        if "id" in cr:
+            c_out["id"] = cr["id"]
+        if "first_of" in cr:
+            c_out["first_of"] = deepcopy(cr["first_of"])
+        if isinstance(cr.get("altitude"), dict):
+            alt = cr["altitude"]
+            if "at_or_above_ft" in alt and "at_or_below_ft" in alt:
+                c_out["altitude1"] = alt["at_or_above_ft"]
+                c_out["altitude2"] = alt["at_or_below_ft"]
+            elif "at_or_above_ft" in alt:
+                c_out["altitude1"] = alt["at_or_above_ft"]
+            elif "at_ft" in alt:
+                c_out["altitude1"] = alt["at_ft"]
+        out["crossing"] = c_out
+    if "containment" in leg:
+        out["containment"] = deepcopy(leg["containment"])
+    return out
+
+
+def _apply_use_entry_to_slot(slot: dict, row: dict, *, allow_aircraft_types: bool) -> None:
+    if "spawn" in row:
+        slot["spawn_enabled"] = bool(row["spawn"])
+    if "join_from" in row:
+        slot["join_from"] = deepcopy(row["join_from"])
+    if allow_aircraft_types:
+        aircraft = row.get("aircraft")
+        if isinstance(aircraft, dict) and isinstance(aircraft.get("only"), dict) and aircraft["only"].get("types"):
+            slot["aircraft_types"] = deepcopy(aircraft["only"]["types"])
+        elif isinstance(row.get("only_for"), dict) and row["only_for"].get("types"):
+            slot["aircraft_types"] = deepcopy(row["only_for"]["types"])
+
+
+def _merge_proc_single_docs(
+    use_doc: dict | None,
+    climb_doc: dict | None,
+    dep_doc: dict | None,
+    *,
+    airport: str,
+) -> dict[str, object]:
+    out: dict[str, object] = {"airport": airport}
+    for d in (use_doc, climb_doc, dep_doc):
+        if isinstance(d, dict) and "airac_min" in d and "airac_min" not in out:
+            out["airac_min"] = d["airac_min"]
+
+    defaults: dict[str, object] = {}
+    if isinstance(climb_doc, dict) and "initial_climb_ft" in climb_doc:
+        defaults["init_climb"] = climb_doc["initial_climb_ft"]
+
+    # Process procedure_use rows into defaults / stars / sids / iaps / transitions / configs / runways
+    if isinstance(use_doc, dict):
+        for row in use_doc.get("use", []) or []:
+            if not isinstance(row, dict):
+                continue
+            rwys = row.get("runways") or []
+            cfgs = row.get("configs") or []
+            targets: list[tuple[dict, bool]] = []
+            if not rwys and not cfgs:
+                targets.append((out, True))
+            else:
+                for r in rwys:
+                    r_map = out.setdefault("runways", {}).setdefault(str(r), {})  # type: ignore[union-attr]
+                    targets.append((r_map, False))
+                for c in cfgs:
+                    c_map = out.setdefault("configs", {}).setdefault(str(c), {})  # type: ignore[union-attr]
+                    targets.append((c_map, False))
+            for host, is_root in targets:
+                if row.get("kind") == "all":
+                    if is_root and "spawn" in row:
+                        defaults["spawn_enabled"] = bool(row["spawn"])
+                    elif not is_root and "spawn" in row:
+                        # Blanket per-runway/config spawn rule applies across buckets
+                        host.setdefault("sids", {})
+                        if isinstance(host["sids"], dict):
+                            pass
+                    continue
+                if row.get("kind") == "transitions":
+                    trans = host.setdefault("transitions", {})
+                    if "spawn" in row:
+                        trans["spawn_enabled"] = bool(row["spawn"])
+                    continue
+                for bkey in ("sids", "stars", "approaches", "transitions"):
+                    idents = row.get(bkey)
+                    if not isinstance(idents, list) or not idents:
+                        continue
+                    dst_bucket = "iaps" if bkey == "approaches" else bkey
+                    bucket = host.setdefault(dst_bucket, {})
+                    for ident in idents:
+                        slot = bucket.setdefault(str(ident), {})
+                        _apply_use_entry_to_slot(
+                            slot, row, allow_aircraft_types=(is_root and dst_bucket == "sids")
+                        )
+
+    if defaults:
+        out["defaults"] = defaults
+
+    # Process initial_climb exceptions
+    if isinstance(climb_doc, dict):
+        for ex in climb_doc.get("exceptions", []) or []:
+            if not isinstance(ex, dict) or "initial_climb_ft" not in ex:
+                continue
+            ic = ex["initial_climb_ft"]
+            rwys = ex.get("runways") or []
+            cfgs = ex.get("configs") or []
+            sids = ex.get("sids") or []
+            if not rwys and not cfgs:
+                for sid in sids:
+                    slot = out.setdefault("sids", {}).setdefault(str(sid), {})  # type: ignore[union-attr]
+                    slot["init_climb"] = ic
+            else:
+                for r in rwys:
+                    rm = out.setdefault("runways", {}).setdefault(str(r), {})  # type: ignore[union-attr]
+                    if sids:
+                        for sid in sids:
+                            rm.setdefault("sids", {}).setdefault(str(sid), {})["init_climb"] = ic
+                    else:
+                        rm["init_climb"] = ic
+                for c in cfgs:
+                    cm = out.setdefault("configs", {}).setdefault(str(c), {})  # type: ignore[union-attr]
+                    if sids:
+                        for sid in sids:
+                            cm.setdefault("sids", {}).setdefault(str(sid), {})["init_climb"] = ic
+                    else:
+                        cm["init_climb"] = ic
+
+    # Process departure_variants
+    if isinstance(dep_doc, dict) and isinstance(dep_doc.get("sids"), dict):
+        for sid_id, s_entry in dep_doc["sids"].items():
+            if not isinstance(s_entry, dict):
+                continue
+            variants = s_entry.get("variants", [])
+            converted_vars = []
+            for v in variants:
+                if not isinstance(v, dict):
+                    continue
+                v_out: dict[str, object] = {"id": v["id"]}
+                for k in ("display_name", "runways", "auto_rule"):
+                    if k in v:
+                        v_out[k] = deepcopy(v[k])
+                v_out["legs"] = [_convert_climb_leg_to_legacy(leg) for leg in v.get("legs", [])]
+                converted_vars.append(v_out)
+            slot = out.setdefault("sids", {}).setdefault(str(sid_id), {})  # type: ignore[union-attr]
+            slot["climb_variants"] = converted_vars
+
+    return out
+
+
+def project_procedure_options_payload(
+    use_doc: dict[str, object] | None,
+    climb_doc: dict[str, object] | None = None,
+    dep_doc: dict[str, object] | None = None,
+) -> bytes:
+    """Reconstruct legacy procedure_options.json bytes from schema-3 procedure files."""
+    if isinstance(use_doc, dict) and use_doc.get("schema") != 3 and climb_doc is None and dep_doc is None:
+        # Legacy/schema-2 dict caller
+        converted = _convert_with_airac_overrides(use_doc, lambda d: d)
+        return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    airport = ""
+    for d in (use_doc, climb_doc, dep_doc):
+        if isinstance(d, dict) and d.get("airport"):
+            airport = str(d["airport"]).strip().upper()
+            break
+    base = _merge_proc_single_docs(
+        _resolve_default_doc(use_doc) if use_doc else None,
+        _resolve_default_doc(climb_doc) if climb_doc else None,
+        _resolve_default_doc(dep_doc) if dep_doc else None,
+        airport=airport,
+    )
+    overrides: dict[str, object] = {}
+    for tier in airac_overrides.TIERS:
+        u_t = (use_doc or {}).get("airac_overrides", {}).get(tier) if isinstance((use_doc or {}).get("airac_overrides"), dict) else None
+        c_t = (climb_doc or {}).get("airac_overrides", {}).get(tier) if isinstance((climb_doc or {}).get("airac_overrides"), dict) else None
+        v_t = (dep_doc or {}).get("airac_overrides", {}).get(tier) if isinstance((dep_doc or {}).get("airac_overrides"), dict) else None
+        if u_t or c_t or v_t:
+            overrides[tier] = _merge_proc_single_docs(u_t, c_t, v_t, airport=airport)
+    if overrides:
+        base["airac_overrides"] = overrides
+    return (json.dumps(base, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
 CANONICAL_TO_LEGACY_UNIT_ALIASES: dict[str, str] = {
@@ -794,35 +1233,30 @@ CANONICAL_TO_LEGACY_UNIT_ALIASES: dict[str, str] = {
 def _convert_map_display_single(
     doc: dict[str, object],
     *,
+    airport: str = "",
     unit_aliases: dict[str, str] | None = None,
 ) -> dict[str, object]:
-    out = deepcopy(doc)
-    positions = out.get("positions")
-    if not isinstance(positions, dict):
-        return out
-    aliases = {
-        str(k).strip().upper(): str(v).strip()
-        for k, v in (unit_aliases if unit_aliases is not None else CANONICAL_TO_LEGACY_UNIT_ALIASES).items()
-        if str(k).strip() and str(v).strip()
-    }
-    existing_upper = {
-        str(k).strip().upper()
-        for k in positions
-        if str(k).strip().upper() not in aliases
-    }
-    rewritten: dict[str, object] = {}
-    changed = False
-    for raw_key, block in positions.items():
-        key_str = str(raw_key)
-        upper = key_str.strip().upper()
-        legacy = aliases.get(upper)
-        if legacy and legacy != upper:
-            changed = True
-            if legacy.upper() not in existing_upper and legacy not in rewritten:
-                rewritten[legacy] = block
+    out: dict[str, object] = {}
+    if airport and "airport" not in doc:
+        out["airport"] = airport
+    for k, v in doc.items():
+        if k == "schema":
+            out["schema"] = 1
         else:
-            rewritten[key_str] = block
-    if changed:
+            out[k] = deepcopy(v)
+    if "schema" not in out:
+        out["schema"] = 1
+    positions = out.get("positions")
+    if isinstance(positions, dict):
+        aliases = {
+            str(k).strip().upper(): str(v).strip()
+            for k, v in (unit_aliases if unit_aliases is not None else CANONICAL_TO_LEGACY_UNIT_ALIASES).items()
+            if str(k).strip() and str(v).strip()
+        }
+        rewritten: dict[str, object] = {}
+        for raw_key, block in positions.items():
+            upper = str(raw_key).strip().upper()
+            rewritten[aliases.get(upper, str(raw_key))] = block
         out["positions"] = rewritten
     return out
 
@@ -830,21 +1264,44 @@ def _convert_map_display_single(
 def project_map_display_payload(
     doc: dict[str, object],
     *,
+    airport: str = "",
     unit_aliases: dict[str, str] | None = None,
 ) -> bytes:
-    """Convert schema-2 map_display.json canonical unit IDs back to legacy aliases for old builds."""
     converted = _convert_with_airac_overrides(
-        doc, lambda d: _convert_map_display_single(d, unit_aliases=unit_aliases)
+        doc, lambda d: _convert_map_display_single(d, airport=airport, unit_aliases=unit_aliases)
     )
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
-_KIND_CONVERTERS = {
-    "mva": project_mva_payload,
-    "misc_drawings": project_misc_drawings_payload,
-    "procedure_options": project_procedure_options_payload,
-    "map_display": project_map_display_payload,
-}
+def _lookup_frozen_file_entry(
+    root: Path,
+    repo_path: str,
+    kind: str,
+    files_index: dict[str, dict[str, object]],
+) -> dict[str, object] | None:
+    norm = repo_path.replace("\\", "/")
+    meta = files_index.get(norm)
+    if isinstance(meta, dict) and meta.get("kind") == kind:
+        return meta
+    for _leg_path, cand in files_index.items():
+        if cand.get("kind") == kind and norm in (cand.get("sources") or {}):
+            return cand
+    return None
+
+
+def _frozen_file_matches_sources(root: Path, meta: dict[str, object]) -> bytes | None:
+    sources = meta.get("sources")
+    if not isinstance(sources, dict):
+        return None
+    for src_rel, expected_sha in sources.items():
+        src_path = root / str(src_rel)
+        if not src_path.is_file() or _sha256_file(src_path) != str(expected_sha):
+            return None
+    frozen_rel = str(meta.get("frozen_file", ""))
+    frozen_path = root / FROZEN_DIR / frozen_rel
+    if frozen_rel and frozen_path.is_file():
+        return _canonical_lf(frozen_path.read_bytes())
+    return None
 
 
 def project_legacy_file_bytes(
@@ -855,29 +1312,57 @@ def project_legacy_file_bytes(
     force_generate: bool = False,
     files_index: dict[str, dict[str, object]] | None = None,
 ) -> bytes:
-    """Return frozen legacy bytes when schema-2 source matches index.json, else generate."""
-    raw_bytes = _canonical_lf((root / repo_path).read_bytes())
+    """Return frozen legacy bytes when schema-3 sources match index.json, else generate."""
     index = load_frozen_files_index(root) if files_index is None else files_index
-    if not force_generate:
-        meta = index.get(repo_path)
-        if isinstance(meta, dict) and meta.get("kind") == kind:
-            raw_sha = hashlib.sha256(raw_bytes).hexdigest()
-            if raw_sha == str(meta.get("source_sha256", "")):
-                frozen_rel = str(meta.get("frozen_file", ""))
-                frozen_path = root / FROZEN_DIR / frozen_rel
-                if frozen_rel and frozen_path.is_file():
-                    return _canonical_lf(frozen_path.read_bytes())
-    converter_map = {
-        "mva": _convert_mva_single,
-        "misc_drawings": _convert_misc_single,
-        "procedure_options": _convert_proc_single,
-        "map_display": _convert_map_display_single,
-    }
+    meta = _lookup_frozen_file_entry(root, repo_path, kind, index)
+    if not force_generate and isinstance(meta, dict):
+        frozen_bytes = _frozen_file_matches_sources(root, meta)
+        if frozen_bytes is not None:
+            return frozen_bytes
+
+    norm = repo_path.replace("\\", "/")
+    # Always allow legacy_only frozen files (removed skinned colors/style) to serve frozen bytes
+    if isinstance(meta, dict) and meta.get("legacy_only"):
+        frozen_rel = str(meta.get("frozen_file", ""))
+        frozen_path = root / FROZEN_DIR / frozen_rel
+        if frozen_rel and frozen_path.is_file():
+            return _canonical_lf(frozen_path.read_bytes())
+
+    if kind == "procedure_options":
+        return project_procedure_options_default_bytes(
+            root, norm, force_generate=force_generate, files_index=index
+        )
+    if kind == "map_display":
+        return project_map_display_default_bytes(
+            root, norm, force_generate=force_generate, files_index=index
+        )
+
+    # Locate schema-3 source path (handles PALMA_TMA / VALENCIA_TMA move when forced)
+    src_path = root / norm
+    if not src_path.is_file() and isinstance(meta, dict) and meta.get("sources"):
+        src_rel = next(iter(meta["sources"]))
+        src_path = root / str(src_rel)
+    elif not src_path.is_file():
+        for old_p, new_p in _BUNDLE_PATH_TO_LEGACY.items():
+            # reverse check: legacy path uses new_p
+            if norm.startswith(new_p + "/"):
+                cand = root / (old_p + norm[len(new_p):])
+                if cand.is_file():
+                    src_path = cand
+                    break
+
+    raw_bytes = _canonical_lf(src_path.read_bytes())
     doc = json.loads(raw_bytes.decode("utf-8"))
-    converted = _convert_with_airac_overrides(doc, converter_map[kind])
-    if converted == doc:
-        return raw_bytes
-    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    if kind == "mva":
+        return project_mva_payload(doc)
+    if kind == "misc_drawings":
+        return project_misc_drawings_payload(doc)
+    if kind == "constraints":
+        return project_constraints_payload(doc)
+    if kind in ("colors", "style"):
+        converted = _convert_colors_or_style_single(doc)
+        return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    return raw_bytes
 
 
 def project_map_display_default_bytes(
@@ -888,27 +1373,31 @@ def project_map_display_default_bytes(
     files_index: dict[str, dict[str, object]] | None = None,
 ) -> bytes:
     """Return default-feed legacy map_display.json bytes (airac_overrides stripped, old unit IDs)."""
-    raw_bytes = _canonical_lf((root / repo_path).read_bytes())
     index = load_frozen_files_index(root) if files_index is None else files_index
-    if not force_generate:
-        meta = index.get(repo_path)
-        if isinstance(meta, dict) and meta.get("kind") == "map_display":
-            raw_sha = hashlib.sha256(raw_bytes).hexdigest()
-            if raw_sha == str(meta.get("source_sha256", "")):
-                frozen_rel = str(meta.get("frozen_file", ""))
-                frozen_path = root / FROZEN_DIR / frozen_rel
-                if frozen_rel and frozen_path.is_file():
-                    leg_bytes = _canonical_lf(frozen_path.read_bytes())
-                    doc = json.loads(leg_bytes.decode("utf-8"))
-                    if "airac_overrides" not in doc:
-                        return leg_bytes
-                    resolved = airac_overrides.resolve(doc, "")
-                    return (json.dumps(resolved, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    meta = _lookup_frozen_file_entry(root, repo_path, "map_display", index)
+    if not force_generate and isinstance(meta, dict):
+        frozen_bytes = _frozen_file_matches_sources(root, meta)
+        if frozen_bytes is not None:
+            return frozen_bytes
+
+    norm = repo_path.replace("\\", "/")
+    src_path = root / norm
+    airport = ""
+    if not src_path.is_file():
+        parts = norm.split("/")
+        if len(parts) >= 2 and len(parts[-2]) == 4:
+            airport = parts[-2].upper()
+            cand = root / "/".join(parts[:-2]) / "map_display.json"
+            if cand.is_file():
+                src_path = cand
+        if not src_path.is_file() and isinstance(meta, dict) and meta.get("sources"):
+            src_path = root / str(next(iter(meta["sources"])))
+    raw_bytes = _canonical_lf(src_path.read_bytes())
     doc = json.loads(raw_bytes.decode("utf-8"))
     base_doc = airac_overrides.resolve(doc, "") if "airac_overrides" in doc else doc
-    converted = _convert_map_display_single(base_doc)
-    if converted == base_doc and "airac_overrides" not in doc:
-        return raw_bytes
+    if not airport and isinstance(base_doc.get("airport"), str):
+        airport = base_doc["airport"].upper()
+    converted = _convert_map_display_single(base_doc, airport=airport)
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
@@ -920,34 +1409,45 @@ def project_procedure_options_default_bytes(
     files_index: dict[str, dict[str, object]] | None = None,
 ) -> bytes:
     """Return default-feed legacy procedure_options.json bytes (airac_overrides stripped)."""
-    raw_bytes = _canonical_lf((root / repo_path).read_bytes())
     index = load_frozen_files_index(root) if files_index is None else files_index
-    if not force_generate:
-        meta = index.get(repo_path)
-        if isinstance(meta, dict) and meta.get("kind") == "procedure_options":
-            raw_sha = hashlib.sha256(raw_bytes).hexdigest()
-            if raw_sha == str(meta.get("source_sha256", "")):
-                frozen_rel = str(meta.get("frozen_file", ""))
-                frozen_path = root / FROZEN_DIR / frozen_rel
-                if frozen_rel and frozen_path.is_file():
-                    leg_bytes = _canonical_lf(frozen_path.read_bytes())
-                    doc = json.loads(leg_bytes.decode("utf-8"))
-                    if "airac_overrides" not in doc:
-                        return leg_bytes
-                    resolved = airac_overrides.resolve(doc, "")
-                    return (json.dumps(resolved, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
-    doc = json.loads(raw_bytes.decode("utf-8"))
-    base_doc = airac_overrides.resolve(doc, "") if "airac_overrides" in doc else doc
-    dropped_sids: list[tuple[str, list[str]]] = []
-    converted = _convert_proc_single(base_doc, dropped_sids=dropped_sids)
-    for sid_label, reasons in dropped_sids:
-        print(
-            f"[procedure_options] {repo_path} SID {sid_label}: dropped {', '.join(reasons)} (unsupported by legacy builds)",
-            file=sys.stderr,
-        )
-    if converted == base_doc and "airac_overrides" not in doc:
-        return raw_bytes
-    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    meta = _lookup_frozen_file_entry(root, repo_path, "procedure_options", index)
+    if not force_generate and isinstance(meta, dict):
+        frozen_bytes = _frozen_file_matches_sources(root, meta)
+        if frozen_bytes is not None:
+            doc = json.loads(frozen_bytes.decode("utf-8"))
+            if "airac_overrides" not in doc:
+                return frozen_bytes
+            resolved = airac_overrides.resolve(doc, "")
+            return (json.dumps(resolved, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+    norm = repo_path.replace("\\", "/")
+    apt_dir = (root / norm).parent
+    if not apt_dir.is_dir() and isinstance(meta, dict) and meta.get("sources"):
+        apt_dir = (root / str(next(iter(meta["sources"])))).parent
+
+    def _load_opt(name: str) -> dict | None:
+        p = apt_dir / name
+        if not p.is_file():
+            return None
+        doc = json.loads(_canonical_lf(p.read_bytes()).decode("utf-8"))
+        return airac_overrides.resolve(doc, "") if "airac_overrides" in doc else doc
+
+    use_doc = _load_opt("procedure_use.json")
+    climb_doc = _load_opt("initial_climb.json")
+    dep_doc = _load_opt("departure_variants.json")
+    if use_doc is None and climb_doc is None and dep_doc is None:
+        legacy_p = apt_dir / "procedure_options.json"
+        doc = json.loads(_canonical_lf(legacy_p.read_bytes()).decode("utf-8"))
+        base = airac_overrides.resolve(doc, "") if "airac_overrides" in doc else doc
+        return (json.dumps(base, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+    airport = apt_dir.name.upper()
+    for d in (use_doc, climb_doc, dep_doc):
+        if isinstance(d, dict) and d.get("airport"):
+            airport = str(d["airport"]).strip().upper()
+            break
+    merged = _merge_proc_single_docs(use_doc, climb_doc, dep_doc, airport=airport)
+    return (json.dumps(merged, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
 def _file_meta(raw_bytes: bytes) -> tuple[str, int]:
@@ -962,24 +1462,13 @@ def project_release_dataset_feeds(
     projected_bytes: dict[str, bytes] | None = None,
     force_generate: bool = False,
 ) -> tuple[dict[str, bytes], dict[str, str]]:
-    """Apply legacy projections to default & full manifests for mva, misc_drawings, or sector_data.
-
-    Returns ``(generated_bytes, archive_sources)`` for full archives; default archives read
-    projected bytes for matching repo_paths.
-    """
+    """Apply legacy projections to default & full manifests for datasets."""
     if kind == "sector_data":
         generated = dict(projected_bytes or {})
         archive_sources: dict[str, str] = {}
         new_full_entries: list[dict[str, object]] = []
         raw_entries = gated.get("full_entries", [])
         if isinstance(raw_entries, list):
-            airac_override_ids = {
-                str(e.get("id", ""))
-                for e in raw_entries
-                if isinstance(e, dict)
-                and isinstance(e.get("requires"), list)
-                and airac_overrides.CAPABILITY in e["requires"]
-            }
             for entry in raw_entries:
                 if not isinstance(entry, dict):
                     continue
@@ -992,59 +1481,7 @@ def project_release_dataset_feeds(
                         rp = str(file_entry["repo_path"])
                         orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
                         archive_sources[rp] = orig
-                reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
-                def_entry = files.get("definitions")
-                if not isinstance(def_entry, dict):
-                    new_full_entries.append(entry)
-                    continue
-                def_repo = str(def_entry.get("repo_path", ""))
-                orig_def = def_repo[len("airac_variants/") :] if def_repo.startswith("airac_variants/") else def_repo
-                disk_path = root / orig_def if orig_def else None
-                disk_bytes = _canonical_lf(disk_path.read_bytes()) if disk_path and disk_path.is_file() else None
-                leg_bytes = generated.get(orig_def)
-                has_def_variant = disk_bytes is not None and leg_bytes is not None and leg_bytes != disk_bytes
-                has_def_overrides = (
-                    disk_bytes is not None
-                    and "airac_overrides" in json.loads(disk_bytes.decode("utf-8"))
-                )
-                if AIRSPACE_FILES_CAPABILITY in reqs or airac_overrides.CAPABILITY in reqs:
-                    if has_def_variant and not def_repo.startswith("airac_variants/"):
-                        variant_repo = f"airac_variants/{orig_def}"
-                        files["definitions"] = _file_entry(
-                            variant_repo, disk_bytes, requires=[AIRSPACE_FILES_CAPABILITY]
-                        )
-                        extra = {AIRSPACE_FILES_CAPABILITY}
-                        if has_def_overrides:
-                            extra.add(airac_overrides.CAPABILITY)
-                        entry["requires"] = sorted(set(reqs) | extra)
-                        generated[variant_repo] = disk_bytes
-                        archive_sources[variant_repo] = variant_repo
-                    elif AIRSPACE_FILES_CAPABILITY not in reqs:
-                        entry["requires"] = sorted(set(reqs) | {AIRSPACE_FILES_CAPABILITY})
-                    new_full_entries.append(entry)
-                    continue
                 new_full_entries.append(entry)
-                if has_def_variant and not (
-                    has_def_overrides and str(entry.get("id", "")) in airac_override_ids
-                ):
-                    s2_files = {k: dict(v) for k, v in files.items() if isinstance(v, dict)}
-                    variant_repo = f"airac_variants/{orig_def}"
-                    s2_files["definitions"] = _file_entry(
-                        variant_repo, disk_bytes, requires=[AIRSPACE_FILES_CAPABILITY]
-                    )
-                    extra_reqs = {AIRSPACE_FILES_CAPABILITY}
-                    if has_def_overrides:
-                        extra_reqs.add(airac_overrides.CAPABILITY)
-                    s2_entry: dict[str, object] = {
-                        "id": entry["id"],
-                        "requires": sorted(set(reqs) | extra_reqs),
-                        "files": s2_files,
-                    }
-                    if "channels" in entry:
-                        s2_entry["channels"] = list(entry["channels"])
-                    new_full_entries.append(s2_entry)
-                    generated[variant_repo] = disk_bytes
-                    archive_sources[variant_repo] = variant_repo
         gated["full_entries"] = new_full_entries
         return generated, archive_sources
 
@@ -1056,7 +1493,7 @@ def project_release_dataset_feeds(
             if not isinstance(entry, dict):
                 continue
             rp = str(entry.get("repo_path", ""))
-            if not rp or not (root / rp).is_file():
+            if not rp:
                 continue
             leg_bytes = generated.get(rp)
             if leg_bytes is None:
@@ -1077,22 +1514,27 @@ def project_release_dataset_feeds(
                 continue
             rp = str(entry.get("repo_path", ""))
             orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
-            if not orig or not (root / orig).is_file():
+            reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
+            s3_rp = orig
+            if not (root / orig).is_file():
+                meta = _lookup_frozen_file_entry(root, orig, kind, files_index)
+                if isinstance(meta, dict) and meta.get("sources"):
+                    s3_rp = str(next(iter(meta["sources"])))
+            if not s3_rp or not (root / s3_rp).is_file():
                 new_full_entries.append(entry)
                 if rp:
-                    archive_sources[rp] = orig or rp
+                    archive_sources[rp] = s3_rp or rp
                 continue
-            disk_bytes = _canonical_lf((root / orig).read_bytes())
+            disk_bytes = _canonical_lf((root / s3_rp).read_bytes())
             leg_bytes = generated.get(orig)
             if leg_bytes is None:
                 leg_bytes = project_legacy_file_bytes(
                     root, orig, kind, force_generate=force_generate, files_index=files_index
                 )
                 generated[orig] = leg_bytes
-            reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
             if AIRSPACE_FILES_CAPABILITY in reqs:
                 new_full_entries.append(entry)
-                archive_sources[rp] = orig
+                archive_sources[rp] = s3_rp
                 continue
             if leg_bytes != disk_bytes:
                 sha, size = _file_meta(leg_bytes)
@@ -1102,19 +1544,19 @@ def project_release_dataset_feeds(
                 new_full_entries.append(legacy_entry)
                 archive_sources[rp] = orig
 
-                variant_repo = f"airac_variants/{orig}"
+                variant_repo = f"airac_variants/{s3_rp}"
                 d_sha, d_size = _file_meta(disk_bytes)
-                s2_entry = dict(entry)
-                s2_entry["repo_path"] = variant_repo
-                s2_entry["sha256"] = d_sha
-                s2_entry["size_bytes"] = d_size
-                s2_entry["requires"] = sorted(set(reqs) | {AIRSPACE_FILES_CAPABILITY})
-                new_full_entries.append(s2_entry)
+                s3_entry = dict(entry)
+                s3_entry["repo_path"] = variant_repo
+                s3_entry["sha256"] = d_sha
+                s3_entry["size_bytes"] = d_size
+                s3_entry["requires"] = sorted(set(reqs) | {AIRSPACE_FILES_CAPABILITY})
+                new_full_entries.append(s3_entry)
                 generated[variant_repo] = disk_bytes
-                archive_sources[variant_repo] = orig
+                archive_sources[variant_repo] = s3_rp
             else:
                 new_full_entries.append(entry)
-                archive_sources[rp] = orig
+                archive_sources[rp] = s3_rp
     gated["full_entries"] = new_full_entries
     return generated, archive_sources
 
@@ -1125,21 +1567,26 @@ def build_sector_release_projection(
     *,
     force_generate: bool = False,
 ) -> dict[str, object]:
-    """Augment schema-2 source bundles with frozen or projected legacy and schema-1 tma files.
+    """Augment schema-3 source bundles with frozen or projected legacy and schema-1 tma files.
 
-    Returns ``{"bundles", "projected_bytes", "bundle_paths", "frozen_bundles", "generated_bundles"}``.
+    Old/moved bundles (e.g. ``PALMA_TMA``, ``VALENCIA_TMA``) keep their frozen legacy bundle paths
+    on the default legacy feed while canonical schema-3 files remain at their schema-3 paths.
     """
     index_bundles = load_frozen_index(root)
     all_acc_units: dict[str, dict] = {}
+    all_acc_positions: dict[str, dict] = {}
     for bundle_entry in source_bundles.values():
         files = bundle_entry.get("files", {}) if isinstance(bundle_entry, dict) else {}
-        acc_entry = files.get("acc_structure") if isinstance(files, dict) else None
+        acc_entry = (files.get("acc_definitions") or files.get("acc_structure")) if isinstance(files, dict) else None
         if isinstance(acc_entry, dict):
             acc_path = root / str(acc_entry["repo_path"])
             payload = json.loads(acc_path.read_text(encoding="utf-8"))
             for unit in payload.get("units", []):
                 if isinstance(unit, dict) and unit.get("id"):
                     all_acc_units[str(unit["id"]).strip()] = unit
+            for pos in payload.get("positions", []):
+                if isinstance(pos, dict) and pos.get("call_sign"):
+                    all_acc_positions[str(pos["call_sign"]).strip()] = pos
 
     projected_bundles: dict[str, dict[str, object]] = {}
     projected_bytes: dict[str, bytes] = {}
@@ -1153,46 +1600,51 @@ def build_sector_release_projection(
         src_files = bundle_entry["files"]
         out_files = {kind: dict(entry) for kind, entry in src_files.items() if isinstance(entry, dict)}
 
-        if "tma_structure" in out_files:
+        if "tma_definitions" in out_files and "tma_layout" in out_files:
             index_entry = index_bundles.get(bundle_path)
+            leg_bundle_path = legacy_path_for_bundle(bundle_path, index_entry)
             frozen_files = (
                 None
                 if force_generate
                 else _frozen_files_if_fresh(root, bundle_path, out_files, index_entry)
             )
-            cfg_repo = f"{bundle_path}/sector_configs.json"
-            inf_repo = f"{bundle_path}/sector_influence.json"
-            tma_repo = f"{bundle_path}/tma.json"
-            def_repo = (
+            cfg_repo = f"{leg_bundle_path}/sector_configs.json"
+            inf_repo = f"{leg_bundle_path}/sector_influence.json"
+            tma_repo = f"{leg_bundle_path}/tma.json"
+            def_repo = f"{leg_bundle_path}/sector_definitions.json"
+            s3_def_repo = (
                 str(out_files["definitions"]["repo_path"])
                 if isinstance(out_files.get("definitions"), dict)
                 else f"{bundle_path}/sector_definitions.json"
             )
 
+            # Build legacy projection dictionary keyed by leg_bundle_path for old builds
+            leg_files: dict[str, object] = {}
             if frozen_files is not None:
-                bundle_paths[bundle_path] = "frozen"
-                frozen_bundles.append(bundle_path)
+                bundle_paths[leg_bundle_path] = "frozen"
+                frozen_bundles.append(leg_bundle_path)
                 cfg_bytes = frozen_files["sector_configs.json"]
                 inf_bytes = frozen_files["sector_influence.json"]
                 def_bytes = frozen_files["sector_definitions.json"]
                 projected_bytes[cfg_repo] = cfg_bytes
                 projected_bytes[inf_repo] = inf_bytes
                 projected_bytes[def_repo] = def_bytes
-                out_files["configs"] = _file_entry(cfg_repo, cfg_bytes)
-                out_files["influence"] = _file_entry(inf_repo, inf_bytes)
-                out_files["definitions"] = _file_entry(def_repo, def_bytes)
+                leg_files["configs"] = _file_entry(cfg_repo, cfg_bytes)
+                leg_files["influence"] = _file_entry(inf_repo, inf_bytes)
+                leg_files["definitions"] = _file_entry(def_repo, def_bytes)
                 if "tma.json" in frozen_files:
                     tma_bytes = frozen_files["tma.json"]
                     projected_bytes[tma_repo] = tma_bytes
-                    out_files["tma"] = _file_entry(tma_repo, tma_bytes, requires=[TMA_FILE_CAPABILITY])
+                    leg_files["tma"] = _file_entry(tma_repo, tma_bytes, requires=[TMA_FILE_CAPABILITY])
             else:
-                bundle_paths[bundle_path] = "generated"
-                generated_bundles.append(bundle_path)
-                tma_struct_path = root / str(out_files["tma_structure"]["repo_path"])
-                tma_structure = json.loads(tma_struct_path.read_text(encoding="utf-8"))
+                bundle_paths[leg_bundle_path] = "generated"
+                generated_bundles.append(leg_bundle_path)
+                tma_defs = json.loads((root / str(out_files["tma_definitions"]["repo_path"])).read_text(encoding="utf-8"))
+                tma_layout = json.loads((root / str(out_files["tma_layout"]["repo_path"])).read_text(encoding="utf-8"))
                 meta = index_entry or {}
                 cfg_payload, inf_payload = project_configs_and_influence(
-                    tma_structure,
+                    tma_defs,
+                    tma_layout,
                     sector_aliases=meta.get("sector_aliases"),  # type: ignore[arg-type]
                     configs_airport=meta.get("configs_airport"),  # type: ignore[arg-type]
                     influence_airport=meta.get("influence_airport"),  # type: ignore[arg-type]
@@ -1202,42 +1654,58 @@ def build_sector_release_projection(
                 inf_bytes = (json.dumps(inf_payload, indent=2) + "\n").encode("utf-8")
                 projected_bytes[cfg_repo] = cfg_bytes
                 projected_bytes[inf_repo] = inf_bytes
-                out_files["configs"] = _file_entry(cfg_repo, cfg_bytes)
-                out_files["influence"] = _file_entry(inf_repo, inf_bytes)
+                leg_files["configs"] = _file_entry(cfg_repo, cfg_bytes)
+                leg_files["influence"] = _file_entry(inf_repo, inf_bytes)
 
                 if isinstance(out_files.get("definitions"), dict):
-                    def_raw = _canonical_lf((root / def_repo).read_bytes())
+                    def_raw = _canonical_lf((root / s3_def_repo).read_bytes())
                     defs_doc = json.loads(def_raw.decode("utf-8"))
-                    all_pos_ids = _tma_position_ids(tma_structure)
+                    all_pos_ids = _tma_position_ids(tma_defs, tma_layout)
                     default_defs = _resolve_default_doc(defs_doc)
                     converted_defs = _convert_definitions_doc(
                         default_defs, all_pos_ids, meta.get("sector_aliases") or {}  # type: ignore[arg-type]
                     )
-                    if converted_defs != defs_doc:
-                        def_bytes = (
-                            json.dumps(converted_defs, indent=2, ensure_ascii=False) + "\n"
-                        ).encode("utf-8")
-                        projected_bytes[def_repo] = def_bytes
-                        out_files["definitions"] = _file_entry(def_repo, def_bytes)
+                    def_bytes = (
+                        json.dumps(converted_defs, indent=2, ensure_ascii=False) + "\n"
+                    ).encode("utf-8")
+                    projected_bytes[def_repo] = def_bytes
+                    leg_files["definitions"] = _file_entry(def_repo, def_bytes)
 
                 if "tma_coordination" in out_files:
                     coord_path = root / str(out_files["tma_coordination"]["repo_path"])
                     tma_coordination = json.loads(coord_path.read_text(encoding="utf-8"))
-                    acc_units = _collect_acc_units_for_bundle(root, bundle_path, all_acc_units)
-                    bundle_key = Path(bundle_path).name
+                    acc_units, acc_pos = _collect_acc_data_for_bundle(
+                        root, bundle_path, all_acc_units, all_acc_positions
+                    )
+                    bundle_key = Path(leg_bundle_path).name
                     tma_payload = project_schema1_tma(
-                        tma_structure,
+                        tma_defs,
+                        tma_layout,
                         tma_coordination,
                         acc_units,
                         bundle_key,
+                        acc_positions_by_cs=acc_pos,
                         unit_aliases=meta.get("unit_aliases"),  # type: ignore[arg-type]
                         tma_name=meta.get("tma_name"),  # type: ignore[arg-type]
                     )
                     tma_bytes = (json.dumps(tma_payload, indent=2) + "\n").encode("utf-8")
                     projected_bytes[tma_repo] = tma_bytes
-                    out_files["tma"] = _file_entry(tma_repo, tma_bytes, requires=[TMA_FILE_CAPABILITY])
+                    leg_files["tma"] = _file_entry(tma_repo, tma_bytes, requires=[TMA_FILE_CAPABILITY])
 
-        projected_bundles[bundle_path] = {"files": out_files}
+            if leg_bundle_path == bundle_path:
+                merged = dict(leg_files)
+                for kind, entry in out_files.items():
+                    if kind not in ("definitions", "configs", "influence", "tma"):
+                        merged[kind] = entry
+                    elif kind == "definitions":
+                        merged["definitions_schema3"] = entry
+                projected_bundles[bundle_path] = {"files": merged}
+            else:
+                # Emit legacy entry at moved old path AND schema-3 entry at new canonical path
+                projected_bundles[leg_bundle_path] = {"files": leg_files}
+                projected_bundles[bundle_path] = {"files": out_files}
+        else:
+            projected_bundles[bundle_path] = {"files": out_files}
 
     return {
         "bundles": dict(sorted(projected_bundles.items())),
@@ -1263,7 +1731,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--out-dir", type=Path, help="Write projected legacy files into this directory")
     parser.add_argument("--validate-only", action="store_true", help="Validate projection without writing")
-    parser.add_argument("--force-generate", action="store_true", help="Ignore frozen snapshots and generate all bundles from schema 2")
+    parser.add_argument("--force-generate", action="store_true", help="Ignore frozen snapshots and generate all bundles from schema 3")
     args = parser.parse_args()
 
     try:

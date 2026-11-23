@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "airport": "LLBG",
+  "go_arounds": [
+    {
+      "procedure_id": "LLBG_GAVRI_RNAV_VISUAL_RWY30",
+      "variant_id": "LLBG_RWY30_GAVRI",
+      "runway": "30",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - GAVRI VISUAL RNAV RWY 30",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-2_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "REQUEST_INSTRUCTIONS",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "DER30",
+          "path_term": "TF",
+          "latitude": 32.0141944444,
+          "longitude": 34.8668333333,
+          "altitude1": 700,
+          "altitude_desc": "+",
+          "speed_limit": 185,
+          "distance": 1.7
+        },
+        {
+          "sequence": 20,
+          "ident": "COURSE296",
+          "path_term": "CA",
+          "course": 296,
+          "altitude1": 700,
+          "altitude_desc": "+",
+          "speed_limit": 185
+        },
+        {
+          "sequence": 30,
+          "ident": "BG050",
+          "path_term": "DF",
+          "latitude": 32.0155277778,
+          "longitude": 34.7349722222,
+          "turn_direction": "L",
+          "altitude1": 3000,
+          "altitude2": 4000,
+          "altitude_desc": "B",
+          "speed_limit": 220
+        },
+        {
+          "sequence": 40,
+          "ident": "BG050",
+          "path_term": "FM",
+          "latitude": 32.0155277778,
+          "longitude": 34.7349722222,
+          "course": 270,
+          "turn_direction": "R",
+          "altitude1": 4000,
+          "altitude_desc": "@"
+        }
+      ]
+    },
+    {
+      "procedure_id": "LLBG_NAMIM_RNAV_VISUAL_RWY21",
+      "variant_id": "LLBG_RWY21_NAMIM_TADOV",
+      "runway": "21",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - NAMIM VISUAL RNAV RWY 21",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_21NAMIM_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "HOLD_INDEFINITE",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "COURSE204",
+          "path_term": "CA",
+          "course": 204,
+          "altitude1": 1000,
+          "altitude_desc": "+",
+          "speed_limit": 190
+        },
+        {
+          "sequence": 20,
+          "ident": "GEMDA",
+          "path_term": "DF",
+          "latitude": 32.0572222222,
+          "longitude": 34.9966666667,
+          "turn_direction": "L",
+          "altitude1": 5000,
+          "altitude_desc": "@",
+          "speed_limit": 190
+        },
+        {
+          "sequence": 30,
+          "ident": "GEMDA",
+          "path_term": "HM",
+          "latitude": 32.0572222222,
+          "longitude": 34.9966666667,
+          "course": 348,
+          "turn_direction": "L",
+          "altitude1": 5000,
+          "altitude_desc": "@",
+          "speed_limit": 230,
+          "distance": 1.0
+        }
+      ]
+    },
+    {
+      "procedure_id": "LLBG_NAMIM_RNAV_VISUAL_RWY21",
+      "variant_id": "LLBG_RWY21_NAMIM_GINTU",
+      "runway": "21",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - NAMIM VISUAL RNAV RWY 21",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_21NAMIM_V1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "HOLD_INDEFINITE",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "COURSE204",
+          "path_term": "CA",
+          "course": 204,
+          "altitude1": 1000,
+          "altitude_desc": "+",
+          "speed_limit": 190
+        },
+        {
+          "sequence": 20,
+          "ident": "GEMDA",
+          "path_term": "DF",
+          "latitude": 32.0572222222,
+          "longitude": 34.9966666667,
+          "turn_direction": "L",
+          "altitude1": 5000,
+          "altitude_desc": "@",
+          "speed_limit": 190
+        },
+        {
+          "sequence": 30,
+          "ident": "GEMDA",
+          "path_term": "HM",
+          "latitude": 32.0572222222,
+          "longitude": 34.9966666667,
+          "course": 348,
+          "turn_direction": "L",
+          "altitude1": 5000,
+          "altitude_desc": "@",
+          "speed_limit": 230,
+          "distance": 1.0
+        }
+      ]
+    },
+    {
+      "procedure_id": "LLBG_ROMIE_RNAV_VISUAL_RWY30",
+      "variant_id": "LLBG_RWY30_ROMIE",
+      "runway": "30",
+      "source": {
+        "authority": "Israel CAA eAIP",
+        "chart_title": "LLBG - ROMIE VISUAL RNAV RWY 30",
+        "url": "https://e-aip.azurefd.net/2026-08-06-AIRAC/graphics/eAIP/LL_AD_2_LLBG_VAC_30-3_v1_en.pdf",
+        "effective_date": "2026-08-06",
+        "checked_date": "2026-08-27"
+      },
+      "terminal_policy": "REQUEST_INSTRUCTIONS",
+      "legs": [
+        {
+          "sequence": 10,
+          "ident": "DER30",
+          "path_term": "TF",
+          "latitude": 32.0141944444,
+          "longitude": 34.8668333333,
+          "altitude1": 700,
+          "altitude_desc": "+",
+          "speed_limit": 185,
+          "distance": 1.7
+        },
+        {
+          "sequence": 20,
+          "ident": "COURSE296",
+          "path_term": "CA",
+          "course": 296,
+          "altitude1": 700,
+          "altitude_desc": "+",
+          "speed_limit": 185
+        },
+        {
+          "sequence": 30,
+          "ident": "BG050",
+          "path_term": "DF",
+          "latitude": 32.0155277778,
+          "longitude": 34.7349722222,
+          "turn_direction": "L",
+          "altitude1": 3000,
+          "altitude2": 4000,
+          "altitude_desc": "B",
+          "speed_limit": 220
+        },
+        {
+          "sequence": 40,
+          "ident": "BG050",
+          "path_term": "FM",
+          "latitude": 32.0155277778,
+          "longitude": 34.7349722222,
+          "course": 270,
+          "turn_direction": "R",
+          "altitude1": 4000,
+          "altitude_desc": "@"
+        }
+      ]
+    }
+  ]
+}

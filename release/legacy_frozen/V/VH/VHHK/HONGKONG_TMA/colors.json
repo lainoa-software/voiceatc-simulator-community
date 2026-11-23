@@ -1,0 +1,32 @@
+{
+  "bg_color": "26263A",
+  "controlled_sector_color": "26263A",
+
+  "assumed_tfc_color": "E6C88C",
+  "incoming_tfc_color": "E68C64",
+  "selected_tfc_color": "FFFFFF",
+  "dragging_tfc_color": "FFFFFF",
+  "alien_tfc_color": "E68C64",
+  "alien_cs_color": "E68C64",
+  "released_tfc_color": "E68C64",
+  "released_cs_color": "E68C64",
+
+  "wake_light_color": "E6C88C",
+  "wake_medium_color": "E6C88C",
+  "wake_heavy_color": "FF00FF",
+  "wake_super_color": "C00000",
+
+  "geo_color": "505050",
+  "sid_color": "6E826E",
+  "star_color": "6E6E8C",
+  "tran_color": "6C7F6C",
+  "fix_color": "6E6E8C",
+  "vor_color": "FFFFFF",
+  "rwy_color": "000000",
+  "ils_color": "DC7800",
+
+  "qdm_color": "DC7800",
+  "route_tab_color": "800000",
+  "mrva_color": "64647D",
+  "alert_color": "FF0000"
+}
