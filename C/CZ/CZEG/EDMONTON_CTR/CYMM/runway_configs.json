@@ -1,0 +1,17 @@
+{
+  "airport": "CYMM",
+  "runway_configs": [
+    {
+      "id": "WEST_FLOW",
+      "name": "West Flow",
+      "arr": "26",
+      "dep": "26"
+    },
+    {
+      "id": "EAST_FLOW",
+      "name": "East Flow",
+      "arr": "08",
+      "dep": "08"
+    }
+  ]
+}
