@@ -4,10 +4,10 @@
     "LEPA_APP": {
       "3D": {
         "positions": {
-          "LEPA_APP": [
+          "LECP_APR_APP": [
             "LECPAPR"
           ],
-          "LEMH_LECPMXX_APP": [
+          "LECP_MXX_APP": [
             "LECPMXX"
           ]
         },
@@ -30,6 +30,16 @@
           "LEIB",
           "LEMH"
         ]
+      }
+    },
+    "LEMH_TWR": {
+      "1": {
+        "positions": {
+          "LEMH_APP": [
+            "LEMHAPP",
+            "LEMHCTR"
+          ]
+        }
       }
     }
   },

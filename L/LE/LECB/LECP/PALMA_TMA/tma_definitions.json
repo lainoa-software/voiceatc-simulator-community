@@ -42,7 +42,8 @@
       "id": "LEMH_TWR",
       "call_sign": "Menorca Tower",
       "services": [
-        "tower"
+        "tower",
+        "approach_conventional"
       ],
       "airport": "LEMH"
     },
@@ -56,7 +57,7 @@
   ],
   "positions": [
     {
-      "call_sign": "LEPA_APP",
+      "call_sign": "LECP_APR_APP",
       "unit": "LEPA_APP",
       "frequency": "119.155"
     },
@@ -66,14 +67,26 @@
       "frequency": "134.825"
     },
     {
-      "call_sign": "LEMH_LECPMXX_APP",
+      "call_sign": "LECP_MXX_APP",
       "unit": "LEPA_APP",
       "frequency": "120.700"
+    },
+    {
+      "call_sign": "LEMH_APP",
+      "unit": "LEMH_TWR",
+      "frequency": "119.655"
     },
     {
       "call_sign": "LEBL_APP",
       "unit": "LEBL_APP",
       "frequency": "131.125"
+    }
+  ],
+  "zones": [
+    {
+      "airport": "LEMH",
+      "kind": "CTR",
+      "sector": "LEMHCTR"
     }
   ]
 }

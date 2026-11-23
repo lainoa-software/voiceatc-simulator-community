@@ -124,7 +124,7 @@
     },
     {
       "name": "LEPA_ARR_RIXOT",
-      "from": "LEMH_LECPMXX_APP",
+      "from": "LECP_MXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -136,7 +136,7 @@
     },
     {
       "name": "LEPA_ARR_MORSS",
-      "from": "LEMH_LECPMXX_APP",
+      "from": "LECP_MXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -148,7 +148,7 @@
     },
     {
       "name": "LEPA_ARR_MAMEB",
-      "from": "LEMH_LECPMXX_APP",
+      "from": "LECP_MXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -363,7 +363,7 @@
     },
     {
       "name": "LEIB_ARR_NEVIC",
-      "from": "LEMH_LECPMXX_APP",
+      "from": "LECP_MXX_APP",
       "to": "LEIB_APP",
       "arrives": [
         "LEIB"
@@ -448,7 +448,7 @@
     {
       "name": "LEMH_ARR_CDP",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -463,7 +463,7 @@
     {
       "name": "LEMH_ARR_TONIS",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -478,7 +478,7 @@
     {
       "name": "LEMH_ARR_PTC",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -489,6 +489,19 @@
         "PTC"
       ],
       "level": "F140"
+    },
+    {
+      "name": "LEMH_ARR_BALIO_DONAV",
+      "from": "LECP_MXX_APP",
+      "to": "LEMH_APP",
+      "arrives": [
+        "LEMH"
+      ],
+      "fix": [
+        "BALIO",
+        "DONAV"
+      ],
+      "level": "F070"
     },
     {
       "name": "LEPA_DEP_DRAGO",
@@ -661,7 +674,7 @@
     {
       "name": "LEPA_DEP_MEROS_WEST",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -677,7 +690,7 @@
     {
       "name": "LEPA_DEP_MEROS_EAST",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -693,7 +706,7 @@
     {
       "name": "LEPA_DEP_ISTER",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -705,7 +718,7 @@
     {
       "name": "LEPA_DEP_MORSS",
       "from": "LEPA_APP",
-      "to": "LEMH_LECPMXX_APP",
+      "to": "LECP_MXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -800,7 +813,7 @@
     },
     {
       "name": "LEMH_DEP_LUNIK",
-      "from": "LEMH_LECPMXX_APP",
+      "from": "LECP_MXX_APP",
       "to": "LEPA_APP",
       "departs": [
         "LEMH"
@@ -821,6 +834,15 @@
         "LUNIK"
       ],
       "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_MXX",
+      "from": "LEMH_APP",
+      "to": "LECP_MXX_APP",
+      "departs": [
+        "LEMH"
+      ],
+      "level": "A060"
     }
   ]
 }
