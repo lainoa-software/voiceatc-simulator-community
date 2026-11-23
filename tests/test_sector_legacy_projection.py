@@ -15,22 +15,12 @@ class SectorLegacyProjectionTests(unittest.TestCase):
         projection = sector_legacy_projection.build_sector_release_projection(REPO_ROOT, source_bundles)
         index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
 
-        expected_generated = [
-            "K/KZAU/MILWAUKEE_TMA",
-            "L/LE/LECB/LECB_E/PALMA_TMA",
-            "L/LE/LECB/LECB_W/BARCELONA_TMA",
-            "L/LE/LECB/LECB_W/VALENCIA_TMA",
-            "L/LE/LECM/LECM_R1/BILBAO_TMA",
-            "L/LE/LECM/LECM_R1/GALICIA_TMA",
-            "L/LE/LECM/LECM_R2/MADRID_TMA",
-            "L/LE/LECM/LECS/MALAGA_TMA",
-            "L/LE/LECM/LECS/SEVILLA_TMA",
-        ]
+        expected_generated = ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"]
         self.assertEqual(136, len(index))
-        self.assertEqual(127, len(projection["frozen_bundles"]))
+        self.assertEqual(134, len(projection["frozen_bundles"]))
         self.assertEqual(expected_generated, projection["generated_bundles"])
         self.assertEqual(
-            f"Sector projection: 127 frozen, 9 generated ({', '.join(expected_generated)}).",
+            "Sector projection: 134 frozen, 2 generated (K/KZAU/MILWAUKEE_TMA, L/LE/LECB/LECB_W/VALENCIA_TMA).",
             sector_legacy_projection.format_projection_report(projection),
         )
 
@@ -528,22 +518,12 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 actual_sd_diffs.add(leg_path)
         self.assertEqual(intentional_sd_diffs, actual_sd_diffs)
 
-        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (127/136):
+        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (134/136):
         norm_proj = sector_legacy_projection.build_sector_release_projection(
             REPO_ROOT, source_bundles, force_generate=False
         )
         self.assertEqual(
-            [
-                "K/KZAU/MILWAUKEE_TMA",
-                "L/LE/LECB/LECB_E/PALMA_TMA",
-                "L/LE/LECB/LECB_W/BARCELONA_TMA",
-                "L/LE/LECB/LECB_W/VALENCIA_TMA",
-                "L/LE/LECM/LECM_R1/BILBAO_TMA",
-                "L/LE/LECM/LECM_R1/GALICIA_TMA",
-                "L/LE/LECM/LECM_R2/MADRID_TMA",
-                "L/LE/LECM/LECS/MALAGA_TMA",
-                "L/LE/LECM/LECS/SEVILLA_TMA",
-            ],
+            ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"],
             sorted(norm_proj["generated_bundles"]),
         )
         for leg_path in norm_proj["frozen_bundles"]:

@@ -534,23 +534,41 @@ def build_release_bundle(
     )
 
     color_canonical_profiles = color_canonical_manifest["profiles"]
-    color_canonical_paths = sorted(release_gates.entry_repo_paths(color_canonical_profiles))
-    color_full_sources = {path: path for path in color_canonical_paths}
-    color_full_generated = {
-        path: (root / path).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
-        for path in color_canonical_paths
-    }
+    color_full_sources = dict(color_archive_sources)
+    color_full_generated = dict(color_generated_bytes)
     gated_color_full = release_gates.apply_gates(
         "color_profiles",
         color_canonical_profiles,
         gates=gates,
         required_kinds=("colors",),
     )
-    color_full_entries = []
+    color_full_entries: list[object] = list(gated["color_profiles"]["full_entries"])
     for entry in gated_color_full["full_entries"]:
         if isinstance(entry, dict):
             reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
             updated = dict(entry)
+            files = entry.get("files")
+            if isinstance(files, dict):
+                updated_files: dict[str, object] = {}
+                for fkind, fentry in files.items():
+                    if isinstance(fentry, dict) and fentry.get("repo_path"):
+                        orig_path = str(fentry["repo_path"])
+                        variant_path = (
+                            orig_path
+                            if orig_path.startswith("airac_variants/")
+                            else f"airac_variants/{orig_path}"
+                        )
+                        raw_bytes = (
+                            (root / orig_path).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+                        )
+                        color_full_generated[variant_path] = raw_bytes
+                        color_full_sources[variant_path] = variant_path
+                        clean_f = dict(fentry)
+                        clean_f["repo_path"] = variant_path
+                        updated_files[fkind] = clean_f
+                    else:
+                        updated_files[fkind] = fentry
+                updated["files"] = updated_files
             updated["requires"] = sorted(
                 set(reqs) | {sector_legacy_projection.AIRSPACE_FILES_CAPABILITY}
             )

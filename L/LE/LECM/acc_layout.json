@@ -51,12 +51,6 @@
           "LECM_BDP_CTR": [
             "LECMBDP"
           ],
-          "LECM_R1_CTR": [
-            "LECMASI",
-            "LECMDGI",
-            "LECMPAI",
-            "LECMSAN"
-          ],
           "LECM_SAI_CTR": [
             "LECMSAI"
           ]

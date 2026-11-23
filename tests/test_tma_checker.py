@@ -109,6 +109,26 @@ class TmaCheckerTests(unittest.TestCase):
         self.assertEqual([], MODULE.check_bundle(BARCELONA))
         self.assertEqual([], MODULE.check_bundle(MADRID))
 
+    def test_live_acc_bundles_pass(self) -> None:
+        checked = 0
+        for acc_defs in sorted(REPO_ROOT.rglob("acc_definitions.json")):
+            if any(part.startswith(".") or part == "tests" or part == "release" for part in acc_defs.relative_to(REPO_ROOT).parts):
+                continue
+            bdir = acc_defs.parent
+            checked += 1
+            defs = json.loads(acc_defs.read_text(encoding="utf-8"))
+            layout_path = bdir / "acc_layout.json"
+            lay = json.loads(layout_path.read_text(encoding="utf-8")) if layout_path.is_file() else {}
+            sids, cat = (
+                MODULE._sector_ids_and_catalog(bdir)
+                if (bdir / "sector_definitions.json").is_file()
+                else (set(), {})
+            )
+            bp = bdir.relative_to(REPO_ROOT).as_posix()
+            problems = MODULE.check_acc(defs, lay, bp, sids, cat)
+            self.assertEqual([], [p.message(bp) for p in problems], f"{bp} check_acc failed")
+        self.assertGreaterEqual(checked, 20)
+
     def test_a_bundle_without_tma_files_passes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             bundle = Path(tmp_dir) / "BARCELONA_TMA"

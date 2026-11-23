@@ -587,18 +587,26 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                 "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
                 bcn_s3["files"]["definitions"]["repo_path"],
             )
+            self.assertEqual(
+                "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json",
+                bcn_s3["files"]["tma_definitions"]["repo_path"],
+            )
             full_entries = {entry["id"]: entry for entry in with_tma["full_manifests"]["sector_data"]["entries"]}
             self.assertIn("L/LE/LECB", full_entries)
-            self.assertEqual(["community.airspace_files"], full_entries["L/LE/LECB"]["files"]["acc_definitions"]["requires"])
+            self.assertEqual(["community.airspace_files"], full_entries["L/LE/LECB"]["requires"])
+            self.assertEqual(
+                "airac_variants/L/LE/LECB/acc_definitions.json",
+                full_entries["L/LE/LECB"]["files"]["acc_definitions"]["repo_path"],
+            )
 
             with zipfile.ZipFile(with_tma["assets"]["sector_data_full_zip"]["path"]) as archive:
                 names = set(archive.namelist())
                 self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json", names)
                 self.assertIn("L/LE/LECM/LECM_R2/MADRID_TMA/tma.json", names)
-                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json", names)
-                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json", names)
-                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json", names)
-                self.assertIn("L/LE/LECB/acc_definitions.json", names)
+                self.assertIn("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json", names)
+                self.assertIn("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json", names)
+                self.assertIn("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json", names)
+                self.assertIn("airac_variants/L/LE/LECB/acc_definitions.json", names)
                 self.assertIn("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json", names)
                 s3_def_doc = json.loads(
                     archive.read("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json")
@@ -674,11 +682,16 @@ class CommunityReleaseManifestTests(unittest.TestCase):
 
             full_color_entries = {e["id"]: e for e in first["full_manifests"]["color_profiles"]["entries"]}
             self.assertIn("K", full_color_entries)
-            self.assertNotIn("K/KA", full_color_entries)
+            self.assertIn("K/KA", full_color_entries)
+            self.assertNotIn("requires", full_color_entries["K/KA"])
             self.assertEqual(["community.airspace_files"], full_color_entries["K"]["requires"])
+            self.assertEqual(
+                "airac_variants/K/colors.json",
+                full_color_entries["K"]["files"]["colors"]["repo_path"],
+            )
             with zipfile.ZipFile(first["assets"]["color_profiles_full_zip"]["path"], "r") as full_archive:
-                self.assertIn("K/colors.json", full_archive.namelist())
-                self.assertNotIn("K/KA/colors.json", full_archive.namelist())
+                self.assertIn("airac_variants/K/colors.json", full_archive.namelist())
+                self.assertIn("K/KA/colors.json", full_archive.namelist())
 
     def test_mva_schema3_full_feed_stores_schema3_bytes_in_airac_variant(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
