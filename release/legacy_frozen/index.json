@@ -929,7 +929,7 @@
       "source_sha256": {
         "acc_definitions.json": "711a1d7c8732c4f5ea6a7b67a776ff92d6b7d07aa0939cfc413d96dd78ba5162",
         "sector_definitions.json": "1e655c21ad0a79169afe3460a2e092da3d69a99f7eb3fd8e095474a8bcad0864",
-        "tma_coordination.json": "8934dcfa6509b110026ceaa6bb71986f8c4c8a007414279883bee9ba450399ee",
+        "tma_coordination.json": "bca2bf899e20423d7373922d7a57b0fc374ba727f932bbec60fd653379d9df5d",
         "tma_definitions.json": "74ad526ad05ac31c39dd5310e8f86f8e795dbda4a3976dab8487fe8e732290ee",
         "tma_layout.json": "037f259d5fa49aa5f12b2fbba2e15e76b257e54e1928de77b6b9748e14415048"
       }

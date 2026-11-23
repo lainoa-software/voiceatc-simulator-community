@@ -2,13 +2,6 @@
   "schema": 3,
   "agreements": [
     {
-      "name": "W_IBIZA_F150",
-      "from": "LECB_BKW_CTR",
-      "to": "LEIB_APP",
-      "arrives": ["LEIB"],
-      "level": "F150"
-    },
-    {
       "name": "E_PALMA_F200",
       "from": "LECB_BKE_CTR",
       "to": "LEPA_LECPAPR_APP",
@@ -21,13 +14,6 @@
       "to": "LEMH_TWR",
       "arrives": ["LEMH"],
       "level": "F070"
-    },
-    {
-      "name": "E_IBIZA_F210",
-      "from": "LECB_BKE_CTR",
-      "to": "LEPA_LECPAPR_APP",
-      "arrives": ["LEIB"],
-      "level": "F210"
     },
     {
       "name": "PALMA_DEP_BAVER_F180",
@@ -52,15 +38,6 @@
       "departs": ["LEPA"],
       "fix": ["ISTER", "MEROS", "MORSS"],
       "level": "F180"
-    },
-    {
-      "name": "PALMA_DEP_NELUX_IBIZA_ODD",
-      "from": "LEPA_APP",
-      "to": "LEIB_APP",
-      "arrives": ["LEIB"],
-      "departs": ["LEPA"],
-      "fix": ["NELUX"],
-      "level": "ODD"
     },
     {
       "name": "PALMA_DEP_MENORCA_EVEN",
@@ -97,12 +74,146 @@
       "level": "F190"
     },
     {
-      "name": "PALMA_IBIZA_ARR_ODD",
-      "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "name": "LEIB_ARR_NEGRE_24",
+      "from": "LECP_GIX_CTR",
+      "to": "LEIB_LECPIXX_APP",
       "arrives": ["LEIB"],
-      "fix": ["ADX", "MJV"],
-      "level": "ODD"
+      "fix": ["NEGRE"],
+      "level": "F150",
+      "runways": ["24"]
+    },
+    {
+      "name": "LEIB_ARR_NEGRE_06",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "fix": ["NEGRE"],
+      "level": "F250",
+      "runways": ["06"]
+    },
+    {
+      "name": "LEIB_ARR_NELUX_06",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "fix": ["NELUX"],
+      "level": "F250",
+      "runways": ["06"]
+    },
+    {
+      "name": "LEIB_ARR_MJV_24",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "fix": ["MJV"],
+      "level": "F210",
+      "runways": ["24"]
+    },
+    {
+      "name": "LEPA_LEIB_NELUX_24R",
+      "from": "LEPA_DEP_APP",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "departs": ["LEPA"],
+      "fix": ["NELUX"],
+      "level": "F110",
+      "runways": ["24R"]
+    },
+    {
+      "name": "LEPA_LEIB_NELUX_06R",
+      "from": "LEPA_LL2_APP",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "departs": ["LEPA"],
+      "fix": ["NELUX"],
+      "level": "F110",
+      "runways": ["06R"]
+    },
+    {
+      "name": "LEIB_DEP_XOSTA_LEVC",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECL_CTR",
+      "arrives": ["LEVC"],
+      "departs": ["LEIB"],
+      "fix": ["XOSTA"],
+      "level": "F170"
+    },
+    {
+      "name": "LEIB_DEP_BAVER_LEAL",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECL_CTR",
+      "arrives": ["LEAL"],
+      "departs": ["LEIB"],
+      "fix": ["BAVER"],
+      "level": "F170"
+    },
+    {
+      "name": "LEIB_DEP_EPAMA_06",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECP_GIX_CTR",
+      "departs": ["LEIB"],
+      "fix": ["EPAMA"],
+      "level": "F140",
+      "runways": ["06"]
+    },
+    {
+      "name": "LEIB_DEP_KABRE_LEMH",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LEMH_LECPMXX_APP",
+      "arrives": ["LEMH"],
+      "departs": ["LEIB"],
+      "fix": ["KABRE"],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_LEIB_NEVIC",
+      "from": "LEMH_LECPMXX_APP",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "departs": ["LEMH"],
+      "fix": ["NEVIC"],
+      "level": "F230"
+    },
+    {
+      "name": "LEIB_ARR_ADX",
+      "from": "LECP_GIX_CTR",
+      "to": "LEIB_LECPIXX_APP",
+      "arrives": ["LEIB"],
+      "fix": ["ADX"],
+      "level": "F150"
+    },
+    {
+      "name": "LEIB_DEP_EPAMA_24",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECP_GIX_CTR",
+      "departs": ["LEIB"],
+      "fix": ["EPAMA"],
+      "level": "F140",
+      "runways": ["24"]
+    },
+    {
+      "name": "LEIB_DEP_MHN",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": ["LEIB"],
+      "fix": ["MHN"],
+      "level": "F240"
+    },
+    {
+      "name": "LEIB_DEP_KABRE",
+      "from": "LEIB_LECPIXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": ["LEIB"],
+      "fix": ["KABRE"],
+      "level": "F240"
+    },
+    {
+      "name": "LEIB_ARR_CORDA",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_GIX_CTR",
+      "arrives": ["LEIB"],
+      "fix": ["CORDA"],
+      "level": "F220"
     }
   ]
 }
