@@ -1,0 +1,415 @@
+# Commits that did not write the content they appear to own: pure JSON
+# formatting by the format job, and the schema migrations that moved files
+# and re-keyed fields. git blame skips them with:
+#
+#   git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# or per run: git blame --ignore-revs-file .git-blame-ignore-revs
+
+# chore: format JSON by github-actions[bot] (199 commits, oldest first)
+# 2026-03-09 (2cba069) chore: format JSON
+2cba0697a5eba1e4477afef76f9526df07eb2154
+# 2026-03-25 (1d5cf1c) chore: format JSON
+1d5cf1c9b49d0ac2cf37a24b1871c7fe50c8abcb
+# 2026-03-26 (eff7a4d) chore: format JSON
+eff7a4db90e4a850593eb7df005c9a1e3e7af849
+# 2026-03-29 (fb3663c) chore: format JSON
+fb3663cc66dfafe67bf41b4e6e08f6756c7ee1cd
+# 2026-04-23 (918a218) chore: format JSON
+918a218f708653d2fccac28a9e1784605f1899be
+# 2026-04-23 (e0ecc99) chore: format JSON
+e0ecc9916dc9cacfc058cead0f044d65b50fb76a
+# 2026-04-24 (098d185) chore: format JSON
+098d18584fc3168e9a3196a6b9b0d9234012f7f0
+# 2026-04-24 (81ab365) chore: format JSON
+81ab365c84ca3ac9b00043c27ef12bd4901f88ee
+# 2026-04-24 (b02d02a) chore: format JSON
+b02d02ae11c046c1c037a8909b32f23ad5e529ad
+# 2026-04-24 (b15b9b6) chore: format JSON
+b15b9b6f3c790743301c70b30b9325ac13cd29d0
+# 2026-04-24 (40aa3a6) chore: format JSON
+40aa3a67143e9e5aff2ad38bcca45ea4d44df989
+# 2026-04-27 (ce01abf) chore: format JSON
+ce01abff2efd78f2e389a316445e364e36572a46
+# 2026-04-28 (04e8b5f) chore: format JSON
+04e8b5ff2087520ba4d9cb98fbc6bd82c5a183e8
+# 2026-04-28 (ecc324e) chore: format JSON
+ecc324e43e653e1fbdedbe72eca91c95468eab6b
+# 2026-04-29 (dd9ffb3) chore: format JSON
+dd9ffb335afdc09cddc05ee7964d59bee5cd18fa
+# 2026-04-29 (24d582e) chore: format JSON
+24d582ee3bbea6cc3caade62e8d91a1ba9d6087f
+# 2026-05-22 (0a78dc6) chore: format JSON
+0a78dc6648a2dcce4a95bca9e35495882ed41166
+# 2026-06-21 (b4359b7) chore: format JSON
+b4359b7727f382006f9e1ffaea20256ff85371d7
+# 2026-07-22 (21be88b) chore: format JSON
+21be88b82bc9821fb6f230825622436139ea0038
+# 2026-08-09 (3c8ad44) chore: format JSON
+3c8ad44c34c9667a73f8234258dfb5f7d024cb59
+# 2026-08-09 (fb879e2) chore: format JSON
+fb879e298e336dba7b145d20404b5282eb12d9c4
+# 2026-08-09 (db3a07d) chore: format JSON
+db3a07dbc43975d49e8e28e35765c0f130db4dd8
+# 2026-08-09 (0a76222) chore: format JSON
+0a762221797dc50a38368f0f179963e00bf6dd00
+# 2026-08-09 (b8c66df) chore: format JSON
+b8c66df92be7b242e8cc9df7ea2335038b398324
+# 2026-08-10 (539988c) chore: format JSON
+539988cdfbbb51b07d2f4d9160ba005260440e6c
+# 2026-08-10 (d72b2a2) chore: format JSON
+d72b2a2fe3fd8bf967a08573198dcf4482ded51c
+# 2026-08-11 (d13c732) chore: format JSON
+d13c732ef6a4bf4d0f49c03405ab8884c2c6278d
+# 2026-08-11 (a478bae) chore: format JSON
+a478bae5d377334163a8182e28a97984b6aded1c
+# 2026-08-12 (0f19528) chore: format JSON
+0f195289f9f1caec061807c7067c160659b8546a
+# 2026-08-13 (cfaebb2) chore: format JSON
+cfaebb27ff9b5bd9452e894c745e186b52ba7fa9
+# 2026-08-14 (2b67f3d) chore: format JSON
+2b67f3d96c64eacb52282568b5f40c6bc3d33cda
+# 2026-08-14 (ddc235a) chore: format JSON
+ddc235a07cb01d905236cacc646d82f604dba358
+# 2026-08-14 (b3361c6) chore: format JSON
+b3361c6ff00b857a0a36e2c179054c482d71260b
+# 2026-08-14 (8acb91f) chore: format JSON
+8acb91fd7a9c9c3fbdca170072faade807010a3e
+# 2026-08-14 (6591422) chore: format JSON
+65914228335aa52dfd69034157923ac458a4130e
+# 2026-08-14 (e8c4845) chore: format JSON
+e8c48450c5093075f9622953e779abf16463a4f4
+# 2026-08-14 (a8d4186) chore: format JSON
+a8d418672ddedc6633bc9a6da8e3978f08abada7
+# 2026-08-15 (66a5855) chore: format JSON
+66a58557b0d49dcf08b9fc42c96ba70ffc614b0c
+# 2026-08-15 (02ab74c) chore: format JSON
+02ab74ccc3604ba16babe836c57f72a1a7c99fb7
+# 2026-08-15 (449ab82) chore: format JSON
+449ab82b3581d5675e437fc76fca42cbc0237b98
+# 2026-08-15 (3dd06e1) chore: format JSON
+3dd06e1e6b8f263b62ec90bd05112d208b786741
+# 2026-08-15 (55c13ad) chore: format JSON
+55c13add8f3b5b42b1b6af29a72265ab09731814
+# 2026-08-16 (fa21245) chore: format JSON
+fa212456b6eec5042c75bdab22a3bca8d5a5eeca
+# 2026-08-17 (a20ec0e) chore: format JSON
+a20ec0eb7e9d6324e8b46b052f442ca51396fb40
+# 2026-08-18 (3969be7) chore: format JSON
+3969be7ea2501fc80ba1a02c8ed2abef2860c008
+# 2026-08-18 (699a022) chore: format JSON
+699a022cd1c11a72a39290ae7042afc50a16ba54
+# 2026-08-18 (f6d88ec) chore: format JSON
+f6d88ec5b0a645b0fec4b908faefccb70b8cbb09
+# 2026-08-19 (c4ded86) chore: format JSON
+c4ded86e764d88377de8aab50d978ef76203db7d
+# 2026-08-20 (17da676) chore: format JSON
+17da676b43b63fcff9e94575331a7e9c704d9ae9
+# 2026-08-21 (f78889b) chore: format JSON
+f78889b5389e7e981f5f44405469ff9bb334ea7b
+# 2026-08-24 (1c10dd2) chore: format JSON
+1c10dd25529fb0e9f787a0efc202d19ea2c5b323
+# 2026-08-24 (0c11b12) chore: format JSON
+0c11b12f10354ceba07cd8ef2554c10fc7e5ac8f
+# 2026-08-25 (ff9c004) chore: format JSON
+ff9c004da1a6eb8026f52d30c6a32fd059d3261a
+# 2026-08-25 (8673158) chore: format JSON
+86731585deb1f00742c3f3789dffea4c00ab8b75
+# 2026-08-25 (68d779b) chore: format JSON
+68d779bbc6761f7cd6b253df3b33c32779ea9a6a
+# 2026-08-25 (e764b9c) chore: format JSON
+e764b9c17fa84dcb5697ee10cad818d1cabe5e54
+# 2026-08-25 (aaa50e3) chore: format JSON
+aaa50e34a9ea9ff08c0f055ce4f0638aa7f759b9
+# 2026-08-25 (fc9d58b) chore: format JSON
+fc9d58bd2d7e2077e8a5fc9ef0d6e2f5b30d706f
+# 2026-08-25 (fb09c46) chore: format JSON
+fb09c4650790a52d6a0ff09fa25c0d6655fe6ad8
+# 2026-08-25 (2cc6fd9) chore: format JSON
+2cc6fd9d89e0fc234f00b77fdb432ced01c6a22d
+# 2026-08-25 (1b3f5b8) chore: format JSON
+1b3f5b819f06be6c8b0c8725448c00bf14295de1
+# 2026-08-25 (f30f351) chore: format JSON
+f30f35131470e9b5cf608046b34c2780d040d34a
+# 2026-08-25 (c9be0f4) chore: format JSON
+c9be0f4d3b8376a13c58b29a16a8968f3983de9e
+# 2026-08-25 (84fcbe9) chore: format JSON
+84fcbe94a5dd47b7346915cebcbcba6150bc00fa
+# 2026-08-25 (4d309d6) chore: format JSON
+4d309d684eab309b9ad58992b3e840faecbab5e4
+# 2026-08-25 (e7d6521) chore: format JSON
+e7d6521180038c1ae4ed4f31c485ba4b344b4a98
+# 2026-08-25 (6f4e6f2) chore: format JSON
+6f4e6f2a64447550c143a39c839fa493c37dc11d
+# 2026-08-25 (e7beb52) chore: format JSON
+e7beb52ef561394c451ee91debe96713f35353df
+# 2026-08-25 (9a0cb5b) chore: format JSON
+9a0cb5be74f56c46b69b31d311ccb25c4f0d13cd
+# 2026-08-25 (88518d6) chore: format JSON
+88518d6edc3b66407e26607e676833429928b7ee
+# 2026-08-26 (e4ac785) chore: format JSON
+e4ac785ffc2476a0977d312d2c9ca274bed737f3
+# 2026-08-27 (6ac917f) chore: format JSON
+6ac917f3b2ad0257bba8cfba6eead3b016984a07
+# 2026-08-27 (1dd4448) chore: format JSON
+1dd4448db76c353f2fe8e67061615ef73b7aaf65
+# 2026-08-27 (f6dbb2f) chore: format JSON
+f6dbb2f1dd566c786381d18d4e3811b0b267a432
+# 2026-08-28 (08ed8bd) chore: format JSON
+08ed8bd908620932b7fccc28eef0ef6cb5490f4e
+# 2026-08-28 (41c91ba) chore: format JSON
+41c91ba5a0cd0e45d34547db61abba6f5f36a418
+# 2026-08-28 (b1e51e6) chore: format JSON
+b1e51e6d77f8c157e40503e7116bda32589ef611
+# 2026-08-28 (001b31d) chore: format JSON
+001b31dc29e2c9b088bf8e96bf7047ccd7dcc148
+# 2026-08-29 (cdf288e) chore: format JSON
+cdf288ed948146047ef248422f736d3ce5a695fa
+# 2026-08-30 (16fedb6) chore: format JSON
+16fedb64ed342f711034171a74914b5d7ccb2dd3
+# 2026-08-31 (b7b014e) chore: format JSON
+b7b014e9888b466d6c7e86cbb8830797fcd5cbe7
+# 2026-08-31 (519e6b1) chore: format JSON
+519e6b1bf9fd9cdc17cc21be31bbec597e200a22
+# 2026-08-31 (8448111) chore: format JSON
+8448111fb94fe75ac551d4a26621267f5d5ad606
+# 2026-09-01 (b407567) chore: format JSON
+b40756751fd2eb9e355382821098119da8d574c6
+# 2026-09-01 (2171115) chore: format JSON
+217111599e27e5b1c79a3c7b435da5cb7fe6ab6e
+# 2026-09-02 (d14ecfc) chore: format JSON
+d14ecfc9f5709f8724d2e8f4e90206f582b3c0db
+# 2026-09-02 (bda8462) chore: format JSON
+bda8462a5366c9859df034593c169446c45d6786
+# 2026-09-02 (a572412) chore: format JSON
+a572412a40fd18a878f7dca897649a244dcf608a
+# 2026-09-03 (b68856b) chore: format JSON
+b68856b21c9d6ff16debad0885ac2833021e76e5
+# 2026-09-04 (320acc0) chore: format JSON
+320acc053d3503c390c6a82a7e0d8e2b2989cfa7
+# 2026-09-04 (afbfbc0) chore: format JSON
+afbfbc02767e7b5e787bfb0e49e495dae2c5acb6
+# 2026-09-05 (8e50743) chore: format JSON
+8e50743b03b73eaf67e74a520e68d6bc962e6e58
+# 2026-09-06 (82a3c89) chore: format JSON
+82a3c892467be1f72a1152d9c866e9227843a5b3
+# 2026-09-06 (d9445e7) chore: format JSON
+d9445e7e581ff21321c602d0dbdadbe4ffd6d0c4
+# 2026-09-06 (e6b3b4e) chore: format JSON
+e6b3b4e83f8ddfb57170f123ce1ba5126f71b62d
+# 2026-09-07 (498ef03) chore: format JSON
+498ef03d1241fa2c9ff5dc68ad9de3293fc51a92
+# 2026-09-08 (e2689ad) chore: format JSON
+e2689ad46a6334c68f4a2c489683d7511b44cb3d
+# 2026-09-08 (c45d432) chore: format JSON
+c45d4327b92fa5c2e6da77898c20ceec41d7374a
+# 2026-09-08 (cd22731) chore: format JSON
+cd227318f0c59d82bfbaf6d3e542e3995aeb77d1
+# 2026-09-09 (55eb323) chore: format JSON
+55eb3238b63d4c0d8f11ad04ab864302059d4c32
+# 2026-09-10 (e54d3c1) chore: format JSON
+e54d3c18924eb6d5793281de00dfd3bd8260b141
+# 2026-09-11 (5286ed9) chore: format JSON
+5286ed9026334b2d81ae14a0b2feb8b2fa5e7427
+# 2026-09-12 (6b91c29) chore: format JSON
+6b91c29c3a6399e7989921f9aa93f7b8cf45c822
+# 2026-09-13 (9727ca3) chore: format JSON
+9727ca3961d2544901028e813ee08a91ee5156b0
+# 2026-09-13 (c12161f) chore: format JSON
+c12161f7bacfe0c001d89784a7451a85232dbc1c
+# 2026-09-14 (08369a8) chore: format JSON
+08369a8ac14bc1bc9b57480e4c6eb0555e76d3c0
+# 2026-09-14 (35d1863) chore: format JSON
+35d18631698dc5c01c1f9a7e7a8e9006887033c5
+# 2026-09-15 (bc3f706) chore: format JSON
+bc3f706e7f513799dbd028947234187964880448
+# 2026-09-16 (db523a2) chore: format JSON
+db523a20f33b3cff4a7f6d8de65124b3f6f98b32
+# 2026-09-17 (9a5f03a) chore: format JSON
+9a5f03a8b2d75ddfee7194a2b1f85a97cd2df6a7
+# 2026-09-18 (1fc9081) chore: format JSON
+1fc9081ea93b4ad07c2f78050dbbd592ca2ad7b7
+# 2026-09-19 (89a0bb8) chore: format JSON
+89a0bb81b6081618f69c4fa0acb364e508ecf150
+# 2026-09-20 (2c59c8d) chore: format JSON
+2c59c8db4eca51cfbb38ce791de82dfdf608434c
+# 2026-09-20 (1cb6ad6) chore: format JSON
+1cb6ad65a463445241073593165b87a729297f50
+# 2026-09-21 (13a025e) chore: format JSON
+13a025eea9a4e5ac74135fc6746d645cab4e2ce9
+# 2026-09-22 (401640d) chore: format JSON
+401640d30b964558b5e8b75aaebf85b123739a41
+# 2026-09-23 (cd0f808) chore: format JSON
+cd0f80861f4f76d0a29d2e7c7ad0cdf1f54c875e
+# 2026-09-24 (1e0c0ed) chore: format JSON
+1e0c0ed91a467e5d2cbb44b91dfa644468e80c97
+# 2026-09-25 (90058a7) chore: format JSON
+90058a7e613b9050e07725cdebeda7f3ecaa3653
+# 2026-09-26 (70b54d7) chore: format JSON
+70b54d7ba1c7dde2bc11cf5646f8814ad3d3612f
+# 2026-09-26 (5b5a5c5) chore: format JSON
+5b5a5c53db36d39edfd70fe9cd5ea2b51f3df554
+# 2026-09-27 (2863c75) chore: format JSON
+2863c758dfc0d638c2966849af6b583644f81afd
+# 2026-09-28 (8f285ab) chore: format JSON
+8f285ab52dcbb41bb829fb1900f52704867a59e3
+# 2026-09-29 (8455be1) chore: format JSON
+8455be1702f395b9eef1c9ad8bb81036b08541ca
+# 2026-09-29 (cfee00e) chore: format JSON
+cfee00e429f3531cb8527c42169632e23381d309
+# 2026-09-29 (33c8432) chore: format JSON
+33c84329b4c1658685bbc963d4316e8b6f16ed38
+# 2026-09-30 (a817280) chore: format JSON
+a817280d0d38d384dc012c9bbe246d7bec59e26e
+# 2026-09-30 (b31df7c) chore: format JSON
+b31df7cd06bafc009ab7121006551892d501d693
+# 2026-09-30 (75dd293) chore: format JSON
+75dd2937bca752943b3ae3e65f1b16426310aef8
+# 2026-10-01 (2aab121) chore: format JSON
+2aab121b7aff88e354ca1ce319816d06f7480beb
+# 2026-10-01 (8e4b1ff) chore: format JSON
+8e4b1ffb5964feb68e7e2e01369e8202151ddd42
+# 2026-10-01 (968687a) chore: format JSON
+968687a0571cf07d8c206441127b0dc21eb8517d
+# 2026-10-01 (c7de763) chore: format JSON
+c7de763af6108f179af185021bd440e65a3c3b4b
+# 2026-10-02 (ae631d7) chore: format JSON
+ae631d7afc37a57ef5244c3037d85e68e8b1e6e7
+# 2026-10-03 (dc4c53b) chore: format JSON
+dc4c53bbe5dde5bee12cea77b53ca7da50a6dcd8
+# 2026-10-03 (0489939) chore: format JSON
+0489939d8f13abe80ce92326406a1ef01517efb8
+# 2026-10-03 (c5fbbe5) chore: format JSON
+c5fbbe520129169fead4851fb6686fde4d56ca81
+# 2026-10-04 (89e8752) chore: format JSON
+89e87522ff532bc052bbbc7653a3ba4cd68ca6d5
+# 2026-10-04 (3bd0b30) chore: format JSON
+3bd0b3032a804037e579bd863546d2ba0e94f4eb
+# 2026-10-04 (ceb2139) chore: format JSON
+ceb21397b9870a2b936336ad72d4359c0928065e
+# 2026-10-04 (84f3e5b) chore: format JSON
+84f3e5bdbbb738ea6a9d0252b464ed4a3ca15832
+# 2026-10-04 (301b24f) chore: format JSON
+301b24f9e08fed906a53e40b901dcc6eb57ed20f
+# 2026-10-04 (a6b6fb6) chore: format JSON
+a6b6fb6e9223b5dd016a464a524fd4759b4130a6
+# 2026-10-04 (48d3538) chore: format JSON
+48d353823316f4334334173f389323aa9b75b8c5
+# 2026-10-04 (1806047) chore: format JSON
+1806047bc88e1261fd93cf12188a511962888dde
+# 2026-10-04 (e888358) chore: format JSON
+e8883584e7f39b82d95099c13e1406b9f7a9d711
+# 2026-10-05 (0b7955a) chore: format JSON
+0b7955a839b87fc55b0b2fd08adb41fe84061d40
+# 2026-10-05 (220908d) chore: format JSON
+220908d2b986526b797f564c7878ccded22471e1
+# 2026-10-05 (02f0d85) chore: format JSON
+02f0d8544c6851215ecb4f384444ccd3a5bc979b
+# 2026-10-05 (3bfc9fa) chore: format JSON
+3bfc9fa917c095883458773acdd8e4e7f325ba93
+# 2026-10-05 (86e7567) chore: format JSON
+86e7567bfa51aba419e1cb51a20eec3a4e405a0b
+# 2026-10-06 (4b2a2ef) chore: format JSON
+4b2a2ef720d99ec9706998f3044a11c52491d253
+# 2026-10-06 (0db0ad6) chore: format JSON
+0db0ad6e2f7c4e81d19684b4b8821fbe47596129
+# 2026-10-06 (261654f) chore: format JSON
+261654f51a3fadbabc1de96ea182adef77a3b16f
+# 2026-10-06 (61d60bb) chore: format JSON
+61d60bbb0d867fc612d91f349d56cddaa8607ace
+# 2026-10-06 (7fe56ed) chore: format JSON
+7fe56edf421f8f76d1681d161cac3d1918dfd434
+# 2026-10-06 (718112b) chore: format JSON
+718112ba656f66004d3f80264df6d9974cafed1c
+# 2026-10-06 (0b0200d) chore: format JSON
+0b0200d9f9b81744d849da4bdbbe026edb2c76cf
+# 2026-10-06 (af8cfcf) chore: format JSON
+af8cfcf1d1f92eeb1a7cd38a702f75c180eb1514
+# 2026-10-07 (f171751) chore: format JSON
+f171751d11d9a844bcd13cab703f47805c0bfbac
+# 2026-10-07 (c706b6d) chore: format JSON
+c706b6d5bcdb444d858eabc54d8f25c2b39bf529
+# 2026-10-07 (2c40684) chore: format JSON
+2c40684e372439f12c2b630d5aa6cd104533fe0b
+# 2026-10-07 (e034bea) chore: format JSON
+e034bea6007b810dbf3330b5d5cbe5ec3e96b979
+# 2026-10-07 (6eff392) chore: format JSON
+6eff39287bdef9a66e63f1fe50f4c7ca9029cbd5
+# 2026-10-07 (0b5d1e2) chore: format JSON
+0b5d1e2ca502e8810d50e860d06d654cc18a3696
+# 2026-10-07 (2e50d7f) chore: format JSON
+2e50d7fd0adb1570f602317d168d493ccb849ceb
+# 2026-10-08 (2a99e7c) chore: format JSON
+2a99e7ce642aa02f09656c8da509b77b652819b4
+# 2026-10-08 (b660264) chore: format JSON
+b660264f795d24d7d64585f03111352096a5b9d1
+# 2026-10-09 (9648fe5) chore: format JSON
+9648fe5aad5d5f53ca67520f764c5d756612f14a
+# 2026-10-09 (52fd96f) chore: format JSON
+52fd96f4933e7da98361b91ca47fcfd9a12e02ea
+# 2026-10-10 (439484d) chore: format JSON
+439484d08d1d6ebde7111e32ee06b7d3d9b661e6
+# 2026-10-10 (e3b3ca9) chore: format JSON
+e3b3ca92e0e7182f6d4dcd7dfca2aace3ada892c
+# 2026-10-10 (4f2a3c7) chore: format JSON
+4f2a3c791a3128ead9f2222c683162c2236102b5
+# 2026-10-10 (67df2f6) chore: format JSON
+67df2f64be189defc19beda4f0eedf062ca0a5a9
+# 2026-10-11 (5d88619) chore: format JSON
+5d8861970404bec17387f0b29d4f229295d42552
+# 2026-10-11 (37bf006) chore: format JSON
+37bf006ded2cb551d3901a69cf9c848335842fa3
+# 2026-10-14 (8fd9f63) chore: format JSON
+8fd9f633e235d4e9dde599f58b7d247c74135437
+# 2026-10-17 (ce6ebba) chore: format JSON
+ce6ebba8929bc4ae2c1dd07e1b63787268311902
+# 2026-10-21 (081403b) chore: format JSON
+081403bab21f54479c6645d773deacc50c824016
+# 2026-10-21 (39bd3c6) chore: format JSON
+39bd3c6d29f63f6d7a183b03e34793a2dbad68be
+# 2026-10-21 (a0569fa) chore: format JSON
+a0569fa9357549f6a0b2ac823e2cb06c26d25681
+# 2026-10-21 (83a1430) chore: format JSON
+83a1430327c157ee402b5348d7501b679fd86946
+# 2026-10-21 (d03e51e) chore: format JSON
+d03e51e18b6d8ffa43ed0235c4fbf00b3e24089b
+# 2026-10-24 (7be0f98) chore: format JSON
+7be0f989427a1b570e7a2a45058cc9a7e9df4818
+# 2026-10-27 (2605d7f) chore: format JSON
+2605d7f49374df2408fafd6a7f925c30d9ef82a8
+# 2026-10-27 (fb5a025) chore: format JSON
+fb5a02510146b64fb723978b763569cbc6ac3223
+# 2026-10-31 (ef36102) chore: format JSON
+ef3610279a2369004ca9b3c1eeff87e4a67e489b
+# 2026-10-31 (3f7f080) chore: format JSON
+3f7f08083dda1237fde837eea36d56a5ea6a113a
+# 2026-11-03 (c32728c) chore: format JSON
+c32728cc5373d70892abadef60185ea724f36396
+# 2026-11-05 (c4db609) chore: format JSON
+c4db609f51a5b66c77582c39196328de4cb81627
+# 2026-11-05 (fafa7e9) chore: format JSON
+fafa7e93f067f45972516674116c90f74116393a
+# 2026-11-05 (a8f47a0) chore: format JSON
+a8f47a0bc901cebe0ab6b98d45fc012f2567c573
+# 2026-11-11 (0c5b6b6) chore: format JSON
+0c5b6b658fee33c1bb7efdffeb0d3ac7dbb2d41c
+# 2026-11-20 (91f5b8f) chore: format JSON
+91f5b8f4ad65de6893f8b058d12dcf6d089f8b90
+# 2026-11-22 (98dc504) chore: format JSON
+98dc504a39c8c49c9fa4ea85bee98f670b2f5468
+# 2026-11-23 (aa0c117) chore: format JSON
+aa0c1179d75f5f134efa095831efbdfd90a9b8fa
+# 2026-11-23 (65ac0de) chore: format JSON
+65ac0de3be387ca941929d6b5316459626dc6da1
+# 2026-11-23 (231a138) chore: format JSON
+231a138a134c0dd3b3874d2c45785ffb2105a4df
+# 2026-11-23 (a4c6bb9) chore: format JSON
+a4c6bb9ff0009efdebc5bf26a9aa0477916b5c53
+
+# Schema migration commits (contributor content re-keyed, not rewritten)
+# 2026-11-22 91fe8853 Schema 2 modding layout (#340): re-keyed every content file
+91fe8853c897a767477bd64b0b6dca470d3391cf
+# 2026-11-23 08839706 Schema 3 modding layout (#346): moved and re-keyed every content file
+088397067298707556b6c6a61bf16add1569a5a4
+# 2026-11-23 7ba09c2f Keep frozen legacy files byte-exact after JSON formatting (#347)
+7ba09c2f96796a12fbbdda079ad0ae29a0fa0b71

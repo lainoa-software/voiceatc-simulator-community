@@ -28,5 +28,8 @@
   "incoming_symbol": "octagon",
   "of_interest_symbol": "octagon",
   "released_symbol": "cross",
+  "symbol_line_width": 1,
+  "symbol_size": 0.7,
+  "traildot_size": 0.12,
   "traildot_symbol": "history"
 }

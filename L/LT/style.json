@@ -13,5 +13,8 @@
   "incoming_symbol": "rps",
   "of_interest_symbol": "rps",
   "released_symbol": "rps",
+  "symbol_line_width": 0.7,
+  "symbol_size": 0.65,
+  "traildot_size": 0.15,
   "traildot_symbol": "rps"
 }

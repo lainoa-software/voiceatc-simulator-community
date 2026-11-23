@@ -23,5 +23,8 @@
   "incoming_symbol": "square_crossed",
   "of_interest_symbol": "square_crossed",
   "released_symbol": "square_crossed",
+  "symbol_line_width": 1.0,
+  "symbol_size": 0.75,
+  "traildot_size": 0.15,
   "traildot_symbol": "diamond_filled"
 }

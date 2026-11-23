@@ -53,5 +53,8 @@
   "incoming_symbol": "DAPS",
   "of_interest_symbol": "DAPS",
   "released_symbol": "DAPS",
+  "symbol_line_width": 1.0,
+  "symbol_size": 0.75,
+  "traildot_size": 0.15,
   "traildot_symbol": "HISTORY_SQUARE"
 }

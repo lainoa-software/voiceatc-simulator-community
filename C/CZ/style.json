@@ -28,5 +28,8 @@
   "incoming_symbol": "diamond",
   "of_interest_symbol": "diamond",
   "released_symbol": "diamond",
+  "symbol_line_width": 1,
+  "symbol_size": 0.65,
+  "traildot_size": 0.12,
   "traildot_symbol": "history"
 }

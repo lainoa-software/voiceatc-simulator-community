@@ -40,6 +40,8 @@ Keep the change focused, cite its authoritative source and check it in the game.
 The [submission guide](https://github.com/lainoa-software/voiceatc-simulator-community/wiki/Validate-and-Submit)
 owns the command list. Contributors validate source data; CI formats JSON and maintains
 generated indexes under `.voiceatc/`. Approval and a green required check are both needed.
+[`.git-blame-ignore-revs`](.git-blame-ignore-revs) skips the formatting and schema-migration
+commits in `git blame`, so it still names the contributor who wrote each value.
 
 ## Reference
 
