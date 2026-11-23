@@ -898,7 +898,7 @@
         "LERS_TWR": "REU_TWR"
       },
       "source_sha256": {
-        "acc_definitions.json": "a7e93e84a8d9fbe224fe3fa29da4781525cc9db6103c90b76b4551af396c7544",
+        "acc_definitions.json": "2b2b88afee4911be1dcf4f4599e6043d2f1834dd326a83a40015c97f5c32b332",
         "sector_definitions.json": "7c736d3060f20c6d5116efbc805d19ed348b9f2c40e40f74f517a76a4b0227f2",
         "tma_coordination.json": "0c25867fe0c20a42d81b414244a5ff36371d8e702a2b56792da554b2c8c4c618",
         "tma_definitions.json": "bb06eb85a30205231227b28434ca5c53fb0ffeff838761425b0199d1d700237f",

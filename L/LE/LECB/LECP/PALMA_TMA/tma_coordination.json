@@ -112,7 +112,7 @@
     },
     {
       "name": "LEPA_ARR_GODOX_APP",
-      "from": "LECP_CTR",
+      "from": "LECP_GXX_CTR",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -124,7 +124,7 @@
     },
     {
       "name": "LEPA_ARR_RIXOT",
-      "from": "LECB_BKE_CTR",
+      "from": "LEMH_LECPMXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -136,7 +136,7 @@
     },
     {
       "name": "LEPA_ARR_MORSS",
-      "from": "LECB_BKE_CTR",
+      "from": "LEMH_LECPMXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -148,7 +148,7 @@
     },
     {
       "name": "LEPA_ARR_MAMEB",
-      "from": "LECB_BKE_CTR",
+      "from": "LEMH_LECPMXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -363,7 +363,7 @@
     },
     {
       "name": "LEIB_ARR_NEVIC",
-      "from": "LECB_BKE_CTR",
+      "from": "LEMH_LECPMXX_APP",
       "to": "LEIB_APP",
       "arrives": [
         "LEIB"
@@ -448,7 +448,7 @@
     {
       "name": "LEMH_ARR_CDP",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -463,7 +463,7 @@
     {
       "name": "LEMH_ARR_TONIS",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -478,7 +478,7 @@
     {
       "name": "LEMH_ARR_PTC",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "arrives": [
         "LEMH"
       ],
@@ -541,7 +541,7 @@
     {
       "name": "LEPA_DEP_EPAMA_WEST",
       "from": "LEPA_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_GXX_CTR",
       "departs": [
         "LEPA"
       ],
@@ -557,7 +557,7 @@
     {
       "name": "LEPA_DEP_EPAMA_EAST",
       "from": "LEPA_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_GXX_CTR",
       "departs": [
         "LEPA"
       ],
@@ -661,7 +661,7 @@
     {
       "name": "LEPA_DEP_MEROS_WEST",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -677,7 +677,7 @@
     {
       "name": "LEPA_DEP_MEROS_EAST",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -693,7 +693,7 @@
     {
       "name": "LEPA_DEP_ISTER",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -705,7 +705,7 @@
     {
       "name": "LEPA_DEP_MORSS",
       "from": "LEPA_APP",
-      "to": "LECB_BKE_CTR",
+      "to": "LEMH_LECPMXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -717,7 +717,7 @@
     {
       "name": "LEIB_DEP_EPAMA",
       "from": "LEIB_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_GXX_CTR",
       "departs": [
         "LEIB"
       ],
@@ -800,7 +800,7 @@
     },
     {
       "name": "LEMH_DEP_LUNIK",
-      "from": "LECB_BKE_CTR",
+      "from": "LEMH_LECPMXX_APP",
       "to": "LEPA_APP",
       "departs": [
         "LEMH"
