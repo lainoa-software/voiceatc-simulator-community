@@ -4,28 +4,16 @@
     "LEAL_APP": {
       "1": {
         "positions": {
-          "LEAL_APP": [
-            "LECLALV"
-          ]
+          "LEAL_APP": ["LECLALV"]
         },
-        "airports": [
-          "LEAL",
-          "LEVC"
-        ]
+        "airports": ["LEAL", "LEVC"]
       },
       "3W": {
         "positions": {
-          "LEVC_APP": [
-            "LECLVAP"
-          ],
-          "LEAL_AAW_APP": [
-            "LECLAAW"
-          ]
+          "LEVC_APP": ["LECLVAP"],
+          "LEAL_AAW_APP": ["LECLAAW"]
         },
-        "airports": [
-          "LEAL",
-          "LEVC"
-        ]
+        "airports": ["LEAL", "LEVC"]
       }
     }
   }

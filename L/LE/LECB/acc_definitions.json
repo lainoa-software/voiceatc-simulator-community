@@ -4,9 +4,7 @@
     {
       "id": "LECB_CTR",
       "call_sign": "Barcelona Control",
-      "services": [
-        "center"
-      ]
+      "services": ["center"]
     },
     {
       "id": "LECB_W_CTR",

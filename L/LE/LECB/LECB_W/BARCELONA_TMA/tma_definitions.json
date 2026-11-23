@@ -4,45 +4,31 @@
     {
       "id": "LEBL_APP",
       "call_sign": "Barcelona Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEBL_TWR",
       "call_sign": "Barcelona Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEBL",
-      "unassigned_frequencies": [
-        "118.330"
-      ]
+      "unassigned_frequencies": ["118.330"]
     },
     {
       "id": "LEGE_TWR",
       "call_sign": "Girona Tower",
-      "services": [
-        "tower",
-        "approach_conventional"
-      ],
+      "services": ["tower", "approach_conventional"],
       "airport": "LEGE"
     },
     {
       "id": "LERS_TWR",
       "call_sign": "Reus Tower",
-      "services": [
-        "tower",
-        "approach_conventional"
-      ],
+      "services": ["tower", "approach_conventional"],
       "airport": "LERS"
     },
     {
       "id": "LEDA_TWR",
       "call_sign": "Lleida Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEDA"
     }
   ],

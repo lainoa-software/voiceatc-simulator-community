@@ -4,9 +4,7 @@
     {
       "id": "LEAL_APP",
       "call_sign": "Alicante approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

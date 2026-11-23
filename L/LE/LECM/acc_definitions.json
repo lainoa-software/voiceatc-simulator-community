@@ -4,9 +4,7 @@
     {
       "id": "LECM_CTR",
       "call_sign": "Madrid Control",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "118.275",
         "119.630",
