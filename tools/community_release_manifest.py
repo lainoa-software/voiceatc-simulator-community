@@ -438,6 +438,7 @@ def build_release_bundle(
     sector_projected_bytes: dict[str, bytes] = sector_projection["projected_bytes"]
     misc_drawings_base_manifest = misc_drawings_manifest.build_manifest(root, commit_sha=commit_sha)
     color_profiles_projection = color_profiles_manifest.build_release_projection(root, commit_sha=commit_sha)
+    color_canonical_manifest = color_profiles_manifest.build_manifest(root, commit_sha=commit_sha)
 
     # Channel gates: the default view (what every live build reads) drops gated
     # entries (any `requires`, or channels short of all three); the full view keeps them all.
@@ -524,6 +525,31 @@ def build_release_bundle(
         generated_bytes=color_generated_bytes,
     )
 
+    color_canonical_profiles = color_canonical_manifest["profiles"]
+    color_canonical_paths = sorted(release_gates.entry_repo_paths(color_canonical_profiles))
+    color_full_sources = {path: path for path in color_canonical_paths}
+    color_full_generated = {
+        path: (root / path).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+        for path in color_canonical_paths
+    }
+    gated_color_full = release_gates.apply_gates(
+        "color_profiles",
+        color_canonical_profiles,
+        gates=gates,
+        required_kinds=("colors",),
+    )
+    color_full_entries = []
+    for entry in gated_color_full["full_entries"]:
+        if isinstance(entry, dict):
+            reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
+            updated = dict(entry)
+            updated["requires"] = sorted(
+                set(reqs) | {sector_legacy_projection.AIRSPACE_FILES_CAPABILITY}
+            )
+            color_full_entries.append(updated)
+        else:
+            color_full_entries.append(entry)
+
     full_assets = {
         "mva": build_deterministic_zip_from_sources(
             root,
@@ -550,15 +576,19 @@ def build_release_bundle(
         ),
         "color_profiles": build_deterministic_zip_from_sources(
             root,
-            color_archive_sources,
+            color_full_sources,
             output_dir / _full_asset_name(color_profiles_asset_name),
-            generated_bytes=color_generated_bytes,
+            generated_bytes=color_full_generated,
         ),
     }
     full_manifests = {
         dataset: release_gates.build_full_manifest(
             dataset=dataset,
-            full_entries=gated[dataset]["full_entries"],
+            full_entries=(
+                color_full_entries
+                if dataset == "color_profiles"
+                else gated[dataset]["full_entries"]
+            ),
             repo=REPO_NAME,
             release_tag=release_tag,
             commit_sha=commit_sha,

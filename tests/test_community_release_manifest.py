@@ -563,14 +563,31 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                     ],
                 )
 
+            bcn_variants = [
+                entry
+                for entry in with_tma["full_manifests"]["sector_data"]["entries"]
+                if entry["id"] == "L/LE/LECB/LECB_W/BARCELONA_TMA"
+            ]
+            self.assertEqual(2, len(bcn_variants))
+            bcn_legacy, bcn_s3 = bcn_variants
+            self.assertNotIn("requires", bcn_legacy)
+            self.assertEqual(["community.tma_file"], bcn_legacy["files"]["tma"]["requires"])
+            self.assertEqual("L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json", bcn_legacy["files"]["tma"]["repo_path"])
+            self.assertEqual(["community.airspace_files"], bcn_s3["requires"])
+            self.assertEqual(
+                {
+                    "definitions",
+                    "tma_coordination",
+                    "tma_definitions",
+                    "tma_layout",
+                },
+                set(bcn_s3["files"]),
+            )
+            self.assertEqual(
+                "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
+                bcn_s3["files"]["definitions"]["repo_path"],
+            )
             full_entries = {entry["id"]: entry for entry in with_tma["full_manifests"]["sector_data"]["entries"]}
-            bcn_entry = full_entries["L/LE/LECB/LECB_W/BARCELONA_TMA"]
-            self.assertNotIn("requires", bcn_entry)
-            self.assertEqual(["community.tma_file"], bcn_entry["files"]["tma"]["requires"])
-            self.assertEqual("L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json", bcn_entry["files"]["tma"]["repo_path"])
-            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_definitions"]["requires"])
-            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_layout"]["requires"])
-            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_coordination"]["requires"])
             self.assertIn("L/LE/LECB", full_entries)
             self.assertEqual(["community.airspace_files"], full_entries["L/LE/LECB"]["files"]["acc_definitions"]["requires"])
 
@@ -582,6 +599,13 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                 self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json", names)
                 self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json", names)
                 self.assertIn("L/LE/LECB/acc_definitions.json", names)
+                self.assertIn("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json", names)
+                s3_def_doc = json.loads(
+                    archive.read("airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json")
+                )
+                self.assertEqual(3, s3_def_doc.get("schema"))
+                leg_def_doc = json.loads(archive.read("L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json"))
+                self.assertNotIn("schema", leg_def_doc)
 
     def test_build_release_bundle_accepts_suffixed_manual_release_title(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
@@ -647,6 +671,57 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                 for alias in aliases:
                     self.assertEqual(canonical_colors, archive.read(f"{alias}/colors.json"))
                     self.assertEqual(canonical_style, archive.read(f"{alias}/style.json"))
+
+            full_color_entries = {e["id"]: e for e in first["full_manifests"]["color_profiles"]["entries"]}
+            self.assertIn("K", full_color_entries)
+            self.assertNotIn("K/KA", full_color_entries)
+            self.assertEqual(["community.airspace_files"], full_color_entries["K"]["requires"])
+            with zipfile.ZipFile(first["assets"]["color_profiles_full_zip"]["path"], "r") as full_archive:
+                self.assertIn("K/colors.json", full_archive.namelist())
+                self.assertNotIn("K/KA/colors.json", full_archive.namelist())
+
+    def test_mva_schema3_full_feed_stores_schema3_bytes_in_airac_variant(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "repo"
+            build_fixture_repo(root)
+            mva_path = root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "mva.json"
+            s3_payload = {
+                "schema": 3,
+                "airports": ["LEMD"],
+                "mva_areas": [
+                    {
+                        "area_id": "AREA_1",
+                        "minimum_altitude_ft": 3000,
+                        "polygon": [[40.0, -3.8], [40.1, -3.7], [40.2, -3.8]],
+                    }
+                ],
+            }
+            write_json(mva_path, s3_payload)
+
+            bundle = MODULE.build_release_bundle(
+                output_dir=root / "build" / "release",
+                release_tag="daily-2026-03-18",
+                published_at="2026-03-18T01:15:00Z",
+                commit_sha="test-commit",
+                download_repo="lainoa-software/voiceatc-simulator-community",
+                root=root,
+            )
+
+            lemd_entries = [e for e in bundle["full_manifests"]["mva"]["entries"] if e["id"] == "LEMD"]
+            self.assertEqual(2, len(lemd_entries))
+            legacy_entry, s3_entry = lemd_entries
+            self.assertNotIn("requires", legacy_entry)
+            self.assertEqual(["community.airspace_files"], s3_entry["requires"])
+            variant_path = s3_entry["repo_path"]
+            self.assertTrue(variant_path.startswith("airac_variants/"))
+
+            with zipfile.ZipFile(bundle["assets"]["mva_full_zip"]["path"], "r") as archive:
+                variant_bytes = archive.read(variant_path)
+                self.assertEqual(s3_entry["sha256"], MODULE._hash_bytes(variant_bytes))
+                self.assertEqual(3, json.loads(variant_bytes).get("schema"))
+                legacy_bytes = archive.read(legacy_entry["repo_path"])
+                self.assertEqual(legacy_entry["sha256"], MODULE._hash_bytes(legacy_bytes))
+                self.assertNotIn("schema", json.loads(legacy_bytes))
 
     def test_cli_writes_summary_and_leaves_voiceatc_manifests_untouched(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

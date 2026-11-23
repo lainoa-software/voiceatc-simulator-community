@@ -1694,12 +1694,66 @@ def project_release_dataset_feeds(
                 if not isinstance(files, dict):
                     new_full_entries.append(entry)
                     continue
-                for file_entry in files.values():
-                    if isinstance(file_entry, dict) and file_entry.get("repo_path"):
-                        rp = str(file_entry["repo_path"])
-                        orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
-                        archive_sources[rp] = orig
-                new_full_entries.append(entry)
+                has_legacy_tma = "configs" in files or "influence" in files
+                has_schema3_tma = "tma_definitions" in files and "tma_layout" in files
+                if has_legacy_tma and has_schema3_tma:
+                    # Emit the legacy bundle entry first (for full-feed builds without community.airspace_files),
+                    # followed by the schema-3 entry gated on community.airspace_files so capable builds overwrite it.
+                    legacy_files: dict[str, object] = {}
+                    for fkind in ("configs", "definitions", "influence", "tma"):
+                        fentry = files.get(fkind)
+                        if isinstance(fentry, dict):
+                            legacy_files[fkind] = dict(fentry)
+                            if fentry.get("repo_path"):
+                                rp = str(fentry["repo_path"])
+                                orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
+                                archive_sources[rp] = rp if rp in generated else orig
+                    legacy_entry = {k: v for k, v in entry.items() if k != "files"}
+                    legacy_entry["files"] = legacy_files
+                    new_full_entries.append(legacy_entry)
+
+                    def_s3 = files.get("definitions_schema3")
+                    def_s3_rp = str(def_s3.get("repo_path", "")) if isinstance(def_s3, dict) else ""
+                    if not def_s3_rp.startswith(".voiceatc/defaults/"):
+                        schema3_files: dict[str, object] = {}
+                        for fkind in ("tma_definitions", "tma_layout", "tma_coordination"):
+                            fentry = files.get(fkind)
+                            if not isinstance(fentry, dict):
+                                continue
+                            clean = dict(fentry)
+                            schema3_files[fkind] = clean
+                            if clean.get("repo_path"):
+                                rp = str(clean["repo_path"])
+                                orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
+                                archive_sources[rp] = rp if rp in generated else orig
+                        if isinstance(def_s3, dict) and def_s3_rp:
+                            orig_def = (
+                                def_s3_rp[len("airac_variants/") :]
+                                if def_s3_rp.startswith("airac_variants/")
+                                else def_s3_rp
+                            )
+                            variant_repo = f"airac_variants/{orig_def}"
+                            disk_bytes = _canonical_lf((root / orig_def).read_bytes())
+                            d_sha, d_size = _file_meta(disk_bytes)
+                            clean_def = dict(def_s3)
+                            clean_def["repo_path"] = variant_repo
+                            clean_def["sha256"] = d_sha
+                            clean_def["size_bytes"] = d_size
+                            schema3_files["definitions"] = clean_def
+                            generated[variant_repo] = disk_bytes
+                            archive_sources[variant_repo] = variant_repo
+                        s3_entry = {k: v for k, v in entry.items() if k != "files"}
+                        base_reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
+                        s3_entry["requires"] = sorted(set(base_reqs) | {AIRSPACE_FILES_CAPABILITY})
+                        s3_entry["files"] = schema3_files
+                        new_full_entries.append(s3_entry)
+                else:
+                    for file_entry in files.values():
+                        if isinstance(file_entry, dict) and file_entry.get("repo_path"):
+                            rp = str(file_entry["repo_path"])
+                            orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
+                            archive_sources[rp] = rp if rp in generated else orig
+                    new_full_entries.append(entry)
         gated["full_entries"] = new_full_entries
         return generated, archive_sources
 
@@ -1758,9 +1812,19 @@ def project_release_dataset_feeds(
                 new_full_entries.append(entry)
                 archive_sources[rp] = s3_rp
                 continue
+            if rp.startswith("airac_variants/"):
+                d_sha, d_size = _file_meta(disk_bytes)
+                s3_entry = dict(entry)
+                s3_entry["sha256"] = d_sha
+                s3_entry["size_bytes"] = d_size
+                s3_entry["requires"] = sorted(set(reqs) | {AIRSPACE_FILES_CAPABILITY})
+                new_full_entries.append(s3_entry)
+                generated[rp] = disk_bytes
+                archive_sources[rp] = rp
+                continue
             disk_doc = json.loads(disk_bytes.decode("utf-8"))
             leg_doc = json.loads(leg_bytes.decode("utf-8"))
-            if leg_doc != disk_doc or leg_bytes != disk_bytes and isinstance(disk_doc, dict) and disk_doc.get("schema") == 3:
+            if leg_doc != disk_doc or (leg_bytes != disk_bytes and isinstance(disk_doc, dict) and disk_doc.get("schema") == 3):
                 generated[orig] = leg_bytes
                 sha, size = _file_meta(leg_bytes)
                 legacy_entry = dict(entry)
@@ -1778,7 +1842,7 @@ def project_release_dataset_feeds(
                 s3_entry["requires"] = sorted(set(reqs) | {AIRSPACE_FILES_CAPABILITY})
                 new_full_entries.append(s3_entry)
                 generated[variant_repo] = disk_bytes
-                archive_sources[variant_repo] = s3_rp
+                archive_sources[variant_repo] = variant_repo
             else:
                 new_full_entries.append(entry)
                 archive_sources[rp] = s3_rp
