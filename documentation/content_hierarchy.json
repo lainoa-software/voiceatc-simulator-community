@@ -376,6 +376,10 @@
     "ZGZU": {
       "authority": "navigraph_2607",
       "kind": "fir"
+    },
+    "CZEG": {
+      "authority": "navigraph_2503",
+      "kind": "fir"
     }
   },
   "terminal_scopes": {
@@ -613,6 +617,7 @@
     "Y/YM/YMMM/MELBOURNE_TMA": ["YMML"],
     "Y/YM/YMMM/SYDNEY_TMA": ["YSSY"],
     "Z/ZG/ZGZU/ZHUHAI_TMA": ["VMMC"],
-    "F/FA/FACA/CAPE_TOWN_CTR": ["FACT"]
+    "F/FA/FACA/CAPE_TOWN_CTR": ["FACT"],
+    "C/CZ/CZEG/CALGARY_TMA": ["CYYC"]
   }
 }
