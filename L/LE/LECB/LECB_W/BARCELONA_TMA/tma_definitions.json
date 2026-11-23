@@ -4,30 +4,45 @@
     {
       "id": "LEBL_APP",
       "call_sign": "Barcelona Approach",
-      "services": ["approach_radar"]
+      "services": [
+        "approach_radar"
+      ]
     },
     {
       "id": "LEBL_TWR",
       "call_sign": "Barcelona Tower",
-      "services": ["tower"],
-      "airport": "LEBL"
+      "services": [
+        "tower"
+      ],
+      "airport": "LEBL",
+      "unassigned_frequencies": [
+        "118.330"
+      ]
     },
     {
       "id": "LEGE_TWR",
       "call_sign": "Girona Tower",
-      "services": ["tower", "approach_conventional"],
+      "services": [
+        "tower",
+        "approach_conventional"
+      ],
       "airport": "LEGE"
     },
     {
       "id": "LERS_TWR",
       "call_sign": "Reus Tower",
-      "services": ["tower", "approach_conventional"],
+      "services": [
+        "tower",
+        "approach_conventional"
+      ],
       "airport": "LERS"
     },
     {
       "id": "LEDA_TWR",
       "call_sign": "Lleida Tower",
-      "services": ["tower"],
+      "services": [
+        "tower"
+      ],
       "airport": "LEDA"
     }
   ],
@@ -56,46 +71,6 @@
       "call_sign": "LEDA_TWR",
       "unit": "LEDA_TWR",
       "frequency": "121.330"
-    },
-    {
-      "call_sign": "LEBL_T1_APP",
-      "unit": "LEBL_APP",
-      "frequency": "131.125"
-    },
-    {
-      "call_sign": "LEBL_T2_APP",
-      "unit": "LEBL_APP",
-      "frequency": "121.155"
-    },
-    {
-      "call_sign": "LEBL_FNL_APP",
-      "unit": "LEBL_APP",
-      "frequency": "119.105"
-    },
-    {
-      "call_sign": "LEBL_T3_APP",
-      "unit": "LEBL_APP",
-      "frequency": "126.505"
-    },
-    {
-      "call_sign": "LEBL_T4_APP",
-      "unit": "LEBL_APP",
-      "frequency": "127.700"
-    },
-    {
-      "call_sign": "LEBL_T34_APP",
-      "unit": "LEBL_APP",
-      "frequency": "126.505"
-    },
-    {
-      "call_sign": "LEBL_N_TWR",
-      "unit": "LEBL_TWR",
-      "frequency": "118.105"
-    },
-    {
-      "call_sign": "LEBL_S_TWR",
-      "unit": "LEBL_TWR",
-      "frequency": "118.330"
     }
   ],
   "zones": [

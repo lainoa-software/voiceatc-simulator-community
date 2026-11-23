@@ -175,7 +175,7 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             for layout in payload["layouts"]:
                 self.assertNotIn("airports", layout)
                 self.assertIn("airports", layout["positions"][0])
-        self.assertEqual(24, tma_checked)
+        self.assertEqual(20, tma_checked)
 
     def test_project_sector_definitions_converts_sector_ids_aliases_and_is_delegation(self) -> None:
         tma_structure = {
@@ -438,16 +438,8 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             {
                 sid: ["LEAL", "LEVC"]
                 for sid in (
-                    "LECLAAE",
                     "LECLAAW",
                     "LECLALV",
-                    "LECLDEE",
-                    "LECLDEW",
-                    "LECLSUE",
-                    "LECLSUW",
-                    "LECLTME",
-                    "LECLTMN",
-                    "LECLTMW",
                     "LECLVAP",
                 )
             },
@@ -490,7 +482,6 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA",
             "E/EF/EFIN/EFIN_S/HELSINKI_TMA",
             "E/ES/ESAA/ESOS_Y/ESOS_APP",
-            "L/LE/LECB/LECB_E/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
             "L/LE/LECB/LECB_W/VALENCIA_TMA",
             "L/LE/LECM/LECM_R2/MADRID_TMA",

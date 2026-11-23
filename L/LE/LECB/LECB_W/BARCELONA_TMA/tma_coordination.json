@@ -5,277 +5,391 @@
       "name": "LEBL_ARR_ALBER",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["ALBER"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "ALBER"
+      ],
       "level": "F210"
     },
     {
       "name": "LEBL_ARR_BISBA",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["BISBA"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "BISBA"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_CASPE",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["CASPE"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "CASPE"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_GRAUS",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["GRAUS"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "GRAUS"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_LOBAR",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["LOBAR"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "LOBAR"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_MAMUK",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["MAMUK"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "MAMUK"
+      ],
       "level": "F110"
     },
     {
       "name": "LEBL_ARR_MARTA",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["MARTA"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "MARTA"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_MATEX",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["MATEX"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "MATEX"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_NEPAL",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["NEPAL"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "NEPAL"
+      ],
       "level": "F160"
     },
     {
       "name": "LEBL_ARR_OSTUR",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["OSTUR"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "OSTUR"
+      ],
       "level": "F160"
     },
     {
       "name": "LEBL_ARR_PUMAL",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["PUMAL"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "PUMAL"
+      ],
       "level": "F230"
     },
     {
       "name": "LEBL_ARR_VERSO",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["VERSO"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "VERSO"
+      ],
       "level": "F200"
     },
     {
       "name": "LEBL_ARR_VIBOK",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
-      "arrives": ["LEBL"],
-      "fix": ["VIBOK"],
+      "arrives": [
+        "LEBL"
+      ],
+      "fix": [
+        "VIBOK"
+      ],
       "level": "F100"
     },
     {
       "name": "LEBL_DEP_GRAUS",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["GRAUS"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "GRAUS"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_LOBAR",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["LOBAR"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LOBAR"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_MOPAS",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["MOPAS"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "MOPAS"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_NATPI",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["NATPI"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "NATPI"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_OLOXO",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["OLOXO"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "OLOXO"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_MAMUK",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["MAMUK"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "MAMUK"
+      ],
       "level": "F090"
     },
     {
       "name": "LEBL_DEP_DUQQI",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["DUQQI"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DUQQI"
+      ],
       "level": "F100"
     },
     {
       "name": "LEBL_DEP_AGENA",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["AGENA"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "AGENA"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_DIPES",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["DIPES"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DIPES"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_LOTOS",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["LOTOS"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LOTOS"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_SENIA",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["SENIA"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "SENIA"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_DALIN",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["DALIN"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DALIN"
+      ],
       "level": "F190"
     },
     {
       "name": "LEBL_DEP_DUNES",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["DUNES"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "DUNES"
+      ],
       "level": "F100"
     },
     {
       "name": "LEBL_DEP_LARPA",
       "from": "LEBL_APP",
       "to": "LECB_CTR",
-      "departs": ["LEBL"],
-      "fix": ["LARPA"],
+      "departs": [
+        "LEBL"
+      ],
+      "fix": [
+        "LARPA"
+      ],
       "level": "F190"
     },
     {
       "name": "LEGE_ARR_BANOL",
       "from": "LEBL_APP",
       "to": "LEGE_TWR",
-      "arrives": ["LEGE"],
-      "fix": ["BANOL"],
+      "arrives": [
+        "LEGE"
+      ],
+      "fix": [
+        "BANOL"
+      ],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_VLA",
       "from": "LEBL_APP",
       "to": "LERS_TWR",
-      "arrives": ["LERS"],
-      "fix": ["VLA"],
+      "arrives": [
+        "LERS"
+      ],
+      "fix": [
+        "VLA"
+      ],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_KERIP",
       "from": "LEBL_APP",
       "to": "LERS_TWR",
-      "arrives": ["LERS"],
-      "fix": ["KERIP"],
+      "arrives": [
+        "LERS"
+      ],
+      "fix": [
+        "KERIP"
+      ],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_DISET",
       "from": "LEBL_APP",
       "to": "LERS_TWR",
-      "arrives": ["LERS"],
-      "fix": ["DISET"],
+      "arrives": [
+        "LERS"
+      ],
+      "fix": [
+        "DISET"
+      ],
       "level": "A060"
     },
     {
       "name": "LEGE_DEP",
       "from": "LEGE_TWR",
       "to": "LEBL_APP",
-      "departs": ["LEGE"],
+      "departs": [
+        "LEGE"
+      ],
       "level": "F080"
     },
     {
       "name": "LERS_DEP",
       "from": "LERS_TWR",
       "to": "LEBL_APP",
-      "departs": ["LERS"],
+      "departs": [
+        "LERS"
+      ],
       "level": "A050"
-    },
-    {
-      "name": "W_BARCELONA_F200",
-      "from": "LECB_BKW_CTR",
-      "to": "LEBL_T1_APP",
-      "arrives": ["LEBL"],
-      "level": "F200"
-    },
-    {
-      "name": "E_BARCELONA_F200",
-      "from": "LECB_BKE_CTR",
-      "to": "LEBL_T1_APP",
-      "arrives": ["LEBL"],
-      "level": "F200"
     }
   ]
 }

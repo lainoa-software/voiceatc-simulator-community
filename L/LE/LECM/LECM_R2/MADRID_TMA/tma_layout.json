@@ -4,48 +4,43 @@
     "LEMD_APP": {
       "1AND": {
         "positions": {
-          "LEMD_ALN_APP": ["LEMDALN", "LEMDCTR"]
+          "LEMD_ALN_APP": [
+            "LEMDALN",
+            "LEMDCTR"
+          ]
         },
-        "airports": ["LEMD"],
+        "airports": [
+          "LEMD"
+        ],
         "valid_for_runways": {
-          "LEMD": ["NORTH"]
+          "LEMD": [
+            "NORTH"
+          ]
         }
       },
       "1ASD": {
         "positions": {
-          "LEMD_ALS_APP": ["LEMDALS", "LEMDCTR"]
+          "LEMD_ALS_APP": [
+            "LEMDALS",
+            "LEMDCTR"
+          ]
         },
-        "airports": ["LEMD"],
+        "airports": [
+          "LEMD"
+        ],
         "valid_for_runways": {
-          "LEMD": ["SOUTH"]
+          "LEMD": [
+            "SOUTH"
+          ]
         }
-      },
-      "N4": {
-        "positions": {
-          "LEMD_DEP_APP": ["LEMDDEN", "LEMDDWN"],
-          "LEMD_FNW_APP": ["LEMDASWN"],
-          "LEMD_RW_APP": ["LEMDRWN"],
-          "LEMD_W_APP": ["LEMDWNN", "LEMDWSN"]
-        },
-        "airports": ["LEMD"]
-      },
-      "N7": {
-        "positions": {
-          "LEMD_DEP_APP": ["LEMDDEN", "LEMDDWN"],
-          "LEMD_E_APP": ["LEMDENN", "LEMDESN"],
-          "LEMD_FNE_APP": ["LEMDASEN"],
-          "LEMD_FNW_APP": ["LEMDASWN"],
-          "LEMD_RE_APP": ["LEMDREN"],
-          "LEMD_RW_APP": ["LEMDRWN"],
-          "LEMD_W_APP": ["LEMDWNN", "LEMDWSN"]
-        },
-        "airports": ["LEMD"]
       }
     },
     "LEMD_TWR": {
       "1": {
         "positions": {
-          "LEMD_TWR": ["LEMDATZ"]
+          "LEMD_TWR": [
+            "LEMDATZ"
+          ]
         }
       }
     }
