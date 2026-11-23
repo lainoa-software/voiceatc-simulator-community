@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "6bf871399f89ada6dff6e44f0ca7b636c60cfb5b",
+  "commit_sha": "231a138a134c0dd3b3874d2c45785ffb2105a4df",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-b/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYUL",
@@ -29,6 +29,12 @@
       "requires": ["community.airspace_files"],
       "sha256": "197c54c1f091b3eb72a0796dd8c5dc1baff7eac0a39a11a8a492ca3ac158c3ba",
       "size_bytes": 545
+    },
+    {
+      "id": "CYYC",
+      "repo_path": "C/CZ/CZEG/CALGARY_TMA/CYYC/runway_configs.json",
+      "sha256": "271b3779d6212f27eaa951c3d2a1dafadfa4c7e74083c988be67b18c9df8685c",
+      "size_bytes": 913
     },
     {
       "id": "CYYZ",
@@ -3360,11 +3366,11 @@
       "size_bytes": 1165
     }
   ],
-  "entry_count": 516,
-  "generated_at": "2026-11-23T08:58:52Z",
-  "published_at": "2026-11-23T08:58:52Z",
-  "release_tag": "daily-2026-11-23",
+  "entry_count": 517,
+  "generated_at": "2026-11-23T11:55:58Z",
+  "published_at": "2026-11-23T11:55:58Z",
+  "release_tag": "daily-2026-11-23-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "2202c720d47fb98e602cd1a9632b3bd7efe7a85e4180257fb0293d37858af4dd",
-  "size_bytes": 170512
+  "sha256": "d5f94861b56255e9764b530ecdc62b34385965d3f3c5a000a2642e127d810b39",
+  "size_bytes": 170966
 }
