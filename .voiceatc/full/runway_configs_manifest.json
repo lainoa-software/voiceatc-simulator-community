@@ -1,9 +1,27 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "231a138a134c0dd3b3874d2c45785ffb2105a4df",
+  "commit_sha": "c31ac0bb4c405b91fd86cc7a5042ab83be2fb2e0",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-b/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-c/runway-configs-2611-full.zip",
   "entries": [
+    {
+      "id": "CYEG",
+      "repo_path": "C/CZ/CZEG/EDMONTON_TMA/CYEG/runway_configs.json",
+      "sha256": "7f0293ad6f3f20206e2c4e287035a05fac708cfe6379911032188be38ccac6a3",
+      "size_bytes": 706
+    },
+    {
+      "id": "CYLW",
+      "repo_path": "C/CZ/CZVR/VANCOUVER_CTR/CYLW/runway_configs.json",
+      "sha256": "8ca2f4bac4c1d84c151505e48d0389c1f8288150713de9d7e0fe58c30cb1ba2e",
+      "size_bytes": 274
+    },
+    {
+      "id": "CYMM",
+      "repo_path": "C/CZ/CZEG/EDMONTON_CTR/CYMM/runway_configs.json",
+      "sha256": "4167695bcfb16179767b39b0104130bdb0be916d8fc1e05bb88b5d5809cdd729",
+      "size_bytes": 254
+    },
     {
       "id": "CYUL",
       "repo_path": "C/CZ/CZUL/MONTREAL_TMA/CYUL/runway_configs.json",
@@ -29,6 +47,12 @@
       "requires": ["community.airspace_files"],
       "sha256": "197c54c1f091b3eb72a0796dd8c5dc1baff7eac0a39a11a8a492ca3ac158c3ba",
       "size_bytes": 545
+    },
+    {
+      "id": "CYXE",
+      "repo_path": "C/CZ/CZWG/WINNIPEG_CTR/CYXE/runway_configs.json",
+      "sha256": "75f20c51769234614e13e5387671b733c65c6301dac7bd659b398444e7620f5d",
+      "size_bytes": 462
     },
     {
       "id": "CYYC",
@@ -3366,11 +3390,11 @@
       "size_bytes": 1165
     }
   ],
-  "entry_count": 517,
-  "generated_at": "2026-11-23T11:55:58Z",
-  "published_at": "2026-11-23T11:55:58Z",
-  "release_tag": "daily-2026-11-23-b",
+  "entry_count": 521,
+  "generated_at": "2026-11-23T12:01:17Z",
+  "published_at": "2026-11-23T12:01:17Z",
+  "release_tag": "daily-2026-11-23-c",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "d5f94861b56255e9764b530ecdc62b34385965d3f3c5a000a2642e127d810b39",
-  "size_bytes": 170966
+  "sha256": "3e19f503a60ccae46636dfba41c2055ebc065f1563ceeec63cf22140bc4266ef",
+  "size_bytes": 172313
 }

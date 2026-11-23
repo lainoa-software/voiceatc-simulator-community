@@ -1,6 +1,21 @@
 {
-  "airport_count": 258,
+  "airport_count": 262,
   "airports": {
+    "CYEG": {
+      "repo_path": "C/CZ/CZEG/EDMONTON_TMA/CYEG/runway_configs.json",
+      "sha256": "7f0293ad6f3f20206e2c4e287035a05fac708cfe6379911032188be38ccac6a3",
+      "size_bytes": 706
+    },
+    "CYLW": {
+      "repo_path": "C/CZ/CZVR/VANCOUVER_CTR/CYLW/runway_configs.json",
+      "sha256": "8ca2f4bac4c1d84c151505e48d0389c1f8288150713de9d7e0fe58c30cb1ba2e",
+      "size_bytes": 274
+    },
+    "CYMM": {
+      "repo_path": "C/CZ/CZEG/EDMONTON_CTR/CYMM/runway_configs.json",
+      "sha256": "4167695bcfb16179767b39b0104130bdb0be916d8fc1e05bb88b5d5809cdd729",
+      "size_bytes": 254
+    },
     "CYUL": {
       "repo_path": "C/CZ/CZUL/MONTREAL_TMA/CYUL/runway_configs.json",
       "sha256": "9db231e5beb957ccfcd70165d2abd23d44fa062689dac5868b647e43b8d5709b",
@@ -10,6 +25,11 @@
       "repo_path": "C/CZ/CZVR/VANCOUVER_TMA/CYVR/runway_configs.json",
       "sha256": "084978d2c8df1ad175305a9fd49c83ecb65074c3677cf6fd3f3de366a5a03eb7",
       "size_bytes": 530
+    },
+    "CYXE": {
+      "repo_path": "C/CZ/CZWG/WINNIPEG_CTR/CYXE/runway_configs.json",
+      "sha256": "75f20c51769234614e13e5387671b733c65c6301dac7bd659b398444e7620f5d",
+      "size_bytes": 462
     },
     "CYYC": {
       "repo_path": "C/CZ/CZEG/CALGARY_TMA/CYYC/runway_configs.json",
@@ -1293,12 +1313,12 @@
     }
   },
   "asset_name": "runway-configs-2611.zip",
-  "commit_sha": "231a138a134c0dd3b3874d2c45785ffb2105a4df",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-b/runway-configs-2611.zip",
-  "published_at": "2026-11-23T11:55:58Z",
-  "release_tag": "daily-2026-11-23-b",
+  "commit_sha": "c31ac0bb4c405b91fd86cc7a5042ab83be2fb2e0",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-c/runway-configs-2611.zip",
+  "published_at": "2026-11-23T12:01:17Z",
+  "release_tag": "daily-2026-11-23-c",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
-  "sha256": "69c346c4a4ccf681ba1f2bebaf76ebbbd81234e8330cfdb161ee94890c1f5fba",
-  "size_bytes": 80116
+  "sha256": "cfb4a18ed2a56691fc584229474cde9fe7e4e3d0b98f547cf7a45c72961a1564",
+  "size_bytes": 81463
 }
