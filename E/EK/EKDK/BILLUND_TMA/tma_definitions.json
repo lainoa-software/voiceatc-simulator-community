@@ -4,9 +4,7 @@
     {
       "id": "EKBI_APP",
       "call_sign": "Billund approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,282 +4,170 @@
   "airac_min": 2610,
   "use": [
     {
-      "sids": [
-        "BEKO1C"
-      ],
+      "sids": ["BEKO1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "BEKO2E"
-      ],
+      "sids": ["BEKO2E"],
       "spawn": false
     },
     {
-      "sids": [
-        "BEKO5A"
-      ],
+      "sids": ["BEKO5A"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALO1A"
-      ],
+      "sids": ["DALO1A"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALO1C"
-      ],
+      "sids": ["DALO1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALO1E"
-      ],
+      "sids": ["DALO1E"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1A"
-      ],
+      "sids": ["LEKE1A"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1C"
-      ],
+      "sids": ["LEKE1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1E"
-      ],
+      "sids": ["LEKE1E"],
       "spawn": false
     },
     {
-      "sids": [
-        "PECA1C"
-      ],
+      "sids": ["PECA1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "PECA2E"
-      ],
+      "sids": ["PECA2E"],
       "spawn": false
     },
     {
-      "sids": [
-        "PECA3A"
-      ],
+      "sids": ["PECA3A"],
       "spawn": false
     },
     {
-      "sids": [
-        "RAME1C"
-      ],
+      "sids": ["RAME1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "RAME1E"
-      ],
+      "sids": ["RAME1E"],
       "spawn": false
     },
     {
-      "sids": [
-        "RAME2A"
-      ],
+      "sids": ["RAME2A"],
       "spawn": false
     },
     {
-      "sids": [
-        "RUMS1D"
-      ],
+      "sids": ["RUMS1D"],
       "spawn": false
     },
     {
-      "sids": [
-        "RUMS1F"
-      ],
+      "sids": ["RUMS1F"],
       "spawn": false
     },
     {
-      "sids": [
-        "RUMS2B"
-      ],
+      "sids": ["RUMS2B"],
       "spawn": false
     },
     {
-      "sids": [
-        "BEKO1X"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["BEKO1X"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "BEKO1Y"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["BEKO1Y"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALO1Y"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["DALO1Y"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1X"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["LEKE1X"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1Y"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["LEKE1Y"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "PECA1Y"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["PECA1Y"],
+      "configs": ["07"],
       "spawn": false
     },
     {
-      "sids": [
-        "ADLA1T"
-      ],
-      "configs": [
-        "07C_ONLY"
-      ],
+      "sids": ["ADLA1T"],
+      "configs": ["07C_ONLY"],
       "spawn": false
     },
     {
-      "sids": [
-        "DUME1T"
-      ],
-      "configs": [
-        "07C_ONLY"
-      ],
+      "sids": ["DUME1T"],
+      "configs": ["07C_ONLY"],
       "spawn": false
     },
     {
-      "sids": [
-        "LARI1T"
-      ],
-      "configs": [
-        "07C_ONLY"
-      ],
+      "sids": ["LARI1T"],
+      "configs": ["07C_ONLY"],
       "spawn": false
     },
     {
-      "sids": [
-        "SOSL1T"
-      ],
-      "configs": [
-        "07C_ONLY"
-      ],
+      "sids": ["SOSL1T"],
+      "configs": ["07C_ONLY"],
       "spawn": false
     },
     {
-      "sids": [
-        "XEME1T"
-      ],
-      "configs": [
-        "07C_ONLY"
-      ],
+      "sids": ["XEME1T"],
+      "configs": ["07C_ONLY"],
       "spawn": false
     },
     {
-      "stars": [
-        "ABEY2G"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["ABEY2G"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "stars": [
-        "BETY2G"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["BETY2G"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "stars": [
-        "CANT2G"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["CANT2G"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "stars": [
-        "SIER2G"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["SIER2G"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "sids": [
-        "BEKO1D"
-      ],
-      "configs": [
-        "25"
-      ],
+      "sids": ["BEKO1D"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALO1B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "sids": ["DALO1B"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEKE1D"
-      ],
-      "configs": [
-        "25"
-      ],
+      "sids": ["LEKE1D"],
+      "configs": ["25"],
       "spawn": false
     },
     {
-      "sids": [
-        "PECA2B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "sids": ["PECA2B"],
+      "configs": ["25"],
       "spawn": false
     }
   ]

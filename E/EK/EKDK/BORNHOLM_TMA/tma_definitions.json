@@ -4,9 +4,7 @@
     {
       "id": "EKRN_APP",
       "call_sign": "Bornholm approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

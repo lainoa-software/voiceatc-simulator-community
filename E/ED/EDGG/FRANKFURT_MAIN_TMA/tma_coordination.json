@@ -5,178 +5,114 @@
       "name": "EDDF_ARR_KERAX_25",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "KERAX"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["KERAX"],
       "level": "F110",
-      "runways": [
-        "25L",
-        "25C",
-        "25R"
-      ]
+      "runways": ["25L", "25C", "25R"]
     },
     {
       "name": "EDDF_ARR_KERAX_07",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "KERAX"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["KERAX"],
       "level": "F130",
-      "runways": [
-        "07L",
-        "07C",
-        "07R"
-      ]
+      "runways": ["07L", "07C", "07R"]
     },
     {
       "name": "EDDF_ARR_OSPUL",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "OSPUL"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["OSPUL"],
       "level": "F100"
     },
     {
       "name": "EDDF_ARR_RAMOB",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "RAMOB"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["RAMOB"],
       "level": "F110"
     },
     {
       "name": "EDDF_ARR_ADNIS",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "ADNIS"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["ADNIS"],
       "level": "F100"
     },
     {
       "name": "EDDF_ARR_SPESA",
       "from": "EDGG_CTR",
       "to": "EDDF_APP",
-      "arrives": [
-        "EDDF"
-      ],
-      "fix": [
-        "SPESA"
-      ],
+      "arrives": ["EDDF"],
+      "fix": ["SPESA"],
       "level": "F110"
     },
     {
       "name": "EDDF_DEP_AMTIX",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "AMTIX"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["AMTIX"],
       "level": "F110"
     },
     {
       "name": "EDDF_DEP_KOMIB",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "KOMIB"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["KOMIB"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_ANEKI",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "ANEKI"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["ANEKI"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_SOBRA",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "SOBRA"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["SOBRA"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_ULKIG",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "ULKIG"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["ULKIG"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_OBOKA",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "OBOKA"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["OBOKA"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_MARUN",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "MARUN"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["MARUN"],
       "level": "F130"
     },
     {
       "name": "EDDF_DEP_TOBAK",
       "from": "EDDF_APP",
       "to": "EDGG_CTR",
-      "departs": [
-        "EDDF"
-      ],
-      "fix": [
-        "TOBAK"
-      ],
+      "departs": ["EDDF"],
+      "fix": ["TOBAK"],
       "level": "F130"
     }
   ]

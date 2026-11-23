@@ -5,15 +5,11 @@
   "initial_climb_ft": 8000,
   "exceptions": [
     {
-      "runways": [
-        "03L"
-      ],
+      "runways": ["03L"],
       "initial_climb_ft": 6000
     },
     {
-      "runways": [
-        "03R"
-      ],
+      "runways": ["03R"],
       "initial_climb_ft": 6000
     }
   ]

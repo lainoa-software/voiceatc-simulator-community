@@ -4,15 +4,8 @@
     {
       "id": "EDDB_APP",
       "call_sign": "Berlin Brandenburg approach",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "126.425",
-        "120.340",
-        "120.630",
-        "121.130"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["126.425", "120.340", "120.630", "121.130"]
     }
   ],
   "positions": [

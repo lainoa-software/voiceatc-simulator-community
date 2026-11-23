@@ -4,13 +4,9 @@
     "RCMT_APP": {
       "NANGAN": {
         "positions": {
-          "RCMT_APP": [
-            "RCMT_APP"
-          ]
+          "RCMT_APP": ["RCMT_APP"]
         },
-        "airports": [
-          "RCMT"
-        ]
+        "airports": ["RCMT"]
       }
     }
   }

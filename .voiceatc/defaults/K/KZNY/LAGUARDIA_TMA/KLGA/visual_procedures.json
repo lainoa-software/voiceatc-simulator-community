@@ -28,6 +28,9 @@
             "aliases": ["Twin White Tanks"],
             "scope": "point"
           },
+          "final": {
+            "glidepath_deg": 3
+          },
           "legs": [
             {
               "id": "PACHU",
@@ -71,15 +74,15 @@
               "fly_over": true,
               "course_deg": 59,
               "reference": "Twin White Tanks",
-              "speed": {
-                "value_kt": 165,
-                "status": "required",
-                "kind": "at_or_below"
-              },
               "altitude": {
                 "value_ft": 2200,
                 "status": "recommended",
                 "kind": "at"
+              },
+              "speed": {
+                "value_kt": 165,
+                "status": "required",
+                "kind": "at_or_below"
               }
             },
             {
@@ -127,10 +130,7 @@
                 "kind": "at"
               }
             }
-          ],
-          "final": {
-            "glidepath_deg": 3
-          }
+          ]
         }
       ]
     }

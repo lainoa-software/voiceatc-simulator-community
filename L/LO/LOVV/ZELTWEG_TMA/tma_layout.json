@@ -4,92 +4,56 @@
     "LOXZ_APP": {
       "ZELTWEG_TMA_WHOLE_LOXZ_08R": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_08R"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_08R"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_08R"
-          ]
+          "LOXZ": ["LOXZ_08R"]
         }
       },
       "ZELTWEG_TMA_WHOLE_LOXZ_26L": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_26L"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_26L"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_26L"
-          ]
+          "LOXZ": ["LOXZ_26L"]
         }
       },
       "ZELTWEG_TMA_WHOLE_LOXZ_08L": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_08L"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_08L"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_08L"
-          ]
+          "LOXZ": ["LOXZ_08L"]
         }
       },
       "ZELTWEG_TMA_WHOLE_LOXZ_26R": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_26R"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_26R"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_26R"
-          ]
+          "LOXZ": ["LOXZ_26R"]
         }
       },
       "ZELTWEG_TMA_WHOLE_LOXZ_02": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_02"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_02"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_02"
-          ]
+          "LOXZ": ["LOXZ_02"]
         }
       },
       "ZELTWEG_TMA_WHOLE_LOXZ_20": {
         "positions": {
-          "LOXZ_APP": [
-            "ZELTWEG_TMA_LOXZ_20"
-          ]
+          "LOXZ_APP": ["ZELTWEG_TMA_LOXZ_20"]
         },
-        "airports": [
-          "LOXZ"
-        ],
+        "airports": ["LOXZ"],
         "valid_for_runways": {
-          "LOXZ": [
-            "LOXZ_20"
-          ]
+          "LOXZ": ["LOXZ_20"]
         }
       }
     }

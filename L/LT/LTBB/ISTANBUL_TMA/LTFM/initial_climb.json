@@ -4,39 +4,27 @@
   "airac_min": 2707,
   "exceptions": [
     {
-      "runways": [
-        "16R"
-      ],
+      "runways": ["16R"],
       "initial_climb_ft": 4000
     },
     {
-      "runways": [
-        "17R"
-      ],
+      "runways": ["17R"],
       "initial_climb_ft": 5000
     },
     {
-      "runways": [
-        "18"
-      ],
+      "runways": ["18"],
       "initial_climb_ft": 8000
     },
     {
-      "runways": [
-        "34R"
-      ],
+      "runways": ["34R"],
       "initial_climb_ft": 4000
     },
     {
-      "runways": [
-        "35L"
-      ],
+      "runways": ["35L"],
       "initial_climb_ft": 5000
     },
     {
-      "runways": [
-        "36"
-      ],
+      "runways": ["36"],
       "initial_climb_ft": 8000
     }
   ]

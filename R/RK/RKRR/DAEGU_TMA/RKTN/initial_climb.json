@@ -4,15 +4,11 @@
   "airac_min": 2610,
   "exceptions": [
     {
-      "sids": [
-        "RADA1E"
-      ],
+      "sids": ["RADA1E"],
       "initial_climb_ft": 8000
     },
     {
-      "sids": [
-        "RADA1W"
-      ],
+      "sids": ["RADA1W"],
       "initial_climb_ft": 8000
     }
   ]

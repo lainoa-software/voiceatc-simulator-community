@@ -4,69 +4,32 @@
     "EDDR_APP": {
       "EDFH_APP": {
         "positions": {
-          "EDDR_APP": [
-            "EIF1_EIF2_EIF3_PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7"
-          ]
+          "EDDR_APP": ["EIF1_EIF2_EIF3_PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7"]
         },
-        "airports": [
-          "EDDR",
-          "EDFH"
-        ],
+        "airports": ["EDDR", "EDFH"],
         "valid_for_runways": {
-          "EDDR": [
-            "27",
-            "09",
-            "21",
-            "03"
-          ],
-          "EDFH": [
-            "27",
-            "09",
-            "21",
-            "03"
-          ]
+          "EDDR": ["27", "09", "21", "03"],
+          "EDFH": ["27", "09", "21", "03"]
         }
       },
       "EDFH_EIF_APP": {
         "positions": {
-          "EDDR_APP": [
-            "EIF1_EIF2_EIF3"
-          ]
+          "EDDR_APP": ["EIF1_EIF2_EIF3"]
         },
-        "airports": [
-          "EDDR",
-          "EDFH"
-        ],
+        "airports": ["EDDR", "EDFH"],
         "valid_for_runways": {
-          "EDDR": [
-            "21",
-            "03"
-          ],
-          "EDFH": [
-            "21",
-            "03"
-          ]
+          "EDDR": ["21", "03"],
+          "EDFH": ["21", "03"]
         }
       },
       "EDFH_PFA_APP": {
         "positions": {
-          "EDDR_APP": [
-            "PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7"
-          ]
+          "EDDR_APP": ["PFA1_PFA2_PFA3_PFA4_PFA5_PFA6_PFA7"]
         },
-        "airports": [
-          "EDDR",
-          "EDFH"
-        ],
+        "airports": ["EDDR", "EDFH"],
         "valid_for_runways": {
-          "EDDR": [
-            "27",
-            "09"
-          ],
-          "EDFH": [
-            "27",
-            "09"
-          ]
+          "EDDR": ["27", "09"],
+          "EDFH": ["27", "09"]
         }
       }
     }

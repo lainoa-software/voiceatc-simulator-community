@@ -5,60 +5,40 @@
       "name": "KORD_ARR_BENKY",
       "from": "KZAU_CTR",
       "to": "KORD_APP",
-      "arrives": [
-        "KORD"
-      ],
-      "fix": [
-        "BENKY"
-      ],
+      "arrives": ["KORD"],
+      "fix": ["BENKY"],
       "level": "A120"
     },
     {
       "name": "KORD_ARR_SHAIN",
       "from": "KZAU_CTR",
       "to": "KORD_APP",
-      "arrives": [
-        "KORD"
-      ],
-      "fix": [
-        "SHAIN"
-      ],
+      "arrives": ["KORD"],
+      "fix": ["SHAIN"],
       "level": "A120"
     },
     {
       "name": "KORD_ARR_TRTLL",
       "from": "KZAU_CTR",
       "to": "KORD_APP",
-      "arrives": [
-        "KORD"
-      ],
-      "fix": [
-        "TRTLL"
-      ],
+      "arrives": ["KORD"],
+      "fix": ["TRTLL"],
       "level": "A110"
     },
     {
       "name": "KORD_ARR_FYTTE",
       "from": "KZAU_CTR",
       "to": "KORD_APP",
-      "arrives": [
-        "KORD"
-      ],
-      "fix": [
-        "FYTTE"
-      ],
+      "arrives": ["KORD"],
+      "fix": ["FYTTE"],
       "level": "A110"
     },
     {
       "name": "KORD_ARR_KRENA",
       "from": "KZAU_CTR",
       "to": "KORD_APP",
-      "arrives": [
-        "KORD"
-      ],
-      "fix": [
-        "KRENA"
-      ],
+      "arrives": ["KORD"],
+      "fix": ["KRENA"],
       "level": "A110"
     }
   ]

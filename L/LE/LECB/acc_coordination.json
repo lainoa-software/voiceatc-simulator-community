@@ -17,9 +17,7 @@
       "name": "W_PALMA_F250",
       "from": "LECB_BKW_CTR",
       "to": "LECP_GIX_CTR",
-      "arrives": [
-        "LEPA"
-      ],
+      "arrives": ["LEPA"],
       "level": "F250"
     },
     {
@@ -38,10 +36,7 @@
       "name": "W_ALMERIA_ALBACETE_EVEN",
       "from": "LECB_BKW_CTR",
       "to": "LECS_CTR",
-      "arrives": [
-        "LEAM",
-        "LEAB"
-      ],
+      "arrives": ["LEAM", "LEAB"],
       "level": "EVEN"
     },
     {
@@ -54,28 +49,21 @@
       "name": "W_MADRID_ASTRO_EVEN",
       "from": "LECB_BKW_CTR",
       "to": "LECM_R2_CTR",
-      "fix": [
-        "ASTRO",
-        "MANDY"
-      ],
+      "fix": ["ASTRO", "MANDY"],
       "level": "EVEN"
     },
     {
       "name": "W_MADRID_TMA_F330",
       "from": "LECB_BKW_CTR",
       "to": "LECM_R2_CTR",
-      "arrives": [
-        "LEMD"
-      ],
+      "arrives": ["LEMD"],
       "level": "F330"
     },
     {
       "name": "W_ZARAGOZA_F210",
       "from": "LECB_BKW_CTR",
       "to": "LEZG_APP",
-      "arrives": [
-        "LEZG"
-      ],
+      "arrives": ["LEZG"],
       "level": "F210"
     },
     {

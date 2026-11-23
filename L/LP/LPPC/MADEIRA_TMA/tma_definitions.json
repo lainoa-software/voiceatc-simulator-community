@@ -4,9 +4,7 @@
     {
       "id": "LPMA_APP",
       "call_sign": "Madeira approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

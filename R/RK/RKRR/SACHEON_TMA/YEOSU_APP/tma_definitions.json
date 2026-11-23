@@ -4,9 +4,7 @@
     {
       "id": "RKJY_APP",
       "call_sign": "Yeosu approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

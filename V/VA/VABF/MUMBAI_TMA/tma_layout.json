@@ -4,20 +4,11 @@
     "VABB_APP": {
       "APP_ONLY": {
         "positions": {
-          "VABB_APP": [
-            "VABB_APP"
-          ]
+          "VABB_APP": ["VABB_APP"]
         },
-        "airports": [
-          "VABB"
-        ],
+        "airports": ["VABB"],
         "valid_for_runways": {
-          "VABB": [
-            "RWY27",
-            "RWY09",
-            "RWY14",
-            "RWY32"
-          ]
+          "VABB": ["RWY27", "RWY09", "RWY14", "RWY32"]
         }
       }
     }

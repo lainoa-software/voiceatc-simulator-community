@@ -4,13 +4,9 @@
     "RPLL_APP": {
       "MANILA": {
         "positions": {
-          "RPLL_APP": [
-            "RPLL_APP"
-          ]
+          "RPLL_APP": ["RPLL_APP"]
         },
-        "airports": [
-          "RPLL"
-        ]
+        "airports": ["RPLL"]
       }
     }
   }

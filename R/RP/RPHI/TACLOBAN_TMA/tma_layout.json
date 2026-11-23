@@ -4,13 +4,9 @@
     "RPVA_APP": {
       "TACLOBAN": {
         "positions": {
-          "RPVA_APP": [
-            "RPVA_APP"
-          ]
+          "RPVA_APP": ["RPVA_APP"]
         },
-        "airports": [
-          "RPVA"
-        ]
+        "airports": ["RPVA"]
       }
     }
   }

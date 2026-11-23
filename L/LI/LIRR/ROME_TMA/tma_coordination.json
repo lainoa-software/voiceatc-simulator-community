@@ -5,84 +5,56 @@
       "name": "LIRF_ARR_GOKBA",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "GOKBA"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["GOKBA"],
       "level": "F120"
     },
     {
       "name": "LIRF_ARR_ESATU",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "ESATU"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["ESATU"],
       "level": "F110"
     },
     {
       "name": "LIRF_ARR_VALMA",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "VALMA"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["VALMA"],
       "level": "F100"
     },
     {
       "name": "LIRF_ARR_ESINO",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "ESINO"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["ESINO"],
       "level": "F100"
     },
     {
       "name": "LIRF_ARR_RIFFI",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "RIFFI"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["RIFFI"],
       "level": "F100"
     },
     {
       "name": "LIRF_ARR_GOPOL",
       "from": "LIRR_CTR",
       "to": "LIRF_APP",
-      "arrives": [
-        "LIRF"
-      ],
-      "fix": [
-        "GOPOL"
-      ],
+      "arrives": ["LIRF"],
+      "fix": ["GOPOL"],
       "level": "F150"
     },
     {
       "name": "LIRF_DEP_SOVAN",
       "from": "LIRF_APP",
       "to": "LIRR_CTR",
-      "departs": [
-        "LIRF"
-      ],
-      "fix": [
-        "SOVAN"
-      ],
+      "departs": ["LIRF"],
+      "fix": ["SOVAN"],
       "level": "F080"
     }
   ]

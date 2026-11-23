@@ -4,28 +4,16 @@
     "LEJR_APP": {
       "1": {
         "positions": {
-          "LEJR_LECSAPT_APP": [
-            "LECSAPT"
-          ]
+          "LEJR_LECSAPT_APP": ["LECSAPT"]
         },
-        "airports": [
-          "LEJR",
-          "LEZL"
-        ]
+        "airports": ["LEJR", "LEZL"]
       },
       "3A": {
         "positions": {
-          "LEJR_LECSAPT_APP": [
-            "LECSASN"
-          ],
-          "LEZL_LECSASN_APP": [
-            "LECSASV"
-          ]
+          "LEJR_LECSAPT_APP": ["LECSASN"],
+          "LEZL_LECSASN_APP": ["LECSASV"]
         },
-        "airports": [
-          "LEJR",
-          "LEZL"
-        ]
+        "airports": ["LEJR", "LEZL"]
       }
     }
   }

@@ -4,13 +4,9 @@
     "RKPD_APP": {
       "JEONGSEOK": {
         "positions": {
-          "RKPD_APP": [
-            "RKPD_APP"
-          ]
+          "RKPD_APP": ["RKPD_APP"]
         },
-        "airports": [
-          "RKPD"
-        ]
+        "airports": ["RKPD"]
       }
     }
   }

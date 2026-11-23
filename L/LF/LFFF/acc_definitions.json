@@ -4,9 +4,7 @@
     {
       "id": "LFFF_CTR",
       "call_sign": "Paris Control",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "120.955",
         "118.230",

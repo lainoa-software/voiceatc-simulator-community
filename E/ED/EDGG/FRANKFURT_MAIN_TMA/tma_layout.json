@@ -4,32 +4,20 @@
     "EDDF_APP": {
       "07": {
         "positions": {
-          "EDDF_APP": [
-            "DFAN"
-          ]
+          "EDDF_APP": ["DFAN"]
         },
-        "airports": [
-          "EDDF"
-        ],
+        "airports": ["EDDF"],
         "valid_for_runways": {
-          "EDDF": [
-            "07"
-          ]
+          "EDDF": ["07"]
         }
       },
       "25": {
         "positions": {
-          "EDDF_APP": [
-            "DFAN"
-          ]
+          "EDDF_APP": ["DFAN"]
         },
-        "airports": [
-          "EDDF"
-        ],
+        "airports": ["EDDF"],
         "valid_for_runways": {
-          "EDDF": [
-            "25"
-          ]
+          "EDDF": ["25"]
         }
       }
     }

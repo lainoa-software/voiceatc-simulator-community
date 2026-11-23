@@ -4,47 +4,29 @@
     "KSFO_APP": {
       "1WEST": {
         "positions": {
-          "KSFO_APP": [
-            "KSFOAPP"
-          ]
+          "KSFO_APP": ["KSFOAPP"]
         },
-        "airports": [
-          "KSFO"
-        ],
+        "airports": ["KSFO"],
         "valid_for_runways": {
-          "KSFO": [
-            "WEST"
-          ]
+          "KSFO": ["WEST"]
         }
       },
       "1SOUTHEAST": {
         "positions": {
-          "KSFO_APP": [
-            "KSFOAPP"
-          ]
+          "KSFO_APP": ["KSFOAPP"]
         },
-        "airports": [
-          "KSFO"
-        ],
+        "airports": ["KSFO"],
         "valid_for_runways": {
-          "KSFO": [
-            "SOUTHEAST"
-          ]
+          "KSFO": ["SOUTHEAST"]
         }
       },
       "1NIGHT_10": {
         "positions": {
-          "KSFO_APP": [
-            "KSFOAPP"
-          ]
+          "KSFO_APP": ["KSFOAPP"]
         },
-        "airports": [
-          "KSFO"
-        ],
+        "airports": ["KSFO"],
         "valid_for_runways": {
-          "KSFO": [
-            "NIGHT_10"
-          ]
+          "KSFO": ["NIGHT_10"]
         }
       }
     }

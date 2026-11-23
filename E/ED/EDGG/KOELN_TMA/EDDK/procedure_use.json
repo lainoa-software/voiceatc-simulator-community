@@ -8,69 +8,47 @@
       "spawn": true
     },
     {
-      "sids": [
-        "COL1R"
-      ],
+      "sids": ["COL1R"],
       "spawn": false
     },
     {
-      "sids": [
-        "COL4X"
-      ],
+      "sids": ["COL4X"],
       "spawn": false
     },
     {
-      "sids": [
-        "KUMI1R"
-      ],
+      "sids": ["KUMI1R"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO1N"
-      ],
+      "sids": ["NVO1N"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO1U"
-      ],
+      "sids": ["NVO1U"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO1X"
-      ],
+      "sids": ["NVO1X"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO1Y"
-      ],
+      "sids": ["NVO1Y"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO3V"
-      ],
+      "sids": ["NVO3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "NVO3W"
-      ],
+      "sids": ["NVO3W"],
       "spawn": false
     },
     {
-      "sids": [
-        "PODI1R"
-      ],
+      "sids": ["PODI1R"],
       "spawn": false
     },
     {
-      "sids": [
-        "WIPU1R"
-      ],
+      "sids": ["WIPU1R"],
       "spawn": false
     }
   ]

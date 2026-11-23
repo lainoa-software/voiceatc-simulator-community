@@ -4,13 +4,9 @@
     "RCKU_APP": {
       "CHIAYI": {
         "positions": {
-          "RCKU_APP": [
-            "RCKU_APP"
-          ]
+          "RCKU_APP": ["RCKU_APP"]
         },
-        "airports": [
-          "RCKU"
-        ]
+        "airports": ["RCKU"]
       }
     }
   }

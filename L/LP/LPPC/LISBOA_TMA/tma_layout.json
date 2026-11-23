@@ -4,106 +4,46 @@
     "LPCS_APP": {
       "LISBOA_TMA_SPLIT_02": {
         "positions": {
-          "LPCS_ATMERWY02_APP": [
-            "ATME_RWY02"
-          ],
-          "LPCS_ATMORWY02_APP": [
-            "ATMO_RWY02"
-          ],
-          "LPCS_ARRLIRWY02_APP": [
-            "ARRLI_RWY02"
-          ]
+          "LPCS_ATMERWY02_APP": ["ATME_RWY02"],
+          "LPCS_ATMORWY02_APP": ["ATMO_RWY02"],
+          "LPCS_ARRLIRWY02_APP": ["ARRLI_RWY02"]
         },
-        "airports": [
-          "LPCS",
-          "LPPT"
-        ],
+        "airports": ["LPCS", "LPPT"],
         "valid_for_runways": {
-          "LPCS": [
-            "LPPT_02",
-            "LPCS_17",
-            "LPCS_35"
-          ],
-          "LPPT": [
-            "LPPT_02",
-            "LPCS_17",
-            "LPCS_35"
-          ]
+          "LPCS": ["LPPT_02", "LPCS_17", "LPCS_35"],
+          "LPPT": ["LPPT_02", "LPCS_17", "LPCS_35"]
         }
       },
       "LISBOA_TMA_COMBINED_02": {
         "positions": {
-          "LPCS_APP": [
-            "ARRLI_RWY02_ATME_RWY02_ATMO_RWY02"
-          ]
+          "LPCS_APP": ["ARRLI_RWY02_ATME_RWY02_ATMO_RWY02"]
         },
-        "airports": [
-          "LPCS",
-          "LPPT"
-        ],
+        "airports": ["LPCS", "LPPT"],
         "valid_for_runways": {
-          "LPCS": [
-            "LPPT_02",
-            "LPCS_17",
-            "LPCS_35"
-          ],
-          "LPPT": [
-            "LPPT_02",
-            "LPCS_17",
-            "LPCS_35"
-          ]
+          "LPCS": ["LPPT_02", "LPCS_17", "LPCS_35"],
+          "LPPT": ["LPPT_02", "LPCS_17", "LPCS_35"]
         }
       },
       "LISBOA_TMA_SPLIT_20": {
         "positions": {
-          "LPCS_ATMERWY20_APP": [
-            "ATME_RWY20"
-          ],
-          "LPCS_ATMORWY20_APP": [
-            "ATMO_RWY20"
-          ],
-          "LPCS_ARRLIRWY20_APP": [
-            "ARRLI_RWY20"
-          ]
+          "LPCS_ATMERWY20_APP": ["ATME_RWY20"],
+          "LPCS_ATMORWY20_APP": ["ATMO_RWY20"],
+          "LPCS_ARRLIRWY20_APP": ["ARRLI_RWY20"]
         },
-        "airports": [
-          "LPCS",
-          "LPPT"
-        ],
+        "airports": ["LPCS", "LPPT"],
         "valid_for_runways": {
-          "LPCS": [
-            "LPPT_20",
-            "LPCS_17",
-            "LPCS_35"
-          ],
-          "LPPT": [
-            "LPPT_20",
-            "LPCS_17",
-            "LPCS_35"
-          ]
+          "LPCS": ["LPPT_20", "LPCS_17", "LPCS_35"],
+          "LPPT": ["LPPT_20", "LPCS_17", "LPCS_35"]
         }
       },
       "LISBOA_TMA_COMBINED_20": {
         "positions": {
-          "LPCS_APP": [
-            "ARRLI_RWY20_ATME_RWY20_ATMO_RWY20"
-          ]
+          "LPCS_APP": ["ARRLI_RWY20_ATME_RWY20_ATMO_RWY20"]
         },
-        "airports": [
-          "LPCS",
-          "LPPT"
-        ],
+        "airports": ["LPCS", "LPPT"],
         "valid_for_runways": {
-          "LPCS": [
-            "LPPT_20",
-            "LPCS_17",
-            "LPCS_35"
-          ],
-          "LPPT": [
-            "LPPT_20",
-            "LPCS_17",
-            "LPCS_35"
-          ]
+          "LPCS": ["LPPT_20", "LPCS_17", "LPCS_35"],
+          "LPPT": ["LPPT_20", "LPCS_17", "LPCS_35"]
         }
       }
     }

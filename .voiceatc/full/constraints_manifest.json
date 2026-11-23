@@ -43,9 +43,6 @@
   },
   "published_at": "2026-11-21T08:15:36Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": [
-    "community.airac_overrides",
-    "community.airspace_files"
-  ],
+  "requires": ["community.airac_overrides", "community.airspace_files"],
   "schema_version": 1
 }

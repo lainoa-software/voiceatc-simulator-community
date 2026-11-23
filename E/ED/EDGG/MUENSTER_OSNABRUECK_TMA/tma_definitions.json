@@ -4,9 +4,7 @@
     {
       "id": "EDDG_APP",
       "call_sign": "Muenster approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

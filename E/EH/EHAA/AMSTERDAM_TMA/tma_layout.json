@@ -4,47 +4,29 @@
     "EHAM_APP": {
       "SOUTH": {
         "positions": {
-          "EHAM_APP": [
-            "EHAMAPP"
-          ]
+          "EHAM_APP": ["EHAMAPP"]
         },
-        "airports": [
-          "EHAM"
-        ],
+        "airports": ["EHAM"],
         "valid_for_runways": {
-          "EHAM": [
-            "ARR 18R 18C DEP 24 18L"
-          ]
+          "EHAM": ["ARR 18R 18C DEP 24 18L"]
         }
       },
       "MIXED": {
         "positions": {
-          "EHAM_APP": [
-            "EHAMAPP"
-          ]
+          "EHAM_APP": ["EHAMAPP"]
         },
-        "airports": [
-          "EHAM"
-        ],
+        "airports": ["EHAM"],
         "valid_for_runways": {
-          "EHAM": [
-            "ARR 36R 06 DEP 18L 18C"
-          ]
+          "EHAM": ["ARR 36R 06 DEP 18L 18C"]
         }
       },
       "NORTH": {
         "positions": {
-          "EHAM_APP": [
-            "EHAMAPP"
-          ]
+          "EHAM_APP": ["EHAMAPP"]
         },
-        "airports": [
-          "EHAM"
-        ],
+        "airports": ["EHAM"],
         "valid_for_runways": {
-          "EHAM": [
-            "ARR 36C 36R DEP 36L 36C"
-          ]
+          "EHAM": ["ARR 36C 36R DEP 36L 36C"]
         }
       }
     }

@@ -8,33 +8,23 @@
       "spawn": true
     },
     {
-      "sids": [
-        "KETE1K"
-      ],
+      "sids": ["KETE1K"],
       "spawn": false
     },
     {
-      "sids": [
-        "KETE1U"
-      ],
+      "sids": ["KETE1U"],
       "spawn": false
     },
     {
-      "sids": [
-        "KETE1X"
-      ],
+      "sids": ["KETE1X"],
       "spawn": false
     },
     {
-      "sids": [
-        "KETE1Y"
-      ],
+      "sids": ["KETE1Y"],
       "spawn": false
     },
     {
-      "sids": [
-        "MODR2K"
-      ],
+      "sids": ["MODR2K"],
       "spawn": false
     }
   ]

@@ -5,60 +5,40 @@
       "name": "KSFO_ARR_ARCHI",
       "from": "KZOA_CTR",
       "to": "KSFO_APP",
-      "arrives": [
-        "KSFO"
-      ],
-      "fix": [
-        "ARCHI"
-      ],
+      "arrives": ["KSFO"],
+      "fix": ["ARCHI"],
       "level": "A070"
     },
     {
       "name": "KSFO_ARR_PIRAT",
       "from": "KZOA_CTR",
       "to": "KSFO_APP",
-      "arrives": [
-        "KSFO"
-      ],
-      "fix": [
-        "PIRAT"
-      ],
+      "arrives": ["KSFO"],
+      "fix": ["PIRAT"],
       "level": "A100"
     },
     {
       "name": "KSFO_ARR_ARRTU",
       "from": "KZOA_CTR",
       "to": "KSFO_APP",
-      "arrives": [
-        "KSFO"
-      ],
-      "fix": [
-        "ARRTU"
-      ],
+      "arrives": ["KSFO"],
+      "fix": ["ARRTU"],
       "level": "A100"
     },
     {
       "name": "KSFO_ARR_WPOUT",
       "from": "KZOA_CTR",
       "to": "KSFO_APP",
-      "arrives": [
-        "KSFO"
-      ],
-      "fix": [
-        "WPOUT"
-      ],
+      "arrives": ["KSFO"],
+      "fix": ["WPOUT"],
       "level": "A110"
     },
     {
       "name": "KSFO_DEP_SEGUL",
       "from": "KSFO_APP",
       "to": "KZOA_CTR",
-      "departs": [
-        "KSFO"
-      ],
-      "fix": [
-        "SEGUL"
-      ],
+      "departs": ["KSFO"],
+      "fix": ["SEGUL"],
       "level": "A160"
     }
   ]

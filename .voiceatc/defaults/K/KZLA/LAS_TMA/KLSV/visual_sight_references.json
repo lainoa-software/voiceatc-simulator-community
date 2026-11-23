@@ -11,7 +11,10 @@
           "id": "NORTHWEST_CITY_OUTLINE",
           "name": "the northwest Las Vegas city outline",
           "aliases": ["northwest Las Vegas"],
-          "geometry": { "kind": "point", "leg_id": "NW_CITY_OUTLINE_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "NW_CITY_OUTLINE_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "SIN CITY VISUAL RWY 03L/R",
@@ -31,7 +34,10 @@
           "id": "NORTHWEST_CITY_OUTLINE",
           "name": "the northwest Las Vegas city outline",
           "aliases": ["northwest Las Vegas"],
-          "geometry": { "kind": "point", "leg_id": "NW_CITY_OUTLINE_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "NW_CITY_OUTLINE_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "SIN CITY VISUAL RWY 03L/R",

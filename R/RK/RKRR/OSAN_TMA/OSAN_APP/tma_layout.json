@@ -4,13 +4,9 @@
     "RKSO_APP": {
       "OSAN": {
         "positions": {
-          "RKSO_APP": [
-            "RKSO_APP"
-          ]
+          "RKSO_APP": ["RKSO_APP"]
         },
-        "airports": [
-          "RKSO"
-        ]
+        "airports": ["RKSO"]
       }
     }
   }

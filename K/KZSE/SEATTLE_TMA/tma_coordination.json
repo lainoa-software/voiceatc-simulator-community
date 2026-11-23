@@ -5,168 +5,112 @@
       "name": "KSEA_ARR_JAKSN",
       "from": "KZSE_CTR",
       "to": "KSEA_APP",
-      "arrives": [
-        "KSEA"
-      ],
-      "fix": [
-        "JAKSN"
-      ],
+      "arrives": ["KSEA"],
+      "fix": ["JAKSN"],
       "level": "A120"
     },
     {
       "name": "KSEA_ARR_RADDY",
       "from": "KZSE_CTR",
       "to": "KSEA_APP",
-      "arrives": [
-        "KSEA"
-      ],
-      "fix": [
-        "RADDY"
-      ],
+      "arrives": ["KSEA"],
+      "fix": ["RADDY"],
       "level": "A120"
     },
     {
       "name": "KSEA_ARR_JAWBN",
       "from": "KZSE_CTR",
       "to": "KSEA_APP",
-      "arrives": [
-        "KSEA"
-      ],
-      "fix": [
-        "JAWBN"
-      ],
+      "arrives": ["KSEA"],
+      "fix": ["JAWBN"],
       "level": "A120"
     },
     {
       "name": "KSEA_ARR_ARVAD",
       "from": "KZSE_CTR",
       "to": "KSEA_APP",
-      "arrives": [
-        "KSEA"
-      ],
-      "fix": [
-        "ARVAD"
-      ],
+      "arrives": ["KSEA"],
+      "fix": ["ARVAD"],
       "level": "A120"
     },
     {
       "name": "KSEA_ARR_OLM",
       "from": "KZSE_CTR",
       "to": "KSEA_APP",
-      "arrives": [
-        "KSEA"
-      ],
-      "fix": [
-        "OLM"
-      ],
+      "arrives": ["KSEA"],
+      "fix": ["OLM"],
       "level": "A120"
     },
     {
       "name": "KSEA_DEP_BANGR",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "BANGR"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["BANGR"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_HAROB",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "HAROB"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["HAROB"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_ISBRG",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "ISBRG"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["ISBRG"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_JEFPO",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "JEFPO"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["JEFPO"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_OZWLD",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "OZWLD"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["OZWLD"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_SUMMA",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "SUMMA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["SUMMA"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_ELMAA",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "ELMAA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["ELMAA"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_PEAKK",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "PEAKK"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["PEAKK"],
       "level": "A150"
     },
     {
       "name": "KSEA_DEP_SEA",
       "from": "KSEA_APP",
       "to": "KZSE_CTR",
-      "departs": [
-        "KSEA"
-      ],
-      "fix": [
-        "SEA"
-      ],
+      "departs": ["KSEA"],
+      "fix": ["SEA"],
       "level": "A150"
     }
   ]

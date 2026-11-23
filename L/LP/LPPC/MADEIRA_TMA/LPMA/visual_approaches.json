@@ -27,10 +27,7 @@
               "id": "GELO",
               "name": "GELO",
               "type": "track_to_fix",
-              "point": [
-                32.6617055556,
-                -16.8025
-              ],
+              "point": [32.6617055556, -16.8025],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 850
@@ -40,10 +37,7 @@
               "id": "ROSRO",
               "name": "ROSARIO",
               "type": "track_to_fix",
-              "point": [
-                32.6768527778,
-                -16.7990277778
-              ],
+              "point": [32.6768527778, -16.7990277778],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 460

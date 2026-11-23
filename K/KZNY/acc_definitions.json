@@ -4,9 +4,7 @@
     {
       "id": "KZNY_CTR",
       "call_sign": "New York Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "125.325",
         "118.550",

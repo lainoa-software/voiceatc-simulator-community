@@ -5,10 +5,7 @@
     {
       "id": "HIGHWAY_VISUAL_25R",
       "name": "Highway Visual RWY 25R",
-      "aliases": [
-        "highway visual",
-        "highway visual twenty five right"
-      ],
+      "aliases": ["highway visual", "highway visual twenty five right"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,9 +29,7 @@
               {
                 "id": "LITTLE_SUSITNA_MOUTH",
                 "name": "the mouth of the Little Susitna River",
-                "aliases": [
-                  "Little Susitna River mouth"
-                ],
+                "aliases": ["Little Susitna River mouth"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "HIGHWAY VISUAL RWY 25R",
@@ -54,20 +49,14 @@
               "id": "OSPUF",
               "name": "Mouth of Little Susitna River / OSPUF",
               "type": "track_to_fix",
-              "point": [
-                61.2517638889,
-                -150.2956138889
-              ],
+              "point": [61.2517638889, -150.2956138889],
               "fly_over": true
             },
             {
               "id": "IFHIX",
               "name": "IFHIX",
               "type": "track_to_fix",
-              "point": [
-                61.125,
-                -150.2333333333
-              ],
+              "point": [61.125, -150.2333333333],
               "fly_over": true,
               "altitude": {
                 "at_ft": 5000
@@ -77,10 +66,7 @@
               "id": "EFYEZ",
               "name": "Shoreline / EFYEZ",
               "type": "track_to_fix",
-              "point": [
-                61.0936111111,
-                -149.8797222222
-              ],
+              "point": [61.0936111111, -149.8797222222],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 2600
@@ -90,10 +76,7 @@
               "id": "UHEPU",
               "name": "O'Malley Road overpass / UHEPU",
               "type": "track_to_fix",
-              "point": [
-                61.1227777778,
-                -149.8566666667
-              ],
+              "point": [61.1227777778, -149.8566666667],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -103,35 +86,23 @@
               "id": "XIBLY",
               "name": "Dimond Boulevard overpass / XIBLY",
               "type": "track_to_fix",
-              "point": [
-                61.1447222222,
-                -149.8563888889
-              ],
+              "point": [61.1447222222, -149.8563888889],
               "fly_over": true
             },
             {
               "id": "TED_ARC_JOIN_TRACE",
               "name": "TED 3 DME arc join (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                61.1715344903,
-                -149.8567360469
-              ],
+              "point": [61.1715344903, -149.8567360469],
               "fly_over": true
             },
             {
               "id": "TED_ARC_EXIT_TRACE",
               "name": "TED 3 DME arc final exit (chart-traced)",
               "type": "dme_arc",
-              "point": [
-                61.2016316379,
-                -149.8836336855
-              ],
+              "point": [61.2016316379, -149.8836336855],
               "fly_over": false,
-              "arc_center": [
-                61.1678666667,
-                -149.9601444444
-              ],
+              "arc_center": [61.1678666667, -149.9601444444],
               "arc_radius_nm": 3.0,
               "turn_direction": "L"
             }
@@ -153,9 +124,7 @@
               {
                 "id": "POINT_POSSESSION",
                 "name": "Point Possession",
-                "aliases": [
-                  "the Point Possession"
-                ],
+                "aliases": ["the Point Possession"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "HIGHWAY VISUAL RWY 25R",
@@ -175,10 +144,7 @@
               "id": "MOPMY",
               "name": "Point Possession / MOPMY",
               "type": "track_to_fix",
-              "point": [
-                61.0333333333,
-                -150.3669444444
-              ],
+              "point": [61.0333333333, -150.3669444444],
               "fly_over": true,
               "altitude": {
                 "at_ft": 4000
@@ -188,10 +154,7 @@
               "id": "EFYEZ",
               "name": "Shoreline / EFYEZ",
               "type": "track_to_fix",
-              "point": [
-                61.0936111111,
-                -149.8797222222
-              ],
+              "point": [61.0936111111, -149.8797222222],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 2600
@@ -201,10 +164,7 @@
               "id": "UHEPU",
               "name": "O'Malley Road overpass / UHEPU",
               "type": "track_to_fix",
-              "point": [
-                61.1227777778,
-                -149.8566666667
-              ],
+              "point": [61.1227777778, -149.8566666667],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -214,35 +174,23 @@
               "id": "XIBLY",
               "name": "Dimond Boulevard overpass / XIBLY",
               "type": "track_to_fix",
-              "point": [
-                61.1447222222,
-                -149.8563888889
-              ],
+              "point": [61.1447222222, -149.8563888889],
               "fly_over": true
             },
             {
               "id": "TED_ARC_JOIN_TRACE",
               "name": "TED 3 DME arc join (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                61.1715344903,
-                -149.8567360469
-              ],
+              "point": [61.1715344903, -149.8567360469],
               "fly_over": true
             },
             {
               "id": "TED_ARC_EXIT_TRACE",
               "name": "TED 3 DME arc final exit (chart-traced)",
               "type": "dme_arc",
-              "point": [
-                61.2016316379,
-                -149.8836336855
-              ],
+              "point": [61.2016316379, -149.8836336855],
               "fly_over": false,
-              "arc_center": [
-                61.1678666667,
-                -149.9601444444
-              ],
+              "arc_center": [61.1678666667, -149.9601444444],
               "arc_radius_nm": 3.0,
               "turn_direction": "L"
             }

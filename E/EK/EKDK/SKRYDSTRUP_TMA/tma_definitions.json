@@ -4,9 +4,7 @@
     {
       "id": "EKSP_APP",
       "call_sign": "Vojens approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

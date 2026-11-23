@@ -4,9 +4,7 @@
     {
       "id": "LPHR_APP",
       "call_sign": "Horta approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,15 +4,11 @@
   "airac_min": 2610,
   "exceptions": [
     {
-      "sids": [
-        "CJU3L"
-      ],
+      "sids": ["CJU3L"],
       "initial_climb_ft": 9000
     },
     {
-      "sids": [
-        "IPDA1L"
-      ],
+      "sids": ["IPDA1L"],
       "initial_climb_ft": 9000
     }
   ]

@@ -27,10 +27,7 @@
               "id": "ESHEL",
               "name": "ESHEL",
               "type": "track_to_fix",
-              "point": [
-                29.8222222222,
-                35.0177777778
-              ],
+              "point": [29.8222222222, 35.0177777778],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -43,10 +40,7 @@
               "id": "DUBIT",
               "name": "DUBIT",
               "type": "track_to_fix",
-              "point": [
-                29.7511111111,
-                34.9769444444
-              ],
+              "point": [29.7511111111, 34.9769444444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 5000
@@ -56,10 +50,7 @@
               "id": "ADIVI",
               "name": "ADIVI",
               "type": "track_to_fix",
-              "point": [
-                29.7180277778,
-                34.9658888889
-              ],
+              "point": [29.7180277778, 34.9658888889],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 4600
@@ -69,10 +60,7 @@
               "id": "LIRAZ",
               "name": "LIRAZ",
               "type": "track_to_fix",
-              "point": [
-                29.6397222222,
-                34.9394444444
-              ],
+              "point": [29.6397222222, 34.9394444444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 3200
@@ -85,10 +73,7 @@
               "id": "ELDAD",
               "name": "ELDAD",
               "type": "track_to_fix",
-              "point": [
-                29.6302777778,
-                34.9869444444
-              ],
+              "point": [29.6302777778, 34.9869444444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 1900
@@ -115,10 +100,7 @@
                 "sequence": 10,
                 "type": "track_to_fix",
                 "ident": "ER127",
-                "point": [
-                  29.893,
-                  35.0543333333
-                ],
+                "point": [29.893, 35.0543333333],
                 "distance": 11.1,
                 "altitude": {
                   "at_or_above_ft": 3400,
@@ -129,10 +111,7 @@
                 "sequence": 20,
                 "type": "track_to_fix",
                 "ident": "NURIT",
-                "point": [
-                  30.0694444444,
-                  35.0658333333
-                ],
+                "point": [30.0694444444, 35.0658333333],
                 "distance": 10.6,
                 "altitude": {
                   "at_or_above_ft": 5000
@@ -142,10 +121,7 @@
                 "sequence": 30,
                 "type": "hold_manual",
                 "ident": "NURIT",
-                "point": [
-                  30.0694444444,
-                  35.0658333333
-                ],
+                "point": [30.0694444444, 35.0658333333],
                 "course": 185,
                 "turn_direction": "R",
                 "distance": 1.0,
@@ -187,10 +163,7 @@
               "id": "NURIT",
               "name": "NURIT",
               "type": "track_to_fix",
-              "point": [
-                30.0694444444,
-                35.0658333333
-              ],
+              "point": [30.0694444444, 35.0658333333],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 5000,
@@ -204,10 +177,7 @@
               "id": "ER015",
               "name": "ER015",
               "type": "track_to_fix",
-              "point": [
-                30.0177777778,
-                35.0618333333
-              ],
+              "point": [30.0177777778, 35.0618333333],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 4000
@@ -217,10 +187,7 @@
               "id": "ER012",
               "name": "ER012",
               "type": "track_to_fix",
-              "point": [
-                29.9411666667,
-                35.0528611111
-              ],
+              "point": [29.9411666667, 35.0528611111],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 3500
@@ -230,10 +197,7 @@
               "id": "ER007",
               "name": "ER007",
               "type": "track_to_fix",
-              "point": [
-                29.8576666667,
-                35.0444444444
-              ],
+              "point": [29.8576666667, 35.0444444444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2500
@@ -243,10 +207,7 @@
               "id": "YANIV",
               "name": "YANIV",
               "type": "track_to_fix",
-              "point": [
-                29.8236111111,
-                35.0411111111
-              ],
+              "point": [29.8236111111, 35.0411111111],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 1900
@@ -270,10 +231,7 @@
                 "sequence": 10,
                 "type": "track_to_fix",
                 "ident": "ER923",
-                "point": [
-                  29.55175,
-                  34.9650833333
-                ],
+                "point": [29.55175, 34.9650833333],
                 "altitude": {
                   "at_or_above_ft": 3000
                 }
@@ -282,10 +240,7 @@
                 "sequence": 20,
                 "type": "direct_to_fix",
                 "ident": "ADIVI",
-                "point": [
-                  29.7180277778,
-                  34.9658888889
-                ],
+                "point": [29.7180277778, 34.9658888889],
                 "turn_direction": "R",
                 "altitude": {
                   "at_or_above_ft": 5000
@@ -298,10 +253,7 @@
                 "sequence": 30,
                 "type": "track_to_fix",
                 "ident": "ESHEL",
-                "point": [
-                  29.8222222222,
-                  35.0177777778
-                ],
+                "point": [29.8222222222, 35.0177777778],
                 "altitude": {
                   "at_or_above_ft": 7000
                 }
@@ -310,10 +262,7 @@
                 "sequence": 40,
                 "type": "track_to_fix",
                 "ident": "NURIT",
-                "point": [
-                  30.0694444444,
-                  35.0658333333
-                ],
+                "point": [30.0694444444, 35.0658333333],
                 "altitude": {
                   "at_ft": 8000
                 }
@@ -322,10 +271,7 @@
                 "sequence": 50,
                 "type": "hold_manual",
                 "ident": "NURIT",
-                "point": [
-                  30.0694444444,
-                  35.0658333333
-                ],
+                "point": [30.0694444444, 35.0658333333],
                 "course": 185,
                 "turn_direction": "R",
                 "distance": 1.0,

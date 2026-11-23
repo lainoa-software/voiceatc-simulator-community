@@ -5,10 +5,7 @@
     {
       "id": "HARBOR_VISUAL_14R",
       "name": "Harbor Visual RWY 14R",
-      "aliases": [
-        "harbor visual",
-        "harbor visual fourteen right"
-      ],
+      "aliases": ["harbor visual", "harbor visual fourteen right"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,9 +29,7 @@
               {
                 "id": "HARBOR_ISLAND",
                 "name": "Harbor Island",
-                "aliases": [
-                  "the Harbor Island"
-                ],
+                "aliases": ["the Harbor Island"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "HARBOR VISUAL RWY 14R",
@@ -54,10 +49,7 @@
               "id": "SUQUAMISH_TRACE",
               "name": "Suquamish (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.73,
-                -122.55
-              ],
+              "point": [47.73, -122.55],
               "fly_over": true,
               "altitude": {
                 "at_ft": 3000,
@@ -68,10 +60,7 @@
               "id": "WEST_POINT_TRACE",
               "name": "West Point (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.66,
-                -122.44
-              ],
+              "point": [47.66, -122.44],
               "fly_over": true,
               "altitude": {
                 "at_ft": 3000,
@@ -82,10 +71,7 @@
               "id": "ELLIOTT_BAY_TRACE",
               "name": "Elliott Bay (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.61,
-                -122.4
-              ],
+              "point": [47.61, -122.4],
               "fly_over": false,
               "altitude": {
                 "at_ft": 2000,
@@ -96,10 +82,7 @@
               "id": "HARBOR_ISLAND_TRACE",
               "name": "Harbor Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.57,
-                -122.35
-              ],
+              "point": [47.57, -122.35],
               "fly_over": false
             }
           ],
@@ -120,9 +103,7 @@
               {
                 "id": "HARBOR_ISLAND",
                 "name": "Harbor Island",
-                "aliases": [
-                  "the Harbor Island"
-                ],
+                "aliases": ["the Harbor Island"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "HARBOR VISUAL RWY 14R",
@@ -142,10 +123,7 @@
               "id": "NORTH_LAKE_TRACE",
               "name": "North end of Lake Washington (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.75,
-                -122.22
-              ],
+              "point": [47.75, -122.22],
               "fly_over": false,
               "altitude": {
                 "at_ft": 4000,
@@ -156,10 +134,7 @@
               "id": "WEST_POINT_TRACE",
               "name": "West Point (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.66,
-                -122.44
-              ],
+              "point": [47.66, -122.44],
               "fly_over": true,
               "altitude": {
                 "at_ft": 3000,
@@ -170,10 +145,7 @@
               "id": "ELLIOTT_BAY_TRACE",
               "name": "Elliott Bay (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.61,
-                -122.4
-              ],
+              "point": [47.61, -122.4],
               "fly_over": false,
               "altitude": {
                 "at_ft": 2000,
@@ -184,10 +156,7 @@
               "id": "HARBOR_ISLAND_TRACE",
               "name": "Harbor Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.57,
-                -122.35
-              ],
+              "point": [47.57, -122.35],
               "fly_over": false
             }
           ],
@@ -208,9 +177,7 @@
               {
                 "id": "HARBOR_ISLAND",
                 "name": "Harbor Island",
-                "aliases": [
-                  "the Harbor Island"
-                ],
+                "aliases": ["the Harbor Island"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "HARBOR VISUAL RWY 14R",
@@ -230,20 +197,14 @@
               "id": "VASHON_NORTH_TRACE",
               "name": "North tip of Vashon Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.52,
-                -122.51
-              ],
+              "point": [47.52, -122.51],
               "fly_over": false
             },
             {
               "id": "ALKI_POINT_TRACE",
               "name": "Alki Point (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.58,
-                -122.41
-              ],
+              "point": [47.58, -122.41],
               "fly_over": true,
               "altitude": {
                 "at_ft": 3000,
@@ -254,10 +215,7 @@
               "id": "ELLIOTT_BAY_TRACE",
               "name": "Elliott Bay (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.61,
-                -122.4
-              ],
+              "point": [47.61, -122.4],
               "fly_over": false,
               "altitude": {
                 "at_ft": 2000,
@@ -268,10 +226,7 @@
               "id": "HARBOR_ISLAND_TRACE",
               "name": "Harbor Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                47.57,
-                -122.35
-              ],
+              "point": [47.57, -122.35],
               "fly_over": false
             }
           ],

@@ -4,15 +4,9 @@
     "LPHR_APP": {
       "HORTA_TMA_SPLIT": {
         "positions": {
-          "LPHR_APP": [
-            "HRA"
-          ]
+          "LPHR_APP": ["HRA"]
         },
-        "airports": [
-          "LPHR",
-          "LPPI",
-          "LPSJ"
-        ],
+        "airports": ["LPHR", "LPPI", "LPSJ"],
         "valid_for_runways": {
           "LPHR": [
             "LPHR_10",

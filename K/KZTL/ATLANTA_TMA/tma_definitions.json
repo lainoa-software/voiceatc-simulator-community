@@ -4,9 +4,7 @@
     {
       "id": "KATL_APP",
       "call_sign": "Atlanta Approach",
-      "services": [
-        "approach_radar"
-      ],
+      "services": ["approach_radar"],
       "unassigned_frequencies": [
         "134.725",
         "124.600",
@@ -18,9 +16,7 @@
     {
       "id": "KATL_TWR",
       "call_sign": "Atlanta Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KATL",
       "unassigned_frequencies": [
         "119.100",
@@ -33,14 +29,9 @@
     {
       "id": "KPDK_TWR",
       "call_sign": "Peachtree Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KPDK",
-      "unassigned_frequencies": [
-        "120.900",
-        "127.200"
-      ]
+      "unassigned_frequencies": ["120.900", "127.200"]
     }
   ],
   "positions": [

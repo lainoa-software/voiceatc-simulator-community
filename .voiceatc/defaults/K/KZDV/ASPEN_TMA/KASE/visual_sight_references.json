@@ -11,7 +11,10 @@
           "id": "ASPEN",
           "name": "Aspen",
           "aliases": ["the town of Aspen"],
-          "geometry": { "kind": "point", "leg_id": "ASPEN_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "ASPEN_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -31,7 +34,10 @@
           "id": "CARBONDALE",
           "name": "Carbondale",
           "aliases": ["the town of Carbondale"],
-          "geometry": { "kind": "point", "leg_id": "CARBONDALE_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "CARBONDALE_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -51,7 +57,10 @@
           "id": "MOUNT_SOPRIS",
           "name": "Mount Sopris",
           "aliases": ["Sopris"],
-          "geometry": { "kind": "point", "leg_id": "MT_SOPRIS_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "MT_SOPRIS_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -71,7 +80,10 @@
           "id": "CAPITAL_PEAK",
           "name": "Capital Peak",
           "aliases": ["Capital"],
-          "geometry": { "kind": "point", "leg_id": "CAPITAL_PEAK_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "CAPITAL_PEAK_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -91,7 +103,10 @@
           "id": "CASTLE_PEAK",
           "name": "Castle Peak",
           "aliases": ["Castle"],
-          "geometry": { "kind": "point", "leg_id": "CASTLE_PEAK_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "CASTLE_PEAK_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -111,7 +126,10 @@
           "id": "INDEPENDENCE_PASS",
           "name": "Independence Pass",
           "aliases": ["the pass"],
-          "geometry": { "kind": "point", "leg_id": "INDEPENDENCE_PASS_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "INDEPENDENCE_PASS_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -131,7 +149,10 @@
           "id": "MOUNT_OF_THE_HOLY_CROSS",
           "name": "Mount of the Holy Cross",
           "aliases": ["Holy Cross"],
-          "geometry": { "kind": "point", "leg_id": "HOLY_CROSS_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "HOLY_CROSS_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "ROARING FORK VISUAL RWY 15",

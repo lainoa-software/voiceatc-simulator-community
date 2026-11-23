@@ -11,7 +11,10 @@
           "id": "LITTLE_SUSITNA_MOUTH",
           "name": "the mouth of the Little Susitna River",
           "aliases": ["Little Susitna River mouth"],
-          "geometry": { "kind": "point", "leg_id": "OSPUF" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "OSPUF"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "HIGHWAY VISUAL RWY 25R",
@@ -31,7 +34,10 @@
           "id": "POINT_POSSESSION",
           "name": "Point Possession",
           "aliases": ["the Point Possession"],
-          "geometry": { "kind": "point", "leg_id": "MOPMY" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "MOPMY"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "HIGHWAY VISUAL RWY 25R",

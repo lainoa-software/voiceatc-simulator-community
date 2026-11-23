@@ -23,6 +23,10 @@
           "clearance_name": "Sin City Visual",
           "entry_point_id": "HASIL_TRACE",
           "sight_reference_point_id": "NW_CITY_OUTLINE_TRACE",
+          "final": {
+            "course_deg": 41.28,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "HASIL_TRACE",
@@ -86,15 +90,14 @@
               "latitude": 36.18,
               "longitude": -115.08,
               "fly_over": false,
+              "arc_radius_nm": 4.0,
+              "turn_direction": "L",
               "arc_center": {
                 "latitude": 36.2362,
                 "longitude": -115.0342555556
-              },
-              "arc_radius_nm": 4.0,
-              "turn_direction": "L"
+              }
             }
-          ],
-          "final": { "course_deg": 41.28, "glidepath_deg": 3.0 }
+          ]
         },
         {
           "id": "SIN_CITY_03R",
@@ -102,6 +105,10 @@
           "clearance_name": "Sin City Visual",
           "entry_point_id": "HASIL_TRACE",
           "sight_reference_point_id": "NW_CITY_OUTLINE_TRACE",
+          "final": {
+            "course_deg": 41.28,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "HASIL_TRACE",
@@ -165,15 +172,14 @@
               "latitude": 36.18,
               "longitude": -115.08,
               "fly_over": false,
+              "arc_radius_nm": 4.0,
+              "turn_direction": "L",
               "arc_center": {
                 "latitude": 36.2362,
                 "longitude": -115.0342555556
-              },
-              "arc_radius_nm": 4.0,
-              "turn_direction": "L"
+              }
             }
-          ],
-          "final": { "course_deg": 41.28, "glidepath_deg": 3.0 }
+          ]
         }
       ]
     }

@@ -8,63 +8,43 @@
       "spawn": true
     },
     {
-      "sids": [
-        "ARSA3M"
-      ],
+      "sids": ["ARSA3M"],
       "spawn": false
     },
     {
-      "sids": [
-        "ARSA3Z"
-      ],
+      "sids": ["ARSA3Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "BIKP1M"
-      ],
+      "sids": ["BIKP1M"],
       "spawn": false
     },
     {
-      "sids": [
-        "GERG3Z"
-      ],
+      "sids": ["GERG3Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "KISU1K"
-      ],
+      "sids": ["KISU1K"],
       "spawn": false
     },
     {
-      "sids": [
-        "KISU1Z"
-      ],
+      "sids": ["KISU1Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "LURO3M"
-      ],
+      "sids": ["LURO3M"],
       "spawn": false
     },
     {
-      "sids": [
-        "LURO3Z"
-      ],
+      "sids": ["LURO3Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "SUKI4K"
-      ],
+      "sids": ["SUKI4K"],
       "spawn": false
     },
     {
-      "sids": [
-        "SUKI4Z"
-      ],
+      "sids": ["SUKI4Z"],
       "spawn": false
     }
   ]

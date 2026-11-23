@@ -4,13 +4,9 @@
     "RPVR_APP": {
       "ROXAS": {
         "positions": {
-          "RPVR_APP": [
-            "RPVR_APP"
-          ]
+          "RPVR_APP": ["RPVR_APP"]
         },
-        "airports": [
-          "RPVR"
-        ]
+        "airports": ["RPVR"]
       }
     }
   }

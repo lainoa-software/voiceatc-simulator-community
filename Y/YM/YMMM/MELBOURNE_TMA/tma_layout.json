@@ -4,13 +4,9 @@
     "YMML_APP": {
       "MELBOURNE_APP": {
         "positions": {
-          "YMML_APP": [
-            "YMML_APP"
-          ]
+          "YMML_APP": ["YMML_APP"]
         },
-        "airports": [
-          "YMML"
-        ]
+        "airports": ["YMML"]
       }
     }
   }

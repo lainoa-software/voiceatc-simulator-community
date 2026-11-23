@@ -4,9 +4,7 @@
     {
       "id": "RPVP_APP",
       "call_sign": "Puerto Princesa approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

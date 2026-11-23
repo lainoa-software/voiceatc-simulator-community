@@ -4,13 +4,9 @@
     "RKSI_APP": {
       "INCHEON": {
         "positions": {
-          "RKSI_APP": [
-            "RKSI_APP"
-          ]
+          "RKSI_APP": ["RKSI_APP"]
         },
-        "airports": [
-          "RKSI"
-        ]
+        "airports": ["RKSI"]
       }
     }
   }

@@ -4,9 +4,7 @@
     {
       "id": "RPVI_APP",
       "call_sign": "Iloilo approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

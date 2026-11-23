@@ -8,27 +8,19 @@
       "spawn": true
     },
     {
-      "sids": [
-        "EDDV1F"
-      ],
+      "sids": ["EDDV1F"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDV1G"
-      ],
+      "sids": ["EDDV1G"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDV1S"
-      ],
+      "sids": ["EDDV1S"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDV1Y"
-      ],
+      "sids": ["EDDV1Y"],
       "spawn": false
     }
   ]

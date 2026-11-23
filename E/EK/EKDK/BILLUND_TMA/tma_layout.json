@@ -4,13 +4,9 @@
     "EKBI_APP": {
       "BILLUND_TMA_WHOLE_ALL": {
         "positions": {
-          "EKBI_APP": [
-            "BILLUND_TMA_ALL"
-          ]
+          "EKBI_APP": ["BILLUND_TMA_ALL"]
         },
-        "airports": [
-          "EKBI"
-        ],
+        "airports": ["EKBI"],
         "valid_for_runways": {
           "EKBI": [
             "EKBI_09",

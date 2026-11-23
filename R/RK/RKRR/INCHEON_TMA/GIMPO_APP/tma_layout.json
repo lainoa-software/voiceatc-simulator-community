@@ -4,13 +4,9 @@
     "RKSS_APP": {
       "GIMPO": {
         "positions": {
-          "RKSS_APP": [
-            "RKSS_APP"
-          ]
+          "RKSS_APP": ["RKSS_APP"]
         },
-        "airports": [
-          "RKSS"
-        ]
+        "airports": ["RKSS"]
       }
     }
   }

@@ -5,60 +5,40 @@
       "name": "KJFK_ARR_CAMRN",
       "from": "KZNY_CTR",
       "to": "KJFK_APP",
-      "arrives": [
-        "KJFK"
-      ],
-      "fix": [
-        "CAMRN"
-      ],
+      "arrives": ["KJFK"],
+      "fix": ["CAMRN"],
       "level": "A110"
     },
     {
       "name": "KJFK_ARR_CCC",
       "from": "KZNY_CTR",
       "to": "KJFK_APP",
-      "arrives": [
-        "KJFK"
-      ],
-      "fix": [
-        "CCC"
-      ],
+      "arrives": ["KJFK"],
+      "fix": ["CCC"],
       "level": "A120"
     },
     {
       "name": "KJFK_ARR_LOVES",
       "from": "KZNY_CTR",
       "to": "KJFK_APP",
-      "arrives": [
-        "KJFK"
-      ],
-      "fix": [
-        "LOVES"
-      ],
+      "arrives": ["KJFK"],
+      "fix": ["LOVES"],
       "level": "A060"
     },
     {
       "name": "KJFK_ARR_JENNO",
       "from": "KZNY_CTR",
       "to": "KJFK_APP",
-      "arrives": [
-        "KJFK"
-      ],
-      "fix": [
-        "JENNO"
-      ],
+      "arrives": ["KJFK"],
+      "fix": ["JENNO"],
       "level": "F230"
     },
     {
       "name": "KJFK_DEP_DEEZZ",
       "from": "KJFK_APP",
       "to": "KZNY_CTR",
-      "departs": [
-        "KJFK"
-      ],
-      "fix": [
-        "DEEZZ"
-      ],
+      "departs": ["KJFK"],
+      "fix": ["DEEZZ"],
       "level": "F190"
     }
   ]

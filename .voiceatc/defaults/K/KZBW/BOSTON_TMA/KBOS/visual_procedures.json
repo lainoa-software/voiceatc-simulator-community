@@ -23,6 +23,10 @@
           "clearance_name": "Light Visual",
           "entry_point_id": "MYNOT",
           "sight_reference_point_id": "LYHTT",
+          "final": {
+            "course_deg": 330,
+            "glidepath_deg": 3
+          },
           "legs": [
             {
               "id": "MYNOT",
@@ -69,11 +73,7 @@
                 "kind": "at_or_above"
               }
             }
-          ],
-          "final": {
-            "course_deg": 330,
-            "glidepath_deg": 3
-          }
+          ]
         }
       ]
     }

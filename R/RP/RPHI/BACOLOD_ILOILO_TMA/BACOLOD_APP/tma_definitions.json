@@ -4,9 +4,7 @@
     {
       "id": "RPVB_APP",
       "call_sign": "Silay approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

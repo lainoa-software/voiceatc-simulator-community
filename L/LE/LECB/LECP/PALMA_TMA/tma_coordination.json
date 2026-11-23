@@ -5,111 +5,70 @@
       "name": "W_IBIZA_F150",
       "from": "LECB_BKW_CTR",
       "to": "LEIB_APP",
-      "arrives": [
-        "LEIB"
-      ],
+      "arrives": ["LEIB"],
       "level": "F150"
     },
     {
       "name": "E_PALMA_F200",
       "from": "LECB_BKE_CTR",
       "to": "LEPA_LECPAPR_APP",
-      "arrives": [
-        "LEPA"
-      ],
+      "arrives": ["LEPA"],
       "level": "F200"
     },
     {
       "name": "E_MENORCA_F070",
       "from": "LECB_BKE_CTR",
       "to": "LEMH_TWR",
-      "arrives": [
-        "LEMH"
-      ],
+      "arrives": ["LEMH"],
       "level": "F070"
     },
     {
       "name": "E_IBIZA_F210",
       "from": "LECB_BKE_CTR",
       "to": "LEPA_LECPAPR_APP",
-      "arrives": [
-        "LEIB"
-      ],
+      "arrives": ["LEIB"],
       "level": "F210"
     },
     {
       "name": "PALMA_DEP_BAVER_F180",
       "from": "LEPA_APP",
       "to": "LECP_GIX_CTR",
-      "departs": [
-        "LEPA"
-      ],
-      "fix": [
-        "BAVER",
-        "EPAMA",
-        "ESPOR",
-        "MEBUT",
-        "OSGAL"
-      ],
+      "departs": ["LEPA"],
+      "fix": ["BAVER", "EPAMA", "ESPOR", "MEBUT", "OSGAL"],
       "level": "F180"
     },
     {
       "name": "PALMA_DEP_DRAGO_F240",
       "from": "LEPA_APP",
       "to": "LECB_BKW_CTR",
-      "departs": [
-        "LEPA"
-      ],
-      "fix": [
-        "DRAGO",
-        "GALAT"
-      ],
+      "departs": ["LEPA"],
+      "fix": ["DRAGO", "GALAT"],
       "level": "F240"
     },
     {
       "name": "PALMA_DEP_ISTER_F180",
       "from": "LEPA_APP",
       "to": "LECB_BKE_CTR",
-      "departs": [
-        "LEPA"
-      ],
-      "fix": [
-        "ISTER",
-        "MEROS",
-        "MORSS"
-      ],
+      "departs": ["LEPA"],
+      "fix": ["ISTER", "MEROS", "MORSS"],
       "level": "F180"
     },
     {
       "name": "PALMA_DEP_NELUX_IBIZA_ODD",
       "from": "LEPA_APP",
       "to": "LEIB_APP",
-      "arrives": [
-        "LEIB"
-      ],
-      "departs": [
-        "LEPA"
-      ],
-      "fix": [
-        "NELUX"
-      ],
+      "arrives": ["LEIB"],
+      "departs": ["LEPA"],
+      "fix": ["NELUX"],
       "level": "ODD"
     },
     {
       "name": "PALMA_DEP_MENORCA_EVEN",
       "from": "LEPA_APP",
       "to": "LECB_BKE_CTR",
-      "arrives": [
-        "LEMH"
-      ],
-      "departs": [
-        "LEPA"
-      ],
-      "fix": [
-        "CDP",
-        "PTC",
-        "TONIS"
-      ],
+      "arrives": ["LEMH"],
+      "departs": ["LEPA"],
+      "fix": ["CDP", "PTC", "TONIS"],
       "level": "EVEN"
     },
     {
@@ -134,22 +93,15 @@
       "name": "PALMA_ARR_F190",
       "from": "LECB_CTR",
       "to": "LEPA_APP",
-      "arrives": [
-        "LEPA"
-      ],
+      "arrives": ["LEPA"],
       "level": "F190"
     },
     {
       "name": "PALMA_IBIZA_ARR_ODD",
       "from": "LEPA_APP",
       "to": "LEIB_APP",
-      "arrives": [
-        "LEIB"
-      ],
-      "fix": [
-        "ADX",
-        "MJV"
-      ],
+      "arrives": ["LEIB"],
+      "fix": ["ADX", "MJV"],
       "level": "ODD"
     }
   ]

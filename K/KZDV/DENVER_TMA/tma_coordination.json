@@ -5,336 +5,224 @@
       "name": "KDEN_ARR_AALLE",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "AALLE"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["AALLE"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_LAWGR",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "LAWGR"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["LAWGR"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_CLASH",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "CLASH"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["CLASH"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_NIIXX",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "NIIXX"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["NIIXX"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_SSKII",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "SSKII"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["SSKII"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_TBARR",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "TBARR"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["TBARR"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_FLATI",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "FLATI"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["FLATI"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_LONGZ",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "LONGZ"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["LONGZ"],
       "level": "F190"
     },
     {
       "name": "KDEN_ARR_RAMMS",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "RAMMS"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["RAMMS"],
       "level": "A170"
     },
     {
       "name": "KDEN_ARR_LANDR",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "LANDR"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["LANDR"],
       "level": "A170"
     },
     {
       "name": "KDEN_ARR_QUAIL",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "QUAIL"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["QUAIL"],
       "level": "A170"
     },
     {
       "name": "KDEN_ARR_LARKS",
       "from": "KZDV_CTR",
       "to": "KDEN_APP",
-      "arrives": [
-        "KDEN"
-      ],
-      "fix": [
-        "LARKS"
-      ],
+      "arrives": ["KDEN"],
+      "fix": ["LARKS"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_BAYLR",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "BAYLR"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["BAYLR"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_CONNR",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "CONNR"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["CONNR"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_COORZ",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "COORZ"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["COORZ"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_ZIMMR",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "ZIMMR"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["ZIMMR"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_YAMMI",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "YAMMI"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["YAMMI"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_YOKES",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "YOKES"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["YOKES"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_RIKKK",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "RIKKK"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["RIKKK"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_BRYCC",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "BRYCC"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["BRYCC"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_EEONS",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "EEONS"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["EEONS"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_EMMYS",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "EMMYS"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["EMMYS"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_EPKEE",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "EPKEE"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["EPKEE"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_EXTAN",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "EXTAN"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["EXTAN"],
       "level": "A170"
     },
     {
       "name": "KDEN_DEP_SOLAR",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "SOLAR"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["SOLAR"],
       "level": "A180"
     },
     {
       "name": "KDEN_DEP_SCAGS",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "SCAGS"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["SCAGS"],
       "level": "A180"
     },
     {
       "name": "KDEN_DEP_SHOJO",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "SHOJO"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["SHOJO"],
       "level": "A180"
     },
     {
       "name": "KDEN_DEP_STAKR",
       "from": "KDEN_APP",
       "to": "KZDV_CTR",
-      "departs": [
-        "KDEN"
-      ],
-      "fix": [
-        "STAKR"
-      ],
+      "departs": ["KDEN"],
+      "fix": ["STAKR"],
       "level": "A180"
     }
   ]

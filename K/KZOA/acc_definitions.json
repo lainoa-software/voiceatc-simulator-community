@@ -4,9 +4,7 @@
     {
       "id": "KZOA_CTR",
       "call_sign": "Oakland Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "134.550",
         "119.475",

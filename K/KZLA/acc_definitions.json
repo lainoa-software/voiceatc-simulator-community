@@ -4,9 +4,7 @@
     {
       "id": "KZLA_CTR",
       "call_sign": "Los Angeles Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "124.625",
         "118.025",

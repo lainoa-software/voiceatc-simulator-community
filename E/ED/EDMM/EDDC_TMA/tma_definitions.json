@@ -4,9 +4,7 @@
     {
       "id": "EDAB_APP",
       "call_sign": "Bautzen approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,9 +4,7 @@
     {
       "id": "KZAU_CTR",
       "call_sign": "Chicago Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "120.350",
         "118.150",

@@ -4,31 +4,23 @@
     {
       "id": "LEPA_APP",
       "call_sign": "Palma De Mallorca approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEPA_TWR",
       "call_sign": "Palma Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEPA"
     },
     {
       "id": "LEIB_APP",
       "call_sign": "Ibiza Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEMH_TWR",
       "call_sign": "Menorca Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEMH"
     }
   ],

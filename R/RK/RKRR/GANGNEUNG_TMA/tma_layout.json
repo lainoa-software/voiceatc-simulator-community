@@ -4,13 +4,9 @@
     "RKNY_APP": {
       "GANGNEUNG": {
         "positions": {
-          "RKNY_APP": [
-            "RKNY_APP"
-          ]
+          "RKNY_APP": ["RKNY_APP"]
         },
-        "airports": [
-          "RKNY"
-        ]
+        "airports": ["RKNY"]
       }
     }
   }

@@ -4,9 +4,7 @@
     {
       "id": "RPMD_APP",
       "call_sign": "Davao approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

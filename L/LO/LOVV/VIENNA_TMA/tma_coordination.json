@@ -5,228 +5,152 @@
       "name": "LOWW_ARR_BARUG",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "BARUG"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["BARUG"],
       "level": "F170"
     },
     {
       "name": "LOWW_ARR_NIGSI",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "NIGSI"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["NIGSI"],
       "level": "F180"
     },
     {
       "name": "LOWW_ARR_MIKOV",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "MIKOV"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["MIKOV"],
       "level": "F130"
     },
     {
       "name": "LOWW_ARR_REKLU",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "REKLU"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["REKLU"],
       "level": "F180"
     },
     {
       "name": "LOWW_ARR_NATEX",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "NATEX"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["NATEX"],
       "level": "F140"
     },
     {
       "name": "LOWW_ARR_LANUX",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "LANUX"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["LANUX"],
       "level": "F150"
     },
     {
       "name": "LOWW_ARR_TOVKA",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "TOVKA"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["TOVKA"],
       "level": "F160"
     },
     {
       "name": "LOWW_ARR_MASUR",
       "from": "LOVV_CTR",
       "to": "LOWW_APP",
-      "arrives": [
-        "LOWW"
-      ],
-      "fix": [
-        "MASUR"
-      ],
+      "arrives": ["LOWW"],
+      "fix": ["MASUR"],
       "level": "F170"
     },
     {
       "name": "LOWW_DEP_LANUX",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "LANUX"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["LANUX"],
       "level": "F165"
     },
     {
       "name": "LOWW_DEP_SOVIL",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "SOVIL"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["SOVIL"],
       "level": "F240"
     },
     {
       "name": "LOWW_DEP_LUGEM",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "LUGEM"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["LUGEM"],
       "level": "F240"
     },
     {
       "name": "LOWW_DEP_MEDIX",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "MEDIX"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["MEDIX"],
       "level": "F240"
     },
     {
       "name": "LOWW_DEP_RUPET",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "RUPET"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["RUPET"],
       "level": "F240"
     },
     {
       "name": "LOWW_DEP_OSPEN",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "OSPEN"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["OSPEN"],
       "level": "F240"
     },
     {
       "name": "LOWW_DEP_ADAMA",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "ADAMA"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["ADAMA"],
       "level": "F230"
     },
     {
       "name": "LOWW_DEP_KOXER",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "KOXER"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["KOXER"],
       "level": "F230"
     },
     {
       "name": "LOWW_DEP_ARSIN",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "ARSIN"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["ARSIN"],
       "level": "F230"
     },
     {
       "name": "LOWW_DEP_STEIN",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "STEIN"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["STEIN"],
       "level": "F230"
     },
     {
       "name": "LOWW_DEP_LEDVA",
       "from": "LOWW_APP",
       "to": "LOVV_CTR",
-      "departs": [
-        "LOWW"
-      ],
-      "fix": [
-        "LEDVA"
-      ],
+      "departs": ["LOWW"],
+      "fix": ["LEDVA"],
       "level": "F230"
     }
   ]

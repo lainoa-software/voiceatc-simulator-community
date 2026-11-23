@@ -33,10 +33,7 @@
               {
                 "id": "INTERSTATE_FIVE_BRIDGE",
                 "name": "the Interstate Five Bridge",
-                "aliases": [
-                  "I-5 Bridge",
-                  "Interstate 5 Bridge"
-                ],
+                "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -56,20 +53,14 @@
               "id": "SAUVIE_TRACE",
               "name": "Sauvie Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.67,
-                -122.82
-              ],
+              "point": [45.67, -122.82],
               "fly_over": false
             },
             {
               "id": "CNFLU",
               "name": "Confluence of Rivers / CNFLU",
               "type": "track_to_fix",
-              "point": [
-                45.6583333333,
-                -122.7725
-              ],
+              "point": [45.6583333333, -122.7725],
               "fly_over": true,
               "altitude": {
                 "at_ft": 2500,
@@ -80,20 +71,14 @@
               "id": "COLUMBIA_RIVER_TRACE",
               "name": "Columbia River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.61,
-                -122.68
-              ],
+              "point": [45.61, -122.68],
               "fly_over": false
             },
             {
               "id": "I5_BRIDGE_TRACE",
               "name": "I-5 Bridge / Pearson area (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.6,
-                -122.67
-              ],
+              "point": [45.6, -122.67],
               "fly_over": true,
               "altitude": {
                 "at_ft": 1400,
@@ -117,10 +102,7 @@
               {
                 "id": "INTERSTATE_FIVE_BRIDGE",
                 "name": "the Interstate Five Bridge",
-                "aliases": [
-                  "I-5 Bridge",
-                  "Interstate 5 Bridge"
-                ],
+                "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -140,20 +122,14 @@
               "id": "SAUVIE_TRACE",
               "name": "Sauvie Island (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.67,
-                -122.82
-              ],
+              "point": [45.67, -122.82],
               "fly_over": false
             },
             {
               "id": "CNFLU",
               "name": "Confluence of Rivers / CNFLU",
               "type": "track_to_fix",
-              "point": [
-                45.6583333333,
-                -122.7725
-              ],
+              "point": [45.6583333333, -122.7725],
               "fly_over": true,
               "altitude": {
                 "at_ft": 2500,
@@ -164,20 +140,14 @@
               "id": "COLUMBIA_RIVER_TRACE",
               "name": "Columbia River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.61,
-                -122.68
-              ],
+              "point": [45.61, -122.68],
               "fly_over": false
             },
             {
               "id": "I5_BRIDGE_TRACE",
               "name": "I-5 Bridge / Pearson area (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.6,
-                -122.67
-              ],
+              "point": [45.6, -122.67],
               "fly_over": true
             }
           ],
@@ -197,10 +167,7 @@
               {
                 "id": "INTERSTATE_FIVE_BRIDGE",
                 "name": "the Interstate Five Bridge",
-                "aliases": [
-                  "I-5 Bridge",
-                  "Interstate 5 Bridge"
-                ],
+                "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -220,20 +187,14 @@
               "id": "SCAPPOOSE_TRACE",
               "name": "Scappoose (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.76,
-                -122.88
-              ],
+              "point": [45.76, -122.88],
               "fly_over": false
             },
             {
               "id": "CNFLU",
               "name": "Confluence of Rivers / CNFLU",
               "type": "track_to_fix",
-              "point": [
-                45.6583333333,
-                -122.7725
-              ],
+              "point": [45.6583333333, -122.7725],
               "fly_over": true,
               "altitude": {
                 "at_ft": 2500,
@@ -244,20 +205,14 @@
               "id": "COLUMBIA_RIVER_TRACE",
               "name": "Columbia River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.61,
-                -122.68
-              ],
+              "point": [45.61, -122.68],
               "fly_over": false
             },
             {
               "id": "I5_BRIDGE_TRACE",
               "name": "I-5 Bridge / Pearson area (chart-traced; RWY 10L cue)",
               "type": "track_to_fix",
-              "point": [
-                45.6,
-                -122.67
-              ],
+              "point": [45.6, -122.67],
               "fly_over": true,
               "altitude": {
                 "at_ft": 1400,
@@ -281,10 +236,7 @@
               {
                 "id": "INTERSTATE_FIVE_BRIDGE",
                 "name": "the Interstate Five Bridge",
-                "aliases": [
-                  "I-5 Bridge",
-                  "Interstate 5 Bridge"
-                ],
+                "aliases": ["I-5 Bridge", "Interstate 5 Bridge"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "COLUMBIA VISUAL RWY 10L/R",
@@ -304,20 +256,14 @@
               "id": "SCAPPOOSE_TRACE",
               "name": "Scappoose (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.76,
-                -122.88
-              ],
+              "point": [45.76, -122.88],
               "fly_over": false
             },
             {
               "id": "CNFLU",
               "name": "Confluence of Rivers / CNFLU",
               "type": "track_to_fix",
-              "point": [
-                45.6583333333,
-                -122.7725
-              ],
+              "point": [45.6583333333, -122.7725],
               "fly_over": true,
               "altitude": {
                 "at_ft": 2500,
@@ -328,20 +274,14 @@
               "id": "COLUMBIA_RIVER_TRACE",
               "name": "Columbia River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.61,
-                -122.68
-              ],
+              "point": [45.61, -122.68],
               "fly_over": false
             },
             {
               "id": "I5_BRIDGE_TRACE",
               "name": "I-5 Bridge / Pearson area (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                45.6,
-                -122.67
-              ],
+              "point": [45.6, -122.67],
               "fly_over": true
             }
           ],

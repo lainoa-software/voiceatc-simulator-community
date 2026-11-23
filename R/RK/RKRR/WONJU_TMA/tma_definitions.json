@@ -4,9 +4,7 @@
     {
       "id": "RKNW_APP",
       "call_sign": "Wonju approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

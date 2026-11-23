@@ -4,9 +4,7 @@
     {
       "id": "VTBD_APP",
       "call_sign": "Bangkok approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

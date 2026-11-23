@@ -4,98 +4,48 @@
     "LECL_CTR": {
       "1": {
         "positions": {
-          "LEVC_APP": [
-            "LECLALV"
-          ]
+          "LEVC_APP": ["LECLALV"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       },
       "2S": {
         "positions": {
-          "LEAL_APP": [
-            "LECLTMN"
-          ],
-          "LEVC_APP": [
-            "LECLVAP"
-          ]
+          "LEAL_APP": ["LECLTMN"],
+          "LEVC_APP": ["LECLVAP"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       },
       "3W": {
         "positions": {
-          "LEAL_APP": [
-            "LECLAAW"
-          ],
-          "LECL_CTR": [
-            "LECLSUW"
-          ],
-          "LEVC_APP": [
-            "LECLVAP"
-          ]
+          "LEAL_APP": ["LECLAAW"],
+          "LECL_CTR": ["LECLSUW"],
+          "LEVC_APP": ["LECLVAP"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       },
       "3E": {
         "positions": {
-          "LEAL_APP": [
-            "LECLAAE"
-          ],
-          "LECL_CTR": [
-            "LECLSUE"
-          ],
-          "LEVC_APP": [
-            "LECLVAP"
-          ]
+          "LEAL_APP": ["LECLAAE"],
+          "LECL_CTR": ["LECLSUE"],
+          "LEVC_APP": ["LECLVAP"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       },
       "4W": {
         "positions": {
-          "LEAL_APP": [
-            "LECLAAW",
-            "LECLDEW"
-          ],
-          "LECL_CTR": [
-            "LECLTMW"
-          ],
-          "LEVC_APP": [
-            "LECLVAP"
-          ]
+          "LEAL_APP": ["LECLAAW", "LECLDEW"],
+          "LECL_CTR": ["LECLTMW"],
+          "LEVC_APP": ["LECLVAP"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       },
       "4E": {
         "positions": {
-          "LEAL_APP": [
-            "LECLAAE",
-            "LECLDEE"
-          ],
-          "LECL_CTR": [
-            "LECLTME"
-          ],
-          "LEVC_APP": [
-            "LECLVAP"
-          ]
+          "LEAL_APP": ["LECLAAE", "LECLDEE"],
+          "LECL_CTR": ["LECLTME"],
+          "LEVC_APP": ["LECLVAP"]
         },
-        "airports": [
-          "LEVC",
-          "LEAL"
-        ]
+        "airports": ["LEVC", "LEAL"]
       }
     }
   }

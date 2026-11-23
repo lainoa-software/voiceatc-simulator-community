@@ -4,9 +4,7 @@
     {
       "id": "GCHI_APP",
       "call_sign": "El Hierro approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,39 +4,22 @@
     {
       "id": "LIRF_APP",
       "call_sign": "Roma Arrivals",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "119.200",
-        "127.950",
-        "131.250"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["119.200", "127.950", "131.250"]
     },
     {
       "id": "LIRF_TWR",
       "call_sign": "Fiumicino Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LIRF",
-      "unassigned_frequencies": [
-        "118.700",
-        "123.725",
-        "127.625"
-      ]
+      "unassigned_frequencies": ["118.700", "123.725", "127.625"]
     },
     {
       "id": "LIRA_TWR",
       "call_sign": "Ciampino Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LIRA",
-      "unassigned_frequencies": [
-        "120.500",
-        "119.405"
-      ]
+      "unassigned_frequencies": ["120.500", "119.405"]
     }
   ],
   "positions": [

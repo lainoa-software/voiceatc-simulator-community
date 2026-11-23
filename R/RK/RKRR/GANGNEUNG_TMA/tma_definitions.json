@@ -4,9 +4,7 @@
     {
       "id": "RKNY_APP",
       "call_sign": "Yangyang approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

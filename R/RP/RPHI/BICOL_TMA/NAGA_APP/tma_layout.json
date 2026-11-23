@@ -4,13 +4,9 @@
     "RPUN_APP": {
       "NAGA": {
         "positions": {
-          "RPUN_APP": [
-            "RPUN_APP"
-          ]
+          "RPUN_APP": ["RPUN_APP"]
         },
-        "airports": [
-          "RPUN"
-        ]
+        "airports": ["RPUN"]
       }
     }
   }

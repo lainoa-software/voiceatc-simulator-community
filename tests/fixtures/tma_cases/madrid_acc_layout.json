@@ -4,9 +4,7 @@
     "MAD_CTR": {
       "1": {
         "positions": {
-          "LECM_R1_CTR": [
-            "LECMR1I"
-          ]
+          "LECM_R1_CTR": ["LECMR1I"]
         }
       }
     }

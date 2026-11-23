@@ -4,12 +4,8 @@
     {
       "id": "VMMC_APP",
       "call_sign": "Macao approach",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "123.950"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["123.950"]
     }
   ],
   "positions": [

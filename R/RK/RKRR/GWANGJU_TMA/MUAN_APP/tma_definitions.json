@@ -4,9 +4,7 @@
     {
       "id": "RKJB_APP",
       "call_sign": "Muan approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

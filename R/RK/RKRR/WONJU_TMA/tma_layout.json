@@ -4,13 +4,9 @@
     "RKNW_APP": {
       "WONJU": {
         "positions": {
-          "RKNW_APP": [
-            "RKNW_APP"
-          ]
+          "RKNW_APP": ["RKNW_APP"]
         },
-        "airports": [
-          "RKNW"
-        ]
+        "airports": ["RKNW"]
       }
     }
   }

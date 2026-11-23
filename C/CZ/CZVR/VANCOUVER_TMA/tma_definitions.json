@@ -4,9 +4,7 @@
     {
       "id": "CYVR_APP",
       "call_sign": "Vancouver approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

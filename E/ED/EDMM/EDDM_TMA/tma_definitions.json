@@ -4,9 +4,7 @@
     {
       "id": "EDDM_APP",
       "call_sign": "Munich Approach",
-      "services": [
-        "approach_radar"
-      ],
+      "services": ["approach_radar"],
       "unassigned_frequencies": [
         "118.830",
         "120.780",
@@ -18,15 +16,9 @@
     {
       "id": "EDDM_TWR",
       "call_sign": "Munich Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "EDDM",
-      "unassigned_frequencies": [
-        "118.705",
-        "119.405",
-        "120.505"
-      ]
+      "unassigned_frequencies": ["118.705", "119.405", "120.505"]
     }
   ],
   "positions": [

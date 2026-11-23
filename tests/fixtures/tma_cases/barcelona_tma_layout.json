@@ -4,52 +4,36 @@
     "BCN_APP": {
       "2CO": {
         "positions": {
-          "LEBL_CORE_APP": [
-            "LEBLCORE",
-            "LEBLCTR"
-          ]
+          "LEBL_CORE_APP": ["LEBLCORE", "LEBLCTR"]
         },
-        "airports": [
-          "LEBL",
-          "LEGE",
-          "LERS",
-          "LEDA"
-        ]
+        "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       }
     },
     "BCN_TWR": {
       "1": {
         "positions": {
-          "LEBL_TWR": [
-            "LEBLATZ"
-          ]
+          "LEBL_TWR": ["LEBLATZ"]
         }
       }
     },
     "GIR_TWR": {
       "1": {
         "positions": {
-          "LEGE_APP": [
-            "LEGEAPP"
-          ]
+          "LEGE_APP": ["LEGEAPP"]
         }
       }
     },
     "REU_TWR": {
       "1": {
         "positions": {
-          "LERS_APP": [
-            "LERSAPP"
-          ]
+          "LERS_APP": ["LERSAPP"]
         }
       }
     },
     "LLE_TWR": {
       "1": {
         "positions": {
-          "LEDA_TWR": [
-            "LEDACTR"
-          ]
+          "LEDA_TWR": ["LEDACTR"]
         }
       }
     }

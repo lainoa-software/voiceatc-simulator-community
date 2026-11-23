@@ -4,13 +4,9 @@
     "RCDC_APP": {
       "PINGTUNG": {
         "positions": {
-          "RCDC_APP": [
-            "RCDC_APP"
-          ]
+          "RCDC_APP": ["RCDC_APP"]
         },
-        "airports": [
-          "RCDC"
-        ]
+        "airports": ["RCDC"]
       }
     }
   }

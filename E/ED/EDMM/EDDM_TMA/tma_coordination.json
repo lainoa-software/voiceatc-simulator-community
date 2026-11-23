@@ -5,448 +5,272 @@
       "name": "EDDM_ARR_ROKIL_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "ROKIL"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["ROKIL"],
       "level": "F140",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_ROKIL_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "ROKIL"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["ROKIL"],
       "level": "F160",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_LANDU_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "LANDU"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["LANDU"],
       "level": "F170",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_LANDU_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "LANDU"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["LANDU"],
       "level": "F110",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_GOMAX_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "GOMAX"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["GOMAX"],
       "level": "F170",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_GOMAX_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "GOMAX"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["GOMAX"],
       "level": "F110",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_OSTES_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "OSTES"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["OSTES"],
       "level": "F170",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_OSTES_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "OSTES"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["OSTES"],
       "level": "F110",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_MITNU_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "MITNU"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["MITNU"],
       "level": "F170",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_MITNU_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "MITNU"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["MITNU"],
       "level": "F110",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_BURAM_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "BURAM"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["BURAM"],
       "level": "F130",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_BURAM_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "BURAM"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["BURAM"],
       "level": "F150",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_ARR_BETOS_08",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "BETOS"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["BETOS"],
       "level": "F120",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_ARR_BETOS_26",
       "from": "EDMM_CTR",
       "to": "EDDM_APP",
-      "arrives": [
-        "EDDM"
-      ],
-      "fix": [
-        "BETOS"
-      ],
+      "arrives": ["EDDM"],
+      "fix": ["BETOS"],
       "level": "F160",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_DEP_AKINI",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "AKINI"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["AKINI"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_ANKER",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "ANKER"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["ANKER"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_EVIVA",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "EVIVA"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["EVIVA"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_GIVMI",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "GIVMI"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["GIVMI"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_INPUD",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "INPUD"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["INPUD"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_MIQ",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "MIQ"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["MIQ"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_ALG",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "ALG"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["ALG"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_BIBAG",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "BIBAG"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["BIBAG"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_KIRDI",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "KIRDI"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["KIRDI"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_MERSI",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "MERSI"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["MERSI"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_OLASO",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "OLASO"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["OLASO"],
       "level": "F190"
     },
     {
       "name": "EDDM_DEP_RIDAR_08",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "RIDAR"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["RIDAR"],
       "level": "F180",
-      "runways": [
-        "08L",
-        "08R"
-      ]
+      "runways": ["08L", "08R"]
     },
     {
       "name": "EDDM_DEP_RIDAR_26",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "RIDAR"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["RIDAR"],
       "level": "F140",
-      "runways": [
-        "26L",
-        "26R"
-      ]
+      "runways": ["26L", "26R"]
     },
     {
       "name": "EDDM_DEP_OBAXA",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "OBAXA"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["OBAXA"],
       "level": "F150"
     },
     {
       "name": "EDDM_DEP_ROTAX",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "ROTAX"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["ROTAX"],
       "level": "F150"
     },
     {
       "name": "EDDM_DEP_TULSI",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "TULSI"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["TULSI"],
       "level": "F150"
     },
     {
       "name": "EDDM_DEP_TURBU",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "TURBU"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["TURBU"],
       "level": "F150"
     },
     {
       "name": "EDDM_DEP_VAVOR",
       "from": "EDDM_APP",
       "to": "EDMM_CTR",
-      "departs": [
-        "EDDM"
-      ],
-      "fix": [
-        "VAVOR"
-      ],
+      "departs": ["EDDM"],
+      "fix": ["VAVOR"],
       "level": "F150"
     }
   ]

@@ -1,13 +1,8 @@
 {
-  "airac_min": 2503,
   "airport": "VTBD",
-  "defaults": {
-    "init_climb": 8000,
-    "spawn_enabled": true
-  },
+  "airac_min": 2503,
   "runways": {
     "03L": {
-      "init_climb": 6000,
       "sids": {
         "ALBO1B": {
           "spawn_enabled": false
@@ -69,10 +64,10 @@
         "UPKU1B": {
           "spawn_enabled": false
         }
-      }
+      },
+      "init_climb": 6000
     },
     "03R": {
-      "init_climb": 6000,
       "sids": {
         "ALBO1D": {
           "spawn_enabled": false
@@ -134,9 +129,12 @@
         "UPKU1D": {
           "spawn_enabled": false
         }
-      }
+      },
+      "init_climb": 6000
     }
   },
-  "schema_version": 1,
-  "sids": {}
+  "defaults": {
+    "init_climb": 8000,
+    "spawn_enabled": true
+  }
 }

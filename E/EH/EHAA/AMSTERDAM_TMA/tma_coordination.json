@@ -5,192 +5,128 @@
       "name": "EHAM_ARR_ARTIP",
       "from": "EHAA_CTR",
       "to": "EHAM_APP",
-      "arrives": [
-        "EHAM"
-      ],
-      "fix": [
-        "ARTIP"
-      ],
+      "arrives": ["EHAM"],
+      "fix": ["ARTIP"],
       "level": "F100"
     },
     {
       "name": "EHAM_ARR_SUGOL",
       "from": "EHAA_CTR",
       "to": "EHAM_APP",
-      "arrives": [
-        "EHAM"
-      ],
-      "fix": [
-        "SUGOL"
-      ],
+      "arrives": ["EHAM"],
+      "fix": ["SUGOL"],
       "level": "F100"
     },
     {
       "name": "EHAM_ARR_RIVER",
       "from": "EHAA_CTR",
       "to": "EHAM_APP",
-      "arrives": [
-        "EHAM"
-      ],
-      "fix": [
-        "RIVER"
-      ],
+      "arrives": ["EHAM"],
+      "fix": ["RIVER"],
       "level": "F100"
     },
     {
       "name": "EHAM_DEP_BERGI",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "BERGI"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["BERGI"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_IDRID",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "IDRID"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["IDRID"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_VALKO",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "VALKO"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["VALKO"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_VOLLA",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "VOLLA"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["VOLLA"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_ANDIK",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "ANDIK"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["ANDIK"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_BETUS",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "BETUS"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["BETUS"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_ARNEM",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "ARNEM"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["ARNEM"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_EDUPO",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "EDUPO"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["EDUPO"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_RENDI",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "RENDI"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["RENDI"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_WOODY",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "WOODY"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["WOODY"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_KUDAD",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "KUDAD"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["KUDAD"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_LOPIK",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "LOPIK"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["LOPIK"],
       "level": "F090"
     },
     {
       "name": "EHAM_DEP_OGINA",
       "from": "EHAM_APP",
       "to": "EHAA_CTR",
-      "departs": [
-        "EHAM"
-      ],
-      "fix": [
-        "OGINA"
-      ],
+      "departs": ["EHAM"],
+      "fix": ["OGINA"],
       "level": "F090"
     }
   ]

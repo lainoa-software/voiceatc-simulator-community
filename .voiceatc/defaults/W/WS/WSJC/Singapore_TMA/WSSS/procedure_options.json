@@ -1,17 +1,33 @@
 {
   "airport": "WSSS",
-  "schema_version": 1,
   "airac_min": 2503,
-  "defaults": { "spawn_enabled": true, "init_climb": 3000 },
-  "sids": {
-    "VOVO1B": { "spawn_enabled": false },
-    "VOVO1F": { "spawn_enabled": false }
-  },
   "stars": {
-    "TEBU1A": { "join_from": ["ARAMA"] },
-    "TEBU1B": { "join_from": ["ARAMA"] },
-    "LELI3B": { "spawn_enabled": false },
-    "LEBA2A": { "spawn_enabled": false },
-    "LEBA3B": { "spawn_enabled": false }
+    "TEBU1A": {
+      "join_from": ["ARAMA"]
+    },
+    "TEBU1B": {
+      "join_from": ["ARAMA"]
+    },
+    "LELI3B": {
+      "spawn_enabled": false
+    },
+    "LEBA2A": {
+      "spawn_enabled": false
+    },
+    "LEBA3B": {
+      "spawn_enabled": false
+    }
+  },
+  "sids": {
+    "VOVO1B": {
+      "spawn_enabled": false
+    },
+    "VOVO1F": {
+      "spawn_enabled": false
+    }
+  },
+  "defaults": {
+    "init_climb": 3000,
+    "spawn_enabled": true
   }
 }

@@ -8,33 +8,23 @@
       "spawn": true
     },
     {
-      "sids": [
-        "NATO5Q"
-      ],
+      "sids": ["NATO5Q"],
       "spawn": false
     },
     {
-      "sids": [
-        "NATO5R"
-      ],
+      "sids": ["NATO5R"],
       "spawn": false
     },
     {
-      "sids": [
-        "STR3Q"
-      ],
+      "sids": ["STR3Q"],
       "spawn": false
     },
     {
-      "sids": [
-        "STR3R"
-      ],
+      "sids": ["STR3R"],
       "spawn": false
     },
     {
-      "sids": [
-        "SUL6R"
-      ],
+      "sids": ["SUL6R"],
       "spawn": false
     }
   ]

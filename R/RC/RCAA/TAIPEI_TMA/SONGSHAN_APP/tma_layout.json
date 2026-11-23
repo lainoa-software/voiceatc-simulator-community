@@ -4,13 +4,9 @@
     "RCSS_APP": {
       "SONGSHAN": {
         "positions": {
-          "RCSS_APP": [
-            "RCSS_APP"
-          ]
+          "RCSS_APP": ["RCSS_APP"]
         },
-        "airports": [
-          "RCSS"
-        ]
+        "airports": ["RCSS"]
       }
     }
   }

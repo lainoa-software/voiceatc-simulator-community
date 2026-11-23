@@ -4,15 +4,9 @@
     "ESOW_APP": {
       "1": {
         "positions": {
-          "ESOW_APP": [
-            "E_S_W"
-          ]
+          "ESOW_APP": ["E_S_W"]
         },
-        "airports": [
-          "ESOW",
-          "ESSA",
-          "ESSB"
-        ],
+        "airports": ["ESOW", "ESSA", "ESSB"],
         "valid_for_runways": {
           "ESOW": [
             "1",
@@ -84,18 +78,10 @@
       },
       "2": {
         "positions": {
-          "ESOW_E_APP": [
-            "E"
-          ],
-          "ESOW_S_APP": [
-            "S_W"
-          ]
+          "ESOW_E_APP": ["E"],
+          "ESOW_S_APP": ["S_W"]
         },
-        "airports": [
-          "ESOW",
-          "ESSA",
-          "ESSB"
-        ],
+        "airports": ["ESOW", "ESSA", "ESSB"],
         "valid_for_runways": {
           "ESOW": [
             "1",

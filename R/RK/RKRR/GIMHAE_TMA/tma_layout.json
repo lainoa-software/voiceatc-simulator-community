@@ -4,13 +4,9 @@
     "RKPK_APP": {
       "GIMHAE": {
         "positions": {
-          "RKPK_APP": [
-            "RKPK_APP"
-          ]
+          "RKPK_APP": ["RKPK_APP"]
         },
-        "airports": [
-          "RKPK"
-        ]
+        "airports": ["RKPK"]
       }
     }
   }

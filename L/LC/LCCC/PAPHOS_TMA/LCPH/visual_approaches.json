@@ -27,10 +27,7 @@
               "id": "ESERI",
               "name": "ESERI",
               "type": "track_to_fix",
-              "point": [
-                34.4819888889,
-                32.3854611111
-              ],
+              "point": [34.4819888889, 32.3854611111],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 4000
@@ -40,10 +37,7 @@
               "id": "PH968",
               "name": "PH968",
               "type": "track_to_fix",
-              "point": [
-                34.5698527778,
-                32.5267027778
-              ],
+              "point": [34.5698527778, 32.5267027778],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -53,10 +47,7 @@
               "id": "PH963",
               "name": "PH963",
               "type": "track_to_fix",
-              "point": [
-                34.6031777778,
-                32.5806805556
-              ],
+              "point": [34.6031777778, 32.5806805556],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -69,15 +60,9 @@
               "id": "PH962",
               "name": "PH962",
               "type": "constant_radius_arc",
-              "point": [
-                34.6604138889,
-                32.594125
-              ],
+              "point": [34.6604138889, 32.594125],
               "fly_over": false,
-              "arc_center": [
-                34.6379194444,
-                32.5492055556
-              ],
+              "arc_center": [34.6379194444, 32.5492055556],
               "arc_radius_nm": 2.6,
               "turn_direction": "L",
               "altitude": {
@@ -91,10 +76,7 @@
               "id": "PH960",
               "name": "PH960",
               "type": "track_to_fix",
-              "point": [
-                34.6918583333,
-                32.5711527778
-              ],
+              "point": [34.6918583333, 32.5711527778],
               "fly_over": false,
               "altitude": {
                 "at_ft": 1300

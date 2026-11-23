@@ -4,18 +4,11 @@
     "LEBB_APP": {
       "1": {
         "positions": {
-          "LEBB_TMA_APP": [
-            "LEBBTMA"
-          ]
+          "LEBB_TMA_APP": ["LEBBTMA"]
         },
-        "airports": [
-          "LEBB"
-        ],
+        "airports": ["LEBB"],
         "valid_for_runways": {
-          "LEBB": [
-            "WEST",
-            "EAST"
-          ]
+          "LEBB": ["WEST", "EAST"]
         }
       }
     }

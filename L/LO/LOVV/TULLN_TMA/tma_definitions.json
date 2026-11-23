@@ -4,9 +4,7 @@
     {
       "id": "LOXT_APP",
       "call_sign": "Tulln approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

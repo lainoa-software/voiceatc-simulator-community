@@ -4,75 +4,45 @@
     "LECM_R1_CTR": {
       "1A": {
         "positions": {
-          "LECM_R1_CTR": [
-            "LECMR1I"
-          ]
+          "LECM_R1_CTR": ["LECMR1I"]
         }
       },
       "N2": {
         "positions": {
-          "LECM_BLL_CTR": [
-            "LECMBLL"
-          ],
-          "LECM_R1_CTR": [
-            "LECMASI",
-            "LECMDGI",
-            "LECMPAI",
-            "LECMSAN"
-          ]
+          "LECM_BLL_CTR": ["LECMBLL"],
+          "LECM_R1_CTR": ["LECMASI", "LECMDGI", "LECMPAI", "LECMSAN"]
         }
       },
       "N3": {
         "positions": {
-          "LECM_BLL_CTR": [
-            "LECMBLL"
-          ],
-          "LECM_R1_CTR": [
-            "LECMDGI",
-            "LECMPAI"
-          ],
-          "LECM_SAS_CTR": [
-            "LECMSAS"
-          ]
+          "LECM_BLL_CTR": ["LECMBLL"],
+          "LECM_R1_CTR": ["LECMDGI", "LECMPAI"],
+          "LECM_SAS_CTR": ["LECMSAS"]
         }
       },
       "2B": {
         "positions": {
-          "LECM_BDP_CTR": [
-            "LECMBDP"
-          ],
-          "LECM_SAI_CTR": [
-            "LECMSAI"
-          ]
+          "LECM_BDP_CTR": ["LECMBDP"],
+          "LECM_SAI_CTR": ["LECMSAI"]
         }
       },
       "N4": {
         "positions": {
-          "LECM_BDP_CTR": [
-            "LECMBDP"
-          ],
-          "LECM_SAI_CTR": [
-            "LECMSAI"
-          ]
+          "LECM_BDP_CTR": ["LECMBDP"],
+          "LECM_SAI_CTR": ["LECMSAI"]
         }
       }
     },
     "LECM_R2_CTR": {
       "1A": {
         "positions": {
-          "LECM_R2_CTR": [
-            "LECMR2I"
-          ]
+          "LECM_R2_CTR": ["LECMR2I"]
         }
       },
       "2A": {
         "positions": {
-          "LECM_CZI_CTR": [
-            "LECMCZI"
-          ],
-          "LECM_ZTI_CTR": [
-            "LECMZTI"
-          ]
+          "LECM_CZI_CTR": ["LECMCZI"],
+          "LECM_ZTI_CTR": ["LECMZTI"]
         }
       }
     }

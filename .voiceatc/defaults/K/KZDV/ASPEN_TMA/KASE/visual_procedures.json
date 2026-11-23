@@ -23,6 +23,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "DBL",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "DBL",
@@ -45,10 +48,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "CARBONDALE_BASALT_ENTRY",
@@ -56,6 +56,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "CARBONDALE_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "CARBONDALE_TRACE",
@@ -91,10 +94,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "MT_SOPRIS_ENTRY",
@@ -102,6 +102,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "MT_SOPRIS_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "MT_SOPRIS_TRACE",
@@ -124,10 +127,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "CAPITAL_PEAK_ENTRY",
@@ -135,6 +135,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "CAPITAL_PEAK_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "CAPITAL_PEAK_TRACE",
@@ -157,10 +160,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "CASTLE_PEAK_ENTRY",
@@ -168,6 +168,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "CASTLE_PEAK_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "CASTLE_PEAK_TRACE",
@@ -190,10 +193,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "INDEPENDENCE_PASS_ENTRY",
@@ -201,6 +201,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "INDEPENDENCE_PASS_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "INDEPENDENCE_PASS_TRACE",
@@ -223,10 +226,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         },
         {
           "id": "HOLY_CROSS_RUEDI_ENTRY",
@@ -234,6 +234,9 @@
           "clearance_name": "Roaring Fork Visual",
           "entry_point_id": "HOLY_CROSS_TRACE",
           "sight_reference_point_id": "ASPEN_TRACE",
+          "final": {
+            "glidepath_deg": 3.5
+          },
           "legs": [
             {
               "id": "HOLY_CROSS_TRACE",
@@ -264,10 +267,7 @@
               "longitude": -106.86,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.5
-          }
+          ]
         }
       ]
     }

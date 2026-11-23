@@ -4,9 +4,7 @@
     {
       "id": "RPLI_APP",
       "call_sign": "Laoag approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

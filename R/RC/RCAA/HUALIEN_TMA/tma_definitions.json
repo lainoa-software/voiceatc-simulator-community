@@ -4,9 +4,7 @@
     {
       "id": "RCYU_APP",
       "call_sign": "Hualien approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,23 +4,17 @@
     {
       "id": "LEAL_APP",
       "call_sign": "Alicante Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEVC_APP",
       "call_sign": "Valencia Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEVC_TWR",
       "call_sign": "Valencia Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEVC"
     }
   ],

@@ -4,9 +4,7 @@
     {
       "id": "CYYZ_APP",
       "call_sign": "Toronto approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

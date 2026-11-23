@@ -4,13 +4,9 @@
     "CYUL_APP": {
       "MONTREAL_APP": {
         "positions": {
-          "CYUL_APP": [
-            "CYUL_APP"
-          ]
+          "CYUL_APP": ["CYUL_APP"]
         },
-        "airports": [
-          "CYUL"
-        ]
+        "airports": ["CYUL"]
       }
     }
   }

@@ -8,21 +8,15 @@
       "spawn": true
     },
     {
-      "sids": [
-        "GEST2Z"
-      ],
+      "sids": ["GEST2Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "NIE7Z"
-      ],
+      "sids": ["NIE7Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "WIMC2Z"
-      ],
+      "sids": ["WIMC2Z"],
       "spawn": false
     }
   ]

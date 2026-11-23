@@ -4,9 +4,7 @@
     {
       "id": "RPVM_APP",
       "call_sign": "Lapu Lapu approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

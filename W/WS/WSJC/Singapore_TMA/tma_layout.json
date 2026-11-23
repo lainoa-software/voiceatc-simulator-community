@@ -4,13 +4,9 @@
     "WSSS_APP": {
       "SINGAPORE_APP": {
         "positions": {
-          "WSSS_APP": [
-            "WSSS_APP"
-          ]
+          "WSSS_APP": ["WSSS_APP"]
         },
-        "airports": [
-          "WSSS"
-        ]
+        "airports": ["WSSS"]
       }
     }
   }

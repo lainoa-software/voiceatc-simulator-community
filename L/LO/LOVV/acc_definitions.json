@@ -4,9 +4,7 @@
     {
       "id": "LOVV_CTR",
       "call_sign": "Wien Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "132.600",
         "118.560",

@@ -33,9 +33,7 @@
               {
                 "id": "DELAWARE_RIVER",
                 "name": "the Delaware River",
-                "aliases": [
-                  "Delaware River"
-                ],
+                "aliases": ["Delaware River"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "RIVER VISUAL RWY 09L/R",
@@ -55,10 +53,7 @@
               "id": "DQO_R061_5_TRACE",
               "name": "DQO R-061 / 5.0 DME (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                39.72,
-                -75.534
-              ],
+              "point": [39.72, -75.534],
               "fly_over": true,
               "course_deg": 61,
               "reference": "DQO R-061 / 5.0 DME",
@@ -70,10 +65,7 @@
               "id": "DQO_R061_9_TRACE",
               "name": "DQO R-061 / 9.0 DME (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.753,
-                -75.477
-              ],
+              "point": [39.753, -75.477],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -83,10 +75,7 @@
               "id": "DQO_R061_14_TRACE",
               "name": "DQO R-061 / 14.0 DME (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.795,
-                -75.404
-              ],
+              "point": [39.795, -75.404],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1500
@@ -96,10 +85,7 @@
               "id": "DELAWARE_RIVER_TRACE",
               "name": "Delaware River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.82,
-                -75.29
-              ],
+              "point": [39.82, -75.29],
               "fly_over": false
             }
           ],
@@ -120,9 +106,7 @@
               {
                 "id": "DELAWARE_RIVER",
                 "name": "the Delaware River",
-                "aliases": [
-                  "Delaware River"
-                ],
+                "aliases": ["Delaware River"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "RIVER VISUAL RWY 09L/R",
@@ -142,10 +126,7 @@
               "id": "DQO_R061_5_TRACE",
               "name": "DQO R-061 / 5.0 DME (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                39.72,
-                -75.534
-              ],
+              "point": [39.72, -75.534],
               "fly_over": true,
               "course_deg": 61,
               "reference": "DQO R-061 / 5.0 DME",
@@ -157,10 +138,7 @@
               "id": "DQO_R061_9_TRACE",
               "name": "DQO R-061 / 9.0 DME (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.753,
-                -75.477
-              ],
+              "point": [39.753, -75.477],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -170,10 +148,7 @@
               "id": "DQO_R061_14_TRACE",
               "name": "DQO R-061 / 14.0 DME (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.795,
-                -75.404
-              ],
+              "point": [39.795, -75.404],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1500
@@ -183,10 +158,7 @@
               "id": "DELAWARE_RIVER_TRACE",
               "name": "Delaware River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.82,
-                -75.29
-              ],
+              "point": [39.82, -75.29],
               "fly_over": false
             }
           ],

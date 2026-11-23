@@ -4,9 +4,7 @@
     {
       "id": "RPVR_APP",
       "call_sign": "Roxas approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

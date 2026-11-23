@@ -5,10 +5,7 @@
     {
       "id": "QUIET_BRIDGE_VISUAL_28R",
       "name": "Quiet Bridge Visual RWY 28R",
-      "aliases": [
-        "quiet bridge visual",
-        "quiet bridge"
-      ],
+      "aliases": ["quiet bridge visual", "quiet bridge"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -31,10 +28,7 @@
               "id": "EDDYY",
               "name": "EDDYY",
               "type": "track_to_fix",
-              "point": [
-                37.3749027778,
-                -122.11875
-              ],
+              "point": [37.3749027778, -122.11875],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -44,10 +38,7 @@
               "id": "SIDBY",
               "name": "SIDBY",
               "type": "track_to_fix",
-              "point": [
-                37.4507111111,
-                -122.1447472222
-              ],
+              "point": [37.4507111111, -122.1447472222],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 5000
@@ -57,10 +48,7 @@
               "id": "JANYY",
               "name": "JANYY / San Mateo Bridge",
               "type": "track_to_fix",
-              "point": [
-                37.5568166667,
-                -122.1795555556
-              ],
+              "point": [37.5568166667, -122.1795555556],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -70,10 +58,7 @@
               "id": "RAACL_TRACE",
               "name": "RAACL (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.599,
-                -122.275
-              ],
+              "point": [37.599, -122.275],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1800
@@ -83,20 +68,14 @@
               "id": "SHLTN_TRACE",
               "name": "SHLTN (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.606,
-                -122.325
-              ],
+              "point": [37.606, -122.325],
               "fly_over": true
             },
             {
               "id": "SAPPP_TRACE",
               "name": "SAPPP (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.61,
-                -122.35
-              ],
+              "point": [37.61, -122.35],
               "fly_over": false
             }
           ],
@@ -115,10 +94,7 @@
               "id": "ARCHI",
               "name": "ARCHI",
               "type": "track_to_fix",
-              "point": [
-                37.4907972222,
-                -121.8755416667
-              ],
+              "point": [37.4907972222, -121.8755416667],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 7000
@@ -128,10 +104,7 @@
               "id": "TRBOW_TRACE",
               "name": "TRBOW (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.53,
-                -121.97
-              ],
+              "point": [37.53, -121.97],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -141,10 +114,7 @@
               "id": "GAROW",
               "name": "GAROW / Salt Ponds",
               "type": "track_to_fix",
-              "point": [
-                37.5253611111,
-                -122.0825083333
-              ],
+              "point": [37.5253611111, -122.0825083333],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 4000
@@ -154,10 +124,7 @@
               "id": "JANYY",
               "name": "JANYY / San Mateo Bridge",
               "type": "track_to_fix",
-              "point": [
-                37.5568166667,
-                -122.1795555556
-              ],
+              "point": [37.5568166667, -122.1795555556],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -167,10 +134,7 @@
               "id": "RAACL_TRACE",
               "name": "RAACL (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.599,
-                -122.275
-              ],
+              "point": [37.599, -122.275],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1800
@@ -180,20 +144,14 @@
               "id": "SHLTN_TRACE",
               "name": "SHLTN (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.606,
-                -122.325
-              ],
+              "point": [37.606, -122.325],
               "fly_over": true
             },
             {
               "id": "SAPPP_TRACE",
               "name": "SAPPP (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                37.61,
-                -122.35
-              ],
+              "point": [37.61, -122.35],
               "fly_over": false
             }
           ],
@@ -206,10 +164,7 @@
     {
       "id": "TIPP_TOE_VISUAL_28LR",
       "name": "Tipp Toe Visual RWY 28L/R",
-      "aliases": [
-        "tipp toe visual",
-        "tipp toe"
-      ],
+      "aliases": ["tipp toe visual", "tipp toe"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -232,10 +187,7 @@
               "id": "EDDYY",
               "name": "EDDYY",
               "type": "track_to_fix",
-              "point": [
-                37.3749027778,
-                -122.11875
-              ],
+              "point": [37.3749027778, -122.11875],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -245,10 +197,7 @@
               "id": "SIDBY",
               "name": "SIDBY",
               "type": "track_to_fix",
-              "point": [
-                37.4507111111,
-                -122.1447472222
-              ],
+              "point": [37.4507111111, -122.1447472222],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 5000
@@ -258,10 +207,7 @@
               "id": "CHERA",
               "name": "CHERA",
               "type": "course_to_fix",
-              "point": [
-                37.4810805556,
-                -122.1582833333
-              ],
+              "point": [37.4810805556, -122.1582833333],
               "fly_over": true,
               "course_deg": 310,
               "reference": "I-SFO localizer"
@@ -304,10 +250,7 @@
               "id": "EDDYY",
               "name": "EDDYY",
               "type": "track_to_fix",
-              "point": [
-                37.3749027778,
-                -122.11875
-              ],
+              "point": [37.3749027778, -122.11875],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -317,10 +260,7 @@
               "id": "SIDBY",
               "name": "SIDBY",
               "type": "track_to_fix",
-              "point": [
-                37.4507111111,
-                -122.1447472222
-              ],
+              "point": [37.4507111111, -122.1447472222],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 5000
@@ -330,10 +270,7 @@
               "id": "CHERA",
               "name": "CHERA",
               "type": "course_to_fix",
-              "point": [
-                37.4810805556,
-                -122.1582833333
-              ],
+              "point": [37.4810805556, -122.1582833333],
               "fly_over": true,
               "course_deg": 310,
               "reference": "I-GWQ localizer"

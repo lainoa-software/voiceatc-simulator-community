@@ -4,9 +4,7 @@
     {
       "id": "EDDW_APP",
       "call_sign": "Bremen approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

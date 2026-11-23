@@ -4,13 +4,9 @@
     "RPMZ_APP": {
       "ZAMBOANGA": {
         "positions": {
-          "RPMZ_APP": [
-            "RPMZ_APP"
-          ]
+          "RPMZ_APP": ["RPMZ_APP"]
         },
-        "airports": [
-          "RPMZ"
-        ]
+        "airports": ["RPMZ"]
       }
     }
   }

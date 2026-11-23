@@ -4,13 +4,9 @@
     "RPVM_APP": {
       "MACTAN": {
         "positions": {
-          "RPVM_APP": [
-            "RPVM_APP"
-          ]
+          "RPVM_APP": ["RPVM_APP"]
         },
-        "airports": [
-          "RPVM"
-        ]
+        "airports": ["RPVM"]
       }
     }
   }

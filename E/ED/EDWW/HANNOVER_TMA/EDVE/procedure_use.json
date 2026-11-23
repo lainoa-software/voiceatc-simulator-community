@@ -8,15 +8,11 @@
       "spawn": true
     },
     {
-      "sids": [
-        "HLZ1C"
-      ],
+      "sids": ["HLZ1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "HLZ1K"
-      ],
+      "sids": ["HLZ1K"],
       "spawn": false
     }
   ]

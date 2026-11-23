@@ -4,9 +4,7 @@
     {
       "id": "OERK_APP",
       "call_sign": "Riyadh approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

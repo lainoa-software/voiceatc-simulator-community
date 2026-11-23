@@ -4,9 +4,7 @@
     {
       "id": "UUEE_APP",
       "call_sign": "Moscow approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,47 +4,29 @@
     "LOWW_APP": {
       "DAY_WEST": {
         "positions": {
-          "LOWW_APP": [
-            "VIENNA_TMA_DAY_WEST"
-          ]
+          "LOWW_APP": ["VIENNA_TMA_DAY_WEST"]
         },
-        "airports": [
-          "LOWW"
-        ],
+        "airports": ["LOWW"],
         "valid_for_runways": {
-          "LOWW": [
-            "DAY_WEST"
-          ]
+          "LOWW": ["DAY_WEST"]
         }
       },
       "DAY_SE": {
         "positions": {
-          "LOWW_APP": [
-            "VIENNA_TMA_DAY_SE"
-          ]
+          "LOWW_APP": ["VIENNA_TMA_DAY_SE"]
         },
-        "airports": [
-          "LOWW"
-        ],
+        "airports": ["LOWW"],
         "valid_for_runways": {
-          "LOWW": [
-            "DAY_SE"
-          ]
+          "LOWW": ["DAY_SE"]
         }
       },
       "NIGHT": {
         "positions": {
-          "LOWW_APP": [
-            "VIENNA_TMA_NIGHT"
-          ]
+          "LOWW_APP": ["VIENNA_TMA_NIGHT"]
         },
-        "airports": [
-          "LOWW"
-        ],
+        "airports": ["LOWW"],
         "valid_for_runways": {
-          "LOWW": [
-            "NIGHT"
-          ]
+          "LOWW": ["NIGHT"]
         }
       }
     }

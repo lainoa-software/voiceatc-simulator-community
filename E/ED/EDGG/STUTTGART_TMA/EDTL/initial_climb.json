@@ -5,9 +5,7 @@
   "initial_climb_ft": 7000,
   "exceptions": [
     {
-      "sids": [
-        "NATO1W"
-      ],
+      "sids": ["NATO1W"],
       "initial_climb_ft": 8000
     }
   ]

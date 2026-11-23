@@ -4,19 +4,11 @@
     "LIRF_APP": {
       "1": {
         "positions": {
-          "LIRF_APP": [
-            "LIRFAPP"
-          ]
+          "LIRF_APP": ["LIRFAPP"]
         },
-        "airports": [
-          "LIRF",
-          "LIRA"
-        ],
+        "airports": ["LIRF", "LIRA"],
         "valid_for_runways": {
-          "LIRF": [
-            "SOUTH",
-            "NORTH"
-          ]
+          "LIRF": ["SOUTH", "NORTH"]
         }
       }
     }

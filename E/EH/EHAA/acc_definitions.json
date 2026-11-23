@@ -4,9 +4,7 @@
     {
       "id": "EHAA_CTR",
       "call_sign": "Amsterdam Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "125.750",
         "118.805",

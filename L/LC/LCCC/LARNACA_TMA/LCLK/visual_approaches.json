@@ -27,10 +27,7 @@
               "id": "ADLAS",
               "name": "ADLAS",
               "type": "track_to_fix",
-              "point": [
-                34.9620472222,
-                33.3199194444
-              ],
+              "point": [34.9620472222, 33.3199194444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 6000
@@ -40,10 +37,7 @@
               "id": "KUKUS",
               "name": "KUKUS",
               "type": "track_to_fix",
-              "point": [
-                34.9629166667,
-                33.4462138889
-              ],
+              "point": [34.9629166667, 33.4462138889],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 5000
@@ -56,10 +50,7 @@
               "id": "LK511",
               "name": "LK511",
               "type": "track_to_fix",
-              "point": [
-                34.9706861111,
-                33.5973194444
-              ],
+              "point": [34.9706861111, 33.5973194444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 3100
@@ -72,10 +63,7 @@
               "id": "LK509",
               "name": "LK509",
               "type": "track_to_fix",
-              "point": [
-                34.9776444444,
-                33.6706944444
-              ],
+              "point": [34.9776444444, 33.6706944444],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2200
@@ -85,10 +73,7 @@
               "id": "LK505",
               "name": "LK505",
               "type": "track_to_fix",
-              "point": [
-                34.9442055556,
-                33.7101222222
-              ],
+              "point": [34.9442055556, 33.7101222222],
               "fly_over": false,
               "altitude": {
                 "at_ft": 1600

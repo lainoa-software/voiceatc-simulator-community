@@ -8,201 +8,135 @@
       "spawn": true
     },
     {
-      "stars": [
-        "AYTE1C"
-      ],
+      "stars": ["AYTE1C"],
       "spawn": false
     },
     {
-      "stars": [
-        "AYTE1M"
-      ],
+      "stars": ["AYTE1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "AYTE1N"
-      ],
+      "stars": ["AYTE1N"],
       "spawn": false
     },
     {
-      "stars": [
-        "AYTE1Q"
-      ],
+      "stars": ["AYTE1Q"],
       "spawn": false
     },
     {
-      "stars": [
-        "AYTE1R"
-      ],
+      "stars": ["AYTE1R"],
       "spawn": false
     },
     {
-      "stars": [
-        "DRAM1C"
-      ],
+      "stars": ["DRAM1C"],
       "spawn": false
     },
     {
-      "stars": [
-        "DRAM1P"
-      ],
+      "stars": ["DRAM1P"],
       "spawn": false
     },
     {
-      "stars": [
-        "ERSE1C"
-      ],
+      "stars": ["ERSE1C"],
       "spawn": false
     },
     {
-      "stars": [
-        "ERSE1M"
-      ],
+      "stars": ["ERSE1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "ERSE1P"
-      ],
+      "stars": ["ERSE1P"],
       "spawn": false
     },
     {
-      "stars": [
-        "ERSE1Q"
-      ],
+      "stars": ["ERSE1Q"],
       "spawn": false
     },
     {
-      "stars": [
-        "ERSE1R"
-      ],
+      "stars": ["ERSE1R"],
       "spawn": false
     },
     {
-      "stars": [
-        "INBE1C"
-      ],
+      "stars": ["INBE1C"],
       "spawn": false
     },
     {
-      "stars": [
-        "INBE1P"
-      ],
+      "stars": ["INBE1P"],
       "spawn": false
     },
     {
-      "stars": [
-        "KANQ1M"
-      ],
+      "stars": ["KANQ1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "KANQ1N"
-      ],
+      "stars": ["KANQ1N"],
       "spawn": false
     },
     {
-      "stars": [
-        "NUGB1M"
-      ],
+      "stars": ["NUGB1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "NUGB1N"
-      ],
+      "stars": ["NUGB1N"],
       "spawn": false
     },
     {
-      "stars": [
-        "RILE1M"
-      ],
+      "stars": ["RILE1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "RILE1N"
-      ],
+      "stars": ["RILE1N"],
       "spawn": false
     },
     {
-      "stars": [
-        "RIXE1M"
-      ],
+      "stars": ["RIXE1M"],
       "spawn": false
     },
     {
-      "stars": [
-        "RIXE1N"
-      ],
+      "stars": ["RIXE1N"],
       "spawn": false
     },
     {
-      "stars": [
-        "RIXE1P"
-      ],
+      "stars": ["RIXE1P"],
       "spawn": false
     },
     {
-      "stars": [
-        "RIXE1W"
-      ],
+      "stars": ["RIXE1W"],
       "spawn": false
     },
     {
-      "stars": [
-        "SISP1C"
-      ],
+      "stars": ["SISP1C"],
       "spawn": false
     },
     {
-      "stars": [
-        "SISP1P"
-      ],
+      "stars": ["SISP1P"],
       "spawn": false
     },
     {
-      "sids": [
-        "ASFO1G"
-      ],
+      "sids": ["ASFO1G"],
       "spawn": false
     },
     {
-      "sids": [
-        "ELCA1K"
-      ],
+      "sids": ["ELCA1K"],
       "spawn": false
     },
     {
-      "sids": [
-        "GAPD1G"
-      ],
+      "sids": ["GAPD1G"],
       "spawn": false
     },
     {
-      "sids": [
-        "IST1N"
-      ],
+      "sids": ["IST1N"],
       "spawn": false
     },
     {
-      "sids": [
-        "IST1P"
-      ],
+      "sids": ["IST1P"],
       "spawn": false
     },
     {
-      "sids": [
-        "IST1S"
-      ],
+      "sids": ["IST1S"],
       "spawn": false
     },
     {
-      "sids": [
-        "LESG1G"
-      ],
+      "sids": ["LESG1G"],
       "spawn": false
     }
   ]

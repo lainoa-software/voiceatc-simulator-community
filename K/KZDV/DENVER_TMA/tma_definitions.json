@@ -4,29 +4,15 @@
     {
       "id": "KDEN_APP",
       "call_sign": "Denver Approach",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "119.300",
-        "120.350",
-        "120.800",
-        "124.950"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["119.300", "120.350", "120.800", "124.950"]
     },
     {
       "id": "KDEN_TWR",
       "call_sign": "Denver Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KDEN",
-      "unassigned_frequencies": [
-        "124.300",
-        "128.750",
-        "132.350",
-        "135.300"
-      ]
+      "unassigned_frequencies": ["124.300", "128.750", "132.350", "135.300"]
     }
   ],
   "positions": [

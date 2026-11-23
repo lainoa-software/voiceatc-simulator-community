@@ -4,9 +4,7 @@
     {
       "id": "RKSO_APP",
       "call_sign": "Osan approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

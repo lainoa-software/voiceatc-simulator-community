@@ -4,9 +4,7 @@
     {
       "id": "RCQC_APP",
       "call_sign": "Magong approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

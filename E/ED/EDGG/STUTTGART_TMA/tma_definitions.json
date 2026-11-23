@@ -4,12 +4,8 @@
     {
       "id": "EDDS_APP",
       "call_sign": "Stuttgart approach",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "119.200"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["119.200"]
     }
   ],
   "positions": [

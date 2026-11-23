@@ -4,13 +4,9 @@
     "RCFG_APP": {
       "BEIGAN": {
         "positions": {
-          "RCFG_APP": [
-            "RCFG_APP"
-          ]
+          "RCFG_APP": ["RCFG_APP"]
         },
-        "airports": [
-          "RCFG"
-        ]
+        "airports": ["RCFG"]
       }
     }
   }

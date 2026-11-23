@@ -4,66 +4,38 @@
     "KSEA_APP": {
       "1SOUTH_DAY": {
         "positions": {
-          "KSEA_APP": [
-            "KSEAAPP"
-          ]
+          "KSEA_APP": ["KSEAAPP"]
         },
-        "airports": [
-          "KSEA",
-          "KBFI"
-        ],
+        "airports": ["KSEA", "KBFI"],
         "valid_for_runways": {
-          "KSEA": [
-            "SOUTH_DAY"
-          ]
+          "KSEA": ["SOUTH_DAY"]
         }
       },
       "1SOUTH_NIGHT": {
         "positions": {
-          "KSEA_APP": [
-            "KSEAAPP"
-          ]
+          "KSEA_APP": ["KSEAAPP"]
         },
-        "airports": [
-          "KSEA",
-          "KBFI"
-        ],
+        "airports": ["KSEA", "KBFI"],
         "valid_for_runways": {
-          "KSEA": [
-            "SOUTH_NIGHT"
-          ]
+          "KSEA": ["SOUTH_NIGHT"]
         }
       },
       "1NORTH_DAY": {
         "positions": {
-          "KSEA_APP": [
-            "KSEAAPP"
-          ]
+          "KSEA_APP": ["KSEAAPP"]
         },
-        "airports": [
-          "KSEA",
-          "KBFI"
-        ],
+        "airports": ["KSEA", "KBFI"],
         "valid_for_runways": {
-          "KSEA": [
-            "NORTH_DAY"
-          ]
+          "KSEA": ["NORTH_DAY"]
         }
       },
       "1NORTH_NIGHT": {
         "positions": {
-          "KSEA_APP": [
-            "KSEAAPP"
-          ]
+          "KSEA_APP": ["KSEAAPP"]
         },
-        "airports": [
-          "KSEA",
-          "KBFI"
-        ],
+        "airports": ["KSEA", "KBFI"],
         "valid_for_runways": {
-          "KSEA": [
-            "NORTH_NIGHT"
-          ]
+          "KSEA": ["NORTH_NIGHT"]
         }
       }
     }

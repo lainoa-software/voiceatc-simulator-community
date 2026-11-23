@@ -2,25 +2,22 @@
   "airports": {
     "KSFO": {
       "repo_path": "K/KZOA/SFO_TMA/KSFO/visual_approaches.json",
-      "sha256": "04c20bd17acb14fea11f507b9d5897ca4b48e57ba0eeff9cf7d872f5f3620d39",
-      "size_bytes": 10211
+      "sha256": "da3ff6f672d7380659ead712626fd02d34e5814a439233c78657e3d5547ff759",
+      "size_bytes": 9251
     },
     "LLBG": {
       "repo_path": "L/LL/LLLL/TEL_AVIV_TMA/LLBG/visual_approaches.json",
-      "sha256": "4cfc14e5cbb5c2d7a40d860bcafd6c2b808657935dc913eb6b7893ec8bb938d3",
-      "size_bytes": 18977
+      "sha256": "91f0b8a7b9cfcccea8ce3bc9ab5236cc837e44f290cf33da0158c167199a39c0",
+      "size_bytes": 17429
     },
     "LLER": {
       "repo_path": "L/LL/LLLL/EILAT_TMA/LLER/visual_approaches.json",
-      "sha256": "287ff5aa91c580e1bdf3f6b8815f1ec76862709b2de8bdba747910429eb5272f",
-      "size_bytes": 9858
+      "sha256": "f72f75d41e406547cafb913651b9870e4e50de060dce2472228f95b15e17e5c0",
+      "size_bytes": 8946
     }
   },
   "published_at": "2026-08-27T10:41:54Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": [
-    "community.airac_overrides",
-    "community.airspace_files"
-  ],
+  "requires": ["community.airac_overrides", "community.airspace_files"],
   "schema_version": 1
 }

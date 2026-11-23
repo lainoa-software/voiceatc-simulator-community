@@ -4,9 +4,7 @@
     {
       "id": "KZSE_CTR",
       "call_sign": "Seattle Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "135.450",
         "118.550",

@@ -22,6 +22,10 @@
           "clearance_name": "ESERI RNAV-to-Visual RWY 29",
           "entry_point_id": "ESERI",
           "sight_reference_point_id": "PH962",
+          "final": {
+            "course_deg": 285,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "ESERI",
@@ -74,12 +78,12 @@
               "latitude": 34.6604138889,
               "longitude": 32.594125,
               "fly_over": false,
+              "arc_radius_nm": 2.6,
+              "turn_direction": "L",
               "arc_center": {
                 "latitude": 34.6379194444,
                 "longitude": 32.5492055556
               },
-              "arc_radius_nm": 2.6,
-              "turn_direction": "L",
               "altitude": {
                 "value_ft": 2000,
                 "status": "required",
@@ -104,11 +108,7 @@
                 "kind": "at"
               }
             }
-          ],
-          "final": {
-            "course_deg": 285,
-            "glidepath_deg": 3.0
-          }
+          ]
         }
       ]
     }

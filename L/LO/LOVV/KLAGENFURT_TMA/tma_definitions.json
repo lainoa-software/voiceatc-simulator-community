@@ -4,9 +4,7 @@
     {
       "id": "LOWK_APP",
       "call_sign": "Klagenfurt approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

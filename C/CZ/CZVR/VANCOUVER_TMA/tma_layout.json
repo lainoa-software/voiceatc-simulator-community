@@ -4,13 +4,9 @@
     "CYVR_APP": {
       "VANCOUVER_APP": {
         "positions": {
-          "CYVR_APP": [
-            "CYVR_APP"
-          ]
+          "CYVR_APP": ["CYVR_APP"]
         },
-        "airports": [
-          "CYVR"
-        ]
+        "airports": ["CYVR"]
       }
     }
   }

@@ -4,9 +4,7 @@
     {
       "id": "KZBW_CTR",
       "call_sign": "Boston Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "123.750",
         "118.425",

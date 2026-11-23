@@ -8,171 +8,115 @@
       "spawn": true
     },
     {
-      "sids": [
-        "AGEN4F"
-      ],
+      "sids": ["AGEN4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "AGEN7Q"
-      ],
+      "sids": ["AGEN7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "DALI4F"
-      ],
+      "sids": ["DALI4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "DALI6Q"
-      ],
+      "sids": ["DALI6Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "DIPE2F"
-      ],
+      "sids": ["DIPE2F"],
       "spawn": false
     },
     {
-      "sids": [
-        "DIPE3Q"
-      ],
+      "sids": ["DIPE3Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "DUNE4F"
-      ],
+      "sids": ["DUNE4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "DUNE7Q"
-      ],
+      "sids": ["DUNE7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "DUQQ3Q"
-      ],
+      "sids": ["DUQQ3Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "GRAU4F"
-      ],
+      "sids": ["GRAU4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "GRAU7Q"
-      ],
+      "sids": ["GRAU7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "LARP4F"
-      ],
+      "sids": ["LARP4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "LARP7Q"
-      ],
+      "sids": ["LARP7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "LOBA4F"
-      ],
+      "sids": ["LOBA4F"],
       "spawn": false
     },
     {
-      "sids": [
-        "LOBA8Q"
-      ],
+      "sids": ["LOBA8Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "LOTO5F"
-      ],
+      "sids": ["LOTO5F"],
       "spawn": false
     },
     {
-      "sids": [
-        "LOTO7Q"
-      ],
+      "sids": ["LOTO7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "MAMU3Q"
-      ],
+      "sids": ["MAMU3Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "MOPA3F"
-      ],
+      "sids": ["MOPA3F"],
       "spawn": false
     },
     {
-      "sids": [
-        "MOPA6Q"
-      ],
+      "sids": ["MOPA6Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "NATP2F"
-      ],
+      "sids": ["NATP2F"],
       "spawn": false
     },
     {
-      "sids": [
-        "NATP4Q"
-      ],
+      "sids": ["NATP4Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "OLOX2F"
-      ],
+      "sids": ["OLOX2F"],
       "spawn": false
     },
     {
-      "sids": [
-        "OLOX3Q"
-      ],
+      "sids": ["OLOX3Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "REBU3Q"
-      ],
+      "sids": ["REBU3Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "SENI5F"
-      ],
+      "sids": ["SENI5F"],
       "spawn": false
     },
     {
-      "sids": [
-        "SENI7Q"
-      ],
+      "sids": ["SENI7Q"],
       "spawn": true
     },
     {
-      "sids": [
-        "VIBO3Q"
-      ],
+      "sids": ["VIBO3Q"],
       "spawn": true
     }
   ]

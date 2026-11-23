@@ -4,13 +4,9 @@
     "RKJJ_APP": {
       "GWANGJU": {
         "positions": {
-          "RKJJ_APP": [
-            "RKJJ_APP"
-          ]
+          "RKJJ_APP": ["RKJJ_APP"]
         },
-        "airports": [
-          "RKJJ"
-        ]
+        "airports": ["RKJJ"]
       }
     }
   }

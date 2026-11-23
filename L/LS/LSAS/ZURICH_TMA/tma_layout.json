@@ -4,19 +4,11 @@
     "LSZH_APP": {
       "1": {
         "positions": {
-          "LSZH_APP": [
-            "LSZHAPP"
-          ]
+          "LSZH_APP": ["LSZHAPP"]
         },
-        "airports": [
-          "LSZH"
-        ],
+        "airports": ["LSZH"],
         "valid_for_runways": {
-          "LSZH": [
-            "DAY",
-            "MORNING",
-            "EVENING"
-          ]
+          "LSZH": ["DAY", "MORNING", "EVENING"]
         }
       }
     }

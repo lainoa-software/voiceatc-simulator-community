@@ -4,9 +4,7 @@
     {
       "id": "YMML_APP",
       "call_sign": "Melbourne approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

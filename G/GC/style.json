@@ -4,32 +4,17 @@
   "assumed_symbol": "diamond_crossed",
   "defined_symbols": {
     "diamond_crossed": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M 0 -7 L 7 0 L 0 7 L -7 0 L 0 -7 M 0 -7 L 0 7 M -7 0 L 7 0",
       "type": "wireframe"
     },
     "diamond_filled": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M 0 -7 L 7 0 L 0 7 L -7 0",
       "type": "filled"
     },
     "square_crossed": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M -7 0 L 7 0 M 0 -7 L 0 7 M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7",
       "type": "wireframe"
     }

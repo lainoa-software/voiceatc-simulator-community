@@ -2,63 +2,63 @@
   "airports": {
     "EDDB": {
       "repo_path": "E/ED/EDWW/BERLIN_TMA/EDDB/procedure_use.json",
-      "sha256": "374f5061fdb15843fbeb78e964a9f099e10125b40f769ced9b96883da2909b38",
-      "size_bytes": 889
+      "sha256": "c88e30103702c8edff4e7f8ceb1bc4d0c0afc2da9310f65222b8b62bbe5cba95",
+      "size_bytes": 729
     },
     "EDDF": {
       "repo_path": "E/ED/EDGG/FRANKFURT_MAIN_TMA/EDDF/procedure_use.json",
-      "sha256": "38db40701fbb4b6ebecf151c1eee612ac8f19b9fac973cae23e9d4f9152a381d",
-      "size_bytes": 13690
+      "sha256": "1499a67e3a7b85df559b7ff2c2dfa26b8f5d66a008089ce360d1ad46f3cc4331",
+      "size_bytes": 9778
     },
     "EDDG": {
       "repo_path": "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA/EDDG/procedure_use.json",
-      "sha256": "2f306aaefb64228acedca72cbbfe6909754231a0b41cf5236e57ce6ea491cfef",
-      "size_bytes": 433
+      "sha256": "fcf3a4c2e97ddddf5936535253c10c166d197457e3075b2ee2264e9998af6c90",
+      "size_bytes": 369
     },
     "EDDH": {
       "repo_path": "E/ED/EDWW/HAMBURG_TMA/EDDH/procedure_use.json",
-      "sha256": "1bbd8f1cf381733908c3547fe8ce322590ec42223ebc250c405ee438531ecba9",
-      "size_bytes": 587
+      "sha256": "1b38b9db0402a36bec32b4a27e2c96fec2ecb4190f27e7f935529962d7fb2944",
+      "size_bytes": 491
     },
     "EDDK": {
       "repo_path": "E/ED/EDGG/KOELN_TMA/EDDK/procedure_use.json",
-      "sha256": "cb2e4f1e644f987c93ba7a986a59b739419b03bc04b14bddd5ee52fae8c914d4",
-      "size_bytes": 957
+      "sha256": "c2cd84cc1db8400c4e1ba4620f63f7a8f3b07df7638ad42352fc0086374778e3",
+      "size_bytes": 781
     },
     "EDDL": {
       "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDDL/procedure_use.json",
-      "sha256": "a251244a889062e5b58615466b231f91f2833471fa99a2bca747abc9bb7201e2",
-      "size_bytes": 509
+      "sha256": "dc6ae3cc98befe72611a0ba534dba65a1ca0270c7d336546aa4a40fc6fe9c7b1",
+      "size_bytes": 429
     },
     "EDDN": {
       "repo_path": "E/ED/EDMM/EDDN_TMA/EDDN/procedure_use.json",
-      "sha256": "599e8ded9de5b3e1f7f184f61c077868743a5e9413d694061ea01d3258efe9df",
-      "size_bytes": 2685
+      "sha256": "114cc94e1913ab67f2b576815fffbc37f2c63abbdcbafed422f81fc6a0d7b2ba",
+      "size_bytes": 1981
     },
     "EDDR": {
       "repo_path": "E/ED/EDGG/HAHN_TMA/EDDR/procedure_use.json",
-      "sha256": "d6d65efbe2bb514abd33c450efd763c7815c22c8d232a9316d991a649cc1e8e0",
-      "size_bytes": 356
+      "sha256": "5e962d79d4822f112e083715932dafd35f51b26ca14baf870ab3011ca12cc83a",
+      "size_bytes": 308
     },
     "EDDS": {
       "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDDS/procedure_use.json",
-      "sha256": "f90cdf96fb66fb862b3b5311490cc7328fc6a1ec6a97a56ebafb46146c9f14c2",
-      "size_bytes": 3866
+      "sha256": "a1644e0a1bdcc3a04caf314aa5ac2e976d8a524a78cde3f85b144fdbdb5d39ee",
+      "size_bytes": 2874
     },
     "EDDV": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDDV/procedure_use.json",
-      "sha256": "bde8c6ce6cdadff6a0d9ef8d92360386c11ceefb729859fa7e714231c8a3109f",
-      "size_bytes": 433
+      "sha256": "a3d33189a1a8f176e3b4d3b9bd6c98741abbcadb4abfae60b20a672b72b6f04b",
+      "size_bytes": 369
     },
     "EDDW": {
       "repo_path": "E/ED/EDWW/BREMEN_TMA/EDDW/procedure_use.json",
-      "sha256": "ee919612e836e8d04f7801191f981369881520aec8c93f27d11ef4bdac5fead2",
-      "size_bytes": 356
+      "sha256": "02446a99ad01cc90008c07d696de2495b2ef575608fe54cd8848118c5c11929c",
+      "size_bytes": 308
     },
     "EDFH": {
       "repo_path": "E/ED/EDGG/HAHN_TMA/EDFH/procedure_use.json",
-      "sha256": "1364e8b7144e6454e64b6f9f272858d09e0501baa6000a271fc687b49258bb97",
-      "size_bytes": 659
+      "sha256": "a674cca80387288d1f36bf936226851a7931f3a28d95d7f3437ffde8e8109b38",
+      "size_bytes": 547
     },
     "EDLN": {
       "repo_path": "E/ED/EDGG/DUESSELDORF_TMA/EDLN/procedure_use.json",
@@ -82,18 +82,18 @@
     },
     "EDSB": {
       "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDSB/procedure_use.json",
-      "sha256": "88b6721d7e950c8ba11b972ecb7c92d256ccaff6b6628063eb372c0e597dec01",
-      "size_bytes": 432
+      "sha256": "35e96821b2f993b962905756c0c8c74ff856c739072a16efc36f9944c852b668",
+      "size_bytes": 368
     },
     "EDTL": {
       "repo_path": "E/ED/EDGG/STUTTGART_TMA/EDTL/procedure_use.json",
-      "sha256": "81a6ece31f0c3ac2cac94ee236e4769c115d4c75fac5d746f2e9a8176a395a94",
-      "size_bytes": 506
+      "sha256": "f7b858cb0f582456dd014a94695e2571411acf3a48b4c757adb3d99bb2276815",
+      "size_bytes": 426
     },
     "EDVE": {
       "repo_path": "E/ED/EDWW/HANNOVER_TMA/EDVE/procedure_use.json",
-      "sha256": "d6d54a9f10bbff0ba44d30a9900e49d1043d72bc3351601136dccf96441b856d",
-      "size_bytes": 279
+      "sha256": "dbc4d990543f01adae2a25cbcd98ef339e27f365a872dde52ff200445f31f170",
+      "size_bytes": 247
     },
     "EKAH": {
       "repo_path": "E/EK/EKDK/AARHUS_TMA/EKAH/initial_climb.json",
@@ -107,8 +107,8 @@
     },
     "EKCH": {
       "repo_path": "E/EK/EKDK/COPENHAGEN_TMA/EKCH/initial_climb.json",
-      "sha256": "b81cca30d57b4afbb104acf57f422e20a78f96e5ccee6c90b4dda8147abe64a1",
-      "size_bytes": 596
+      "sha256": "f16075247e283c4a1bf10382cd5143e66e14b0d949391d831a58c46ef80c3cf9",
+      "size_bytes": 500
     },
     "EKKA": {
       "repo_path": "E/EK/EKDK/KARUP_TMA/EKKA/initial_climb.json",
@@ -132,13 +132,13 @@
     },
     "ENGM": {
       "repo_path": "E/EN/ENOR/ENOS/OSLO_TMA/ENGM/procedure_use.json",
-      "sha256": "038948879642649eb74551d9002fe2e6272c592d0a6bd3f93721250283e32923",
-      "size_bytes": 1309
+      "sha256": "ee8e142b99332fde022fee944e2fa81a2ea3f823cc527156dbfa72f5f6262983",
+      "size_bytes": 989
     },
     "ESSA": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSA/procedure_use.json",
-      "sha256": "2a345a73cf5b8dd5fe5d6fc01a3a3fcb7205e5552d3141846bea48ca6dc79835",
-      "size_bytes": 7948
+      "sha256": "a35c636810e3177aef359e4a5df5becd134ae27081f10f4b281bb75012987ded",
+      "size_bytes": 5804
     },
     "ESSB": {
       "repo_path": "E/ES/ESAA/ESOS_Y/ESOS_APP/ESSB/procedure_use.json",
@@ -147,8 +147,8 @@
     },
     "KJFK": {
       "repo_path": "K/KZNY/JFK_TMA/KJFK/initial_climb.json",
-      "sha256": "3378d172d8488b1b1aabaa5db8f3d192b0dc7a6537905ec1497460405b105423",
-      "size_bytes": 338
+      "sha256": "0d184e680d0aee74cb603e00baf96cb971aeb03e3ac2ec7406d1ca72e7803f0d",
+      "size_bytes": 290
     },
     "KMDW": {
       "repo_path": "K/KZAU/CHICAGO_MDW_TMA/KMDW/procedure_use.json",
@@ -162,23 +162,23 @@
     },
     "LEBL": {
       "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/procedure_use.json",
-      "sha256": "7317992e4e72356a9c46223aac8abea34a4855f0bc3dc8ccc759f6a3ddb253d2",
-      "size_bytes": 2241
+      "sha256": "dfbbeac4c2c2dd63bc9e50b1fde60dd149a099ea07a7014fdc9ae66c8ca78b4e",
+      "size_bytes": 1793
     },
     "LEMD": {
       "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/procedure_use.json",
-      "sha256": "b3187809e0c4b6e9132df8fdec0134d86327c433f59d9f55fd7519e2d7206a8e",
-      "size_bytes": 6917
+      "sha256": "e9f3157617d7467dbe0e8b0dd5ff01788dd5c429f1172819d4117e7398e92205",
+      "size_bytes": 6165
     },
     "LEZG": {
       "repo_path": "L/LE/LECM/LECM_R2/ZARAGOZA_TMA/LEZG/procedure_use.json",
-      "sha256": "55d3726a655f4e6683f35bc334abe1abc1ab524b4d96a66358b7b5fc2b61189f",
-      "size_bytes": 2435
+      "sha256": "043513d276aae8a7ce301ca090e92741390115ce674b1a6f1c7f2ef27d85d335",
+      "size_bytes": 1955
     },
     "LOWW": {
       "repo_path": "L/LO/LOVV/VIENNA_TMA/LOWW/procedure_use.json",
-      "sha256": "712ba3e32715bf1710779cf85d895c27741b1fe4c6a0f70d9353ab1660451fd6",
-      "size_bytes": 29089
+      "sha256": "09379bd4c264a40664ca21253a7c53afb81e845ffdb83077cdd3af8029976c10",
+      "size_bytes": 20833
     },
     "LPPR": {
       "repo_path": "L/LP/LPPC/PORTO_TMA/LPPR/initial_climb.json",
@@ -192,13 +192,13 @@
     },
     "LTFM": {
       "repo_path": "L/LT/LTBB/ISTANBUL_TMA/LTFM/procedure_use.json",
-      "sha256": "bd4793d45dfd95342b59b5fa55b1b4bb43d1502c35362355cc0b1de710d6406e",
-      "size_bytes": 2660
+      "sha256": "cf0bf504f831c75d1327f87b3c0d387c1ffb430c2a98e918450e4e18ee6e67f3",
+      "size_bytes": 2132
     },
     "RCSS": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/procedure_use.json",
-      "sha256": "78f44a5b53b95c47c562501722ff8e9fd3ffa6788fd21f378aef5dde0b093b1c",
-      "size_bytes": 227
+      "sha256": "5c84a53b27f3b71a27800ae8026dde153855cd396cad1c2b8cfbd066a3ac85ac",
+      "size_bytes": 195
     },
     "RCTP": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/initial_climb.json",
@@ -207,63 +207,63 @@
     },
     "RJTT": {
       "repo_path": "R/RJ/RJJJ/Tokyo_TMA/RJTT/procedure_use.json",
-      "sha256": "f60355330a56be09e3452bfcff7604f8e3c16876ed61ef3beea06e88734e2340",
-      "size_bytes": 1509
+      "sha256": "0b82f6ad63946fcfd16fa69df4108fcdc0aec0a2dc8c8354cfb7d6814d503e10",
+      "size_bytes": 1221
     },
     "RKJJ": {
       "repo_path": "R/RK/RKRR/GWANGJU_TMA/GWANGJU_APP/RKJJ/initial_climb.json",
-      "sha256": "6a4ce8e274fddd9a926105ba2ce2ff9d3e69dc03146e51cd84f499e5feb0638a",
-      "size_bytes": 166
+      "sha256": "791a96a305ed6e08291900275eeec42e17d8c79e1f41af53666feb444a675b0a",
+      "size_bytes": 150
     },
     "RKNW": {
       "repo_path": "R/RK/RKRR/WONJU_TMA/RKNW/initial_climb.json",
-      "sha256": "b68ba56699b7464f66529b2507005b46c0166c3a3432c585a5870640036385e9",
-      "size_bytes": 167
+      "sha256": "7a3b3c266f5ecfc2b2c67e62ce7744dae524f6e71a5f45babf8a7afd6aed6261",
+      "size_bytes": 151
     },
     "RKPC": {
       "repo_path": "R/RK/RKRR/JEJU_TMA/JEJU_APP/RKPC/initial_climb.json",
-      "sha256": "e967ee4afe5d2922d00366a546065833a6bf16c3e67eb2e14403c05240ebb6cf",
-      "size_bytes": 253
+      "sha256": "d4242d413023f7efa3f204e60941c87440276500fe0b777abd875f9973681613",
+      "size_bytes": 221
     },
     "RKPD": {
       "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/initial_climb.json",
-      "sha256": "7d93e12d40019439381829c51ef5ab5a85ea53875f6df59006a3385708bece2d",
-      "size_bytes": 254
+      "sha256": "cf743b9e0199c66b17495f1438da9050ab9a0233cbd17983b2ea16864834a8d9",
+      "size_bytes": 222
     },
     "RKPK": {
       "repo_path": "R/RK/RKRR/GIMHAE_TMA/RKPK/initial_climb.json",
-      "sha256": "013f9958482c44d6eb316f1daf08e0c28fdabcdc59bcd8f9cb82cdfab907152d",
-      "size_bytes": 254
+      "sha256": "d73b663764484a2dac59529d0a0ff76b6bf9bf9de5f093ec356e5f0458032c14",
+      "size_bytes": 222
     },
     "RKPS": {
       "repo_path": "R/RK/RKRR/SACHEON_TMA/SACHEON_APP/RKPS/initial_climb.json",
-      "sha256": "542145eabaf87fbf15d8d9feec5abdb59f76f534d4452dd74aee5ee3a57c50e4",
-      "size_bytes": 166
+      "sha256": "fe08a81efdb46e640155ec6447d3ca0b9d5a7bcbfd985a648ef87deae08d0039",
+      "size_bytes": 150
     },
     "RKPU": {
       "repo_path": "R/RK/RKRR/POHANG_TMA/ULSAN_APP/RKPU/initial_climb.json",
-      "sha256": "0faedaffb5ebf007bc48bda17b79b0b98c700e24f1b19983509f15e5e57f56d3",
-      "size_bytes": 595
+      "sha256": "eb4ab1b707d0597e9b4e73686f772def55847c2af1d683407daf4bda50a186ae",
+      "size_bytes": 499
     },
     "RKSI": {
       "repo_path": "R/RK/RKRR/INCHEON_TMA/INCHEON_APP/RKSI/initial_climb.json",
-      "sha256": "87db2e9f1c8c597691bce5eb6560f8c57565c60360599cb06d3fe46cb4ea7508",
-      "size_bytes": 282
+      "sha256": "32f4f1e12f07427a00f3e40680350fff529315696698895005931eda279edc5b",
+      "size_bytes": 250
     },
     "RKSM": {
       "repo_path": "R/RK/RKRR/INCHEON_TMA/SEOUL_AB_APP/RKSM/initial_climb.json",
-      "sha256": "5fdc9f77fad829f888ff2385baec97cef24d747cbdf52b4268a9b0d7b43439eb",
-      "size_bytes": 254
+      "sha256": "4d1d13113dd472af082039475f91e2d6867b447a9d03af6d931498253a1960dd",
+      "size_bytes": 222
     },
     "RKTN": {
       "repo_path": "R/RK/RKRR/DAEGU_TMA/RKTN/initial_climb.json",
-      "sha256": "e5a8719ad539f82aca0fbfc38f43984a0374e649a06e336453ed8baea8bc1e5d",
-      "size_bytes": 254
+      "sha256": "cfd7c30766075f81d320923e779241e9ac52abdf4cbaab6b25c089eb5f7bd436",
+      "size_bytes": 222
     },
     "RKTU": {
       "repo_path": "R/RK/RKRR/JUNGWON_TMA/RKTU/initial_climb.json",
-      "sha256": "a46ad8c9b662869d94d2cb2c259f396776255579f23f3f9f0f3d61e8c871c8c4",
-      "size_bytes": 254
+      "sha256": "84ca74079b3353add19604d93efaab38513654ead86936851767fbb1b525fabf",
+      "size_bytes": 222
     },
     "VABB": {
       "repo_path": "V/VA/VABF/MUMBAI_TMA/VABB/initial_climb.json",
@@ -272,13 +272,13 @@
     },
     "VHHH": {
       "repo_path": "V/VH/VHHK/HONGKONG_TMA/VHHH/procedure_use.json",
-      "sha256": "6988fe82952e91b8a5bafada479b613d4bd952c192b30fecd2cad99794cbdeff",
-      "size_bytes": 3700
+      "sha256": "e263a9173509751fa1f03405f8ae4dbae83bf1b17480fa4f0cff2d1c7d2f9be8",
+      "size_bytes": 2804
     },
     "VTBD": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBD/procedure_use.json",
-      "sha256": "e470a8e4f1ac86442b39ddde21c68b30db707c625795c446b10a15748d562ea0",
-      "size_bytes": 4845
+      "sha256": "41935039aeb8c5d2eac8a0f09a7f0f6c3209f8cacb0422fd1cf0e791afedf4c0",
+      "size_bytes": 3565
     },
     "VTBS": {
       "repo_path": "V/VT/VTBB/Bangkok_TMA/VTBS/procedure_use.json",
@@ -287,13 +287,13 @@
     },
     "WMKK": {
       "repo_path": "W/WM/WMFC/Kuala_Lumpur_TMA/WMKK/procedure_use.json",
-      "sha256": "9be91a7b28a1b1252c39822325f6cb5daa9ed8ef7b6eca66abe75473f7b42c9c",
-      "size_bytes": 1914
+      "sha256": "602d9fcd80f7d31cc8a1390ad383cf3a2c5b8dd2a074b1b1a6cac9835d712155",
+      "size_bytes": 1466
     },
     "WSSS": {
       "repo_path": "W/WS/WSJC/Singapore_TMA/WSSS/procedure_use.json",
-      "sha256": "de90a24bf72694b29274e7d1a39f8aa9f3518c230b5607c8633a7c4de44e2552",
-      "size_bytes": 714
+      "sha256": "833a6602d9f8c09013972fa56dd3c60c31a93d14d43c4d9b248864ca7e5db4ce",
+      "size_bytes": 570
     },
     "YMML": {
       "repo_path": "Y/YM/YMMM/MELBOURNE_TMA/YMML/procedure_use.json",

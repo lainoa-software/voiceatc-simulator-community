@@ -4,19 +4,11 @@
     "KDCA_APP": {
       "1": {
         "positions": {
-          "KDCA_APP": [
-            "DCA"
-          ]
+          "KDCA_APP": ["DCA"]
         },
-        "airports": [
-          "KDCA"
-        ],
+        "airports": ["KDCA"],
         "valid_for_runways": {
-          "KDCA": [
-            "NORTH",
-            "SOUTH",
-            "NORTH_RW33"
-          ]
+          "KDCA": ["NORTH", "SOUTH", "NORTH_RW33"]
         }
       }
     }

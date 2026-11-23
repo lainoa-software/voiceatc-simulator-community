@@ -4,9 +4,7 @@
     {
       "id": "RKSS_APP",
       "call_sign": "Seoul approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

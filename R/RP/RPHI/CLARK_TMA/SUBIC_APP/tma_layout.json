@@ -4,13 +4,9 @@
     "RPLB_APP": {
       "SUBIC": {
         "positions": {
-          "RPLB_APP": [
-            "RPLB_APP"
-          ]
+          "RPLB_APP": ["RPLB_APP"]
         },
-        "airports": [
-          "RPLB"
-        ]
+        "airports": ["RPLB"]
       }
     }
   }

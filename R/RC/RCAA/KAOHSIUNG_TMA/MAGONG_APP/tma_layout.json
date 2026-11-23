@@ -4,13 +4,9 @@
     "RCQC_APP": {
       "MAGONG": {
         "positions": {
-          "RCQC_APP": [
-            "RCQC_APP"
-          ]
+          "RCQC_APP": ["RCQC_APP"]
         },
-        "airports": [
-          "RCQC"
-        ]
+        "airports": ["RCQC"]
       }
     }
   }

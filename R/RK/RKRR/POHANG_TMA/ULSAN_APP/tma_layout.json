@@ -4,13 +4,9 @@
     "RKPU_APP": {
       "ULSAN": {
         "positions": {
-          "RKPU_APP": [
-            "RKPU_APP"
-          ]
+          "RKPU_APP": ["RKPU_APP"]
         },
-        "airports": [
-          "RKPU"
-        ]
+        "airports": ["RKPU"]
       }
     }
   }

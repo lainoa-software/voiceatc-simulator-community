@@ -5,10 +5,7 @@
     {
       "id": "ROARING_FORK_VISUAL_15",
       "name": "Roaring Fork Visual RWY 15",
-      "aliases": [
-        "roaring fork visual",
-        "roaring fork"
-      ],
+      "aliases": ["roaring fork visual", "roaring fork"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,9 +29,7 @@
               {
                 "id": "ASPEN",
                 "name": "Aspen",
-                "aliases": [
-                  "the town of Aspen"
-                ],
+                "aliases": ["the town of Aspen"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -54,10 +49,7 @@
               "id": "DBL",
               "name": "Red Table / DBL R-163",
               "type": "track_to_fix",
-              "point": [
-                39.4393444444,
-                -106.8946805556
-              ],
+              "point": [39.4393444444, -106.8946805556],
               "fly_over": true,
               "altitude": {
                 "at_ft": 12500,
@@ -68,10 +60,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -91,9 +80,7 @@
               {
                 "id": "CARBONDALE",
                 "name": "Carbondale",
-                "aliases": [
-                  "the town of Carbondale"
-                ],
+                "aliases": ["the town of Carbondale"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -113,10 +100,7 @@
               "id": "CARBONDALE_TRACE",
               "name": "Carbondale (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.396,
-                -107.21
-              ],
+              "point": [39.396, -107.21],
               "fly_over": false,
               "altitude": {
                 "at_ft": 10000,
@@ -127,10 +111,7 @@
               "id": "BASALT_TRACE",
               "name": "Basalt (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.368,
-                -106.825
-              ],
+              "point": [39.368, -106.825],
               "fly_over": false,
               "altitude": {
                 "at_ft": 12500,
@@ -141,10 +122,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -164,9 +142,7 @@
               {
                 "id": "MOUNT_SOPRIS",
                 "name": "Mount Sopris",
-                "aliases": [
-                  "Sopris"
-                ],
+                "aliases": ["Sopris"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -186,10 +162,7 @@
               "id": "MT_SOPRIS_TRACE",
               "name": "Mount Sopris (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.19,
-                -107.09
-              ],
+              "point": [39.19, -107.09],
               "fly_over": false,
               "altitude": {
                 "at_ft": 14500,
@@ -200,10 +173,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -223,9 +193,7 @@
               {
                 "id": "CAPITAL_PEAK",
                 "name": "Capital Peak",
-                "aliases": [
-                  "Capital"
-                ],
+                "aliases": ["Capital"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -245,10 +213,7 @@
               "id": "CAPITAL_PEAK_TRACE",
               "name": "Capital Peak (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.15,
-                -107.07
-              ],
+              "point": [39.15, -107.07],
               "fly_over": false,
               "altitude": {
                 "at_ft": 15500,
@@ -259,10 +224,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -282,9 +244,7 @@
               {
                 "id": "CASTLE_PEAK",
                 "name": "Castle Peak",
-                "aliases": [
-                  "Castle"
-                ],
+                "aliases": ["Castle"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -304,10 +264,7 @@
               "id": "CASTLE_PEAK_TRACE",
               "name": "Castle Peak (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.01,
-                -106.86
-              ],
+              "point": [39.01, -106.86],
               "fly_over": false,
               "altitude": {
                 "at_ft": 16000,
@@ -318,10 +275,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -341,9 +295,7 @@
               {
                 "id": "INDEPENDENCE_PASS",
                 "name": "Independence Pass",
-                "aliases": [
-                  "the pass"
-                ],
+                "aliases": ["the pass"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -363,10 +315,7 @@
               "id": "INDEPENDENCE_PASS_TRACE",
               "name": "Independence Pass (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.11,
-                -106.56
-              ],
+              "point": [39.11, -106.56],
               "fly_over": false,
               "altitude": {
                 "at_ft": 14500,
@@ -377,10 +326,7 @@
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],
@@ -400,9 +346,7 @@
               {
                 "id": "MOUNT_OF_THE_HOLY_CROSS",
                 "name": "Mount of the Holy Cross",
-                "aliases": [
-                  "Holy Cross"
-                ],
+                "aliases": ["Holy Cross"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "ROARING FORK VISUAL RWY 15",
@@ -422,10 +366,7 @@
               "id": "HOLY_CROSS_TRACE",
               "name": "Mount of the Holy Cross (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.47,
-                -106.48
-              ],
+              "point": [39.47, -106.48],
               "fly_over": false,
               "altitude": {
                 "at_ft": 11500,
@@ -436,20 +377,14 @@
               "id": "RUEDI_TRACE",
               "name": "Ruedi Reservoir / Hagerman valley cue (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.352,
-                -106.681
-              ],
+              "point": [39.352, -106.681],
               "fly_over": false
             },
             {
               "id": "ASPEN_TRACE",
               "name": "Aspen / Roaring Fork (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                39.27,
-                -106.86
-              ],
+              "point": [39.27, -106.86],
               "fly_over": false
             }
           ],

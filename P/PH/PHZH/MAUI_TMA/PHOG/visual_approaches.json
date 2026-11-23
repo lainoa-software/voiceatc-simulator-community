@@ -5,11 +5,7 @@
     {
       "id": "SMOKE_STACK_VISUAL_02",
       "name": "Smoke Stack Visual RWY 02",
-      "aliases": [
-        "smoke stack visual",
-        "smoke stacks visual",
-        "smoke stack"
-      ],
+      "aliases": ["smoke stack visual", "smoke stacks visual", "smoke stack"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -33,10 +29,7 @@
               {
                 "id": "SUGAR_MILL_SMOKE_STACKS",
                 "name": "the Sugar Mill Smoke Stacks",
-                "aliases": [
-                  "Smoke Stacks",
-                  "Sugar Mill stacks"
-                ],
+                "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "SMOKE STACK VISUAL RWY 02",
@@ -56,10 +49,7 @@
               "id": "LNY",
               "name": "Lanai / LNY",
               "type": "course_to_fix",
-              "point": [
-                20.7645027778,
-                -156.9689
-              ],
+              "point": [20.7645027778, -156.9689],
               "fly_over": false,
               "course_deg": 85,
               "reference": "LNY VORTAC R-085"
@@ -68,30 +58,21 @@
               "id": "MAALAEA_TRACE",
               "name": "Mid-Maalaea Bay (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.7,
-                -156.5
-              ],
+              "point": [20.7, -156.5],
               "fly_over": true
             },
             {
               "id": "KNUI_TRACE",
               "name": "KNUI Radio Tower (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.78,
-                -156.48
-              ],
+              "point": [20.78, -156.48],
               "fly_over": true
             },
             {
               "id": "SMOKESTACK_TRACE",
               "name": "Sugar Mill Smoke Stacks (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.82,
-                -156.47
-              ],
+              "point": [20.82, -156.47],
               "fly_over": false
             }
           ],
@@ -111,10 +92,7 @@
               {
                 "id": "SUGAR_MILL_SMOKE_STACKS",
                 "name": "the Sugar Mill Smoke Stacks",
-                "aliases": [
-                  "Smoke Stacks",
-                  "Sugar Mill stacks"
-                ],
+                "aliases": ["Smoke Stacks", "Sugar Mill stacks"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "SMOKE STACK VISUAL RWY 02",
@@ -134,30 +112,21 @@
               "id": "MAKENA_TRACE",
               "name": "Makena (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.63,
-                -156.44
-              ],
+              "point": [20.63, -156.44],
               "fly_over": false
             },
             {
               "id": "KNUI_TRACE",
               "name": "KNUI Radio Tower (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.78,
-                -156.48
-              ],
+              "point": [20.78, -156.48],
               "fly_over": true
             },
             {
               "id": "SMOKESTACK_TRACE",
               "name": "Sugar Mill Smoke Stacks (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                20.82,
-                -156.47
-              ],
+              "point": [20.82, -156.47],
               "fly_over": false
             }
           ],

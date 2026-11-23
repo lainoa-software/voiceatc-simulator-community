@@ -27,6 +27,10 @@
           "clearance_name": "River Visual",
           "entry_point_id": "DQO_R061_5_TRACE",
           "sight_reference_point_id": "DELAWARE_RIVER_TRACE",
+          "final": {
+            "course_deg": 75.47,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "DQO_R061_5_TRACE",
@@ -77,8 +81,7 @@
               "longitude": -75.29,
               "fly_over": false
             }
-          ],
-          "final": { "course_deg": 75.47, "glidepath_deg": 3.0 }
+          ]
         },
         {
           "id": "RIVER_09R",
@@ -86,6 +89,10 @@
           "clearance_name": "River Visual",
           "entry_point_id": "DQO_R061_5_TRACE",
           "sight_reference_point_id": "DELAWARE_RIVER_TRACE",
+          "final": {
+            "course_deg": 75.47,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "DQO_R061_5_TRACE",
@@ -136,8 +143,7 @@
               "longitude": -75.29,
               "fly_over": false
             }
-          ],
-          "final": { "course_deg": 75.47, "glidepath_deg": 3.0 }
+          ]
         }
       ]
     }

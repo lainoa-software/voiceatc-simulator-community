@@ -4,9 +4,7 @@
     {
       "id": "EDGG_CTR",
       "call_sign": "Langen Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "127.625",
         "118.750",

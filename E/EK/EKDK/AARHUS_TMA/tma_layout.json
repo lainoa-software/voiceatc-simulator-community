@@ -4,20 +4,11 @@
     "EKAH_APP": {
       "AARHUS_TMA_WHOLE_ALL": {
         "positions": {
-          "EKAH_APP": [
-            "AARHUS_TMA_ALL"
-          ]
+          "EKAH_APP": ["AARHUS_TMA_ALL"]
         },
-        "airports": [
-          "EKAH"
-        ],
+        "airports": ["EKAH"],
         "valid_for_runways": {
-          "EKAH": [
-            "EKAH_10R",
-            "EKAH_28L",
-            "EKAH_10L",
-            "EKAH_28R"
-          ]
+          "EKAH": ["EKAH_10R", "EKAH_28L", "EKAH_10L", "EKAH_28R"]
         }
       }
     }

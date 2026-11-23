@@ -4,13 +4,9 @@
     "RKPC_APP": {
       "JEJU": {
         "positions": {
-          "RKPC_APP": [
-            "RKPC_APP"
-          ]
+          "RKPC_APP": ["RKPC_APP"]
         },
-        "airports": [
-          "RKPC"
-        ]
+        "airports": ["RKPC"]
       }
     }
   }

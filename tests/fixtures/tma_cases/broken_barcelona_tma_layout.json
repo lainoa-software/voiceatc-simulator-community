@@ -4,16 +4,9 @@
     "BCN_APP": {
       "2CO": {
         "positions": {
-          "LEBL_CORE_APP": [
-            "LEBLCORE"
-          ]
+          "LEBL_CORE_APP": ["LEBLCORE"]
         },
-        "airports": [
-          "LEBL",
-          "LEGE",
-          "LERS",
-          "LEDA"
-        ]
+        "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       }
     }
   }

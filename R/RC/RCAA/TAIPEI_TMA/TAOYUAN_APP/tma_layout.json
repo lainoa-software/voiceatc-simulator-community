@@ -4,13 +4,9 @@
     "RCTP_APP": {
       "TAOYUAN": {
         "positions": {
-          "RCTP_APP": [
-            "RCTP_APP"
-          ]
+          "RCTP_APP": ["RCTP_APP"]
         },
-        "airports": [
-          "RCTP"
-        ]
+        "airports": ["RCTP"]
       }
     }
   }

@@ -4,13 +4,9 @@
     "RPLC_APP": {
       "CLARK": {
         "positions": {
-          "RPLC_APP": [
-            "RPLC_APP"
-          ]
+          "RPLC_APP": ["RPLC_APP"]
         },
-        "airports": [
-          "RPLC"
-        ]
+        "airports": ["RPLC"]
       }
     }
   }

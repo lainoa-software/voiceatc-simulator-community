@@ -4,13 +4,9 @@
     "RPLI_APP": {
       "LAOAG": {
         "positions": {
-          "RPLI_APP": [
-            "RPLI_APP"
-          ]
+          "RPLI_APP": ["RPLI_APP"]
         },
-        "airports": [
-          "RPLI"
-        ]
+        "airports": ["RPLI"]
       }
     }
   }

@@ -4,13 +4,9 @@
     "OTHH_APP": {
       "DOHA_APP": {
         "positions": {
-          "OTHH_APP": [
-            "OTHH_APP"
-          ]
+          "OTHH_APP": ["OTHH_APP"]
         },
-        "airports": [
-          "OTHH"
-        ]
+        "airports": ["OTHH"]
       }
     }
   }

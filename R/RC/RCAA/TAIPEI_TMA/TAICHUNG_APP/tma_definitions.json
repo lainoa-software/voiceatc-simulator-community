@@ -4,9 +4,7 @@
     {
       "id": "RCMQ_APP",
       "call_sign": "Taichung approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

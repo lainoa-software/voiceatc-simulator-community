@@ -5,10 +5,7 @@
     {
       "id": "SWEETWATER_VISUAL_27",
       "name": "Sweetwater Visual RWY 27",
-      "aliases": [
-        "sweetwater visual",
-        "sweetwater"
-      ],
+      "aliases": ["sweetwater visual", "sweetwater"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,9 +29,7 @@
               {
                 "id": "MOUNT_HELIX",
                 "name": "Mount Helix",
-                "aliases": [
-                  "Helix"
-                ],
+                "aliases": ["Helix"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "SWEETWATER VISUAL RWY 27",
@@ -44,10 +39,7 @@
                 },
                 "geometry": {
                   "kind": "point",
-                  "point": [
-                    32.76704,
-                    -116.98339
-                  ]
+                  "point": [32.76704, -116.98339]
                 }
               }
             ]
@@ -57,10 +49,7 @@
               "id": "STEPN",
               "name": "STEPN",
               "type": "track_to_fix",
-              "point": [
-                32.8113888889,
-                -117.2088888889
-              ],
+              "point": [32.8113888889, -117.2088888889],
               "fly_over": false,
               "altitude": {
                 "at_ft": 5000,
@@ -71,30 +60,21 @@
               "id": "KLOMN",
               "name": "KLOMN / Lake Murray",
               "type": "track_to_fix",
-              "point": [
-                32.7788722222,
-                -117.0643972222
-              ],
+              "point": [32.7788722222, -117.0643972222],
               "fly_over": false
             },
             {
               "id": "SR125_BASE_TRACE",
               "name": "Base turn after passing State Route 125 (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                32.75936,
-                -116.98213
-              ],
+              "point": [32.75936, -116.98213],
               "fly_over": false
             },
             {
               "id": "MZB_R084_EAST_TRACE",
               "name": "MZB R-084 crossing on base (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                32.75018,
-                -116.98502
-              ],
+              "point": [32.75018, -116.98502],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 4800
@@ -104,20 +84,14 @@
               "id": "SWEETWATER_FINAL_TRACE",
               "name": "Final turn at Sweetwater Reservoir (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                32.68847,
-                -117.00438
-              ],
+              "point": [32.68847, -117.00438],
               "fly_over": false
             },
             {
               "id": "CIJHI",
               "name": "CIJHI / I-UBR 8.7 DME",
               "type": "course_to_fix",
-              "point": [
-                32.6972027778,
-                -117.0401333333
-              ],
+              "point": [32.6972027778, -117.0401333333],
               "fly_over": false,
               "course_deg": 275,
               "reference": "I-UBR 275°",
@@ -142,10 +116,7 @@
               "id": "OKAIN",
               "name": "OKAIN / I-UBR 12.2 DME",
               "type": "track_to_fix",
-              "point": [
-                32.6809888889,
-                -116.973725
-              ],
+              "point": [32.6809888889, -116.973725],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3600
@@ -155,10 +126,7 @@
               "id": "CIJHI",
               "name": "CIJHI / I-UBR 8.7 DME",
               "type": "course_to_fix",
-              "point": [
-                32.6972027778,
-                -117.0401333333
-              ],
+              "point": [32.6972027778, -117.0401333333],
               "fly_over": true,
               "course_deg": 275,
               "reference": "I-UBR 275°",

@@ -11,7 +11,10 @@
           "id": "VINCENT_THOMAS_BRIDGE",
           "name": "the Vincent Thomas Bridge",
           "aliases": ["Vincent Thomas Bridge"],
-          "geometry": { "kind": "point", "leg_id": "VINCENT_THOMAS_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "VINCENT_THOMAS_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "LA RIVER VISUAL RWY 12",
@@ -31,7 +34,10 @@
           "id": "QUEEN_MARY",
           "name": "the Queen Mary",
           "aliases": ["Queen Mary"],
-          "geometry": { "kind": "point", "leg_id": "QUEEN_MARY_TRACE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "QUEEN_MARY_TRACE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "LA RIVER VISUAL RWY 12",

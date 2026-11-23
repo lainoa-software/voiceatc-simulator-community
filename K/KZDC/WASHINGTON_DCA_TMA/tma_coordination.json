@@ -5,216 +5,144 @@
       "name": "KDCA_ARR_BULII",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "BULII"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["BULII"],
       "level": "A130"
     },
     {
       "name": "KDCA_ARR_EYESS",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "EYESS"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["EYESS"],
       "level": "A120"
     },
     {
       "name": "KDCA_ARR_BILIT",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "BILIT"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["BILIT"],
       "level": "A110"
     },
     {
       "name": "KDCA_ARR_ALWYZ",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "ALWYZ"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["ALWYZ"],
       "level": "A140"
     },
     {
       "name": "KDCA_ARR_IRONS",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "IRONS"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["IRONS"],
       "level": "A130"
     },
     {
       "name": "KDCA_ARR_AML",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "AML"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["AML"],
       "level": "A140"
     },
     {
       "name": "KDCA_ARR_SKILS",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "SKILS"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["SKILS"],
       "level": "A120"
     },
     {
       "name": "KDCA_ARR_TIKEE",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "TIKEE"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["TIKEE"],
       "level": "A090"
     },
     {
       "name": "KDCA_ARR_TRUPS",
       "from": "KZDC_CTR",
       "to": "KDCA_APP",
-      "arrives": [
-        "KDCA"
-      ],
-      "fix": [
-        "TRUPS"
-      ],
+      "arrives": ["KDCA"],
+      "fix": ["TRUPS"],
       "level": "A140"
     },
     {
       "name": "KDCA_DEP_AMEEE",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "AMEEE"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["AMEEE"],
       "level": "F190"
     },
     {
       "name": "KDCA_DEP_CLTCH",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "CLTCH"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["CLTCH"],
       "level": "F230"
     },
     {
       "name": "KDCA_DEP_JDUBB",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "JDUBB"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["JDUBB"],
       "level": "F230"
     },
     {
       "name": "KDCA_DEP_SCRAM",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "SCRAM"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["SCRAM"],
       "level": "F230"
     },
     {
       "name": "KDCA_DEP_DOCTR",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "DOCTR"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["DOCTR"],
       "level": "A170"
     },
     {
       "name": "KDCA_DEP_HORTO",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "HORTO"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["HORTO"],
       "level": "A170"
     },
     {
       "name": "KDCA_DEP_SOOKI",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "SOOKI"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["SOOKI"],
       "level": "F190"
     },
     {
       "name": "KDCA_DEP_WYNGS",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "WYNGS"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["WYNGS"],
       "level": "F230"
     },
     {
       "name": "KDCA_DEP_REBLL",
       "from": "KDCA_APP",
       "to": "KZDC_CTR",
-      "departs": [
-        "KDCA"
-      ],
-      "fix": [
-        "REBLL"
-      ],
+      "departs": ["KDCA"],
+      "fix": ["REBLL"],
       "level": "F230"
     }
   ]

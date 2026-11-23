@@ -4,13 +4,9 @@
     "EKSP_APP": {
       "SKRYDSTRUP_TMA_WHOLE_ALL": {
         "positions": {
-          "EKSP_APP": [
-            "SKRYDSTRUP_TMA_ALL"
-          ]
+          "EKSP_APP": ["SKRYDSTRUP_TMA_ALL"]
         },
-        "airports": [
-          "EKSP"
-        ],
+        "airports": ["EKSP"],
         "valid_for_runways": {
           "EKSP": [
             "EKSP_10R",

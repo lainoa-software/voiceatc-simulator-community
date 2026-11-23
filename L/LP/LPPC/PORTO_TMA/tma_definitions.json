@@ -4,9 +4,7 @@
     {
       "id": "LPPR_APP",
       "call_sign": "Porto approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

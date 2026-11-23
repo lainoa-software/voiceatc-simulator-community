@@ -4,9 +4,7 @@
     {
       "id": "RCMT_APP",
       "call_sign": "Matsu approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

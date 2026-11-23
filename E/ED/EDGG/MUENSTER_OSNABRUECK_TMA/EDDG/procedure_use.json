@@ -8,27 +8,19 @@
       "spawn": true
     },
     {
-      "sids": [
-        "AMSA1Y"
-      ],
+      "sids": ["AMSA1Y"],
       "spawn": false
     },
     {
-      "sids": [
-        "DOME3Y"
-      ],
+      "sids": ["DOME3Y"],
       "spawn": false
     },
     {
-      "sids": [
-        "DOME3Z"
-      ],
+      "sids": ["DOME3Z"],
       "spawn": false
     },
     {
-      "sids": [
-        "OSNA1Z"
-      ],
+      "sids": ["OSNA1Z"],
       "spawn": false
     }
   ]

@@ -4,21 +4,15 @@
   "airac_min": 2606,
   "exceptions": [
     {
-      "sids": [
-        "MKE9"
-      ],
+      "sids": ["MKE9"],
       "initial_climb_ft": 5000
     },
     {
-      "sids": [
-        "ACCRA5"
-      ],
+      "sids": ["ACCRA5"],
       "initial_climb_ft": 5000
     },
     {
-      "sids": [
-        "UECKR6"
-      ],
+      "sids": ["UECKR6"],
       "initial_climb_ft": 5000
     }
   ]

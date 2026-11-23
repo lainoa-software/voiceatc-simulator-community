@@ -8,15 +8,10 @@
         {
           "id": "BREEZY_POINT",
           "display_name": "BREEZY POINT",
-          "runways": [
-            "31L",
-            "31R"
-          ],
+          "runways": ["31L", "31R"],
           "auto_rule": {
             "kind": "route_contains",
-            "values": [
-              "RNGRR"
-            ]
+            "values": ["RNGRR"]
           },
           "legs": [
             {
@@ -76,15 +71,10 @@
         {
           "id": "IDLEWILD",
           "display_name": "IDLEWILD",
-          "runways": [
-            "31L",
-            "31R"
-          ],
+          "runways": ["31L", "31R"],
           "auto_rule": {
             "kind": "aircraft_type",
-            "values": [
-              "PC12"
-            ]
+            "values": ["PC12"]
           },
           "legs": [
             {
@@ -111,10 +101,7 @@
         {
           "id": "GATEWAY",
           "display_name": "GATEWAY",
-          "runways": [
-            "31L",
-            "31R"
-          ],
+          "runways": ["31L", "31R"],
           "auto_rule": {
             "kind": "utc_window",
             "start_minute": 180,
@@ -142,10 +129,7 @@
         {
           "id": "CANARSIE",
           "display_name": "CANARSIE",
-          "runways": [
-            "31L",
-            "31R"
-          ],
+          "runways": ["31L", "31R"],
           "auto_rule": {
             "kind": "fallback"
           },

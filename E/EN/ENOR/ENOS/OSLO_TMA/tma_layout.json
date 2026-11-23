@@ -4,23 +4,12 @@
     "ENGM_APP": {
       "1": {
         "positions": {
-          "ENGM_APP": [
-            "TMA_E"
-          ]
+          "ENGM_APP": ["TMA_E"]
         },
-        "airports": [
-          "ENGM",
-          "ENKJ"
-        ],
+        "airports": ["ENGM", "ENKJ"],
         "valid_for_runways": {
-          "ENGM": [
-            "01 Dual",
-            "19 Dual"
-          ],
-          "ENKJ": [
-            "01 Dual",
-            "19 Dual"
-          ]
+          "ENGM": ["01 Dual", "19 Dual"],
+          "ENKJ": ["01 Dual", "19 Dual"]
         }
       }
     }

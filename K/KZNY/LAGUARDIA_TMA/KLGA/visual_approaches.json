@@ -5,10 +5,7 @@
     {
       "id": "PARK_VISUAL_31",
       "name": "Park Visual RWY 31",
-      "aliases": [
-        "park visual",
-        "park visual thirty one"
-      ],
+      "aliases": ["park visual", "park visual thirty one"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -28,9 +25,7 @@
           "sight_reference_point_id": "GACAR",
           "sight_reference": {
             "name": "the Twin White Tanks",
-            "aliases": [
-              "Twin White Tanks"
-            ],
+            "aliases": ["Twin White Tanks"],
             "scope": "point"
           },
           "sight_references": {
@@ -39,9 +34,7 @@
               {
                 "id": "TWIN_WHITE_TANKS",
                 "name": "the Twin White Tanks",
-                "aliases": [
-                  "Twin White Tanks"
-                ],
+                "aliases": ["Twin White Tanks"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "PARK VISUAL RWY 31",
@@ -57,9 +50,7 @@
               {
                 "id": "AIRPORT",
                 "name": "the airport",
-                "aliases": [
-                  "LaGuardia airport"
-                ],
+                "aliases": ["LaGuardia airport"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "PARK VISUAL RWY 31",
@@ -78,10 +69,7 @@
               "id": "PACHU",
               "name": "PACHU",
               "type": "track_to_fix",
-              "point": [
-                40.6601638889,
-                -73.9739833333
-              ],
+              "point": [40.6601638889, -73.9739833333],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 3000
@@ -91,10 +79,7 @@
               "id": "SHAYY",
               "name": "SHAYY / Seven High Rises",
               "type": "course_to_fix",
-              "point": [
-                40.6960472222,
-                -73.942975
-              ],
+              "point": [40.6960472222, -73.942975],
               "fly_over": true,
               "course_deg": 45,
               "reference": "Seven High Rises",
@@ -110,10 +95,7 @@
               "id": "GACAR",
               "name": "GACAR / Twin White Tanks",
               "type": "course_to_fix",
-              "point": [
-                40.7187388889,
-                -73.91085
-              ],
+              "point": [40.7187388889, -73.91085],
               "fly_over": true,
               "course_deg": 59,
               "reference": "Twin White Tanks",
@@ -129,10 +111,7 @@
               "id": "DRRYL",
               "name": "DRRYL / Flushing Meadows Lake",
               "type": "course_to_fix",
-              "point": [
-                40.7303138889,
-                -73.8443333333
-              ],
+              "point": [40.7303138889, -73.8443333333],
               "fly_over": true,
               "course_deg": 89,
               "reference": "Flushing Meadows Corona Park Lake",
@@ -145,10 +124,7 @@
               "id": "KEYTH",
               "name": "KEYTH / Flushing Meadows Round Pond",
               "type": "course_to_fix",
-              "point": [
-                40.7452888889,
-                -73.8319638889
-              ],
+              "point": [40.7452888889, -73.8319638889],
               "fly_over": true,
               "course_deg": 44,
               "reference": "Flushing Meadows Corona Park Round Pond",
@@ -161,10 +137,7 @@
               "id": "DCTRK",
               "name": "DCTRK / Stadium",
               "type": "course_to_fix",
-              "point": [
-                40.7625305556,
-                -73.8371388889
-              ],
+              "point": [40.7625305556, -73.8371388889],
               "fly_over": true,
               "course_deg": 359,
               "reference": "Stadium",

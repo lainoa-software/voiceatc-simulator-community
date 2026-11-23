@@ -4,9 +4,7 @@
     {
       "id": "RPMR_APP",
       "call_sign": "General Santos City approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

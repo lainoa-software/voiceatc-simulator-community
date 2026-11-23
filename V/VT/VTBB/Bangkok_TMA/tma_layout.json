@@ -4,77 +4,38 @@
     "VTBD_APP": {
       "BANGKOK_APP": {
         "positions": {
-          "VTBD_APP": [
-            "VTBB_APP"
-          ]
+          "VTBD_APP": ["VTBB_APP"]
         },
-        "airports": [
-          "VTBD",
-          "VTBS"
-        ]
+        "airports": ["VTBD", "VTBS"]
       },
       "BANGKOK_APP_VTBS_ONLY": {
         "positions": {
-          "VTBS_APP": [
-            "VTBS_APP"
-          ]
+          "VTBS_APP": ["VTBS_APP"]
         },
-        "airports": [
-          "VTBS"
-        ]
+        "airports": ["VTBS"]
       },
       "BANGKOK_SPLIT_SOUTH": {
         "positions": {
-          "VTBS_DEPS_APP": [
-            "VTBS_DEP_S"
-          ],
-          "VTBS_ARRS_APP": [
-            "VTBS_ARR_S"
-          ],
-          "VTBD_VTBBAPPS_APP": [
-            "VTBB_APP_S"
-          ]
+          "VTBS_DEPS_APP": ["VTBS_DEP_S"],
+          "VTBS_ARRS_APP": ["VTBS_ARR_S"],
+          "VTBD_VTBBAPPS_APP": ["VTBB_APP_S"]
         },
-        "airports": [
-          "VTBS",
-          "VTBD"
-        ],
+        "airports": ["VTBS", "VTBD"],
         "valid_for_runways": {
-          "VTBD": [
-            "19_20",
-            "21"
-          ],
-          "VTBS": [
-            "19_20",
-            "21"
-          ]
+          "VTBD": ["19_20", "21"],
+          "VTBS": ["19_20", "21"]
         }
       },
       "BANGKOK_SPLIT_NORTH": {
         "positions": {
-          "VTBS_DEPN_APP": [
-            "VTBS_DEP_N"
-          ],
-          "VTBS_ARRN_APP": [
-            "VTBS_ARR_N"
-          ],
-          "VTBD_VTBBAPPN_APP": [
-            "VTBB_APP_N"
-          ]
+          "VTBS_DEPN_APP": ["VTBS_DEP_N"],
+          "VTBS_ARRN_APP": ["VTBS_ARR_N"],
+          "VTBD_VTBBAPPN_APP": ["VTBB_APP_N"]
         },
-        "airports": [
-          "VTBS",
-          "VTBD"
-        ],
+        "airports": ["VTBS", "VTBD"],
         "valid_for_runways": {
-          "VTBD": [
-            "01_02",
-            "03"
-          ],
-          "VTBS": [
-            "01_02",
-            "03"
-          ]
+          "VTBD": ["01_02", "03"],
+          "VTBS": ["01_02", "03"]
         }
       }
     }

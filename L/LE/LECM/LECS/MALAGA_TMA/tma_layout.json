@@ -4,18 +4,11 @@
     "LEMG_APP": {
       "1": {
         "positions": {
-          "LEMG_APP": [
-            "LEMGALL"
-          ]
+          "LEMG_APP": ["LEMGALL"]
         },
-        "airports": [
-          "LEMG"
-        ],
+        "airports": ["LEMG"],
         "valid_for_runways": {
-          "LEMG": [
-            "SOUTH",
-            "NORTH"
-          ]
+          "LEMG": ["SOUTH", "NORTH"]
         }
       }
     }

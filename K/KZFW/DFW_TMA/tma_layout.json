@@ -4,62 +4,38 @@
     "KDFW_APP": {
       "SOUTH_EAST": {
         "positions": {
-          "KDFW_APP": [
-            "KDFWAPP"
-          ]
+          "KDFW_APP": ["KDFWAPP"]
         },
-        "airports": [
-          "KDFW"
-        ],
+        "airports": ["KDFW"],
         "valid_for_runways": {
-          "KDFW": [
-            "SOUTH_EAST"
-          ]
+          "KDFW": ["SOUTH_EAST"]
         }
       },
       "SOUTH_WEST": {
         "positions": {
-          "KDFW_APP": [
-            "KDFWAPP"
-          ]
+          "KDFW_APP": ["KDFWAPP"]
         },
-        "airports": [
-          "KDFW"
-        ],
+        "airports": ["KDFW"],
         "valid_for_runways": {
-          "KDFW": [
-            "SOUTH_WEST"
-          ]
+          "KDFW": ["SOUTH_WEST"]
         }
       },
       "NORTH_EAST": {
         "positions": {
-          "KDFW_APP": [
-            "KDFWAPP"
-          ]
+          "KDFW_APP": ["KDFWAPP"]
         },
-        "airports": [
-          "KDFW"
-        ],
+        "airports": ["KDFW"],
         "valid_for_runways": {
-          "KDFW": [
-            "NORTH_EAST"
-          ]
+          "KDFW": ["NORTH_EAST"]
         }
       },
       "NORTH_WEST": {
         "positions": {
-          "KDFW_APP": [
-            "KDFWAPP"
-          ]
+          "KDFW_APP": ["KDFWAPP"]
         },
-        "airports": [
-          "KDFW"
-        ],
+        "airports": ["KDFW"],
         "valid_for_runways": {
-          "KDFW": [
-            "NORTH_WEST"
-          ]
+          "KDFW": ["NORTH_WEST"]
         }
       }
     }

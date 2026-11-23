@@ -23,6 +23,10 @@
           "clearance_name": "Harbor Visual",
           "entry_point_id": "SUQUAMISH_TRACE",
           "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "final": {
+            "course_deg": 150.2,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "SUQUAMISH_TRACE",
@@ -71,8 +75,7 @@
               "longitude": -122.35,
               "fly_over": false
             }
-          ],
-          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+          ]
         },
         {
           "id": "NORTH_LAKE_WASHINGTON",
@@ -80,6 +83,10 @@
           "clearance_name": "Harbor Visual",
           "entry_point_id": "NORTH_LAKE_TRACE",
           "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "final": {
+            "course_deg": 150.2,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "NORTH_LAKE_TRACE",
@@ -128,8 +135,7 @@
               "longitude": -122.35,
               "fly_over": false
             }
-          ],
-          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+          ]
         },
         {
           "id": "SOUTH_VASHON",
@@ -137,6 +143,10 @@
           "clearance_name": "Harbor Visual",
           "entry_point_id": "VASHON_NORTH_TRACE",
           "sight_reference_point_id": "HARBOR_ISLAND_TRACE",
+          "final": {
+            "course_deg": 150.2,
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "VASHON_NORTH_TRACE",
@@ -180,8 +190,7 @@
               "longitude": -122.35,
               "fly_over": false
             }
-          ],
-          "final": { "course_deg": 150.2, "glidepath_deg": 3.0 }
+          ]
         }
       ]
     }

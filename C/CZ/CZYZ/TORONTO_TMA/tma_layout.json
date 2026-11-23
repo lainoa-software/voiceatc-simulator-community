@@ -4,13 +4,9 @@
     "CYYZ_APP": {
       "TORONTO_APP": {
         "positions": {
-          "CYYZ_APP": [
-            "CYYZ_APP"
-          ]
+          "CYYZ_APP": ["CYYZ_APP"]
         },
-        "airports": [
-          "CYYZ"
-        ]
+        "airports": ["CYYZ"]
       }
     }
   }

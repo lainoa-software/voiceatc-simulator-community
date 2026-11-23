@@ -4,13 +4,9 @@
     "RPVP_APP": {
       "PUERTO_PRINCESA": {
         "positions": {
-          "RPVP_APP": [
-            "RPVP_APP"
-          ]
+          "RPVP_APP": ["RPVP_APP"]
         },
-        "airports": [
-          "RPVP"
-        ]
+        "airports": ["RPVP"]
       }
     }
   }

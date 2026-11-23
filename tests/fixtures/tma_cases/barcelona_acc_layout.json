@@ -4,9 +4,7 @@
     "BCN_CTR": {
       "1": {
         "positions": {
-          "LECB_DDX_CTR": [
-            "LEBLDDX"
-          ]
+          "LECB_DDX_CTR": ["LEBLDDX"]
         }
       }
     }

@@ -4,13 +4,9 @@
     "RCFN_APP": {
       "TAITUNG": {
         "positions": {
-          "RCFN_APP": [
-            "RCFN_APP"
-          ]
+          "RCFN_APP": ["RCFN_APP"]
         },
-        "airports": [
-          "RCFN"
-        ]
+        "airports": ["RCFN"]
       }
     }
   }

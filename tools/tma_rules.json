@@ -25,10 +25,7 @@
       "playable": false
     }
   },
-  "zone_kinds": [
-    "CTR",
-    "ATZ"
-  ],
+  "zone_kinds": ["CTR", "ATZ"],
   "code_pattern": "^[A-Z0-9]{4}(_(?!ALL_)[A-Z0-9]+)?_(TWR|APP|CTR|AFIS)$",
   "messages": {
     "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",

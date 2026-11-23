@@ -8,27 +8,19 @@
       "spawn": true
     },
     {
-      "sids": [
-        "BARD3B"
-      ],
+      "sids": ["BARD3B"],
       "spawn": false
     },
     {
-      "sids": [
-        "BARD3N"
-      ],
+      "sids": ["BARD3N"],
       "spawn": false
     },
     {
-      "sids": [
-        "BARD3V"
-      ],
+      "sids": ["BARD3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "BARD3X"
-      ],
+      "sids": ["BARD3X"],
       "spawn": false,
       "aircraft": {
         "only": {
@@ -66,15 +58,11 @@
       }
     },
     {
-      "sids": [
-        "BARD6W"
-      ],
+      "sids": ["BARD6W"],
       "spawn": false
     },
     {
-      "sids": [
-        "CCS2X"
-      ],
+      "sids": ["CCS2X"],
       "spawn": false,
       "aircraft": {
         "only": {
@@ -112,147 +100,99 @@
       }
     },
     {
-      "sids": [
-        "CCS4B"
-      ],
+      "sids": ["CCS4B"],
       "spawn": false
     },
     {
-      "sids": [
-        "CCS4N"
-      ],
+      "sids": ["CCS4N"],
       "spawn": false
     },
     {
-      "sids": [
-        "CCS4V"
-      ],
+      "sids": ["CCS4V"],
       "spawn": false
     },
     {
-      "sids": [
-        "CCS5W"
-      ],
+      "sids": ["CCS5W"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEMD1B"
-      ],
+      "sids": ["LEMD1B"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEMD1N"
-      ],
+      "sids": ["LEMD1N"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEMD1V"
-      ],
+      "sids": ["LEMD1V"],
       "spawn": false
     },
     {
-      "sids": [
-        "LEMD1W"
-      ],
+      "sids": ["LEMD1W"],
       "spawn": false
     },
     {
-      "sids": [
-        "NAND3B"
-      ],
+      "sids": ["NAND3B"],
       "spawn": false
     },
     {
-      "sids": [
-        "NAND3N"
-      ],
+      "sids": ["NAND3N"],
       "spawn": false
     },
     {
-      "sids": [
-        "NAND3V"
-      ],
+      "sids": ["NAND3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "NAND6W"
-      ],
+      "sids": ["NAND6W"],
       "spawn": false
     },
     {
-      "sids": [
-        "PINA3N"
-      ],
+      "sids": ["PINA3N"],
       "spawn": false
     },
     {
-      "sids": [
-        "PINA3V"
-      ],
+      "sids": ["PINA3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "PINA4B"
-      ],
+      "sids": ["PINA4B"],
       "spawn": false
     },
     {
-      "sids": [
-        "PINA4N"
-      ],
+      "sids": ["PINA4N"],
       "spawn": false
     },
     {
-      "sids": [
-        "PINA7W"
-      ],
+      "sids": ["PINA7W"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO3B"
-      ],
+      "sids": ["RBO3B"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO3N"
-      ],
+      "sids": ["RBO3N"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO3V"
-      ],
+      "sids": ["RBO3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO4N"
-      ],
+      "sids": ["RBO4N"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO6W"
-      ],
+      "sids": ["RBO6W"],
       "spawn": false
     },
     {
-      "sids": [
-        "RBO7W"
-      ],
+      "sids": ["RBO7W"],
       "spawn": false
     },
     {
-      "sids": [
-        "SIE1X"
-      ],
+      "sids": ["SIE1X"],
       "spawn": false,
       "aircraft": {
         "only": {
@@ -290,57 +230,39 @@
       }
     },
     {
-      "sids": [
-        "SIE2N"
-      ],
+      "sids": ["SIE2N"],
       "spawn": false
     },
     {
-      "sids": [
-        "SIE2U"
-      ],
+      "sids": ["SIE2U"],
       "spawn": false
     },
     {
-      "sids": [
-        "SIE3W"
-      ],
+      "sids": ["SIE3W"],
       "spawn": false
     },
     {
-      "sids": [
-        "SIE4B"
-      ],
+      "sids": ["SIE4B"],
       "spawn": false
     },
     {
-      "sids": [
-        "SIE5V"
-      ],
+      "sids": ["SIE5V"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB1R"
-      ],
+      "sids": ["VTB1R"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB2N"
-      ],
+      "sids": ["VTB2N"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB2R"
-      ],
+      "sids": ["VTB2R"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB2X"
-      ],
+      "sids": ["VTB2X"],
       "spawn": false,
       "aircraft": {
         "only": {
@@ -378,51 +300,35 @@
       }
     },
     {
-      "sids": [
-        "VTB3B"
-      ],
+      "sids": ["VTB3B"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB3V"
-      ],
+      "sids": ["VTB3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "VTB7W"
-      ],
+      "sids": ["VTB7W"],
       "spawn": false
     },
     {
-      "sids": [
-        "ZMR2N"
-      ],
+      "sids": ["ZMR2N"],
       "spawn": false
     },
     {
-      "sids": [
-        "ZMR3B"
-      ],
+      "sids": ["ZMR3B"],
       "spawn": false
     },
     {
-      "sids": [
-        "ZMR3V"
-      ],
+      "sids": ["ZMR3V"],
       "spawn": false
     },
     {
-      "sids": [
-        "ZMR3W"
-      ],
+      "sids": ["ZMR3W"],
       "spawn": false
     },
     {
-      "sids": [
-        "ZMR3X"
-      ],
+      "sids": ["ZMR3X"],
       "spawn": false,
       "aircraft": {
         "only": {

@@ -4,28 +4,13 @@
     "ESGG_APP": {
       "1": {
         "positions": {
-          "ESGG_APP": [
-            "GE"
-          ]
+          "ESGG_APP": ["GE"]
         },
-        "airports": [
-          "ESGG",
-          "ESGT",
-          "ESIB"
-        ],
+        "airports": ["ESGG", "ESGT", "ESIB"],
         "valid_for_runways": {
-          "ESGG": [
-            "03",
-            "21"
-          ],
-          "ESGT": [
-            "03",
-            "21"
-          ],
-          "ESIB": [
-            "03",
-            "21"
-          ]
+          "ESGG": ["03", "21"],
+          "ESGT": ["03", "21"],
+          "ESIB": ["03", "21"]
         }
       }
     }

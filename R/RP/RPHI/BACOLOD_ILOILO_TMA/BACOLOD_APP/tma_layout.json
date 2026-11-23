@@ -4,13 +4,9 @@
     "RPVB_APP": {
       "BACOLOD": {
         "positions": {
-          "RPVB_APP": [
-            "RPVB_APP"
-          ]
+          "RPVB_APP": ["RPVB_APP"]
         },
-        "airports": [
-          "RPVB"
-        ]
+        "airports": ["RPVB"]
       }
     }
   }

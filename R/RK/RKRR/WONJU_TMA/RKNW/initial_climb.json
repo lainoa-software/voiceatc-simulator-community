@@ -4,9 +4,7 @@
   "airac_min": 2610,
   "exceptions": [
     {
-      "sids": [
-        "HGS1D"
-      ],
+      "sids": ["HGS1D"],
       "initial_climb_ft": 7000
     }
   ]

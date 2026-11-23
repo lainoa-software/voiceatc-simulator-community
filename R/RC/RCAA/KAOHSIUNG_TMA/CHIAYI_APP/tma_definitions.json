@@ -4,9 +4,7 @@
     {
       "id": "RCKU_APP",
       "call_sign": "Chiayi approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

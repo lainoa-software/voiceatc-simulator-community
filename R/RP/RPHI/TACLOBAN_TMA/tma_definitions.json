@@ -4,9 +4,7 @@
     {
       "id": "RPVA_APP",
       "call_sign": "Tacloban approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

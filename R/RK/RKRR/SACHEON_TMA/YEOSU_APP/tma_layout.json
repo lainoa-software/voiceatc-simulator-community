@@ -4,13 +4,9 @@
     "RKJY_APP": {
       "YEOSU": {
         "positions": {
-          "RKJY_APP": [
-            "RKJY_APP"
-          ]
+          "RKJY_APP": ["RKJY_APP"]
         },
-        "airports": [
-          "RKJY"
-        ]
+        "airports": ["RKJY"]
       }
     }
   }

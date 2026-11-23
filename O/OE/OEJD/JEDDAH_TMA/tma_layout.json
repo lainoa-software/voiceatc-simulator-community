@@ -4,13 +4,9 @@
     "OEJN_APP": {
       "JEDDAH_APP": {
         "positions": {
-          "OEJN_APP": [
-            "OEJN_APP"
-          ]
+          "OEJN_APP": ["OEJN_APP"]
         },
-        "airports": [
-          "OEJN"
-        ]
+        "airports": ["OEJN"]
       }
     }
   }

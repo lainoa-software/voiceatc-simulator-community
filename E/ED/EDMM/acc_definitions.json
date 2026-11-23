@@ -4,9 +4,7 @@
     {
       "id": "EDMM_CTR",
       "call_sign": "Munich Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "134.150",
         "118.235",

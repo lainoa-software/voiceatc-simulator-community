@@ -8,363 +8,203 @@
       "spawn": true
     },
     {
-      "sids": [
-        "ALBO1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["ALBO1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "BONV1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["BONV1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "DOSB1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["DOSB1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "GORS1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["GORS1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "HHN1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["HHN1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "KASN1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["KASN1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "KIGO1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["KIGO1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "NOBE2B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["NOBE2B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "NUNL1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["NUNL1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "OLVU1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["OLVU1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "PAST1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["PAST1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "REGO1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["REGO1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "RIVD1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["RIVD1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "ROBK1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["ROBK1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "RYN1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["RYN1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "SABI2B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["SABI2B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "SEMB2B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["SEMB2B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "TARE1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["TARE1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "UKER1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["UKER1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "UPKU1B"
-      ],
-      "runways": [
-        "03L"
-      ],
+      "sids": ["UPKU1B"],
+      "runways": ["03L"],
       "spawn": false
     },
     {
-      "sids": [
-        "ALBO1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["ALBO1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "BONV1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["BONV1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "DOSB1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["DOSB1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "GORS1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["GORS1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "HHN1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["HHN1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "KASN1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["KASN1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "KIGO1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["KIGO1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "NOBE2D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["NOBE2D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "NUNL1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["NUNL1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "OLVU1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["OLVU1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "PAST1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["PAST1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "REGO1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["REGO1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "RIVD1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["RIVD1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "ROBK1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["ROBK1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "RYN1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["RYN1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "SABI2D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["SABI2D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "SEMB2D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["SEMB2D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "TARE1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["TARE1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "UKER1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["UKER1D"],
+      "runways": ["03R"],
       "spawn": false
     },
     {
-      "sids": [
-        "UPKU1D"
-      ],
-      "runways": [
-        "03R"
-      ],
+      "sids": ["UPKU1D"],
+      "runways": ["03R"],
       "spawn": false
     }
   ]

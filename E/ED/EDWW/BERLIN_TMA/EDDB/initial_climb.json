@@ -5,15 +5,11 @@
   "initial_climb_ft": 5000,
   "exceptions": [
     {
-      "sids": [
-        "KISU1Q"
-      ],
+      "sids": ["KISU1Q"],
       "initial_climb_ft": 8000
     },
     {
-      "sids": [
-        "SUKI3Q"
-      ],
+      "sids": ["SUKI3Q"],
       "initial_climb_ft": 8000
     }
   ]

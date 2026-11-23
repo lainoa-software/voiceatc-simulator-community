@@ -4,152 +4,92 @@
     "KORD_APP": {
       "WEST_FLOW_DUAL": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "WEST_FLOW_DUAL"
-          ]
+          "KORD": ["WEST_FLOW_DUAL"]
         }
       },
       "WEST_FLOW_TRIPLE": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "WEST_FLOW_TRIPLE"
-          ]
+          "KORD": ["WEST_FLOW_TRIPLE"]
         }
       },
       "WEST_FLOW_NOISE_ABATEMENT": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "WEST_FLOW_NOISE_ABATEMENT"
-          ]
+          "KORD": ["WEST_FLOW_NOISE_ABATEMENT"]
         }
       },
       "EAST_FLOW_DUAL_1": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "EAST_FLOW_DUAL_1"
-          ]
+          "KORD": ["EAST_FLOW_DUAL_1"]
         }
       },
       "EAST_FLOW_DUAL_2": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "EAST_FLOW_DUAL_2"
-          ]
+          "KORD": ["EAST_FLOW_DUAL_2"]
         }
       },
       "EAST_FLOW_TRIPLE_1": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "EAST_FLOW_TRIPLE_1"
-          ]
+          "KORD": ["EAST_FLOW_TRIPLE_1"]
         }
       },
       "EAST_FLOW_TRIPLE_2": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "EAST_FLOW_TRIPLE_2"
-          ]
+          "KORD": ["EAST_FLOW_TRIPLE_2"]
         }
       },
       "EAST_FLOW_NOISE_ABATEMENT": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "EAST_FLOW_NOISE_ABATEMENT"
-          ]
+          "KORD": ["EAST_FLOW_NOISE_ABATEMENT"]
         }
       },
       "4S": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "4S"
-          ]
+          "KORD": ["4S"]
         }
       },
       "22S": {
         "positions": {
-          "KORD_APP": [
-            "KORDAPP"
-          ]
+          "KORD_APP": ["KORDAPP"]
         },
-        "airports": [
-          "KORD"
-        ],
+        "airports": ["KORD"],
         "valid_for_runways": {
-          "KORD": [
-            "22S"
-          ]
+          "KORD": ["22S"]
         }
       }
     }

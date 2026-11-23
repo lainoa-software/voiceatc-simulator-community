@@ -4,18 +4,11 @@
     "EFHK_APP": {
       "1": {
         "positions": {
-          "EFHK_APP": [
-            "HKCTAE_HKCTAW_HKTMAL_HKTMAU"
-          ]
+          "EFHK_APP": ["HKCTAE_HKCTAW_HKTMAL_HKTMAU"]
         },
-        "airports": [
-          "EFHK"
-        ],
+        "airports": ["EFHK"],
         "valid_for_runways": {
-          "EFHK": [
-            "22 PARA",
-            "04 PARA"
-          ]
+          "EFHK": ["22 PARA", "04 PARA"]
         }
       }
     }

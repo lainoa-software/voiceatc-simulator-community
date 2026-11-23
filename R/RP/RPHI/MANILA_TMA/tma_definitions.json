@@ -4,9 +4,7 @@
     {
       "id": "RPLL_APP",
       "call_sign": "Manila approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

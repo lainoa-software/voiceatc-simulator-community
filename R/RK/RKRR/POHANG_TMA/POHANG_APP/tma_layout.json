@@ -4,13 +4,9 @@
     "RKTH_APP": {
       "POHANG": {
         "positions": {
-          "RKTH_APP": [
-            "RKTH_APP"
-          ]
+          "RKTH_APP": ["RKTH_APP"]
         },
-        "airports": [
-          "RKTH"
-        ]
+        "airports": ["RKTH"]
       }
     }
   }

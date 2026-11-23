@@ -4,9 +4,7 @@
     {
       "id": "RPVK_APP",
       "call_sign": "Kalibo approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

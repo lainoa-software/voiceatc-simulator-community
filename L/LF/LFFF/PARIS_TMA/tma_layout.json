@@ -4,41 +4,27 @@
     "LFPG_APP": {
       "WEST": {
         "positions": {
-          "LFPG_APP": [
-            "CDGAPP"
-          ]
+          "LFPG_APP": ["CDGAPP"]
         },
-        "airports": [
-          "LFPG"
-        ],
+        "airports": ["LFPG"],
         "valid_for_runways": {
-          "LFPG": [
-            "WEST"
-          ]
+          "LFPG": ["WEST"]
         }
       },
       "EAST": {
         "positions": {
-          "LFPG_APP": [
-            "CDGAPP"
-          ]
+          "LFPG_APP": ["CDGAPP"]
         },
-        "airports": [
-          "LFPG"
-        ],
+        "airports": ["LFPG"],
         "valid_for_runways": {
-          "LFPG": [
-            "EAST"
-          ]
+          "LFPG": ["EAST"]
         }
       }
     },
     "LFPO_APP": {
       "1": {
         "positions": {
-          "LFPO_APP": [
-            "LFPOAPP"
-          ]
+          "LFPO_APP": ["LFPOAPP"]
         }
       }
     }

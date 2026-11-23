@@ -1,7 +1,5 @@
 {
   "schema": 3,
-  "airports": [
-    "EFHK"
-  ],
+  "airports": ["EFHK"],
   "line_sections": []
 }

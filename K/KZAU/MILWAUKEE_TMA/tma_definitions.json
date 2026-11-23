@@ -4,9 +4,7 @@
     {
       "id": "KMKE_APP",
       "call_sign": "Milwaukee approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

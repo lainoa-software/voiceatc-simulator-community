@@ -4,9 +4,7 @@
     {
       "id": "KLGA_APP",
       "call_sign": "New York approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,9 +4,7 @@
     {
       "id": "RPMZ_APP",
       "call_sign": "Zamboanga approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

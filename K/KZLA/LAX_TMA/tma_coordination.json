@@ -5,518 +5,307 @@
       "name": "KLAX_ARR_ANJLL_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "ANJLL"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["ANJLL"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_HLYWD_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "HLYWD"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["HLYWD"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_HUULL_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "HUULL"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["HUULL"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_IRNMN_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "IRNMN"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["IRNMN"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_SNSTT_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "SNSTT"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["SNSTT"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_SEAVU_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "SEAVU"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["SEAVU"],
       "level": "A160",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_VTU_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "VTU"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["VTU"],
       "level": "A110",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_SYMON_W",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "SYMON"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["SYMON"],
       "level": "A120",
-      "runways": [
-        "24R",
-        "25L"
-      ]
+      "runways": ["24R", "25L"]
     },
     {
       "name": "KLAX_ARR_ZUUMA",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "ZUUMA"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["ZUUMA"],
       "level": "A160"
     },
     {
       "name": "KLAX_ARR_BIGBR_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "BIGBR"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["BIGBR"],
       "level": "A160",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_BRUEN_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "BRUEN"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["BRUEN"],
       "level": "A160",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_LAADY_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "LAADY"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["LAADY"],
       "level": "A150",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_BASET_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "BASET"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["BASET"],
       "level": "A160",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_EXERT_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "EXERT"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["EXERT"],
       "level": "A060",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_PAULA_E",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "PAULA"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["PAULA"],
       "level": "A110",
-      "runways": [
-        "06L",
-        "07R"
-      ]
+      "runways": ["06L", "07R"]
     },
     {
       "name": "KLAX_ARR_MDNYT_O",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "MDNYT"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["MDNYT"],
       "level": "A160",
-      "runways": [
-        "06R"
-      ]
+      "runways": ["06R"]
     },
     {
       "name": "KLAX_ARR_BASET_O",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "BASET"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["BASET"],
       "level": "A160",
-      "runways": [
-        "06R"
-      ]
+      "runways": ["06R"]
     },
     {
       "name": "KLAX_ARR_EXERT_O",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "EXERT"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["EXERT"],
       "level": "A060",
-      "runways": [
-        "06R"
-      ]
+      "runways": ["06R"]
     },
     {
       "name": "KLAX_ARR_GOATZ_O",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "GOATZ"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["GOATZ"],
       "level": "A160",
-      "runways": [
-        "06R"
-      ]
+      "runways": ["06R"]
     },
     {
       "name": "KLAX_ARR_SLI_EO",
       "from": "KZLA_CTR",
       "to": "KLAX_APP",
-      "arrives": [
-        "KLAX"
-      ],
-      "fix": [
-        "SLI"
-      ],
+      "arrives": ["KLAX"],
+      "fix": ["SLI"],
       "level": "A050",
-      "runways": [
-        "06L",
-        "07R",
-        "06R"
-      ]
+      "runways": ["06L", "07R", "06R"]
     },
     {
       "name": "KLAX_DEP_GMN_E",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "GMN"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["GMN"],
       "level": "A130",
-      "runways": [
-        "06R",
-        "07L"
-      ]
+      "runways": ["06R", "07L"]
     },
     {
       "name": "KLAX_DEP_COREZ_E",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "COREZ"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["COREZ"],
       "level": "A130",
-      "runways": [
-        "06R",
-        "07L"
-      ]
+      "runways": ["06R", "07L"]
     },
     {
       "name": "KLAX_DEP_CSTRO_E",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "CSTRO"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["CSTRO"],
       "level": "A130",
-      "runways": [
-        "06R",
-        "07L"
-      ]
+      "runways": ["06R", "07L"]
     },
     {
       "name": "KLAX_DEP_GARDY",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "GARDY"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["GARDY"],
       "level": "A130"
     },
     {
       "name": "KLAX_DEP_SLI",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "SLI"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["SLI"],
       "level": "A170"
     },
     {
       "name": "KLAX_DEP_TRM",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "TRM"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["TRM"],
       "level": "A170"
     },
     {
       "name": "KLAX_DEP_DAG",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "DAG"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["DAG"],
       "level": "A170"
     },
     {
       "name": "KLAX_DEP_ORCKA",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "ORCKA"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["ORCKA"],
       "level": "A150"
     },
     {
       "name": "KLAX_DEP_DOTSS",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "DOTSS"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["DOTSS"],
       "level": "A170"
     },
     {
       "name": "KLAX_DEP_SXC",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "SXC"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["SXC"],
       "level": "A160"
     },
     {
       "name": "KLAX_DEP_MUELR",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "MUELR"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["MUELR"],
       "level": "A100"
     },
     {
       "name": "KLAX_DEP_KYLOW_O",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "KYLOW"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["KYLOW"],
       "level": "A120",
-      "runways": [
-        "25R"
-      ]
+      "runways": ["25R"]
     },
     {
       "name": "KLAX_DEP_ZILLI_O",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "ZILLI"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["ZILLI"],
       "level": "A130",
-      "runways": [
-        "25R"
-      ]
+      "runways": ["25R"]
     },
     {
       "name": "KLAX_DEP_VTU_O",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "VTU"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["VTU"],
       "level": "A130",
-      "runways": [
-        "25R"
-      ]
+      "runways": ["25R"]
     },
     {
       "name": "KLAX_DEP_MOOOS_O",
       "from": "KLAX_APP",
       "to": "KZLA_CTR",
-      "departs": [
-        "KLAX"
-      ],
-      "fix": [
-        "MOOOS"
-      ],
+      "departs": ["KLAX"],
+      "fix": ["MOOOS"],
       "level": "A090",
-      "runways": [
-        "25R"
-      ]
+      "runways": ["25R"]
     }
   ]
 }

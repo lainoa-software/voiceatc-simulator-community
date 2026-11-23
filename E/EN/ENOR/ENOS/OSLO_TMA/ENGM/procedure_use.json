@@ -8,93 +8,53 @@
       "spawn": true
     },
     {
-      "sids": [
-        "MASE4A"
-      ],
-      "runways": [
-        "01L"
-      ],
+      "sids": ["MASE4A"],
+      "runways": ["01L"],
       "spawn": false
     },
     {
-      "sids": [
-        "OKSA4A"
-      ],
-      "runways": [
-        "01L"
-      ],
+      "sids": ["OKSA4A"],
+      "runways": ["01L"],
       "spawn": false
     },
     {
-      "sids": [
-        "VEMI5A"
-      ],
-      "runways": [
-        "01L"
-      ],
+      "sids": ["VEMI5A"],
+      "runways": ["01L"],
       "spawn": false
     },
     {
-      "sids": [
-        "ATLA9B"
-      ],
-      "runways": [
-        "01R"
-      ],
+      "sids": ["ATLA9B"],
+      "runways": ["01R"],
       "spawn": false
     },
     {
-      "sids": [
-        "EVTO9B"
-      ],
-      "runways": [
-        "01R"
-      ],
+      "sids": ["EVTO9B"],
+      "runways": ["01R"],
       "spawn": false
     },
     {
-      "sids": [
-        "ATLA3C"
-      ],
-      "runways": [
-        "19L"
-      ],
+      "sids": ["ATLA3C"],
+      "runways": ["19L"],
       "spawn": false
     },
     {
-      "sids": [
-        "EVTO3C"
-      ],
-      "runways": [
-        "19L"
-      ],
+      "sids": ["EVTO3C"],
+      "runways": ["19L"],
       "spawn": false
     },
     {
-      "sids": [
-        "MASE6D"
-      ],
-      "runways": [
-        "19R"
-      ],
+      "sids": ["MASE6D"],
+      "runways": ["19R"],
       "spawn": false
     },
     {
-      "sids": [
-        "OKSA6D"
-      ],
-      "runways": [
-        "19R"
-      ],
+      "sids": ["OKSA6D"],
+      "runways": ["19R"],
       "spawn": false
     },
     {
-      "sids": [
-        "VEMI1D"
-      ],
-      "runways": [
-        "19R"
-      ],
+      "sids": ["VEMI1D"],
+      "runways": ["19R"],
       "spawn": false
     }
   ]

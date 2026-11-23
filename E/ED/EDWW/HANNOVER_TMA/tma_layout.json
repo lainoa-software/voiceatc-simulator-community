@@ -4,27 +4,12 @@
     "EDDV_APP": {
       "1": {
         "positions": {
-          "EDDV_APP": [
-            "HAN"
-          ]
+          "EDDV_APP": ["HAN"]
         },
-        "airports": [
-          "EDDV",
-          "EDVE"
-        ],
+        "airports": ["EDDV", "EDVE"],
         "valid_for_runways": {
-          "EDDV": [
-            "08",
-            "26",
-            "09",
-            "27"
-          ],
-          "EDVE": [
-            "08",
-            "26",
-            "09",
-            "27"
-          ]
+          "EDDV": ["08", "26", "09", "27"],
+          "EDVE": ["08", "26", "09", "27"]
         }
       }
     }

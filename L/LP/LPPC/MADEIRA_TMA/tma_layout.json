@@ -4,27 +4,12 @@
     "LPMA_APP": {
       "MADEIRA_TMA_SPLIT": {
         "positions": {
-          "LPMA_APP": [
-            "MATMA"
-          ]
+          "LPMA_APP": ["MATMA"]
         },
-        "airports": [
-          "LPMA",
-          "LPPS"
-        ],
+        "airports": ["LPMA", "LPPS"],
         "valid_for_runways": {
-          "LPMA": [
-            "LPMA_05",
-            "LPMA_23",
-            "LPPS_18",
-            "LPPS_36"
-          ],
-          "LPPS": [
-            "LPMA_05",
-            "LPMA_23",
-            "LPPS_18",
-            "LPPS_36"
-          ]
+          "LPMA": ["LPMA_05", "LPMA_23", "LPPS_18", "LPPS_36"],
+          "LPPS": ["LPMA_05", "LPMA_23", "LPPS_18", "LPPS_36"]
         }
       }
     }

@@ -5,12 +5,7 @@
       "name": "LECS_SEVILLA_TMA_F210",
       "from": "LECS_CTR",
       "to": "LEJR_APP",
-      "arrives": [
-        "LEZL",
-        "LEMO",
-        "LERT",
-        "LEJR"
-      ],
+      "arrives": ["LEZL", "LEMO", "LERT", "LEJR"],
       "level": "F210"
     }
   ]

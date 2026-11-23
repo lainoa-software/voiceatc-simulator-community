@@ -4,25 +4,15 @@
     {
       "id": "KBOS_APP",
       "call_sign": "Boston Approach",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "120.600",
-        "127.200"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["120.600", "127.200"]
     },
     {
       "id": "KBOS_TWR",
       "call_sign": "Boston Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KBOS",
-      "unassigned_frequencies": [
-        "128.800",
-        "132.225"
-      ]
+      "unassigned_frequencies": ["128.800", "132.225"]
     }
   ],
   "positions": [

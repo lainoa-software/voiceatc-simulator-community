@@ -4,39 +4,27 @@
   "airac_min": 2610,
   "exceptions": [
     {
-      "sids": [
-        "APAR1A"
-      ],
+      "sids": ["APAR1A"],
       "initial_climb_ft": 6000
     },
     {
-      "sids": [
-        "APAR7S"
-      ],
+      "sids": ["APAR7S"],
       "initial_climb_ft": 6000
     },
     {
-      "sids": [
-        "APAR8N"
-      ],
+      "sids": ["APAR8N"],
       "initial_climb_ft": 6000
     },
     {
-      "sids": [
-        "KPO1A"
-      ],
+      "sids": ["KPO1A"],
       "initial_climb_ft": 6000
     },
     {
-      "sids": [
-        "KPO7S"
-      ],
+      "sids": ["KPO7S"],
       "initial_climb_ft": 6000
     },
     {
-      "sids": [
-        "KPO8N"
-      ],
+      "sids": ["KPO8N"],
       "initial_climb_ft": 6000
     }
   ]

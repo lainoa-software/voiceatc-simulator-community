@@ -4,9 +4,7 @@
     {
       "id": "LEJR_APP",
       "call_sign": "Jerez approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

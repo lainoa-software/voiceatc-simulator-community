@@ -4,9 +4,7 @@
     {
       "id": "RPVD_APP",
       "call_sign": "Dumaguete approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

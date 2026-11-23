@@ -4,9 +4,7 @@
     {
       "id": "KZDC_CTR",
       "call_sign": "Washington Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "133.725",
         "118.025",

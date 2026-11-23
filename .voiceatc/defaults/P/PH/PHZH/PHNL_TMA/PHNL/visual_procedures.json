@@ -23,6 +23,10 @@
           "clearance_name": "Kahe Power Plant Visual",
           "entry_point_id": "KAHE_TRACE",
           "sight_reference_point_id": "KAHE_TRACE",
+          "final": {
+            "course_deg": 233,
+            "glidepath_deg": 3.44
+          },
           "legs": [
             {
               "id": "KAHE_TRACE",
@@ -84,11 +88,7 @@
               "course_deg": 233,
               "reference": "RWY 22L final"
             }
-          ],
-          "final": {
-            "course_deg": 233,
-            "glidepath_deg": 3.44
-          }
+          ]
         }
       ]
     },
@@ -113,6 +113,9 @@
           "clearance_name": "Waialae Golf Course Visual",
           "entry_point_id": "CKH",
           "sight_reference_point_id": "WAIALAE_TRACE",
+          "final": {
+            "glidepath_deg": 3.44
+          },
           "legs": [
             {
               "id": "CKH",
@@ -153,10 +156,7 @@
               "longitude": -157.89,
               "fly_over": false
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.44
-          }
+          ]
         }
       ]
     }

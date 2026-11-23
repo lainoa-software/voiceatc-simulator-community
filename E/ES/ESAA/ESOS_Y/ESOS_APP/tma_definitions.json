@@ -4,9 +4,7 @@
     {
       "id": "ESOW_APP",
       "call_sign": "Stockholm approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

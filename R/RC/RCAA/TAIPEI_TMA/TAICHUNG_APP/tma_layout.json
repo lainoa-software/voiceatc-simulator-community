@@ -4,13 +4,9 @@
     "RCMQ_APP": {
       "TAICHUNG": {
         "positions": {
-          "RCMQ_APP": [
-            "RCMQ_APP"
-          ]
+          "RCMQ_APP": ["RCMQ_APP"]
         },
-        "airports": [
-          "RCMQ"
-        ]
+        "airports": ["RCMQ"]
       }
     }
   }

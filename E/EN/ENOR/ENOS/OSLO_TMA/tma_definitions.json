@@ -4,9 +4,7 @@
     {
       "id": "ENGM_APP",
       "call_sign": "Oslo approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

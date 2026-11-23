@@ -4,9 +4,7 @@
     {
       "id": "LPCR_APP",
       "call_sign": "Corvo approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

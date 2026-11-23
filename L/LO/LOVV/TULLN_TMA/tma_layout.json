@@ -4,92 +4,56 @@
     "LOXT_APP": {
       "TULLN_TMA_WHOLE_LOXT_08L": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_08L"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_08L"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_08L"
-          ]
+          "LOXT": ["LOXT_08L"]
         }
       },
       "TULLN_TMA_WHOLE_LOXT_26R": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_26R"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_26R"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_26R"
-          ]
+          "LOXT": ["LOXT_26R"]
         }
       },
       "TULLN_TMA_WHOLE_LOXT_13": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_13"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_13"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_13"
-          ]
+          "LOXT": ["LOXT_13"]
         }
       },
       "TULLN_TMA_WHOLE_LOXT_31": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_31"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_31"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_31"
-          ]
+          "LOXT": ["LOXT_31"]
         }
       },
       "TULLN_TMA_WHOLE_LOXT_05": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_05"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_05"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_05"
-          ]
+          "LOXT": ["LOXT_05"]
         }
       },
       "TULLN_TMA_WHOLE_LOXT_23": {
         "positions": {
-          "LOXT_APP": [
-            "TULLN_TMA_LOXT_23"
-          ]
+          "LOXT_APP": ["TULLN_TMA_LOXT_23"]
         },
-        "airports": [
-          "LOXT"
-        ],
+        "airports": ["LOXT"],
         "valid_for_runways": {
-          "LOXT": [
-            "LOXT_23"
-          ]
+          "LOXT": ["LOXT_23"]
         }
       }
     }

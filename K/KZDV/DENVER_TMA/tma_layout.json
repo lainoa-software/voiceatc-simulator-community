@@ -4,47 +4,29 @@
     "KDEN_APP": {
       "NORTH_FLOW": {
         "positions": {
-          "KDEN_APP": [
-            "KDENAPP"
-          ]
+          "KDEN_APP": ["KDENAPP"]
         },
-        "airports": [
-          "KDEN"
-        ],
+        "airports": ["KDEN"],
         "valid_for_runways": {
-          "KDEN": [
-            "NORTH_FLOW"
-          ]
+          "KDEN": ["NORTH_FLOW"]
         }
       },
       "SOUTH_FLOW": {
         "positions": {
-          "KDEN_APP": [
-            "KDENAPP"
-          ]
+          "KDEN_APP": ["KDENAPP"]
         },
-        "airports": [
-          "KDEN"
-        ],
+        "airports": ["KDEN"],
         "valid_for_runways": {
-          "KDEN": [
-            "SOUTH_FLOW"
-          ]
+          "KDEN": ["SOUTH_FLOW"]
         }
       },
       "NIGHT_NORTH": {
         "positions": {
-          "KDEN_APP": [
-            "KDENAPP"
-          ]
+          "KDEN_APP": ["KDENAPP"]
         },
-        "airports": [
-          "KDEN"
-        ],
+        "airports": ["KDEN"],
         "valid_for_runways": {
-          "KDEN": [
-            "NIGHT_NORTH"
-          ]
+          "KDEN": ["NIGHT_NORTH"]
         }
       }
     }

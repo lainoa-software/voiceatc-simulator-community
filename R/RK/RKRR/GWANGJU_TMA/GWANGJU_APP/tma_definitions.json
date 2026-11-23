@@ -4,9 +4,7 @@
     {
       "id": "RKJJ_APP",
       "call_sign": "Gwangju approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

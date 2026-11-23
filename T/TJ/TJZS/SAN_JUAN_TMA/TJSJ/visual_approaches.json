@@ -5,10 +5,7 @@
     {
       "id": "BRIDGE_VISUAL_10",
       "name": "Bridge Visual RWY 10",
-      "aliases": [
-        "bridge visual",
-        "bridge visual ten"
-      ],
+      "aliases": ["bridge visual", "bridge visual ten"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -31,10 +28,7 @@
               "id": "CANOVANAS_TRACE",
               "name": "Canovanas / Highway 3 (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                18.385,
-                -65.9
-              ],
+              "point": [18.385, -65.9],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -44,10 +38,7 @@
               "id": "PLAZA_CAROLINA_TRACE",
               "name": "Plaza Carolina Mall (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                18.39328,
-                -65.97517
-              ],
+              "point": [18.39328, -65.97517],
               "fly_over": false,
               "course_deg": 280,
               "reference": "Highway 3"
@@ -56,20 +47,14 @@
               "id": "BASE_EAST_MOSCOSO_TRACE",
               "name": "Base east of Moscoso Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                18.407,
-                -66.02
-              ],
+              "point": [18.407, -66.02],
               "fly_over": false
             },
             {
               "id": "FINAL_INTERCEPT_TRACE",
               "name": "Runway 10 final intercept (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                18.4332,
-                -66.02
-              ],
+              "point": [18.4332, -66.02],
               "fly_over": false,
               "course_deg": 10,
               "reference": "East of Moscoso Bridge"

@@ -8,39 +8,27 @@
       "spawn": true
     },
     {
-      "stars": [
-        "BOGM3N"
-      ],
+      "stars": ["BOGM3N"],
       "spawn": false
     },
     {
-      "stars": [
-        "NOLG3W"
-      ],
+      "stars": ["NOLG3W"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDH1B"
-      ],
+      "sids": ["EDDH1B"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDH1C"
-      ],
+      "sids": ["EDDH1C"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDH1D"
-      ],
+      "sids": ["EDDH1D"],
       "spawn": false
     },
     {
-      "sids": [
-        "EDDH1G"
-      ],
+      "sids": ["EDDH1G"],
       "spawn": false
     }
   ]

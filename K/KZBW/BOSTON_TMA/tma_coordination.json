@@ -5,48 +5,32 @@
       "name": "KBOS_ARR_PROVI",
       "from": "KZBW_CTR",
       "to": "KBOS_APP",
-      "arrives": [
-        "KBOS"
-      ],
-      "fix": [
-        "PROVI"
-      ],
+      "arrives": ["KBOS"],
+      "fix": ["PROVI"],
       "level": "A110"
     },
     {
       "name": "KBOS_ARR_JFUND",
       "from": "KZBW_CTR",
       "to": "KBOS_APP",
-      "arrives": [
-        "KBOS"
-      ],
-      "fix": [
-        "JFUND"
-      ],
+      "arrives": ["KBOS"],
+      "fix": ["JFUND"],
       "level": "A110"
     },
     {
       "name": "KBOS_ARR_OOSHN",
       "from": "KZBW_CTR",
       "to": "KBOS_APP",
-      "arrives": [
-        "KBOS"
-      ],
-      "fix": [
-        "OOSHN"
-      ],
+      "arrives": ["KBOS"],
+      "fix": ["OOSHN"],
       "level": "A110"
     },
     {
       "name": "KBOS_ARR_JEWIT",
       "from": "KZBW_CTR",
       "to": "KBOS_APP",
-      "arrives": [
-        "KBOS"
-      ],
-      "fix": [
-        "JEWIT"
-      ],
+      "arrives": ["KBOS"],
+      "fix": ["JEWIT"],
       "level": "A110"
     }
   ]

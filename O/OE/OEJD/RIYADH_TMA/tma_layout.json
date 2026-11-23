@@ -4,26 +4,16 @@
     "OERK_APP": {
       "RIYADH_APP": {
         "positions": {
-          "OERK_APP": [
-            "OERK_APP"
-          ]
+          "OERK_APP": ["OERK_APP"]
         },
-        "airports": [
-          "OERK"
-        ]
+        "airports": ["OERK"]
       },
       "RIYADH_EAST_WEST": {
         "positions": {
-          "OERK_E_APP": [
-            "OERK_E_APP"
-          ],
-          "OERK_W_APP": [
-            "OERK_W_APP"
-          ]
+          "OERK_E_APP": ["OERK_E_APP"],
+          "OERK_W_APP": ["OERK_W_APP"]
         },
-        "airports": [
-          "OERK"
-        ]
+        "airports": ["OERK"]
       }
     }
   }

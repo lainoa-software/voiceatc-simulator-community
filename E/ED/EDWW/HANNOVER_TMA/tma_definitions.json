@@ -4,9 +4,7 @@
     {
       "id": "EDDV_APP",
       "call_sign": "Hannover approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

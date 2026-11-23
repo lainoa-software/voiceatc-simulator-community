@@ -4,42 +4,22 @@
   "assumed_symbol": "octagon_dot",
   "defined_symbols": {
     "cross": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M -4 0 L 4 0 M 0 -4 L 0 4",
       "type": "wireframe"
     },
     "history": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M -1 -1 L 1 -1 L 1 1 L -1 1 L -1 -1",
       "type": "filled"
     },
     "octagon": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M -2 -5 L 2 -5 L 5 -2 L 5 2 L 2 5 L -2 5 L -5 2 L -5 -2 L -2 -5",
       "type": "wireframe"
     },
     "octagon_dot": {
-      "connection_points": [
-        [
-          0,
-          0
-        ]
-      ],
+      "connection_points": [[0, 0]],
       "draw": "M -2 -5 L 2 -5 L 5 -2 L 5 2 L 2 5 L -2 5 L -5 2 L -5 -2 L -2 -5 M -1 0 L 1 0 M 0 -1 L 0 1",
       "type": "wireframe"
     }

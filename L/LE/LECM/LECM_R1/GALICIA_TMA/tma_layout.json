@@ -4,15 +4,9 @@
     "LECO_APP": {
       "1": {
         "positions": {
-          "LECO_APP": [
-            "LECGTMA"
-          ]
+          "LECO_APP": ["LECGTMA"]
         },
-        "airports": [
-          "LECO",
-          "LEST",
-          "LEVX"
-        ]
+        "airports": ["LECO", "LEST", "LEVX"]
       }
     }
   }

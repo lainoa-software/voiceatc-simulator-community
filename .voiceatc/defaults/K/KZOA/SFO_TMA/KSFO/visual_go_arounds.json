@@ -18,8 +18,8 @@
       "legs": [
         {
           "sequence": 10,
-          "ident": "RW28L",
           "path_term": "VA",
+          "ident": "RW28L",
           "course": 265,
           "altitude1": 3000,
           "altitude_desc": "@"
@@ -42,8 +42,8 @@
       "legs": [
         {
           "sequence": 10,
-          "ident": "RW28R",
           "path_term": "VA",
+          "ident": "RW28R",
           "course": 280,
           "altitude1": 3000,
           "altitude_desc": "@"

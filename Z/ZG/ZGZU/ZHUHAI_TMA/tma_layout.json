@@ -4,32 +4,20 @@
     "VMMC_APP": {
       "ZHUHAI_APPROACH": {
         "positions": {
-          "VMMC_APP": [
-            "VMMC_APP"
-          ]
+          "VMMC_APP": ["VMMC_APP"]
         },
-        "airports": [
-          "VMMC"
-        ],
+        "airports": ["VMMC"],
         "valid_for_runways": {
-          "VMMC": [
-            "16"
-          ]
+          "VMMC": ["16"]
         }
       },
       "HONG_KONG_RADAR": {
         "positions": {
-          "VMMC_APP": [
-            "VMMC_APP"
-          ]
+          "VMMC_APP": ["VMMC_APP"]
         },
-        "airports": [
-          "VMMC"
-        ],
+        "airports": ["VMMC"],
         "valid_for_runways": {
-          "VMMC": [
-            "34"
-          ]
+          "VMMC": ["34"]
         }
       }
     }

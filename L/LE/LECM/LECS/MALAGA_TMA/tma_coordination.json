@@ -5,9 +5,7 @@
       "name": "LECS_MALAGA_F150",
       "from": "LECS_CTR",
       "to": "LEMG_APP",
-      "arrives": [
-        "LEMG"
-      ],
+      "arrives": ["LEMG"],
       "level": "F150"
     }
   ]

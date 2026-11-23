@@ -23,6 +23,9 @@
           "clearance_name": "Smoke Stack Visual",
           "entry_point_id": "LNY",
           "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "LNY",
@@ -58,8 +61,7 @@
               "longitude": -156.47,
               "fly_over": false
             }
-          ],
-          "final": { "glidepath_deg": 3.0 }
+          ]
         },
         {
           "id": "MAKENA_ENTRY",
@@ -67,6 +69,9 @@
           "clearance_name": "Smoke Stack Visual",
           "entry_point_id": "MAKENA_TRACE",
           "sight_reference_point_id": "SMOKESTACK_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "MAKENA_TRACE",
@@ -92,8 +97,7 @@
               "longitude": -156.47,
               "fly_over": false
             }
-          ],
-          "final": { "glidepath_deg": 3.0 }
+          ]
         }
       ]
     }

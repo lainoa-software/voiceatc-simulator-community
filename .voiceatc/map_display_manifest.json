@@ -2,8 +2,8 @@
   "airports": {
     "LEBL": {
       "repo_path": ".voiceatc/defaults/L/LE/LECB/LECB_W/BARCELONA_TMA/LEBL/map_display.json",
-      "sha256": "668ddd0cd28541f66bbb8bd66a7da66be11c63886d127a809c7c7dd9c5226db0",
-      "size_bytes": 1706
+      "sha256": "8360ac20732c9f246fefe15093059e57df0f66d0f9505a31022766c4d8e5c94e",
+      "size_bytes": 1746
     },
     "LEMD": {
       "repo_path": ".voiceatc/defaults/L/LE/LECM/LECM_R2/MADRID_TMA/LEMD/map_display.json",

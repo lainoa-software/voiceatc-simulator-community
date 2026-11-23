@@ -4,13 +4,9 @@
     "RKPS_APP": {
       "SACHEON": {
         "positions": {
-          "RKPS_APP": [
-            "RKPS_APP"
-          ]
+          "RKPS_APP": ["RKPS_APP"]
         },
-        "airports": [
-          "RKPS"
-        ]
+        "airports": ["RKPS"]
       }
     }
   }

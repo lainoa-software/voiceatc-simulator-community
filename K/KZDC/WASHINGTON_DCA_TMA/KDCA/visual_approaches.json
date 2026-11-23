@@ -5,10 +5,7 @@
     {
       "id": "MOUNT_VERNON_VISUAL_01",
       "name": "Mount Vernon Visual RWY 01",
-      "aliases": [
-        "mount vernon visual",
-        "mount vernon"
-      ],
+      "aliases": ["mount vernon visual", "mount vernon"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -29,9 +26,7 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": [
-              "river"
-            ],
+            "aliases": ["river"],
             "scope": "route"
           },
           "sight_references": {
@@ -40,9 +35,7 @@
               {
                 "id": "MOUNT_VERNON_ABEAM",
                 "name": "the Potomac River abeam Mount Vernon",
-                "aliases": [
-                  "Mount Vernon abeam"
-                ],
+                "aliases": ["Mount Vernon abeam"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "MOUNT VERNON VISUAL RWY 01",
@@ -62,10 +55,7 @@
               "id": "KATRN",
               "name": "KATRN (I-DCA 10.7 DME)",
               "type": "course_to_fix",
-              "point": [
-                38.6816388889,
-                -77.0206583333
-              ],
+              "point": [38.6816388889, -77.0206583333],
               "fly_over": true,
               "course_deg": 5,
               "reference": "DCA R-185 inbound",
@@ -78,20 +68,14 @@
               "id": "MOUNT_VERNON_ABEAM_TRACE",
               "name": "Mount Vernon abeam / Potomac River (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.721,
-                -77.06
-              ],
+              "point": [38.721, -77.06],
               "fly_over": false
             },
             {
               "id": "BADDN",
               "name": "BADDN (I-DCA 5.9 DME)",
               "type": "track_to_fix",
-              "point": [
-                38.7744578126,
-                -77.0263256693
-              ],
+              "point": [38.7744578126, -77.0263256693],
               "fly_over": true,
               "altitude": {
                 "at_ft": 1600,
@@ -108,10 +92,7 @@
     {
       "id": "RIVER_VISUAL_19",
       "name": "River Visual RWY 19",
-      "aliases": [
-        "river visual",
-        "river visual nineteen"
-      ],
+      "aliases": ["river visual", "river visual nineteen"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -132,9 +113,7 @@
           "join_policy": "forward_route",
           "sight_reference": {
             "name": "the river",
-            "aliases": [
-              "river"
-            ],
+            "aliases": ["river"],
             "scope": "route"
           },
           "sight_references": {
@@ -143,9 +122,7 @@
               {
                 "id": "POTOMAC_RIVER",
                 "name": "the Potomac River",
-                "aliases": [
-                  "Potomac River"
-                ],
+                "aliases": ["Potomac River"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "RIVER VISUAL RWY 19",
@@ -175,10 +152,7 @@
               "id": "AMERICAN_LEGION_DAVID_TAYLOR_TRACE",
               "name": "American Legion Memorial Bridge / David W. Taylor area (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.982,
-                -77.17
-              ],
+              "point": [38.982, -77.17],
               "fly_over": false,
               "altitude": {
                 "at_ft": 3000,
@@ -189,20 +163,14 @@
               "id": "DARIC",
               "name": "DARIC",
               "type": "track_to_fix",
-              "point": [
-                38.9650138889,
-                -77.1531888889
-              ],
+              "point": [38.9650138889, -77.1531888889],
               "fly_over": false
             },
             {
               "id": "CHAIN_BRIDGE_TRACE",
               "name": "Chain Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.9299243354,
-                -77.1141640781
-              ],
+              "point": [38.9299243354, -77.1141640781],
               "fly_over": true,
               "altitude": {
                 "at_ft": 1800,
@@ -213,20 +181,14 @@
               "id": "GREYZ",
               "name": "GREYZ / river trace",
               "type": "track_to_fix",
-              "point": [
-                38.9182,
-                -77.1084055556
-              ],
+              "point": [38.9182, -77.1084055556],
               "fly_over": false
             },
             {
               "id": "RORRK",
               "name": "RORRK / river trace",
               "type": "track_to_fix",
-              "point": [
-                38.9098472222,
-                -77.0988944444
-              ],
+              "point": [38.9098472222, -77.0988944444],
               "fly_over": true,
               "altitude": {
                 "at_ft": 1500,
@@ -237,10 +199,7 @@
               "id": "KEY_BRIDGE_TRACE",
               "name": "Key Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.902830691,
-                -77.0697196772
-              ],
+              "point": [38.902830691, -77.0697196772],
               "fly_over": true,
               "altitude": {
                 "at_ft": 900,
@@ -251,30 +210,21 @@
               "id": "ROOSEVELT_BRIDGE_TRACE",
               "name": "Theodore Roosevelt Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.8926968089,
-                -77.0577358494
-              ],
+              "point": [38.8926968089, -77.0577358494],
               "fly_over": true
             },
             {
               "id": "MEMORIAL_BRIDGE_TRACE",
               "name": "Arlington Memorial Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.8873358946,
-                -77.0553832781
-              ],
+              "point": [38.8873358946, -77.0553832781],
               "fly_over": true
             },
             {
               "id": "ROCHAMBEAU_BRIDGE_TRACE",
               "name": "Rochambeau Bridge (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                38.8764601507,
-                -77.0413292679
-              ],
+              "point": [38.8764601507, -77.0413292679],
               "fly_over": false
             }
           ],

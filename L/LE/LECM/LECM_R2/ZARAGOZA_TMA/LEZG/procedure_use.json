@@ -8,183 +8,123 @@
       "spawn": true
     },
     {
-      "stars": [
-        "AL2DCA"
-      ],
+      "stars": ["AL2DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "ALEP1G"
-      ],
+      "stars": ["ALEP1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "CM2DCA"
-      ],
+      "stars": ["CM2DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "CM2DCB"
-      ],
+      "stars": ["CM2DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "CMA1G"
-      ],
+      "stars": ["CMA1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "CMA1X"
-      ],
+      "stars": ["CMA1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "GR1DCA"
-      ],
+      "stars": ["GR1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "GR1DCB"
-      ],
+      "stars": ["GR1DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "GRAU1G"
-      ],
+      "stars": ["GRAU1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "GRAU1X"
-      ],
+      "stars": ["GRAU1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "LO1DCA"
-      ],
+      "stars": ["LO1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "LO1DCB"
-      ],
+      "stars": ["LO1DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "LOBA1G"
-      ],
+      "stars": ["LOBA1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "LOBA1X"
-      ],
+      "stars": ["LOBA1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "ML1DCA"
-      ],
+      "stars": ["ML1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "ML2DCB"
-      ],
+      "stars": ["ML2DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "MLA1G"
-      ],
+      "stars": ["MLA1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "MLA1X"
-      ],
+      "stars": ["MLA1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "RO1DCA"
-      ],
+      "stars": ["RO1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "RO1DCB"
-      ],
+      "stars": ["RO1DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "RONK1G"
-      ],
+      "stars": ["RONK1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "RONK1X"
-      ],
+      "stars": ["RONK1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "SU1DCA"
-      ],
+      "stars": ["SU1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "SU1DCB"
-      ],
+      "stars": ["SU1DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "SURC1G"
-      ],
+      "stars": ["SURC1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "SURC1X"
-      ],
+      "stars": ["SURC1X"],
       "spawn": false
     },
     {
-      "stars": [
-        "XE1DCA"
-      ],
+      "stars": ["XE1DCA"],
       "spawn": false
     },
     {
-      "stars": [
-        "XE1DCB"
-      ],
+      "stars": ["XE1DCB"],
       "spawn": false
     },
     {
-      "stars": [
-        "XEMI1G"
-      ],
+      "stars": ["XEMI1G"],
       "spawn": false
     },
     {
-      "stars": [
-        "XEMI1X"
-      ],
+      "stars": ["XEMI1X"],
       "spawn": false
     }
   ]

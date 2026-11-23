@@ -4,9 +4,7 @@
     {
       "id": "RCNN_APP",
       "call_sign": "Tainan approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,9 +4,7 @@
     {
       "id": "EGTT_CTR",
       "call_sign": "London Control",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "132.605",
         "118.480",

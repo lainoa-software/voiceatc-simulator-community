@@ -4,201 +4,108 @@
     "LEBL_APP": {
       "1": {
         "positions": {
-          "LEBL_CORE_APP": [
-            "LEBLALB"
-          ]
+          "LEBL_CORE_APP": ["LEBLALB"]
         },
-        "airports": [
-          "LEBL",
-          "LEGE",
-          "LERS",
-          "LEDA"
-        ]
+        "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       },
       "2CO": {
         "positions": {
-          "LEBL_CORE_APP": [
-            "LEBLCORE"
-          ],
-          "LECB_DDX_CTR": [
-            "LEBLDDX"
-          ]
+          "LEBL_CORE_APP": ["LEBLCORE"],
+          "LECB_DDX_CTR": ["LEBLDDX"]
         },
-        "airports": [
-          "LEBL",
-          "LEGE",
-          "LERS",
-          "LEDA"
-        ]
+        "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       },
       "3CO": {
         "positions": {
-          "LEBL_CORE_APP": [
-            "LEBLCORE"
-          ],
-          "LECB_DDI_CTR": [
-            "LEBLDDI"
-          ],
-          "LECB_XAL_CTR": [
-            "LEBLXAL"
-          ]
+          "LEBL_CORE_APP": ["LEBLCORE"],
+          "LECB_DDI_CTR": ["LEBLDDI"],
+          "LECB_XAL_CTR": ["LEBLXAL"]
         },
-        "airports": [
-          "LEBL",
-          "LEGE",
-          "LERS",
-          "LEDA"
-        ]
+        "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       },
       "N3W": {
         "positions": {
-          "LEBL_FNL_APP": [
-            "LEBLF24"
-          ],
-          "LEBL_T1_APP": [
-            "LEBLT1W"
-          ],
-          "LEBL_T2_APP": [
-            "LEBLT2W"
-          ]
+          "LEBL_FNL_APP": ["LEBLF24"],
+          "LEBL_T1_APP": ["LEBLT1W"],
+          "LEBL_T2_APP": ["LEBLT2W"]
         },
-        "airports": [
-          "LEBL"
-        ],
+        "airports": ["LEBL"],
         "valid_for_runways": {
-          "LEBL": [
-            "WRL",
-            "WLL"
-          ]
+          "LEBL": ["WRL", "WLL"]
         }
       },
       "N3E": {
         "positions": {
-          "LEBL_FNL_APP": [
-            "LEBLF06"
-          ],
-          "LEBL_T1_APP": [
-            "LEBLT1E"
-          ],
-          "LEBL_T2_APP": [
-            "LEBLT2E"
-          ]
+          "LEBL_FNL_APP": ["LEBLF06"],
+          "LEBL_T1_APP": ["LEBLT1E"],
+          "LEBL_T2_APP": ["LEBLT2E"]
         },
-        "airports": [
-          "LEBL"
-        ],
+        "airports": ["LEBL"],
         "valid_for_runways": {
-          "LEBL": [
-            "ELR"
-          ]
+          "LEBL": ["ELR"]
         }
       },
       "N3N": {
         "positions": {
-          "LEBL_FNL_APP": [
-            "LEBLF02"
-          ],
-          "LEBL_T1_APP": [
-            "LEBLT1N"
-          ],
-          "LEBL_T2_APP": [
-            "LEBLT2N"
-          ]
+          "LEBL_FNL_APP": ["LEBLF02"],
+          "LEBL_T1_APP": ["LEBLT1N"],
+          "LEBL_T2_APP": ["LEBLT2N"]
         },
-        "airports": [
-          "LEBL"
-        ],
+        "airports": ["LEBL"],
         "valid_for_runways": {
-          "LEBL": [
-            "ENR"
-          ]
+          "LEBL": ["ENR"]
         }
       },
       "N5W": {
         "positions": {
-          "LEBL_FNL_APP": [
-            "LEBLF24"
-          ],
-          "LEBL_T1_APP": [
-            "LEBLT1W"
-          ],
-          "LEBL_T2_APP": [
-            "LEBLT2W"
-          ],
-          "LEBL_T3_APP": [
-            "LEBLT3W"
-          ],
-          "LEBL_T4_APP": [
-            "LEBLT4W"
-          ]
+          "LEBL_FNL_APP": ["LEBLF24"],
+          "LEBL_T1_APP": ["LEBLT1W"],
+          "LEBL_T2_APP": ["LEBLT2W"],
+          "LEBL_T3_APP": ["LEBLT3W"],
+          "LEBL_T4_APP": ["LEBLT4W"]
         },
-        "airports": [
-          "LEBL"
-        ],
+        "airports": ["LEBL"],
         "valid_for_runways": {
-          "LEBL": [
-            "WRL",
-            "WLL"
-          ]
+          "LEBL": ["WRL", "WLL"]
         }
       },
       "N4W": {
         "positions": {
-          "LEBL_T1_APP": [
-            "LEBLT1W"
-          ],
-          "LEBL_T2_APP": [
-            "LEBLT2W"
-          ],
-          "LEBL_T34_APP": [
-            "LEBLT3W",
-            "LEBLT4W"
-          ]
+          "LEBL_T1_APP": ["LEBLT1W"],
+          "LEBL_T2_APP": ["LEBLT2W"],
+          "LEBL_T34_APP": ["LEBLT3W", "LEBLT4W"]
         },
-        "airports": [
-          "LEBL"
-        ],
+        "airports": ["LEBL"],
         "valid_for_runways": {
-          "LEBL": [
-            "WRL",
-            "WLL"
-          ]
+          "LEBL": ["WRL", "WLL"]
         }
       }
     },
     "LEBL_TWR": {
       "1": {
         "positions": {
-          "LEBL_TWR": [
-            "LEBLATZ"
-          ]
+          "LEBL_TWR": ["LEBLATZ"]
         }
       }
     },
     "LEGE_TWR": {
       "1": {
         "positions": {
-          "LEGE_APP": [
-            "LEGEAPP"
-          ]
+          "LEGE_APP": ["LEGEAPP"]
         }
       }
     },
     "LERS_TWR": {
       "1": {
         "positions": {
-          "LERS_APP": [
-            "LERSAPP"
-          ]
+          "LERS_APP": ["LERSAPP"]
         }
       }
     },
     "LEDA_TWR": {
       "1": {
         "positions": {
-          "LEDA_TWR": [
-            "LEDACTR"
-          ]
+          "LEDA_TWR": ["LEDACTR"]
         }
       }
     }

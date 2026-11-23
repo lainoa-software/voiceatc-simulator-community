@@ -4,28 +4,13 @@
     "OMDB_APP": {
       "1": {
         "positions": {
-          "OMDB_ARR_APP": [
-            "OMDBARR"
-          ]
+          "OMDB_ARR_APP": ["OMDBARR"]
         },
-        "airports": [
-          "OMDB",
-          "OMDW",
-          "OMSJ"
-        ],
+        "airports": ["OMDB", "OMDW", "OMSJ"],
         "valid_for_runways": {
-          "OMDB": [
-            "30",
-            "12"
-          ],
-          "OMDW": [
-            "30",
-            "12"
-          ],
-          "OMSJ": [
-            "30",
-            "12"
-          ]
+          "OMDB": ["30", "12"],
+          "OMDW": ["30", "12"],
+          "OMSJ": ["30", "12"]
         }
       }
     }

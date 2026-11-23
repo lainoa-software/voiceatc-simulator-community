@@ -5,10 +5,7 @@
     {
       "id": "STADIUM_VISUAL_29",
       "name": "Stadium Visual RWY 29",
-      "aliases": [
-        "stadium visual",
-        "stadium visual twenty nine"
-      ],
+      "aliases": ["stadium visual", "stadium visual twenty nine"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,10 +29,7 @@
               {
                 "id": "MEADOWLANDS_SPORTS_COMPLEX",
                 "name": "the Meadowlands Sports Complex",
-                "aliases": [
-                  "Meadowlands",
-                  "the sports complex"
-                ],
+                "aliases": ["Meadowlands", "the sports complex"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "STADIUM VISUAL RWY 29",
@@ -55,10 +49,7 @@
               "id": "TEB",
               "name": "Teterboro VOR/DME",
               "type": "track_to_fix",
-              "point": [
-                40.848725,
-                -74.0622361111
-              ],
+              "point": [40.848725, -74.0622361111],
               "fly_over": true,
               "altitude": {
                 "at_ft": 3000
@@ -68,10 +59,7 @@
               "id": "GIMEE",
               "name": "GIMEE / Meadowlands Sports Complex",
               "type": "course_to_fix",
-              "point": [
-                40.8131305556,
-                -74.0879027778
-              ],
+              "point": [40.8131305556, -74.0879027778],
               "fly_over": true,
               "course_deg": 220,
               "reference": "Meadowlands Sports Complex",
@@ -83,10 +71,7 @@
               "id": "HILOK",
               "name": "HILOK / Laurel Hill Park",
               "type": "course_to_fix",
-              "point": [
-                40.7619944444,
-                -74.0838861111
-              ],
+              "point": [40.7619944444, -74.0838861111],
               "fly_over": true,
               "course_deg": 190,
               "reference": "East side of river",
@@ -99,10 +84,7 @@
               "id": "SLIMR",
               "name": "SLIMR / Lincoln Park",
               "type": "course_to_fix",
-              "point": [
-                40.7321083333,
-                -74.0815194444
-              ],
+              "point": [40.7321083333, -74.0815194444],
               "fly_over": true,
               "course_deg": 190,
               "reference": "East side of river",
@@ -115,10 +97,7 @@
               "id": "COPKO",
               "name": "COPKO / East Side Railway Bridge",
               "type": "course_to_fix",
-              "point": [
-                40.69775,
-                -74.1049583333
-              ],
+              "point": [40.69775, -74.1049583333],
               "fly_over": true,
               "course_deg": 220,
               "reference": "East side railway bridge",
@@ -130,10 +109,7 @@
               "id": "CHUMR",
               "name": "CHUMR / West Side Railway Bridge",
               "type": "course_to_fix",
-              "point": [
-                40.6992222222,
-                -74.1263361111
-              ],
+              "point": [40.6992222222, -74.1263361111],
               "fly_over": true,
               "course_deg": 288,
               "reference": "West side railway bridge",

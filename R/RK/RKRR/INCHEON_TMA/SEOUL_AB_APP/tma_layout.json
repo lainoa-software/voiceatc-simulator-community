@@ -4,13 +4,9 @@
     "RKSM_APP": {
       "SEOUL_AB": {
         "positions": {
-          "RKSM_APP": [
-            "RKSM_APP"
-          ]
+          "RKSM_APP": ["RKSM_APP"]
         },
-        "airports": [
-          "RKSM"
-        ]
+        "airports": ["RKSM"]
       }
     }
   }

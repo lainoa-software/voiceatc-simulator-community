@@ -4,31 +4,12 @@
     "EDDL_APP": {
       "EDDL_APP": {
         "positions": {
-          "EDDL_APP": [
-            "DUS1_DUS2_DUS3_DUS4_DUS5_DUS6"
-          ]
+          "EDDL_APP": ["DUS1_DUS2_DUS3_DUS4_DUS5_DUS6"]
         },
-        "airports": [
-          "EDDL",
-          "EDLN"
-        ],
+        "airports": ["EDDL", "EDLN"],
         "valid_for_runways": {
-          "EDDL": [
-            "31",
-            "13",
-            "23",
-            "05",
-            "23d",
-            "05d"
-          ],
-          "EDLN": [
-            "31",
-            "13",
-            "23",
-            "05",
-            "23d",
-            "05d"
-          ]
+          "EDDL": ["31", "13", "23", "05", "23d", "05d"],
+          "EDLN": ["31", "13", "23", "05", "23d", "05d"]
         }
       }
     }

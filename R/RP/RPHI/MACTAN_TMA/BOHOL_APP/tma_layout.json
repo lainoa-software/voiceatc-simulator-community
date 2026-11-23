@@ -4,13 +4,9 @@
     "RPSP_APP": {
       "BOHOL": {
         "positions": {
-          "RPSP_APP": [
-            "RPSP_APP"
-          ]
+          "RPSP_APP": ["RPSP_APP"]
         },
-        "airports": [
-          "RPSP"
-        ]
+        "airports": ["RPSP"]
       }
     }
   }

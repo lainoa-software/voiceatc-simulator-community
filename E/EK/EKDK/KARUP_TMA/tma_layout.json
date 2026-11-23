@@ -4,20 +4,11 @@
     "EKKA_APP": {
       "KARUP_TMA_WHOLE_ALL": {
         "positions": {
-          "EKKA_APP": [
-            "KARUP_TMA_ALL"
-          ]
+          "EKKA_APP": ["KARUP_TMA_ALL"]
         },
-        "airports": [
-          "EKKA"
-        ],
+        "airports": ["EKKA"],
         "valid_for_runways": {
-          "EKKA": [
-            "EKKA_09R",
-            "EKKA_27L",
-            "EKKA_09L",
-            "EKKA_27R"
-          ]
+          "EKKA": ["EKKA_09R", "EKKA_27L", "EKKA_09L", "EKKA_27R"]
         }
       }
     }

@@ -4,9 +4,7 @@
     {
       "id": "RKTH_APP",
       "call_sign": "Pohang approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

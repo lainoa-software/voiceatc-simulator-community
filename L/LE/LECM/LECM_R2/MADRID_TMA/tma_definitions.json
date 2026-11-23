@@ -4,22 +4,14 @@
     {
       "id": "LEMD_APP",
       "call_sign": "Madrid Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     },
     {
       "id": "LEMD_TWR",
       "call_sign": "Barajas Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEMD",
-      "unassigned_frequencies": [
-        "118.080",
-        "118.680",
-        "118.980"
-      ]
+      "unassigned_frequencies": ["118.080", "118.680", "118.980"]
     }
   ],
   "positions": [

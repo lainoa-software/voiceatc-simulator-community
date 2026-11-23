@@ -4,13 +4,9 @@
     "RPMD_APP": {
       "DAVAO": {
         "positions": {
-          "RPMD_APP": [
-            "RPMD_APP"
-          ]
+          "RPMD_APP": ["RPMD_APP"]
         },
-        "airports": [
-          "RPMD"
-        ]
+        "airports": ["RPMD"]
       }
     }
   }

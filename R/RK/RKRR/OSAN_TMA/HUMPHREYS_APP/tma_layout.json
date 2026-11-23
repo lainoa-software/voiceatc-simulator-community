@@ -4,13 +4,9 @@
     "RKSG_APP": {
       "HUMPHREYS": {
         "positions": {
-          "RKSG_APP": [
-            "RKSG_APP"
-          ]
+          "RKSG_APP": ["RKSG_APP"]
         },
-        "airports": [
-          "RKSG"
-        ]
+        "airports": ["RKSG"]
       }
     }
   }

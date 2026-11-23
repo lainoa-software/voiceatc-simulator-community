@@ -8,111 +8,75 @@
       "spawn": true
     },
     {
-      "stars": [
-        "AKSELV"
-      ],
+      "stars": ["AKSELV"],
       "spawn": false
     },
     {
-      "stars": [
-        "AROSAV"
-      ],
+      "stars": ["AROSAV"],
       "spawn": false
     },
     {
-      "stars": [
-        "MESSEV"
-      ],
+      "stars": ["MESSEV"],
       "spawn": false
     },
     {
-      "stars": [
-        "XACV"
-      ],
+      "stars": ["XACV"],
       "spawn": false
     },
     {
-      "stars": [
-        "AKSELN"
-      ],
+      "stars": ["AKSELN"],
       "spawn": false
     },
     {
-      "stars": [
-        "AROSAN"
-      ],
+      "stars": ["AROSAN"],
       "spawn": false
     },
     {
-      "stars": [
-        "MESSEN"
-      ],
+      "stars": ["MESSEN"],
       "spawn": false
     },
     {
-      "stars": [
-        "XACN"
-      ],
+      "stars": ["XACN"],
       "spawn": false
     },
     {
-      "stars": [
-        "AKSE2B"
-      ],
+      "stars": ["AKSE2B"],
       "spawn": false
     },
     {
-      "stars": [
-        "AROS2B"
-      ],
+      "stars": ["AROS2B"],
       "spawn": false
     },
     {
-      "stars": [
-        "MESS2B"
-      ],
+      "stars": ["MESS2B"],
       "spawn": false
     },
     {
-      "stars": [
-        "XAC2B"
-      ],
+      "stars": ["XAC2B"],
       "spawn": false
     },
     {
-      "stars": [
-        "AKSE2N"
-      ],
+      "stars": ["AKSE2N"],
       "spawn": false
     },
     {
-      "stars": [
-        "AROS2N"
-      ],
+      "stars": ["AROS2N"],
       "spawn": false
     },
     {
-      "stars": [
-        "MESS2N"
-      ],
+      "stars": ["MESS2N"],
       "spawn": false
     },
     {
-      "stars": [
-        "XAC2N"
-      ],
+      "stars": ["XAC2N"],
       "spawn": false
     },
     {
-      "stars": [
-        "SULP1D"
-      ],
+      "stars": ["SULP1D"],
       "spawn": false
     },
     {
-      "stars": [
-        "SULP1S"
-      ],
+      "stars": ["SULP1S"],
       "spawn": false
     }
   ]

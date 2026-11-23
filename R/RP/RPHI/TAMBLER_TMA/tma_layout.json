@@ -4,13 +4,9 @@
     "RPMR_APP": {
       "TAMBLER": {
         "positions": {
-          "RPMR_APP": [
-            "RPMR_APP"
-          ]
+          "RPMR_APP": ["RPMR_APP"]
         },
-        "airports": [
-          "RPMR"
-        ]
+        "airports": ["RPMR"]
       }
     }
   }

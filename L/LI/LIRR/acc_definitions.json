@@ -4,9 +4,7 @@
     {
       "id": "LIRR_CTR",
       "call_sign": "Roma Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "127.350",
         "118.800",

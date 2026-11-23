@@ -4,9 +4,7 @@
     {
       "id": "EDDL_APP",
       "call_sign": "Duesseldorf approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

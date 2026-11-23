@@ -4,13 +4,9 @@
     "RPVD_APP": {
       "DUMAGUETE": {
         "positions": {
-          "RPVD_APP": [
-            "RPVD_APP"
-          ]
+          "RPVD_APP": ["RPVD_APP"]
         },
-        "airports": [
-          "RPVD"
-        ]
+        "airports": ["RPVD"]
       }
     }
   }

@@ -4,18 +4,11 @@
     "EKRN_APP": {
       "BORNHOLM_TMA_WHOLE_ALL": {
         "positions": {
-          "EKRN_APP": [
-            "BORNHOLM_TMA_ALL"
-          ]
+          "EKRN_APP": ["BORNHOLM_TMA_ALL"]
         },
-        "airports": [
-          "EKRN"
-        ],
+        "airports": ["EKRN"],
         "valid_for_runways": {
-          "EKRN": [
-            "EKRN_11",
-            "EKRN_29"
-          ]
+          "EKRN": ["EKRN_11", "EKRN_29"]
         }
       }
     }

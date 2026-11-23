@@ -4,9 +4,7 @@
     {
       "id": "LPFR_APP",
       "call_sign": "Faro approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

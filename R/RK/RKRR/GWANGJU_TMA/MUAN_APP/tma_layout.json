@@ -4,13 +4,9 @@
     "RKJB_APP": {
       "MUAN": {
         "positions": {
-          "RKJB_APP": [
-            "RKJB_APP"
-          ]
+          "RKJB_APP": ["RKJB_APP"]
         },
-        "airports": [
-          "RKJB"
-        ]
+        "airports": ["RKJB"]
       }
     }
   }

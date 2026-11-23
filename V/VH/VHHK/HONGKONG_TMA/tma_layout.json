@@ -4,13 +4,9 @@
     "VHHH_APP": {
       "HONGKONG": {
         "positions": {
-          "VHHH_APP": [
-            "VHHH_APP"
-          ]
+          "VHHH_APP": ["VHHH_APP"]
         },
-        "airports": [
-          "VHHH"
-        ],
+        "airports": ["VHHH"],
         "valid_for_runways": {
           "VHHH": [
             "07",

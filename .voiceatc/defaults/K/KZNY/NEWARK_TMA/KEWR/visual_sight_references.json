@@ -11,7 +11,10 @@
           "id": "MEADOWLANDS_SPORTS_COMPLEX",
           "name": "the Meadowlands Sports Complex",
           "aliases": ["Meadowlands", "the sports complex"],
-          "geometry": { "kind": "point", "leg_id": "GIMEE" },
+          "geometry": {
+            "kind": "point",
+            "leg_id": "GIMEE"
+          },
           "source": {
             "authority": "FAA",
             "chart_title": "STADIUM VISUAL RWY 29",

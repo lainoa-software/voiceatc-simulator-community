@@ -5,27 +5,19 @@
   "initial_climb_ft": 20000,
   "exceptions": [
     {
-      "sids": [
-        "ROVE3A"
-      ],
+      "sids": ["ROVE3A"],
       "initial_climb_ft": 17000
     },
     {
-      "sids": [
-        "ROVE4B"
-      ],
+      "sids": ["ROVE4B"],
       "initial_climb_ft": 17000
     },
     {
-      "sids": [
-        "ROVE4C"
-      ],
+      "sids": ["ROVE4C"],
       "initial_climb_ft": 17000
     },
     {
-      "sids": [
-        "VAMOS4"
-      ],
+      "sids": ["VAMOS4"],
       "initial_climb_ft": 23000
     }
   ]

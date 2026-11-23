@@ -8,21 +8,15 @@
       "spawn": true
     },
     {
-      "sids": [
-        "GTQ1M"
-      ],
+      "sids": ["GTQ1M"],
       "spawn": false
     },
     {
-      "sids": [
-        "TOMP2K"
-      ],
+      "sids": ["TOMP2K"],
       "spawn": false
     },
     {
-      "sids": [
-        "TOMP2N"
-      ],
+      "sids": ["TOMP2N"],
       "spawn": false
     }
   ]

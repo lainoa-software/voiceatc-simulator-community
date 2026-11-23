@@ -4,37 +4,21 @@
     "LPPR_APP": {
       "PORTO_TMA_SPLIT": {
         "positions": {
-          "LPPR_PR_APP": [
-            "PRAPP"
-          ],
-          "LPPR_PRTMA_APP": [
-            "PRTMA"
-          ]
+          "LPPR_PR_APP": ["PRAPP"],
+          "LPPR_PRTMA_APP": ["PRTMA"]
         },
-        "airports": [
-          "LPPR"
-        ],
+        "airports": ["LPPR"],
         "valid_for_runways": {
-          "LPPR": [
-            "LPPR_17",
-            "LPPR_35"
-          ]
+          "LPPR": ["LPPR_17", "LPPR_35"]
         }
       },
       "PORTO_TMA_COMBINED": {
         "positions": {
-          "LPPR_APP": [
-            "PRAPP_PRTMA"
-          ]
+          "LPPR_APP": ["PRAPP_PRTMA"]
         },
-        "airports": [
-          "LPPR"
-        ],
+        "airports": ["LPPR"],
         "valid_for_runways": {
-          "LPPR": [
-            "LPPR_17",
-            "LPPR_35"
-          ]
+          "LPPR": ["LPPR_17", "LPPR_35"]
         }
       }
     }

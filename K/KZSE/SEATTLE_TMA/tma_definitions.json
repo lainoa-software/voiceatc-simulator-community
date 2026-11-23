@@ -4,9 +4,7 @@
     {
       "id": "KSEA_APP",
       "call_sign": "Seattle Approach",
-      "services": [
-        "approach_radar"
-      ],
+      "services": ["approach_radar"],
       "unassigned_frequencies": [
         "119.200",
         "120.100",
@@ -21,26 +19,16 @@
     {
       "id": "KSEA_TWR",
       "call_sign": "Seattle Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KSEA",
-      "unassigned_frequencies": [
-        "119.900",
-        "120.950"
-      ]
+      "unassigned_frequencies": ["119.900", "120.950"]
     },
     {
       "id": "KBFI_TWR",
       "call_sign": "Boeing Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "KBFI",
-      "unassigned_frequencies": [
-        "118.300",
-        "120.600"
-      ]
+      "unassigned_frequencies": ["118.300", "120.600"]
     }
   ],
   "positions": [

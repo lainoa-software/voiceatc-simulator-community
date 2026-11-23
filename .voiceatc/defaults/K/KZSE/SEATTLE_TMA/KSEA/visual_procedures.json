@@ -23,6 +23,9 @@
           "clearance_name": "Bay Visual",
           "entry_point_id": "WEST_POINT_TRACE",
           "sight_reference_point_id": "SEA8_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "WEST_POINT_TRACE",
@@ -71,10 +74,7 @@
                 "kind": "at"
               }
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.0
-          }
+          ]
         },
         {
           "id": "BAY_16C",
@@ -82,6 +82,9 @@
           "clearance_name": "Bay Visual",
           "entry_point_id": "WEST_POINT_TRACE",
           "sight_reference_point_id": "SEA8_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "WEST_POINT_TRACE",
@@ -130,10 +133,7 @@
                 "kind": "at"
               }
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.0
-          }
+          ]
         },
         {
           "id": "BAY_16L",
@@ -141,6 +141,9 @@
           "clearance_name": "Bay Visual",
           "entry_point_id": "WEST_POINT_TRACE",
           "sight_reference_point_id": "SEA8_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "WEST_POINT_TRACE",
@@ -189,10 +192,7 @@
                 "kind": "at"
               }
             }
-          ],
-          "final": {
-            "glidepath_deg": 3.0
-          }
+          ]
         }
       ]
     }

@@ -4,9 +4,7 @@
     {
       "id": "KZDV_CTR",
       "call_sign": "Denver Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "120.575",
         "118.225",

@@ -4,9 +4,7 @@
     {
       "id": "RPVE_APP",
       "call_sign": "Malay approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

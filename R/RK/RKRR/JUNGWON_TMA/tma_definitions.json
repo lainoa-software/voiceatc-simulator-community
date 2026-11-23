@@ -4,9 +4,7 @@
     {
       "id": "RKTU_APP",
       "call_sign": "Cheongju approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

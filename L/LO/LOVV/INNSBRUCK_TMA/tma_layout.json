@@ -4,32 +4,20 @@
     "LOWI_APP": {
       "INNSBRUCK_TMA_WHOLE_LOWI_08": {
         "positions": {
-          "LOWI_APP": [
-            "INNSBRUCK_TMA_LOWI_08"
-          ]
+          "LOWI_APP": ["INNSBRUCK_TMA_LOWI_08"]
         },
-        "airports": [
-          "LOWI"
-        ],
+        "airports": ["LOWI"],
         "valid_for_runways": {
-          "LOWI": [
-            "LOWI_08"
-          ]
+          "LOWI": ["LOWI_08"]
         }
       },
       "INNSBRUCK_TMA_WHOLE_LOWI_26": {
         "positions": {
-          "LOWI_APP": [
-            "INNSBRUCK_TMA_LOWI_26"
-          ]
+          "LOWI_APP": ["INNSBRUCK_TMA_LOWI_26"]
         },
-        "airports": [
-          "LOWI"
-        ],
+        "airports": ["LOWI"],
         "valid_for_runways": {
-          "LOWI": [
-            "LOWI_26"
-          ]
+          "LOWI": ["LOWI_26"]
         }
       }
     }

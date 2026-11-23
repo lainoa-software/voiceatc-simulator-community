@@ -4,43 +4,27 @@
     "MAD_APP": {
       "1AND": {
         "positions": {
-          "LEMD_ALN_APP": [
-            "LEMDALN",
-            "LEMDCTR"
-          ]
+          "LEMD_ALN_APP": ["LEMDALN", "LEMDCTR"]
         },
-        "airports": [
-          "LEMD"
-        ],
+        "airports": ["LEMD"],
         "valid_for_runways": {
-          "LEMD": [
-            "NORTH"
-          ]
+          "LEMD": ["NORTH"]
         }
       },
       "1ASD": {
         "positions": {
-          "LEMD_ALS_APP": [
-            "LEMDALS",
-            "LEMDCTR"
-          ]
+          "LEMD_ALS_APP": ["LEMDALS", "LEMDCTR"]
         },
-        "airports": [
-          "LEMD"
-        ],
+        "airports": ["LEMD"],
         "valid_for_runways": {
-          "LEMD": [
-            "SOUTH"
-          ]
+          "LEMD": ["SOUTH"]
         }
       }
     },
     "BAR_TWR": {
       "1": {
         "positions": {
-          "LEMD_TWR": [
-            "LEMDATZ"
-          ]
+          "LEMD_TWR": ["LEMDATZ"]
         }
       }
     }

@@ -4,9 +4,7 @@
     {
       "id": "WSSS_APP",
       "call_sign": "Singapore approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

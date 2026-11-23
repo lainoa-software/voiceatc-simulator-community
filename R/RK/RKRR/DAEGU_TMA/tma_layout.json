@@ -4,13 +4,9 @@
     "RKTN_APP": {
       "DAEGU": {
         "positions": {
-          "RKTN_APP": [
-            "RKTN_APP"
-          ]
+          "RKTN_APP": ["RKTN_APP"]
         },
-        "airports": [
-          "RKTN"
-        ]
+        "airports": ["RKTN"]
       }
     }
   }

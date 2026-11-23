@@ -5,10 +5,7 @@
     {
       "id": "SIN_CITY_VISUAL_03LR",
       "name": "Sin City Visual RWY 03L/R",
-      "aliases": [
-        "sin city visual",
-        "sin city"
-      ],
+      "aliases": ["sin city visual", "sin city"],
       "classification": "charted_ifr_visual",
       "policy_profile": "FAA",
       "source": {
@@ -32,9 +29,7 @@
               {
                 "id": "NORTHWEST_CITY_OUTLINE",
                 "name": "the northwest Las Vegas city outline",
-                "aliases": [
-                  "northwest Las Vegas"
-                ],
+                "aliases": ["northwest Las Vegas"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "SIN CITY VISUAL RWY 03L/R",
@@ -54,10 +49,7 @@
               "id": "HASIL_TRACE",
               "name": "HASIL (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.304332025,
-                -115.267306619
-              ],
+              "point": [36.304332025, -115.267306619],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277 / 12 DME",
@@ -73,10 +65,7 @@
               "id": "NW_CITY_OUTLINE_TRACE",
               "name": "Northwest Las Vegas city outline (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.2901751538,
-                -115.2187207834
-              ],
+              "point": [36.2901751538, -115.2187207834],
               "fly_over": false,
               "course_deg": 277,
               "reference": "LSV TACAN R-277"
@@ -85,10 +74,7 @@
               "id": "ONDAE_TRACE",
               "name": "ONDAE (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.276,
-                -115.17
-              ],
+              "point": [36.276, -115.17],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277",
@@ -100,10 +86,7 @@
               "id": "ARC_JOIN_TRACE",
               "name": "LSV TACAN 4 DME arc join (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.2493137566,
-                -115.1153003108
-              ],
+              "point": [36.2493137566, -115.1153003108],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277 / 4 DME"
@@ -112,15 +95,9 @@
               "id": "ARC_EXIT_TRACE",
               "name": "LSV TACAN 4 DME arc exit/base (chart-traced)",
               "type": "dme_arc",
-              "point": [
-                36.18,
-                -115.08
-              ],
+              "point": [36.18, -115.08],
               "fly_over": false,
-              "arc_center": [
-                36.2362,
-                -115.0342555556
-              ],
+              "arc_center": [36.2362, -115.0342555556],
               "arc_radius_nm": 4.0,
               "turn_direction": "L"
             }
@@ -142,9 +119,7 @@
               {
                 "id": "NORTHWEST_CITY_OUTLINE",
                 "name": "the northwest Las Vegas city outline",
-                "aliases": [
-                  "northwest Las Vegas"
-                ],
+                "aliases": ["northwest Las Vegas"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "SIN CITY VISUAL RWY 03L/R",
@@ -164,10 +139,7 @@
               "id": "HASIL_TRACE",
               "name": "HASIL (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.304332025,
-                -115.267306619
-              ],
+              "point": [36.304332025, -115.267306619],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277 / 12 DME",
@@ -183,10 +155,7 @@
               "id": "NW_CITY_OUTLINE_TRACE",
               "name": "Northwest Las Vegas city outline (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.2901751538,
-                -115.2187207834
-              ],
+              "point": [36.2901751538, -115.2187207834],
               "fly_over": false,
               "course_deg": 277,
               "reference": "LSV TACAN R-277"
@@ -195,10 +164,7 @@
               "id": "ONDAE_TRACE",
               "name": "ONDAE (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.276,
-                -115.17
-              ],
+              "point": [36.276, -115.17],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277",
@@ -210,10 +176,7 @@
               "id": "ARC_JOIN_TRACE",
               "name": "LSV TACAN 4 DME arc join (chart-traced)",
               "type": "course_to_fix",
-              "point": [
-                36.2493137566,
-                -115.1153003108
-              ],
+              "point": [36.2493137566, -115.1153003108],
               "fly_over": true,
               "course_deg": 277,
               "reference": "LSV TACAN R-277 / 4 DME"
@@ -222,15 +185,9 @@
               "id": "ARC_EXIT_TRACE",
               "name": "LSV TACAN 4 DME arc exit/base (chart-traced)",
               "type": "dme_arc",
-              "point": [
-                36.18,
-                -115.08
-              ],
+              "point": [36.18, -115.08],
               "fly_over": false,
-              "arc_center": [
-                36.2362,
-                -115.0342555556
-              ],
+              "arc_center": [36.2362, -115.0342555556],
               "arc_radius_nm": 4.0,
               "turn_direction": "L"
             }

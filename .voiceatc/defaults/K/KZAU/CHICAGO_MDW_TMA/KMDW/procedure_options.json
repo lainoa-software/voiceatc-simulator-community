@@ -1,13 +1,12 @@
 {
   "airport": "KMDW",
-  "schema_version": 1,
   "airac_min": 2606,
-  "defaults": { "spawn_enabled": true },
-  "stars": {},
+  "defaults": {
+    "spawn_enabled": true
+  },
   "sids": {
     "MIDWA8": {
       "init_climb": 3000
     }
-  },
-  "iaps": {}
+  }
 }

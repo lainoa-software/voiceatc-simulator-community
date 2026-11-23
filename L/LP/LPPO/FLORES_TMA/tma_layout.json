@@ -4,27 +4,12 @@
     "LPCR_APP": {
       "FLORES_TMA_SPLIT": {
         "positions": {
-          "LPCR_APP": [
-            "FLA"
-          ]
+          "LPCR_APP": ["FLA"]
         },
-        "airports": [
-          "LPCR",
-          "LPFL"
-        ],
+        "airports": ["LPCR", "LPFL"],
         "valid_for_runways": {
-          "LPCR": [
-            "LPFL_18",
-            "LPFL_36",
-            "LPCR_11",
-            "LPCR_29"
-          ],
-          "LPFL": [
-            "LPFL_18",
-            "LPFL_36",
-            "LPCR_11",
-            "LPCR_29"
-          ]
+          "LPCR": ["LPFL_18", "LPFL_36", "LPCR_11", "LPCR_29"],
+          "LPFL": ["LPFL_18", "LPFL_36", "LPCR_11", "LPCR_29"]
         }
       }
     }

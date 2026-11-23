@@ -4,20 +4,11 @@
     "EKYT_APP": {
       "AALBORG_TMA_WHOLE_ALL": {
         "positions": {
-          "EKYT_APP": [
-            "AALBORG_TMA_ALL"
-          ]
+          "EKYT_APP": ["AALBORG_TMA_ALL"]
         },
-        "airports": [
-          "EKYT"
-        ],
+        "airports": ["EKYT"],
         "valid_for_runways": {
-          "EKYT": [
-            "EKYT_08R",
-            "EKYT_26L",
-            "EKYT_08L",
-            "EKYT_26R"
-          ]
+          "EKYT": ["EKYT_08R", "EKYT_26L", "EKYT_08L", "EKYT_26R"]
         }
       }
     }

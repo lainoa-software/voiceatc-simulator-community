@@ -4,9 +4,7 @@
     {
       "id": "RCSS_APP",
       "call_sign": "Taipei approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

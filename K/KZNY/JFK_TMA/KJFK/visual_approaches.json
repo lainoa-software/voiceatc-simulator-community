@@ -33,9 +33,7 @@
               {
                 "id": "TWIN_STACKS",
                 "name": "the Twin Stacks",
-                "aliases": [
-                  "Twin Stacks"
-                ],
+                "aliases": ["Twin Stacks"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "PARKWAY VISUAL RWY 13L/R",
@@ -55,10 +53,7 @@
               "id": "ROCKAWAY_POINT_TRACE",
               "name": "Rockaway Point (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.56,
-                -73.92
-              ],
+              "point": [40.56, -73.92],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -68,20 +63,14 @@
               "id": "KINGSBOROUGH_TRACE",
               "name": "Remain east of Kingsborough Community College (route-side chart trace)",
               "type": "track_to_fix",
-              "point": [
-                40.59,
-                -73.91
-              ],
+              "point": [40.59, -73.91],
               "fly_over": false
             },
             {
               "id": "CGAS_TRACE",
               "name": "Brooklyn CGAS crossing (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.575,
-                -73.89
-              ],
+              "point": [40.575, -73.89],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1500
@@ -91,20 +80,14 @@
               "id": "CANARSIE_TRACE",
               "name": "Canarsie Pier (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.635,
-                -73.88
-              ],
+              "point": [40.635, -73.88],
               "fly_over": false
             },
             {
               "id": "TWIN_STACKS_TRACE",
               "name": "Twin Stacks abeam (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.669,
-                -73.877
-              ],
+              "point": [40.669, -73.877],
               "fly_over": false
             }
           ],
@@ -124,9 +107,7 @@
               {
                 "id": "CANARSIE_PIER",
                 "name": "Canarsie Pier",
-                "aliases": [
-                  "the Canarsie Pier"
-                ],
+                "aliases": ["the Canarsie Pier"],
                 "source": {
                   "authority": "FAA",
                   "chart_title": "PARKWAY VISUAL RWY 13L/R",
@@ -146,10 +127,7 @@
               "id": "ROCKAWAY_POINT_TRACE",
               "name": "Rockaway Point (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.56,
-                -73.92
-              ],
+              "point": [40.56, -73.92],
               "fly_over": false,
               "altitude": {
                 "at_or_above_ft": 2000
@@ -159,20 +137,14 @@
               "id": "KINGSBOROUGH_TRACE",
               "name": "Remain east of Kingsborough Community College (route-side chart trace)",
               "type": "track_to_fix",
-              "point": [
-                40.59,
-                -73.91
-              ],
+              "point": [40.59, -73.91],
               "fly_over": false
             },
             {
               "id": "CGAS_TRACE",
               "name": "Brooklyn CGAS crossing (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.575,
-                -73.89
-              ],
+              "point": [40.575, -73.89],
               "fly_over": true,
               "altitude": {
                 "at_or_above_ft": 1500
@@ -182,20 +154,14 @@
               "id": "CANARSIE_TRACE",
               "name": "Canarsie Pier (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.635,
-                -73.88
-              ],
+              "point": [40.635, -73.88],
               "fly_over": false
             },
             {
               "id": "TWIN_STACKS_TRACE",
               "name": "Twin Stacks abeam (chart-traced)",
               "type": "track_to_fix",
-              "point": [
-                40.669,
-                -73.877
-              ],
+              "point": [40.669, -73.877],
               "fly_over": false
             }
           ],

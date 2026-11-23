@@ -4,9 +4,7 @@
     {
       "id": "ESGG_APP",
       "call_sign": "Goteborg approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,13 +4,9 @@
     "RCYU_APP": {
       "HUALIEN": {
         "positions": {
-          "RCYU_APP": [
-            "RCYU_APP"
-          ]
+          "RCYU_APP": ["RCYU_APP"]
         },
-        "airports": [
-          "RCYU"
-        ]
+        "airports": ["RCYU"]
       }
     }
   }

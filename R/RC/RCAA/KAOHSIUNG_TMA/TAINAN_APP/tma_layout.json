@@ -4,13 +4,9 @@
     "RCNN_APP": {
       "TAINAN": {
         "positions": {
-          "RCNN_APP": [
-            "RCNN_APP"
-          ]
+          "RCNN_APP": ["RCNN_APP"]
         },
-        "airports": [
-          "RCNN"
-        ]
+        "airports": ["RCNN"]
       }
     }
   }

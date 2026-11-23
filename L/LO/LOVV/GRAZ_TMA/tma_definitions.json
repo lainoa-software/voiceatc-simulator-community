@@ -4,9 +4,7 @@
     {
       "id": "LOWG_APP",
       "call_sign": "Graz approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

@@ -4,9 +4,7 @@
     {
       "id": "EDDH_APP",
       "call_sign": "Hamburg approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

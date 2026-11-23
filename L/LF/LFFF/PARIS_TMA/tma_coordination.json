@@ -5,342 +5,201 @@
       "name": "LFPG_ARR_KOLIV_WEST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "KOLIV"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["KOLIV"],
       "level": "F120",
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ]
+      "runways": ["26L", "26R", "27L", "27R"]
     },
     {
       "name": "LFPG_ARR_KOLIV_EAST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "KOLIV"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["KOLIV"],
       "level": "F100",
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ]
+      "runways": ["08L", "08R", "09L", "09R"]
     },
     {
       "name": "LFPG_ARR_DEVIM_WEST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "DEVIM"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["DEVIM"],
       "level": "F130",
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ]
+      "runways": ["26L", "26R", "27L", "27R"]
     },
     {
       "name": "LFPG_ARR_DEVIM_EAST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "DEVIM"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["DEVIM"],
       "level": "F150",
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ]
+      "runways": ["08L", "08R", "09L", "09R"]
     },
     {
       "name": "LFPG_ARR_NERKI_WEST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "NERKI"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["NERKI"],
       "level": "F150",
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ]
+      "runways": ["26L", "26R", "27L", "27R"]
     },
     {
       "name": "LFPG_ARR_NERKI_EAST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "NERKI"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["NERKI"],
       "level": "F110",
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ]
+      "runways": ["08L", "08R", "09L", "09R"]
     },
     {
       "name": "LFPG_ARR_URELO_WEST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "URELO"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["URELO"],
       "level": "F110",
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ]
+      "runways": ["26L", "26R", "27L", "27R"]
     },
     {
       "name": "LFPG_ARR_URELO_EAST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "URELO"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["URELO"],
       "level": "F150",
-      "runways": [
-        "08L",
-        "08R",
-        "09L",
-        "09R"
-      ]
+      "runways": ["08L", "08R", "09L", "09R"]
     },
     {
       "name": "LFPG_ARR_MOBRO_WEST",
       "from": "LFFF_CTR",
       "to": "LFPG_APP",
-      "arrives": [
-        "LFPG"
-      ],
-      "fix": [
-        "MOBRO"
-      ],
+      "arrives": ["LFPG"],
+      "fix": ["MOBRO"],
       "level": "F070",
-      "runways": [
-        "26L",
-        "26R",
-        "27L",
-        "27R"
-      ]
+      "runways": ["26L", "26R", "27L", "27R"]
     },
     {
       "name": "LFPG_DEP_OPALE",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "OPALE"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["OPALE"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_ATREX",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ATREX"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ATREX"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_NURMO",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "NURMO"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["NURMO"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_RANUX",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "RANUX"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["RANUX"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_DIKOL",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "DIKOL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["DIKOL"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_LANVI",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LANVI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LANVI"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_BUBLI",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "BUBLI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["BUBLI"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_BAXIR",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "BAXIR"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["BAXIR"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_AGOPA",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "AGOPA"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["AGOPA"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_ERIXU",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ERIXU"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ERIXU"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_OKASI",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "OKASI"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["OKASI"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_PILUL",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "PILUL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["PILUL"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_LATRA",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LATRA"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LATRA"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_ELCOB",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "ELCOB"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["ELCOB"],
       "level": "F190"
     },
     {
       "name": "LFPG_DEP_LGL",
       "from": "LFPG_APP",
       "to": "LFFF_CTR",
-      "departs": [
-        "LFPG"
-      ],
-      "fix": [
-        "LGL"
-      ],
+      "departs": ["LFPG"],
+      "fix": ["LGL"],
       "level": "F190"
     }
   ]

@@ -4,9 +4,7 @@
     {
       "id": "EDDN_APP",
       "call_sign": "Nuernberg approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

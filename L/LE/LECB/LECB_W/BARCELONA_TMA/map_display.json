@@ -70,18 +70,8 @@
     "XAMUR",
     "YUTHU"
   ],
-  "vors": [
-    "BCN",
-    "BGR",
-    "CLE",
-    "PRA",
-    "RES",
-    "SLL",
-    "VLA"
-  ],
-  "ndbs": [
-    "LRD"
-  ],
+  "vors": ["BCN", "BGR", "CLE", "PRA", "RES", "SLL", "VLA"],
+  "ndbs": ["LRD"],
   "positions": {
     "LEBL_CORE_APP": {
       "airspaces": [],

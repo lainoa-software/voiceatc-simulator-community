@@ -4,9 +4,7 @@
     {
       "id": "LOWS_APP",
       "call_sign": "Salzburg approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

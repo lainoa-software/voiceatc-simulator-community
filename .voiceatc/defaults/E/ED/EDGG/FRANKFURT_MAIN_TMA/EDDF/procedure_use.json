@@ -8,447 +8,249 @@
       "spawn": false
     },
     {
-      "sids": [
-        "MARU5E"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["MARU5E"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "MARU6E"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["MARU6E"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "OBOK1E"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["OBOK1E"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "OBOK2E"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["OBOK2E"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "TOBA1D"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["TOBA1D"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "TOBA2D"
-      ],
-      "runways": [
-        "07C"
-      ],
+      "sids": ["TOBA2D"],
+      "runways": ["07C"],
       "spawn": true
     },
     {
-      "sids": [
-        "ANEK2L"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["ANEK2L"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "ANEK3L"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["ANEK3L"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "CIND7S"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["CIND7S"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "CIND8S"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["CIND8S"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "SOBR2L"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["SOBR2L"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "SOBR3L"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["SOBR3L"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "SULU6S"
-      ],
-      "runways": [
-        "18"
-      ],
+      "sids": ["SULU6S"],
+      "runways": ["18"],
       "spawn": true
     },
     {
-      "sids": [
-        "MARU3W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["MARU3W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "sids": [
-        "MARU4W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["MARU4W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "sids": [
-        "OBOK3W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["OBOK3W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "sids": [
-        "OBOK4W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["OBOK4W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "sids": [
-        "TOBA3W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["TOBA3W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "sids": [
-        "TOBA4W"
-      ],
-      "runways": [
-        "25C"
-      ],
+      "sids": ["TOBA4W"],
+      "runways": ["25C"],
       "spawn": true
     },
     {
-      "stars": [
-        "DEBH1C"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["DEBH1C"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "DEBH2C"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["DEBH2C"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "DIXA1D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["DIXA1D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "DIXA2D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["DIXA2D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "EMPA5C"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["EMPA5C"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "EMPA6C"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["EMPA6C"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "IMCO1D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["IMCO1D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "KERA5D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["KERA5D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "KERA6D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["KERA6D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "RASV1D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["RASV1D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "ROLI5D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["ROLI5D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "ROLI6D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["ROLI6D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "SPES6D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["SPES6D"],
+      "configs": ["07"],
       "spawn": true,
-      "join_from": [
-        "MAMBU"
-      ]
+      "join_from": ["MAMBU"]
     },
     {
-      "stars": [
-        "TUTO1D"
-      ],
-      "configs": [
-        "07"
-      ],
+      "stars": ["TUTO1D"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "sids": [
-        "SULU7S"
-      ],
-      "configs": [
-        "07"
-      ],
+      "sids": ["SULU7S"],
+      "configs": ["07"],
       "spawn": true
     },
     {
-      "stars": [
-        "DEBH1B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["DEBH1B"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "DEBH2B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["DEBH2B"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "DIXA1A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["DIXA1A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "DIXA2A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["DIXA2A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "EMPA5B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["EMPA5B"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "EMPA6B"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["EMPA6B"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "IMCO1A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["IMCO1A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "KERA5A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["KERA5A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "KERA6A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["KERA6A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "MAMB2A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["MAMB2A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "RASV1A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["RASV1A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "ROLI5A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["ROLI5A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "ROLI6A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["ROLI6A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "stars": [
-        "TUTO1A"
-      ],
-      "configs": [
-        "25"
-      ],
+      "stars": ["TUTO1A"],
+      "configs": ["25"],
       "spawn": true
     },
     {
-      "sids": [
-        "SULU4D"
-      ],
-      "configs": [
-        "25"
-      ],
+      "sids": ["SULU4D"],
+      "configs": ["25"],
       "spawn": true
     }
   ]

@@ -1,17 +1,28 @@
 {
   "airport": "EDTL",
-  "schema_version": 1,
   "airac_min": 2608,
-  "defaults": { "spawn_enabled": true, "init_climb": 7000 },
   "sids": {
-    "NATO5R": { "spawn_enabled": false },
-    "NATO5Q": { "spawn_enabled": false },
-    "STR3R": { "spawn_enabled": false },
-    "STR3Q": { "spawn_enabled": false },
-    "SUL6R": { "spawn_enabled": false },
-    "NATO1W": { "init_climb": 8000 }
+    "NATO5Q": {
+      "spawn_enabled": false
+    },
+    "NATO5R": {
+      "spawn_enabled": false
+    },
+    "STR3Q": {
+      "spawn_enabled": false
+    },
+    "STR3R": {
+      "spawn_enabled": false
+    },
+    "SUL6R": {
+      "spawn_enabled": false
+    },
+    "NATO1W": {
+      "init_climb": 8000
+    }
   },
-  "iaps": {},
-  "runways": {},
-  "configs": {}
+  "defaults": {
+    "init_climb": 7000,
+    "spawn_enabled": true
+  }
 }

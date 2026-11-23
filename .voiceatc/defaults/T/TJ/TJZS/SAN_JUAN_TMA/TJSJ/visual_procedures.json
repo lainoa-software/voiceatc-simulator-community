@@ -23,6 +23,9 @@
           "clearance_name": "Bridge Visual",
           "entry_point_id": "CANOVANAS_TRACE",
           "sight_reference_point_id": "BASE_EAST_MOSCOSO_TRACE",
+          "final": {
+            "glidepath_deg": 3.0
+          },
           "legs": [
             {
               "id": "CANOVANAS_TRACE",
@@ -65,8 +68,7 @@
               "course_deg": 10,
               "reference": "East of Moscoso Bridge"
             }
-          ],
-          "final": { "glidepath_deg": 3.0 }
+          ]
         }
       ]
     }

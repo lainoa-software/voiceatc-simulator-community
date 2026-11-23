@@ -5,21 +5,13 @@
   "initial_climb_ft": 7000,
   "exceptions": [
     {
-      "runways": [
-        "10"
-      ],
-      "sids": [
-        "NUB1A"
-      ],
+      "runways": ["10"],
+      "sids": ["NUB1A"],
       "initial_climb_ft": 6000
     },
     {
-      "runways": [
-        "28"
-      ],
-      "sids": [
-        "NUB1B"
-      ],
+      "runways": ["28"],
+      "sids": ["NUB1B"],
       "initial_climb_ft": 6000
     }
   ]

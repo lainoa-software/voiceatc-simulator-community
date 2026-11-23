@@ -4,27 +4,15 @@
     {
       "id": "EGLL_APP",
       "call_sign": "Heathrow Director",
-      "services": [
-        "approach_radar"
-      ],
-      "unassigned_frequencies": [
-        "120.400",
-        "127.525",
-        "134.980"
-      ]
+      "services": ["approach_radar"],
+      "unassigned_frequencies": ["120.400", "127.525", "134.980"]
     },
     {
       "id": "EGLL_TWR",
       "call_sign": "Heathrow Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "EGLL",
-      "unassigned_frequencies": [
-        "118.705",
-        "118.505",
-        "124.480"
-      ]
+      "unassigned_frequencies": ["118.705", "118.505", "124.480"]
     }
   ],
   "positions": [

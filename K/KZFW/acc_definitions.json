@@ -4,9 +4,7 @@
     {
       "id": "KZFW_CTR",
       "call_sign": "Fort Worth Center",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "135.750",
         "120.275",

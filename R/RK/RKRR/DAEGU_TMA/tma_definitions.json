@@ -4,9 +4,7 @@
     {
       "id": "RKTN_APP",
       "call_sign": "Daegu approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

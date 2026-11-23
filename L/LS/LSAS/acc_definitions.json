@@ -4,9 +4,7 @@
     {
       "id": "LSAS_CTR",
       "call_sign": "Swiss Radar",
-      "services": [
-        "center"
-      ],
+      "services": ["center"],
       "unassigned_frequencies": [
         "128.050",
         "119.175",

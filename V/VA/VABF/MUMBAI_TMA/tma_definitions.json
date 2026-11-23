@@ -4,9 +4,7 @@
     {
       "id": "VABB_APP",
       "call_sign": "Mumbai approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [

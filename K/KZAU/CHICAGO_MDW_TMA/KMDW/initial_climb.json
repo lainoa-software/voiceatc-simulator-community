@@ -4,9 +4,7 @@
   "airac_min": 2606,
   "exceptions": [
     {
-      "sids": [
-        "MIDWA8"
-      ],
+      "sids": ["MIDWA8"],
       "initial_climb_ft": 3000
     }
   ]

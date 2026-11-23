@@ -4,13 +4,9 @@
     "RPMY_APP": {
       "LAGUINDINGAN": {
         "positions": {
-          "RPMY_APP": [
-            "RPMY_APP"
-          ]
+          "RPMY_APP": ["RPMY_APP"]
         },
-        "airports": [
-          "RPMY"
-        ]
+        "airports": ["RPMY"]
       }
     }
   }
