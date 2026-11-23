@@ -3,17 +3,32 @@
   "assumed_symbol": "assumed",
   "defined_symbols": {
     "assumed": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7 M 0 -7 L 0 7 M 7 0 L -7 0",
       "type": "wireframe"
     },
     "released": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 0 7 L 0 7 L 7 0 L 0 -7 L -7 0 L 0 7",
       "type": "wireframe"
     },
     "trail": {
-      "connection_points": [[0, 0]],
+      "connection_points": [
+        [
+          0,
+          0
+        ]
+      ],
       "draw": "M 7 7 L 7 -7 L -7 -7 L -7 7 L 7 7",
       "type": "filled"
     }
