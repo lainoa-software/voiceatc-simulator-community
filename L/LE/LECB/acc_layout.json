@@ -1,24 +1,18 @@
 {
   "schema": 3,
   "configurations": {
-    "LECB_W_CTR": {
-      "1A": {
-        "positions": {
-          "LECB_BKW_CTR": ["LECBBKW"]
-        }
-      }
-    },
-    "LECB_E_CTR": {
-      "1A": {
-        "positions": {
-          "LECB_BKE_CTR": ["LECBBKE"]
-        }
-      }
-    },
     "LECB_CTR": {
-      "N1": {
+      "1": {
         "positions": {
-          "LECB_CTR": ["LECBBKW", "LECBBKE"]
+          "LECB_BKW_CTR": [
+            "LECBBKW"
+          ],
+          "LECB_BKE_CTR": [
+            "LECBBKE"
+          ],
+          "LECB_DDX_CTR": [
+            "LEBLDDX"
+          ]
         }
       }
     }
