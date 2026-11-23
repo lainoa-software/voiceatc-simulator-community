@@ -6,7 +6,8 @@
         "positions": {
           "LECB_BKW_CTR": ["LECBBKW"],
           "LECB_BKE_CTR": ["LECBBKE"],
-          "LECB_DDX_CTR": ["LEBLDDX"]
+          "LECB_DDX_CTR": ["LEBLDDX"],
+          "LECP_GXX_CTR": ["LECPGXX"]
         }
       }
     }
