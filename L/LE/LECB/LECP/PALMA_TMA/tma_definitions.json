@@ -39,6 +39,14 @@
       ]
     },
     {
+      "id": "LEMH_TWR",
+      "call_sign": "Menorca Tower",
+      "services": [
+        "tower"
+      ],
+      "airport": "LEMH"
+    },
+    {
       "id": "LEBL_APP",
       "call_sign": "Barcelona Approach",
       "services": [
@@ -56,6 +64,11 @@
       "call_sign": "LECP_IXX_APP",
       "unit": "LEIB_APP",
       "frequency": "134.825"
+    },
+    {
+      "call_sign": "LEMH_LECPMXX_APP",
+      "unit": "LEPA_APP",
+      "frequency": "121.700"
     },
     {
       "call_sign": "LEBL_APP",

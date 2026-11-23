@@ -6,11 +6,15 @@
         "positions": {
           "LEPA_APP": [
             "LECPAPR"
+          ],
+          "LEMH_LECPMXX_APP": [
+            "LECPMXX"
           ]
         },
         "airports": [
           "LEPA",
-          "LEIB"
+          "LEIB",
+          "LEMH"
         ]
       }
     },
@@ -23,7 +27,8 @@
         },
         "airports": [
           "LEPA",
-          "LEIB"
+          "LEIB",
+          "LEMH"
         ]
       }
     }

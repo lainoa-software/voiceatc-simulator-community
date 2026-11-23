@@ -400,6 +400,63 @@
       "level": "F110"
     },
     {
+      "name": "LEIB_ARR_NEGRE_WEST",
+      "from": "LECP_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "NEGRE"
+      ],
+      "level": "F150",
+      "runways": [
+        "24"
+      ]
+    },
+    {
+      "name": "LEIB_ARR_NEGRE_EAST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "NEGRE"
+      ],
+      "level": "F250",
+      "runways": [
+        "06"
+      ]
+    },
+    {
+      "name": "LEIB_ARR_ADX",
+      "from": "LECP_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "ADX"
+      ],
+      "level": "F150"
+    },
+    {
+      "name": "LEIB_ARR_MJV_WEST",
+      "from": "LECB_BKE_CTR",
+      "to": "LEIB_APP",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "MJV"
+      ],
+      "level": "F210",
+      "runways": [
+        "24"
+      ]
+    },
+    {
       "name": "LEMH_ARR_CDP",
       "from": "LEPA_APP",
       "to": "LECP_MXX_CTR",
