@@ -12,7 +12,10 @@ unit/sector ID aliases and metadata needed when regenerating edited bundles. Und
 `files`, it records the schema-2 source hash for each `mva.json`, `misc_drawings.json`,
 `procedure_options.json`, and `map_display.json`.
 
-At publish time, `tools/sector_legacy_projection.py` compares each bundle's or file's
-current schema-2 source hashes against `index.json`: unchanged sources ship these
-frozen bytes verbatim, while edited or new sources fall back to generating legacy
-files from schema 2.
+At publish time, `tools/sector_legacy_projection.py` ships a bundle's frozen bytes verbatim whenever
+its `index.json` entry and snapshot are complete (`sector_configs.json`, `sector_influence.json`,
+`sector_definitions.json`); the recorded source hashes no longer decide it. Only a bundle without an
+entry or a complete snapshot, or a run with `--force-generate`, generates legacy files from the
+schema-3 sources. The cost: sector edits no longer reach builds older than schema 3. To change what
+those builds read, refresh the bundle's snapshot here by hand. The per-file `files` index (`mva.json`,
+`misc_drawings.json`, `procedure_options.json`, `map_display.json`) still compares source hashes.

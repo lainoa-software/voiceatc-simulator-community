@@ -9,9 +9,11 @@ Skinned countries' legacy ``colors.json``/``style.json``, ``procedure_options.js
 this projection for older builds.
 
 ``release/legacy_frozen/`` holds the verbatim legacy bytes captured from ``main``
-plus ``release/legacy_frozen/index.json`` recording each bundle/file's schema-3
-source hashes. When source hashes match the index, publish ships frozen bytes
-verbatim; edited or new sources regenerate the legacy shapes from schema 3.
+plus ``release/legacy_frozen/index.json``. A bundle with a complete frozen snapshot
+ships those bytes verbatim to legacy builds, whatever its schema-3 sources now say;
+only a bundle without an index entry or a complete snapshot (or ``--force-generate``)
+regenerates the legacy shapes from schema 3. The cost: sector edits no longer reach
+builds older than schema 3 until their snapshot is refreshed by hand.
 """
 from __future__ import annotations
 
@@ -135,28 +137,6 @@ def _find_ancestor_acc_definitions(root: Path, bundle_path: str) -> Path | None:
                 return cand
         cur = cur.parent
     return None
-
-
-def bundle_source_hashes(
-    root: Path,
-    bundle_path: str,
-    src_files: dict[str, object],
-) -> dict[str, str]:
-    """SHA-256 hashes of a terminal bundle's schema-3 source files and ancestor acc_definitions."""
-    hashes: dict[str, str] = {}
-    for kind, fname in (
-        ("tma_definitions", "tma_definitions.json"),
-        ("tma_layout", "tma_layout.json"),
-        ("definitions", "sector_definitions.json"),
-        ("tma_coordination", "tma_coordination.json"),
-    ):
-        entry = src_files.get(kind)
-        if isinstance(entry, dict) and entry.get("repo_path"):
-            hashes[fname] = _sha256_file(root / str(entry["repo_path"]))
-    acc_path = _find_ancestor_acc_definitions(root, bundle_path)
-    if acc_path is not None:
-        hashes[acc_path.name] = _sha256_file(acc_path)
-    return dict(sorted(hashes.items()))
 
 
 def _resolve_default_doc(document: dict) -> dict:
@@ -687,19 +667,13 @@ def _file_entry(repo_path: str, raw_bytes: bytes, *, requires: list[str] | None 
     return entry
 
 
-def _frozen_files_if_fresh(
+def _frozen_bundle_files(
     root: Path,
     bundle_path: str,
-    src_files: dict[str, object],
     index_entry: dict[str, object] | None,
 ) -> dict[str, bytes] | None:
+    """Return a bundle's frozen legacy bytes when its snapshot is complete, else None."""
     if not isinstance(index_entry, dict):
-        return None
-    expected_hashes = index_entry.get("source_sha256")
-    if not isinstance(expected_hashes, dict):
-        return None
-    current_hashes = bundle_source_hashes(root, bundle_path, src_files)
-    if current_hashes != expected_hashes:
         return None
 
     frozen_list = index_entry.get("frozen_files")
@@ -1935,7 +1909,7 @@ def build_sector_release_projection(
             frozen_files = (
                 None
                 if force_generate
-                else _frozen_files_if_fresh(root, bundle_path, out_files, index_entry)
+                else _frozen_bundle_files(root, bundle_path, index_entry)
             )
             cfg_repo = f"{leg_bundle_path}/sector_configs.json"
             inf_repo = f"{leg_bundle_path}/sector_influence.json"

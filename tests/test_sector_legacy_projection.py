@@ -15,20 +15,14 @@ class SectorLegacyProjectionTests(unittest.TestCase):
         projection = sector_legacy_projection.build_sector_release_projection(REPO_ROOT, source_bundles)
         index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
 
-        expected_generated = [
-            # Vienna and Munich take their contributors' outlines back, so their source no
-            # longer matches the frozen legacy snapshot and the projection generates them.
-            "E/ED/EDMM/EDDM_TMA",
-            "K/KZAU/MILWAUKEE_TMA",
-            "L/LE/LECB/LECB_W/VALENCIA_TMA",
-            "L/LO/LOVV/VIENNA_TMA",
-        ]
+        # Every indexed bundle has a complete frozen snapshot, so source edits (Vienna, Munich)
+        # no longer move what legacy builds receive.
+        expected_generated: list[str] = []
         self.assertEqual(136, len(index))
-        self.assertEqual(132, len(projection["frozen_bundles"]))
+        self.assertEqual(136, len(projection["frozen_bundles"]))
         self.assertEqual(expected_generated, projection["generated_bundles"])
         self.assertEqual(
-            "Sector projection: 132 frozen, 4 generated (E/ED/EDMM/EDDM_TMA, K/KZAU/MILWAUKEE_TMA, "
-            "L/LE/LECB/LECB_W/VALENCIA_TMA, L/LO/LOVV/VIENNA_TMA).",
+            "Sector projection: 136 frozen, 0 generated.",
             sector_legacy_projection.format_projection_report(projection),
         )
 
@@ -48,7 +42,9 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                     tma_count += 1
         self.assertEqual(20, tma_count)
 
-    def test_edited_bundle_and_edited_ancestor_acc_fall_back_to_generated_path(self) -> None:
+    def test_edited_bundle_and_edited_ancestor_acc_ship_frozen_bytes_and_unindexed_bundle_generates(self) -> None:
+        madrid = "L/LE/LECM/LECM_R2/MADRID_TMA"
+        bilbao = "L/LE/LECM/LECM_R1/BILBAO_TMA"
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             shutil.copytree(REPO_ROOT / "L" / "LE" / "LECM", root / "L" / "LE" / "LECM")
@@ -64,20 +60,21 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             full_index = json.loads(
                 (REPO_ROOT / "release" / "legacy_frozen" / "index.json").read_text(encoding="utf-8")
             )
+            # MADRID_TMA has no index entry: it is the bundle without a frozen snapshot.
             subset_index = {
                 "schema_version": 2,
                 "snapshot_commit": full_index["snapshot_commit"],
                 "bundles": {
                     k: v
                     for k, v in full_index["bundles"].items()
-                    if k.startswith(("L/LE/LECM/", "E/ED/EDWW/"))
+                    if k.startswith(("L/LE/LECM/", "E/ED/EDWW/")) and k != madrid
                 },
             }
             (root / "release" / "legacy_frozen" / "index.json").write_text(
                 json.dumps(subset_index, indent=2) + "\n", encoding="utf-8"
             )
 
-            # Edit BILBAO_TMA's tma_definitions.json and LECM's acc_definitions.json (shared ancestor for MADRID_TMA)
+            # Edit BILBAO_TMA's tma_definitions.json and LECM's acc_definitions.json (shared ancestor).
             bio_path = root / "L" / "LE" / "LECM" / "LECM_R1" / "BILBAO_TMA" / "tma_definitions.json"
             bio = json.loads(bio_path.read_text(encoding="utf-8"))
             bio["positions"][0]["frequency"] = "123.450"
@@ -88,35 +85,47 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             acc["units"][0]["call_sign"] = "Madrid Radar Edited"
             acc_path.write_text(json.dumps(acc, indent=2) + "\n", encoding="utf-8")
 
-            source_bundles = sector_data_manifest.build_manifest(root, commit_sha="test")["bundles"]
+            source_bundles = sector_data_manifest.build_manifest(root, commit_sha="test")[
+                "bundles"
+            ]
             projection = sector_legacy_projection.build_sector_release_projection(root, source_bundles)
 
-            # Every L/LE/LECM bundle shares LECM/acc_definitions.json so all LECM bundles regenerate; EDWW stays frozen.
+            # A complete snapshot decides: the edited bundles and the bundles under the edited
+            # ancestor ship their frozen bytes. Only the bundle without an entry generates.
             for bpath in projection["bundle_paths"]:
-                if bpath.startswith("L/LE/LECM/"):
-                    self.assertEqual("generated", projection["bundle_paths"][bpath])
-                else:
-                    self.assertEqual("frozen", projection["bundle_paths"][bpath])
-            self.assertIn("L/LE/LECM/LECM_R2/MADRID_TMA", projection["generated_bundles"])
-            self.assertIn("L/LE/LECM/LECM_R1/BILBAO_TMA", projection["generated_bundles"])
+                expected = "generated" if bpath == madrid else "frozen"
+                self.assertEqual(expected, projection["bundle_paths"][bpath], bpath)
+            self.assertEqual([madrid], projection["generated_bundles"])
             self.assertIn(
-                "L/LE/LECM/LECM_R1/BILBAO_TMA",
+                f"{madrid}",
                 sector_legacy_projection.format_projection_report(projection),
             )
 
+            for fname in ("sector_configs.json", "sector_influence.json", "sector_definitions.json"):
+                frozen_bytes = (
+                    root / "release" / "legacy_frozen" / bilbao / fname
+                ).read_bytes().replace(b"\r\n", b"\n")
+                self.assertEqual(frozen_bytes, projection["projected_bytes"][f"{bilbao}/{fname}"])
             bio_cfg = json.loads(
-                projection["projected_bytes"]["L/LE/LECM/LECM_R1/BILBAO_TMA/sector_configs.json"].decode("utf-8")
+                projection["projected_bytes"][f"{bilbao}/sector_configs.json"].decode("utf-8")
             )
-            self.assertEqual("123.450", bio_cfg["sector_configs"][0]["sectors"][0]["frequency"])
+            self.assertNotEqual("123.450", bio_cfg["sector_configs"][0]["sectors"][0].get("frequency"))
 
-            mad_tma = json.loads(
-                projection["projected_bytes"]["L/LE/LECM/LECM_R2/MADRID_TMA/tma.json"].decode("utf-8")
-            )
+            mad_tma = json.loads(projection["projected_bytes"][f"{madrid}/tma.json"].decode("utf-8"))
             self.assertEqual(1, mad_tma["schema"])
             self.assertEqual("MADRID_TMA", mad_tma["tma"]["id"])
-            self.assertEqual("Madrid Radar Edited", next(u["call_sign"] for u in mad_tma["units"] if u["id"] == "MAD_CTR"))
+            self.assertEqual("Madrid Radar Edited", next(u["call_sign"] for u in mad_tma["units"] if u["call_sign"] == "Madrid Radar Edited"))
             self.assertEqual(["LEMD"], mad_tma["layouts"][0]["positions"][0]["airports"])
             self.assertNotIn("airports", mad_tma["layouts"][0])
+
+            forced = sector_legacy_projection.build_sector_release_projection(
+                root, source_bundles, force_generate=True
+            )
+            self.assertEqual([], forced["frozen_bundles"])
+            forced_cfg = json.loads(
+                forced["projected_bytes"][f"{bilbao}/sector_configs.json"].decode("utf-8")
+            )
+            self.assertEqual("123.450", forced_cfg["sector_configs"][0]["sectors"][0]["frequency"])
 
     def test_new_single_airport_bundle_without_prefix_emits_airport_key(self) -> None:
         cfg, _inf = sector_legacy_projection.project_configs_and_influence(
@@ -465,7 +474,6 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             "E/ES/ESAA/ESOS_Y/ESOS_APP",   # schema-3 config-level airports widen S to ESSA
             "G/GC/GCCC/GCCC_MAIN/CANARIAS_TMA",  # schema-3 config-level airports cover all 7 airports
             "L/LE/LECB/LECB_W/BARCELONA_TMA",    # schema-2/3 limits LEBLCORE to served airports
-            "L/LE/LECB/LECB_W/VALENCIA_TMA",     # patch 0006 adds LECLAAW; schema-3 config airports widen LECLVAP
             "L/LE/LECB/LECB_E/PALMA_TMA",        # schema-3 config-level airports cover LEIB/LEMH/LEPA
             "L/LE/LECM/LECM_R2/MADRID_TMA",      # schema-2/3 serves LEMD and includes LEMDALS
             "L/LE/LECM/LECS/SEVILLA_TMA",        # schema-3 config-level airports widen LECSASN to LEJR
@@ -493,7 +501,6 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             "E/ES/ESAA/ESOS_Y/ESOS_APP",
             "L/LE/LECB/LECB_E/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
-            "L/LE/LECB/LECB_W/VALENCIA_TMA",
             "L/LE/LECM/LECM_R2/MADRID_TMA",
             "L/LO/LOVV/VIENNA_TMA",  # Vienna returns to Willek10's outline (#337 replaced it)
             "L/LT/LTBB/ISTANBUL_TMA",
@@ -520,14 +527,11 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 actual_sd_diffs.add(leg_path)
         self.assertEqual(intentional_sd_diffs, actual_sd_diffs)
 
-        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (132/136):
+        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (136/136):
         norm_proj = sector_legacy_projection.build_sector_release_projection(
             REPO_ROOT, source_bundles, force_generate=False
         )
-        self.assertEqual(
-            ["E/ED/EDMM/EDDM_TMA", "K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA", "L/LO/LOVV/VIENNA_TMA"],
-            sorted(norm_proj["generated_bundles"]),
-        )
+        self.assertEqual([], norm_proj["generated_bundles"])
         for leg_path in norm_proj["frozen_bundles"]:
             for fname in ("sector_configs.json", "sector_definitions.json", "tma.json", "sector_influence.json"):
                 fp = REPO_ROOT / "release" / "legacy_frozen" / leg_path / fname
