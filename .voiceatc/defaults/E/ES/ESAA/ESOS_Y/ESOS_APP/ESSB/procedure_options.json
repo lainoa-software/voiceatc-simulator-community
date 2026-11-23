@@ -1,0 +1,12 @@
+{
+  "airport": "ESSB",
+  "schema_version": 1,
+  "airac_min": 2607,
+  "defaults": {
+    "spawn_enabled": true,
+    "init_climb": 3000
+  },
+  "stars": {},
+  "sids": {},
+  "iaps": {}
+}

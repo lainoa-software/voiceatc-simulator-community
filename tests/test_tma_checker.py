@@ -1,4 +1,4 @@
-"""The reference checker agrees with the shared corpus and checks the real bundles."""
+"""The reference checker agrees with the shared corpus and checks the real bundles (schema 3)."""
 import importlib.util
 import json
 import shutil
@@ -24,15 +24,18 @@ MADRID = REPO_ROOT / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA"
 
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
-        self.assertEqual(107, len(CORPUS["cases"]))
+        self.assertEqual(63, len(CORPUS["cases"]))
         for case in CORPUS["cases"]:
             with self.subTest(case=case["name"]):
                 problems = MODULE.check(
-                    case["payload"],
+                    case["defs"],
+                    case["layout"],
                     case["bundle_key"],
                     set(case["sector_ids"]),
                     case.get("acc_units", []),
+                    case.get("acc_positions", []),
                     case.get("coordination"),
+                    case.get("sector_catalog", {}),
                 )
                 self.assertEqual([[problem.code, problem.where] for problem in problems], case["expect"])
 
@@ -40,11 +43,14 @@ class TmaCheckerTests(unittest.TestCase):
         message_case = CORPUS["message_case"]
         case = next(case for case in CORPUS["cases"] if case["name"] == message_case["name"])
         problems = MODULE.check(
-            case["payload"],
+            case["defs"],
+            case["layout"],
             case["bundle_key"],
             set(case["sector_ids"]),
             case.get("acc_units", []),
+            case.get("acc_positions", []),
             case.get("coordination"),
+            case.get("sector_catalog", {}),
         )
         self.assertIn(message_case["message"], [problem.message(case["bundle_key"]) for problem in problems])
 
@@ -53,15 +59,20 @@ class TmaCheckerTests(unittest.TestCase):
         fir_dir: Path,
         bundle_name: str,
         source_bundle: Path,
-        tma_fixture: str,
-        acc_fixture: str,
+        tma_defs_fixture: str,
+        tma_layout_fixture: str,
+        acc_defs_fixture: str,
+        acc_layout_fixture: str | None = None,
         coord_fixture: str | None = None,
     ) -> Path:
         fir_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(CASES_DIR / acc_fixture, fir_dir / "acc_structure.json")
+        shutil.copyfile(CASES_DIR / acc_defs_fixture, fir_dir / "acc_definitions.json")
+        if acc_layout_fixture is not None:
+            shutil.copyfile(CASES_DIR / acc_layout_fixture, fir_dir / "acc_layout.json")
         target = fir_dir / bundle_name
         shutil.copytree(source_bundle, target)
-        shutil.copyfile(CASES_DIR / tma_fixture, target / "tma_structure.json")
+        shutil.copyfile(CASES_DIR / tma_defs_fixture, target / "tma_definitions.json")
+        shutil.copyfile(CASES_DIR / tma_layout_fixture, target / "tma_layout.json")
         coord_path = target / "tma_coordination.json"
         if coord_fixture is not None:
             shutil.copyfile(CASES_DIR / coord_fixture, coord_path)
@@ -72,23 +83,53 @@ class TmaCheckerTests(unittest.TestCase):
     def test_real_bundles_pass(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
-            bcn = self._seed_bundle(root / "LECB", "BARCELONA_TMA", BARCELONA, "barcelona_tma.json", "barcelona_acc.json")
-            mad = self._seed_bundle(root / "LECM", "MADRID_TMA", MADRID, "madrid_tma.json", "madrid_acc.json", "madrid_coordination.json")
+            bcn = self._seed_bundle(
+                root / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "barcelona_tma_definitions.json",
+                "barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
+            mad = self._seed_bundle(
+                root / "LECM",
+                "MADRID_TMA",
+                MADRID,
+                "madrid_tma_definitions.json",
+                "madrid_tma_layout.json",
+                "madrid_acc_definitions.json",
+                "madrid_acc_layout.json",
+                "madrid_coordination.json",
+            )
             self.assertEqual([], MODULE.check_bundle(bcn))
             self.assertEqual([], MODULE.check_bundle(mad))
 
-    def test_a_bundle_without_tma_structure_passes(self) -> None:
+    def test_live_bundles_pass(self) -> None:
+        self.assertEqual([], MODULE.check_bundle(BARCELONA))
+        self.assertEqual([], MODULE.check_bundle(MADRID))
+
+    def test_a_bundle_without_tma_files_passes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             bundle = Path(tmp_dir) / "BARCELONA_TMA"
             shutil.copytree(BARCELONA, bundle)
-            tma_file = bundle / "tma_structure.json"
-            if tma_file.exists():
-                tma_file.unlink()
+            for fname in ("tma_definitions.json", "tma_layout.json"):
+                fpath = bundle / fname
+                if fpath.exists():
+                    fpath.unlink()
             self.assertEqual([], MODULE.check_bundle(bundle))
 
-    def test_broken_tma_structure_reports_every_sentence(self) -> None:
+    def test_broken_tma_definitions_reports_every_sentence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
-            bundle = self._seed_bundle(Path(tmp_dir) / "LECB", "BARCELONA_TMA", BARCELONA, "broken_barcelona_tma.json", "barcelona_acc.json")
+            bundle = self._seed_bundle(
+                Path(tmp_dir) / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "broken_barcelona_tma_definitions.json",
+                "broken_barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
             sentences = MODULE.check_bundle(bundle)
             self.assertTrue(sentences)
             self.assertTrue(
@@ -96,35 +137,54 @@ class TmaCheckerTests(unittest.TestCase):
                 sentences,
             )
 
-    def test_unparseable_tma_structure_is_one_invalid_sentence(self) -> None:
+    def test_unparseable_tma_definitions_is_one_invalid_sentence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             bundle = Path(tmp_dir) / "BARCELONA_TMA"
             shutil.copytree(BARCELONA, bundle)
-            (bundle / "tma_structure.json").write_text("{bad json", encoding="utf-8")
+            (bundle / "tma_definitions.json").write_text("{bad json", encoding="utf-8")
             self.assertEqual(
-                ["BARCELONA_TMA/tma_structure.json: the file is not a JSON object."],
+                ["BARCELONA_TMA/tma_definitions.json: the file is not a JSON object."],
                 MODULE.check_bundle(bundle),
             )
 
     def test_unknown_runway_preset_is_refused(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
-            bundle = self._seed_bundle(Path(tmp_dir) / "LECM", "MADRID_TMA", MADRID, "madrid_tma.json", "madrid_acc.json", "madrid_coordination.json")
-            payload = json.loads((bundle / "tma_structure.json").read_text(encoding="utf-8"))
-            payload["layouts"][0]["runways"]["LEMD"] = ["NOWHERE"]
-            (bundle / "tma_structure.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+            bundle = self._seed_bundle(
+                Path(tmp_dir) / "LECM",
+                "MADRID_TMA",
+                MADRID,
+                "madrid_tma_definitions.json",
+                "madrid_tma_layout.json",
+                "madrid_acc_definitions.json",
+                "madrid_acc_layout.json",
+                "madrid_coordination.json",
+            )
+            payload = json.loads((bundle / "tma_layout.json").read_text(encoding="utf-8"))
+            payload["configurations"]["MAD_APP"]["1AND"]["valid_for_runways"]["LEMD"] = ["NOWHERE"]
+            (bundle / "tma_layout.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
             self.assertEqual(
                 [
-                    'MADRID_TMA/tma_structure.json layouts[0] "1AND".runways.LEMD: '
+                    'MADRID_TMA/tma_layout.json configurations.MAD_APP.1AND.valid_for_runways.LEMD: '
                     'runway preset "NOWHERE" is not in LEMD/runway_configs.json.'
                 ],
                 MODULE.check_bundle(bundle),
             )
 
-    def test_corpus_copies_are_valid_schema2_tma_fixtures(self) -> None:
-        for name in ("barcelona_tma.json", "madrid_tma.json", "barcelona_acc.json", "madrid_acc.json", "madrid_coordination.json"):
+    def test_corpus_copies_are_valid_schema3_tma_fixtures(self) -> None:
+        for name in (
+            "barcelona_tma_definitions.json",
+            "barcelona_tma_layout.json",
+            "madrid_tma_definitions.json",
+            "madrid_tma_layout.json",
+            "barcelona_acc_definitions.json",
+            "barcelona_acc_layout.json",
+            "madrid_acc_definitions.json",
+            "madrid_acc_layout.json",
+            "madrid_coordination.json",
+        ):
             with self.subTest(file=name):
                 payload = json.loads((CASES_DIR / name).read_text(encoding="utf-8"))
-                self.assertEqual(2, payload["schema"])
+                self.assertEqual(3, payload["schema"])
 
 
 if __name__ == "__main__":

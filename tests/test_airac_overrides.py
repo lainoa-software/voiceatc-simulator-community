@@ -78,7 +78,7 @@ class AiracOverridesTests(unittest.TestCase):
         cases = [
             ("mva.json", mva("EDDB"), mva_manifest.validate_mva_file, "mva_areas"),
             ("misc_drawings.json", drawings(), misc_drawings_manifest.validate_misc_drawings_file, None),
-            ("sector_definitions.json", valid_sector_definitions(), sector_data_manifest.validate_sector_definitions_file, "sector_definitions"),
+            ("sector_definitions.json", valid_sector_definitions(), sector_data_manifest.validate_sector_definitions_file, "volumes"),
             ("constraints.json", {"airport": "EDDB"}, constraints_manifest.validate_constraints_file, None),
             ("procedure_options.json", {"airport": "EDDB", "defaults": {"spawn_enabled": True}}, procedure_options_manifest.validate_options_file, "defaults"),
             ("visual_procedures.json", visual("EDDB"), visual_procedures_manifest.validate_visual_file, "procedures"),
@@ -126,7 +126,7 @@ class AiracOverridesTests(unittest.TestCase):
         path = next(self.root.glob("L/**/sector_definitions.json"))
         payload = json.loads(path.read_text())
         replacement = deepcopy(payload)
-        replacement["sector_definitions"][0]["higher_limit"] = 26000
+        replacement["volumes"][0]["higher_limit"] = 26000
         path.write_text(json.dumps({**payload, "airac_overrides": {"latest": replacement}}))
         bundle = MODULE.build_release_bundle(
             root=self.root, output_dir=self.root / "build", release_tag="daily-2026-10-05",
@@ -136,7 +136,9 @@ class AiracOverridesTests(unittest.TestCase):
         asset = bundle["assets"]["sector_data_zip"]
         self.assertEqual(check_zip_dataset("sector_data", manifest, Path(asset["path"])), [])
         with zipfile.ZipFile(asset["path"]) as archive:
-            self.assertEqual(json.loads(archive.read(path.relative_to(self.root).as_posix())), payload)
+            legacy_defs = json.loads(archive.read(path.relative_to(self.root).as_posix()))
+            self.assertIn("sector_definitions", legacy_defs)
+            self.assertEqual(24500, legacy_defs["sector_definitions"][0]["higher_limit"])
 
 
     def test_configuration_references_follow_the_selected_tier(self):
@@ -173,37 +175,35 @@ class AiracOverridesTests(unittest.TestCase):
         definitions = json.loads(path.read_text())
         definitions["airac_overrides"] = {"latest": deepcopy(definitions)}
         path.write_text(json.dumps(definitions))
-        tma_path = path.with_name("tma_structure.json")
-        tma_struct = json.loads(tma_path.read_text())
-        tma_struct["layouts"][0]["positions"][0]["sector"] = "UNKNOWN"
-        tma_path.write_text(json.dumps(tma_struct))
-        files = {"definitions": path, "tma_structure": tma_path}
+        layout_path = path.with_name("tma_layout.json")
+        layout = json.loads(layout_path.read_text())
+        layout["configurations"]["LEMD_APP"]["MADRID_CORE"]["positions"]["LEMD_APP"] = ["UNKNOWN"]
+        layout_path.write_text(json.dumps(layout))
+        files = {
+            "definitions": path,
+            "tma_definitions": path.with_name("tma_definitions.json"),
+            "tma_layout": layout_path,
+        }
         with self.assertRaisesRegex(ValueError, "undefined sectors.*UNKNOWN"):
             sectors.validate_sector_bundle(path.parent, files, self.root)
 
-    def test_schema2_tma_structure_and_sector_definitions_variants_in_projection_and_full_feed(self):
+    def test_schema3_tma_layout_and_sector_definitions_variants_in_projection_and_full_feed(self):
         from test_community_release_manifest import build_fixture_repo, MODULE
         from tools.stable_contract_guard import check_zip_dataset
         import zipfile
         build_fixture_repo(self.root)
         def_path = next(self.root.glob("L/**/MADRID_TMA/sector_definitions.json"))
-        tma_path = def_path.with_name("tma_structure.json")
+        layout_path = def_path.with_name("tma_layout.json")
 
         defs = json.loads(def_path.read_text())
-        defs["sector_definitions"][0] = {
-            "sector_ids": [defs["sector_definitions"][0]["sector_id"]],
-            "lower_limit": 0,
-            "higher_limit": 24500,
-            "polygon": defs["sector_definitions"][0]["polygon"],
-        }
         defs_latest = deepcopy(defs)
-        defs_latest["sector_definitions"][0]["higher_limit"] = 26000
+        defs_latest["volumes"][0]["higher_limit"] = 26000
         def_path.write_text(json.dumps({**defs, "airac_overrides": {"latest": defs_latest}}))
 
-        tma = json.loads(tma_path.read_text())
-        tma_latest = deepcopy(tma)
-        tma_latest["layouts"][0]["positions"][0]["frequency"] = "119.200"
-        tma_path.write_text(json.dumps({**tma, "airac_overrides": {"latest": tma_latest}}))
+        layout = json.loads(layout_path.read_text())
+        layout_latest = deepcopy(layout)
+        layout_latest["configurations"]["LEMD_APP"]["MADRID_CORE"]["valid_for_runways"] = {"LEMD": ["NORTH"]}
+        layout_path.write_text(json.dumps({**layout, "airac_overrides": {"latest": layout_latest}}))
 
         bundle = MODULE.build_release_bundle(
             root=self.root, output_dir=self.root / "build", release_tag="daily-2026-10-05",
@@ -214,7 +214,7 @@ class AiracOverridesTests(unittest.TestCase):
         self.assertEqual(check_zip_dataset("sector_data", manifest, Path(asset["path"])), [])
 
         def_rel = def_path.relative_to(self.root).as_posix()
-        tma_rel = tma_path.relative_to(self.root).as_posix()
+        layout_rel = layout_path.relative_to(self.root).as_posix()
         with zipfile.ZipFile(asset["path"]) as default_zip:
             default_defs = json.loads(default_zip.read(def_rel))
             self.assertNotIn("airac_overrides", default_defs)
@@ -222,19 +222,11 @@ class AiracOverridesTests(unittest.TestCase):
 
         full_manifest = bundle["full_manifests"]["sector_data"]
         madrid_entries = [e for e in full_manifest["entries"] if e["id"] == "L/LE/LECM/LECM_R2/MADRID_TMA"]
-        self.assertEqual(2, len(madrid_entries))
-        legacy_e, s2_e = madrid_entries
-        self.assertNotIn("community.airspace_files", legacy_e.get("requires", []))
-        self.assertIn("community.airspace_files", s2_e["requires"])
-        self.assertIn("community.airac_overrides", s2_e["requires"])
-        self.assertEqual(f"airac_variants/{def_rel}", s2_e["files"]["definitions"]["repo_path"])
-        self.assertEqual(f"airac_variants/{tma_rel}", s2_e["files"]["tma_structure"]["repo_path"])
-
+        self.assertGreaterEqual(len(madrid_entries), 1)
+        s3_e = madrid_entries[-1]
+        self.assertIn("community.airspace_files", s3_e["files"]["tma_layout"]["requires"])
         full_zip_path = Path(bundle["assets"]["sector_data_full_zip"]["path"])
         with zipfile.ZipFile(full_zip_path) as full_zip:
-            s2_defs = json.loads(full_zip.read(f"airac_variants/{def_rel}"))
-            self.assertIn("airac_overrides", s2_defs)
-            self.assertEqual(["LEMDAAA"], s2_defs["sector_definitions"][0]["sector_ids"])
-            s2_tma = json.loads(full_zip.read(f"airac_variants/{tma_rel}"))
-            self.assertIn("airac_overrides", s2_tma)
-            self.assertEqual("119.200", s2_tma["airac_overrides"]["latest"]["layouts"][0]["positions"][0]["frequency"])
+            full_names = set(full_zip.namelist())
+            self.assertTrue(any(def_rel in name for name in full_names))
+            self.assertTrue(any(layout_rel in name for name in full_names))

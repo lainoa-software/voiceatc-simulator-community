@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "KLSV",
+  "variants": [
+    {
+      "procedure_id": "SIN_CITY_VISUAL_03LR",
+      "variant_id": "SIN_CITY_03L",
+      "default_reference_id": "NORTHWEST_CITY_OUTLINE",
+      "references": [
+        {
+          "id": "NORTHWEST_CITY_OUTLINE",
+          "name": "the northwest Las Vegas city outline",
+          "aliases": ["northwest Las Vegas"],
+          "geometry": { "kind": "point", "leg_id": "NW_CITY_OUTLINE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "SIN CITY VISUAL RWY 03L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00227SINCITY_VIS3LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "SIN_CITY_VISUAL_03LR",
+      "variant_id": "SIN_CITY_03R",
+      "default_reference_id": "NORTHWEST_CITY_OUTLINE",
+      "references": [
+        {
+          "id": "NORTHWEST_CITY_OUTLINE",
+          "name": "the northwest Las Vegas city outline",
+          "aliases": ["northwest Las Vegas"],
+          "geometry": { "kind": "point", "leg_id": "NW_CITY_OUTLINE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "SIN CITY VISUAL RWY 03L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00227SINCITY_VIS3LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

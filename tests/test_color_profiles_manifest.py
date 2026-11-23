@@ -60,9 +60,11 @@ def write_compatibility_registry(root: Path, aliases: dict[str, list[str]] | Non
 class ColorProfilesManifestTests(unittest.TestCase):
     def test_repository_contains_expected_scope_paths(self) -> None:
         manifest = MODULE.build_manifest(REPO_ROOT, commit_sha="test-commit")
-        core_scopes = {"E/EH", "G/GC", "L/LE"}
+        core_scopes = {"E/EH", "G/GC"}
         found_scopes = set(manifest["profiles"].keys())
         self.assertTrue(core_scopes.issubset(found_scopes), f"Missing core scopes: {core_scopes - found_scopes}")
+        self.assertNotIn("L/LE", found_scopes)
+        self.assertNotIn("K", found_scopes)
 
     def test_repository_release_projection_matches_legacy_contract(self) -> None:
         canonical = MODULE.build_manifest(REPO_ROOT, commit_sha="test-commit")
@@ -72,14 +74,13 @@ class ColorProfilesManifestTests(unittest.TestCase):
         canonical_scopes = set(canonical["profiles"])
         projection_scopes = set(projection["profiles"])
 
-        # The single-segment K region scope is replaced by its 26 US aliases;
-        # every multi-segment canonical scope passes through unchanged.
+        # Skinned compatibility scopes (K -> 26 US aliases, L/LE, E/ED/*) ship from
+        # release/legacy_frozen/ alongside canonical source scopes.
         self.assertNotIn("K", projection_scopes)
-        self.assertEqual(canonical_scopes - {"K"}, projection_scopes - aliases)
+        self.assertTrue(canonical_scopes.issubset(projection_scopes))
+        self.assertIn("L/LE", projection_scopes)
         self.assertEqual(aliases, {scope for scope in projection_scopes if scope.startswith("K/")})
 
-        # Archive sources cover every released file exactly once, mapping each alias
-        # back to the canonical K source and leaving pass-through paths untouched.
         expected_archive_paths = {
             entry["repo_path"]
             for profile in projection["profiles"].values()
@@ -90,10 +91,8 @@ class ColorProfilesManifestTests(unittest.TestCase):
             for kind, entry in profile["files"].items():
                 file_name = MODULE.PROFILE_FILE_NAMES[kind]
                 self.assertEqual(f"{scope}/{file_name}", entry["repo_path"])
-                if scope in aliases:
-                    self.assertEqual(f"K/{file_name}", projection["archive_sources"][entry["repo_path"]])
-                else:
-                    self.assertEqual(entry["repo_path"], projection["archive_sources"][entry["repo_path"]])
+                src_path = projection["archive_sources"][entry["repo_path"]]
+                self.assertTrue((REPO_ROOT / src_path).is_file(), src_path)
 
     def test_build_manifest_accepts_region_country_fir_acc_tma_scopes(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

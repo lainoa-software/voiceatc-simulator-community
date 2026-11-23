@@ -1,0 +1,8 @@
+{
+  "airport": "EKKA",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "defaults": {
+    "init_climb": 12000
+  }
+}

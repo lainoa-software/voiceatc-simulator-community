@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "airport": "KSEA",
+  "variants": [
+    {
+      "procedure_id": "BAY_VISUAL_16RCL",
+      "variant_id": "BAY_16R",
+      "default_reference_id": "ELLIOTT_BAY",
+      "references": [
+        {
+          "id": "ELLIOTT_BAY",
+          "name": "Elliott Bay",
+          "aliases": ["the middle of Elliott Bay"],
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "BAY VISUAL RWY 16 R/C/L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "BAY_VISUAL_16RCL",
+      "variant_id": "BAY_16C",
+      "default_reference_id": "ELLIOTT_BAY",
+      "references": [
+        {
+          "id": "ELLIOTT_BAY",
+          "name": "Elliott Bay",
+          "aliases": ["the middle of Elliott Bay"],
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "BAY VISUAL RWY 16 R/C/L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "BAY_VISUAL_16RCL",
+      "variant_id": "BAY_16L",
+      "default_reference_id": "ELLIOTT_BAY",
+      "references": [
+        {
+          "id": "ELLIOTT_BAY",
+          "name": "Elliott Bay",
+          "aliases": ["the middle of Elliott Bay"],
+          "geometry": { "kind": "point", "leg_id": "ELLIOTT_BAY_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "BAY VISUAL RWY 16 R/C/L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00582BAY_VIS16RCL.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

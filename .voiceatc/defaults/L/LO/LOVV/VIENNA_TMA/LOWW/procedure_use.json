@@ -1,0 +1,596 @@
+{
+  "schema": 3,
+  "airport": "LOWW",
+  "airac_min": 2503,
+  "use": [
+    {
+      "kind": "all",
+      "spawn": true
+    },
+    {
+      "stars": [
+        "REKL3W"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "TOVK3W"
+      ],
+      "spawn": false
+    },
+    {
+      "stars": [
+        "VENE3W"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "AGMI2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ASPI2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EMKO3C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EWUK1C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IMVO3C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IRGO2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ODSU2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSMO2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OTGA2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "UMSU3C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "UNGU2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VABG2C"
+      ],
+      "configs": [
+        "DAY_CALM"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ADAM1F"
+      ],
+      "configs": [
+        "DAY_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BUWU1F"
+      ],
+      "configs": [
+        "DAY_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KOXE1F"
+      ],
+      "configs": [
+        "DAY_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LANU1F"
+      ],
+      "configs": [
+        "DAY_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEDV1F"
+      ],
+      "configs": [
+        "DAY_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "AGMI2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ASPI2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EMKO3C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "EWUK1C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IMVO3C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "IRGO2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ODSU2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSMO2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OTGA2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "UMSU3C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "UNGU2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "VABG2C"
+      ],
+      "configs": [
+        "DAY_WEST"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ADAM2C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARSI1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BUWU1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KOXE1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LANU2C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEDV3C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUGE1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "MEDI1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSPE4C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RUPE2C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SOVI1C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "STEI3C"
+      ],
+      "configs": [
+        "NIGHT"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ADAM1A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARSI1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "ARSI2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BUWU1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "BUWU2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "KOXE1A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LANU1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LANU4A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEDV1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LEDV4A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUGE1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "LUGE2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "MEDI1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "MEDI2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSPE1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "OSPE3A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RUPE1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "RUPE2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SOVI1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "SOVI2A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "STEI1E"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    },
+    {
+      "sids": [
+        "STEI3A"
+      ],
+      "configs": [
+        "NIGHT_SE"
+      ],
+      "spawn": false
+    }
+  ]
+}

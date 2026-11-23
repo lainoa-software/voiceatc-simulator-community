@@ -58,14 +58,14 @@ REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 DISPLAY_FILENAME = "map_display.json"
 # The game's per-airport sync engine accepts schema_version 1 only.
 MANIFEST_SCHEMA_VERSION = 1
-FILE_SCHEMA_VERSION = 1
+FILE_SCHEMA_VERSIONS = (1, 3)
 LIST_KEYS = ("fixes", "vors", "ndbs")
 ILS_LENGTH_KEY = "ils_length_nm"
 # The game's ILS line length range (MIN/MAX_ILS_TICK_NM in scripts/world/levels/ils_spawner.gd).
 ILS_LENGTH_RANGE = (1, 50)
 SETTING_KEYS = ("layers", ILS_LENGTH_KEY, *LIST_KEYS)
 POSITIONS_KEY = "positions"
-POSITION_KEYS = {"layers", "airspaces", "fixes"}
+POSITION_KEYS = {"layers", "airspaces", "fixes", "vors", "ndbs", ILS_LENGTH_KEY}
 TOP_LEVEL_KEYS = {"airport", "schema", "notes", POSITIONS_KEY, *SETTING_KEYS}
 # The game's MAPS layer names (LAYERS in scripts/ui/pref_bar/map_layer_menu_button_base.gd).
 LAYER_NAMES = (
@@ -175,25 +175,37 @@ def _validate_positions(positions: object, path: Path) -> None:
                 raise ValueError(f"{path}: {where}.airspaces repeats a name")
         if "fixes" in block:
             _validate_list(block["fixes"], f"{where}.fixes", path)
+        for k in ("vors", "ndbs"):
+            if k in block:
+                _validate_list(block[k], f"{where}.{k}", path)
+        if ILS_LENGTH_KEY in block:
+            low, high = ILS_LENGTH_RANGE
+            value = block[ILS_LENGTH_KEY]
+            if isinstance(value, bool) or not isinstance(value, int) or not low <= value <= high:
+                raise ValueError(f"{path}: '{where}.{ILS_LENGTH_KEY}' must be a whole number from {low} to {high}")
 
 
 def _validate_display_document(payload: dict[str, object], path: Path) -> str:
-    """Validate one resolved tier document against schema-1 map display rules.
-
-    Checks allowed keys, airport match, schema version, notes, layers, ILS length, lists, and positions.
-    """
+    """Validate one resolved tier document against map display rules (schema 1 airport or schema 3 scope)."""
     unknown = set(payload) - TOP_LEVEL_KEYS
     if unknown:
         raise ValueError(
             f"{path}: unknown keys {sorted(unknown)} (allowed: {', '.join(sorted(TOP_LEVEL_KEYS))})"
         )
 
-    airport = ensure_text_field(payload.get("airport"), "airport", path).upper()
-    parent_folder = path.parent.name.strip().upper()
-    if airport != parent_folder:
-        raise ValueError(f"{path}: airport '{airport}' must match parent folder '{parent_folder}'")
-    if "schema" in payload and payload["schema"] != FILE_SCHEMA_VERSION:
-        raise ValueError(f"{path}: 'schema' must be {FILE_SCHEMA_VERSION}")
+    schema_val = payload.get("schema")
+    if "schema" in payload:
+        if isinstance(schema_val, bool) or schema_val not in FILE_SCHEMA_VERSIONS:
+            raise ValueError(f"{path}: 'schema' must be 1 or 3")
+
+    airport = ""
+    if "airport" in payload:
+        airport = ensure_text_field(payload.get("airport"), "airport", path).upper()
+        parent_folder = path.parent.name.strip().upper()
+        if airport != parent_folder:
+            raise ValueError(f"{path}: airport '{airport}' must match parent folder '{parent_folder}'")
+    elif schema_val != 3:
+        ensure_text_field(payload.get("airport"), "airport", path)
     if "notes" in payload:
         ensure_text_field(payload["notes"], "notes", path)
     if "layers" in payload:
@@ -213,6 +225,33 @@ def _validate_display_document(payload: dict[str, object], path: Path) -> str:
     return airport
 
 
+def _scope_airports(repo_path: str, root: Path) -> list[str]:
+    files_index = sector_legacy_projection.load_frozen_files_index(root)
+    matched: list[str] = []
+    for legacy_rp, meta in sorted(files_index.items()):
+        if meta.get("kind") == "map_display" and repo_path in (meta.get("sources") or {}):
+            parts = legacy_rp.split("/")
+            if len(parts) >= 2 and len(parts[-2]) == 4:
+                matched.append(parts[-2].upper())
+    if matched:
+        return matched
+    registry_path = root / "documentation" / "content_hierarchy.json"
+    if registry_path.is_file():
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+        scope = repo_path.rsplit("/", 1)[0]
+        terminals = registry.get("terminal_scopes", {})
+        if isinstance(terminals, dict):
+            if scope in terminals and isinstance(terminals[scope], list) and terminals[scope]:
+                return [str(a).strip().upper() for a in terminals[scope]]
+            collected: list[str] = []
+            for tscope, ap_list in terminals.items():
+                if str(tscope).startswith(scope + "/") and isinstance(ap_list, list):
+                    collected.extend(str(a).strip().upper() for a in ap_list)
+            if collected:
+                return sorted(set(collected))
+    return []
+
+
 def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     raw_bytes = path.read_bytes()
     try:
@@ -222,15 +261,21 @@ def validate_display_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     if not isinstance(payload, dict):
         raise ValueError(f"{path}: map display file must be a JSON object")
     airport = ""
+    has_variants = "airac_overrides" in payload
     for tier, document in airac_overrides.documents(payload):
         resolved_ap = _validate_display_document(document, path)
         if not tier:
             airport = resolved_ap
 
+    repo_path = path.relative_to(root).as_posix()
+    airports = [airport] if airport else _scope_airports(repo_path, root)
     canonical = raw_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return {
         "airport": airport,
-        "repo_path": path.relative_to(root).as_posix(),
+        "airports": airports,
+        "schema": payload.get("schema"),
+        "has_variants": has_variants,
+        "repo_path": repo_path,
         "sha256": hashlib.sha256(canonical).hexdigest(),
         "size_bytes": len(canonical),
     }
@@ -254,14 +299,16 @@ def build_manifest(root: Path = ROOT, published_at: str | None = None) -> dict[s
     airports: dict[str, dict[str, object]] = {}
     for path in display_files(root):
         entry = validate_display_file(path, root)
-        airport = str(entry["airport"])
-        if airport in airports:
-            raise ValueError(f"duplicate airport '{airport}' across map display files")
-        airports[airport] = {
-            "repo_path": entry["repo_path"],
-            "sha256": entry["sha256"],
-            "size_bytes": entry["size_bytes"],
-        }
+        listed = entry.get("airports") or ([entry["airport"]] if entry.get("airport") else [])
+        for airport in listed:  # type: ignore[union-attr]
+            ap = str(airport)
+            if ap in airports:
+                raise ValueError(f"duplicate airport '{ap}' across map display files")
+            airports[ap] = {
+                "repo_path": entry["repo_path"],
+                "sha256": entry["sha256"],
+                "size_bytes": entry["size_bytes"],
+            }
     if published_at is None:
         published_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     return {
@@ -326,9 +373,13 @@ def validate_existing_manifest_entries(
         if not candidate.is_file():
             raise ValueError(f"{manifest_path}: missing file for airport '{airport}' at '{repo_path}'")
         generated = validate_display_file(candidate, root)
-        if generated["airport"] != airport:
+        if generated["airport"] and generated["airport"] != airport:
             raise ValueError(
                 f"{manifest_path}: airport key '{airport}' does not match file airport '{generated['airport']}'"
+            )
+        if not generated["airport"] and airport not in (generated.get("airports") or []):
+            raise ValueError(
+                f"{manifest_path}: airport key '{airport}' is not in scope of '{repo_path}'"
             )
         if str(entry.get("sha256", "")).strip().lower() != generated["sha256"]:
             raise ValueError(f"{manifest_path}: sha256 mismatch for airport '{airport}'")
@@ -381,25 +432,37 @@ def main() -> int:
             for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
         }
         files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
-        has_variants = any(
-            "airac_overrides" in json.loads((ROOT / rp).read_text(encoding="utf-8"))
-            for rp in source_airports.values()
-        )
-        if has_variants:
+        needs_full = False
+        for rp in source_airports.values():
+            doc = json.loads((ROOT / rp).read_text(encoding="utf-8"))
+            if isinstance(doc, dict) and ("airac_overrides" in doc or doc.get("schema") == 3):
+                needs_full = True
+                break
+        if needs_full:
             manifest = airac_overrides.publish_raw_manifest(
                 ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files",)
             )
         for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
             orig_repo = source_airports[ap]
             raw_bytes = (ROOT / orig_repo).read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+            lookup_rp = orig_repo
+            for frozen_rp, meta in files_index.items():
+                if meta.get("kind") == "map_display" and orig_repo in (meta.get("sources") or {}):
+                    if f"/{ap}/map_display.json" in frozen_rp or frozen_rp.startswith(f"{ap}/"):
+                        lookup_rp = frozen_rp
+                        break
+            if lookup_rp == orig_repo and not orig_repo.endswith(f"/{ap}/map_display.json"):
+                scope_dir = orig_repo.rsplit("/", 1)[0]
+                lookup_rp = f"{scope_dir}/{ap}/map_display.json"
             leg_bytes = sector_legacy_projection.project_map_display_default_bytes(
-                ROOT, orig_repo, files_index=files_index
+                ROOT, lookup_rp, files_index=files_index
             )
             if leg_bytes != raw_bytes:
-                dest = ROOT / ".voiceatc" / "defaults" / orig_repo
+                dest_rel = f".voiceatc/defaults/{lookup_rp}"
+                dest = ROOT / dest_rel
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 dest.write_bytes(leg_bytes)
-                entry["repo_path"] = f".voiceatc/defaults/{orig_repo}"
+                entry["repo_path"] = dest_rel
                 entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
                 entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)

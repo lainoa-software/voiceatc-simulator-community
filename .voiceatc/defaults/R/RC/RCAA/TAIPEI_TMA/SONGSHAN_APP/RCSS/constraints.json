@@ -1,0 +1,230 @@
+{
+  "airport": "RCSS",
+  "airac_min": 2610,
+  "stars": {
+    "APU1E": {
+      "COOKY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "ZONLI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "HLG1E": {
+      "ZONLI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3200
+        }
+      }
+    },
+    "YILA1E": {
+      "ROLUT": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 8000
+        }
+      },
+      "COOKY": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 8000
+        }
+      },
+      "ZONLI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      }
+    },
+    "KUDO1K": {
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "ANNA1B": {
+      "D054S": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "DUPAR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "BAKE1D": {
+      "D040S": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "DUPAR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "CARO1B": {
+      "D001S": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "DUPAR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "APU1F": {
+      "DUPAR": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "YILA1F": {
+      "EPKAT": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "PINSI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "APU1C": {
+      "MENIT": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 8000
+        }
+      },
+      "PUTIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 8000
+        }
+      }
+    },
+    "HLG1F": {
+      "FUSIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 9000
+        }
+      },
+      "SIDIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "PINSI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "HLG1H": {
+      "JONHO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "FUSIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "SIDIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 7000
+        }
+      },
+      "PINSI": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 5000
+        }
+      },
+      "BESOM": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 4500
+        }
+      }
+    },
+    "HLG1G": {
+      "PUTIN": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 3200
+        }
+      }
+    }
+  }
+}

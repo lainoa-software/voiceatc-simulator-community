@@ -26,19 +26,27 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / ".voiceatc" / "sector_data_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 BRANCH_NAME = "main"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 3
 AIRSPACE_CAPABILITY = "community.airspace_files"
 SECTOR_FILE_NAMES = {
-    "tma_structure": "tma_structure.json",
+    "tma_definitions": "tma_definitions.json",
+    "tma_layout": "tma_layout.json",
     "tma_coordination": "tma_coordination.json",
     "definitions": "sector_definitions.json",
-    "acc_structure": "acc_structure.json",
+    "acc_definitions": "acc_definitions.json",
+    "acc_layout": "acc_layout.json",
     "acc_coordination": "acc_coordination.json",
 }
-LEGACY_GENERATED_FILE_NAMES = ("sector_configs.json", "sector_influence.json")
+LEGACY_GENERATED_FILE_NAMES = (
+    "sector_configs.json",
+    "sector_influence.json",
+    "tma.json",
+    "tma_structure.json",
+    "acc_structure.json",
+)
 FILE_KIND_BY_NAME = {file_name: kind for kind, file_name in SECTOR_FILE_NAMES.items()}
-TMA_REQUIRED_KINDS = ("tma_structure", "definitions")
-ACC_REQUIRED_KINDS = ("acc_structure",)
+TMA_REQUIRED_KINDS = ("tma_definitions", "tma_layout", "definitions")
+ACC_REQUIRED_KINDS = ("acc_definitions",)
 
 
 def _tracked_sector_files(root: Path) -> list[Path]:
@@ -79,7 +87,7 @@ def ensure_point(value: object, label: str, path: Path) -> list[float]:
 
 
 def _load_json_object(path: Path) -> tuple[dict[str, object], bytes]:
-    raw_bytes = path.read_bytes()
+    raw_bytes = path.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     try:
         payload = json.loads(raw_bytes.decode("utf-8"))
     except Exception as exc:
@@ -89,10 +97,10 @@ def _load_json_object(path: Path) -> tuple[dict[str, object], bytes]:
     return payload, raw_bytes
 
 
-def _require_schema2(payload: dict[str, object], path: Path) -> None:
+def _require_schema3(payload: dict[str, object], path: Path) -> None:
     schema = payload.get("schema")
-    if isinstance(schema, bool) or not isinstance(schema, int) or schema != 2:
-        raise ValueError(f"{path}: schema must be 2")
+    if isinstance(schema, bool) or not isinstance(schema, int) or schema != 3:
+        raise ValueError(f"{path}: schema must be 3")
 
 
 def _file_entry(path: Path, root: Path, raw_bytes: bytes, *, requires: list[str] | None = None) -> dict[str, object]:
@@ -106,12 +114,12 @@ def _file_entry(path: Path, root: Path, raw_bytes: bytes, *, requires: list[str]
     return entry
 
 
-def validate_tma_structure_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+def validate_tma_definitions_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
     airac_overrides.validate_references(payload, path)
     result: dict[str, object] = {}
     for tier, document in airac_overrides.documents(payload):
-        _require_schema2(document, path)
+        _require_schema3(document, path)
         units = document.get("units")
         if not isinstance(units, list):
             raise ValueError(f"{path}: 'units' must be an array")
@@ -119,16 +127,40 @@ def validate_tma_structure_file(path: Path, root: Path = ROOT) -> dict[str, obje
             if not isinstance(unit, dict):
                 raise ValueError(f"{path}: units[{index}] must be an object")
             ensure_text_field(unit.get("id"), f"units[{index}].id", path)
-        layouts = document.get("layouts")
-        if not isinstance(layouts, list) or not layouts:
-            raise ValueError(f"{path}: missing non-empty layouts array")
-        for index, layout in enumerate(layouts):
-            if not isinstance(layout, dict):
-                raise ValueError(f"{path}: layouts[{index}] must be an object")
-            ensure_text_field(layout.get("id"), f"layouts[{index}].id", path)
-            positions = layout.get("positions")
-            if not isinstance(positions, list) or not positions:
-                raise ValueError(f"{path}: layouts[{index}].positions must be a non-empty array")
+        positions = document.get("positions", [])
+        if not isinstance(positions, list):
+            raise ValueError(f"{path}: 'positions' must be an array")
+        for index, pos in enumerate(positions):
+            if not isinstance(pos, dict):
+                raise ValueError(f"{path}: positions[{index}] must be an object")
+            ensure_text_field(pos.get("call_sign"), f"positions[{index}].call_sign", path)
+            ensure_text_field(pos.get("unit"), f"positions[{index}].unit", path)
+            ensure_text_field(pos.get("frequency"), f"positions[{index}].frequency", path)
+        if not tier:
+            result = _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
+    return result
+
+
+def validate_tma_layout_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    payload, raw_bytes = _load_json_object(path)
+    airac_overrides.validate_references(payload, path)
+    result: dict[str, object] = {}
+    for tier, document in airac_overrides.documents(payload):
+        _require_schema3(document, path)
+        configs = document.get("configurations")
+        if not isinstance(configs, dict) or not configs:
+            raise ValueError(f"{path}: missing non-empty configurations object")
+        for unit_id, unit_cfgs in configs.items():
+            if not isinstance(unit_cfgs, dict) or not unit_cfgs:
+                raise ValueError(f"{path}: configurations.{unit_id} must be a non-empty object")
+            for cfg_id, cfg_entry in unit_cfgs.items():
+                if not isinstance(cfg_entry, dict):
+                    raise ValueError(f"{path}: configurations.{unit_id}.{cfg_id} must be an object")
+                positions = cfg_entry.get("positions")
+                if not isinstance(positions, dict) or not positions:
+                    raise ValueError(
+                        f"{path}: configurations.{unit_id}.{cfg_id}.positions must be a non-empty object"
+                    )
         if not tier:
             result = _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
     return result
@@ -136,7 +168,7 @@ def validate_tma_structure_file(path: Path, root: Path = ROOT) -> dict[str, obje
 
 def validate_tma_coordination_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
-    _require_schema2(payload, path)
+    _require_schema3(payload, path)
     agreements = payload.get("agreements")
     if not isinstance(agreements, list):
         raise ValueError(f"{path}: 'agreements' must be an array")
@@ -146,12 +178,13 @@ def validate_tma_coordination_file(path: Path, root: Path = ROOT) -> dict[str, o
         ensure_text_field(row.get("name"), f"agreements[{index}].name", path)
         ensure_text_field(row.get("from"), f"agreements[{index}].from", path)
         ensure_text_field(row.get("to"), f"agreements[{index}].to", path)
+        ensure_text_field(row.get("level"), f"agreements[{index}].level", path)
     return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
 
 
-def validate_acc_structure_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+def validate_acc_definitions_file(path: Path, root: Path = ROOT) -> dict[str, object]:
     payload, raw_bytes = _load_json_object(path)
-    _require_schema2(payload, path)
+    _require_schema3(payload, path)
     units = payload.get("units")
     if not isinstance(units, list) or not units:
         raise ValueError(f"{path}: missing non-empty units array")
@@ -159,15 +192,42 @@ def validate_acc_structure_file(path: Path, root: Path = ROOT) -> dict[str, obje
         if not isinstance(unit, dict):
             raise ValueError(f"{path}: units[{index}] must be an object")
         ensure_text_field(unit.get("id"), f"units[{index}].id", path)
-        ensure_text_field(unit.get("call_sign"), f"units[{index}].call_sign", path)
-        services = unit.get("services")
-        if not isinstance(services, list) or not services:
-            raise ValueError(f"{path}: units[{index}].services must be a non-empty array")
-        frequencies = unit.get("frequencies")
-        if not isinstance(frequencies, list) or not frequencies:
-            raise ValueError(f"{path}: units[{index}].frequencies must be a non-empty array")
-    if "layouts" in payload and not isinstance(payload["layouts"], list):
-        raise ValueError(f"{path}: 'layouts' must be an array")
+        if unit.get("part_of"):
+            ensure_text_field(unit.get("part_of"), f"units[{index}].part_of", path)
+        else:
+            ensure_text_field(unit.get("call_sign"), f"units[{index}].call_sign", path)
+            services = unit.get("services")
+            if not isinstance(services, list) or not services:
+                raise ValueError(f"{path}: units[{index}].services must be a non-empty array")
+    positions = payload.get("positions", [])
+    if not isinstance(positions, list):
+        raise ValueError(f"{path}: 'positions' must be an array")
+    for index, pos in enumerate(positions):
+        if not isinstance(pos, dict):
+            raise ValueError(f"{path}: positions[{index}] must be an object")
+        ensure_text_field(pos.get("call_sign"), f"positions[{index}].call_sign", path)
+        ensure_text_field(pos.get("unit"), f"positions[{index}].unit", path)
+        ensure_text_field(pos.get("frequency"), f"positions[{index}].frequency", path)
+    return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
+
+
+def validate_acc_layout_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    payload, raw_bytes = _load_json_object(path)
+    _require_schema3(payload, path)
+    configs = payload.get("configurations")
+    if not isinstance(configs, dict):
+        raise ValueError(f"{path}: 'configurations' must be an object")
+    for unit_id, unit_cfgs in configs.items():
+        if not isinstance(unit_cfgs, dict) or not unit_cfgs:
+            raise ValueError(f"{path}: configurations.{unit_id} must be a non-empty object")
+        for cfg_id, cfg_entry in unit_cfgs.items():
+            if not isinstance(cfg_entry, dict):
+                raise ValueError(f"{path}: configurations.{unit_id}.{cfg_id} must be an object")
+            positions = cfg_entry.get("positions")
+            if not isinstance(positions, dict) or not positions:
+                raise ValueError(
+                    f"{path}: configurations.{unit_id}.{cfg_id}.positions must be a non-empty object"
+                )
     return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
 
 
@@ -202,13 +262,23 @@ def _definition_sector_ids(row: dict[str, object], path: Path) -> list[str]:
 
 
 def _validate_sector_definitions_document(payload: dict, path: Path, root: Path, raw_bytes: bytes, tier: str) -> dict:
-    definitions = payload.get("sector_definitions", payload.get("definitions", payload.get("sectors")))
-    if not isinstance(definitions, list) or not definitions:
-        raise ValueError(f"{path}: missing non-empty sector_definitions array")
+    _require_schema3(payload, path)
+    sectors = payload.get("sectors")
+    if not isinstance(sectors, dict) or not sectors:
+        raise ValueError(f"{path}: missing non-empty sectors object")
+    for sid, meta in sectors.items():
+        if not isinstance(meta, dict):
+            raise ValueError(f"{path}: sectors.{sid} must be an object")
+        ensure_text_field(meta.get("name"), f"sectors.{sid}.name", path)
+        ensure_text_field(meta.get("title"), f"sectors.{sid}.title", path)
 
-    for index, row in enumerate(definitions):
+    volumes = payload.get("volumes")
+    if not isinstance(volumes, list) or not volumes:
+        raise ValueError(f"{path}: missing non-empty volumes array")
+
+    for index, row in enumerate(volumes):
         if not isinstance(row, dict):
-            raise ValueError(f"{path}: sector definition row {index} must be an object")
+            raise ValueError(f"{path}: volume row {index} must be an object")
 
         sector_id = _definition_sector_ids(row, path)[0]
 
@@ -229,7 +299,7 @@ def _validate_sector_definitions_document(payload: dict, path: Path, root: Path,
         if defect:
             raise ValueError(f"{path}: sector '{sector_id}' definition {index} polygon {defect}")
 
-    return _file_entry(path, root, raw_bytes)
+    return _file_entry(path, root, raw_bytes, requires=[AIRSPACE_CAPABILITY])
 
 
 def _cross(origin: list[float], a: list[float], b: list[float]) -> float:
@@ -282,26 +352,30 @@ def polygon_ring_defect(points: list[list[float]]) -> str | None:
     return None
 
 
-def _referenced_tma_sectors(tma_structure: dict) -> set[str]:
+def _referenced_layout_sectors(tma_layout: dict) -> set[str]:
     referenced: set[str] = set()
-    for layout in tma_structure.get("layouts", []):
-        if not isinstance(layout, dict):
-            continue
-        for pos in layout.get("positions", []):
-            if isinstance(pos, dict) and pos.get("sector"):
-                referenced.add(str(pos["sector"]).strip().upper())
-        for duty in layout.get("on_duty", []):
-            if isinstance(duty, dict):
-                for sid in duty.get("sectors", []):
-                    if sid:
-                        referenced.add(str(sid).strip().upper())
+    configs = tma_layout.get("configurations", {})
+    if isinstance(configs, dict):
+        for unit_cfgs in configs.values():
+            if not isinstance(unit_cfgs, dict):
+                continue
+            for cfg in unit_cfgs.values():
+                if not isinstance(cfg, dict):
+                    continue
+                pos_map = cfg.get("positions", {})
+                if isinstance(pos_map, dict):
+                    for sids in pos_map.values():
+                        if isinstance(sids, list):
+                            for sid in sids:
+                                if sid:
+                                    referenced.add(str(sid).strip().upper())
     return referenced
 
 
 def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root: Path = ROOT) -> dict[str, object]:
     bundle_repo_path = safe_repo_path(bundle_dir, root)
-    is_acc = "acc_structure" in bundle_files or "acc_coordination" in bundle_files
-    is_tma = "tma_structure" in bundle_files or "tma_coordination" in bundle_files
+    is_acc = any(k in bundle_files for k in ("acc_definitions", "acc_layout", "acc_coordination"))
+    is_tma = any(k in bundle_files for k in ("tma_definitions", "tma_layout", "tma_coordination"))
     if is_acc and is_tma:
         raise ValueError(f"{bundle_repo_path}: cannot mix ACC and TMA files in one bundle")
 
@@ -310,7 +384,9 @@ def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root
         missing_kinds = [kind for kind in ACC_REQUIRED_KINDS if kind not in bundle_files]
         if missing_kinds:
             raise ValueError(f"{bundle_repo_path}: missing ACC bundle files: {', '.join(missing_kinds)}")
-        files["acc_structure"] = validate_acc_structure_file(bundle_files["acc_structure"], root)
+        files["acc_definitions"] = validate_acc_definitions_file(bundle_files["acc_definitions"], root)
+        if "acc_layout" in bundle_files:
+            files["acc_layout"] = validate_acc_layout_file(bundle_files["acc_layout"], root)
         if "acc_coordination" in bundle_files:
             files["acc_coordination"] = validate_acc_coordination_file(bundle_files["acc_coordination"], root)
         if "definitions" in bundle_files:
@@ -319,27 +395,27 @@ def validate_sector_bundle(bundle_dir: Path, bundle_files: dict[str, Path], root
         missing_kinds = [kind for kind in TMA_REQUIRED_KINDS if kind not in bundle_files]
         if missing_kinds:
             raise ValueError(f"{bundle_repo_path}: missing sector bundle files: {', '.join(missing_kinds)}")
-        files["tma_structure"] = validate_tma_structure_file(bundle_files["tma_structure"], root)
+        files["tma_definitions"] = validate_tma_definitions_file(bundle_files["tma_definitions"], root)
+        files["tma_layout"] = validate_tma_layout_file(bundle_files["tma_layout"], root)
         files["definitions"] = validate_sector_definitions_file(bundle_files["definitions"], root)
         if "tma_coordination" in bundle_files:
             files["tma_coordination"] = validate_tma_coordination_file(bundle_files["tma_coordination"], root)
 
         documents = {
             kind: json.loads(bundle_files[kind].read_text(encoding="utf-8"))
-            for kind in ("tma_structure", "definitions")
+            for kind in ("tma_layout", "definitions")
         }
         if any("airac_overrides" in document for document in documents.values()):
             for tier in ("", *airac_overrides.TIERS):
                 resolved = {kind: airac_overrides.resolve(document, tier) for kind, document in documents.items()}
-                defs_rows = resolved["definitions"].get(
-                    "sector_definitions",
-                    resolved["definitions"].get("definitions", resolved["definitions"].get("sectors", [])),
-                )
                 defined: set[str] = set()
-                for row in defs_rows:
+                sectors = resolved["definitions"].get("sectors", {})
+                if isinstance(sectors, dict):
+                    defined.update(str(k).strip().upper() for k in sectors)
+                for row in resolved["definitions"].get("volumes", []):
                     if isinstance(row, dict):
                         defined.update(_definition_sector_ids(row, bundle_files["definitions"]))
-                referenced = _referenced_tma_sectors(resolved["tma_structure"])
+                referenced = _referenced_layout_sectors(resolved["tma_layout"])
                 if referenced - defined:
                     raise ValueError(
                         f"{bundle_dir}: {tier or 'shared default'} references undefined sectors: "

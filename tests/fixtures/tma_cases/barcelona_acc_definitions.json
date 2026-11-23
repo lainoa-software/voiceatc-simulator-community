@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "BCN_CTR",
+      "call_sign": "Barcelona Control",
+      "services": [
+        "center"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LECB_DDX_CTR",
+      "unit": "BCN_CTR",
+      "frequency": "132.580"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "KPHL",
+  "variants": [
+    {
+      "procedure_id": "RIVER_VISUAL_09LR",
+      "variant_id": "RIVER_09L",
+      "default_reference_id": "DELAWARE_RIVER",
+      "references": [
+        {
+          "id": "DELAWARE_RIVER",
+          "name": "the Delaware River",
+          "aliases": ["Delaware River"],
+          "geometry": { "kind": "point", "leg_id": "DELAWARE_RIVER_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "RIVER VISUAL RWY 09L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00320RIVER_VIS9LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "RIVER_VISUAL_09LR",
+      "variant_id": "RIVER_09R",
+      "default_reference_id": "DELAWARE_RIVER",
+      "references": [
+        {
+          "id": "DELAWARE_RIVER",
+          "name": "the Delaware River",
+          "aliases": ["Delaware River"],
+          "geometry": { "kind": "point", "leg_id": "DELAWARE_RIVER_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "RIVER VISUAL RWY 09L/R",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00320RIVER_VIS9LR.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "airport": "PHNL",
+  "variants": [
+    {
+      "procedure_id": "KAHE_POWER_PLANT_VISUAL_22L",
+      "variant_id": "KAHE_MAIN",
+      "default_reference_id": "KAHE_POWER_PLANT",
+      "references": [
+        {
+          "id": "KAHE_POWER_PLANT",
+          "name": "the Kahe Power Plant",
+          "aliases": ["Kahe Power Plant"],
+          "geometry": { "kind": "point", "leg_id": "KAHE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "KAHE POWER PLANT VISUAL RWY 22L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00754KAHEPOWERPLANT_VIS22L.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    },
+    {
+      "procedure_id": "WAIALAE_GOLF_COURSE_VISUAL_22L",
+      "variant_id": "WAIALAE_MAIN",
+      "default_reference_id": "WAIALAE_GOLF_COURSE",
+      "references": [
+        {
+          "id": "WAIALAE_GOLF_COURSE",
+          "name": "the Waialae Golf Course",
+          "aliases": ["Waialae Golf Course"],
+          "geometry": { "kind": "point", "leg_id": "WAIALAE_TRACE" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "WAIALAE GOLF COURSE VISUAL RWY 22L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00754WAIALAEGOLFCOURSE_VIS22L.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}

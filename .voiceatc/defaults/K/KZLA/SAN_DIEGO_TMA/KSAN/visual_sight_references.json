@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "airport": "KSAN",
+  "variants": [
+    {
+      "procedure_id": "SWEETWATER_VISUAL_27",
+      "variant_id": "MZB_R084_EAST_BRANCH",
+      "default_reference_id": "MOUNT_HELIX",
+      "references": [
+        {
+          "id": "MOUNT_HELIX",
+          "name": "Mount Helix",
+          "aliases": ["Helix"],
+          "geometry": {
+            "kind": "point",
+            "latitude": 32.76704,
+            "longitude": -116.98339
+          },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "SWEETWATER VISUAL RWY 27",
+            "url": "https://aeronav.faa.gov/d-tpp/2610/00373SWEETWATER_VIS27.PDF",
+            "airac": "2610",
+            "checked_date": "2026-10-08"
+          }
+        }
+      ]
+    }
+  ]
+}

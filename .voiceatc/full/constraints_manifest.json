@@ -2,47 +2,50 @@
   "airports": {
     "RCDC": {
       "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/PINGTUNG_APP/RCDC/constraints.json",
-      "sha256": "b6500e5219e54b3bc48e46fa700d1857e292d7f802fd59dc4ef2f0dd7fea7f1e",
-      "size_bytes": 193
+      "sha256": "e27737f00dd2338a67919e5371d0ecf1a81315c4443b6bfd36df2e18c7b17dc8",
+      "size_bytes": 187
     },
     "RCKH": {
       "repo_path": "R/RC/RCAA/KAOHSIUNG_TMA/KAOHSIUNG_APP/RCKH/constraints.json",
-      "sha256": "b1a5d50be8dd28889ab544360def518e76c911c384e3153abf47fb87fdb351e3",
-      "size_bytes": 1643
+      "sha256": "b64cd7abcad571b99b182f1b2706d8917c21da7d2a34edfffe7729ae1278d5a5",
+      "size_bytes": 1385
     },
     "RCSS": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/SONGSHAN_APP/RCSS/constraints.json",
-      "sha256": "97a91d4d4c6739ea58f502b1b39c622af08b7ebc3e06603438100e4e201bfa2b",
-      "size_bytes": 4037
+      "sha256": "900ab4c11eac9c346247092557ad4a771fc64e8c69712d328ff21ca27e611c57",
+      "size_bytes": 3359
     },
     "RCTP": {
       "repo_path": "R/RC/RCAA/TAIPEI_TMA/TAOYUAN_APP/RCTP/constraints.json",
-      "sha256": "1c23986b93c83f83e596e1ff1a67c9b3b3503a42c7d50b4c2d8b03efbad27899",
-      "size_bytes": 6380
+      "sha256": "efa60c4694be9b07de03b8dfaddeea631da9bc6fa0269fe10e72821ff323c6b2",
+      "size_bytes": 5219
     },
     "RCYU": {
       "repo_path": "R/RC/RCAA/HUALIEN_TMA/RCYU/constraints.json",
-      "sha256": "07fbfde09afac999daeebd770bae0c6cabc09573334d8841897d87bade42dd71",
-      "size_bytes": 1046
+      "sha256": "bc0e29a42dac97d171c228f53ed3def57d4a583fb0f66a17efe0a6dfbd875073",
+      "size_bytes": 893
     },
     "RKPD": {
       "repo_path": "R/RK/RKRR/JEJU_TMA/JEONGSEOK_APP/RKPD/constraints.json",
-      "sha256": "74755383577c38afc63386a827f25d1e31705b5206682aa0401e40a40244ff3d",
-      "size_bytes": 381
+      "sha256": "4ea497e10fceb2d70bd7696596aafe537f1634913f6115df7cfe1b3f72a535f7",
+      "size_bytes": 370
     },
     "RKTU": {
       "repo_path": "R/RK/RKRR/JUNGWON_TMA/RKTU/constraints.json",
-      "sha256": "156aa8176f3434e4d275190561797b3302d1d35c5b8779acf708986a603b936c",
-      "size_bytes": 186
+      "sha256": "effe66c74c27641c2b040ea0f6e851663afed38962e8d69cdc540ce4d2c4376c",
+      "size_bytes": 180
     },
     "YSSY": {
       "repo_path": "Y/YM/YMMM/SYDNEY_TMA/YSSY/constraints.json",
-      "sha256": "7f5071be830e9d7d0ae770a95824f34692fd65f44dde823d6a4331f64c2a9ca1",
-      "size_bytes": 223
+      "sha256": "e834d4fc192b2c6afdf0a44ee9ddbfd8fd825e2d038a7218f76063ac3773a7d7",
+      "size_bytes": 225
     }
   },
-  "published_at": "2026-11-22T07:58:22Z",
+  "published_at": "2026-11-21T08:15:36Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "requires": ["community.airac_overrides"],
+  "requires": [
+    "community.airac_overrides",
+    "community.airspace_files"
+  ],
   "schema_version": 1
 }

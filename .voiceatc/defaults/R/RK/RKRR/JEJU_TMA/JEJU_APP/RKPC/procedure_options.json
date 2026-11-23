@@ -1,0 +1,13 @@
+{
+  "airport": "RKPC",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "sids": {
+    "CJU3L": {
+      "init_climb": 9000
+    },
+    "IPDA1L": {
+      "init_climb": 9000
+    }
+  }
+}

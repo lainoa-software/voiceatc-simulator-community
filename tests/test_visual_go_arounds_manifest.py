@@ -228,13 +228,12 @@ class VisualGoAroundManifestTests(unittest.TestCase):
             ("LLBG_ROMIE_RNAV_VISUAL_RWY30", "LLBG_RWY30_ROMIE"),
         }
         actual: set[tuple[str, str]] = set()
-        for path in MODULE.go_around_files(ROOT):
-            MODULE.validate_go_around_file(path, ROOT)
+        for path in MODULE.content_files(ROOT, "visual_approaches.json"):
             payload = json.loads(path.read_text(encoding="utf-8"))
-            actual.update(
-                (entry["procedure_id"], entry["variant_id"])
-                for entry in payload["go_arounds"]
-            )
+            for proc in payload.get("procedures", []):
+                for var in proc.get("variants", []):
+                    if "go_around" in var:
+                        actual.add((proc["id"], var["id"]))
         self.assertEqual(expected, actual)
         self.assertFalse(any("RIVER" in procedure or "QUIET" in procedure for procedure, _ in actual))
 

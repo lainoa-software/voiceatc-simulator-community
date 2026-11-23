@@ -1,0 +1,62 @@
+{
+  "airport": "RCYU",
+  "airac_min": 2610,
+  "stars": {
+    "TINHO1": {
+      "LARGO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "MEZZO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      }
+    },
+    "TINHO2": {
+      "LARGO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "MEZZO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      }
+    },
+    "WADER1": {
+      "LARGO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "MEZZO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      }
+    },
+    "WADER2": {
+      "LARGO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      },
+      "MEZZO": {
+        "altitude": {
+          "type": "at_or_above",
+          "ft": 6000
+        }
+      }
+    }
+  }
+}

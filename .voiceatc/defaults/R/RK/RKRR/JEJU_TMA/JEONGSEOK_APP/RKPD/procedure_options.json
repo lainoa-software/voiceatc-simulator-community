@@ -1,0 +1,13 @@
+{
+  "airport": "RKPD",
+  "schema_version": 1,
+  "airac_min": 2610,
+  "sids": {
+    "EGOM1S": {
+      "init_climb": 5000
+    },
+    "SUPU1A": {
+      "init_climb": 6000
+    }
+  }
+}

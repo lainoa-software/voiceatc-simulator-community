@@ -516,10 +516,12 @@ def build_release_bundle(
         output_dir / misc_drawings_asset_name,
         generated_bytes=misc_generated_bytes,
     )
+    color_generated_bytes = color_profiles_projection.get("generated_bytes") or {}
     color_profiles_asset = build_deterministic_zip_from_sources(
         root,
         color_default_sources,
         output_dir / color_profiles_asset_name,
+        generated_bytes=color_generated_bytes,
     )
 
     full_assets = {
@@ -550,6 +552,7 @@ def build_release_bundle(
             root,
             color_archive_sources,
             output_dir / _full_asset_name(color_profiles_asset_name),
+            generated_bytes=color_generated_bytes,
         ),
     }
     full_manifests = {

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 try:
-    from . import airac_overrides
+    from . import airac_overrides, sector_legacy_projection
     from .content_files import content_files
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
@@ -12,6 +12,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import sector_legacy_projection
     from content_files import content_files
 
 import argparse
@@ -34,6 +35,7 @@ from legacy_contract import LEGACY_VISUAL_SCHEMA_VERSION
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / ".voiceatc" / "visual_procedures_manifest.json"
+APPROACHES_MANIFEST_PATH = ROOT / ".voiceatc" / "visual_approaches_manifest.json"
 REPO_NAME = "lainoa-software/voiceatc-simulator-community"
 MAX_FILE_BYTES = 256 * 1024
 MAX_PROCEDURES = 64
@@ -51,6 +53,7 @@ RUNWAY_RE = re.compile(r"^(0[1-9]|[12][0-9]|3[0-6])[LRC]?$|^36[LRC]?$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 TOP_KEYS = {"schema_version", "airport", "procedures"}
+APPROACHES_TOP_KEYS = {"schema", "airport", "procedures"}
 PROCEDURE_KEYS = {
     "id", "name", "aliases", "classification", "policy_profile", "source",
     "variants",
@@ -60,11 +63,17 @@ VARIANT_KEYS = {
     "id", "runway", "clearance_name", "entry_point_id", "sight_reference_point_id",
     "join_policy", "sight_reference", "legs", "final",
 }
+APPROACHES_VARIANT_KEYS = VARIANT_KEYS | {"sight_references", "go_around"}
 SIGHT_REFERENCE_KEYS = {"name", "aliases", "scope"}
 LEG_KEYS = {
     "id", "name", "path_term", "latitude", "longitude", "fly_over", "course_deg",
     "reference", "arc_center", "arc_radius_nm", "turn_direction", "altitude", "speed",
 }
+APPROACHES_LEG_KEYS = {
+    "id", "name", "type", "point", "fly_over", "course_deg",
+    "reference", "arc_center", "arc_radius_nm", "turn_direction", "altitude", "speed",
+}
+APPROACHES_LEG_TYPES = {"track_to_fix", "course_to_fix", "dme_arc", "constant_radius_arc"}
 POINT_KEYS = {"latitude", "longitude"}
 CONSTRAINT_KEYS = {"value_ft", "value2_ft", "value_kt", "status", "kind"}
 FINAL_KEYS = {"course_deg", "glidepath_deg"}
@@ -74,6 +83,10 @@ MANIFEST_ENTRY_KEYS = {"repo_path", "sha256", "size_bytes"}
 
 def visual_files(root: Path = ROOT) -> list[Path]:
     return content_files(root, "visual_procedures.json")
+
+
+def approaches_files(root: Path = ROOT) -> list[Path]:
+    return content_files(root, "visual_approaches.json")
 
 
 def _canonical_repo_bytes(raw_bytes: bytes) -> bytes:
@@ -468,10 +481,174 @@ def _validate_visual_document(payload: dict, path: Path, root: Path, raw_bytes: 
     }
 
 
+def _schema3_point(value: object, where: str, path: Path) -> tuple[float, float]:
+    items = _array(value, where, path)
+    if len(items) < 2:
+        raise ValueError(f"{path}: {where} must be [lat, lon]")
+    return _number(items[0], f"{where}[0]", path, -90.0, 90.0), _number(items[1], f"{where}[1]", path, -180.0, 180.0)
+
+
+def _validate_schema3_constraint(value: object, suffix: str, where: str, path: Path) -> None:
+    if value is None:
+        return
+    c = _object(value, where, path)
+    allowed = {f"at_{suffix}", f"at_or_above_{suffix}", f"at_or_below_{suffix}", "recommended"}
+    _strict_keys(c, allowed, where, path)
+    if not any(k != "recommended" for k in c):
+        raise ValueError(f"{path}: {where} must specify a constraint bound")
+    if "recommended" in c and not isinstance(c["recommended"], bool):
+        raise ValueError(f"{path}: {where}.recommended must be boolean")
+    for k, val in c.items():
+        if k != "recommended":
+            _number(val, f"{where}.{k}", path, 0.0, 100000.0)
+
+
+def _validate_schema3_leg(value: object, where: str, path: Path) -> tuple[str, tuple[float, float]]:
+    leg = _object(value, where, path)
+    _strict_keys(leg, APPROACHES_LEG_KEYS, where, path)
+    leg_id = _identifier(leg.get("id"), f"{where}.id", path)
+    _text(leg.get("name"), f"{where}.name", path, maximum=80)
+    leg_type = str(leg.get("type", "")).lower()
+    if leg_type not in APPROACHES_LEG_TYPES:
+        raise ValueError(f"{path}: {where}.type '{leg_type}' is unsupported")
+    position = _schema3_point(leg.get("point"), f"{where}.point", path)
+    if not isinstance(leg.get("fly_over"), bool):
+        raise ValueError(f"{path}: {where}.fly_over must be boolean")
+    if leg_type == "course_to_fix":
+        _number(leg.get("course_deg"), f"{where}.course_deg", path, 0.0, 360.0)
+        if "reference" in leg and not isinstance(leg["reference"], str):
+            raise ValueError(f"{path}: {where}.reference must be text")
+    elif any(k in leg for k in ("course_deg", "reference")):
+        raise ValueError(f"{path}: {where} course/reference fields are only valid for course_to_fix legs")
+    if leg_type in {"dme_arc", "constant_radius_arc"}:
+        _schema3_point(leg.get("arc_center"), f"{where}.arc_center", path)
+        _number(leg.get("arc_radius_nm"), f"{where}.arc_radius_nm", path, 0.01, REJECT_DISTANCE_NM)
+        if leg.get("turn_direction") not in {"L", "R"}:
+            raise ValueError(f"{path}: {where}.turn_direction must be L or R")
+    elif any(k in leg for k in ("arc_center", "arc_radius_nm", "turn_direction")):
+        raise ValueError(f"{path}: {where} arc fields are only valid for arc legs")
+    _validate_schema3_constraint(leg.get("altitude"), "ft", f"{where}.altitude", path)
+    _validate_schema3_constraint(leg.get("speed"), "kt", f"{where}.speed", path)
+    return leg_id, position
+
+
+def validate_visual_approaches_schema(payload: dict[str, Any], path: Path) -> list[str]:
+    _strict_keys(payload, APPROACHES_TOP_KEYS, "root", path)
+    if payload.get("schema") != 3:
+        raise ValueError(f"{path}: schema must be 3")
+    airport = _text(payload.get("airport"), "airport", path, maximum=4).upper()
+    if not AIRPORT_RE.fullmatch(airport):
+        raise ValueError(f"{path}: airport must be a four-character ICAO")
+    procedures = _array(payload.get("procedures"), "procedures", path)
+    if not procedures or len(procedures) > MAX_PROCEDURES:
+        raise ValueError(f"{path}: procedures must contain 1..{MAX_PROCEDURES} entries")
+    procedure_ids: set[str] = set()
+    spoken_tokens: set[str] = set()
+    advisories: list[str] = []
+    for proc_index, value in enumerate(procedures):
+        where = f"procedures[{proc_index}]"
+        procedure = _object(value, where, path)
+        _strict_keys(procedure, PROCEDURE_KEYS, where, path)
+        procedure_id = _identifier(procedure.get("id"), f"{where}.id", path)
+        if procedure_id in procedure_ids:
+            raise ValueError(f"{path}: duplicate procedure id '{procedure_id}'")
+        procedure_ids.add(procedure_id)
+        name = _text(procedure.get("name"), f"{where}.name", path, maximum=120)
+        aliases = _array(procedure.get("aliases"), f"{where}.aliases", path)
+        if len(aliases) > MAX_ALIASES:
+            raise ValueError(f"{path}: {where}.aliases exceeds {MAX_ALIASES}")
+        for token in [name, *aliases]:
+            spoken = _text(token, f"{where}.aliases", path, maximum=64).upper()
+            if spoken in spoken_tokens:
+                raise ValueError(f"{path}: duplicate spoken alias '{spoken}'")
+            spoken_tokens.add(spoken)
+        if procedure.get("classification") != "charted_ifr_visual":
+            raise ValueError(f"{path}: {where}.classification must be charted_ifr_visual")
+        if procedure.get("policy_profile") not in {"FAA", "ICAO"}:
+            raise ValueError(f"{path}: {where}.policy_profile must be FAA or ICAO")
+        _validate_source(procedure.get("source"), f"{where}.source", path)
+        variants = _array(procedure.get("variants"), f"{where}.variants", path)
+        if not variants:
+            raise ValueError(f"{path}: {where}.variants must not be empty")
+        variant_ids: set[str] = set()
+        for variant_index, raw_var in enumerate(variants):
+            v_where = f"{where}.variants[{variant_index}]"
+            variant = _object(raw_var, v_where, path)
+            _strict_keys(variant, APPROACHES_VARIANT_KEYS, v_where, path)
+            variant_id = _identifier(variant.get("id"), f"{v_where}.id", path)
+            if variant_id in variant_ids:
+                raise ValueError(f"{path}: duplicate variant id '{variant_id}'")
+            variant_ids.add(variant_id)
+            runway = _text(variant.get("runway"), f"{v_where}.runway", path, maximum=3).upper()
+            if not RUNWAY_RE.fullmatch(runway):
+                raise ValueError(f"{path}: {v_where}.runway is invalid")
+            _text(variant.get("clearance_name"), f"{v_where}.clearance_name", path, maximum=80)
+            join_policy = variant.get("join_policy", "entry_required")
+            if join_policy not in {"entry_required", "forward_route"}:
+                raise ValueError(f"{path}: {v_where}.join_policy must be entry_required or forward_route")
+            legs = _array(variant.get("legs"), f"{v_where}.legs", path)
+            if not legs or len(legs) > MAX_LEGS:
+                raise ValueError(f"{path}: {v_where}.legs must contain 1..{MAX_LEGS} legs")
+            leg_ids: list[str] = []
+            positions: list[tuple[float, float]] = []
+            for idx, leg in enumerate(legs):
+                leg_id, pos = _validate_schema3_leg(leg, f"{v_where}.legs[{idx}]", path)
+                if leg_id in leg_ids:
+                    raise ValueError(f"{path}: duplicate leg id '{leg_id}'")
+                leg_ids.append(leg_id)
+                positions.append(pos)
+            entry_id = _identifier(variant.get("entry_point_id"), f"{v_where}.entry_point_id", path)
+            sight_id = _identifier(variant.get("sight_reference_point_id"), f"{v_where}.sight_reference_point_id", path)
+            if entry_id != leg_ids[0]:
+                raise ValueError(f"{path}: {v_where}.entry_point_id must reference the first leg")
+            if sight_id not in leg_ids:
+                raise ValueError(f"{path}: {v_where}.sight_reference_point_id must reference one leg")
+            if "final" in variant:
+                final = _object(variant["final"], f"{v_where}.final", path)
+                _strict_keys(final, FINAL_KEYS, f"{v_where}.final", path)
+                if "course_deg" in final:
+                    _number(final["course_deg"], f"{v_where}.final.course_deg", path, 0.0, 360.0)
+                if "glidepath_deg" in final:
+                    _number(final["glidepath_deg"], f"{v_where}.final.glidepath_deg", path, 0.1, 10.0)
+    return advisories
+
+
+def validate_visual_approaches_file(path: Path, root: Path = ROOT) -> dict[str, object]:
+    raw_bytes = path.read_bytes()
+    if len(raw_bytes) > MAX_FILE_BYTES:
+        raise ValueError(f"{path}: file exceeds {MAX_FILE_BYTES} bytes")
+    try:
+        payload = json.loads(raw_bytes.decode("utf-8"))
+    except Exception as exc:
+        raise ValueError(f"{path}: invalid JSON ({exc})") from exc
+    airac_overrides.validate_references(payload, path)
+    result = {}
+    for tier, document in airac_overrides.documents(payload):
+        if not isinstance(document, dict):
+            raise ValueError(f"{path}: visual approaches file must be an object")
+        advisories = validate_visual_approaches_schema(document, path)
+        airport = str(document["airport"]).upper()
+        if airport != path.parent.name.upper():
+            raise ValueError(f"{path}: airport '{airport}' must match parent folder '{path.parent.name}'")
+        if not tier:
+            canonical = _canonical_repo_bytes(raw_bytes)
+            result = {
+                "airport": airport,
+                "repo_path": path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(canonical).hexdigest(),
+                "size_bytes": len(canonical),
+                "advisories": advisories,
+            }
+    return result
+
+
 def build_manifest(root: Path = ROOT, published_at: str | None = None) -> dict[str, object]:
     airports: dict[str, dict[str, object]] = {}
-    for path in visual_files(root):
-        result = validate_visual_file(path, root)
+    s3_paths = approaches_files(root)
+    paths = s3_paths if s3_paths else visual_files(root)
+    validator = validate_visual_approaches_file if s3_paths else validate_visual_file
+    for path in paths:
+        result = validator(path, root)
         airport = str(result["airport"])
         if airport in airports:
             raise ValueError(f"duplicate airport '{airport}' across visual procedure files")
@@ -532,7 +709,11 @@ def validate_existing_manifest(root: Path = ROOT, manifest_path: Path | None = N
         raise ValueError(f"{target}: invalid repo or airports mapping")
     _date(str(payload.get("published_at", ""))[:10], "manifest.published_at", target)
     generated = build_manifest(root, published_at=str(payload.get("published_at", "")))
-    if payload.get("airports") != generated.get("airports"):
+    has_s3 = bool(approaches_files(root))
+    if has_s3:
+        if set(payload.get("airports", {})) != set(generated.get("airports", {})):
+            raise ValueError(f"{target}: manifest drift; run python tools/visual_procedures_manifest.py --write")
+    elif payload.get("airports") != generated.get("airports"):
         raise ValueError(f"{target}: manifest drift; run python tools/visual_procedures_manifest.py --write")
     for airport, entry in payload["airports"].items():
         if not AIRPORT_RE.fullmatch(str(airport)):
@@ -575,7 +756,38 @@ def main() -> int:
         print(str(exc), file=sys.stderr)
         return 1
     if args.write:
-        manifest = airac_overrides.publish_raw_manifest(ROOT, MANIFEST_PATH, manifest)
+        if approaches_files(ROOT):
+            app_pub_at = existing_published_at(APPROACHES_MANIFEST_PATH) if args.preserve_published_at and APPROACHES_MANIFEST_PATH.is_file() else published_at
+            app_manifest = build_manifest(published_at=app_pub_at)
+            app_default = airac_overrides.publish_raw_manifest(
+                ROOT, APPROACHES_MANIFEST_PATH, app_manifest, requires=("community.airspace_files",)
+            )
+            APPROACHES_MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
+            APPROACHES_MANIFEST_PATH.write_text(
+                json.dumps(app_default, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n"
+            )
+        source_airports = {
+            ap: str(entry["repo_path"])
+            for ap, entry in manifest["airports"].items()  # type: ignore[union-attr]
+        }
+        manifest = airac_overrides.publish_raw_manifest(
+            ROOT, MANIFEST_PATH, manifest, requires=("community.airspace_files",)
+        )
+        files_index = sector_legacy_projection.load_frozen_files_index(ROOT)
+        for ap, entry in manifest["airports"].items():  # type: ignore[union-attr]
+            orig_repo = source_airports[ap]
+            legacy_repo = f"{orig_repo.rsplit('/', 1)[0]}/visual_procedures.json"
+            raw_bytes = _canonical_repo_bytes((ROOT / orig_repo).read_bytes())
+            leg_bytes = sector_legacy_projection.project_legacy_file_bytes(
+                ROOT, legacy_repo, "visual_procedures", files_index=files_index
+            )
+            if leg_bytes != raw_bytes or orig_repo != legacy_repo:
+                dest = ROOT / ".voiceatc" / "defaults" / legacy_repo
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(leg_bytes)
+                entry["repo_path"] = f".voiceatc/defaults/{legacy_repo}"
+                entry["sha256"] = hashlib.sha256(leg_bytes).hexdigest()
+                entry["size_bytes"] = len(leg_bytes)
         MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST_PATH.write_text(
             json.dumps(manifest, indent=2, sort_keys=True) + "\n",

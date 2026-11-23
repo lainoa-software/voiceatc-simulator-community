@@ -45,12 +45,19 @@ def validate_references(payload: dict, path: Path) -> None:
         airports = [airports]
     candidates = [path.with_name("runway_configs.json")]
     candidates += [path.parent / str(airport) / "runway_configs.json" for airport in airports]
-    if path.name.startswith("sector_") or path.name == "tma_structure.json":
+    sector_file_names = (
+        "tma_structure.json",
+        "tma_definitions.json",
+        "tma_layout.json",
+        "acc_definitions.json",
+        "acc_layout.json",
+    )
+    if path.name.startswith("sector_") or path.name in sector_file_names:
         candidates += list(path.parent.glob("*/runway_configs.json"))
     runway_documents = [json.loads(item.read_text(encoding="utf-8")) for item in dict.fromkeys(candidates) if item.is_file()]
     if not runway_documents or not any("airac_overrides" in item for item in [payload, *runway_documents]):
         return
-    is_sector = path.name.startswith("sector_") or path.name == "tma_structure.json"
+    is_sector = path.name.startswith("sector_") or path.name in sector_file_names
     for tier in ("", *TIERS):
         ids = {str(row["id"]).upper() for item in runway_documents
                for row in resolve(item, tier).get("runway_configs", resolve(item, tier).get("runway_configurations", []))}
@@ -69,7 +76,7 @@ def _configuration_refs(value: object, sector: bool) -> set[str]:
             if key in ("configs", "runway_configs") and isinstance(item, dict):
                 found.update(str(identifier).upper() for identifier in item)
             elif key in ("configs", "runway_configs") or (
-                sector and key in {"runway_configs", "runway_configurations", "runways"}
+                sector and key in {"runway_configs", "runway_configurations", "runways", "valid_for_runways"}
             ):
                 if isinstance(item, dict):
                     for sub in item.values():
@@ -161,7 +168,9 @@ def project_sector_feed(
     def project(entry: dict, sources: dict[str, str], *, default: bool) -> dict:
         legacy = default_entry(root, entry, projected_bytes=projected_bytes)
         if default:
-            legacy["files"].pop("tma", None)
+            legacy["files"] = {
+                k: v for k, v in legacy["files"].items() if k in ("configs", "definitions", "influence")
+            }
         for kind, item in legacy["files"].items():
             original_path = entry["files"][kind]["repo_path"]
             sources[original_path] = item["repo_path"]

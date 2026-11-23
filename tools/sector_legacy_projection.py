@@ -53,8 +53,22 @@ _LEG_TYPE_TO_TERM = {
     "heading_to_altitude": "VA",
     "heading_to_manual": "VM",
     "course_to_manual": "FM",
+    "from_fix_manual": "FM",
     "radius_to_fix": "RF",
+    "constant_radius_arc": "RF",
     "arc_to_fix": "AF",
+    "dme_arc": "AF",
+    "course_to_dme": "CD",
+    "course_to_intercept": "CI",
+    "course_to_radial": "CR",
+    "fix_to_altitude": "FA",
+    "track_to_distance": "FC",
+    "fix_to_dme": "FD",
+    "heading_to_dme": "VD",
+    "heading_to_intercept": "VI",
+    "heading_to_radial": "VR",
+    "hold_manual": "HM",
+    "hold_single": "HF",
 }
 
 
@@ -361,7 +375,7 @@ def project_configs_and_influence(
                 entry["frequency"] = freq
             sectors_out.append(entry)
 
-            pos_airports = layout_airports if pos_idx == 0 else []
+            pos_airports = layout_airports
             for sid in parts:
                 if sid not in influence_airports:
                     influence_order.append(sid)
@@ -579,6 +593,19 @@ def project_schema1_tma(
     }
     if "zones" in defs_doc:
         out["zones"] = deepcopy(defs_doc["zones"])
+    if tma_layout is not None:
+        layout_doc = _resolve_default_doc(tma_layout)
+        combos = layout_doc.get("runway_combinations")
+        if isinstance(combos, list) and combos:
+            out["configurations"] = [
+                {
+                    "id": str(c.get("id", "")),
+                    "name": str(c.get("title", "")),
+                    "airports": deepcopy(c.get("airports", {})),
+                }
+                for c in combos
+                if isinstance(c, dict)
+            ]
     out["layouts"] = layouts_out
     if isinstance(tma_coordination, dict) and tma_coordination.get("agreements"):
         agreements_out: list[dict] = []
@@ -1304,6 +1331,185 @@ def _frozen_file_matches_sources(root: Path, meta: dict[str, object]) -> bytes |
     return None
 
 
+def _legacy_visual_constraint(spec: dict, value_key: str) -> dict[str, object]:
+    recommended = bool(spec.get("recommended", False))
+    status = "recommended" if recommended else "required"
+    if value_key == "value_ft":
+        if "at_or_above_ft" in spec and "at_or_below_ft" in spec:
+            return {
+                "value_ft": spec["at_or_above_ft"],
+                "value2_ft": spec["at_or_below_ft"],
+                "status": status,
+                "kind": "between",
+            }
+        if "at_or_above_ft" in spec:
+            return {"value_ft": spec["at_or_above_ft"], "status": status, "kind": "at_or_above"}
+        if "at_or_below_ft" in spec:
+            return {"value_ft": spec["at_or_below_ft"], "status": status, "kind": "at_or_below"}
+        return {"value_ft": spec["at_ft"], "status": status, "kind": "at"}
+    if "at_or_above_kt" in spec:
+        return {"value_kt": spec["at_or_above_kt"], "status": status, "kind": "at_or_above"}
+    if "at_or_below_kt" in spec:
+        return {"value_kt": spec["at_or_below_kt"], "status": status, "kind": "at_or_below"}
+    return {"value_kt": spec["at_kt"], "status": status, "kind": "at"}
+
+
+def _convert_visual_approaches_single(
+    doc: dict[str, object],
+) -> tuple[dict[str, object], dict[str, object] | None, dict[str, object] | None]:
+    airport = str(doc.get("airport", "")).strip().upper()
+    procs_out: list[dict[str, object]] = []
+    go_arounds_out: list[dict[str, object]] = []
+    sight_variants_out: list[dict[str, object]] = []
+    for raw_proc in doc.get("procedures", []) or []:  # type: ignore[union-attr]
+        if not isinstance(raw_proc, dict):
+            continue
+        p_out: dict[str, object] = {}
+        for k in ("id", "name", "aliases", "classification", "policy_profile", "source"):
+            if k in raw_proc:
+                p_out[k] = deepcopy(raw_proc[k])
+        vars_out: list[dict[str, object]] = []
+        for raw_var in raw_proc.get("variants", []) or []:
+            if not isinstance(raw_var, dict):
+                continue
+            v_out: dict[str, object] = {}
+            for k in ("id", "runway", "clearance_name", "entry_point_id", "sight_reference_point_id",
+                      "join_policy", "sight_reference", "final"):
+                if k in raw_var:
+                    v_out[k] = deepcopy(raw_var[k])
+            legs_out: list[dict[str, object]] = []
+            for raw_leg in raw_var.get("legs", []) or []:
+                if not isinstance(raw_leg, dict):
+                    continue
+                l_out: dict[str, object] = {
+                    "id": raw_leg["id"],
+                    "name": raw_leg["name"],
+                    "path_term": _LEG_TYPE_TO_TERM.get(str(raw_leg.get("type", "")), str(raw_leg.get("type", "")).upper()),
+                }
+                pt = raw_leg.get("point")
+                if isinstance(pt, list) and len(pt) >= 2:
+                    l_out["latitude"] = pt[0]
+                    l_out["longitude"] = pt[1]
+                if "fly_over" in raw_leg:
+                    l_out["fly_over"] = raw_leg["fly_over"]
+                for k in ("course_deg", "reference", "arc_radius_nm", "turn_direction"):
+                    if k in raw_leg:
+                        l_out[k] = deepcopy(raw_leg[k])
+                if isinstance(raw_leg.get("arc_center"), list) and len(raw_leg["arc_center"]) >= 2:
+                    l_out["arc_center"] = {"latitude": raw_leg["arc_center"][0], "longitude": raw_leg["arc_center"][1]}
+                if isinstance(raw_leg.get("altitude"), dict):
+                    l_out["altitude"] = _legacy_visual_constraint(raw_leg["altitude"], "value_ft")
+                if isinstance(raw_leg.get("speed"), dict):
+                    l_out["speed"] = _legacy_visual_constraint(raw_leg["speed"], "value_kt")
+                legs_out.append(l_out)
+            v_out["legs"] = legs_out
+            vars_out.append(v_out)
+
+            ga = raw_var.get("go_around")
+            if isinstance(ga, dict):
+                ga_legs: list[dict[str, object]] = []
+                for gleg in ga.get("legs", []) or []:
+                    if not isinstance(gleg, dict):
+                        continue
+                    gl_out: dict[str, object] = {
+                        "sequence": gleg["sequence"],
+                        "path_term": _LEG_TYPE_TO_TERM.get(str(gleg.get("type", "")), str(gleg.get("type", "")).upper()),
+                    }
+                    for k in ("ident", "course", "turn_direction", "distance", "description",
+                              "recommended_navaid", "theta", "rho", "arc_center_ident"):
+                        if k in gleg:
+                            gl_out[k] = deepcopy(gleg[k])
+                    if isinstance(gleg.get("point"), list) and len(gleg["point"]) >= 2:
+                        gl_out["latitude"] = gleg["point"][0]
+                        gl_out["longitude"] = gleg["point"][1]
+                    if isinstance(gleg.get("recommended_navaid_point"), list) and len(gleg["recommended_navaid_point"]) >= 2:
+                        gl_out["recommended_navaid_latitude"] = gleg["recommended_navaid_point"][0]
+                        gl_out["recommended_navaid_longitude"] = gleg["recommended_navaid_point"][1]
+                    if isinstance(gleg.get("arc_center_point"), list) and len(gleg["arc_center_point"]) >= 2:
+                        gl_out["arc_center_latitude"] = gleg["arc_center_point"][0]
+                        gl_out["arc_center_longitude"] = gleg["arc_center_point"][1]
+                    if isinstance(gleg.get("altitude"), dict):
+                        alt = gleg["altitude"]
+                        if "at_or_above_ft" in alt and "at_or_below_ft" in alt:
+                            gl_out["altitude1"], gl_out["altitude2"], gl_out["altitude_desc"] = alt["at_or_above_ft"], alt["at_or_below_ft"], "B"
+                        elif "at_or_above_ft" in alt:
+                            gl_out["altitude1"], gl_out["altitude_desc"] = alt["at_or_above_ft"], "+"
+                        elif "at_or_below_ft" in alt:
+                            gl_out["altitude1"], gl_out["altitude_desc"] = alt["at_or_below_ft"], "-"
+                        elif "at_ft" in alt:
+                            gl_out["altitude1"], gl_out["altitude_desc"] = alt["at_ft"], "@"
+                    if isinstance(gleg.get("speed"), dict) and "at_or_below_kt" in gleg["speed"]:
+                        gl_out["speed_limit"] = gleg["speed"]["at_or_below_kt"]
+                    ga_legs.append(gl_out)
+                go_arounds_out.append({
+                    "procedure_id": raw_proc["id"],
+                    "variant_id": raw_var["id"],
+                    "runway": raw_var["runway"],
+                    "source": deepcopy(ga["source"]),
+                    "terminal_policy": ga["terminal_policy"],
+                    "legs": ga_legs,
+                })
+
+            srs = raw_var.get("sight_references")
+            if isinstance(srs, dict):
+                refs_out: list[dict[str, object]] = []
+                for r in srs.get("references", []) or []:
+                    if not isinstance(r, dict):
+                        continue
+                    geom = deepcopy(r.get("geometry", {}))
+                    if isinstance(geom, dict):
+                        if "point" in geom and isinstance(geom["point"], list) and len(geom["point"]) >= 2:
+                            pt_val = geom.pop("point")
+                            geom["latitude"] = pt_val[0]
+                            geom["longitude"] = pt_val[1]
+                        if "points" in geom and isinstance(geom["points"], list):
+                            geom["points"] = [
+                                {"latitude": p[0], "longitude": p[1]} if isinstance(p, list) and len(p) >= 2 else p
+                                for p in geom["points"]
+                            ]
+                    refs_out.append({
+                        "id": r["id"],
+                        "name": r["name"],
+                        "aliases": deepcopy(r.get("aliases", [])),
+                        "geometry": geom,
+                        "source": deepcopy(r["source"]),
+                    })
+                sight_variants_out.append({
+                    "procedure_id": raw_proc["id"],
+                    "variant_id": raw_var["id"],
+                    "default_reference_id": srs["default_reference_id"],
+                    "references": refs_out,
+                })
+        p_out["variants"] = vars_out
+        procs_out.append(p_out)
+
+    vis_doc = {"schema_version": 1, "airport": airport, "procedures": procs_out}
+    ga_doc = {"schema_version": 1, "airport": airport, "go_arounds": go_arounds_out} if go_arounds_out else None
+    sr_doc = {"schema_version": 1, "airport": airport, "variants": sight_variants_out} if sight_variants_out else None
+    return vis_doc, ga_doc, sr_doc
+
+
+def project_visual_procedures_payload(doc: dict[str, object]) -> bytes:
+    converted = _convert_with_airac_overrides(doc, lambda d: _convert_visual_approaches_single(d)[0])
+    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def project_visual_go_arounds_payload(doc: dict[str, object]) -> bytes | None:
+    single_ga = _convert_visual_approaches_single(doc)[1]
+    if single_ga is None:
+        return None
+    converted = _convert_with_airac_overrides(doc, lambda d: _convert_visual_approaches_single(d)[1] or {})
+    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def project_visual_sight_references_payload(doc: dict[str, object]) -> bytes | None:
+    single_sr = _convert_visual_approaches_single(doc)[2]
+    if single_sr is None:
+        return None
+    converted = _convert_with_airac_overrides(doc, lambda d: _convert_visual_approaches_single(d)[2] or {})
+    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
 def project_legacy_file_bytes(
     root: Path,
     repo_path: str,
@@ -1321,6 +1527,8 @@ def project_legacy_file_bytes(
             return frozen_bytes
 
     norm = repo_path.replace("\\", "/")
+    if norm.startswith(".voiceatc/defaults/"):
+        norm = norm[len(".voiceatc/defaults/") :]
     # Always allow legacy_only frozen files (removed skinned colors/style) to serve frozen bytes
     if isinstance(meta, dict) and meta.get("legacy_only"):
         frozen_rel = str(meta.get("frozen_file", ""))
@@ -1343,6 +1551,10 @@ def project_legacy_file_bytes(
         src_rel = next(iter(meta["sources"]))
         src_path = root / str(src_rel)
     elif not src_path.is_file():
+        if kind in ("visual_procedures", "visual_go_arounds", "visual_sight_references"):
+            va_cand = src_path.with_name("visual_approaches.json")
+            if va_cand.is_file():
+                src_path = va_cand
         for old_p, new_p in _BUNDLE_PATH_TO_LEGACY.items():
             # reverse check: legacy path uses new_p
             if norm.startswith(new_p + "/"):
@@ -1359,6 +1571,12 @@ def project_legacy_file_bytes(
         return project_misc_drawings_payload(doc)
     if kind == "constraints":
         return project_constraints_payload(doc)
+    if kind == "visual_procedures":
+        return project_visual_procedures_payload(doc)
+    if kind == "visual_go_arounds":
+        return project_visual_go_arounds_payload(doc) or b""
+    if kind == "visual_sight_references":
+        return project_visual_sight_references_payload(doc) or b""
     if kind in ("colors", "style"):
         converted = _convert_colors_or_style_single(doc)
         return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
@@ -1500,7 +1718,12 @@ def project_release_dataset_feeds(
                 leg_bytes = project_legacy_file_bytes(
                     root, rp, kind, force_generate=force_generate, files_index=files_index
                 )
-                generated[rp] = leg_bytes
+                if (root / rp).is_file():
+                    disk_bytes = _canonical_lf((root / rp).read_bytes())
+                    if json.loads(leg_bytes.decode("utf-8")) == json.loads(disk_bytes.decode("utf-8")):
+                        leg_bytes = disk_bytes
+                if not (root / rp).is_file() or leg_bytes != _canonical_lf((root / rp).read_bytes()):
+                    generated[rp] = leg_bytes
             sha, size = _file_meta(leg_bytes)
             entry["sha256"] = sha
             entry["size_bytes"] = size
@@ -1531,12 +1754,14 @@ def project_release_dataset_feeds(
                 leg_bytes = project_legacy_file_bytes(
                     root, orig, kind, force_generate=force_generate, files_index=files_index
                 )
-                generated[orig] = leg_bytes
             if AIRSPACE_FILES_CAPABILITY in reqs:
                 new_full_entries.append(entry)
                 archive_sources[rp] = s3_rp
                 continue
-            if leg_bytes != disk_bytes:
+            disk_doc = json.loads(disk_bytes.decode("utf-8"))
+            leg_doc = json.loads(leg_bytes.decode("utf-8"))
+            if leg_doc != disk_doc or leg_bytes != disk_bytes and isinstance(disk_doc, dict) and disk_doc.get("schema") == 3:
+                generated[orig] = leg_bytes
                 sha, size = _file_meta(leg_bytes)
                 legacy_entry = dict(entry)
                 legacy_entry["sha256"] = sha

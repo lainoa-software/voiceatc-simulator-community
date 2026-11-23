@@ -95,89 +95,103 @@ def build_fixture_repo(root: Path) -> None:
     )
 
     write_json(
-        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "tma_structure.json",
+        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "tma_definitions.json",
         {
-            "schema": 2,
+            "schema": 3,
             "units": [
                 {
                     "id": "LEMD_APP",
                     "call_sign": "Madrid Approach",
                     "services": ["approach_radar"],
-                    "frequencies": ["119.100"],
                 }
             ],
-            "layouts": [
+            "positions": [
                 {
-                    "id": "MADRID_CORE",
-                    "runways": {"LEMD": ["NORTH"]},
-                    "positions": [
-                        {
-                            "sector": "LEMDAAA",
-                            "name": "ALL",
-                            "code": "LEMD_APP",
-                            "unit": "LEMD_APP",
-                            "frequency": "119.100",
-                            "airports": ["LEMD"],
-                        }
-                    ],
+                    "call_sign": "LEMD_APP",
+                    "unit": "LEMD_APP",
+                    "frequency": "119.100",
                 }
             ],
+        },
+    )
+    write_json(
+        root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "tma_layout.json",
+        {
+            "schema": 3,
+            "configurations": {
+                "LEMD_APP": {
+                    "MADRID_CORE": {
+                        "positions": {"LEMD_APP": ["LEMDAAA"]},
+                        "airports": ["LEMD"],
+                        "valid_for_runways": {"LEMD": ["NORTH"]},
+                    }
+                }
+            },
         },
     )
     write_json(
         root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "sector_definitions.json",
         {
-            "sector_definitions": [
+            "schema": 3,
+            "sectors": {"LEMDAAA": {"name": "AAA", "title": "Madrid (LEMDAAA)"}},
+            "volumes": [
                 {
-                    "sector_id": "LEMDAAA",
+                    "sector_ids": ["LEMDAAA"],
                     "lower_limit": 0,
                     "higher_limit": 24500,
                     "polygon": [[40.0, -3.8], [40.1, -3.7], [40.2, -3.8]],
                 }
-            ]
+            ],
         },
     )
     write_json(
-        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "tma_structure.json",
+        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "tma_definitions.json",
         {
-            "schema": 2,
+            "schema": 3,
             "units": [
                 {
                     "id": "LEBL_APP",
                     "call_sign": "Barcelona Approach",
                     "services": ["approach_radar"],
-                    "frequencies": ["131.125"],
                 }
             ],
-            "layouts": [
+            "positions": [
                 {
-                    "id": "BARCELONA_CORE",
-                    "runways": {"LEBL": ["WEST"]},
-                    "positions": [
-                        {
-                            "sector": "LEBLAAA",
-                            "name": "ALL",
-                            "code": "LEBL_APP",
-                            "unit": "LEBL_APP",
-                            "frequency": "131.125",
-                            "airports": ["LEBL"],
-                        }
-                    ],
+                    "call_sign": "LEBL_APP",
+                    "unit": "LEBL_APP",
+                    "frequency": "131.125",
                 }
             ],
         },
     )
     write_json(
+        root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "tma_layout.json",
+        {
+            "schema": 3,
+            "configurations": {
+                "LEBL_APP": {
+                    "BARCELONA_CORE": {
+                        "positions": {"LEBL_APP": ["LEBLAAA"]},
+                        "airports": ["LEBL"],
+                        "valid_for_runways": {"LEBL": ["WEST"]},
+                    }
+                }
+            },
+        },
+    )
+    write_json(
         root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "sector_definitions.json",
         {
-            "sector_definitions": [
+            "schema": 3,
+            "sectors": {"LEBLAAA": {"name": "AAA", "title": "Barcelona (LEBLAAA)"}},
+            "volumes": [
                 {
-                    "sector_id": "LEBLAAA",
+                    "sector_ids": ["LEBLAAA"],
                     "lower_limit": 0,
                     "higher_limit": 24500,
                     "polygon": [[41.2, 2.0], [41.3, 2.1], [41.4, 2.0]],
                 }
-            ]
+            ],
         },
     )
     write_json(
@@ -224,17 +238,23 @@ def build_fixture_repo(root: Path) -> None:
 
 
 def add_bundle_tma(root: Path) -> None:
-    """Add schema-2 coordination and ACC structure files for release projection tests."""
+    """Add schema-3 coordination and ACC definition files for release projection tests."""
     write_json(
-        root / "L" / "LE" / "LECB" / "acc_structure.json",
+        root / "L" / "LE" / "LECB" / "acc_definitions.json",
         {
-            "schema": 2,
+            "schema": 3,
             "units": [
                 {
                     "id": "LECB_CTR",
                     "call_sign": "Barcelona Control",
                     "services": ["center"],
-                    "frequencies": ["132.580"],
+                }
+            ],
+            "positions": [
+                {
+                    "call_sign": "LECB_CTR",
+                    "unit": "LECB_CTR",
+                    "frequency": "132.580",
                 }
             ],
         },
@@ -242,7 +262,7 @@ def add_bundle_tma(root: Path) -> None:
     write_json(
         root / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA" / "tma_coordination.json",
         {
-            "schema": 2,
+            "schema": 3,
             "agreements": [
                 {
                     "name": "BCN_ARR",
@@ -250,22 +270,27 @@ def add_bundle_tma(root: Path) -> None:
                     "to": "LEBL_APP",
                     "arrives": ["LEBL"],
                     "fix": ["MAMUK"],
-                    "descent": "F110",
-                    "priority": 10,
+                    "level": "F110",
                 }
             ],
         },
     )
     write_json(
-        root / "L" / "LE" / "LECM" / "acc_structure.json",
+        root / "L" / "LE" / "LECM" / "acc_definitions.json",
         {
-            "schema": 2,
+            "schema": 3,
             "units": [
                 {
                     "id": "LECM_CTR",
                     "call_sign": "Madrid Control",
                     "services": ["center"],
-                    "frequencies": ["133.755"],
+                }
+            ],
+            "positions": [
+                {
+                    "call_sign": "LECM_CTR",
+                    "unit": "LECM_CTR",
+                    "frequency": "133.755",
                 }
             ],
         },
@@ -273,7 +298,7 @@ def add_bundle_tma(root: Path) -> None:
     write_json(
         root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "tma_coordination.json",
         {
-            "schema": 2,
+            "schema": 3,
             "agreements": [
                 {
                     "name": "MAD_ARR",
@@ -281,8 +306,7 @@ def add_bundle_tma(root: Path) -> None:
                     "to": "LEMD_APP",
                     "arrives": ["LEMD"],
                     "fix": ["ASBIN"],
-                    "descent": "F130",
-                    "priority": 10,
+                    "level": "F130",
                 }
             ],
         },
@@ -529,7 +553,13 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                     [
                         name
                         for name in archive.namelist()
-                        if name.endswith(("/tma.json", "/tma_structure.json", "/tma_coordination.json", "/acc_structure.json"))
+                        if name.endswith((
+                            "/tma.json",
+                            "/tma_definitions.json",
+                            "/tma_layout.json",
+                            "/tma_coordination.json",
+                            "/acc_definitions.json",
+                        ))
                     ],
                 )
 
@@ -538,18 +568,20 @@ class CommunityReleaseManifestTests(unittest.TestCase):
             self.assertNotIn("requires", bcn_entry)
             self.assertEqual(["community.tma_file"], bcn_entry["files"]["tma"]["requires"])
             self.assertEqual("L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json", bcn_entry["files"]["tma"]["repo_path"])
-            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_structure"]["requires"])
+            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_definitions"]["requires"])
+            self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_layout"]["requires"])
             self.assertEqual(["community.airspace_files"], bcn_entry["files"]["tma_coordination"]["requires"])
             self.assertIn("L/LE/LECB", full_entries)
-            self.assertEqual(["community.airspace_files"], full_entries["L/LE/LECB"]["files"]["acc_structure"]["requires"])
+            self.assertEqual(["community.airspace_files"], full_entries["L/LE/LECB"]["files"]["acc_definitions"]["requires"])
 
             with zipfile.ZipFile(with_tma["assets"]["sector_data_full_zip"]["path"]) as archive:
                 names = set(archive.namelist())
                 self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma.json", names)
                 self.assertIn("L/LE/LECM/LECM_R2/MADRID_TMA/tma.json", names)
-                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_structure.json", names)
+                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json", names)
+                self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json", names)
                 self.assertIn("L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json", names)
-                self.assertIn("L/LE/LECB/acc_structure.json", names)
+                self.assertIn("L/LE/LECB/acc_definitions.json", names)
 
     def test_build_release_bundle_accepts_suffixed_manual_release_title(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:

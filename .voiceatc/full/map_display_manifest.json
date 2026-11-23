@@ -1,0 +1,21 @@
+{
+  "airports": {
+    "LEBL": {
+      "repo_path": "L/LE/LECB/LECB_W/BARCELONA_TMA/map_display.json",
+      "sha256": "c9d67dc6348aca32e050b3e0524466e9466742193be208c676a61514f4df3018",
+      "size_bytes": 1725
+    },
+    "LEMD": {
+      "repo_path": "L/LE/LECM/LECM_R2/MADRID_TMA/map_display.json",
+      "sha256": "4d700f941af63a1489fb1425a41995c1ab52d07dede6e8164f7f357df28adb2f",
+      "size_bytes": 434
+    }
+  },
+  "published_at": "2026-11-21T08:15:36Z",
+  "repo": "lainoa-software/voiceatc-simulator-community",
+  "requires": [
+    "community.airac_overrides",
+    "community.airspace_files"
+  ],
+  "schema_version": 1
+}

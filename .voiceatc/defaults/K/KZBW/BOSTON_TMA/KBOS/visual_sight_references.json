@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "airport": "KBOS",
+  "variants": [
+    {
+      "procedure_id": "LIGHT_VISUAL_33L",
+      "variant_id": "LIGHT_VISUAL_MAIN",
+      "default_reference_id": "BOSTON_LIGHT",
+      "references": [
+        {
+          "id": "BOSTON_LIGHT",
+          "name": "Boston Light",
+          "aliases": ["the Boston Light lighthouse"],
+          "geometry": { "kind": "point", "leg_id": "LYHTT" },
+          "source": {
+            "authority": "FAA",
+            "chart_title": "LIGHT VISUAL RWY 33L",
+            "url": "https://aeronav.faa.gov/d-tpp/2608/00058LIGHT_VIS33L.PDF",
+            "airac": "2608",
+            "checked_date": "2026-09-02"
+          }
+        }
+      ]
+    }
+  ]
+}
