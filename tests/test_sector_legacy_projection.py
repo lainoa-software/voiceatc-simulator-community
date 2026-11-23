@@ -15,12 +15,20 @@ class SectorLegacyProjectionTests(unittest.TestCase):
         projection = sector_legacy_projection.build_sector_release_projection(REPO_ROOT, source_bundles)
         index = sector_legacy_projection.load_frozen_index(REPO_ROOT)
 
-        expected_generated = ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"]
+        expected_generated = [
+            # Vienna and Munich take their contributors' outlines back, so their source no
+            # longer matches the frozen legacy snapshot and the projection generates them.
+            "E/ED/EDMM/EDDM_TMA",
+            "K/KZAU/MILWAUKEE_TMA",
+            "L/LE/LECB/LECB_W/VALENCIA_TMA",
+            "L/LO/LOVV/VIENNA_TMA",
+        ]
         self.assertEqual(136, len(index))
-        self.assertEqual(134, len(projection["frozen_bundles"]))
+        self.assertEqual(132, len(projection["frozen_bundles"]))
         self.assertEqual(expected_generated, projection["generated_bundles"])
         self.assertEqual(
-            "Sector projection: 134 frozen, 2 generated (K/KZAU/MILWAUKEE_TMA, L/LE/LECB/LECB_W/VALENCIA_TMA).",
+            "Sector projection: 132 frozen, 4 generated (E/ED/EDMM/EDDM_TMA, K/KZAU/MILWAUKEE_TMA, "
+            "L/LE/LECB/LECB_W/VALENCIA_TMA, L/LO/LOVV/VIENNA_TMA).",
             sector_legacy_projection.format_projection_report(projection),
         )
 
@@ -477,15 +485,17 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 actual_inf_diffs.add(leg_path)
         self.assertEqual(intentional_influence_diffs, actual_inf_diffs)
 
-        # Normalized sector_definitions comparison under force_generate=True (all other 129 match):
+        # Normalized sector_definitions comparison under force_generate=True (all other 127 match):
         intentional_sd_diffs = {
             "E/ED/EDGG/MUENSTER_OSNABRUECK_TMA",
+            "E/ED/EDMM/EDDM_TMA",  # Munich returns to Korbinian Schmidt's outline (#337 replaced it)
             "E/EF/EFIN/EFIN_S/HELSINKI_TMA",
             "E/ES/ESAA/ESOS_Y/ESOS_APP",
             "L/LE/LECB/LECB_E/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
             "L/LE/LECB/LECB_W/VALENCIA_TMA",
             "L/LE/LECM/LECM_R2/MADRID_TMA",
+            "L/LO/LOVV/VIENNA_TMA",  # Vienna returns to Willek10's outline (#337 replaced it)
             "L/LT/LTBB/ISTANBUL_TMA",
         }
 
@@ -510,12 +520,12 @@ class SectorLegacyProjectionTests(unittest.TestCase):
                 actual_sd_diffs.add(leg_path)
         self.assertEqual(intentional_sd_diffs, actual_sd_diffs)
 
-        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (134/136):
+        # Non-forced projection must match frozen bytes verbatim on every frozen bundle (132/136):
         norm_proj = sector_legacy_projection.build_sector_release_projection(
             REPO_ROOT, source_bundles, force_generate=False
         )
         self.assertEqual(
-            ["K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA"],
+            ["E/ED/EDMM/EDDM_TMA", "K/KZAU/MILWAUKEE_TMA", "L/LE/LECB/LECB_W/VALENCIA_TMA", "L/LO/LOVV/VIENNA_TMA"],
             sorted(norm_proj["generated_bundles"]),
         )
         for leg_path in norm_proj["frozen_bundles"]:
