@@ -864,6 +864,11 @@ def project_mva_payload(doc: dict[str, object]) -> bytes:
     return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
 
 
+def project_runway_configs_payload(doc: dict[str, object]) -> bytes:
+    converted = _convert_with_airac_overrides(doc, _convert_colors_or_style_single)
+    return (json.dumps(converted, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
 def _convert_misc_row(row: dict[str, object]) -> dict[str, object]:
     out: dict[str, object] = {}
     for k, v in row.items():
@@ -1545,8 +1550,10 @@ def project_legacy_file_bytes(
             root, norm, force_generate=force_generate, files_index=index
         )
 
-    # Locate schema-3 source path (handles PALMA_TMA / VALENCIA_TMA move when forced)
-    src_path = root / norm
+    # Locate schema-3 source path (preferring an already-stripped .voiceatc/defaults/ file when present)
+    src_path = root / repo_path.replace("\\", "/")
+    if not src_path.is_file():
+        src_path = root / norm
     if not src_path.is_file() and isinstance(meta, dict) and meta.get("sources"):
         src_rel = next(iter(meta["sources"]))
         src_path = root / str(src_rel)
@@ -1567,6 +1574,8 @@ def project_legacy_file_bytes(
     doc = json.loads(raw_bytes.decode("utf-8"))
     if kind == "mva":
         return project_mva_payload(doc)
+    if kind == "runway_configs":
+        return project_runway_configs_payload(doc)
     if kind == "misc_drawings":
         return project_misc_drawings_payload(doc)
     if kind == "constraints":
@@ -1811,6 +1820,15 @@ def project_release_dataset_feeds(
             if AIRSPACE_FILES_CAPABILITY in reqs:
                 new_full_entries.append(entry)
                 archive_sources[rp] = s3_rp
+                continue
+            if rp.startswith(".voiceatc/defaults/"):
+                generated[rp] = leg_bytes
+                sha, size = _file_meta(leg_bytes)
+                legacy_entry = dict(entry)
+                legacy_entry["sha256"] = sha
+                legacy_entry["size_bytes"] = size
+                new_full_entries.append(legacy_entry)
+                archive_sources[rp] = rp
                 continue
             if rp.startswith("airac_variants/"):
                 d_sha, d_size = _file_meta(disk_bytes)

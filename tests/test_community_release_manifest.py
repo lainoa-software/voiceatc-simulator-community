@@ -723,6 +723,39 @@ class CommunityReleaseManifestTests(unittest.TestCase):
                 self.assertEqual(legacy_entry["sha256"], MODULE._hash_bytes(legacy_bytes))
                 self.assertNotIn("schema", json.loads(legacy_bytes))
 
+    def test_runway_configs_default_strips_schema3_and_full_preserves_schema3(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "repo"
+            build_fixture_repo(root)
+            rc_path = root / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA" / "LEMD" / "runway_configs.json"
+            payload = json.loads(rc_path.read_text(encoding="utf-8"))
+            payload["schema"] = 3
+            payload["airac_overrides"] = {"latest": {**payload}}
+            write_json(rc_path, payload)
+
+            bundle = MODULE.build_release_bundle(
+                output_dir=root / "build" / "release",
+                release_tag="daily-2026-03-18",
+                published_at="2026-03-18T01:15:00Z",
+                commit_sha="test-commit",
+                download_repo="lainoa-software/voiceatc-simulator-community",
+                root=root,
+            )
+
+            default_entry = bundle["manifests"]["runway_configs"]["airports"]["LEMD"]
+            with zipfile.ZipFile(bundle["assets"]["runway_configs_zip"]["path"], "r") as archive:
+                default_doc = json.loads(archive.read(default_entry["repo_path"]))
+                self.assertNotIn("schema", default_doc)
+                self.assertNotIn("airac_overrides", default_doc)
+
+            lemd_entries = [e for e in bundle["full_manifests"]["runway_configs"]["entries"] if e["id"] == "LEMD"]
+            self.assertGreaterEqual(len(lemd_entries), 2)
+            s3_entry = lemd_entries[-1]
+            self.assertIn("community.airspace_files", s3_entry["requires"])
+            with zipfile.ZipFile(bundle["assets"]["runway_configs_full_zip"]["path"], "r") as full_archive:
+                s3_doc = json.loads(full_archive.read(s3_entry["repo_path"]))
+                self.assertEqual(3, s3_doc.get("schema"))
+
     def test_cli_writes_summary_and_leaves_voiceatc_manifests_untouched(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir) / "repo"

@@ -473,6 +473,9 @@ def build_release_bundle(
     sector_default_sources, sector_full_sources = airac_overrides.project_sector_feed(
         root, gated["sector_data"], projected_bytes=sector_projected_bytes
     )
+    runway_generated_bytes, runway_full_sources = sector_legacy_projection.project_release_dataset_feeds(
+        root, gated["runway_configs"], kind="runway_configs"
+    )
     mva_generated_bytes, mva_full_sources = sector_legacy_projection.project_release_dataset_feeds(
         root, gated["mva"], kind="mva"
     )
@@ -496,7 +499,7 @@ def build_release_bundle(
     }
 
     mva_repo_paths = sorted({str(entry["repo_path"]) for entry in mva_airports.values()})
-    runway_repo_paths = [str(entry["repo_path"]) for entry in runway_airports.values()]
+    runway_repo_paths = sorted({str(entry["repo_path"]) for entry in runway_airports.values()})
     misc_drawings_repo_paths = sorted({str(entry["repo_path"]) for entry in misc_drawings_airports.values()})
     mva_asset = build_deterministic_zip_from_sources(
         root,
@@ -504,7 +507,12 @@ def build_release_bundle(
         output_dir / mva_asset_name,
         generated_bytes=mva_generated_bytes,
     )
-    runway_asset = build_deterministic_zip(root, runway_repo_paths, output_dir / runway_asset_name)
+    runway_asset = build_deterministic_zip_from_sources(
+        root,
+        {p: p for p in runway_repo_paths},
+        output_dir / runway_asset_name,
+        generated_bytes=runway_generated_bytes,
+    )
     sector_data_asset = build_deterministic_zip_from_sources(
         root,
         sector_default_sources,
@@ -557,10 +565,11 @@ def build_release_bundle(
             output_dir / _full_asset_name(mva_asset_name),
             generated_bytes=mva_generated_bytes,
         ),
-        "runway_configs": build_deterministic_zip(
+        "runway_configs": build_deterministic_zip_from_sources(
             root,
-            airac_overrides.full_repo_paths(gated["runway_configs"]),
+            runway_full_sources,
             output_dir / _full_asset_name(runway_asset_name),
+            generated_bytes=runway_generated_bytes,
         ),
         "sector_data": build_deterministic_zip_from_sources(
             root,
