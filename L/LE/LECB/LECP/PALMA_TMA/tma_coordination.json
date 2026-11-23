@@ -347,7 +347,7 @@
       "fix": [
         "RUXET"
       ],
-      "level": "F250"
+      "level": "F150"
     },
     {
       "name": "LEIB_ARR_VARUT",
@@ -390,7 +390,7 @@
     },
     {
       "name": "LEIB_ARR_NEGRE_WEST",
-      "from": "LECP_CTR",
+      "from": "LECP_GXX_CTR",
       "to": "LEIB_APP",
       "arrives": [
         "LEIB"
@@ -420,7 +420,7 @@
     },
     {
       "name": "LEIB_ARR_ADX",
-      "from": "LECP_CTR",
+      "from": "LECP_GXX_CTR",
       "to": "LEIB_APP",
       "arrives": [
         "LEIB"
@@ -808,7 +808,7 @@
       "fix": [
         "LUNIK"
       ],
-      "level": "F180"
+      "level": "F100"
     },
     {
       "name": "LEMH_DEP_LUNIK_EXIT",
@@ -820,7 +820,7 @@
       "fix": [
         "LUNIK"
       ],
-      "level": "F180"
+      "level": "F240"
     }
   ]
 }
