@@ -42,6 +42,29 @@ the rich asset under `rich_routes_tsv`; contributors must update both through th
 route projection tool, never edit the legacy copy independently. The daily release
 publishes both assets with unchanged manifest schema versions.
 
+## Coded route ends
+
+Creator decision 2026-10-21: a generated route starts at a published point of a SID
+and ends at a published point of a STAR, never at a coded airport point such as
+Frankfurt DF163, Paris PG825, Zurich DER34 or Cologne DK634. The route generator
+excludes them, and `tools/routes_airac_migration.py` rejects a `LainoaSoftware` row
+that still uses one, so the row is blanked and rebuilt. A community row is flagged
+for review and left unchanged.
+
+- A published ident is in `tbl_ea_enroute_waypoints`, `tbl_d_vhfnavaids`,
+  `tbl_db_enroute_ndbnavaids` or `tbl_pn_terminal_ndbnavaids`.
+- A coded point is not published and contains a digit. A letter-only name that exists
+  only in `tbl_pc_terminal_waypoints` (Canadian HAMPO) is not coded.
+- `sid_exit_coded_point`: the first fix after the origin is the last fix of a
+  `tbl_pd_sids` procedure, route type and transition group of the origin, and coded.
+- `star_entry_coded_point`: the last fix before the destination is the first fix of a
+  `tbl_pe_stars` group of the destination, and coded.
+
+Airport aliases apply as in the other procedure checks. Coded points elsewhere in a
+route (approach fixes, graph nodes) are out of scope. The rule is opt-in: player
+routes and the contribution gate do not apply it. Check a table by hand with
+`python tools/routes_connectivity_check.py --navdata-db <navdata> --reject-coded-route-ends`.
+
 ## Gated overlays (`ROUTES/full/`)
 
 Some generated routes only suit builds that have a capability. The first is
