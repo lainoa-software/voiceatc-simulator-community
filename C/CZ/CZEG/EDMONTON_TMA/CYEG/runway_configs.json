@@ -1,0 +1,41 @@
+{
+  "airport": "CYEG",
+  "runway_configs": [
+    {
+      "id": "NORTH_FLOW",
+      "name": "North Flow",
+      "arr": "30 02",
+      "dep": "30 02"
+    },
+    {
+      "id": "WEST_FLOW",
+      "name": "West Flow",
+      "arr": "20 30",
+      "dep": "20 30"
+    },
+    {
+      "id": "SOUTH_FLOW",
+      "name": "South Flow",
+      "arr": "20 12",
+      "dep": "20 12"
+    },
+    {
+      "id": "EAST_FLOW",
+      "name": "East Flow",
+      "arr": "12 02",
+      "dep": "12 02"
+    },
+    {
+      "id": "LOW_VIS_SOUTH",
+      "name": "Low Vis South",
+      "arr": "12",
+      "dep": "12"
+    },
+    {
+      "id": "LOW_VIS_NORTH",
+      "name": "Low Vis North",
+      "arr": "30",
+      "dep": "30"
+    }
+  ]
+}
