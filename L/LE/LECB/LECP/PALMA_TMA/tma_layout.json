@@ -16,6 +16,92 @@
           "LEIB",
           "LEMH"
         ]
+      },
+      "7G": {
+        "positions": {
+          "LECP_APP_APP": [
+            "LECPAPP"
+          ],
+          "LECP_F1X_APP": [
+            "LECPF1X"
+          ],
+          "LECP_F2X_APP": [
+            "LECPF2X"
+          ],
+          "LECP_MXX_APP": [
+            "LECPMXX"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      },
+      "8A": {
+        "positions": {
+          "LECP_APP_APP": [
+            "LECPAPP"
+          ],
+          "LECP_DWX_APP": [
+            "LECPDWX"
+          ],
+          "LECP_L1W_APP": [
+            "LECPL1W"
+          ],
+          "LECP_L2W_APP": [
+            "LECPL2W"
+          ],
+          "LECP_MXX_APP": [
+            "LECPMXX"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "WLR",
+            "WEST_DUAL"
+          ]
+        }
+      },
+      "8B": {
+        "positions": {
+          "LECP_APP_APP": [
+            "LECPAPP"
+          ],
+          "LECP_DEX_APP": [
+            "LECPDEX"
+          ],
+          "LECP_L1E_APP": [
+            "LECPL1E"
+          ],
+          "LECP_L2E_APP": [
+            "LECPL2E"
+          ],
+          "LECP_MXX_APP": [
+            "LECPMXX"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "ELR"
+          ]
+        }
+      },
+      "1A": {
+        "positions": {
+          "LECP_ALP_APP": [
+            "LECPALP"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ]
       }
     },
     "LEIB_APP": {
@@ -30,6 +116,49 @@
           "LEIB",
           "LEMH"
         ]
+      },
+      "7G": {
+        "positions": {
+          "LECP_IXX_APP": [
+            "LECPIXX"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      },
+      "8A": {
+        "positions": {
+          "LECP_IXX_APP": [
+            "LECPIXX"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "WLR",
+            "WEST_DUAL"
+          ]
+        }
+      },
+      "8B": {
+        "positions": {
+          "LECP_IXX_APP": [
+            "LECPIXX"
+          ]
+        },
+        "airports": [
+          "LEPA"
+        ],
+        "valid_for_runways": {
+          "LEPA": [
+            "ELR"
+          ]
+        }
       }
     },
     "LEMH_TWR": {
