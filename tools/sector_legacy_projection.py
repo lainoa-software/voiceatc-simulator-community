@@ -735,6 +735,19 @@ def coordination_kind(files: object) -> str:
     return ""
 
 
+def _child_tma_definitions(acc_dir_path: Path) -> dict[str, object]:
+    """Every TMA under an ACC folder, whose units and call signs the game knows for its rows."""
+    units: list[object] = []
+    positions: list[object] = []
+    for path in sorted(acc_dir_path.rglob("tma_definitions.json")):
+        document = schema3_features.with_every_tier(_read_document(path))
+        for key, collected in (("units", units), ("positions", positions)):
+            values = document.get(key)
+            if isinstance(values, list):
+                collected.extend(values)
+    return {"units": units, "positions": positions}
+
+
 def bundle_airspace_context(
     root: Path, bundle_path: str, files: object
 ) -> schema3_features.AirspaceContext:
@@ -758,6 +771,10 @@ def bundle_airspace_context(
             document = _read_document(root / acc_dir / file_name)
             if document is not None:
                 acc[kind] = document
+    # The game checks an ACC's own coordination with every child TMA's units and call signs
+    # handed to it, so a row that ends at one of them is valid there.
+    if coordination_kind(files) == "acc_coordination" and acc_dir:
+        own["tma_definitions"] = _child_tma_definitions(root / acc_dir)
     return schema3_features.airspace_context(own, acc, bundle=bundle_path)
 
 

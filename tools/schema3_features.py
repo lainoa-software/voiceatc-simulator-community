@@ -41,7 +41,6 @@ class AirspaceContext:
     top_center: str = ""
     all_units: frozenset[str] = frozenset()
     all_positions: frozenset[str] = frozenset()
-    position_sectors: Mapping[str, tuple[frozenset[str], ...]] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -113,6 +112,38 @@ def _expanded(sector_ids: object, catalog: Mapping[str, dict]) -> frozenset[str]
     return frozenset(leaves)
 
 
+def _first_wins(base: dict, other: dict) -> dict:
+    """``other``'s entries added under ``base``'s, which wins wherever both name one leaf."""
+    merged = dict(base)
+    for key, value in other.items():
+        if key not in merged:
+            merged[key] = value
+        elif isinstance(merged[key], dict) and isinstance(value, dict):
+            merged[key] = _first_wins(merged[key], value)
+    return merged
+
+
+def with_every_tier(document: object) -> dict[str, object]:
+    """One document with every AIRAC tier folded in, the base tier first and winning.
+
+    The game knows a name a later tier introduces; a released checker reads one tier at a
+    time, so where tiers disagree the base tier's definition is the one kept.
+    """
+    merged: dict[str, object] = {}
+    for tier in _tier_documents(document):
+        for key, value in tier.items():
+            if key == "airac_overrides":
+                continue
+            current = merged.get(key)
+            if key not in merged:
+                merged[key] = value
+            elif isinstance(current, list) and isinstance(value, list):
+                merged[key] = [*current, *value]
+            elif isinstance(current, dict) and isinstance(value, dict):
+                merged[key] = _first_wins(current, value)
+    return merged
+
+
 def _configurations(*layouts: object) -> dict[str, dict]:
     """Unit -> its configurations, the first layout that names the unit winning."""
     merged: dict[str, dict] = {}
@@ -154,8 +185,8 @@ def airspace_context(
     bundle: str = "",
 ) -> AirspaceContext:
     """Read one bundle's documents (and its ancestor ACC's) into the names they define."""
-    own = dict(bundle_documents or {})
-    acc = dict(acc_documents or {})
+    own = {kind: with_every_tier(payload) for kind, payload in dict(bundle_documents or {}).items()}
+    acc = {kind: with_every_tier(payload) for kind, payload in dict(acc_documents or {}).items()}
     catalog = _sector_catalog(own.get("definitions"), acc.get("definitions"))
     known_units = (
         _unit_ids(own.get("tma_definitions"))
@@ -169,7 +200,6 @@ def airspace_context(
     )
 
     worked_by: list[tuple[str, frozenset[str]]] = []
-    position_sectors: dict[str, list[frozenset[str]]] = {}
     configurations = _configurations(
         own.get("tma_layout"), own.get("acc_layout"), acc.get("acc_layout")
     )
@@ -183,7 +213,6 @@ def airspace_context(
                 if not position:
                     continue
                 worked = _expanded(raw_sectors, catalog)
-                position_sectors.setdefault(position, []).append(worked)
                 worked_by.append((position, worked))
 
     # A sector is worked by the first position, in unit then configuration then position
@@ -197,7 +226,7 @@ def airspace_context(
                 sector_position[sector_id] = position
                 break
 
-    all_positions = known_positions | set(position_sectors)
+    all_positions = known_positions | {position for position, _worked in worked_by}
     return AirspaceContext(
         bundle=bundle,
         known_units=frozenset(known_units),
@@ -207,7 +236,6 @@ def airspace_context(
         top_center=_top_center(acc.get("acc_definitions") or own.get("acc_definitions")),
         all_units=frozenset(known_units | set(configurations)),
         all_positions=frozenset(all_positions),
-        position_sectors={name: tuple(sets) for name, sets in position_sectors.items()},
     )
 
 
@@ -244,16 +272,13 @@ def _tier_documents(document: object) -> list[Mapping[str, object]]:
 
 
 def is_sector_end(name: str, context: AirspaceContext) -> bool:
-    """True when an agreement end names a sector where a released checker wants a unit."""
-    if not name or name not in context.sectors or name in context.known_units:
-        return False
-    # A name that is both a sector and a position stays a position when that position works
-    # exactly that one sector in every configuration that lists it.
-    if name in context.known_positions and context.sector_position.get(name) == name:
-        worked = context.position_sectors.get(name, ())
-        if worked and all(entry == frozenset({name}) for entry in worked):
-            return False
-    return True
+    """True when an agreement end names a sector where a released checker wants a unit.
+
+    A seat that carries its sector's code is a position every released checker knows.
+    """
+    return name in context.sectors and not (
+        name in context.known_units or name in context.known_positions
+    )
 
 
 def _sector_ends_used(rows: Sequence[dict[str, object]], context: AirspaceContext) -> bool:
@@ -270,6 +295,7 @@ def _downgrade_sector_ends(
             downgraded.append(row)
             continue
         result = deepcopy(row)
+        source_from, source_to = _text(row.get("from")), _text(row.get("to"))
         dropped = False
         for key in AGREEMENT_END_KEYS:
             end = _text(result.get(key))
@@ -281,6 +307,11 @@ def _downgrade_sector_ends(
                 break
             result[key] = position
         if dropped:
+            continue
+        start, end = _text(result.get("from")), _text(result.get("to"))
+        # Two sectors one position works both land on one name, which a released checker
+        # refuses (TMA_AGREEMENT_SAME_UNIT); a row that already had equal ends is left alone.
+        if start and start == end and source_from != source_to:
             continue
         go_around = result.get(GO_AROUND_KEY)
         if isinstance(go_around, dict):

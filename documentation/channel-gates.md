@@ -107,11 +107,13 @@ coordination without taking the path an older build reads. Every other file is s
 the two, and the projected schema-1 `tma.json` of a generated bundle carries the downgraded rows
 too.
 
-A coordination document that also holds AIRAC variants takes a third path and is not refused:
-the resolved copy stays at `<bundle>/<file>`, where the AIRAC projection already writes it; the
-downgraded copy, every tier downgraded and keeping its own `airac_overrides`, at
-`airac_variants/<bundle>/<file>`; and the authored copy at `feature_variants/<bundle>/<file>`.
-Each entry keeps the `requires` it has today; the authored one adds the used capabilities.
+A coordination document that also holds AIRAC variants splits the same way, once per entry the
+AIRAC projection already produces: the resolved copy stays under
+`.voiceatc/defaults/<bundle>/<file>`, where the projection writes it, so no schema-3 full entry
+names `<bundle>/<file>`. The full feed carries the downgraded copy at
+`airac_variants/<bundle>/<file>`, its own `airac_overrides` kept and every tier downgraded, and
+the authored copy at `feature_variants/<bundle>/<file>`. Each entry keeps the `requires` it has
+today; the authored one adds the used capabilities.
 
 ### Route overlays
 

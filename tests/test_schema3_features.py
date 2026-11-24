@@ -295,7 +295,10 @@ class DowngradeTests(unittest.TestCase):
             {
                 "tma_definitions": {
                     "units": [{"id": "LEAA_APP", "services": ["approach_radar"]}],
-                    "positions": [{"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"}],
+                    "positions": [
+                        {"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"},
+                        {"call_sign": "LEAA_DEP", "unit": "LEAA_APP", "frequency": "119.100"},
+                    ],
                 },
                 "tma_layout": {
                     "configurations": {"LEAA_APP": {"CORE": {"positions": {"LEAA_APP": ["LEAACPLX"]}}}}
@@ -313,7 +316,7 @@ class DowngradeTests(unittest.TestCase):
         self.assertEqual(
             ["LEAA_APP"],
             [row["from"] for row in schema3_features.downgrade_rows(
-                [agreement("LEAF", "LEAASEC")], position_claims_composite
+                [agreement("LEAF", "LEAASEC", end="LEAA_DEP")], position_claims_composite
             )],
         )
 
@@ -349,6 +352,79 @@ class DowngradeTests(unittest.TestCase):
         self.assertEqual(1, len(downgraded))
         self.assertEqual("SAME", downgraded[0]["name"])
 
+    def test_a_row_two_sectors_share_is_left_out_but_equal_ends_are_not(self) -> None:
+        # One position works both sectors, so the downgraded row would end at one name twice,
+        # which a released checker refuses (TMA_AGREEMENT_SAME_UNIT).
+        context = context_for(
+            {
+                "tma_definitions": {
+                    "units": [{"id": "LEAA_APP", "services": ["approach_radar"]}],
+                    "positions": [{"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"}],
+                },
+                "definitions": {"sectors": _sectors("LECCEAST", "LECCWEST")},
+            },
+            {
+                "acc_definitions": {"units": [{"id": "LECC_CTR", "services": ["center"]}]},
+                "acc_layout": {
+                    "configurations": {
+                        "LECC_CTR": {"DAY": {"positions": {"LECC_CTR": ["LECCEAST", "LECCWEST"]}}}
+                    }
+                },
+            },
+        )
+        rows = [
+            agreement("SHARED", "LECCEAST", end="LECCWEST"),
+            agreement("EQUAL", "LEAA_APP", end="LEAA_APP"),
+        ]
+        before = json.dumps(rows, sort_keys=True)
+        downgraded = schema3_features.downgrade_rows(rows, context)
+        self.assertEqual(["EQUAL"], [row["name"] for row in downgraded])
+        self.assertEqual("LEAA_APP", downgraded[0]["from"])
+        self.assertEqual(before, json.dumps(rows, sort_keys=True))
+
+    def test_a_tier_only_sector_and_position_are_in_the_context(self) -> None:
+        # A sector and a position that only `airac_overrides.latest` introduces are names the
+        # game knows; where the base tier also works a sector, its position is the one used.
+        context = context_for(
+            {
+                "tma_definitions": {
+                    "units": [{"id": "LECC_CTR", "services": ["center"]}],
+                    "positions": [{"call_sign": "LECC_EAST_CTR", "unit": "LECC_CTR"}],
+                    "airac_overrides": {
+                        "latest": {"positions": [{"call_sign": "LECC_NEW_CTR", "unit": "LECC_CTR"}]}
+                    },
+                },
+                "tma_layout": {
+                    "configurations": {
+                        "LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}
+                    },
+                    "airac_overrides": {
+                        "latest": {
+                            "configurations": {
+                                "LECC_CTR": {
+                                    "DAY": {"positions": {"LECC_NEW_CTR": ["LECCEAST", "LECCNEW"]}}
+                                }
+                            }
+                        }
+                    },
+                },
+                "definitions": {
+                    "sectors": _sectors("LECCEAST"),
+                    "airac_overrides": {"latest": {"sectors": _sectors("LECCNEW")}},
+                },
+            }
+        )
+        self.assertIn("LECCNEW", context.sectors)
+        self.assertIn("LECC_NEW_CTR", context.known_positions)
+        self.assertEqual("LECC_EAST_CTR", context.sector_position["LECCEAST"])
+        rows = [
+            agreement("NEW", "LECCNEW", end="LECC_EAST_CTR"),
+            agreement("NIGHT", "LECC_NEW_CTR", end="LECC_NEW_CTR"),
+        ]
+        downgraded = schema3_features.downgrade_rows(rows, context)
+        self.assertEqual(["LECC_NEW_CTR", "LECC_NEW_CTR"], [row["from"] for row in downgraded])
+
+
     def test_an_unknown_end_raises_naming_bundle_row_and_end(self) -> None:
         context = self._context(
             {"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}}
@@ -378,9 +454,14 @@ class DowngradeTests(unittest.TestCase):
                     "positions": [{"call_sign": "LEAAAPP", "unit": "LEAA_APP", "frequency": "119.100"}],
                 },
                 "tma_layout": {
-                    "configurations": {"LEAA_APP": {"CORE": {"positions": {"LEAAAPP": ["LEAAAPP"]}}}}
+                    "configurations": {
+                        "LEAA_APP": {
+                            "CORE": {"positions": {"LEAAAPP": ["LEAAAPP"]}},
+                            "SMALL": {"positions": {"LEAAAPP": ["LEAAAPP", "LEAASEC"]}},
+                        }
+                    }
                 },
-                "definitions": {"sectors": _sectors("LEAAAPP")},
+                "definitions": {"sectors": _sectors("LEAAAPP", "LEAASEC")},
             }
         )
         self.assertFalse(schema3_features.is_sector_end("LEAAAPP", context))
@@ -523,7 +604,7 @@ class WriterTests(unittest.TestCase):
             self.assertEqual(["community.airspace_files"], today_entry["requires"])
             self.assertEqual(sorted(["community.airspace_files", CAPABILITY]), authored_entry["requires"])
 
-    def test_a_coordination_document_with_airac_variants_and_a_sector_end_ships_three_copies(
+    def test_a_coordination_document_with_airac_variants_names_only_the_two_copy_paths(
         self,
     ) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -585,6 +666,99 @@ class WriterTests(unittest.TestCase):
             self.assertEqual(
                 sorted(["community.airac_overrides", "community.airspace_files", CAPABILITY]),
                 airac_entries[1]["requires"],
+            )
+
+    def test_a_row_two_sectors_share_leaves_the_downgraded_copy_only(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={
+                    "LECC_CTR": {
+                        "DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST", "LECCWEST"]}}
+                    }
+                },
+                tma_coordination={
+                    "schema": 3,
+                    "agreements": [
+                        agreement("SHARED", "LECCEAST", end="LECCWEST"),
+                        agreement("EQUAL", "LEAA_APP", end="LEAA_APP"),
+                    ],
+                },
+            )
+            entries, generated = release_entries(root)
+            today_entry, authored_entry = self._two_entries(entries, "L/LE/LECC/LEAA_TMA")
+            today = today_entry["files"]["tma_coordination"]["repo_path"]
+            self.assertEqual(
+                ["EQUAL"], [row["name"] for row in json.loads(generated[today])["agreements"]]
+            )
+            authored = authored_entry["files"]["tma_coordination"]["repo_path"]
+            self.assertEqual(
+                ["SHARED", "EQUAL"],
+                [row["name"] for row in json.loads(generated[authored])["agreements"]],
+            )
+
+    def test_an_acc_row_ending_at_a_child_tmas_unit_ships_two_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                coordination={
+                    "schema": 3,
+                    "agreements": [agreement("EAST", "LECCEAST", end="LEAA_APP")],
+                },
+            )
+            entries, generated = release_entries(root)
+            today_entry, authored_entry = self._two_entries(entries, "L/LE/LECC")
+            today = today_entry["files"]["acc_coordination"]["repo_path"]
+            self.assertEqual(
+                {"from": "LECC_EAST_CTR", "to": "LEAA_APP"},
+                {
+                    key: json.loads(generated[today])["agreements"][0][key]
+                    for key in ("from", "to")
+                },
+            )
+            authored = authored_entry["files"]["acc_coordination"]["repo_path"]
+            self.assertEqual(
+                "LECCEAST", json.loads(generated[authored])["agreements"][0]["from"]
+            )
+
+    def test_a_sector_only_an_airac_tier_defines_still_gates_the_coordination(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={"schema": 3, "agreements": [agreement("NEW", "LECCNEW")]},
+            )
+            definitions = _read(root, "L/LE/LECC/sector_definitions.json")
+            definitions["airac_overrides"] = {
+                "latest": {"schema": 3, "sectors": _sectors("LECCNEW"), "volumes": _volumes("LECCNEW")}
+            }
+            _write(root, "L/LE/LECC/sector_definitions.json", definitions)
+            layout = _read(root, "L/LE/LECC/acc_layout.json")
+            latest = json.loads(json.dumps(layout))
+            latest["configurations"]["LECC_CTR"]["DAY"]["positions"] = {
+                "LECC_NIGHT_CTR": ["LECCEAST", "LECCNEW"]
+            }
+            layout["airac_overrides"] = {"latest": latest}
+            _write(root, "L/LE/LECC/acc_layout.json", layout)
+            definitions = _read(root, "L/LE/LECC/acc_definitions.json")
+            definitions["airac_overrides"] = {
+                "latest": {
+                    "schema": 3,
+                    "positions": [{"call_sign": "LECC_NIGHT_CTR", "unit": "LECC_CTR", "frequency": "133.300"}],
+                }
+            }
+            _write(root, "L/LE/LECC/acc_definitions.json", definitions)
+
+            entries, generated = release_entries(root)
+            today_entry, _authored_entry = self._two_entries(entries, "L/LE/LECC/LEAA_TMA")
+            today = today_entry["files"]["tma_coordination"]["repo_path"]
+            self.assertEqual(
+                ["LECC_NIGHT_CTR"],
+                [row["from"] for row in json.loads(generated[today])["agreements"]],
             )
 
     def test_an_airac_override_in_another_file_leaves_the_coordination_pairs_agreeing(self) -> None:
