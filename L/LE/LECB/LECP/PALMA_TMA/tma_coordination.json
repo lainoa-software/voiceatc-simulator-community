@@ -111,6 +111,18 @@
       "level": "F190"
     },
     {
+      "name": "LEPA_ARR_GODOX",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_GXX_CTR",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "GODOX"
+      ],
+      "level": "F250"
+    },
+    {
       "name": "LEPA_ARR_GODOX_APP",
       "from": "LECP_GXX_CTR",
       "to": "LEPA_APP",
@@ -446,6 +458,30 @@
       ]
     },
     {
+      "name": "LEMH_ARR_KABRE",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_MXX_APP",
+      "arrives": [
+        "LEMH"
+      ],
+      "fix": [
+        "KABRE"
+      ],
+      "level": "F250"
+    },
+    {
+      "name": "LEMH_ARR_SARGO",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_MXX_APP",
+      "arrives": [
+        "LEMH"
+      ],
+      "fix": [
+        "SARGO"
+      ],
+      "level": "F130"
+    },
+    {
       "name": "LEMH_ARR_CDP",
       "from": "LEPA_APP",
       "to": "LECP_MXX_APP",
@@ -704,6 +740,18 @@
       ]
     },
     {
+      "name": "LEPA_DEP_MEROS_EXIT",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MEROS"
+      ],
+      "level": "F260"
+    },
+    {
       "name": "LEPA_DEP_ISTER",
       "from": "LEPA_APP",
       "to": "LECP_MXX_APP",
@@ -832,6 +880,78 @@
       ],
       "fix": [
         "LUNIK"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_BAVER",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "BAVER"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_EDULI",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "EDULI"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_EPAMA",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "EPAMA"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_MEROS",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "MEROS"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_MJV",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "MJV"
+      ],
+      "level": "F240"
+    },
+    {
+      "name": "LEMH_DEP_SARGO",
+      "from": "LECP_MXX_APP",
+      "to": "LECB_BKE_CTR",
+      "departs": [
+        "LEMH"
+      ],
+      "fix": [
+        "SARGO"
       ],
       "level": "F240"
     },
