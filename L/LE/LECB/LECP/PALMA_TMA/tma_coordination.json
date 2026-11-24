@@ -278,6 +278,18 @@
       ]
     },
     {
+      "name": "LEIB_ARR_TOLSO_ENTRY",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_CTR",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "TOLSO"
+      ],
+      "level": "F250"
+    },
+    {
       "name": "LEIB_ARR_TOLSO",
       "from": "LECP_CTR",
       "to": "LEIB_APP",
@@ -288,6 +300,18 @@
         "TOLSO"
       ],
       "level": "F150"
+    },
+    {
+      "name": "LEIB_ARR_CORDA_ENTRY",
+      "from": "LECB_BKE_CTR",
+      "to": "LECP_CTR",
+      "arrives": [
+        "LEIB"
+      ],
+      "fix": [
+        "CORDA"
+      ],
+      "level": "F220"
     },
     {
       "name": "LEIB_ARR_CORDA",
@@ -552,6 +576,18 @@
       "level": "F160"
     },
     {
+      "name": "LEPA_DEP_DRAGO_EXIT",
+      "from": "LECP_TXX_CTR",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "DRAGO"
+      ],
+      "level": "F280"
+    },
+    {
       "name": "LEPA_DEP_GALAT",
       "from": "LEPA_APP",
       "to": "LECP_TXX_CTR",
@@ -562,6 +598,18 @@
         "GALAT"
       ],
       "level": "F160"
+    },
+    {
+      "name": "LEPA_DEP_GALAT_EXIT",
+      "from": "LECP_TXX_CTR",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "GALAT"
+      ],
+      "level": "F280"
     },
     {
       "name": "LEPA_DEP_ESPOR",
@@ -786,6 +834,18 @@
         "EPAMA"
       ],
       "level": "F140"
+    },
+    {
+      "name": "LEIB_DEP_EPAMA_EXIT",
+      "from": "LECP_GXX_CTR",
+      "to": "LECB_BKW_CTR",
+      "departs": [
+        "LEIB"
+      ],
+      "fix": [
+        "EPAMA"
+      ],
+      "level": "F260"
     },
     {
       "name": "LEIB_DEP_XOSTA",
