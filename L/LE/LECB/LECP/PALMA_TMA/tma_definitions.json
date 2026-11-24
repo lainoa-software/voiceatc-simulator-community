@@ -23,7 +23,6 @@
       ],
       "airport": "LEPA",
       "unassigned_frequencies": [
-        "118.305",
         "118.455"
       ]
     },
@@ -132,6 +131,11 @@
       "call_sign": "LEBL_APP",
       "unit": "LEBL_APP",
       "frequency": "131.125"
+    },
+    {
+      "call_sign": "LEPA_TWR",
+      "unit": "LEPA_TWR",
+      "frequency": "118.305"
     }
   ],
   "zones": [
@@ -144,6 +148,11 @@
       "airport": "LEMH",
       "kind": "CTR",
       "sector": "LEMHCTR"
+    },
+    {
+      "airport": "LEPA",
+      "kind": "ATZ",
+      "sector": "LEPATZ"
     }
   ]
 }

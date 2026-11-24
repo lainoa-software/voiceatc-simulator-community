@@ -179,6 +179,15 @@
           ]
         }
       }
+    },
+    "LEPA_TWR": {
+      "1": {
+        "positions": {
+          "LEPA_TWR": [
+            "LEPATZ"
+          ]
+        }
+      }
     }
   },
   "runway_combinations": [
