@@ -41,6 +41,15 @@
           ]
         }
       }
+    },
+    "LEIB_TWR": {
+      "1": {
+        "positions": {
+          "LEIB_TWR": [
+            "LEIBCTR"
+          ]
+        }
+      }
     }
   },
   "runway_combinations": [

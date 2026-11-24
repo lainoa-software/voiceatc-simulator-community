@@ -33,10 +33,7 @@
       "services": [
         "tower"
       ],
-      "airport": "LEIB",
-      "unassigned_frequencies": [
-        "118.505"
-      ]
+      "airport": "LEIB"
     },
     {
       "id": "LEMH_TWR",
@@ -77,12 +74,22 @@
       "frequency": "119.655"
     },
     {
+      "call_sign": "LEIB_TWR",
+      "unit": "LEIB_TWR",
+      "frequency": "118.505"
+    },
+    {
       "call_sign": "LEBL_APP",
       "unit": "LEBL_APP",
       "frequency": "131.125"
     }
   ],
   "zones": [
+    {
+      "airport": "LEIB",
+      "kind": "CTR",
+      "sector": "LEIBCTR"
+    },
     {
       "airport": "LEMH",
       "kind": "CTR",
