@@ -5896,7 +5896,7 @@
     },
     {
       "higher_limit": 24500.0,
-      "lower_limit": 6500.0,
+      "lower_limit": 6000.0,
       "polygon": [
         [
           39.44361111066,
