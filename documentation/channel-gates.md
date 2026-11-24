@@ -62,6 +62,7 @@ only. The release never reads that column.
 | `community.full_feed` | Reads the full manifests under `.voiceatc/full/` and filters entries by `requires` and `channels`. | closed beta (0.6.2 line) |
 | `community.tma_file` | Reads schema-1 `tma.json` projected into the full sector-data feed. | closed beta (0.6.4 line) |
 | `community.airspace_files` | Reads schema-2 airspace files (`tma_structure.json`, `tma_coordination.json`, `acc_structure.json`, `acc_coordination.json`). | closed beta (0.6.4 line) |
+| `community.agreement_sector_ends` | Reads a coordination row whose `from`/`to`/`go_around.to` names a sector; older builds get a row ending at the position that works that sector. | not shipped yet |
 | `routes.starless_arrivals` | Flies an arrival filed to an approach transition's first fix (no STAR) and reads `.voiceatc/full/routes_manifest.json`. | closed beta (0.6.2 line) |
 | `routes.route_rules` | Reads the contributor route rules overlay `ROUTES/full/route_rules.tsv` (rows rebuilt from `ROUTES/rules/`). Its gate is `closed-beta` only and comes after the starless gate, so the starless-only variant stays open to every channel. | closed beta (0.6.3 line) |
 
@@ -87,6 +88,22 @@ For each zip dataset the release writes two outputs:
    entries and files exactly as written in the gate. Game builds that read the full feed keep an entry
    or file when they have every capability in `requires` and `channels` is absent or contains
    their channel, and ignore keys they do not know. Old builds never read full-feed paths.
+
+### Features inside a schema-3 file
+
+`sector_data` carries two kinds of new content: a new file kind (gated as above) and a new
+*value* inside an existing file, such as a coordination row whose end names a sector instead
+of a unit or a position. `tools/schema3_features.py` lists those features in order, each with
+the rows that use it and how to drop it.
+
+A bundle that uses none keeps its single schema-3 entry, byte for byte. A bundle that uses any
+ships two entries with the same id: the first holds the downgraded rows at today's path with
+today's `requires`, so an older build takes it and reads what its own checker accepts; the last
+holds the authored bytes at the other archive path the game accepts (`<bundle>/<file>` or
+`airac_variants/<bundle>/<file>`) with the used capabilities added to `requires`. Every other
+file is shared between the two, and the projected schema-1 `tma.json` of a generated bundle
+carries the downgraded rows too. A coordination document that also holds AIRAC variants is
+refused: its two paths cannot hold the resolved, the downgraded and the authored rows at once.
 
 ### Route overlays
 
