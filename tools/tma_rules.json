@@ -26,7 +26,7 @@
     }
   },
   "zone_kinds": ["CTR", "ATZ"],
-  "code_pattern": "^[A-Z0-9]{4}(_(?!ALL_)[A-Z0-9]+)?_(TWR|APP|CTR|AFIS)$",
+  "code_pattern": "^([A-Z0-9]{4}(_(?!ALL_)[A-Z0-9]+)?_(TWR|APP|CTR|AFIS)|[A-Z0-9]{4}[A-Z0-9]{2,6})$",
   "messages": {
     "TMA_JSON_INVALID": "{where}: the file is not a JSON object.",
     "TMA_SCHEMA_MISSING": "{where}: schema is missing. Write \"schema\": {schema}.",
@@ -63,7 +63,7 @@
     "TMA_AGREEMENT_LEVEL_SHARED": "{where}: agreements \"{value}\" and \"{expected}\" meet at {fix} at the same level; give each flow its own level.",
     "TMA_ZONE_KIND": "{where}: kind \"{value}\" must be one of: {allowed}.",
     "TMA_ZONE_UNKNOWN": "{where}: \"{value}\" is not a sector in zones.",
-    "TMA_UNIT_CODE": "{where}: code \"{value}\" must be ICAO_part_TYPE: an ICAO code, at most one part (capital letters or numbers, never ALL, none for a unit that works the whole airport), then _TWR, _APP, _CTR or _AFIS, such as LEMD_ALN_APP or LEMD_TWR.",
+    "TMA_UNIT_CODE": "{where}: code \"{value}\" must be ICAO_part_TYPE (an ICAO code, at most one part -- capital letters or numbers, never ALL, none for a unit that works the whole airport -- then _TWR, _APP, _CTR or _AFIS, such as LEMD_ALN_APP or LEMD_TWR) or the typed form: an ICAO or FIR code, then two to six capitals or digits and no underscore, such as LECPIXX or LECBBKW.",
     "TMA_RUNWAY_PRESET_UNKNOWN": "{where}: runway preset \"{value}\" is not in {expected}/runway_configs.json."
   }
 }

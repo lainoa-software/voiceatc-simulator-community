@@ -1,6 +1,7 @@
 """The reference checker agrees with the shared corpus and checks the real bundles (schema 3)."""
 import importlib.util
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -22,6 +23,39 @@ BARCELONA = REPO_ROOT / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA"
 MADRID = REPO_ROOT / "L" / "LE" / "LECM" / "LECM_R2" / "MADRID_TMA"
 
 
+def typed_names(payload: object) -> set[str]:
+    """Every name a document declares: unit ids, position call signs, layout position keys and
+    agreement ends, in every AIRAC tier it carries, so an override document counts as its file."""
+    names: set[str] = set()
+    if not isinstance(payload, dict):
+        return names
+    for _tier, document in MODULE.airac_overrides.documents(payload):
+        for unit in document.get("units") or []:
+            if isinstance(unit, dict) and str(unit.get("id", "")).strip():
+                names.add(str(unit["id"]).strip())
+        for position in document.get("positions") or []:
+            if isinstance(position, dict) and str(position.get("call_sign", "")).strip():
+                names.add(str(position["call_sign"]).strip())
+        for configuration in (document.get("configurations") or {}).values():
+            if not isinstance(configuration, dict):
+                continue
+            for body in configuration.values():
+                if isinstance(body, dict) and isinstance(body.get("positions"), dict):
+                    for key in body["positions"]:
+                        names.add(str(key))
+        for row in document.get("agreements") or []:
+            if not isinstance(row, dict):
+                continue
+            ends = [row.get("from"), row.get("to")]
+            go_around = row.get("go_around")
+            if isinstance(go_around, dict):
+                ends.append(go_around.get("to"))
+            for end in ends:
+                if isinstance(end, str) and end.strip():
+                    names.add(end.strip())
+    return names
+
+
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
         self.assertEqual(63, len(CORPUS["cases"]))
@@ -38,6 +72,59 @@ class TmaCheckerTests(unittest.TestCase):
                     case.get("sector_catalog", {}),
                 )
                 self.assertEqual([[problem.code, problem.where] for problem in problems], case["expect"])
+
+    def test_typed_code_form_is_accepted(self) -> None:
+        """The creator's code form (four-character prefix, then two to six capitals or digits,
+        no underscore) passes; the older ICAO_part_TYPE form still does, and a code that is
+        neither is still refused."""
+        defs = {
+            "schema": 3,
+            "units": [{"id": "LEPAAPP", "call_sign": "Palma Control",
+                       "services": ["approach_radar"]}],
+            "positions": [{"call_sign": "LECPIXX", "unit": "LEPAAPP", "frequency": "134.825"}],
+        }
+        layout = {"schema": 3, "configurations": {"LEPAAPP": {"3D": {
+            "positions": {"LECPIXX": ["LECPIXX"]}, "airports": ["LEIB"]}}}}
+        problems = MODULE.check(defs, layout, "PALMA_TMA", {"LECPIXX"})
+        self.assertEqual([], [[problem.code, problem.where] for problem in problems])
+        for bad in ("LECP", "LECP_IXX", "LECPIXXAPPX"):
+            broken = {**defs, "positions": [{"call_sign": bad, "unit": "LEPAAPP",
+                                             "frequency": "134.825"}]}
+            with self.subTest(code=bad):
+                self.assertIn(
+                    "TMA_UNIT_CODE",
+                    [problem.code for problem in
+                     MODULE.check(broken, layout, "PALMA_TMA", {"LECPIXX"})])
+
+    def test_no_spanish_code_uses_the_typed_form_the_released_games_refuse(self) -> None:
+        """A released game accepts the ICAO_part_TYPE code form only.
+
+        The typed form (four characters, then two to six capitals or digits, no underscore)
+        is what the Spanish rename moves every Spanish unit id, position call sign, layout key
+        and agreement end to. Until that rename ships, a released game refuses a typed code,
+        so no L/** tma_/acc_ file outside L/LF may use one: every such name must still match
+        the released form (`TMA_UNIT_CODE` in the release let it through otherwise). The
+        Spanish rename removes this test.
+        """
+        released = re.compile(
+            r"^[A-Z0-9]{4}(_(?!ALL_)[A-Z0-9]+)?_(TWR|APP|CTR|AFIS)$")
+        names: set[str] = set()
+        for path in sorted((REPO_ROOT / "L").rglob("*.json")):
+            relative = path.relative_to(REPO_ROOT).as_posix()
+            if relative.startswith("L/LF/"):
+                continue
+            if path.name not in {
+                "tma_definitions.json", "tma_layout.json",
+                "acc_definitions.json", "acc_layout.json",
+                "tma_coordination.json", "acc_coordination.json",
+            }:
+                continue
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            for name in typed_names(payload):
+                names.add(f"{relative}: {name}")
+        refused = sorted(
+            entry for entry in names if not released.match(entry.split(": ", 1)[1]))
+        self.assertEqual([], refused)
 
     def test_message_case_sentence_is_exact(self) -> None:
         message_case = CORPUS["message_case"]
@@ -138,6 +225,291 @@ class TmaCheckerTests(unittest.TestCase):
                 if fpath.exists():
                     fpath.unlink()
             self.assertEqual([], MODULE.check_bundle(bundle))
+
+    def test_row_naming_a_centre_in_another_fir_folder_passes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = self._seed_bundle(
+                root / "L" / "LE" / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "barcelona_tma_definitions.json",
+                "barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
+            coord_path = bundle / "tma_coordination.json"
+            coord_path.write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "agreements": [
+                            {
+                                "name": "LEBL_ARR_ALBER_LFMM",
+                                "from": "LFMM_CTR",
+                                "to": "BCN_APP",
+                                "arrives": ["LEBL"],
+                                "fix": ["ALBER"],
+                                "level": "F210",
+                            }
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            neighbour = root / "L" / "LF" / "LFMM"
+            neighbour.mkdir(parents=True)
+            shutil.copyfile(
+                REPO_ROOT / "L" / "LF" / "LFMM" / "acc_definitions.json",
+                neighbour / "acc_definitions.json",
+            )
+            self.assertEqual([], MODULE.check_bundle(bundle))
+
+            shutil.rmtree(neighbour)
+            sentences = MODULE.check_bundle(bundle)
+            self.assertEqual(
+                [
+                    'BARCELONA_TMA/tma_coordination.json agreements[0] "LEBL_ARR_ALBER_LFMM".from: '
+                    'unit "LFMM_CTR" is not in units.'
+                ],
+                sentences,
+            )
+
+    def test_row_naming_a_centre_with_no_fir_folder_is_refused(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = self._seed_bundle(
+                root / "L" / "LE" / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "barcelona_tma_definitions.json",
+                "barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
+            (bundle / "tma_coordination.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "agreements": [
+                            {
+                                "name": "LEBL_DEP_GEANT_LFXX",
+                                "from": "BCN_APP",
+                                "to": "LFXX_CTR",
+                                "departs": ["LEBL"],
+                                "fix": ["GEANT"],
+                                "level": "F200",
+                            }
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                [
+                    'BARCELONA_TMA/tma_coordination.json agreements[0] "LEBL_DEP_GEANT_LFXX".to: '
+                    'unit "LFXX_CTR" is not in units.'
+                ],
+                MODULE.check_bundle(bundle),
+            )
+
+    def test_row_naming_a_tower_of_another_fir_folder_is_refused(self) -> None:
+        """A neighbour folder gives the bundle its centre and that centre's children, nothing else.
+
+        LFFF_TWR is declared in the LFFF folder, but only as a tower, so no row may hand a flight
+        to it: the game imports the centre only, and the checker must agree.
+        """
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = self._seed_bundle(
+                root / "L" / "LE" / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "barcelona_tma_definitions.json",
+                "barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
+            neighbour = root / "L" / "LF" / "LFFF"
+            neighbour.mkdir(parents=True)
+            (neighbour / "acc_definitions.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "units": [
+                            {"id": "LFFF_CTR", "call_sign": "Paris Control",
+                             "services": ["center"]},
+                            {"id": "LFFF_TWR", "call_sign": "Paris Tower",
+                             "services": ["tower"]},
+                        ],
+                        "positions": [
+                            {"call_sign": "LFFFTWR", "unit": "LFFF_TWR", "frequency": "119.250"},
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            for end, expected in (
+                ("LFFF_CTR", []),
+                (
+                    "LFFF_TWR",
+                    [
+                        'BARCELONA_TMA/tma_coordination.json agreements[0] '
+                        '"LEBL_ARR_ALBER_LFFF".from: unit "LFFF_TWR" is not in units.'
+                    ],
+                ),
+            ):
+                with self.subTest(end=end):
+                    (bundle / "tma_coordination.json").write_text(
+                        json.dumps(
+                            {
+                                "schema": 3,
+                                "agreements": [
+                                    {
+                                        "name": "LEBL_ARR_ALBER_LFFF",
+                                        "from": end,
+                                        "to": "BCN_APP",
+                                        "arrives": ["LEBL"],
+                                        "fix": ["ALBER"],
+                                        "level": "F210",
+                                    }
+                                ],
+                            },
+                            indent=2,
+                        )
+                        + "\n",
+                        encoding="utf-8",
+                    )
+                    self.assertEqual(expected, MODULE.check_bundle(bundle))
+
+    def test_an_end_that_is_not_a_four_character_code_declares_nothing(self) -> None:
+        """An end such as `A/BX` names no FIR, so a folder that would answer for it must not.
+
+        `A/BX` is four characters, so a length-only guard asks the tree for
+        `<root>/A/A/BX/acc_definitions.json` (it joins as `code[0]`, `code[:2]`, `code`). That
+        file is planted here, declaring a centre unit whose id is the end itself: the end still
+        has to be unknown, and the lookup asked directly returns nothing.
+        """
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            bundle = self._seed_bundle(
+                root / "L" / "LE" / "LECB",
+                "BARCELONA_TMA",
+                BARCELONA,
+                "barcelona_tma_definitions.json",
+                "barcelona_tma_layout.json",
+                "barcelona_acc_definitions.json",
+                "barcelona_acc_layout.json",
+            )
+            planted = root / "A" / "A" / "BX"
+            planted.mkdir(parents=True)
+            (planted / "acc_definitions.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "units": [
+                            {
+                                "id": "A/BX",
+                                "call_sign": "Planted Control",
+                                "services": ["center"],
+                            }
+                        ],
+                        "positions": [],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (bundle / "tma_coordination.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "agreements": [
+                            {
+                                "name": "LEBL_DEP_GEANT_OUTSIDE",
+                                "from": "BCN_APP",
+                                "to": "A/BX",
+                                "departs": ["LEBL"],
+                                "fix": ["GEANT"],
+                                "level": "F200",
+                            }
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(
+                [
+                    'BARCELONA_TMA/tma_coordination.json agreements[0] '
+                    '"LEBL_DEP_GEANT_OUTSIDE".to: unit "A/BX" is not in units.'
+                ],
+                MODULE.check_bundle(bundle),
+            )
+            self.assertEqual(([], []), MODULE._fir_acc(bundle, "A/BX"))
+            self.assertEqual(([], []), MODULE._fir_acc(bundle, "C:\\L"))
+
+    def test_a_row_end_is_not_read_from_a_tree_above_the_content_root(self) -> None:
+        """A French folder beside the content root, not inside it, gives a row nothing."""
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            bundle = root / "content" / "L" / "LE" / "LECB" / "LECB_W" / "BARCELONA_TMA"
+            bundle.mkdir(parents=True)
+            own = root / "content" / "L" / "LE" / "LECB" / "acc_definitions.json"
+            own.write_text(
+                json.dumps({"schema": 3, "units": [], "positions": []}) + "\n", encoding="utf-8"
+            )
+            center = {
+                "schema": 3,
+                "units": [
+                    {"id": "LFMM_CTR", "call_sign": "Marseille Control", "services": ["center"]}
+                ],
+                "positions": [
+                    {"call_sign": "LFMMCTR", "unit": "LFMM_CTR", "frequency": "123.900"}
+                ],
+            }
+            for tree, inside in ((root, False), (root / "content", True)):
+                folder = tree / "L" / "LF" / "LFMM"
+                folder.mkdir(parents=True)
+                (folder / "acc_definitions.json").write_text(
+                    json.dumps(center) + "\n", encoding="utf-8"
+                )
+                units, _positions = MODULE._fir_acc(bundle, "LFMM")
+                self.assertEqual(
+                    ["LFMM_CTR"] if inside else [], [unit["id"] for unit in units]
+                )
+
+    def test_a_typed_name_inside_an_override_document_is_in_reach(self) -> None:
+        """A name in an airac_overrides document counts as a name of the file that carries it."""
+        payload = {
+            "schema": 3,
+            "airports": ["LEBL"],
+            "airac_overrides": {
+                "latest": {
+                    "schema": 3,
+                    "airports": ["LEBL"],
+                    "units": [{"id": "LEBLAPPX", "call_sign": "Lleida Approach",
+                               "services": ["approach_radar"]}],
+                    "positions": [{"call_sign": "LECPIXX", "unit": "LEBLAPPX",
+                                   "frequency": "134.825"}],
+                    "configurations": {"LEBLAPPX": {"3D": {"positions": {"LEBLAGGX": ["LEBLAGGX"]}}}},
+                    "agreements": [{"name": "LEBL_ARR", "from": "LEBLAPPX", "to": "LEBLTWXX",
+                                    "go_around": {"to": "LEBLGGXX"}}],
+                }
+            },
+        }
+        self.assertEqual(
+            {"LEBLAPPX", "LECPIXX", "LEBLAGGX", "LEBLTWXX", "LEBLGGXX"},
+            typed_names(payload),
+        )
 
     def test_broken_tma_definitions_reports_every_sentence(self) -> None:
         with tempfile.TemporaryDirectory() as tmp_dir:
