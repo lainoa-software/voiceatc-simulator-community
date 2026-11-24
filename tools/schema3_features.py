@@ -15,7 +15,6 @@ from __future__ import annotations
 
 from copy import deepcopy
 from dataclasses import dataclass, field
-import json
 from typing import Callable, Mapping, Sequence
 
 AGREEMENT_END_KEYS = ("from", "to")
@@ -31,6 +30,8 @@ class AirspaceContext:
     ``bundle`` is the bundle path, used only to name it in an error. ``known_units`` and
     ``known_positions`` are what a released checker accepts for this bundle; everything
     else it finds in the files is kept so a later feature can resolve through it.
+    ``unit_parents`` is unit -> the unit its ``part_of`` names, uppercased as the released
+    checker's own parent map is, for the airspace a row's ends share.
     """
 
     bundle: str = ""
@@ -41,6 +42,7 @@ class AirspaceContext:
     top_center: str = ""
     all_units: frozenset[str] = frozenset()
     all_positions: frozenset[str] = frozenset()
+    unit_parents: Mapping[str, str] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -76,6 +78,27 @@ def _call_signs(payload: object) -> set[str]:
         for position in positions
         if isinstance(position, dict) and _text(position.get("call_sign"))
     }
+
+
+def _unit_parents(*payloads: object) -> dict[str, str]:
+    """``unit id -> part_of`` from every document that has units, the first definition winning.
+
+    Both sides are uppercased, as the released checker's ``_unit_parents_from`` does, so its
+    ancestor walk and this one answer the same way.
+    """
+    parents: dict[str, str] = {}
+    for payload in payloads:
+        units = _document(payload).get("units")
+        if not isinstance(units, list):
+            continue
+        for unit in units:
+            if not isinstance(unit, dict):
+                continue
+            unit_id = _text(unit.get("id")).upper()
+            parent = _text(unit.get("part_of")).upper()
+            if unit_id and parent and unit_id not in parents:
+                parents[unit_id] = parent
+    return parents
 
 
 def _sector_catalog(*payloads: object) -> dict[str, dict]:
@@ -236,6 +259,11 @@ def airspace_context(
         top_center=_top_center(acc.get("acc_definitions") or own.get("acc_definitions")),
         all_units=frozenset(known_units | set(configurations)),
         all_positions=frozenset(all_positions),
+        unit_parents=_unit_parents(
+            own.get("tma_definitions"),
+            own.get("acc_definitions"),
+            acc.get("acc_definitions"),
+        ),
     )
 
 
@@ -337,27 +365,189 @@ def used_capabilities(
     return tuple(feature.capability for feature in FEATURES if feature.used_by(rows, context))
 
 
+def _upper(value: object) -> str:
+    return _text(value).upper()
+
+
+def _agreement_codes(value: object) -> tuple[str, ...]:
+    """``departs``/``arrives`` as ``_agreement_codes`` reads them: empty when the row has none."""
+    tokens: list[str] = []
+    for item in value if isinstance(value, list) else []:
+        token = _upper(item)
+        if token and token not in tokens:
+            tokens.append(token)
+    return tuple(tokens)
+
+
+def _agreement_fixes(row: Mapping[str, object]) -> tuple[str, ...]:
+    """``fix`` as ``_check_agreement_fixes`` reads it: one empty token when it cannot answer."""
+    raw = row.get("fix")
+    if not isinstance(raw, list) or not raw:
+        return ("",)
+    tokens: list[str] = []
+    for item in raw:
+        token = _upper(item)
+        if token and token not in tokens:
+            tokens.append(token)
+    return tuple(tokens) or ("",)
+
+
+def _runway_keys(row: Mapping[str, object]) -> tuple[str, ...]:
+    """``runways`` as ``_runway_keys`` reads them: normalized idents, or ``*`` for none."""
+    keys: list[str] = []
+    raw = row.get("runways")
+    if isinstance(raw, list):
+        for item in raw:
+            ident = _upper(item)
+            if ident.startswith("RWY"):
+                ident = ident[3:]
+            elif ident.startswith("RW"):
+                ident = ident[2:]
+            ident = ident.strip()
+            if ident and ident not in keys:
+                keys.append(ident)
+    return tuple(keys) or ("*",)
+
+
+def _tokens_overlap(left: Sequence[str], right: Sequence[str], star_wildcard: bool) -> bool:
+    if star_wildcard and ("*" in left or "*" in right):
+        return True
+    return any(token in right for token in left)
+
+
+def _is_ancestor_or_same(ancestor: str, node: str, parents: Mapping[str, str]) -> bool:
+    anc, current = ancestor, node
+    if not anc or not current:
+        return False
+    if anc == current:
+        return True
+    seen: set[str] = set()
+    while current in parents and current not in seen:
+        seen.add(current)
+        current = parents[current]
+        if current == anc:
+            return True
+    return False
+
+
+def _common_descendant(first: str, second: str, parents: Mapping[str, str]) -> str:
+    """The deeper of two names in one ``part_of`` chain, "" when neither contains the other."""
+    if _is_ancestor_or_same(first, second, parents):
+        return second
+    if _is_ancestor_or_same(second, first, parents):
+        return first
+    return ""
+
+
+@dataclass(frozen=True)
+class _AgreementShape:
+    """One agreement row as the released checker holds it while it compares pairs."""
+
+    from_end: str
+    to_end: str
+    flow_kind: str
+    base_rank: int
+    has_fix: bool
+    fixes: tuple[str, ...]
+    origs: tuple[str, ...]
+    dests: tuple[str, ...]
+    runway_keys: tuple[str, ...]
+
+    def rank(self, w_from: str, w_to: str) -> int:
+        exact_ends = int(_upper(self.from_end) == w_from) + int(_upper(self.to_end) == w_to)
+        return exact_ends * 64 + self.base_rank
+
+
+def _agreement_shape(row: Mapping[str, object], context: AirspaceContext) -> _AgreementShape:
+    """One row in the terms the released ``_check_agreements`` compares two rows by."""
+    ends = (_text(row.get("from")), _text(row.get("to")))
+    departs = _agreement_codes(row.get("departs"))
+    arrives = _agreement_codes(row.get("arrives"))
+    runways = row.get("runways")
+    if departs and arrives:
+        flow_kind, traffic = "BOTH", 2
+    elif departs:
+        flow_kind, traffic = "DEP", 1
+    elif arrives:
+        flow_kind, traffic = "ARR", 1
+    else:
+        flow_kind, traffic = "PARITY", 0
+    pos_ends = sum(
+        1 for end in ends if end in context.known_positions and end not in context.known_units
+    )
+    base_rank = (
+        pos_ends * 16
+        + (8 if isinstance(runways, list) and runways else 0)
+        + (4 if "fix" in row else 0)
+        + traffic
+    )
+    return _AgreementShape(
+        from_end=ends[0],
+        to_end=ends[1],
+        flow_kind=flow_kind,
+        base_rank=base_rank,
+        has_fix="fix" in row,
+        fixes=_agreement_fixes(row),
+        origs=departs or ("*",),
+        dests=arrives or ("*",),
+        runway_keys=_runway_keys(row),
+    )
+
+
+def rows_tie(
+    later: Mapping[str, object], earlier: Mapping[str, object], context: AirspaceContext
+) -> bool:
+    """True when the released ``_check_agreements`` calls these two rows a tie.
+
+    ``later`` is the row further down the document: the released function asks whether each
+    row ties with one *above* it, so the fix check only runs when ``later`` has a ``fix``.
+    """
+    if not isinstance(later, Mapping) or not isinstance(earlier, Mapping):
+        return False
+    rec = _agreement_shape(later, context)
+    prev = _agreement_shape(earlier, context)
+    if rec.flow_kind != prev.flow_kind:
+        return False
+    w_from = _common_descendant(_upper(rec.from_end), _upper(prev.from_end), context.unit_parents)
+    w_to = _common_descendant(_upper(rec.to_end), _upper(prev.to_end), context.unit_parents)
+    if not w_from or not w_to:
+        return False
+    if rec.rank(w_from, w_to) != prev.rank(w_from, w_to):
+        return False
+    if not _tokens_overlap(rec.origs, prev.origs, True):
+        return False
+    if not _tokens_overlap(rec.dests, prev.dests, True):
+        return False
+    if rec.has_fix and not _tokens_overlap(rec.fixes, prev.fixes, False):
+        return False
+    return _tokens_overlap(rec.runway_keys, prev.runway_keys, True)
+
+
 def downgrade_rows(
     rows: Sequence[dict[str, object]],
     context: AirspaceContext,
 ) -> list[dict[str, object]]:
-    """Every feature's downgrade in order, duplicates collapsed, unknown ends refused."""
-    result: list[dict[str, object]] = [deepcopy(row) for row in rows]
-    for feature in FEATURES:
-        result = feature.downgrade(result, context)
+    """Every feature's downgrade in order, rows the released checker would tie left out.
 
-    kept: list[dict[str, object]] = []
-    seen: set[str] = set()
-    for row in result:
-        if not isinstance(row, dict):
-            kept.append(row)
-            continue
-        # Identical in every key, or identical except its name: the first one names it.
-        key = json.dumps({k: v for k, v in row.items() if k != "name"}, sort_keys=True, ensure_ascii=False)
-        if key in seen:
-            continue
-        seen.add(key)
-        kept.append(row)
+    A row the downgrade leaves as the author wrote it always stays. A changed row that ties
+    with one of those, or with an earlier kept changed row, is left out, since the released
+    checker refuses the whole bundle for it. Unknown ends are still refused.
+    """
+    result: list[tuple[dict[str, object], bool]] = []
+    for row in rows:
+        forms = [deepcopy(row)]
+        for feature in FEATURES:
+            forms = feature.downgrade(forms, context)
+        result.extend((form, form != row) for form in forms)
+
+    placed = {index: row for index, (row, changed) in enumerate(result) if not changed}
+    for index, (row, changed) in enumerate(result):
+        if changed and not any(
+            rows_tie(row, other, context) if index > place else rows_tie(other, row, context)
+            for place, other in placed.items()
+        ):
+            placed[index] = row
+    kept = [placed[index] for index in sorted(placed)]
 
     for row in kept:
         for end in agreement_ends(row):

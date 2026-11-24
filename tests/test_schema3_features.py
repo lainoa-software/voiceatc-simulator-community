@@ -502,6 +502,137 @@ class DowngradeTests(unittest.TestCase):
         self.assertEqual("LECCEAST", document["airac_overrides"]["bundled"]["agreements"][0]["from"])
 
 
+def _barcelona_row(name: str, start: str, level: str = "F110", **extra: object) -> dict:
+    """One row in the codes the real LECB ACC and Palma TMA use."""
+    row: dict[str, object] = {
+        "name": name,
+        "from": start,
+        "to": "LEPA_APP",
+        "arrives": ["LEPA"],
+        "level": level,
+    }
+    row.update(extra)
+    return row
+
+
+def barcelona_context() -> schema3_features.AirspaceContext:
+    """The real LECB ACC names and a TMA under it: LECBBKE is worked by LECB_BKE_CTR."""
+    documents = {
+        "tma_definitions": {
+            "schema": 3,
+            "units": [{"id": "LEPA_APP", "call_sign": "Palma approach", "services": ["approach_radar"]}],
+            "positions": [
+                {"call_sign": "LEPA_LECPAPR_APP", "unit": "LEPA_APP", "frequency": "119.155"}
+            ],
+        },
+        "definitions": {"schema": 3, "sectors": _sectors("LECBBKE", "LECBBKW")},
+    }
+    acc_documents = {
+        "acc_definitions": {
+            "schema": 3,
+            "units": [
+                {"id": "LECB_CTR", "call_sign": "Barcelona Control", "services": ["center"]},
+                {"id": "LECB_W_CTR", "part_of": "LECB_CTR"},
+            ],
+            "positions": [
+                {"call_sign": "LECB_BKE_CTR", "unit": "LECB_CTR", "frequency": "135.355"},
+                {"call_sign": "LECB_BKW_CTR", "unit": "LECB_CTR", "frequency": "134.680"},
+            ],
+        },
+        "acc_layout": {
+            "schema": 3,
+            "configurations": {
+                "LECB_CTR": {
+                    "1": {
+                        "positions": {
+                            "LECB_BKE_CTR": ["LECBBKE"],
+                            "LECB_BKW_CTR": ["LECBBKW"],
+                        }
+                    }
+                }
+            },
+        },
+        "definitions": {"schema": 3, "sectors": _sectors("LECBBKE", "LECBBKW")},
+    }
+    return context_for(documents, acc_documents)
+
+
+class AgreementTieTests(unittest.TestCase):
+    """The downgraded rows a released checker (0.6.4.2 `TmaChecker._check_agreements`) ties."""
+
+    def setUp(self) -> None:
+        self.context = barcelona_context()
+
+    def test_a_changed_row_tying_with_an_unchanged_one_is_left_out_in_either_order(self) -> None:
+        seat = _barcelona_row("SEAT", "LECB_BKE_CTR", "F120")  # the end a seat already names
+        sector = _barcelona_row("SECTOR", "LECBBKE", "F110")  # the sector that becomes it
+        for rows in ([sector, seat], [seat, sector]):
+            names = [row["name"] for row in rows]
+            downgraded = schema3_features.downgrade_rows(rows, self.context)
+            self.assertEqual(["SEAT"], [row["name"] for row in downgraded], names)
+            self.assertEqual("F120", downgraded[0]["level"], names)
+
+    def test_of_two_changed_rows_that_tie_the_first_stays(self) -> None:
+        rows = [
+            _barcelona_row("FIRST", "LECBBKE", "F110"),
+            _barcelona_row("SECOND", "LECBBKE", "F150"),
+        ]
+        downgraded = schema3_features.downgrade_rows(rows, self.context)
+        self.assertEqual(["FIRST"], [row["name"] for row in downgraded])
+        self.assertEqual("F110", downgraded[0]["level"])
+
+    def test_changed_rows_with_overlapping_fixes_tie_though_not_equal(self) -> None:
+        rows = [
+            _barcelona_row("FIRST", "LECBBKE", "F110", fix=["ALBER", "CASPE"]),
+            _barcelona_row("SECOND", "LECBBKE", "F150", fix=["CASPE", "DRAGO"]),
+        ]
+        downgraded = schema3_features.downgrade_rows(rows, self.context)
+        self.assertEqual(["FIRST"], [row["name"] for row in downgraded])
+
+    def test_changed_rows_that_do_not_tie_all_stay(self) -> None:
+        rows = [
+            _barcelona_row("FIX_A", "LECBBKE", "F110", fix=["ALBER"], runways=["RWY07"]),
+            _barcelona_row("FIX_B", "LECBBKE", "F120", fix=["BISBA"], runways=["RWY07"]),
+            _barcelona_row("RWY", "LECBBKE", "F130", runways=["RWY25"]),
+            _barcelona_row("DEP", "LECBBKW", "F140", departs=["LEPA"], arrives=[]),
+            _barcelona_row("ARR", "LECBBKW", "F150", departs=[], arrives=["LEPA"]),
+        ]
+        downgraded = schema3_features.downgrade_rows(rows, self.context)
+        self.assertEqual(
+            ["FIX_A", "FIX_B", "RWY", "DEP", "ARR"], [row["name"] for row in downgraded]
+        )
+        # A row that does tie with one of them (same fix and runway as FIX_A) still goes.
+        rows.extend(
+            [
+                _barcelona_row("TIE_A", "LECBBKE", "F160"),
+                _barcelona_row("TIE_B", "LECBBKE", "F170", fix=["ALBER"], runways=["RWY07"]),
+            ]
+        )
+        downgraded = schema3_features.downgrade_rows(rows, self.context)
+        self.assertEqual(
+            ["FIX_A", "FIX_B", "RWY", "DEP", "ARR", "TIE_A"],
+            [row["name"] for row in downgraded],
+        )
+
+    def test_two_rows_through_a_units_part_of_chain_tie(self) -> None:
+        # LECB_W_CTR is part_of LECB_CTR, so each row's end is the other's descendant and the
+        # exact-end points cancel: the released checker reads them as a tie.
+        out = _barcelona_row("OUT", "LECB_W_CTR", "F200", to="LECB_CTR", arrives=["LEBL"])
+        back = _barcelona_row("BACK", "LECB_CTR", "F200", to="LECB_W_CTR", arrives=["LEBL"])
+        self.assertTrue(schema3_features.rows_tie(out, back, self.context))
+        self.assertTrue(schema3_features.rows_tie(back, out, self.context))
+        unrelated = _barcelona_row("X", "LECB_BKE_CTR", "F200", to="LECB_W_CTR", arrives=["LEBL"])
+        self.assertFalse(schema3_features.rows_tie(unrelated, back, self.context))
+
+    def test_two_unchanged_identical_rows_stay(self) -> None:
+        rows = [
+            _barcelona_row("TWIN", "LECB_BKE_CTR", "F110"),
+            _barcelona_row("TWIN", "LECB_BKE_CTR", "F110"),
+        ]
+        downgraded = schema3_features.downgrade_rows(rows, self.context)
+        self.assertEqual(2, len(downgraded))
+
+
 class WriterTests(unittest.TestCase):
     def _two_entries(self, entries: list[dict], bundle: str) -> tuple[dict, dict]:
         found = schema3_entries(entries, bundle)

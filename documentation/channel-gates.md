@@ -100,10 +100,14 @@ A bundle that uses none keeps its single schema-3 entry, byte for byte. A bundle
 ships two entries with the same id: the first holds the downgraded rows at
 `airac_variants/<bundle>/<file>` with today's `requires`, so a build without the capability
 takes it and reads what its own checker accepts; the last holds the authored bytes at
-`feature_variants/<bundle>/<file>` with the used capabilities added to `requires`. The game
-installs a `feature_variants/` entry at the same place as its `airac_variants/` twin, the
-folder the bundle's own readers open, so a capable build finds the authored rows where it reads
-coordination without taking the path an older build reads. Every other file is shared between
+`feature_variants/<bundle>/<file>` with the used capabilities added to `requires`. A changed
+row whose downgraded form would tie with another row as the released checker compares them
+(same flow, ends in one `part_of` chain, rank, origins, destinations, fixes and runways) is
+left out of the downgraded rows, since that checker refuses a bundle holding such a pair; a row
+the downgrade changes nothing in always stays. The game installs a `feature_variants/` entry at
+the same place as its `airac_variants/` twin, the folder the bundle's own readers open, so a
+capable build finds the authored rows where it reads coordination without taking the path an
+older build reads. Every other file is shared between
 the two, and the projected schema-1 `tma.json` of a generated bundle carries the downgraded rows
 too.
 
