@@ -1,4 +1,5 @@
 {
+  "schema": 3,
   "airport": "CYLW",
   "runway_configs": [
     {
