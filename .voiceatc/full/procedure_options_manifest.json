@@ -306,7 +306,7 @@
       "size_bytes": 129
     }
   },
-  "published_at": "2026-11-23T12:03:56Z",
+  "published_at": "2026-11-24T10:54:01Z",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "requires": [
     "community.airac_overrides",

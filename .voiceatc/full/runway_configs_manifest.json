@@ -1,8 +1,8 @@
 {
   "asset_name": "runway-configs-2611-full.zip",
-  "commit_sha": "c31ac0bb4c405b91fd86cc7a5042ab83be2fb2e0",
+  "commit_sha": "43e9be0b9a2f84d947ea1aa79282ef662e72bcf7",
   "dataset": "runway_configs",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-d/runway-configs-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-24/runway-configs-2611-full.zip",
   "entries": [
     {
       "id": "CYEG",
@@ -11,16 +11,37 @@
       "size_bytes": 706
     },
     {
+      "id": "CYEG",
+      "repo_path": "airac_variants/C/CZ/CZEG/EDMONTON_TMA/CYEG/runway_configs.json",
+      "requires": ["community.airspace_files"],
+      "sha256": "f9680b3ae1f17e38fb2d060d8ba3eeaed3ee46c2daf6e01f79cceab47bc6a249",
+      "size_bytes": 721
+    },
+    {
       "id": "CYLW",
       "repo_path": "C/CZ/CZVR/VANCOUVER_CTR/CYLW/runway_configs.json",
       "sha256": "8ca2f4bac4c1d84c151505e48d0389c1f8288150713de9d7e0fe58c30cb1ba2e",
       "size_bytes": 274
     },
     {
+      "id": "CYLW",
+      "repo_path": "airac_variants/C/CZ/CZVR/VANCOUVER_CTR/CYLW/runway_configs.json",
+      "requires": ["community.airspace_files"],
+      "sha256": "213d153b49deb4b906da95e502f1d4ad59310b563dcf5d7cb0faee792ce4577b",
+      "size_bytes": 289
+    },
+    {
       "id": "CYMM",
       "repo_path": "C/CZ/CZEG/EDMONTON_CTR/CYMM/runway_configs.json",
       "sha256": "4167695bcfb16179767b39b0104130bdb0be916d8fc1e05bb88b5d5809cdd729",
       "size_bytes": 254
+    },
+    {
+      "id": "CYMM",
+      "repo_path": "airac_variants/C/CZ/CZEG/EDMONTON_CTR/CYMM/runway_configs.json",
+      "requires": ["community.airspace_files"],
+      "sha256": "8e5e51faad731802e647a9178c6480cbd735cbc5eb823ccf6ff282a9fcc6d0e6",
+      "size_bytes": 269
     },
     {
       "id": "CYUL",
@@ -55,10 +76,24 @@
       "size_bytes": 462
     },
     {
+      "id": "CYXE",
+      "repo_path": "airac_variants/C/CZ/CZWG/WINNIPEG_CTR/CYXE/runway_configs.json",
+      "requires": ["community.airspace_files"],
+      "sha256": "8fe23de6146676a8acca31593c4fdb69d53907716cb94b0ebf9917b52cee1e46",
+      "size_bytes": 477
+    },
+    {
       "id": "CYYC",
       "repo_path": "C/CZ/CZEG/CALGARY_TMA/CYYC/runway_configs.json",
       "sha256": "271b3779d6212f27eaa951c3d2a1dafadfa4c7e74083c988be67b18c9df8685c",
       "size_bytes": 913
+    },
+    {
+      "id": "CYYC",
+      "repo_path": "airac_variants/C/CZ/CZEG/CALGARY_TMA/CYYC/runway_configs.json",
+      "requires": ["community.airspace_files"],
+      "sha256": "417f58aee3580597b847fd7cd06346b36b52f7977605d81713c134f9d6faa2e6",
+      "size_bytes": 928
     },
     {
       "id": "CYYZ",
@@ -3390,11 +3425,11 @@
       "size_bytes": 1165
     }
   ],
-  "entry_count": 521,
-  "generated_at": "2026-11-23T12:03:25Z",
-  "published_at": "2026-11-23T12:03:25Z",
-  "release_tag": "daily-2026-11-23-d",
+  "entry_count": 526,
+  "generated_at": "2026-11-24T10:53:35Z",
+  "published_at": "2026-11-24T10:53:35Z",
+  "release_tag": "daily-2026-11-24",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "3e19f503a60ccae46636dfba41c2055ebc065f1563ceeec63cf22140bc4266ef",
-  "size_bytes": 172313
+  "sha256": "49823c06149750c9fef38843fd5cac85ccc00d6fae2c925fd85ba66e08b210d4",
+  "size_bytes": 174310
 }

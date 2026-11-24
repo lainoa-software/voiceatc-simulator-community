@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "c31ac0bb4c405b91fd86cc7a5042ab83be2fb2e0",
+  "commit_sha": "43e9be0b9a2f84d947ea1aa79282ef662e72bcf7",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-d/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-24/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -511,8 +511,8 @@
         "definitions": {
           "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/sector_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "921d38cc1e06901f3ddbce0772fdb435231b994e04888fcfe235a6f6d8323aa5",
-          "size_bytes": 139971
+          "sha256": "af8ab83afce5788b8896ef10b2d2f664af90a7f945933d8c2045795be59a3ac1",
+          "size_bytes": 10338
         },
         "tma_coordination": {
           "repo_path": "airac_variants/E/ED/EDMM/EDDM_TMA/tma_coordination.json",
@@ -3061,8 +3061,8 @@
         "definitions": {
           "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/sector_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "a845be48c5ad41ab760dab4c294e1ac23f621dc19ed4b78adfdc079323afe08c",
-          "size_bytes": 24052
+          "sha256": "271cf64375f0dafd477724760c1cb646748ea8cd17ccf475471003c4499878a0",
+          "size_bytes": 40384
         },
         "tma_coordination": {
           "repo_path": "airac_variants/L/LO/LOVV/VIENNA_TMA/tma_coordination.json",
@@ -6500,10 +6500,10 @@
     }
   ],
   "entry_count": 292,
-  "generated_at": "2026-11-23T12:03:25Z",
-  "published_at": "2026-11-23T12:03:25Z",
-  "release_tag": "daily-2026-11-23-d",
+  "generated_at": "2026-11-24T10:53:35Z",
+  "published_at": "2026-11-24T10:53:35Z",
+  "release_tag": "daily-2026-11-24",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "915b64f90775d4554305df9d15505988096b7a8b6b66b4209a58596249f86589",
-  "size_bytes": 1355887
+  "sha256": "05c0513ecc9a0f4db11c62cd82832f4a43e4d197e9f2a7889813cd8cd4240236",
+  "size_bytes": 1344591
 }

@@ -1,8 +1,8 @@
 {
   "asset_name": "color-profiles-2611-full.zip",
-  "commit_sha": "c31ac0bb4c405b91fd86cc7a5042ab83be2fb2e0",
+  "commit_sha": "43e9be0b9a2f84d947ea1aa79282ef662e72bcf7",
   "dataset": "color_profiles",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-23-d/color-profiles-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-24/color-profiles-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -13,8 +13,8 @@
         },
         "style": {
           "repo_path": "C/CZ/style.json",
-          "sha256": "7aafac3dc81697d6624a3c314e71a105eb690d7222423aa3661ca48a7f6894a0",
-          "size_bytes": 983
+          "sha256": "a426014ced7983d57202f2d6a603034a53a012f5cf64bfbec1019e788b70c28b",
+          "size_bytes": 1057
         }
       },
       "id": "C/CZ"
@@ -73,8 +73,8 @@
         },
         "style": {
           "repo_path": "E/EF/EFIN/style.json",
-          "sha256": "728d4174fe330739eb4b7136fc05735a63ed6c56636c98fee3c14cda1f1ad02a",
-          "size_bytes": 827
+          "sha256": "56c9a1907890580ecedbf7b4ac28b5a2c9a4a7db1bbad6e89e7eee93083ed20e",
+          "size_bytes": 903
         }
       },
       "id": "E/EF/EFIN"
@@ -98,8 +98,8 @@
         },
         "style": {
           "repo_path": "E/EK/style.json",
-          "sha256": "b36967d4dd51a6138c3b4aa13d17c92645c216dd75efcd64864b751e3a41342a",
-          "size_bytes": 843
+          "sha256": "04848d152a644db0096ba4f22a2b0104543be432cb4cd1b95631b5a670ae68d2",
+          "size_bytes": 919
         }
       },
       "id": "E/EK"
@@ -113,8 +113,8 @@
         },
         "style": {
           "repo_path": "E/EN/ENOR/ENOS/style.json",
-          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
-          "size_bytes": 404
+          "sha256": "6df8f4d873890c9d7263d33bdd1da2047d0643b755d5b0707022287eef036b94",
+          "size_bytes": 480
         }
       },
       "id": "E/EN/ENOR/ENOS"
@@ -128,8 +128,8 @@
         },
         "style": {
           "repo_path": "E/ES/style.json",
-          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
-          "size_bytes": 404
+          "sha256": "d6c000cbfb5fb4fff9445d491d52e9a14baf74683bc6ed6a7cc5d779fbc249cf",
+          "size_bytes": 480
         }
       },
       "id": "E/ES"
@@ -143,8 +143,8 @@
         },
         "style": {
           "repo_path": "G/GC/style.json",
-          "sha256": "de198381bd12d66a6b3a02bfc743241d8bb692a7953f1ffb4d9af1c5f019b702",
-          "size_bytes": 917
+          "sha256": "31b924916da15c7e4a1c7c98197db3209e0f6692f53b58c8b5afd368e0863b25",
+          "size_bytes": 993
         }
       },
       "id": "G/GC"
@@ -563,8 +563,8 @@
         },
         "style": {
           "repo_path": "L/LO/style.json",
-          "sha256": "aacc949ef49853e43820211354971caaca8848ff82a0ff88b0ca9877abfe8d1f",
-          "size_bytes": 8186
+          "sha256": "46466a827262947b24167c19b4d0abe1ffded039492579f624227b14c2bd1d28",
+          "size_bytes": 8262
         }
       },
       "id": "L/LO"
@@ -578,8 +578,8 @@
         },
         "style": {
           "repo_path": "L/LP/style.json",
-          "sha256": "95f656b5f717ba0a2d6cc242b12fa202062b0672b86df97aedd65b6d481f2cf5",
-          "size_bytes": 10900
+          "sha256": "0fa7bc2053cbc1953e978dfd5c5033a695056a142233630efe61ea2ab661bd9f",
+          "size_bytes": 10976
         }
       },
       "id": "L/LP"
@@ -593,8 +593,8 @@
         },
         "style": {
           "repo_path": "L/LT/style.json",
-          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
-          "size_bytes": 404
+          "sha256": "d6c000cbfb5fb4fff9445d491d52e9a14baf74683bc6ed6a7cc5d779fbc249cf",
+          "size_bytes": 480
         }
       },
       "id": "L/LT"
@@ -608,8 +608,8 @@
         },
         "style": {
           "repo_path": "O/OE/OEJD/style.json",
-          "sha256": "052d4adf357935d8119d36c8b6eb1b8367a0ba7208dbe6677d747d596a15980f",
-          "size_bytes": 1079
+          "sha256": "cb6ab6128e854a0d51a62a68abe80f65b9d9543e9501b521952ea08a6f32f103",
+          "size_bytes": 1152
         }
       },
       "id": "O/OE/OEJD"
@@ -623,8 +623,8 @@
         },
         "style": {
           "repo_path": "O/OM/OMAE/ABU_DHABI_TMA/style.json",
-          "sha256": "f7353c9d2533837d4ab576986d135ab466e00ceafd2dc8ce2904d605da9a5f8c",
-          "size_bytes": 863
+          "sha256": "31916807d8d490924ce0753f51e072df35814c1f2bb85b9c8edde34892153d97",
+          "size_bytes": 937
         }
       },
       "id": "O/OM/OMAE/ABU_DHABI_TMA"
@@ -638,8 +638,8 @@
         },
         "style": {
           "repo_path": "O/OM/OMAE/DUBAI_TERMINAL/style.json",
-          "sha256": "e7c1ef2c318d69bcaf9d9f97afc523ccfafc387106890d432afe4785a5f0e19b",
-          "size_bytes": 404
+          "sha256": "6df8f4d873890c9d7263d33bdd1da2047d0643b755d5b0707022287eef036b94",
+          "size_bytes": 480
         }
       },
       "id": "O/OM/OMAE/DUBAI_TERMINAL"
@@ -653,8 +653,8 @@
         },
         "style": {
           "repo_path": "O/OT/OTDF/style.json",
-          "sha256": "8f77296e5ba7784ef7a248fd68f68dd0dde118cb3bbf7b167c28256857ce9372",
-          "size_bytes": 829
+          "sha256": "97aa24be777d0f5503296008b70f6f9039fc752fe00d7f1bcacd487944808d21",
+          "size_bytes": 902
         }
       },
       "id": "O/OT/OTDF"
@@ -668,8 +668,8 @@
         },
         "style": {
           "repo_path": "P/PA/style.json",
-          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
-          "size_bytes": 701
+          "sha256": "f47ea8f9b978ac00e7fd5e4eeb87d0f1d285a33b73f43aede64bf9d8d194638c",
+          "size_bytes": 2052
         }
       },
       "id": "P/PA"
@@ -683,8 +683,8 @@
         },
         "style": {
           "repo_path": "P/PG/style.json",
-          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
-          "size_bytes": 701
+          "sha256": "f47ea8f9b978ac00e7fd5e4eeb87d0f1d285a33b73f43aede64bf9d8d194638c",
+          "size_bytes": 2052
         }
       },
       "id": "P/PG"
@@ -698,8 +698,8 @@
         },
         "style": {
           "repo_path": "P/PH/style.json",
-          "sha256": "295aea2038bba2024b18224a058593464d85c9c1c1ccffbceabfb37330a73058",
-          "size_bytes": 701
+          "sha256": "f47ea8f9b978ac00e7fd5e4eeb87d0f1d285a33b73f43aede64bf9d8d194638c",
+          "size_bytes": 2052
         }
       },
       "id": "P/PH"
@@ -713,8 +713,8 @@
         },
         "style": {
           "repo_path": "R/RC/RCAA/TAIPEI_TMA/style.json",
-          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
-          "size_bytes": 823
+          "sha256": "eacce046d9558a1584c46c0293dff7c0d9d73d70858ac155377b895f6d6f6941",
+          "size_bytes": 898
         }
       },
       "id": "R/RC/RCAA/TAIPEI_TMA"
@@ -728,8 +728,8 @@
         },
         "style": {
           "repo_path": "R/RK/RKRR/INCHEON_TMA/style.json",
-          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
-          "size_bytes": 823
+          "sha256": "eacce046d9558a1584c46c0293dff7c0d9d73d70858ac155377b895f6d6f6941",
+          "size_bytes": 898
         }
       },
       "id": "R/RK/RKRR/INCHEON_TMA"
@@ -743,8 +743,8 @@
         },
         "style": {
           "repo_path": "V/VH/VHHK/HONGKONG_TMA/style.json",
-          "sha256": "b42625edcf4becee0557d937a49b2e0f0c270a50c09fc2fecb86d1885518c001",
-          "size_bytes": 823
+          "sha256": "eacce046d9558a1584c46c0293dff7c0d9d73d70858ac155377b895f6d6f6941",
+          "size_bytes": 898
         }
       },
       "id": "V/VH/VHHK/HONGKONG_TMA"
@@ -758,8 +758,8 @@
         },
         "style": {
           "repo_path": "Y/YM/YMMM/style.json",
-          "sha256": "03c47f0127ef7ecf2ad93a30916b34c40e7e5533fda8a5e9679ae35801a23161",
-          "size_bytes": 1068
+          "sha256": "9f298d84bb5c1243f4f69ad1e1a9327fb9e7616d28f6f070deeca91c1a63dab4",
+          "size_bytes": 1141
         }
       },
       "id": "Y/YM/YMMM"
@@ -773,8 +773,8 @@
         },
         "style": {
           "repo_path": "airac_variants/C/CZ/style.json",
-          "sha256": "7ce96b888ea91ce2ef4b0f0f37a33ffb076cbf1833a47fc7c234c5934e6d7caf",
-          "size_bytes": 814
+          "sha256": "4d9dfc11e6b2b6a1dd90926a0a12232a14974385cc565895fb499488a08e2c47",
+          "size_bytes": 888
         }
       },
       "id": "C/CZ",
@@ -789,8 +789,8 @@
         },
         "style": {
           "repo_path": "airac_variants/E/EF/EFIN/style.json",
-          "sha256": "61255ecc4454141649664c204ba2e838fd12fd7a236f5569996684a2432d1902",
-          "size_bytes": 704
+          "sha256": "ebe8c0b744741ecd275ecb46ae488e23eb95afb8605513d25ea805a812562b7c",
+          "size_bytes": 780
         }
       },
       "id": "E/EF/EFIN",
@@ -816,8 +816,8 @@
         },
         "style": {
           "repo_path": "airac_variants/E/EK/style.json",
-          "sha256": "2587b838229bd2ddca2ca9e2f4731512e95429fc501aab9b281f94414da3b241",
-          "size_bytes": 720
+          "sha256": "895bf73d09ad41a9edd08bd559b2b9db661021792e6c29c69a59f6cf49066fbc",
+          "size_bytes": 796
         }
       },
       "id": "E/EK",
@@ -832,8 +832,8 @@
         },
         "style": {
           "repo_path": "airac_variants/E/EN/ENOR/ENOS/style.json",
-          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
-          "size_bytes": 373
+          "sha256": "cb4ed79fb99ea9476e5f75fead453e420fe7bc72710a14c0f188fc51d0fae5ed",
+          "size_bytes": 449
         }
       },
       "id": "E/EN/ENOR/ENOS",
@@ -848,8 +848,8 @@
         },
         "style": {
           "repo_path": "airac_variants/E/ES/style.json",
-          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
-          "size_bytes": 373
+          "sha256": "c70dc98c4d5e335c7d118da99ad72b0aaa652f8d109aee68548cd5de5e484540",
+          "size_bytes": 449
         }
       },
       "id": "E/ES",
@@ -864,8 +864,8 @@
         },
         "style": {
           "repo_path": "airac_variants/G/GC/style.json",
-          "sha256": "6d4442c24540b7a93693a4751e521ebed950d606f77ad97a1084ecc96b55fcc1",
-          "size_bytes": 794
+          "sha256": "ecbefcfb925728fc7b00fb83d844332713c981d7fc5cde82109def57e617d119",
+          "size_bytes": 870
         }
       },
       "id": "G/GC",
@@ -880,8 +880,8 @@
         },
         "style": {
           "repo_path": "airac_variants/L/LO/style.json",
-          "sha256": "08f96ad79406dddc900304709b83bf0bc9e56039f81e029c40f972b0025948e4",
-          "size_bytes": 7925
+          "sha256": "8a6e1f454cfa3da7a490fad7c1cce493757eaf6efb3779288f82873661703059",
+          "size_bytes": 8001
         }
       },
       "id": "L/LO",
@@ -896,8 +896,8 @@
         },
         "style": {
           "repo_path": "airac_variants/L/LP/style.json",
-          "sha256": "ede975a6be6404242c107998993aeb22904219da283f9d6816b754fd93c3d3da",
-          "size_bytes": 10501
+          "sha256": "7f457222bb67f38c61dc82ccf3ea17f6ac24c88938b10dd36e9a6170f07b8edc",
+          "size_bytes": 10577
         }
       },
       "id": "L/LP",
@@ -912,8 +912,8 @@
         },
         "style": {
           "repo_path": "airac_variants/L/LT/style.json",
-          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
-          "size_bytes": 373
+          "sha256": "c70dc98c4d5e335c7d118da99ad72b0aaa652f8d109aee68548cd5de5e484540",
+          "size_bytes": 449
         }
       },
       "id": "L/LT",
@@ -928,8 +928,8 @@
         },
         "style": {
           "repo_path": "airac_variants/O/OE/OEJD/style.json",
-          "sha256": "f478bec15afedf659c8d5bcdacbe2a08a6dbf009b802b19b108db4a773696ee7",
-          "size_bytes": 910
+          "sha256": "2d226d7ac0d8ce7afd241d12c6d536d0f2badb1c19b8c3074957b530025acae6",
+          "size_bytes": 983
         }
       },
       "id": "O/OE/OEJD",
@@ -944,8 +944,8 @@
         },
         "style": {
           "repo_path": "airac_variants/O/OM/OMAE/ABU_DHABI_TMA/style.json",
-          "sha256": "2a4f9a282c3e04f32f5935c86cd65788d369d9576b5f1886157822d631c99f68",
-          "size_bytes": 740
+          "sha256": "7f948a9f6907c8ca30573d57a15627455c0b15fac40380e4220813d6b10c5608",
+          "size_bytes": 814
         }
       },
       "id": "O/OM/OMAE/ABU_DHABI_TMA",
@@ -960,8 +960,8 @@
         },
         "style": {
           "repo_path": "airac_variants/O/OM/OMAE/DUBAI_TERMINAL/style.json",
-          "sha256": "67707daa627b8b5b982e53616ed9306dd652fcb64ce59ae1e003a0506d2adced",
-          "size_bytes": 373
+          "sha256": "cb4ed79fb99ea9476e5f75fead453e420fe7bc72710a14c0f188fc51d0fae5ed",
+          "size_bytes": 449
         }
       },
       "id": "O/OM/OMAE/DUBAI_TERMINAL",
@@ -976,8 +976,8 @@
         },
         "style": {
           "repo_path": "airac_variants/O/OT/OTDF/style.json",
-          "sha256": "03138257753b7428a789c896b4edc70c3cbd1b67f2cb57b35150ec581f60695c",
-          "size_bytes": 706
+          "sha256": "ed0716fd6659ce7f6b60363cfd091eb9a097536bfaf72e6bb91975ade2702051",
+          "size_bytes": 779
         }
       },
       "id": "O/OT/OTDF",
@@ -992,8 +992,8 @@
         },
         "style": {
           "repo_path": "airac_variants/P/PA/style.json",
-          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
-          "size_bytes": 624
+          "sha256": "cb184375e46f7a94ecd394e88d072ec2298f1ea4484efc24c290393ba984881a",
+          "size_bytes": 1861
         }
       },
       "id": "P/PA",
@@ -1008,8 +1008,8 @@
         },
         "style": {
           "repo_path": "airac_variants/P/PG/style.json",
-          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
-          "size_bytes": 624
+          "sha256": "cb184375e46f7a94ecd394e88d072ec2298f1ea4484efc24c290393ba984881a",
+          "size_bytes": 1861
         }
       },
       "id": "P/PG",
@@ -1024,8 +1024,8 @@
         },
         "style": {
           "repo_path": "airac_variants/P/PH/style.json",
-          "sha256": "a4cca6e93c7a7d177928a2e2fb407c49d2a2c7701424c4181737e1f2a14223a7",
-          "size_bytes": 624
+          "sha256": "cb184375e46f7a94ecd394e88d072ec2298f1ea4484efc24c290393ba984881a",
+          "size_bytes": 1861
         }
       },
       "id": "P/PH",
@@ -1040,8 +1040,8 @@
         },
         "style": {
           "repo_path": "airac_variants/R/RC/RCAA/TAIPEI_TMA/style.json",
-          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
-          "size_bytes": 792
+          "sha256": "6104e0b64565ed63442ebba66ae63313f016539b076c5d68769c7437e566b2ac",
+          "size_bytes": 867
         }
       },
       "id": "R/RC/RCAA/TAIPEI_TMA",
@@ -1056,8 +1056,8 @@
         },
         "style": {
           "repo_path": "airac_variants/R/RK/RKRR/INCHEON_TMA/style.json",
-          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
-          "size_bytes": 792
+          "sha256": "6104e0b64565ed63442ebba66ae63313f016539b076c5d68769c7437e566b2ac",
+          "size_bytes": 867
         }
       },
       "id": "R/RK/RKRR/INCHEON_TMA",
@@ -1072,8 +1072,8 @@
         },
         "style": {
           "repo_path": "airac_variants/V/VH/VHHK/HONGKONG_TMA/style.json",
-          "sha256": "00429cd84c8566200faadcb73cdb0402da0768bb9341a7a8a026710d1942a51a",
-          "size_bytes": 792
+          "sha256": "6104e0b64565ed63442ebba66ae63313f016539b076c5d68769c7437e566b2ac",
+          "size_bytes": 867
         }
       },
       "id": "V/VH/VHHK/HONGKONG_TMA",
@@ -1088,8 +1088,8 @@
         },
         "style": {
           "repo_path": "airac_variants/Y/YM/YMMM/style.json",
-          "sha256": "1f9560485781ebc36de2ded39746f3e5ee4b01239cddfad9e37619d351400062",
-          "size_bytes": 899
+          "sha256": "890d84cbb58fc22edce18c62353b1a304a2b6853bc730771bcc1208d28ab7c13",
+          "size_bytes": 972
         }
       },
       "id": "Y/YM/YMMM",
@@ -1097,10 +1097,10 @@
     }
   ],
   "entry_count": 72,
-  "generated_at": "2026-11-23T12:03:25Z",
-  "published_at": "2026-11-23T12:03:25Z",
-  "release_tag": "daily-2026-11-23-d",
+  "generated_at": "2026-11-24T10:53:35Z",
+  "published_at": "2026-11-24T10:53:35Z",
+  "release_tag": "daily-2026-11-24",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "4399073d783d5b7b6f521c4ab2b91aee1ff3f077100cff3716b55885fa7f9d45",
-  "size_bytes": 59145
+  "sha256": "efc3d01020c825eee6bf1e383c5f17e9567159888db0664ff6cf2aa3a40327c7",
+  "size_bytes": 62160
 }
