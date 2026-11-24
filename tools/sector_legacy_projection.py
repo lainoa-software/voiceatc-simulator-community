@@ -779,26 +779,24 @@ def coordination_variant(
     )
     if not capabilities:
         return capabilities, None, None
-    if "airac_overrides" in document:
-        # The AIRAC projection already spends the plain path on the resolved copy, so the
-        # downgraded and the authored rows have no second path left to take.
-        raise ValueError(
-            f"{bundle_path}: {kind} carries AIRAC variants and {', '.join(capabilities)}; its two"
-            " archive paths cannot hold the resolved, downgraded and authored rows at once"
-        )
+    # An AIRAC document keeps its resolved copy at the bundle path (the projection writes it
+    # there) and its downgraded copy, every tier downgraded, at the ``airac_variants/`` alias:
+    # the authored copy has its own path, so nothing is refused.
     return capabilities, schema3_features.downgrade_document(document, context), _canonical_lf(
         source.read_bytes()
     )
 
 
-def _paired_schema3_path(repo_path: str) -> str:
-    """The other archive path the game's sector_data parser accepts for one file.
+def _feature_variant_path(repo_path: str) -> str:
+    """The archive path of a gated bundle's authored copy.
 
-    It accepts the bundle path and its ``airac_variants/`` alias only, so a second copy must
-    take the other spelling.
+    The game installs ``feature_variants/<bundle>/<file>`` at ``airac_variants/<bundle>/<file>``,
+    the folder the bundle's own readers open, so the authored rows reach them without taking
+    the path a build without the capability reads its downgraded copy from.
     """
     prefix = "airac_variants/"
-    return repo_path[len(prefix):] if repo_path.startswith(prefix) else prefix + repo_path
+    original = repo_path[len(prefix):] if repo_path.startswith(prefix) else repo_path
+    return "feature_variants/" + original
 
 
 def _repathed(fentry: dict, repo_path: str, raw_bytes: bytes) -> dict:
@@ -809,13 +807,11 @@ def _repathed(fentry: dict, repo_path: str, raw_bytes: bytes) -> dict:
 
 
 def _schema3_entries(
-    bundle_path: str,
     s3_entry: dict,
     schema3_files: dict,
     variant: tuple[tuple[str, ...], dict | None, bytes | None],
     generated: dict[str, bytes],
     archive_sources: dict[str, str],
-    coordination_paths: dict[str, dict[str, str]],
 ) -> list[dict]:
     """Today's entry, or the downgraded one and then the authored one a capable build takes."""
     capabilities, downgraded, authored = variant
@@ -823,22 +819,13 @@ def _schema3_entries(
     if not kind:
         return [s3_entry]
     today = str(schema3_files[kind]["repo_path"])
-    claimed = coordination_paths.setdefault(bundle_path, {})
     if not capabilities or downgraded is None or authored is None:
-        claimed.setdefault(today, str(schema3_files[kind].get("sha256", "")))
         return [s3_entry]
 
     downgraded_bytes = (json.dumps(downgraded, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
-    authored_path = _paired_schema3_path(today)
-    # Both entries of a bundle may reach the same two files (an unchanged coordination is
-    # shared); they may never disagree about what sits at one path.
-    for path, raw_bytes in ((today, downgraded_bytes), (authored_path, authored)):
-        sha256 = hashlib.sha256(raw_bytes).hexdigest()
-        if claimed.setdefault(path, sha256) != sha256:
-            raise ValueError(
-                f"{bundle_path}: {kind} needs {path} to hold two different documents; only the"
-                " airac_variants alias and the bundle path exist"
-            )
+    # The downgraded copy keeps today's path and the authored one takes a third prefix, so no
+    # two documents ever reach one archive path.
+    authored_path = _feature_variant_path(today)
 
     downgraded_files = dict(schema3_files)
     downgraded_files[kind] = _repathed(schema3_files[kind], today, downgraded_bytes)
@@ -1880,7 +1867,6 @@ def project_release_dataset_feeds(
 
         raw_entries = gated.get("full_entries", [])
         if isinstance(raw_entries, list):
-            coordination_paths: dict[str, dict[str, str]] = {}
             for entry in raw_entries:
                 if not isinstance(entry, dict):
                     continue
@@ -1930,13 +1916,11 @@ def project_release_dataset_feeds(
                         s3_entry["files"] = schema3_files
                         new_full_entries.extend(
                             _schema3_entries(
-                                bundle_path,
                                 s3_entry,
                                 schema3_files,
                                 coordination_variant(root, bundle_path, files),
                                 generated,
                                 archive_sources,
-                                coordination_paths,
                             )
                         )
                 elif has_schema3_tma or has_schema3_acc:
@@ -1953,13 +1937,11 @@ def project_release_dataset_feeds(
                         s3_entry["files"] = schema3_files
                         new_full_entries.extend(
                             _schema3_entries(
-                                bundle_path,
                                 s3_entry,
                                 schema3_files,
                                 coordination_variant(root, bundle_path, files),
                                 generated,
                                 archive_sources,
-                                coordination_paths,
                             )
                         )
                 else:

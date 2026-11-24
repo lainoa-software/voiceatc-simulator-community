@@ -97,13 +97,21 @@ of a unit or a position. `tools/schema3_features.py` lists those features in ord
 the rows that use it and how to drop it.
 
 A bundle that uses none keeps its single schema-3 entry, byte for byte. A bundle that uses any
-ships two entries with the same id: the first holds the downgraded rows at today's path with
-today's `requires`, so an older build takes it and reads what its own checker accepts; the last
-holds the authored bytes at the other archive path the game accepts (`<bundle>/<file>` or
-`airac_variants/<bundle>/<file>`) with the used capabilities added to `requires`. Every other
-file is shared between the two, and the projected schema-1 `tma.json` of a generated bundle
-carries the downgraded rows too. A coordination document that also holds AIRAC variants is
-refused: its two paths cannot hold the resolved, the downgraded and the authored rows at once.
+ships two entries with the same id: the first holds the downgraded rows at
+`airac_variants/<bundle>/<file>` with today's `requires`, so a build without the capability
+takes it and reads what its own checker accepts; the last holds the authored bytes at
+`feature_variants/<bundle>/<file>` with the used capabilities added to `requires`. The game
+installs a `feature_variants/` entry at the same place as its `airac_variants/` twin, the
+folder the bundle's own readers open, so a capable build finds the authored rows where it reads
+coordination without taking the path an older build reads. Every other file is shared between
+the two, and the projected schema-1 `tma.json` of a generated bundle carries the downgraded rows
+too.
+
+A coordination document that also holds AIRAC variants takes a third path and is not refused:
+the resolved copy stays at `<bundle>/<file>`, where the AIRAC projection already writes it; the
+downgraded copy, every tier downgraded and keeping its own `airac_overrides`, at
+`airac_variants/<bundle>/<file>`; and the authored copy at `feature_variants/<bundle>/<file>`.
+Each entry keeps the `requires` it has today; the authored one adds the used capabilities.
 
 ### Route overlays
 

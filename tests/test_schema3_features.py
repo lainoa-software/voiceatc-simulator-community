@@ -211,10 +211,7 @@ class PalmaSectorEndTests(unittest.TestCase):
             today = main_schema3[0]["files"]["tma_coordination"]["repo_path"]
             authored_path = authored_entry["files"]["tma_coordination"]["repo_path"]
             self.assertEqual(today, today_entry["files"]["tma_coordination"]["repo_path"])
-            self.assertEqual(
-                {today, "L/LE/LECB/LECP/PALMA_TMA/tma_coordination.json"},
-                {today, authored_path},
-            )
+            self.assertEqual(today.replace("airac_variants/", "feature_variants/"), authored_path)
             # The first entry is what an older build takes: today's rows, at today's path.
             self.assertEqual(
                 json.loads(main_bytes[today])["agreements"],
@@ -463,7 +460,7 @@ class WriterTests(unittest.TestCase):
             today_entry, authored_entry = self._two_entries(entries, "L/LE/LECC/LEAA_TMA")
 
             today = "airac_variants/L/LE/LECC/LEAA_TMA/tma_coordination.json"
-            authored_path = "L/LE/LECC/LEAA_TMA/tma_coordination.json"
+            authored_path = "feature_variants/L/LE/LECC/LEAA_TMA/tma_coordination.json"
             self.assertEqual(today, today_entry["files"]["tma_coordination"]["repo_path"])
             self.assertEqual(authored_path, authored_entry["files"]["tma_coordination"]["repo_path"])
             self.assertEqual(["community.airspace_files"], today_entry["requires"])
@@ -479,6 +476,25 @@ class WriterTests(unittest.TestCase):
             for kind, entry in today_entry["files"].items():
                 if kind != "tma_coordination":
                     self.assertEqual(entry, authored_entry["files"][kind])
+
+    def test_every_entry_installs_all_its_files_in_the_folder_the_game_reads(self) -> None:
+        # A bundle is read from one folder: the twin the released builds already use.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={"schema": 3, "agreements": [agreement("EAST", "LECCEAST")]},
+            )
+            entries, _generated = release_entries(root)
+            for entry in self._two_entries(entries, "L/LE/LECC/LEAA_TMA"):
+                folders = {
+                    file_entry["repo_path"]
+                    .replace("feature_variants/", "airac_variants/")
+                    .rpartition("/")[0]
+                    for file_entry in entry["files"].values()
+                }
+                self.assertEqual({"airac_variants/L/LE/LECC/LEAA_TMA"}, folders)
 
     def test_acc_coordination_using_a_sector_ships_two_entries(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -496,7 +512,8 @@ class WriterTests(unittest.TestCase):
             today = today_entry["files"]["acc_coordination"]["repo_path"]
             self.assertEqual("airac_variants/L/LE/LECC/acc_coordination.json", today)
             self.assertEqual(
-                "L/LE/LECC/acc_coordination.json", authored_entry["files"]["acc_coordination"]["repo_path"]
+                "feature_variants/L/LE/LECC/acc_coordination.json",
+                authored_entry["files"]["acc_coordination"]["repo_path"],
             )
             self.assertEqual("LECC_EAST_CTR", json.loads(generated[today])["agreements"][0]["from"])
             authored_path = authored_entry["files"]["acc_coordination"]["repo_path"]
@@ -506,13 +523,17 @@ class WriterTests(unittest.TestCase):
             self.assertEqual(["community.airspace_files"], today_entry["requires"])
             self.assertEqual(sorted(["community.airspace_files", CAPABILITY]), authored_entry["requires"])
 
-    def test_a_coordination_document_with_airac_variants_and_a_sector_end_is_refused(self) -> None:
+    def test_a_coordination_document_with_airac_variants_and_a_sector_end_ships_three_copies(
+        self,
+    ) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
+            bundle = "L/LE/LECC/LEAA_TMA"
             coordination = {
                 "schema": 3,
                 "agreements": [agreement("EAST", "LECCEAST")],
                 "airac_overrides": {
+                    "bundled": {"schema": 3, "agreements": [agreement("EAST", "LECCEAST")]},
                     "latest": {"schema": 3, "agreements": [agreement("EAST", "LECCEAST")]},
                 },
             }
@@ -521,11 +542,50 @@ class WriterTests(unittest.TestCase):
                 configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
                 tma_coordination=coordination,
             )
-            with self.assertRaises(ValueError) as raised:
-                release_entries(root)
-            message = str(raised.exception)
-            self.assertIn("L/LE/LECC/LEAA_TMA", message)
-            self.assertIn(CAPABILITY, message)
+            entries, generated = release_entries(root)
+
+            # The resolved copy keeps the bundle path, as the AIRAC projection writes it.
+            resolved_path = f"{bundle}/tma_coordination.json"
+            self.assertEqual(
+                "LECCEAST",
+                _read(root, f".voiceatc/defaults/{resolved_path}")["agreements"][0]["from"],
+            )
+            # The downgraded copy keeps today's alias, every tier downgraded and its gating.
+            downgraded_path = f"airac_variants/{resolved_path}"
+            authored_path = f"feature_variants/{resolved_path}"
+            found = schema3_entries(entries, bundle)
+            self.assertEqual(4, len(found))
+            paths = {
+                (entry["files"]["tma_coordination"]["repo_path"],
+                    entry["files"]["tma_coordination"]["sha256"])
+                for entry in found
+            }
+            self.assertEqual({downgraded_path, authored_path},
+                {path for path, _sha in paths})
+            downgraded = json.loads(generated[downgraded_path])
+            self.assertEqual("LECC_EAST_CTR", downgraded["agreements"][0]["from"])
+            for tier in ("bundled", "latest"):
+                self.assertEqual(
+                    "LECC_EAST_CTR", downgraded["airac_overrides"][tier]["agreements"][0]["from"]
+                )
+            authored = json.loads(generated[authored_path])
+            self.assertEqual("LECCEAST", authored["agreements"][0]["from"])
+            self.assertEqual(
+                "LECCEAST", authored["airac_overrides"]["latest"]["agreements"][0]["from"]
+            )
+            # A capable entry keeps the AIRAC gate it has today and adds the feature's.
+            airac_entries = [
+                entry for entry in found if "community.airac_overrides" in entry.get("requires", [])
+            ]
+            self.assertEqual(2, len(airac_entries))
+            self.assertEqual(
+                sorted(["community.airac_overrides", "community.airspace_files"]),
+                airac_entries[0]["requires"],
+            )
+            self.assertEqual(
+                sorted(["community.airac_overrides", "community.airspace_files", CAPABILITY]),
+                airac_entries[1]["requires"],
+            )
 
     def test_an_airac_override_in_another_file_leaves_the_coordination_pairs_agreeing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
