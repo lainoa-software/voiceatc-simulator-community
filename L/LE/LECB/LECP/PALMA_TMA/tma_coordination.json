@@ -542,7 +542,7 @@
     {
       "name": "LEPA_DEP_DRAGO",
       "from": "LEPA_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_TXX_CTR",
       "departs": [
         "LEPA"
       ],
@@ -554,7 +554,7 @@
     {
       "name": "LEPA_DEP_GALAT",
       "from": "LEPA_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_TXX_CTR",
       "departs": [
         "LEPA"
       ],
@@ -566,7 +566,7 @@
     {
       "name": "LEPA_DEP_ESPOR",
       "from": "LEPA_APP",
-      "to": "LECP_CTR",
+      "to": "LECP_TXX_CTR",
       "departs": [
         "LEPA"
       ],
