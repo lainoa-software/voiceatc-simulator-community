@@ -10,6 +10,14 @@
       "level": "F210"
     },
     {
+      "name": "LEBL_ARR_ALBER_LFBB",
+      "from": "LFBB_CTR",
+      "to": "LEBL_APP",
+      "arrives": ["LEBL"],
+      "fix": ["ALBER"],
+      "level": "F210"
+    },
+    {
       "name": "LEBL_ARR_BISBA",
       "from": "LECB_CTR",
       "to": "LEBL_APP",
@@ -84,6 +92,14 @@
     {
       "name": "LEBL_ARR_PUMAL",
       "from": "LECB_CTR",
+      "to": "LEBL_APP",
+      "arrives": ["LEBL"],
+      "fix": ["PUMAL"],
+      "level": "F230"
+    },
+    {
+      "name": "LEBL_ARR_PUMAL_LFBB",
+      "from": "LFBB_CTR",
       "to": "LEBL_APP",
       "arrives": ["LEBL"],
       "fix": ["PUMAL"],
@@ -218,6 +234,14 @@
       "level": "F190"
     },
     {
+      "name": "LEGE_ARR_ALBER_KANIG_LFMM",
+      "from": "LFMM_CTR",
+      "to": "LEBL_APP",
+      "arrives": ["LEGE"],
+      "fix": ["ALBER", "KANIG"],
+      "level": "F120"
+    },
+    {
       "name": "LEGE_ARR_BANOL",
       "from": "LEBL_APP",
       "to": "LEGE_TWR",
@@ -255,6 +279,22 @@
       "to": "LEBL_APP",
       "departs": ["LEGE"],
       "level": "F080"
+    },
+    {
+      "name": "LEGE_DEP_GEANT_LFBB",
+      "from": "LEBL_APP",
+      "to": "LFBB_CTR",
+      "departs": ["LEGE"],
+      "fix": ["GEANT"],
+      "level": "F200"
+    },
+    {
+      "name": "LERS_ARR_PUMAL_LFBB",
+      "from": "LFBB_CTR",
+      "to": "LEBL_APP",
+      "arrives": ["LERS"],
+      "fix": ["PUMAL"],
+      "level": "F230"
     },
     {
       "name": "LERS_DEP",

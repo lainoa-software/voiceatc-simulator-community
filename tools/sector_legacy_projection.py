@@ -18,7 +18,7 @@ builds older than schema 3 until their snapshot is refreshed by hand.
 from __future__ import annotations
 
 try:
-    from . import airac_overrides, schema3_features
+    from . import airac_overrides, schema3_features, tma_checker
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
     from pathlib import Path
@@ -27,6 +27,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
     import schema3_features
+    import tma_checker
 
 import argparse
 from copy import deepcopy
@@ -748,6 +749,36 @@ def _child_tma_definitions(acc_dir_path: Path) -> dict[str, object]:
     return {"units": units, "positions": positions}
 
 
+def _neighbour_acc_documents(
+    root: Path, bundle_path: str, own: dict[str, dict], acc: dict[str, dict]
+) -> list[dict]:
+    """The acc documents of every FIR folder a row end reaches into.
+
+    The released checker resolves an end this bundle and its ancestor ACC do not define by
+    the folder its first four letters name (``tma_checker._fir_acc``); the record claims
+    exactly those names, so the same helper finds the same documents.
+    """
+    declared = schema3_features.declared_names(
+        own.get("tma_definitions"), own.get("acc_definitions"), acc.get("acc_definitions")
+    )
+    codes: list[str] = []
+    for kind in _COORDINATION_KINDS:
+        document = own.get(kind)
+        if not isinstance(document, dict):
+            continue
+        for row in schema3_features.agreement_rows(document):
+            for end in schema3_features.agreement_ends(row):
+                code = end[:4].upper()
+                if end not in declared and code not in codes:
+                    codes.append(code)
+    documents: list[dict] = []
+    for code in codes:
+        units, positions = tma_checker._fir_acc(root / bundle_path, code)
+        if units or positions:
+            documents.append({"units": units, "positions": positions})
+    return documents
+
+
 def bundle_airspace_context(
     root: Path, bundle_path: str, files: object
 ) -> schema3_features.AirspaceContext:
@@ -775,7 +806,12 @@ def bundle_airspace_context(
     # handed to it, so a row that ends at one of them is valid there.
     if coordination_kind(files) == "acc_coordination" and acc_dir:
         own["tma_definitions"] = _child_tma_definitions(root / acc_dir)
-    return schema3_features.airspace_context(own, acc, bundle=bundle_path)
+    return schema3_features.airspace_context(
+        own,
+        acc,
+        bundle=bundle_path,
+        neighbour_documents=_neighbour_acc_documents(root, bundle_path, own, acc),
+    )
 
 
 def coordination_variant(

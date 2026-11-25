@@ -5,11 +5,20 @@ import unittest
 from pathlib import Path
 
 from tools import airac_overrides, release_gates, sector_data_manifest, sector_legacy_projection
-from tools import schema3_features
+from tools import schema3_features, tma_checker
 from tools.content_files import content_files
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 CAPABILITY = schema3_features.SECTOR_END_CAPABILITY
+NEIGHBOUR = schema3_features.NEIGHBOUR_CENTER_CAPABILITY
+BARCELONA = "L/LE/LECB/LECB_W/BARCELONA_TMA"
+FRENCH_ROWS = {
+    "LEBL_ARR_ALBER_LFBB",
+    "LEBL_ARR_PUMAL_LFBB",
+    "LEGE_ARR_ALBER_KANIG_LFMM",
+    "LEGE_DEP_GEANT_LFBB",
+    "LERS_ARR_PUMAL_LFBB",
+}
 
 
 def _write(root: Path, relative: str, payload: dict) -> None:
@@ -141,8 +150,21 @@ def agreement(name: str, start: str, end: str = "LEAA_APP", **extra: object) -> 
     return row
 
 
-def context_for(documents: dict, acc_documents: dict | None = None) -> schema3_features.AirspaceContext:
-    return schema3_features.airspace_context(documents, acc_documents or {}, bundle="test")
+def context_for(
+    documents: dict,
+    acc_documents: dict | None = None,
+    neighbour_documents: tuple[dict, ...] = (),
+) -> schema3_features.AirspaceContext:
+    return schema3_features.airspace_context(
+        documents, acc_documents or {}, bundle="test", neighbour_documents=neighbour_documents
+    )
+
+
+# The French centre the Catalan TMA hands airspace to: one unit id and its one position.
+FRENCH_NEIGHBOUR = {
+    "units": [{"id": "LFBB_CTR", "services": ["center"]}],
+    "positions": [{"call_sign": "LFBBCTR", "unit": "LFBB_CTR", "frequency": "130.230"}],
+}
 
 
 class RealDataTests(unittest.TestCase):
@@ -234,6 +256,215 @@ class PalmaSectorEndTests(unittest.TestCase):
             # The schema-1 tma.json an old build reads carries the downgraded rows too.
             tma_json = "L/LE/LECB/LECB_E/PALMA_TMA/tma.json"
             self.assertEqual(main_bytes[tma_json], new_bytes[tma_json])
+
+
+def bundle_files(bundle: str) -> dict[str, dict]:
+    """The schema-3 file kinds one real bundle folder carries, as a release entry names them."""
+    files: dict[str, dict] = {}
+    for kind, file_name in sector_data_manifest.SECTOR_FILE_NAMES.items():
+        if (REPO_ROOT / bundle / file_name).is_file():
+            files[kind] = {"repo_path": f"{bundle}/{file_name}"}
+    return files
+
+
+class NeighbourCentreTests(unittest.TestCase):
+    """The real Barcelona TMA, whose five French rows only a neighbour-aware build reads."""
+
+    def _context(self) -> schema3_features.AirspaceContext:
+        return sector_legacy_projection.bundle_airspace_context(
+            REPO_ROOT, BARCELONA, bundle_files(BARCELONA)
+        )
+
+    def test_the_five_french_rows_need_the_capability_and_the_rest_do_not(self) -> None:
+        document = _read(REPO_ROOT, f"{BARCELONA}/tma_coordination.json")
+        rows = schema3_features.agreement_rows(document)
+        self.assertEqual(FRENCH_ROWS, {row["name"] for row in rows} & FRENCH_ROWS)
+        self.assertEqual((NEIGHBOUR,), schema3_features.used_capabilities(rows, self._context()))
+        # Exactly the rows without the five, in order, every other key untouched.
+        self.assertEqual(
+            [row for row in rows if row["name"] not in FRENCH_ROWS],
+            schema3_features.downgrade_rows(rows, self._context()),
+        )
+
+    def test_the_real_file_downgrades_to_the_document_main_ships(self) -> None:
+        # main's file is this one with the five French rows left out and nothing else touched.
+        document = _read(REPO_ROOT, f"{BARCELONA}/tma_coordination.json")
+        main_document = json.loads(json.dumps(document))
+        main_document["agreements"] = [
+            row for row in main_document["agreements"] if row["name"] not in FRENCH_ROWS
+        ]
+        self.assertEqual(len(document["agreements"]) - 5, len(main_document["agreements"]))
+        self.assertEqual(
+            main_document, schema3_features.downgrade_document(document, self._context())
+        )
+
+    def test_the_real_bundle_ships_the_main_rows_first_and_the_authored_rows_last(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for area in ("L/LE/LECB", "L/LF/LFBB", "L/LF/LFMM"):
+                # The bundle, and the FIR folders its French rows hand airspace to.
+                shutil.copytree(REPO_ROOT / area, root / area)
+            (root / ".voiceatc").mkdir(exist_ok=True)
+            shutil.copyfile(
+                REPO_ROOT / ".voiceatc" / "gates.json", root / ".voiceatc" / "gates.json"
+            )
+            entries, generated = release_entries(root)
+            found = schema3_entries(entries, BARCELONA)
+            self.assertEqual(2, len(found), found)
+            today_entry, authored_entry = found
+            today = today_entry["files"]["tma_coordination"]["repo_path"]
+            authored_path = authored_entry["files"]["tma_coordination"]["repo_path"]
+            self.assertEqual(f"airac_variants/{BARCELONA}/tma_coordination.json", today)
+            self.assertEqual(f"feature_variants/{BARCELONA}/tma_coordination.json", authored_path)
+            self.assertNotIn(NEIGHBOUR, today_entry["requires"])
+            self.assertEqual(
+                sorted([*today_entry["requires"], NEIGHBOUR]), authored_entry["requires"]
+            )
+            authored = _read(root, f"{BARCELONA}/tma_coordination.json")["agreements"]
+            self.assertEqual(
+                [row for row in authored if row["name"] not in FRENCH_ROWS],
+                json.loads(generated[today])["agreements"],
+            )
+            self.assertEqual(authored, json.loads(generated[authored_path])["agreements"])
+
+    def test_a_row_ending_at_the_french_position_is_accepted_and_claimed(self) -> None:
+        # LFBBCTR is the Bordeaux centre's one position (the unit id stays LFBB_CTR): the
+        # checker resolves it from the FIR folder, and the record claims it as a neighbour.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for area in ("L/LE/LECB", "L/LF/LFBB", "L/LF/LFMM"):
+                shutil.copytree(REPO_ROOT / area, root / area)
+            document = _read(root, f"{BARCELONA}/tma_coordination.json")
+            row = agreement(
+                "LEBL_ARR_VERSO_LFBB_POSITION", "LFBBCTR", "LEBL_APP", arrives=["LEBL"], level="F220"
+            )
+            document["agreements"].append(row)
+            _write(root, f"{BARCELONA}/tma_coordination.json", document)
+
+            self.assertEqual([], tma_checker.check_bundle(root / BARCELONA))
+
+            context = sector_legacy_projection.bundle_airspace_context(
+                root, BARCELONA, bundle_files(BARCELONA)
+            )
+            self.assertIn("LFBBCTR", context.neighbour_centers)
+            self.assertEqual((NEIGHBOUR,), schema3_features.used_capabilities([row], context))
+            self.assertEqual([], schema3_features.downgrade_rows([row], context))
+
+    def test_a_row_end_written_in_lowercase_is_gated_as_the_checker_accepts_it(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for area in ("L/LE/LECB", "L/LF/LFBB", "L/LF/LFMM"):
+                shutil.copytree(REPO_ROOT / area, root / area)
+            center = _read(root, "L/LF/LFBB/acc_definitions.json")
+            center["units"][0]["id"] = "lfbb_ctr"
+            center["positions"][0]["unit"] = "lfbb_ctr"
+            _write(root, "L/LF/LFBB/acc_definitions.json", center)
+            document = _read(root, f"{BARCELONA}/tma_coordination.json")
+            row = agreement(
+                "LEBL_ARR_VERSO_LOWERCASE", "lfbb_ctr", "LEBL_APP", arrives=["LEBL"], level="F220"
+            )
+            document["agreements"] = [
+                kept for kept in document["agreements"] if kept["name"] not in FRENCH_ROWS
+            ] + [row]
+            _write(root, f"{BARCELONA}/tma_coordination.json", document)
+
+            self.assertEqual([], tma_checker.check_bundle(root / BARCELONA))
+
+            context = sector_legacy_projection.bundle_airspace_context(
+                root, BARCELONA, bundle_files(BARCELONA)
+            )
+            self.assertEqual((NEIGHBOUR,), schema3_features.used_capabilities([row], context))
+            self.assertEqual([], schema3_features.downgrade_rows([row], context))
+
+    def test_a_bundle_using_a_sector_and_a_neighbour_needs_both_in_features_order(self) -> None:
+        context = context_for(
+            {
+                "tma_definitions": {
+                    "units": [{"id": "LEAA_APP", "services": ["approach_radar"]}],
+                    "positions": [
+                        {"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"}
+                    ],
+                },
+                "tma_layout": {
+                    "configurations": {"LEAA_APP": {"CORE": {"positions": {"LEAA_APP": ["LEAASEC"]}}}}
+                },
+                "definitions": {"sectors": _sectors("LEAASEC")},
+            },
+            {
+                "acc_definitions": {
+                    "units": [{"id": "LECC_CTR", "services": ["center"]}],
+                    "positions": [
+                        {"call_sign": "LECC_EAST_CTR", "unit": "LECC_CTR", "frequency": "133.100"}
+                    ],
+                },
+                "acc_layout": {
+                    "configurations": {
+                        "LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}
+                    }
+                },
+                "definitions": {"sectors": _sectors("LECCEAST")},
+            },
+            (FRENCH_NEIGHBOUR,),
+        )
+        rows = [
+            agreement("SECTOR", "LECCEAST"),
+            agreement("NEIGHBOUR", "LFBB_CTR"),
+            # Both flows, so the released checker never calls it a tie with the changed sector
+            # row (a changed row that ties with a kept one is left out, not shipped).
+            agreement("PLAIN", "LECC_EAST_CTR", level="F120", departs=["LEAA"], arrives=["LEAA"]),
+        ]
+        self.assertEqual((CAPABILITY, NEIGHBOUR), schema3_features.used_capabilities(rows, context))
+        self.assertEqual(
+            [("SECTOR", "LECC_EAST_CTR"), ("PLAIN", "LECC_EAST_CTR")],
+            [(row["name"], row["from"]) for row in schema3_features.downgrade_rows(rows, context)],
+        )
+
+    def test_a_bundle_using_neither_carries_no_capability(self) -> None:
+        context = context_for(
+            {
+                "tma_definitions": {
+                    "units": [{"id": "LEAA_APP", "services": ["approach_radar"]}],
+                    "positions": [
+                        {"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"}
+                    ],
+                },
+                "tma_layout": {
+                    "configurations": {"LEAA_APP": {"CORE": {"positions": {"LEAA_APP": ["LEAASEC"]}}}}
+                },
+                "definitions": {"sectors": _sectors("LEAASEC")},
+            }
+        )
+        rows = [agreement("PLAIN", "LEAA_APP")]
+        self.assertEqual((), schema3_features.used_capabilities(rows, context))
+        self.assertEqual(rows, schema3_features.downgrade_rows(rows, context))
+
+    def test_a_known_row_whose_go_around_reaches_a_neighbour_ships_without_it(self) -> None:
+        # The row format has no go-around of its own: no coordination file in the repository
+        # writes one, and the checker allows the key set without it, so the row is kept whole
+        # and only the go-around goes.
+        context = context_for(
+            {
+                "tma_definitions": {
+                    "units": [{"id": "LEAA_APP", "services": ["approach_radar"]}],
+                    "positions": [
+                        {"call_sign": "LEAA_APP", "unit": "LEAA_APP", "frequency": "119.100"}
+                    ],
+                },
+                "tma_layout": {
+                    "configurations": {"LEAA_APP": {"CORE": {"positions": {"LEAA_APP": ["LEAASEC"]}}}}
+                },
+                "definitions": {"sectors": _sectors("LEAASEC")},
+            },
+            None,
+            (FRENCH_NEIGHBOUR,),
+        )
+        row = agreement("KNOWN", "LEAA_APP", go_around={"to": "LFBB_CTR", "level": "F110"})
+        self.assertEqual((NEIGHBOUR,), schema3_features.used_capabilities([row], context))
+        downgraded = schema3_features.downgrade_rows([row], context)
+        self.assertEqual(1, len(downgraded))
+        self.assertEqual("LEAA_APP", downgraded[0]["from"])
+        self.assertNotIn("go_around", downgraded[0])
+        self.assertIn("go_around", row)
 
 
 class DowngradeTests(unittest.TestCase):
@@ -684,6 +915,60 @@ class WriterTests(unittest.TestCase):
             self.assertEqual(
                 ["LECCEAST", "LEAA_APP"],
                 [row["from"] for row in json.loads(generated[authored_path])["agreements"]],
+            )
+            for kind, entry in today_entry["files"].items():
+                if kind != "tma_coordination":
+                    self.assertEqual(entry, authored_entry["files"][kind])
+
+    def test_a_bundle_using_a_sector_and_a_fir_neighbour_ships_both_features(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={
+                    "schema": 3,
+                    "agreements": [
+                        agreement("PLAIN", "LEAA_APP", end="LECC_EAST_CTR", level="F120"),
+                        agreement("SECTOR", "LECCEAST"),
+                        agreement("NEIGHBOUR", "LFBB_CTR"),
+                    ],
+                },
+            )
+            # A real FIR folder in the tree: only a neighbour-aware build reads its centre.
+            shutil.copytree(REPO_ROOT / "L" / "LF" / "LFBB", root / "L" / "LF" / "LFBB")
+
+            entries, generated = release_entries(root)
+            bundle = "L/LE/LECC/LEAA_TMA"
+            today_entry, authored_entry = self._two_entries(entries, bundle)
+            self.assertEqual({bundle}, {today_entry["id"], authored_entry["id"]})
+
+            today = "airac_variants/L/LE/LECC/LEAA_TMA/tma_coordination.json"
+            authored_path = "feature_variants/L/LE/LECC/LEAA_TMA/tma_coordination.json"
+            self.assertEqual(today, today_entry["files"]["tma_coordination"]["repo_path"])
+            self.assertEqual(authored_path, authored_entry["files"]["tma_coordination"]["repo_path"])
+            self.assertEqual(["community.airspace_files"], today_entry["requires"])
+            self.assertEqual(
+                sorted(["community.airspace_files", CAPABILITY, NEIGHBOUR]),
+                authored_entry["requires"],
+            )
+
+            authored = _read(root, f"{bundle}/tma_coordination.json")["agreements"]
+            self.assertEqual(authored, json.loads(generated[authored_path])["agreements"])
+            # The authored bytes, canonicalised to LF the way every released file is.
+            self.assertEqual(
+                (root / bundle / "tma_coordination.json").read_bytes().replace(b"\r\n", b"\n"),
+                generated[authored_path],
+            )
+
+            downgraded = json.loads(generated[today])["agreements"]
+            self.assertEqual(["PLAIN", "SECTOR"], [row["name"] for row in downgraded])
+            self.assertEqual(
+                [
+                    {"from": "LEAA_APP", "to": "LECC_EAST_CTR"},
+                    {"from": "LECC_EAST_CTR", "to": "LEAA_APP"},
+                ],
+                [{key: row[key] for key in ("from", "to")} for row in downgraded],
             )
             for kind, entry in today_entry["files"].items():
                 if kind != "tma_coordination":
