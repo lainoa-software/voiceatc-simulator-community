@@ -383,7 +383,7 @@
       "fix": [
         "RUXET"
       ],
-      "level": "F150"
+      "level": "F250"
     },
     {
       "name": "LEIB_ARR_VARUT",
@@ -929,7 +929,7 @@
       "fix": [
         "LUNIK"
       ],
-      "level": "F100"
+      "level": "F180"
     },
     {
       "name": "LEMH_DEP_LUNIK_EXIT",
@@ -941,7 +941,7 @@
       "fix": [
         "LUNIK"
       ],
-      "level": "F240"
+      "level": "F180"
     },
     {
       "name": "LEMH_DEP_BAVER",
