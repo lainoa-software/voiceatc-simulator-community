@@ -135,6 +135,18 @@
       "level": "F130"
     },
     {
+      "name": "LEPA_ARR_RIXOT_ENTRY",
+      "from": "LFMM_CTR",
+      "to": "LECP_MXX_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "RIXOT"
+      ],
+      "level": "F230"
+    },
+    {
       "name": "LEPA_ARR_RIXOT",
       "from": "LECP_MXX_APP",
       "to": "LEPA_APP",
@@ -145,6 +157,18 @@
         "RIXOT"
       ],
       "level": "F150"
+    },
+    {
+      "name": "LEPA_ARR_MORSS_ENTRY",
+      "from": "LFMM_CTR",
+      "to": "LECP_MXX_APP",
+      "arrives": [
+        "LEPA"
+      ],
+      "fix": [
+        "MORSS"
+      ],
+      "level": "F230"
     },
     {
       "name": "LEPA_ARR_MORSS",
@@ -812,6 +836,18 @@
       "level": "F140"
     },
     {
+      "name": "LEPA_DEP_ISTER_EXIT",
+      "from": "LECP_MXX_APP",
+      "to": "LFMM_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "ISTER"
+      ],
+      "level": "F240"
+    },
+    {
       "name": "LEPA_DEP_MORSS",
       "from": "LEPA_APP",
       "to": "LECP_MXX_APP",
@@ -822,6 +858,18 @@
         "MORSS"
       ],
       "level": "F140"
+    },
+    {
+      "name": "LEPA_DEP_MORSS_EXIT",
+      "from": "LECP_MXX_APP",
+      "to": "LFMM_CTR",
+      "departs": [
+        "LEPA"
+      ],
+      "fix": [
+        "MORSS"
+      ],
+      "level": "F240"
     },
     {
       "name": "LEIB_DEP_EPAMA",
