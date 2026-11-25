@@ -18,7 +18,7 @@ builds older than schema 3 until their snapshot is refreshed by hand.
 from __future__ import annotations
 
 try:
-    from . import airac_overrides
+    from . import airac_overrides, schema3_features
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
     from pathlib import Path
@@ -26,6 +26,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import schema3_features
 
 import argparse
 from copy import deepcopy
@@ -665,6 +666,197 @@ def _file_entry(repo_path: str, raw_bytes: bytes, *, requires: list[str] | None 
     if requires is not None:
         entry["requires"] = requires
     return entry
+
+
+_SCHEMA3_DOCUMENT_KINDS = (
+    "tma_definitions",
+    "tma_layout",
+    "tma_coordination",
+    "definitions",
+    "acc_definitions",
+    "acc_layout",
+    "acc_coordination",
+)
+_COORDINATION_KINDS = ("tma_coordination", "acc_coordination")
+_ANCESTOR_ACC_FILES = (
+    ("acc_definitions.json", "acc_definitions"),
+    ("acc_layout.json", "acc_layout"),
+    ("acc_coordination.json", "acc_coordination"),
+    ("sector_definitions.json", "definitions"),
+)
+
+
+def _source_path(root: Path, repo_path: str) -> Path | None:
+    """The file behind an entry's ``repo_path``; an ``airac_variants/`` alias keeps its source."""
+    if not repo_path:
+        return None
+    path = root / repo_path
+    if path.is_file():
+        return path
+    prefix = "airac_variants/"
+    if repo_path.startswith(prefix):
+        source = root / repo_path[len(prefix):]
+        if source.is_file():
+            return source
+    return None
+
+
+def _read_document(path: Path | None) -> dict | None:
+    if path is None or not path.is_file():
+        return None
+    payload = json.loads(path.read_text(encoding="utf-8-sig"))
+    return payload if isinstance(payload, dict) else None
+
+
+def _ancestor_acc_dir(root: Path, bundle_path: str) -> str:
+    """The nearest folder with ``acc_definitions.json``, the bundle's own included.
+
+    As the game looks it up: an ACC folder read as a bundle is its own ancestor.
+    """
+    parts = [part for part in bundle_path.replace("\\", "/").split("/") if part]
+    for step in range(8):
+        depth = len(parts) - step
+        if depth < 1:
+            break
+        candidate = "/".join(parts[:depth])
+        if (root / candidate / "acc_definitions.json").is_file():
+            return candidate
+    return ""
+
+
+def coordination_kind(files: object) -> str:
+    """Which schema-3 coordination kind this entry carries, "" when it carries none."""
+    if not isinstance(files, dict):
+        return ""
+    for kind in _COORDINATION_KINDS:
+        entry = files.get(kind)
+        if isinstance(entry, dict) and entry.get("repo_path"):
+            return kind
+    return ""
+
+
+def _child_tma_definitions(acc_dir_path: Path) -> dict[str, object]:
+    """Every TMA under an ACC folder, whose units and call signs the game knows for its rows."""
+    units: list[object] = []
+    positions: list[object] = []
+    for path in sorted(acc_dir_path.rglob("tma_definitions.json")):
+        document = schema3_features.with_every_tier(_read_document(path))
+        for key, collected in (("units", units), ("positions", positions)):
+            values = document.get(key)
+            if isinstance(values, list):
+                collected.extend(values)
+    return {"units": units, "positions": positions}
+
+
+def bundle_airspace_context(
+    root: Path, bundle_path: str, files: object
+) -> schema3_features.AirspaceContext:
+    """What the bundle's own files and its ancestor ACC folder define."""
+    own: dict[str, dict] = {}
+    entries = files if isinstance(files, dict) else {}
+    for kind in _SCHEMA3_DOCUMENT_KINDS:
+        # A full-feed entry of an unmoved bundle keeps the legacy `definitions` and adds the
+        # schema-3 one under `definitions_schema3`; the schema-3 documents are the ones read.
+        entry = entries.get(f"{kind}_schema3") if kind == "definitions" else None
+        entry = entry if isinstance(entry, dict) else entries.get(kind)
+        if not isinstance(entry, dict):
+            continue
+        document = _read_document(_source_path(root, str(entry.get("repo_path", ""))))
+        if document is not None:
+            own[kind] = document
+    acc: dict[str, dict] = {}
+    acc_dir = _ancestor_acc_dir(root, bundle_path)
+    if acc_dir and acc_dir != bundle_path.strip("/"):
+        for file_name, kind in _ANCESTOR_ACC_FILES:
+            document = _read_document(root / acc_dir / file_name)
+            if document is not None:
+                acc[kind] = document
+    # The game checks an ACC's own coordination with every child TMA's units and call signs
+    # handed to it, so a row that ends at one of them is valid there.
+    if coordination_kind(files) == "acc_coordination" and acc_dir:
+        own["tma_definitions"] = _child_tma_definitions(root / acc_dir)
+    return schema3_features.airspace_context(own, acc, bundle=bundle_path)
+
+
+def coordination_variant(
+    root: Path, bundle_path: str, files: object
+) -> tuple[tuple[str, ...], dict | None, bytes | None]:
+    """(capabilities the coordination uses, its downgraded document, its authored bytes)."""
+    kind = coordination_kind(files)
+    if not kind:
+        return (), None, None
+    entry = files.get(kind) if isinstance(files, dict) else None
+    source = _source_path(root, str(entry.get("repo_path", "")) if isinstance(entry, dict) else "")
+    document = _read_document(source)
+    if document is None or source is None:
+        return (), None, None
+    context = bundle_airspace_context(root, bundle_path, files)
+    capabilities = schema3_features.used_capabilities(
+        schema3_features.agreement_rows(document), context
+    )
+    if not capabilities:
+        return capabilities, None, None
+    # An AIRAC document keeps its resolved copy at the bundle path (the projection writes it
+    # there) and its downgraded copy, every tier downgraded, at the ``airac_variants/`` alias:
+    # the authored copy has its own path, so nothing is refused.
+    return capabilities, schema3_features.downgrade_document(document, context), _canonical_lf(
+        source.read_bytes()
+    )
+
+
+def _feature_variant_path(repo_path: str) -> str:
+    """The archive path of a gated bundle's authored copy.
+
+    The game installs ``feature_variants/<bundle>/<file>`` at ``airac_variants/<bundle>/<file>``,
+    the folder the bundle's own readers open, so the authored rows reach them without taking
+    the path a build without the capability reads its downgraded copy from.
+    """
+    prefix = "airac_variants/"
+    original = repo_path[len(prefix):] if repo_path.startswith(prefix) else repo_path
+    return "feature_variants/" + original
+
+
+def _repathed(fentry: dict, repo_path: str, raw_bytes: bytes) -> dict:
+    entry = dict(fentry)
+    entry["repo_path"] = repo_path
+    entry["sha256"], entry["size_bytes"] = _file_meta(raw_bytes)
+    return entry
+
+
+def _schema3_entries(
+    s3_entry: dict,
+    schema3_files: dict,
+    variant: tuple[tuple[str, ...], dict | None, bytes | None],
+    generated: dict[str, bytes],
+    archive_sources: dict[str, str],
+) -> list[dict]:
+    """Today's entry, or the downgraded one and then the authored one a capable build takes."""
+    capabilities, downgraded, authored = variant
+    kind = coordination_kind(schema3_files)
+    if not kind:
+        return [s3_entry]
+    today = str(schema3_files[kind]["repo_path"])
+    if not capabilities or downgraded is None or authored is None:
+        return [s3_entry]
+
+    downgraded_bytes = (json.dumps(downgraded, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    # The downgraded copy keeps today's path and the authored one takes a third prefix, so no
+    # two documents ever reach one archive path.
+    authored_path = _feature_variant_path(today)
+
+    downgraded_files = dict(schema3_files)
+    downgraded_files[kind] = _repathed(schema3_files[kind], today, downgraded_bytes)
+    authored_files = dict(schema3_files)
+    authored_files[kind] = _repathed(schema3_files[kind], authored_path, authored)
+    generated[today] = downgraded_bytes
+    archive_sources[today] = today
+    generated[authored_path] = authored
+    archive_sources[authored_path] = authored_path
+    requires = list(s3_entry.get("requires", [])) if isinstance(s3_entry.get("requires"), list) else []
+    return [
+        {**s3_entry, "files": downgraded_files},
+        {**s3_entry, "files": authored_files, "requires": sorted(set(requires) | set(capabilities))},
+    ]
 
 
 def _frozen_bundle_files(
@@ -1709,6 +1901,7 @@ def project_release_dataset_feeds(
                     and str(fe.get("repo_path", "")).startswith(".voiceatc/defaults/")
                     for fe in files.values()
                 )
+                bundle_path = str(entry.get("id", ""))
                 if has_legacy_tma and has_schema3_tma:
                     # Emit the legacy bundle entry first (for full-feed builds without community.airspace_files),
                     # followed by the schema-3 entry gated on community.airspace_files so capable builds overwrite it.
@@ -1738,7 +1931,15 @@ def project_release_dataset_feeds(
                         base_reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
                         s3_entry["requires"] = sorted(set(base_reqs) | {AIRSPACE_FILES_CAPABILITY})
                         s3_entry["files"] = schema3_files
-                        new_full_entries.append(s3_entry)
+                        new_full_entries.extend(
+                            _schema3_entries(
+                                s3_entry,
+                                schema3_files,
+                                coordination_variant(root, bundle_path, files),
+                                generated,
+                                archive_sources,
+                            )
+                        )
                 elif has_schema3_tma or has_schema3_acc:
                     if not is_defaults_entry:
                         schema3_files = {}
@@ -1751,7 +1952,15 @@ def project_release_dataset_feeds(
                         base_reqs = list(entry.get("requires", [])) if isinstance(entry.get("requires"), list) else []
                         s3_entry["requires"] = sorted(set(base_reqs) | {AIRSPACE_FILES_CAPABILITY})
                         s3_entry["files"] = schema3_files
-                        new_full_entries.append(s3_entry)
+                        new_full_entries.extend(
+                            _schema3_entries(
+                                s3_entry,
+                                schema3_files,
+                                coordination_variant(root, bundle_path, files),
+                                generated,
+                                archive_sources,
+                            )
+                        )
                 else:
                     for file_entry in files.values():
                         if isinstance(file_entry, dict) and file_entry.get("repo_path"):
@@ -1979,6 +2188,12 @@ def build_sector_release_projection(
                 ):
                     coord_path = root / str(out_files["tma_coordination"]["repo_path"])
                     tma_coordination = json.loads(coord_path.read_text(encoding="utf-8"))
+                    context = bundle_airspace_context(root, bundle_path, out_files)
+                    if schema3_features.used_capabilities(
+                        schema3_features.agreement_rows(tma_coordination), context
+                    ):
+                        # An old build reads the downgraded rows, so tma.json carries them too.
+                        tma_coordination = schema3_features.downgrade_document(tma_coordination, context)
                     acc_units, acc_pos = _collect_acc_data_for_bundle(
                         root, bundle_path, all_acc_units, all_acc_positions
                     )
