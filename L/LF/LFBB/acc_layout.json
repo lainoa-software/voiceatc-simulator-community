@@ -1,0 +1,12 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LFBB_CTR": {
+      "1": {
+        "positions": {
+          "LFBBCTR": ["LFBB"]
+        }
+      }
+    }
+  }
+}

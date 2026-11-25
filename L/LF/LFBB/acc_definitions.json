@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LFBB_CTR",
+      "call_sign": "Bordeaux Control",
+      "services": ["center"]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LFBBCTR",
+      "unit": "LFBB_CTR",
+      "frequency": "130.230"
+    }
+  ]
+}

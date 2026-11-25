@@ -15,6 +15,10 @@
       "airac_cycle": "2607",
       "scope": "Non-United States FIR and terminal assignments",
       "source": "Navigraph AIRAC 2607"
+    },
+    "community_2611": {
+      "airac_cycle": "2611",
+      "scope": "FIR codes of neighboring centers"
     }
   },
   "nationality_areas": {
@@ -239,6 +243,10 @@
     },
     "LECM": {
       "authority": "navigraph_2607",
+      "kind": "fir"
+    },
+    "LFBB": {
+      "authority": "community_2611",
       "kind": "fir"
     },
     "LFMM": {
