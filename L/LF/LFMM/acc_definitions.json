@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LFMM_CTR",
+      "call_sign": "Marseille Control",
+      "services": ["center"]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LFMMCTR",
+      "unit": "LFMM_CTR",
+      "frequency": "123.900"
+    }
+  ]
+}

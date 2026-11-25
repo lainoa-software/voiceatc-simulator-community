@@ -625,26 +625,130 @@ def _check_agreements(
                         taken.setdefault(runway, name)
 
 
+def _acc_documents(directory: Path) -> tuple[list[dict], list[dict]]:
+    acc_name = str(RULES.get("acc_file_name", "acc_definitions.json"))
+    try:
+        doc = json.loads((directory / acc_name).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return [], []
+    if isinstance(doc, dict):
+        raw_units = doc.get("units", [])
+        raw_positions = doc.get("positions", [])
+        return (
+            [u for u in raw_units if isinstance(u, dict)] if isinstance(raw_units, list) else [],
+            [p for p in raw_positions if isinstance(p, dict)] if isinstance(raw_positions, list) else [],
+        )
+    return [], []
+
+
 def _ancestor_acc(bundle_dir: Path) -> tuple[list[dict], list[dict]]:
+    directory = _ancestor_acc_dir(bundle_dir)
+    return _acc_documents(directory) if directory is not None else ([], [])
+
+
+def _ancestor_acc_dir(bundle_dir: Path) -> Path | None:
+    """The nearest ancestor of the bundle that holds acc_definitions.json, or None."""
     acc_name = str(RULES.get("acc_file_name", "acc_definitions.json"))
     cur = bundle_dir.resolve().parent
     while cur != cur.parent:
-        acc_path = cur / acc_name
-        if acc_path.is_file():
-            try:
-                doc = json.loads(acc_path.read_text(encoding="utf-8"))
-            except (OSError, ValueError):
-                return [], []
-            if isinstance(doc, dict):
-                raw_units = doc.get("units", [])
-                raw_positions = doc.get("positions", [])
-                return (
-                    [u for u in raw_units if isinstance(u, dict)] if isinstance(raw_units, list) else [],
-                    [p for p in raw_positions if isinstance(p, dict)] if isinstance(raw_positions, list) else [],
-                )
-            return [], []
+        if (cur / acc_name).is_file():
+            return cur
         cur = cur.parent
+    return None
+
+
+def _centre_ids(units: list[dict]) -> set[str]:
+    """The ids a neighbour folder offers: its `center` units and their `part_of` children."""
+    ids: set[str] = set()
+    for unit in units:
+        unit_id = str(unit.get("id", "")).strip()
+        services = unit.get("services", [])
+        if unit_id and isinstance(services, list) and "center" in services:
+            ids.add(unit_id)
+    changed = True
+    while changed:
+        changed = False
+        for unit in units:
+            child_id = str(unit.get("id", "")).strip()
+            if child_id and child_id not in ids and str(unit.get("part_of", "")).strip() in ids:
+                ids.add(child_id)
+                changed = True
+    return ids
+
+
+def _neighbour_acc(directory: Path) -> tuple[list[dict], list[dict]]:
+    """What a neighbour FIR folder gives a bundle's rows: its centre units with their children,
+    and the positions those ids work. Its other units are not the bundle's to use."""
+    units, positions = _acc_documents(directory)
+    ids = _centre_ids(units)
+    return (
+        [unit for unit in units if str(unit.get("id", "")).strip() in ids],
+        [position for position in positions
+         if str(position.get("unit", "")).strip() in ids
+         or str(position.get("call_sign", "")).strip() in ids],
+    )
+
+
+def _fir_acc(bundle_dir: Path, code: str) -> tuple[list[dict], list[dict]]:
+    """The centre documents of the FIR folder `<root>/<P[0]>/<P[0:2]>/<P>`, or `<root>/<P[0]>/<P>`.
+
+    The root is the one the bundle's own FIR folder stands in, by the same two layouts; a bundle
+    outside both, or a code with no such folder, yields nothing.
+    """
+    acc_name = str(RULES.get("acc_file_name", "acc_definitions.json"))
+    root = _fir_root(_ancestor_acc_dir(bundle_dir))
+    if root is None or not ICAO_RE.fullmatch(code):
+        return [], []
+    for candidate in (root / code[0] / code[:2] / code, root / code[0] / code):
+        if (candidate / acc_name).is_file():
+            return _neighbour_acc(candidate)
     return [], []
+
+
+def _fir_root(acc_dir: Path | None) -> Path | None:
+    """The root `acc_dir` stands in, laid out `<root>/P/PC/FIR` or `<root>/P/FIR`, or None."""
+    if acc_dir is None or len(acc_dir.name) != 4:
+        return None
+    parent = acc_dir.parent
+    if parent.name.upper() == acc_dir.name.upper()[:2] and len(parent.parent.name) == 1:
+        return parent.parent.parent
+    return parent.parent if len(parent.name) == 1 else None
+
+
+def _row_ends(payload: object) -> list[str]:
+    """Every coordination row end ('from' and 'to'), in row order, once each."""
+    ends: list[str] = []
+    if not isinstance(payload, dict):
+        return ends
+    rows = payload.get("agreements", [])
+    if not isinstance(rows, list):
+        return ends
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        for key in ("from", "to"):
+            end = str(row.get(key, "")).strip()
+            if end and end not in ends:
+                ends.append(end)
+    return ends
+
+
+def _declared_ids(defs_payload: object, layout_payload: object) -> set[str]:
+    """Every unit id and position call sign the bundle itself defines."""
+    ids: set[str] = set()
+    for payload in (defs_payload, layout_payload):
+        if not isinstance(payload, dict):
+            continue
+        for unit in payload.get("units", []) if isinstance(payload.get("units"), list) else []:
+            if isinstance(unit, dict) and str(unit.get("id", "")).strip():
+                ids.add(str(unit["id"]).strip())
+        for pos in payload.get("positions", []) if isinstance(payload.get("positions"), list) else []:
+            if isinstance(pos, dict) and str(pos.get("call_sign", "")).strip():
+                ids.add(str(pos["call_sign"]).strip())
+        configs = payload.get("configurations")
+        if isinstance(configs, dict):
+            ids.update(str(unit_id) for unit_id in configs)
+    return ids
 
 
 def _sector_ids_and_catalog(bundle_dir: Path) -> tuple[set[str], dict[str, dict]]:
@@ -803,6 +907,24 @@ def check_bundle(bundle_dir: Path) -> list[str]:
 
     sector_ids, sector_catalog = _sector_ids_and_catalog(bundle_dir)
     acc_units, acc_positions = _ancestor_acc(bundle_dir)
+    acc_dir = _ancestor_acc_dir(bundle_dir)
+    own_fir = acc_dir.name.upper() if acc_dir is not None else ""
+    known = _declared_ids(defs_payload, layout_payload)
+    for unit in acc_units:
+        known.add(str(unit.get("id", "")).strip())
+    for pos in acc_positions:
+        known.add(str(pos.get("call_sign", "")).strip())
+    seen: set[str] = set()
+    for end in _row_ends(coordination_payload):
+        if not own_fir or end in known:
+            continue
+        code = end.strip().upper()[:4]
+        if code == own_fir or code in seen:
+            continue
+        seen.add(code)
+        units, positions = _fir_acc(bundle_dir, code)
+        acc_units = acc_units + units
+        acc_positions = acc_positions + positions
     problems = check(
         defs_payload,
         layout_payload,

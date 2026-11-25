@@ -21,6 +21,7 @@ AGREEMENT_END_KEYS = ("from", "to")
 GO_AROUND_KEY = "go_around"
 GO_AROUND_END_KEY = "to"
 SECTOR_END_CAPABILITY = "community.agreement_sector_ends"
+NEIGHBOUR_CENTER_CAPABILITY = "community.neighbour_centers"
 
 
 @dataclass(frozen=True)
@@ -28,15 +29,19 @@ class AirspaceContext:
     """The airspace names one bundle's own files and its ancestor ACC define.
 
     ``bundle`` is the bundle path, used only to name it in an error. ``known_units`` and
-    ``known_positions`` are what a released checker accepts for this bundle; everything
-    else it finds in the files is kept so a later feature can resolve through it.
-    ``unit_parents`` is unit -> the unit its ``part_of`` names, uppercased as the released
-    checker's own parent map is, for the airspace a row's ends share.
+    ``known_positions`` are what a released checker accepts for this bundle: what the
+    bundle and its ancestor ACC define. Everything else it finds in the files is kept so a
+    later feature can resolve through it. ``neighbour_centers`` are the unit ids and
+    position call signs a neighbouring FIR folder's acc documents define, which only a
+    build with ``community.neighbour_centers`` accepts. ``unit_parents`` is unit -> the unit
+    its ``part_of`` names, uppercased as the released checker's own parent map is, for the
+    airspace a row's ends share.
     """
 
     bundle: str = ""
     known_units: frozenset[str] = frozenset()
     known_positions: frozenset[str] = frozenset()
+    neighbour_centers: frozenset[str] = frozenset()
     sectors: frozenset[str] = frozenset()
     sector_position: Mapping[str, str] = field(default_factory=dict)
     top_center: str = ""
@@ -201,26 +206,39 @@ def _top_center(payload: object) -> str:
     return root
 
 
+def declared_names(*payloads: object) -> frozenset[str]:
+    """Every unit id and position call sign these documents define."""
+    names: set[str] = set()
+    for payload in payloads:
+        names |= _unit_ids(payload) | _call_signs(payload)
+    return frozenset(names)
+
+
 def airspace_context(
     bundle_documents: Mapping[str, object],
     acc_documents: Mapping[str, object] | None = None,
     *,
     bundle: str = "",
+    neighbour_documents: Sequence[object] = (),
 ) -> AirspaceContext:
-    """Read one bundle's documents (and its ancestor ACC's) into the names they define."""
+    """Read one bundle's documents (and its ancestor ACC's) into the names they define.
+
+    ``neighbour_documents`` are the acc documents of the FIR folders the bundle's rows
+    reach into, found by the caller; their units and positions are ``neighbour_centers``.
+    """
     own = {kind: with_every_tier(payload) for kind, payload in dict(bundle_documents or {}).items()}
     acc = {kind: with_every_tier(payload) for kind, payload in dict(acc_documents or {}).items()}
     catalog = _sector_catalog(own.get("definitions"), acc.get("definitions"))
-    known_units = (
-        _unit_ids(own.get("tma_definitions"))
-        | _unit_ids(own.get("acc_definitions"))
-        | _unit_ids(acc.get("acc_definitions"))
+    definition_documents = (
+        own.get("tma_definitions"),
+        own.get("acc_definitions"),
+        acc.get("acc_definitions"),
     )
-    known_positions = (
-        _call_signs(own.get("tma_definitions"))
-        | _call_signs(own.get("acc_definitions"))
-        | _call_signs(acc.get("acc_definitions"))
-    )
+    known_units = frozenset().union(*(_unit_ids(payload) for payload in definition_documents))
+    known_positions = frozenset().union(*(_call_signs(payload) for payload in definition_documents))
+    # A name the bundle or its ancestor ACC defines is the bundle's own, never a neighbour's.
+    declared = declared_names(*definition_documents)
+    neighbour_centers = declared_names(*neighbour_documents) - declared
 
     worked_by: list[tuple[str, frozenset[str]]] = []
     configurations = _configurations(
@@ -254,6 +272,7 @@ def airspace_context(
         bundle=bundle,
         known_units=frozenset(known_units),
         known_positions=frozenset(known_positions),
+        neighbour_centers=frozenset(neighbour_centers),
         sectors=frozenset(catalog),
         sector_position=sector_position,
         top_center=_top_center(acc.get("acc_definitions") or own.get("acc_definitions")),
@@ -353,8 +372,49 @@ def _downgrade_sector_ends(
     return downgraded
 
 
+def is_neighbour_end(name: str, context: AirspaceContext) -> bool:
+    """True when an agreement end names a centre of another FIR, not this bundle's airspace.
+
+    A released checker accepts a unit or a position this bundle and its ancestor ACC
+    define, and nothing else: a name only a neighbouring FIR folder's acc documents define
+    needs ``community.neighbour_centers``, which is the capability this record claims.
+    Anything outside both groups is a name nobody defines.
+    """
+    if not name or name in context.known_units or name in context.known_positions:
+        return False
+    return name in context.neighbour_centers
+
+
+def _neighbour_ends_used(rows: Sequence[dict[str, object]], context: AirspaceContext) -> bool:
+    return any(is_neighbour_end(end, context) for row in rows for end in agreement_ends(row))
+
+
+def _downgrade_neighbour_ends(
+    rows: Sequence[dict[str, object]], context: AirspaceContext
+) -> list[dict[str, object]]:
+    """Drop each row that hands airspace to a neighbour; a kept row loses a neighbour go-around."""
+    kept: list[dict[str, object]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            kept.append(row)
+            continue
+        if any(is_neighbour_end(_text(row.get(key)), context) for key in AGREEMENT_END_KEYS):
+            continue
+        result = deepcopy(row)
+        go_around = result.get(GO_AROUND_KEY)
+        if isinstance(go_around, dict) and is_neighbour_end(
+            _text(go_around.get(GO_AROUND_END_KEY)), context
+        ):
+            # A row's key set has no go-around of its own — no coordination file writes one
+            # and the checker allows none — so the row ships and only the go-around goes.
+            del result[GO_AROUND_KEY]
+        kept.append(result)
+    return kept
+
+
 FEATURES: tuple[Feature, ...] = (
     Feature(SECTOR_END_CAPABILITY, _sector_ends_used, _downgrade_sector_ends),
+    Feature(NEIGHBOUR_CENTER_CAPABILITY, _neighbour_ends_used, _downgrade_neighbour_ends),
 )
 
 

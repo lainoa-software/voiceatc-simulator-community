@@ -1,0 +1,12 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LFMM_CTR": {
+      "1": {
+        "positions": {
+          "LFMMCTR": ["LFMM"]
+        }
+      }
+    }
+  }
+}
