@@ -1594,7 +1594,7 @@
     },
     {
       "higher_limit": 6500,
-      "lower_limit": 1900,
+      "lower_limit": 0,
       "polygon": [
         [
           40.11,
@@ -1691,7 +1691,7 @@
     },
     {
       "higher_limit": 6500,
-      "lower_limit": 1500,
+      "lower_limit": 0,
       "polygon": [
         [
           39.986666667,
@@ -6400,7 +6400,7 @@
       ]
     },
     {
-      "higher_limit": 2500.0,
+      "higher_limit": 3000.0,
       "lower_limit": 0.0,
       "polygon": [
         [
