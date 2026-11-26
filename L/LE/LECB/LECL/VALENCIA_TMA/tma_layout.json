@@ -11,7 +11,8 @@
       "3W": {
         "positions": {
           "LECLVAP": ["LECLVAP"],
-          "LECLAAW": ["LECLAAW"]
+          "LECLAAW": ["LECLAAW"],
+          "LECLSUW": ["LECLSUW"]
         },
         "airports": ["LEAL", "LEVC"]
       }
