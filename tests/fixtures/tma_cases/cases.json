@@ -7666,6 +7666,359 @@
           "units[2] \"GIR_TWR\".airport"
         ]
       ]
+    },
+    {
+      "name": "empty_positions_ok",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLALB",
+        "LEBLCORE",
+        "LEGEAPP",
+        "LERSAPP"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL"
+              ]
+            },
+            "1A": {
+              "positions": {},
+              "airports": [
+                "LEBL"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": []
+    },
+    {
+      "name": "unit_wholly_empty",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLCORE"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "1A": {
+              "positions": {},
+              "airports": [
+                "LEBL"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_FIELD_SHAPE",
+          "configurations.BCN_APP.1A.positions"
+        ]
+      ]
+    },
+    {
+      "name": "part_of_non_center_callsign_ok",
+      "bundle_key": "PALMA_TMA",
+      "sector_ids": [
+        "LECPAPR"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "LEPA_APP",
+            "call_sign": "Palma Control",
+            "services": [
+              "approach_radar"
+            ],
+            "part_of": "LECP_CTR"
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LECP_APR_APP",
+            "unit": "LEPA_APP",
+            "frequency": "119.155"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "LEPA_APP": {
+            "1A": {
+              "positions": {
+                "LECP_APR_APP": [
+                  "LECPAPR"
+                ]
+              },
+              "airports": [
+                "LEPA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [
+        {
+          "id": "LECP_CTR",
+          "call_sign": "Barcelona Control",
+          "services": [
+            "center"
+          ]
+        }
+      ],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": []
+    },
+    {
+      "name": "sub_centre_part_of_callsign_forbidden",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLCORE"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          },
+          {
+            "id": "SUB_CTR",
+            "call_sign": "Sub Center",
+            "part_of": "BCN_CTR"
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [
+        {
+          "id": "BCN_CTR",
+          "call_sign": "Barcelona Control",
+          "services": [
+            "center"
+          ]
+        }
+      ],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_UNIT_PART_OF_CALLSIGN",
+          "units[1] \"SUB_CTR\""
+        ],
+        [
+          "TMA_CENTER_IN_TMA",
+          "units[1] \"SUB_CTR\""
+        ]
+      ]
+    },
+    {
+      "name": "part_of_unknown_parent",
+      "bundle_key": "PALMA_TMA",
+      "sector_ids": [
+        "LECPAPR"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "LEPA_APP",
+            "call_sign": "Palma Control",
+            "services": [
+              "approach_radar"
+            ],
+            "part_of": "MISSING_CTR"
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LECP_APR_APP",
+            "unit": "LEPA_APP",
+            "frequency": "119.155"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "LEPA_APP": {
+            "1A": {
+              "positions": {
+                "LECP_APR_APP": [
+                  "LECPAPR"
+                ]
+              },
+              "airports": [
+                "LEPA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [
+        {
+          "id": "LECP_CTR",
+          "call_sign": "Barcelona Control",
+          "services": [
+            "center"
+          ]
+        }
+      ],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_UNIT_PART_OF_UNKNOWN",
+          "LEPA_APP"
+        ]
+      ]
+    },
+    {
+      "name": "layout_sector_in_catalog_ok",
+      "bundle_key": "PALMA_TMA",
+      "sector_ids": [
+        "LECPAPR"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "LEPA_APP",
+            "call_sign": "Palma Control",
+            "services": [
+              "approach_radar"
+            ],
+            "part_of": "LECP_CTR"
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LECP_APR_APP",
+            "unit": "LEPA_APP",
+            "frequency": "119.155"
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "LEPA_APP": {
+            "1A": {
+              "positions": {
+                "LECP_APR_APP": [
+                  "LECPAPR",
+                  "LECPGXX"
+                ]
+              },
+              "airports": [
+                "LEPA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [
+        {
+          "id": "LECP_CTR",
+          "call_sign": "Barcelona Control",
+          "services": [
+            "center"
+          ]
+        }
+      ],
+      "acc_positions": [],
+      "coordination": null,
+      "sector_catalog": {
+        "LECPGXX": {
+          "name": "GXX",
+          "title": "Palma Oeste"
+        }
+      },
+      "expect": []
     }
   ]
 }
