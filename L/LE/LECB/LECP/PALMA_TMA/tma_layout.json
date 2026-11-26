@@ -9,6 +9,31 @@
           ],
           "LECP_MXX_APP": [
             "LECPMXX"
+          ],
+          "LECP_IXX_APP": [
+            "LECPIXX"
+          ]
+        },
+        "airports": [
+          "LEPA",
+          "LEIB",
+          "LEMH"
+        ]
+      },
+      "4F": {
+        "positions": {
+          "LECP_APR_APP": [
+            "LECPAPR"
+          ],
+          "LECP_MXX_APP": [
+            "LECPMXX"
+          ],
+          "LECP_IXX_APP": [
+            "LECPIXX"
+          ],
+          "LECP_GTX_APP": [
+            "LECPGXX",
+            "LECPTXX"
           ]
         },
         "airports": [
@@ -30,6 +55,9 @@
           ],
           "LECP_MXX_APP": [
             "LECPMXX"
+          ],
+          "LECP_IXX_APP": [
+            "LECPIXX"
           ]
         },
         "airports": [
@@ -54,6 +82,9 @@
           ],
           "LECP_MXX_APP": [
             "LECPMXX"
+          ],
+          "LECP_IXX_APP": [
+            "LECPIXX"
           ]
         },
         "airports": [
@@ -82,6 +113,9 @@
           ],
           "LECP_MXX_APP": [
             "LECPMXX"
+          ],
+          "LECP_IXX_APP": [
+            "LECPIXX"
           ]
         },
         "airports": [
@@ -96,69 +130,14 @@
       "1A": {
         "positions": {
           "LECP_ALP_APP": [
-            "LECPALP"
+            "LECPALP",
+            "LECPGXX",
+            "LECPTXX"
           ]
         },
         "airports": [
           "LEPA"
         ]
-      }
-    },
-    "LEIB_APP": {
-      "3D": {
-        "positions": {
-          "LECP_IXX_APP": [
-            "LECPIXX"
-          ]
-        },
-        "airports": [
-          "LEPA",
-          "LEIB",
-          "LEMH"
-        ]
-      },
-      "7G": {
-        "positions": {
-          "LECP_IXX_APP": [
-            "LECPIXX"
-          ]
-        },
-        "airports": [
-          "LEPA",
-          "LEIB",
-          "LEMH"
-        ]
-      },
-      "8A": {
-        "positions": {
-          "LECP_IXX_APP": [
-            "LECPIXX"
-          ]
-        },
-        "airports": [
-          "LEPA"
-        ],
-        "valid_for_runways": {
-          "LEPA": [
-            "WLR",
-            "WEST_DUAL"
-          ]
-        }
-      },
-      "8B": {
-        "positions": {
-          "LECP_IXX_APP": [
-            "LECPIXX"
-          ]
-        },
-        "airports": [
-          "LEPA"
-        ],
-        "valid_for_runways": {
-          "LEPA": [
-            "ELR"
-          ]
-        }
       }
     },
     "LEMH_TWR": {

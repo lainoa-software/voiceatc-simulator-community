@@ -6,14 +6,8 @@
       "call_sign": "Palma Control",
       "services": [
         "approach_radar"
-      ]
-    },
-    {
-      "id": "LEIB_APP",
-      "call_sign": "Palma Control",
-      "services": [
-        "approach_radar"
-      ]
+      ],
+      "part_of": "LECP_CTR"
     },
     {
       "id": "LEPA_TWR",
@@ -59,7 +53,7 @@
     },
     {
       "call_sign": "LECP_IXX_APP",
-      "unit": "LEIB_APP",
+      "unit": "LEPA_APP",
       "frequency": "134.825"
     },
     {
@@ -136,6 +130,11 @@
       "call_sign": "LEPA_TWR",
       "unit": "LEPA_TWR",
       "frequency": "118.305"
+    },
+    {
+      "call_sign": "LECP_GTX_APP",
+      "unit": "LEPA_APP",
+      "frequency": "129.255"
     }
   ],
   "zones": [

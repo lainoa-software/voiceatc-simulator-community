@@ -1,0 +1,25 @@
+{
+  "L/LE/LECB": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "acc_definitions.json",
+      "acc_layout.json",
+      "sector_definitions.json"
+    ]
+  },
+  "L/LE/LECB/LECP/PALMA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "sector_definitions.json",
+      "tma_coordination.json",
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  }
+}

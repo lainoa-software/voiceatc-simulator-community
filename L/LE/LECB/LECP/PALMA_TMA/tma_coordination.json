@@ -200,7 +200,7 @@
     {
       "name": "LEPA_ARR_OSGAL_ENTRY",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEPA"
       ],
@@ -211,7 +211,7 @@
     },
     {
       "name": "LEPA_ARR_OSGAL",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -224,7 +224,7 @@
     {
       "name": "LEPA_ARR_MEBUT_ENTRY",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEPA"
       ],
@@ -235,7 +235,7 @@
     },
     {
       "name": "LEPA_ARR_MEBUT",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -248,7 +248,7 @@
     {
       "name": "LEPA_ARR_RUXET_ENTRY",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEPA"
       ],
@@ -259,7 +259,7 @@
     },
     {
       "name": "LEPA_ARR_RUXET",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -271,7 +271,7 @@
     },
     {
       "name": "LEPA_ARR_LAMPA_WEST",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -287,7 +287,7 @@
     },
     {
       "name": "LEPA_ARR_LAMPA_EAST",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "arrives": [
         "LEPA"
@@ -316,7 +316,7 @@
     {
       "name": "LEIB_ARR_TOLSO",
       "from": "LECP_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -340,7 +340,7 @@
     {
       "name": "LEIB_ARR_CORDA",
       "from": "LECP_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -352,7 +352,7 @@
     {
       "name": "LEIB_ARR_RIXOT",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -364,7 +364,7 @@
     {
       "name": "LEIB_ARR_MORSS",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -376,7 +376,7 @@
     {
       "name": "LEIB_ARR_POS",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -388,7 +388,7 @@
     {
       "name": "LEIB_ARR_INSUB",
       "from": "LECB_BKW_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -400,7 +400,7 @@
     {
       "name": "LEIB_ARR_RUXET",
       "from": "LECB_BKW_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -412,7 +412,7 @@
     {
       "name": "LEIB_ARR_VARUT",
       "from": "LECB_BKW_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -424,7 +424,7 @@
     {
       "name": "LEIB_ARR_NEVIC",
       "from": "LECP_MXX_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -436,7 +436,7 @@
     {
       "name": "LEIB_ARR_NELUX",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -451,7 +451,7 @@
     {
       "name": "LEIB_ARR_NEGRE_WEST",
       "from": "LECP_GXX_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -466,7 +466,7 @@
     {
       "name": "LEIB_ARR_NEGRE_EAST",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -481,7 +481,7 @@
     {
       "name": "LEIB_ARR_ADX",
       "from": "LECP_GXX_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -493,7 +493,7 @@
     {
       "name": "LEIB_ARR_MJV_WEST",
       "from": "LECB_BKE_CTR",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "arrives": [
         "LEIB"
       ],
@@ -694,7 +694,7 @@
     {
       "name": "LEPA_DEP_BAVER_WEST",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -710,7 +710,7 @@
     {
       "name": "LEPA_DEP_BAVER_EAST",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -726,7 +726,7 @@
     {
       "name": "LEPA_DEP_MEBUT_WEST",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -742,7 +742,7 @@
     {
       "name": "LEPA_DEP_MEBUT_EAST",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -758,7 +758,7 @@
     {
       "name": "LEPA_DEP_OSGAL",
       "from": "LEPA_APP",
-      "to": "LEIB_APP",
+      "to": "LECP_IXX_APP",
       "departs": [
         "LEPA"
       ],
@@ -769,7 +769,7 @@
     },
     {
       "name": "LEPA_DEP_OSGAL_EXIT",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKE_CTR",
       "departs": [
         "LEPA"
@@ -873,7 +873,7 @@
     },
     {
       "name": "LEIB_DEP_EPAMA",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECP_GXX_CTR",
       "departs": [
         "LEIB"
@@ -897,7 +897,7 @@
     },
     {
       "name": "LEIB_DEP_XOSTA",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKW_CTR",
       "departs": [
         "LEIB"
@@ -909,7 +909,7 @@
     },
     {
       "name": "LEIB_DEP_BAVER",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKW_CTR",
       "departs": [
         "LEIB"
@@ -921,7 +921,7 @@
     },
     {
       "name": "LEIB_DEP_INSUB",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKW_CTR",
       "departs": [
         "LEIB"
@@ -933,7 +933,7 @@
     },
     {
       "name": "LEIB_DEP_KABRE",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKE_CTR",
       "departs": [
         "LEIB"
@@ -945,7 +945,7 @@
     },
     {
       "name": "LEIB_DEP_MHN",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LECB_BKE_CTR",
       "departs": [
         "LEIB"
@@ -957,7 +957,7 @@
     },
     {
       "name": "LEIB_DEP_LAMPA",
-      "from": "LEIB_APP",
+      "from": "LECP_IXX_APP",
       "to": "LEPA_APP",
       "departs": [
         "LEIB"
