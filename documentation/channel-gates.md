@@ -64,6 +64,8 @@ only. The release never reads that column.
 | `community.airspace_files` | Reads schema-2 airspace files (`tma_structure.json`, `tma_coordination.json`, `acc_structure.json`, `acc_coordination.json`). | closed beta (0.6.4 line) |
 | `community.agreement_sector_ends` | Reads a coordination row whose `from`/`to`/`go_around.to` names a sector; older builds get a row ending at the position that works that sector. | not shipped yet |
 | `community.neighbour_centers` | Reads a coordination row whose `from`/`to`/`go_around.to` names a unit or a position only the acc documents of another FIR folder define, the folder its first four letters name (the centre next door); older builds get the bundle without that row, and without a go-around that reaches one. | not shipped yet |
+| `community.seat_handoffs` | Splits multi-seat units into a held seat and independent colleague seats on their own frequencies, keeping held-seat air precedence and resolving parent-unit agreements by entered/exited sector. | closed beta (0.6.4 line, not shipped yet) |
+| `community.setup_follows_player` | Gives every non-player unit the configuration id the player chose when it has one, and allows empty `positions` when another configuration of that unit has seats. | closed beta (0.6.4 line, not shipped yet) |
 | `routes.starless_arrivals` | Flies an arrival filed to an approach transition's first fix (no STAR) and reads `.voiceatc/full/routes_manifest.json`. | closed beta (0.6.2 line) |
 | `routes.route_rules` | Reads the contributor route rules overlay `ROUTES/full/route_rules.tsv` (rows rebuilt from `ROUTES/rules/`). Its gate is `closed-beta` only and comes after the starless gate, so the starless-only variant stays open to every channel. | closed beta (0.6.3 line) |
 

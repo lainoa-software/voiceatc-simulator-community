@@ -32,6 +32,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GATES_PATH = Path(".voiceatc") / "gates.json"
 FULL_DIR = Path(".voiceatc") / "full"
+CAPABILITY_FALLBACKS_DIR = Path("release") / "capability_fallbacks"
+CAPABILITY_FALLBACKS_INDEX_PATH = CAPABILITY_FALLBACKS_DIR / "index.json"
 CHANNELS = ("stable", "open-beta", "closed-beta")
 # Datasets whose default output this producer filters (the release zips).
 FILTERED_DATASETS = ("mva", "runway_configs", "sector_data", "misc_drawings", "color_profiles")
@@ -137,6 +139,61 @@ def load_gates(root: Path = ROOT) -> list[dict[str, object]]:
     if not path.is_file():
         return []
     return validate_gates(_read_json(path), str(path))
+
+
+def validate_capability_fallbacks(
+    payload: object,
+    root: Path = ROOT,
+    label: str = str(CAPABILITY_FALLBACKS_INDEX_PATH),
+) -> dict[str, dict[str, object]]:
+    """Validate ``release/capability_fallbacks/index.json``: bundles, requires, and existing files."""
+    if not isinstance(payload, dict):
+        raise ValueError(f"{label}: must be a JSON object")
+    result: dict[str, dict[str, object]] = {}
+    for raw_bundle, entry in payload.items():
+        if not isinstance(raw_bundle, str):
+            raise ValueError(f"{label}: bundle key must be a string")
+        bundle = raw_bundle.strip().replace("\\", "/").strip("/")
+        if not bundle or raw_bundle.strip().startswith("/") or ".." in bundle.split("/"):
+            raise ValueError(f"{label}: invalid bundle path {raw_bundle!r}")
+        where = f"{label}: {bundle}"
+        if not isinstance(entry, dict):
+            raise ValueError(f"{where} must be an object")
+        unknown = set(entry) - {"requires", "files"}
+        if unknown:
+            raise ValueError(f"{where} has unknown keys {sorted(unknown)}")
+        requires = entry.get("requires")
+        if not isinstance(requires, list) or not requires:
+            raise ValueError(f"{where}: requires must be a non-empty array of capability names")
+        for name in requires:
+            validate_capability(name, f"{where}: requires")
+        if len(set(requires)) != len(requires):
+            raise ValueError(f"{where}: duplicate capability in requires")
+        files = entry.get("files")
+        if not isinstance(files, list) or not files:
+            raise ValueError(f"{where}: files must be a non-empty array of file names")
+        normalized_files: list[str] = []
+        for raw_file in files:
+            if not isinstance(raw_file, str) or not raw_file.strip():
+                raise ValueError(f"{where}: file name must be a non-empty string")
+            fname = raw_file.strip()
+            if "/" in fname or "\\" in fname or fname in (".", ".."):
+                raise ValueError(f"{where}: invalid file name {raw_file!r}")
+            fallback_path = root / CAPABILITY_FALLBACKS_DIR / bundle / fname
+            if not fallback_path.is_file():
+                raise ValueError(f"{where}: missing fallback file '{fallback_path.relative_to(root).as_posix()}'")
+            normalized_files.append(fname)
+        if len(set(normalized_files)) != len(normalized_files):
+            raise ValueError(f"{where}: duplicate file in files")
+        result[bundle] = {"requires": list(requires), "files": normalized_files}
+    return result
+
+
+def load_capability_fallbacks(root: Path = ROOT) -> dict[str, dict[str, object]]:
+    path = root / CAPABILITY_FALLBACKS_INDEX_PATH
+    if not path.is_file():
+        return {}
+    return validate_capability_fallbacks(_read_json(path), root=root, label=str(path))
 
 
 def is_default_visible(rule: dict[str, object]) -> bool:
@@ -299,10 +356,11 @@ def main() -> int:
     parser.parse_args()
     try:
         gates = load_gates(ROOT)
+        fallbacks = load_capability_fallbacks(ROOT)
     except Exception as exc:
         print(str(exc), file=sys.stderr)
         return 1
-    print(f"Validated {len(gates)} gates.")
+    print(f"Validated {len(gates)} gates and {len(fallbacks)} capability fallback bundle(s).")
     return 0
 
 

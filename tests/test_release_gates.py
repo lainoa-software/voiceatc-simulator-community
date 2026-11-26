@@ -288,5 +288,60 @@ class ProducerGateTests(unittest.TestCase):
             self.assertEqual(bundle["manifests"]["mva"]["airports"], {})
 
 
+class CapabilityFallbacksValidationTests(unittest.TestCase):
+    def test_missing_index_returns_empty_and_valid_index_passes(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self.assertEqual({}, GATES.load_capability_fallbacks(root))
+
+            fb_dir = root / "release" / "capability_fallbacks" / "L" / "LE" / "LECB"
+            fb_dir.mkdir(parents=True)
+            (fb_dir / "acc_definitions.json").write_text("{}\n", encoding="utf-8")
+            (root / "release" / "capability_fallbacks" / "index.json").write_text(
+                json.dumps(
+                    {
+                        "L/LE/LECB": {
+                            "requires": ["community.seat_handoffs", "community.setup_follows_player"],
+                            "files": ["acc_definitions.json"],
+                        }
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            loaded = GATES.load_capability_fallbacks(root)
+            self.assertEqual(
+                {
+                    "L/LE/LECB": {
+                        "requires": ["community.seat_handoffs", "community.setup_follows_player"],
+                        "files": ["acc_definitions.json"],
+                    }
+                },
+                loaded,
+            )
+
+    def test_rejects_missing_file_or_malformed_index_entries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            fb_dir = root / "release" / "capability_fallbacks" / "L" / "LE" / "LECB"
+            fb_dir.mkdir(parents=True)
+            (fb_dir / "acc_definitions.json").write_text("{}\n", encoding="utf-8")
+            bad_payloads = [
+                [],
+                {"L/LE/LECB": {"requires": ["community.seat_handoffs"], "files": ["missing.json"]}},
+                {"L/LE/LECB": {"requires": ["badcap"], "files": ["acc_definitions.json"]}},
+                {"L/LE/LECB": {"requires": ["a.b", "a.b"], "files": ["acc_definitions.json"]}},
+                {"L/LE/LECB": {"requires": [], "files": ["acc_definitions.json"]}},
+                {"L/LE/LECB": {"requires": ["a.b"], "files": []}},
+                {"L/LE/LECB": {"requires": ["a.b"], "files": ["acc_definitions.json", "acc_definitions.json"]}},
+                {"L/LE/LECB": {"requires": ["a.b"], "files": ["sub/acc_definitions.json"]}},
+                {"L/LE/LECB": {"requires": ["a.b"], "files": ["acc_definitions.json"], "extra": 1}},
+                {"../escape": {"requires": ["a.b"], "files": ["acc_definitions.json"]}},
+            ]
+            for payload in bad_payloads:
+                with self.subTest(payload=payload), self.assertRaises(ValueError):
+                    GATES.validate_capability_fallbacks(payload, root=root)
+
+
 if __name__ == "__main__":
     unittest.main()
