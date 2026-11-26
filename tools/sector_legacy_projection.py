@@ -18,7 +18,7 @@ builds older than schema 3 until their snapshot is refreshed by hand.
 from __future__ import annotations
 
 try:
-    from . import airac_overrides, schema3_features, tma_checker
+    from . import airac_overrides, release_gates, schema3_features, tma_checker
 except ImportError:  # run as a script, or loaded by file path (tests)
     import sys
     from pathlib import Path
@@ -26,6 +26,7 @@ except ImportError:  # run as a script, or loaded by file path (tests)
     if str(Path(__file__).resolve().parent) not in sys.path:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
     import airac_overrides
+    import release_gates
     import schema3_features
     import tma_checker
 
@@ -35,6 +36,7 @@ import hashlib
 import json
 import sys
 from pathlib import Path
+from typing import Mapping
 
 ROOT = Path(__file__).resolve().parent.parent
 FROZEN_DIR = Path("release") / "legacy_frozen"
@@ -641,14 +643,40 @@ def project_schema1_tma(
     return out
 
 
+def _fallback_file_path(
+    root: Path,
+    bundle_path: str,
+    file_name: str,
+    fallbacks: Mapping[str, Mapping[str, object]] | None,
+) -> Path | None:
+    if not fallbacks or not bundle_path or not file_name:
+        return None
+    spec = fallbacks.get(bundle_path)
+    if not isinstance(spec, Mapping):
+        return None
+    files = spec.get("files")
+    if isinstance(files, list) and file_name in files:
+        cand = root / release_gates.CAPABILITY_FALLBACKS_DIR / bundle_path / file_name
+        if cand.is_file():
+            return cand
+    return None
+
+
 def _collect_acc_data_for_bundle(
-    root: Path, bundle_path: str, all_acc_units: dict[str, dict], all_acc_positions: dict[str, dict]
+    root: Path,
+    bundle_path: str,
+    all_acc_units: dict[str, dict],
+    all_acc_positions: dict[str, dict],
+    *,
+    fallbacks: Mapping[str, Mapping[str, object]] | None = None,
 ) -> tuple[dict[str, dict], dict[str, dict]]:
     merged_units = dict(all_acc_units)
     merged_positions = dict(all_acc_positions)
     acc_path = _find_ancestor_acc_definitions(root, bundle_path)
     if acc_path is not None:
-        payload = json.loads(acc_path.read_text(encoding="utf-8"))
+        acc_bundle = acc_path.parent.relative_to(root).as_posix()
+        resolved_acc = _fallback_file_path(root, acc_bundle, acc_path.name, fallbacks) or acc_path
+        payload = json.loads(resolved_acc.read_text(encoding="utf-8"))
         for unit in payload.get("units", []):
             if isinstance(unit, dict) and unit.get("id"):
                 merged_units[str(unit["id"]).strip()] = unit
@@ -736,12 +764,19 @@ def coordination_kind(files: object) -> str:
     return ""
 
 
-def _child_tma_definitions(acc_dir_path: Path) -> dict[str, object]:
+def _child_tma_definitions(
+    root: Path,
+    acc_dir_path: Path,
+    *,
+    fallbacks: Mapping[str, Mapping[str, object]] | None = None,
+) -> dict[str, object]:
     """Every TMA under an ACC folder, whose units and call signs the game knows for its rows."""
     units: list[object] = []
     positions: list[object] = []
     for path in sorted(acc_dir_path.rglob("tma_definitions.json")):
-        document = schema3_features.with_every_tier(_read_document(path))
+        child_bundle = path.parent.relative_to(root).as_posix()
+        resolved = _fallback_file_path(root, child_bundle, path.name, fallbacks) or path
+        document = schema3_features.with_every_tier(_read_document(resolved))
         for key, collected in (("units", units), ("positions", positions)):
             values = document.get(key)
             if isinstance(values, list):
@@ -780,7 +815,11 @@ def _neighbour_acc_documents(
 
 
 def bundle_airspace_context(
-    root: Path, bundle_path: str, files: object
+    root: Path,
+    bundle_path: str,
+    files: object,
+    *,
+    fallbacks: Mapping[str, Mapping[str, object]] | None = None,
 ) -> schema3_features.AirspaceContext:
     """What the bundle's own files and its ancestor ACC folder define."""
     own: dict[str, dict] = {}
@@ -792,20 +831,24 @@ def bundle_airspace_context(
         entry = entry if isinstance(entry, dict) else entries.get(kind)
         if not isinstance(entry, dict):
             continue
-        document = _read_document(_source_path(root, str(entry.get("repo_path", ""))))
+        source = _source_path(root, str(entry.get("repo_path", "")))
+        if source is not None:
+            source = _fallback_file_path(root, bundle_path, source.name, fallbacks) or source
+        document = _read_document(source)
         if document is not None:
             own[kind] = document
     acc: dict[str, dict] = {}
     acc_dir = _ancestor_acc_dir(root, bundle_path)
     if acc_dir and acc_dir != bundle_path.strip("/"):
         for file_name, kind in _ANCESTOR_ACC_FILES:
-            document = _read_document(root / acc_dir / file_name)
+            acc_source = _fallback_file_path(root, acc_dir, file_name, fallbacks) or (root / acc_dir / file_name)
+            document = _read_document(acc_source)
             if document is not None:
                 acc[kind] = document
     # The game checks an ACC's own coordination with every child TMA's units and call signs
     # handed to it, so a row that ends at one of them is valid there.
     if coordination_kind(files) == "acc_coordination" and acc_dir:
-        own["tma_definitions"] = _child_tma_definitions(root / acc_dir)
+        own["tma_definitions"] = _child_tma_definitions(root, root / acc_dir, fallbacks=fallbacks)
     return schema3_features.airspace_context(
         own,
         acc,
@@ -815,7 +858,11 @@ def bundle_airspace_context(
 
 
 def coordination_variant(
-    root: Path, bundle_path: str, files: object
+    root: Path,
+    bundle_path: str,
+    files: object,
+    *,
+    fallbacks: Mapping[str, Mapping[str, object]] | None = None,
 ) -> tuple[tuple[str, ...], dict | None, bytes | None]:
     """(capabilities the coordination uses, its downgraded document, its authored bytes)."""
     kind = coordination_kind(files)
@@ -823,10 +870,12 @@ def coordination_variant(
         return (), None, None
     entry = files.get(kind) if isinstance(files, dict) else None
     source = _source_path(root, str(entry.get("repo_path", "")) if isinstance(entry, dict) else "")
+    if source is not None:
+        source = _fallback_file_path(root, bundle_path, source.name, fallbacks) or source
     document = _read_document(source)
     if document is None or source is None:
         return (), None, None
-    context = bundle_airspace_context(root, bundle_path, files)
+    context = bundle_airspace_context(root, bundle_path, files, fallbacks=fallbacks)
     capabilities = schema3_features.used_capabilities(
         schema3_features.agreement_rows(document), context
     )
@@ -892,6 +941,90 @@ def _schema3_entries(
     return [
         {**s3_entry, "files": downgraded_files},
         {**s3_entry, "files": authored_files, "requires": sorted(set(requires) | set(capabilities))},
+    ]
+
+
+def _schema3_bundle_entries(
+    root: Path,
+    bundle_path: str,
+    s3_entry: dict,
+    schema3_files: dict,
+    source_files: dict,
+    generated: dict[str, bytes],
+    archive_sources: dict[str, str],
+    fallbacks: Mapping[str, Mapping[str, object]],
+) -> list[dict]:
+    """Emit schema-3 entries, splitting fallback copies from ``release/capability_fallbacks/`` if present."""
+    fb_spec = fallbacks.get(bundle_path)
+    if not isinstance(fb_spec, Mapping):
+        return _schema3_entries(
+            s3_entry,
+            schema3_files,
+            coordination_variant(root, bundle_path, source_files),
+            generated,
+            archive_sources,
+        )
+
+    fb_files_set = {str(name) for name in (fb_spec.get("files") or [])}  # type: ignore[union-attr]
+    fb_reqs = [str(name) for name in (fb_spec.get("requires") or [])]  # type: ignore[union-attr]
+    coord_kind = coordination_kind(schema3_files)
+
+    fallback_files: dict[str, object] = {}
+    for fkind, fentry in schema3_files.items():
+        if not isinstance(fentry, dict) or not fentry.get("repo_path"):
+            fallback_files[fkind] = fentry
+            continue
+        rp = str(fentry["repo_path"])
+        orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
+        fb_path = _fallback_file_path(root, bundle_path, Path(orig).name, fallbacks)
+        if fb_path is not None:
+            fb_bytes = _canonical_lf(fb_path.read_bytes())
+            fallback_files[fkind] = _repathed(fentry, rp, fb_bytes)
+            generated[rp] = fb_bytes
+            archive_sources[rp] = rp
+        else:
+            fallback_files[fkind] = fentry
+
+    fb_caps, fb_downgraded, _ = coordination_variant(
+        root, bundle_path, source_files, fallbacks=fallbacks
+    )
+    if coord_kind and fb_caps and fb_downgraded is not None:
+        dg_bytes = (json.dumps(fb_downgraded, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+        coord_entry = fallback_files[coord_kind]
+        assert isinstance(coord_entry, dict)
+        coord_rp = str(coord_entry["repo_path"])
+        fallback_files[coord_kind] = _repathed(coord_entry, coord_rp, dg_bytes)
+        generated[coord_rp] = dg_bytes
+        archive_sources[coord_rp] = coord_rp
+
+    authored_caps, _authored_downgraded, _authored_bytes = coordination_variant(
+        root, bundle_path, source_files
+    )
+    authored_files: dict[str, object] = {}
+    for fkind, fentry in schema3_files.items():
+        if not isinstance(fentry, dict) or not fentry.get("repo_path"):
+            authored_files[fkind] = fentry
+            continue
+        rp = str(fentry["repo_path"])
+        orig = rp[len("airac_variants/") :] if rp.startswith("airac_variants/") else rp
+        fname = Path(orig).name
+        if fname in fb_files_set or (fkind == coord_kind and authored_caps):
+            disk_bytes = _canonical_lf((root / orig).read_bytes())
+            feat_rp = _feature_variant_path(rp)
+            authored_files[fkind] = _repathed(fentry, feat_rp, disk_bytes)
+            generated[feat_rp] = disk_bytes
+            archive_sources[feat_rp] = feat_rp
+        else:
+            authored_files[fkind] = fallback_files[fkind]
+
+    base_reqs = list(s3_entry.get("requires", [])) if isinstance(s3_entry.get("requires"), list) else []
+    return [
+        {**s3_entry, "files": fallback_files},
+        {
+            **s3_entry,
+            "files": authored_files,
+            "requires": sorted(set(base_reqs) | set(fb_reqs) | set(authored_caps)),
+        },
     ]
 
 
@@ -1900,6 +2033,7 @@ def project_release_dataset_feeds(
 ) -> tuple[dict[str, bytes], dict[str, str]]:
     """Apply legacy projections to default & full manifests for datasets."""
     if kind == "sector_data":
+        fallbacks = release_gates.load_capability_fallbacks(root)
         generated = dict(projected_bytes or {})
         archive_sources: dict[str, str] = {}
         new_full_entries: list[dict[str, object]] = []
@@ -1968,12 +2102,15 @@ def project_release_dataset_feeds(
                         s3_entry["requires"] = sorted(set(base_reqs) | {AIRSPACE_FILES_CAPABILITY})
                         s3_entry["files"] = schema3_files
                         new_full_entries.extend(
-                            _schema3_entries(
+                            _schema3_bundle_entries(
+                                root,
+                                bundle_path,
                                 s3_entry,
                                 schema3_files,
-                                coordination_variant(root, bundle_path, files),
+                                files,
                                 generated,
                                 archive_sources,
+                                fallbacks,
                             )
                         )
                 elif has_schema3_tma or has_schema3_acc:
@@ -1989,12 +2126,15 @@ def project_release_dataset_feeds(
                         s3_entry["requires"] = sorted(set(base_reqs) | {AIRSPACE_FILES_CAPABILITY})
                         s3_entry["files"] = schema3_files
                         new_full_entries.extend(
-                            _schema3_entries(
+                            _schema3_bundle_entries(
+                                root,
+                                bundle_path,
                                 s3_entry,
                                 schema3_files,
-                                coordination_variant(root, bundle_path, files),
+                                files,
                                 generated,
                                 archive_sources,
+                                fallbacks,
                             )
                         )
                 else:
@@ -2121,14 +2261,16 @@ def build_sector_release_projection(
     on the default legacy feed while canonical schema-3 files remain at their schema-3 paths.
     """
     index_bundles = load_frozen_index(root)
+    fallbacks = release_gates.load_capability_fallbacks(root)
     all_acc_units: dict[str, dict] = {}
     all_acc_positions: dict[str, dict] = {}
-    for bundle_entry in source_bundles.values():
+    for acc_bundle_path, bundle_entry in source_bundles.items():
         files = bundle_entry.get("files", {}) if isinstance(bundle_entry, dict) else {}
         acc_entry = (files.get("acc_definitions") or files.get("acc_structure")) if isinstance(files, dict) else None
         if isinstance(acc_entry, dict):
             acc_path = root / str(acc_entry["repo_path"])
-            payload = json.loads(acc_path.read_text(encoding="utf-8"))
+            resolved_acc = _fallback_file_path(root, acc_bundle_path, acc_path.name, fallbacks) or acc_path
+            payload = json.loads(resolved_acc.read_text(encoding="utf-8"))
             for unit in payload.get("units", []):
                 if isinstance(unit, dict) and unit.get("id"):
                     all_acc_units[str(unit["id"]).strip()] = unit
@@ -2187,8 +2329,12 @@ def build_sector_release_projection(
             else:
                 bundle_paths[leg_bundle_path] = "generated"
                 generated_bundles.append(leg_bundle_path)
-                tma_defs = json.loads((root / str(out_files["tma_definitions"]["repo_path"])).read_text(encoding="utf-8"))
-                tma_layout = json.loads((root / str(out_files["tma_layout"]["repo_path"])).read_text(encoding="utf-8"))
+                tma_defs_rel = str(out_files["tma_definitions"]["repo_path"])
+                tma_layout_rel = str(out_files["tma_layout"]["repo_path"])
+                tma_defs_path = _fallback_file_path(root, bundle_path, Path(tma_defs_rel).name, fallbacks) or (root / tma_defs_rel)
+                tma_layout_path = _fallback_file_path(root, bundle_path, Path(tma_layout_rel).name, fallbacks) or (root / tma_layout_rel)
+                tma_defs = json.loads(tma_defs_path.read_text(encoding="utf-8"))
+                tma_layout = json.loads(tma_layout_path.read_text(encoding="utf-8"))
                 meta = index_entry or {}
                 cfg_payload, inf_payload = project_configs_and_influence(
                     tma_defs,
@@ -2206,7 +2352,8 @@ def build_sector_release_projection(
                 leg_files["influence"] = _file_entry(inf_repo, inf_bytes)
 
                 if isinstance(out_files.get("definitions"), dict):
-                    def_raw = _canonical_lf((root / s3_def_repo).read_bytes())
+                    def_path = _fallback_file_path(root, bundle_path, Path(s3_def_repo).name, fallbacks) or (root / s3_def_repo)
+                    def_raw = _canonical_lf(def_path.read_bytes())
                     defs_doc = json.loads(def_raw.decode("utf-8"))
                     all_pos_ids = _tma_position_ids(tma_defs, tma_layout)
                     default_defs = _resolve_default_doc(defs_doc)
@@ -2222,16 +2369,17 @@ def build_sector_release_projection(
                 if "tma_coordination" in out_files and (
                     index_entry is None or "tma.json" in (index_entry.get("frozen_files") or [])
                 ):
-                    coord_path = root / str(out_files["tma_coordination"]["repo_path"])
+                    coord_rel = str(out_files["tma_coordination"]["repo_path"])
+                    coord_path = _fallback_file_path(root, bundle_path, Path(coord_rel).name, fallbacks) or (root / coord_rel)
                     tma_coordination = json.loads(coord_path.read_text(encoding="utf-8"))
-                    context = bundle_airspace_context(root, bundle_path, out_files)
+                    context = bundle_airspace_context(root, bundle_path, out_files, fallbacks=fallbacks)
                     if schema3_features.used_capabilities(
                         schema3_features.agreement_rows(tma_coordination), context
                     ):
                         # An old build reads the downgraded rows, so tma.json carries them too.
                         tma_coordination = schema3_features.downgrade_document(tma_coordination, context)
                     acc_units, acc_pos = _collect_acc_data_for_bundle(
-                        root, bundle_path, all_acc_units, all_acc_positions
+                        root, bundle_path, all_acc_units, all_acc_positions, fallbacks=fallbacks
                     )
                     bundle_key = Path(leg_bundle_path).name
                     tma_payload = project_schema1_tma(

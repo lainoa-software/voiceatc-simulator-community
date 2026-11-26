@@ -198,7 +198,8 @@ class PalmaSectorEndTests(unittest.TestCase):
     """The real Palma TMA, with the two centre ends rewritten as the sectors they work."""
 
     def _palma(self, root: Path) -> Path:
-        shutil.copytree(REPO_ROOT / "L" / "LE" / "LECB", root / "L" / "LE" / "LECB")
+        for area in ("L/LE/LECB", "L/LF/LFBB", "L/LF/LFMM"):
+            shutil.copytree(REPO_ROOT / area, root / area)
         (root / ".voiceatc").mkdir(exist_ok=True)
         shutil.copyfile(REPO_ROOT / ".voiceatc" / "gates.json", root / ".voiceatc" / "gates.json")
         return root / "L" / "LE" / "LECB" / "LECP" / "PALMA_TMA" / "tma_coordination.json"
@@ -225,12 +226,14 @@ class PalmaSectorEndTests(unittest.TestCase):
             new_entries, new_bytes = release_entries(new_root)
 
             main_schema3 = schema3_entries(main_entries, bundle)
-            self.assertEqual(1, len(main_schema3))
+            self.assertIn(len(main_schema3), (1, 2))
+            main_today = main_schema3[0]
+            main_authored = main_schema3[-1]
             new_schema3 = schema3_entries(new_entries, bundle)
             self.assertEqual(2, len(new_schema3))
             today_entry, authored_entry = new_schema3
 
-            today = main_schema3[0]["files"]["tma_coordination"]["repo_path"]
+            today = main_today["files"]["tma_coordination"]["repo_path"]
             authored_path = authored_entry["files"]["tma_coordination"]["repo_path"]
             self.assertEqual(today, today_entry["files"]["tma_coordination"]["repo_path"])
             self.assertEqual(today.replace("airac_variants/", "feature_variants/"), authored_path)
@@ -239,9 +242,9 @@ class PalmaSectorEndTests(unittest.TestCase):
                 json.loads(main_bytes[today])["agreements"],
                 json.loads(new_bytes[today])["agreements"],
             )
-            self.assertEqual(main_schema3[0]["requires"], today_entry["requires"])
+            self.assertEqual(main_today["requires"], today_entry["requires"])
             self.assertEqual(
-                sorted(set(main_schema3[0]["requires"]) | {CAPABILITY}), authored_entry["requires"]
+                sorted(set(main_authored["requires"]) | {CAPABILITY}), authored_entry["requires"]
             )
             self.assertEqual(
                 json.loads(new_bytes[authored_path])["agreements"],
@@ -250,7 +253,7 @@ class PalmaSectorEndTests(unittest.TestCase):
             # Everything else is shared, byte for byte.
             for kind, entry in today_entry["files"].items():
                 if kind != "tma_coordination":
-                    self.assertEqual(main_schema3[0]["files"][kind], entry)
+                    self.assertEqual(main_today["files"][kind], entry)
                     self.assertEqual(entry, authored_entry["files"][kind])
 
             # The schema-1 tma.json an old build reads carries the downgraded rows too.
@@ -1203,6 +1206,126 @@ class WriterTests(unittest.TestCase):
                 generated["airac_variants/L/LE/LECC/LEAA_TMA/tma_coordination.json"]
             )
             self.assertEqual("LECC_EAST_CTR", downgraded["agreements"][0]["from"])
+
+
+class CapabilityFallbacksTests(unittest.TestCase):
+    def test_fallback_bundle_ships_fallback_first_and_authored_last_with_legacy_unchanged(self) -> None:
+        caps = ["community.seat_handoffs", "community.setup_follows_player"]
+        tma = "L/LE/LECC/LEAA_TMA"
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={"schema": 3, "agreements": [agreement("PLAIN", "LEAA_APP")]},
+            )
+            old_layout = _read(root, f"{tma}/tma_layout.json")
+            _write(root, f"release/capability_fallbacks/{tma}/tma_layout.json", old_layout)
+            _write(
+                root,
+                "release/capability_fallbacks/index.json",
+                {tma: {"requires": caps, "files": ["tma_layout.json"]}},
+            )
+            new_layout = json.loads(json.dumps(old_layout))
+            new_layout["configurations"]["LEAA_APP"]["ALT"] = {
+                "positions": {"LEAA_APP": ["LEAASEC"]},
+                "airports": ["LEAA"],
+                "valid_for_runways": {"LEAA": ["NORTH"]},
+            }
+            _write(root, f"{tma}/tma_layout.json", new_layout)
+
+            entries, generated = release_entries(root)
+            found = schema3_entries(entries, tma)
+            self.assertEqual(2, len(found))
+            fb_entry, authored_entry = found
+            self.assertEqual(["community.airspace_files"], fb_entry["requires"])
+            self.assertEqual(sorted(["community.airspace_files", *caps]), authored_entry["requires"])
+            self.assertEqual(f"airac_variants/{tma}/tma_layout.json", fb_entry["files"]["tma_layout"]["repo_path"])
+            self.assertEqual(f"feature_variants/{tma}/tma_layout.json", authored_entry["files"]["tma_layout"]["repo_path"])
+            self.assertEqual(old_layout, json.loads(generated[f"airac_variants/{tma}/tma_layout.json"]))
+            self.assertEqual(new_layout, json.loads(generated[f"feature_variants/{tma}/tma_layout.json"]))
+            # Non-overridden files are shared at airac_variants/.
+            self.assertEqual(fb_entry["files"]["tma_definitions"], authored_entry["files"]["tma_definitions"])
+            # Legacy projection reads the fallback layout (only CORE, not ALT).
+            legacy_cfg = json.loads(generated[f"{tma}/sector_configs.json"])
+            self.assertEqual(["CORE"], [c["sector_config_id"] for c in legacy_cfg["sector_configs"]])
+            legacy_tma = json.loads(generated[f"{tma}/tma.json"])
+            self.assertEqual(["CORE"], [l["id"] for l in legacy_tma["layouts"]])
+
+    def test_fallback_combines_cleanly_with_schema3_features(self) -> None:
+        caps = ["community.seat_handoffs", "community.setup_follows_player"]
+        tma = "L/LE/LECC/LEAA_TMA"
+        # Case A: tma_coordination.json is in capability_fallbacks AND authored uses neighbour_centers.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={
+                    "schema": 3,
+                    "agreements": [agreement("PLAIN", "LEAA_APP"), agreement("FR", "LFBB_CTR")],
+                },
+            )
+            shutil.copytree(REPO_ROOT / "L" / "LF" / "LFBB", root / "L" / "LF" / "LFBB")
+            fb_coord = {"schema": 3, "agreements": [agreement("PLAIN", "LEAA_APP")]}
+            _write(root, f"release/capability_fallbacks/{tma}/tma_coordination.json", fb_coord)
+            _write(
+                root,
+                "release/capability_fallbacks/index.json",
+                {tma: {"requires": caps, "files": ["tma_coordination.json"]}},
+            )
+            entries, generated = release_entries(root)
+            fb_entry, authored_entry = schema3_entries(entries, tma)
+            self.assertEqual(["community.airspace_files"], fb_entry["requires"])
+            self.assertEqual(
+                sorted(["community.airspace_files", NEIGHBOUR, *caps]),
+                authored_entry["requires"],
+            )
+            self.assertEqual(fb_coord, json.loads(generated[f"airac_variants/{tma}/tma_coordination.json"]))
+            self.assertEqual(
+                ["PLAIN", "FR"],
+                [r["name"] for r in json.loads(generated[f"feature_variants/{tma}/tma_coordination.json"])["agreements"]],
+            )
+
+        # Case B: tma_layout.json is in capability_fallbacks; tma_coordination.json is not, and uses #359 features.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            build_acc_fixture(
+                root,
+                configurations={"LECC_CTR": {"DAY": {"positions": {"LECC_EAST_CTR": ["LECCEAST"]}}}},
+                tma_coordination={
+                    "schema": 3,
+                    "agreements": [
+                        agreement("PLAIN", "LEAA_APP", end="LECC_EAST_CTR", level="F120"),
+                        agreement("SECTOR", "LECCEAST"),
+                        agreement("FR", "LFBB_CTR"),
+                    ],
+                },
+            )
+            shutil.copytree(REPO_ROOT / "L" / "LF" / "LFBB", root / "L" / "LF" / "LFBB")
+            _write(root, f"release/capability_fallbacks/{tma}/tma_layout.json", _read(root, f"{tma}/tma_layout.json"))
+            _write(
+                root,
+                "release/capability_fallbacks/index.json",
+                {tma: {"requires": caps, "files": ["tma_layout.json"]}},
+            )
+            entries, generated = release_entries(root)
+            fb_entry, authored_entry = schema3_entries(entries, tma)
+            self.assertEqual(["community.airspace_files"], fb_entry["requires"])
+            self.assertEqual(
+                sorted(["community.airspace_files", CAPABILITY, NEIGHBOUR, *caps]),
+                authored_entry["requires"],
+            )
+            self.assertEqual(f"airac_variants/{tma}/tma_coordination.json", fb_entry["files"]["tma_coordination"]["repo_path"])
+            self.assertEqual(f"feature_variants/{tma}/tma_coordination.json", authored_entry["files"]["tma_coordination"]["repo_path"])
+            self.assertEqual(
+                ["PLAIN", "SECTOR"],
+                [r["name"] for r in json.loads(generated[f"airac_variants/{tma}/tma_coordination.json"])["agreements"]],
+            )
+            self.assertEqual(
+                ["PLAIN", "SECTOR", "FR"],
+                [r["name"] for r in json.loads(generated[f"feature_variants/{tma}/tma_coordination.json"])["agreements"]],
+            )
 
 
 if __name__ == "__main__":
