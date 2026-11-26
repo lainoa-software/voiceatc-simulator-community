@@ -1,16 +1,16 @@
 {
   "schema": 3,
   "configurations": {
-    "LEPA_APP": {
+    "LEPAAPP": {
       "3D": {
         "positions": {
-          "LECP_APR_APP": [
+          "LECPAPR": [
             "LECPAPR"
           ],
-          "LECP_MXX_APP": [
+          "LECPMXX": [
             "LECPMXX"
           ],
-          "LECP_IXX_APP": [
+          "LECPIXX": [
             "LECPIXX"
           ]
         },
@@ -22,16 +22,16 @@
       },
       "4F": {
         "positions": {
-          "LECP_APR_APP": [
+          "LECPAPR": [
             "LECPAPR"
           ],
-          "LECP_MXX_APP": [
+          "LECPMXX": [
             "LECPMXX"
           ],
-          "LECP_IXX_APP": [
+          "LECPIXX": [
             "LECPIXX"
           ],
-          "LECP_GTX_APP": [
+          "LECPGTX": [
             "LECPGXX",
             "LECPTXX"
           ]
@@ -44,19 +44,19 @@
       },
       "7G": {
         "positions": {
-          "LECP_APP_APP": [
+          "LECPAPP": [
             "LECPAPP"
           ],
-          "LECP_F1X_APP": [
+          "LECPF1X": [
             "LECPF1X"
           ],
-          "LECP_F2X_APP": [
+          "LECPF2X": [
             "LECPF2X"
           ],
-          "LECP_MXX_APP": [
+          "LECPMXX": [
             "LECPMXX"
           ],
-          "LECP_IXX_APP": [
+          "LECPIXX": [
             "LECPIXX"
           ]
         },
@@ -68,22 +68,22 @@
       },
       "8A": {
         "positions": {
-          "LECP_APP_APP": [
+          "LECPAPP": [
             "LECPAPP"
           ],
-          "LECP_DWX_APP": [
+          "LECPDWX": [
             "LECPDWX"
           ],
-          "LECP_L1W_APP": [
+          "LECPL1W": [
             "LECPL1W"
           ],
-          "LECP_L2W_APP": [
+          "LECPL2W": [
             "LECPL2W"
           ],
-          "LECP_MXX_APP": [
+          "LECPMXX": [
             "LECPMXX"
           ],
-          "LECP_IXX_APP": [
+          "LECPIXX": [
             "LECPIXX"
           ]
         },
@@ -99,22 +99,22 @@
       },
       "8B": {
         "positions": {
-          "LECP_APP_APP": [
+          "LECPAPP": [
             "LECPAPP"
           ],
-          "LECP_DEX_APP": [
+          "LECPDEX": [
             "LECPDEX"
           ],
-          "LECP_L1E_APP": [
+          "LECPL1E": [
             "LECPL1E"
           ],
-          "LECP_L2E_APP": [
+          "LECPL2E": [
             "LECPL2E"
           ],
-          "LECP_MXX_APP": [
+          "LECPMXX": [
             "LECPMXX"
           ],
-          "LECP_IXX_APP": [
+          "LECPIXX": [
             "LECPIXX"
           ]
         },
@@ -129,7 +129,7 @@
       },
       "1A": {
         "positions": {
-          "LECP_ALP_APP": [
+          "LECPALP": [
             "LECPALP",
             "LECPGXX",
             "LECPTXX"
@@ -140,29 +140,29 @@
         ]
       }
     },
-    "LEMH_TWR": {
+    "LEMHTWR": {
       "1": {
         "positions": {
-          "LEMH_APP": [
+          "LEMHTWR": [
             "LEMHAPP",
             "LEMHCTR"
           ]
         }
       }
     },
-    "LEIB_TWR": {
+    "LEIBTWR": {
       "1": {
         "positions": {
-          "LEIB_TWR": [
+          "LEIBTWR": [
             "LEIBCTR"
           ]
         }
       }
     },
-    "LEPA_TWR": {
+    "LEPATWR": {
       "1": {
         "positions": {
-          "LEPA_TWR": [
+          "LEPATWR": [
             "LEPATZ"
           ]
         }

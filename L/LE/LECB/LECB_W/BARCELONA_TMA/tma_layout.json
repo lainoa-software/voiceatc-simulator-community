@@ -1,39 +1,39 @@
 {
   "schema": 3,
   "configurations": {
-    "LEBL_APP": {
+    "LEBLAPP": {
       "2CO": {
         "positions": {
-          "LEBL_CORE_APP": ["LEBLCORE", "LEBLCTR"]
+          "LEBLCORE": ["LEBLCORE", "LEBLCTR"]
         },
         "airports": ["LEBL", "LEGE", "LERS", "LEDA"]
       }
     },
-    "LEBL_TWR": {
+    "LEBLTWR": {
       "1": {
         "positions": {
-          "LEBL_TWR": ["LEBLATZ"]
+          "LEBLTWR": ["LEBLATZ"]
         }
       }
     },
-    "LEGE_TWR": {
+    "LEGETWR": {
       "1": {
         "positions": {
-          "LEGE_APP": ["LEGEAPP"]
+          "LEGEAPP": ["LEGEAPP"]
         }
       }
     },
-    "LERS_TWR": {
+    "LERSTWR": {
       "1": {
         "positions": {
-          "LERS_APP": ["LERSAPP"]
+          "LERSAPP": ["LERSAPP"]
         }
       }
     },
-    "LEDA_TWR": {
+    "LEDATWR": {
       "1": {
         "positions": {
-          "LEDA_TWR": ["LEDACTR"]
+          "LEDATWR": ["LEDACTR"]
         }
       }
     }

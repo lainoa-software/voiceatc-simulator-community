@@ -64,12 +64,12 @@
   ],
   "positions": [
     {
-      "call_sign": "LECM_R1_CTR",
+      "call_sign": "LECMR1I",
       "unit": "LECM_R1_CTR",
       "frequency": "135.700"
     },
     {
-      "call_sign": "LECM_R2_CTR",
+      "call_sign": "LECMR2I",
       "unit": "LECM_R2_CTR",
       "frequency": "133.755"
     }

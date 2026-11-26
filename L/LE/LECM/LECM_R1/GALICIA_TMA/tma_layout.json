@@ -1,10 +1,10 @@
 {
   "schema": 3,
   "configurations": {
-    "LECO_APP": {
+    "LECOAPP": {
       "1": {
         "positions": {
-          "LECO_APP": ["LECGTMA"]
+          "LECGTMA": ["LECGTMA"]
         },
         "airports": ["LECO", "LEST", "LEVX"]
       }

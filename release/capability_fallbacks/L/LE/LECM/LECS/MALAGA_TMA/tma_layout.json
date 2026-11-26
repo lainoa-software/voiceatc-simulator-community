@@ -1,0 +1,16 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LEMG_APP": {
+      "1": {
+        "positions": {
+          "LEMG_APP": ["LEMGALL"]
+        },
+        "airports": ["LEMG"],
+        "valid_for_runways": {
+          "LEMG": ["SOUTH", "NORTH"]
+        }
+      }
+    }
+  }
+}

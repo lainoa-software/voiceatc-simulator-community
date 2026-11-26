@@ -10,6 +10,27 @@
       "sector_definitions.json"
     ]
   },
+  "L/LE/LECB/LECB_W/BARCELONA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_coordination.json",
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECB/LECL/VALENCIA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
   "L/LE/LECB/LECP/PALMA_TMA": {
     "requires": [
       "community.seat_handoffs",
@@ -18,6 +39,67 @@
     "files": [
       "sector_definitions.json",
       "tma_coordination.json",
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECM": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "acc_definitions.json",
+      "acc_layout.json"
+    ]
+  },
+  "L/LE/LECM/LECM_R1/BILBAO_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECM/LECM_R1/GALICIA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECM/LECM_R2/MADRID_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_coordination.json",
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECM/LECS/MALAGA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
+      "tma_definitions.json",
+      "tma_layout.json"
+    ]
+  },
+  "L/LE/LECM/LECS/SEVILLA_TMA": {
+    "requires": [
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
+    "files": [
       "tma_definitions.json",
       "tma_layout.json"
     ]

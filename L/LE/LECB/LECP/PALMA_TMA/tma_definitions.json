@@ -2,7 +2,7 @@
   "schema": 3,
   "units": [
     {
-      "id": "LEPA_APP",
+      "id": "LEPAAPP",
       "call_sign": "Palma Control",
       "services": [
         "approach_radar"
@@ -10,7 +10,7 @@
       "part_of": "LECP_CTR"
     },
     {
-      "id": "LEPA_TWR",
+      "id": "LEPATWR",
       "call_sign": "Palma Tower",
       "services": [
         "tower"
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "id": "LEIB_TWR",
+      "id": "LEIBTWR",
       "call_sign": "Ibiza Tower",
       "services": [
         "tower"
@@ -29,7 +29,7 @@
       "airport": "LEIB"
     },
     {
-      "id": "LEMH_TWR",
+      "id": "LEMHTWR",
       "call_sign": "Menorca Tower",
       "services": [
         "tower",
@@ -38,7 +38,7 @@
       "airport": "LEMH"
     },
     {
-      "id": "LEBL_APP",
+      "id": "LEBLAPP",
       "call_sign": "Barcelona Approach",
       "services": [
         "approach_radar"
@@ -47,93 +47,93 @@
   ],
   "positions": [
     {
-      "call_sign": "LECP_APR_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPAPR",
+      "unit": "LEPAAPP",
       "frequency": "119.155"
     },
     {
-      "call_sign": "LECP_IXX_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPIXX",
+      "unit": "LEPAAPP",
       "frequency": "134.825"
     },
     {
-      "call_sign": "LECP_MXX_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPMXX",
+      "unit": "LEPAAPP",
       "frequency": "120.700"
     },
     {
-      "call_sign": "LECP_APP_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPAPP",
+      "unit": "LEPAAPP",
       "frequency": "119.155"
     },
     {
-      "call_sign": "LECP_F1X_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPF1X",
+      "unit": "LEPAAPP",
       "frequency": "118.955"
     },
     {
-      "call_sign": "LECP_F2X_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPF2X",
+      "unit": "LEPAAPP",
       "frequency": "119.405"
     },
     {
-      "call_sign": "LECP_L1W_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPL1W",
+      "unit": "LEPAAPP",
       "frequency": "118.955"
     },
     {
-      "call_sign": "LECP_L2W_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPL2W",
+      "unit": "LEPAAPP",
       "frequency": "119.405"
     },
     {
-      "call_sign": "LECP_DWX_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPDWX",
+      "unit": "LEPAAPP",
       "frequency": "118.005"
     },
     {
-      "call_sign": "LECP_L1E_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPL1E",
+      "unit": "LEPAAPP",
       "frequency": "118.955"
     },
     {
-      "call_sign": "LECP_L2E_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPL2E",
+      "unit": "LEPAAPP",
       "frequency": "119.405"
     },
     {
-      "call_sign": "LECP_DEX_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPDEX",
+      "unit": "LEPAAPP",
       "frequency": "118.005"
     },
     {
-      "call_sign": "LECP_ALP_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPALP",
+      "unit": "LEPAAPP",
       "frequency": "119.155"
     },
     {
-      "call_sign": "LEMH_APP",
-      "unit": "LEMH_TWR",
+      "call_sign": "LEMHTWR",
+      "unit": "LEMHTWR",
       "frequency": "119.655"
     },
     {
-      "call_sign": "LEIB_TWR",
-      "unit": "LEIB_TWR",
+      "call_sign": "LEIBTWR",
+      "unit": "LEIBTWR",
       "frequency": "118.505"
     },
     {
-      "call_sign": "LEBL_APP",
-      "unit": "LEBL_APP",
+      "call_sign": "LEBLAPP",
+      "unit": "LEBLAPP",
       "frequency": "131.125"
     },
     {
-      "call_sign": "LEPA_TWR",
-      "unit": "LEPA_TWR",
+      "call_sign": "LEPATWR",
+      "unit": "LEPATWR",
       "frequency": "118.305"
     },
     {
-      "call_sign": "LECP_GTX_APP",
-      "unit": "LEPA_APP",
+      "call_sign": "LECPGTX",
+      "unit": "LEPAAPP",
       "frequency": "129.255"
     }
   ],

@@ -1,0 +1,46 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEMD_APP",
+      "call_sign": "Madrid Approach",
+      "services": ["approach_radar"]
+    },
+    {
+      "id": "LEMD_TWR",
+      "call_sign": "Barajas Tower",
+      "services": ["tower"],
+      "airport": "LEMD",
+      "unassigned_frequencies": ["118.080", "118.680", "118.980"]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEMD_ALN_APP",
+      "unit": "LEMD_APP",
+      "frequency": "136.105"
+    },
+    {
+      "call_sign": "LEMD_TWR",
+      "unit": "LEMD_TWR",
+      "frequency": "118.155"
+    },
+    {
+      "call_sign": "LEMD_ALS_APP",
+      "unit": "LEMD_APP",
+      "frequency": "136.105"
+    }
+  ],
+  "zones": [
+    {
+      "airport": "LEMD",
+      "kind": "CTR",
+      "sector": "LEMDCTR"
+    },
+    {
+      "airport": "LEMD",
+      "kind": "ATZ",
+      "sector": "LEMDATZ"
+    }
+  ]
+}

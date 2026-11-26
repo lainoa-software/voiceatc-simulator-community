@@ -1,17 +1,17 @@
 {
   "schema": 3,
   "configurations": {
-    "LEAL_APP": {
+    "LEALAPP": {
       "1": {
         "positions": {
-          "LEAL_APP": ["LECLALV"]
+          "LECLALV": ["LECLALV"]
         },
         "airports": ["LEAL", "LEVC"]
       },
       "3W": {
         "positions": {
-          "LEVC_APP": ["LECLVAP"],
-          "LEAL_AAW_APP": ["LECLAAW"]
+          "LECLVAP": ["LECLVAP"],
+          "LECLAAW": ["LECLAAW"]
         },
         "airports": ["LEAL", "LEVC"]
       }

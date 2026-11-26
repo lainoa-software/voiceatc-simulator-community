@@ -4,7 +4,7 @@
     {
       "name": "LEBL_ARR_ALBER",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["ALBER"],
       "level": "F210"
@@ -12,7 +12,7 @@
     {
       "name": "LEBL_ARR_ALBER_LFBB",
       "from": "LFBB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["ALBER"],
       "level": "F210"
@@ -20,7 +20,7 @@
     {
       "name": "LEBL_ARR_BISBA",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["BISBA"],
       "level": "F200"
@@ -28,7 +28,7 @@
     {
       "name": "LEBL_ARR_CASPE",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["CASPE"],
       "level": "F200"
@@ -36,7 +36,7 @@
     {
       "name": "LEBL_ARR_GRAUS",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["GRAUS"],
       "level": "F200"
@@ -44,7 +44,7 @@
     {
       "name": "LEBL_ARR_LOBAR",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["LOBAR"],
       "level": "F200"
@@ -52,7 +52,7 @@
     {
       "name": "LEBL_ARR_MAMUK",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["MAMUK"],
       "level": "F110"
@@ -60,7 +60,7 @@
     {
       "name": "LEBL_ARR_MARTA",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["MARTA"],
       "level": "F200"
@@ -68,7 +68,7 @@
     {
       "name": "LEBL_ARR_MATEX",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["MATEX"],
       "level": "F200"
@@ -76,7 +76,7 @@
     {
       "name": "LEBL_ARR_NEPAL",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["NEPAL"],
       "level": "F160"
@@ -84,7 +84,7 @@
     {
       "name": "LEBL_ARR_OSTUR",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["OSTUR"],
       "level": "F160"
@@ -92,7 +92,7 @@
     {
       "name": "LEBL_ARR_PUMAL",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["PUMAL"],
       "level": "F230"
@@ -100,7 +100,7 @@
     {
       "name": "LEBL_ARR_PUMAL_LFBB",
       "from": "LFBB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["PUMAL"],
       "level": "F230"
@@ -108,7 +108,7 @@
     {
       "name": "LEBL_ARR_VERSO",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["VERSO"],
       "level": "F200"
@@ -116,14 +116,14 @@
     {
       "name": "LEBL_ARR_VIBOK",
       "from": "LECB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEBL"],
       "fix": ["VIBOK"],
       "level": "F100"
     },
     {
       "name": "LEBL_DEP_GRAUS",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["GRAUS"],
@@ -131,7 +131,7 @@
     },
     {
       "name": "LEBL_DEP_LOBAR",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["LOBAR"],
@@ -139,7 +139,7 @@
     },
     {
       "name": "LEBL_DEP_MOPAS",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["MOPAS"],
@@ -147,7 +147,7 @@
     },
     {
       "name": "LEBL_DEP_NATPI",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["NATPI"],
@@ -155,7 +155,7 @@
     },
     {
       "name": "LEBL_DEP_OLOXO",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["OLOXO"],
@@ -163,7 +163,7 @@
     },
     {
       "name": "LEBL_DEP_MAMUK",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["MAMUK"],
@@ -171,7 +171,7 @@
     },
     {
       "name": "LEBL_DEP_DUQQI",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["DUQQI"],
@@ -179,7 +179,7 @@
     },
     {
       "name": "LEBL_DEP_AGENA",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["AGENA"],
@@ -187,7 +187,7 @@
     },
     {
       "name": "LEBL_DEP_DIPES",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["DIPES"],
@@ -195,7 +195,7 @@
     },
     {
       "name": "LEBL_DEP_LOTOS",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["LOTOS"],
@@ -203,7 +203,7 @@
     },
     {
       "name": "LEBL_DEP_SENIA",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["SENIA"],
@@ -211,7 +211,7 @@
     },
     {
       "name": "LEBL_DEP_DALIN",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["DALIN"],
@@ -219,7 +219,7 @@
     },
     {
       "name": "LEBL_DEP_DUNES",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["DUNES"],
@@ -227,7 +227,7 @@
     },
     {
       "name": "LEBL_DEP_LARPA",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LECB_CTR",
       "departs": ["LEBL"],
       "fix": ["LARPA"],
@@ -236,53 +236,53 @@
     {
       "name": "LEGE_ARR_ALBER_KANIG_LFMM",
       "from": "LFMM_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LEGE"],
       "fix": ["ALBER", "KANIG"],
       "level": "F120"
     },
     {
       "name": "LEGE_ARR_BANOL",
-      "from": "LEBL_APP",
-      "to": "LEGE_TWR",
+      "from": "LEBLAPP",
+      "to": "LEGETWR",
       "arrives": ["LEGE"],
       "fix": ["BANOL"],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_VLA",
-      "from": "LEBL_APP",
-      "to": "LERS_TWR",
+      "from": "LEBLAPP",
+      "to": "LERSTWR",
       "arrives": ["LERS"],
       "fix": ["VLA"],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_KERIP",
-      "from": "LEBL_APP",
-      "to": "LERS_TWR",
+      "from": "LEBLAPP",
+      "to": "LERSTWR",
       "arrives": ["LERS"],
       "fix": ["KERIP"],
       "level": "A060"
     },
     {
       "name": "LERS_ARR_DISET",
-      "from": "LEBL_APP",
-      "to": "LERS_TWR",
+      "from": "LEBLAPP",
+      "to": "LERSTWR",
       "arrives": ["LERS"],
       "fix": ["DISET"],
       "level": "A060"
     },
     {
       "name": "LEGE_DEP",
-      "from": "LEGE_TWR",
-      "to": "LEBL_APP",
+      "from": "LEGETWR",
+      "to": "LEBLAPP",
       "departs": ["LEGE"],
       "level": "F080"
     },
     {
       "name": "LEGE_DEP_GEANT_LFBB",
-      "from": "LEBL_APP",
+      "from": "LEBLAPP",
       "to": "LFBB_CTR",
       "departs": ["LEGE"],
       "fix": ["GEANT"],
@@ -291,15 +291,15 @@
     {
       "name": "LERS_ARR_PUMAL_LFBB",
       "from": "LFBB_CTR",
-      "to": "LEBL_APP",
+      "to": "LEBLAPP",
       "arrives": ["LERS"],
       "fix": ["PUMAL"],
       "level": "F230"
     },
     {
       "name": "LERS_DEP",
-      "from": "LERS_TWR",
-      "to": "LEBL_APP",
+      "from": "LERSTWR",
+      "to": "LEBLAPP",
       "departs": ["LERS"],
       "level": "A050"
     }

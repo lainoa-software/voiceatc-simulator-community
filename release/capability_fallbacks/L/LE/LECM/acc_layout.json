@@ -1,0 +1,19 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LECM_R1_CTR": {
+      "1": {
+        "positions": {
+          "LECM_R1_CTR": ["LECMR1I"]
+        }
+      }
+    },
+    "LECM_R2_CTR": {
+      "1": {
+        "positions": {
+          "LECM_R2_CTR": ["LECMR2I"]
+        }
+      }
+    }
+  }
+}

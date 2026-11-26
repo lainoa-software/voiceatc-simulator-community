@@ -1,0 +1,22 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEJR_APP",
+      "call_sign": "Jerez approach",
+      "services": ["approach_radar"]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEJR_LECSAPT_APP",
+      "unit": "LEJR_APP",
+      "frequency": "120.800"
+    },
+    {
+      "call_sign": "LEZL_LECSASN_APP",
+      "unit": "LEJR_APP",
+      "frequency": "128.600"
+    }
+  ]
+}

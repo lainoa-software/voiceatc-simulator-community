@@ -1,0 +1,16 @@
+{
+  "schema": 3,
+  "configurations": {
+    "LEBB_APP": {
+      "1": {
+        "positions": {
+          "LEBB_TMA_APP": ["LEBBTMA"]
+        },
+        "airports": ["LEBB"],
+        "valid_for_runways": {
+          "LEBB": ["WEST", "EAST"]
+        }
+      }
+    }
+  }
+}
