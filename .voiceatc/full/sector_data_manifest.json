@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2611-full.zip",
-  "commit_sha": "43e9be0b9a2f84d947ea1aa79282ef662e72bcf7",
+  "commit_sha": "17856542d5531a2571d034572459965c7715884a",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-24/sector-data-2611-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-26/sector-data-2611-full.zip",
   "entries": [
     {
       "files": {
@@ -2263,14 +2263,14 @@
         "definitions": {
           "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "00be1254ed7d0f52e6c63c1eef8a3493877431e7416bf7c83a48d6f93d3a2d5f",
-          "size_bytes": 60392
+          "sha256": "adee2f7668b443952a242b460c9e165af7069d340f2b36602bb8a05ed36ae6a1",
+          "size_bytes": 48831
         },
         "tma_coordination": {
           "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json",
           "requires": ["community.airspace_files"],
-          "sha256": "be0da6ae5dff98b78a9859d67eaa64ed63462887ed23fcd301456eb8aa25be14",
-          "size_bytes": 5520
+          "sha256": "9b46d310302a3e9595c4c26b78e582b600a82c85a37a8b0f08e904a459d09f9d",
+          "size_bytes": 6544
         },
         "tma_definitions": {
           "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json",
@@ -2287,6 +2287,36 @@
       },
       "id": "L/LE/LECB/LECB_W/BARCELONA_TMA",
       "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "adee2f7668b443952a242b460c9e165af7069d340f2b36602bb8a05ed36ae6a1",
+          "size_bytes": 48831
+        },
+        "tma_coordination": {
+          "repo_path": "feature_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_coordination.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "31a20bf3677dfd6a9b2407661dd81568d3d67d0831c6a9ad641c8a30b7d8f217",
+          "size_bytes": 6400
+        },
+        "tma_definitions": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "37d1eb75587af802376a37d5db19c6e6efc310fc8ab72a4a3881f11959e8fd8e",
+          "size_bytes": 1539
+        },
+        "tma_layout": {
+          "repo_path": "airac_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "66a68156e8248fc4f0d36ec7b06acaf42d51ad8d1cce658b495ad52daed2ca33",
+          "size_bytes": 1435
+        }
+      },
+      "id": "L/LE/LECB/LECB_W/BARCELONA_TMA",
+      "requires": ["community.airspace_files", "community.neighbour_centers"]
     },
     {
       "files": {
@@ -2621,6 +2651,30 @@
     {
       "files": {
         "acc_definitions": {
+          "repo_path": "airac_variants/L/LF/LFBB/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "8a78c3668cc8171515b42f99174b295269b7063f12ea41304399f3a76d7bb269",
+          "size_bytes": 259
+        },
+        "acc_layout": {
+          "repo_path": "airac_variants/L/LF/LFBB/acc_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "7fd3f0a5b9738596b0966766e4f5bf6ee8205d9b004eacd5359edce8d542fc66",
+          "size_bytes": 153
+        },
+        "definitions": {
+          "repo_path": "airac_variants/L/LF/LFBB/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "e9d8af1a9d67e46fc19c69a3add5034b20ef7a631ed68e9ba2f80bb28b7680ca",
+          "size_bytes": 3178
+        }
+      },
+      "id": "L/LF/LFBB",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
           "repo_path": "airac_variants/L/LF/LFFF/acc_definitions.json",
           "requires": ["community.airspace_files"],
           "sha256": "ff6c0360113bb6955b7f422133cb54e07f311d0647a3e9f19a2fbfafb01df053",
@@ -2684,6 +2738,30 @@
         }
       },
       "id": "L/LF/LFFF/PARIS_TMA",
+      "requires": ["community.airspace_files"]
+    },
+    {
+      "files": {
+        "acc_definitions": {
+          "repo_path": "airac_variants/L/LF/LFMM/acc_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "fa394245565918df4245840d6d18c24f048c575aa86816b12f61330a56009779",
+          "size_bytes": 260
+        },
+        "acc_layout": {
+          "repo_path": "airac_variants/L/LF/LFMM/acc_layout.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "f799ab648f0dfecf054ff028712e172b4570afe291b6bebebed291ca2c643903",
+          "size_bytes": 153
+        },
+        "definitions": {
+          "repo_path": "airac_variants/L/LF/LFMM/sector_definitions.json",
+          "requires": ["community.airspace_files"],
+          "sha256": "af6db932edc9255780111c969fa376a6182575662c999dc1379e41dc27240a9a",
+          "size_bytes": 5197
+        }
+      },
+      "id": "L/LF/LFMM",
       "requires": ["community.airspace_files"]
     },
     {
@@ -6499,11 +6577,11 @@
       "requires": ["community.airspace_files"]
     }
   ],
-  "entry_count": 292,
-  "generated_at": "2026-11-24T10:53:35Z",
-  "published_at": "2026-11-24T10:53:35Z",
-  "release_tag": "daily-2026-11-24",
+  "entry_count": 295,
+  "generated_at": "2026-11-26T09:29:29Z",
+  "published_at": "2026-11-26T09:29:29Z",
+  "release_tag": "daily-2026-11-26",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "05c0513ecc9a0f4db11c62cd82832f4a43e4d197e9f2a7889813cd8cd4240236",
-  "size_bytes": 1344591
+  "sha256": "496d584fa9a4c46042d11bf24cf3b2a5c3a3333320987409664fa4aef5918f80",
+  "size_bytes": 1352033
 }
