@@ -70,7 +70,10 @@ class MapDisplayManifestTests(unittest.TestCase):
                             {"airport": "LEBL", "ils_length_nm": 25},
                             {"airport": "LEBL", "positions": {"LEBL_CORE_APP": {
                                 "layers": {"VOR": False}, "airspaces": ["CTR", "TMA"],
-                                "fixes": ["VIBOK", {"ident": "SLL", "lat": 41.27, "lon": 1.99}]}}}):
+                                "fixes": ["VIBOK", {"ident": "SLL", "lat": 41.27, "lon": 1.99}]}}},
+                            # The typed code form (no underscore) the game's code_pattern accepts.
+                            {"airport": "LEBL", "positions": {"LEBLCORE": {
+                                "layers": {"VOR": False}, "airspaces": ["CTR"]}}}):
                 path = self._write(root, payload)
                 self.assertEqual("LEBL", MODULE.validate_display_file(path, root)["airport"])
 

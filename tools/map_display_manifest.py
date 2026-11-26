@@ -75,8 +75,10 @@ LAYER_NAMES = (
 )
 LAYERS_BY_UPPER = {name.upper(): name for name in LAYER_NAMES}
 IDENT_RE = re.compile(r"^[A-Z0-9]{1,8}$")
-# A tma.json unit code: ICAO_part_TYPE or ICAO_TYPE (LEBL_CORE_APP, LEBL_TWR).
-POSITION_CODE_RE = re.compile(r"^[A-Z0-9]+(_[A-Z0-9]+)+$")
+# A unit code, either form: ICAO_part_TYPE or ICAO_TYPE (LEBL_CORE_APP, LEBL_TWR), or the typed
+# form the game's own code_pattern also accepts: an ICAO or FIR code, then two to six capitals or
+# digits and no underscore (LEBLCORE, LERSTWR).
+POSITION_CODE_RE = re.compile(r"^([A-Z0-9]+(_[A-Z0-9]+)+|[A-Z0-9]{4}[A-Z0-9]{2,6})$")
 VALIDATION_REPAIR_HINT = (
     "This manifest is CI-owned: format-all-json.yml refreshes it after every merge and "
     "daily-release.yml rebuilds it nightly, both with --write. A failure here means the "
