@@ -58,7 +58,7 @@ def typed_names(payload: object) -> set[str]:
 
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
-        self.assertEqual(67, len(CORPUS["cases"]))
+        self.assertEqual(73, len(CORPUS["cases"]))
         for case in CORPUS["cases"]:
             with self.subTest(case=case["name"]):
                 problems = MODULE.check(
@@ -577,6 +577,113 @@ class TmaCheckerTests(unittest.TestCase):
             with self.subTest(file=name):
                 payload = json.loads((CASES_DIR / name).read_text(encoding="utf-8"))
                 self.assertEqual(3, payload["schema"])
+
+    def test_parent_acc_sectors_and_part_of_pass_check_bundle(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            fir_dir = root / "L" / "LE" / "LECB"
+            fir_dir.mkdir(parents=True)
+            (fir_dir / "acc_definitions.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "units": [
+                            {"id": "LECB_CTR", "call_sign": "Barcelona Control", "services": ["center"]},
+                            {"id": "LECP_CTR", "part_of": "LECB_CTR"},
+                        ],
+                        "positions": [],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            acc_sectors = fir_dir / "sector_definitions.json"
+            acc_sectors.write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "sectors": {
+                            "LECPGXX": {"name": "GXX", "title": "Palma Oeste"},
+                            "LECPTXX": {"name": "TXX", "title": "Palma Este"},
+                        },
+                        "volumes": [],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            bundle = fir_dir / "LECP" / "PALMA_TMA"
+            bundle.mkdir(parents=True)
+            (bundle / "sector_definitions.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "sectors": {"LECPAPR": {"name": "APR", "title": "Palma Approach"}},
+                        "volumes": [],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (bundle / "tma_definitions.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "units": [
+                            {
+                                "id": "LEPA_APP",
+                                "call_sign": "Palma Control",
+                                "services": ["approach_radar"],
+                                "part_of": "LECP_CTR",
+                            }
+                        ],
+                        "positions": [
+                            {"call_sign": "LECP_APR_APP", "unit": "LEPA_APP", "frequency": "119.155"},
+                            {"call_sign": "LECP_GTX_APP", "unit": "LEPA_APP", "frequency": "129.255"},
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (bundle / "tma_layout.json").write_text(
+                json.dumps(
+                    {
+                        "schema": 3,
+                        "configurations": {
+                            "LEPA_APP": {
+                                "4F": {
+                                    "positions": {
+                                        "LECP_APR_APP": ["LECPAPR"],
+                                        "LECP_GTX_APP": ["LECPGXX", "LECPTXX"],
+                                    },
+                                    "airports": ["LEPA"],
+                                },
+                                "1A": {"positions": {}, "airports": ["LEPA"]},
+                            }
+                        },
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            self.assertEqual([], MODULE.check_bundle(bundle))
+
+            acc_sectors.unlink()
+            self.assertEqual(
+                [
+                    'PALMA_TMA/tma_layout.json configurations.LEPA_APP.4F.positions.LECP_GTX_APP: '
+                    'sector "LECPGXX" is not in sector_definitions.json.',
+                    'PALMA_TMA/tma_layout.json configurations.LEPA_APP.4F.positions.LECP_GTX_APP: '
+                    'sector "LECPTXX" is not in sector_definitions.json.',
+                ],
+                MODULE.check_bundle(bundle),
+            )
 
 
 if __name__ == "__main__":

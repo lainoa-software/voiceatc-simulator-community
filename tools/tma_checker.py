@@ -199,7 +199,7 @@ def check(
             lw.keys(layout, "layout_root", "")
 
     airports = _derive_airports(layout)
-    units = _check_units(w, defs_payload, airports, forbid_center=True)
+    units = _check_units(w, defs_payload, airports, forbid_center=True, parent_units=acc_units or [])
     positions = _check_positions(w, defs_payload, units)
     _merge_acc_units(units, acc_units or [])
     for acc_pos in acc_positions or []:
@@ -300,7 +300,14 @@ def _merge_acc_units(units: dict[str, dict], acc_units: list[dict]) -> None:
         units[uid] = {"services": services}
 
 
-def _check_units(w: _Walk, payload: dict, airports: list[str], *, forbid_center: bool = True) -> dict[str, dict]:
+def _check_units(
+    w: _Walk,
+    payload: dict,
+    airports: list[str],
+    *,
+    forbid_center: bool = True,
+    parent_units: list[dict] | None = None,
+) -> dict[str, dict]:
     units: dict[str, dict] = {}
     for index, unit in enumerate(w.array(payload, "units", "")):
         where = f"units[{index}]"
@@ -312,7 +319,14 @@ def _check_units(w: _Walk, payload: dict, airports: list[str], *, forbid_center:
             if unit_id in units:
                 w.add("TMA_ID_DUPLICATE", where, unit_id)
         has_part_of = "part_of" in unit and bool(str(unit.get("part_of", "")).strip())
-        if has_part_of:
+        raw_svcs = unit.get("services", [])
+        is_sub_centre = has_part_of and (
+            "services" not in unit
+            or not isinstance(raw_svcs, list)
+            or not raw_svcs
+            or "center" in raw_svcs
+        )
+        if is_sub_centre:
             if "call_sign" in unit:
                 w.add("TMA_UNIT_PART_OF_CALLSIGN", where, unit_id)
         else:
@@ -344,9 +358,15 @@ def _check_units(w: _Walk, payload: dict, airports: list[str], *, forbid_center:
                 "part_of": str(unit.get("part_of", "")),
                 "unassigned_freqs": unassigned_freqs,
             }
+    known_parents: set[str] = set(units)
+    for parent in parent_units or []:
+        if isinstance(parent, dict):
+            pid = str(parent.get("id", "")).strip()
+            if pid:
+                known_parents.add(pid)
     for uid, uinfo in units.items():
         p_id = str(uinfo.get("part_of", ""))
-        if p_id and p_id not in units:
+        if p_id and p_id not in known_parents:
             w.add("TMA_UNIT_PART_OF_UNKNOWN", uid, p_id)
     return units
 
@@ -456,14 +476,22 @@ def _check_layout(
         if not isinstance(ucfgs, dict) or not ucfgs:
             w.add("TMA_FIELD_SHAPE", uwhere, "a non-empty map of configurations")
             continue
+        unit_has_seats = any(
+            isinstance(c, dict) and isinstance(c.get("positions"), dict) and bool(c.get("positions"))
+            for c in ucfgs.values()
+        )
         for cid_var, cfg_entry in ucfgs.items():
             cid = str(cid_var)
             cwhere = f"{uwhere}.{cid}"
             if not w.keys(cfg_entry, "configuration_entry", cwhere):
                 continue
             pos_map = cfg_entry.get("positions")
-            if not isinstance(pos_map, dict) or not pos_map:
-                w.add("TMA_FIELD_SHAPE", f"{cwhere}.positions", "a non-empty map of position to sector ids")
+            if not isinstance(pos_map, dict):
+                w.add("TMA_FIELD_SHAPE", f"{cwhere}.positions", "a map of position to sector ids")
+                continue
+            if not pos_map:
+                if not unit_has_seats:
+                    w.add("TMA_FIELD_SHAPE", f"{cwhere}.positions", "a non-empty map of position to sector ids")
                 continue
             claimed: dict[str, bool] = {}
             for cs_var, sids in pos_map.items():
@@ -919,6 +947,10 @@ def check_bundle(bundle_dir: Path) -> list[str]:
     sector_ids, sector_catalog = _sector_ids_and_catalog(bundle_dir)
     acc_units, acc_positions = _ancestor_acc(bundle_dir)
     acc_dir = _ancestor_acc_dir(bundle_dir)
+    if acc_dir is not None:
+        _, acc_catalog = _sector_ids_and_catalog(acc_dir)
+        sector_catalog.update(acc_catalog)
+        sector_ids.update(acc_catalog)
     own_fir = acc_dir.name.upper() if acc_dir is not None else ""
     known = _declared_ids(defs_payload, layout_payload)
     for unit in acc_units:
