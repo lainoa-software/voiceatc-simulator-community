@@ -2,31 +2,31 @@
   "schema": 3,
   "units": [
     {
-      "id": "LEBL_APP",
+      "id": "LEBLAPP",
       "call_sign": "Barcelona Approach",
       "services": ["approach_radar"]
     },
     {
-      "id": "LEBL_TWR",
+      "id": "LEBLTWR",
       "call_sign": "Barcelona Tower",
       "services": ["tower"],
       "airport": "LEBL",
       "unassigned_frequencies": ["118.330"]
     },
     {
-      "id": "LEGE_TWR",
+      "id": "LEGETWR",
       "call_sign": "Girona Tower",
       "services": ["tower", "approach_conventional"],
       "airport": "LEGE"
     },
     {
-      "id": "LERS_TWR",
+      "id": "LERSTWR",
       "call_sign": "Reus Tower",
       "services": ["tower", "approach_conventional"],
       "airport": "LERS"
     },
     {
-      "id": "LEDA_TWR",
+      "id": "LEDATWR",
       "call_sign": "Lleida Tower",
       "services": ["tower"],
       "airport": "LEDA"
@@ -34,28 +34,28 @@
   ],
   "positions": [
     {
-      "call_sign": "LEBL_CORE_APP",
-      "unit": "LEBL_APP",
+      "call_sign": "LEBLCORE",
+      "unit": "LEBLAPP",
       "frequency": "131.125"
     },
     {
-      "call_sign": "LEBL_TWR",
-      "unit": "LEBL_TWR",
+      "call_sign": "LEBLTWR",
+      "unit": "LEBLTWR",
       "frequency": "118.105"
     },
     {
-      "call_sign": "LEGE_APP",
-      "unit": "LEGE_TWR",
+      "call_sign": "LEGEAPP",
+      "unit": "LEGETWR",
       "frequency": "120.905"
     },
     {
-      "call_sign": "LERS_APP",
-      "unit": "LERS_TWR",
+      "call_sign": "LERSAPP",
+      "unit": "LERSTWR",
       "frequency": "128.880"
     },
     {
-      "call_sign": "LEDA_TWR",
-      "unit": "LEDA_TWR",
+      "call_sign": "LEDATWR",
+      "unit": "LEDATWR",
       "frequency": "121.330"
     }
   ],

@@ -1,10 +1,10 @@
 {
   "schema": 3,
   "configurations": {
-    "LEBB_APP": {
+    "LEBBAPP": {
       "1": {
         "positions": {
-          "LEBB_TMA_APP": ["LEBBTMA"]
+          "LEBBTMA": ["LEBBTMA"]
         },
         "airports": ["LEBB"],
         "valid_for_runways": {

@@ -1,0 +1,47 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LECB_CTR",
+      "call_sign": "Barcelona Control",
+      "services": ["center"]
+    },
+    {
+      "id": "LECB_W_CTR",
+      "part_of": "LECB_CTR",
+      "title": "Ruta 4 - Barcelona Oeste"
+    },
+    {
+      "id": "LECL_CTR",
+      "part_of": "LECB_CTR",
+      "title": "Valencia TACC"
+    },
+    {
+      "id": "LECP_CTR",
+      "part_of": "LECB_CTR",
+      "title": "Palma TACC"
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LECB_BKW_CTR",
+      "unit": "LECB_CTR",
+      "frequency": "134.680"
+    },
+    {
+      "call_sign": "LECB_BKE_CTR",
+      "unit": "LECB_CTR",
+      "frequency": "135.355"
+    },
+    {
+      "call_sign": "LECB_DDX_CTR",
+      "unit": "LECB_CTR",
+      "frequency": "132.580"
+    },
+    {
+      "call_sign": "LECP_GIX_CTR",
+      "unit": "LECB_CTR",
+      "frequency": "118.125"
+    }
+  ]
+}

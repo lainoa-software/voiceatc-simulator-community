@@ -24,24 +24,29 @@
   ],
   "positions": [
     {
-      "call_sign": "LECB_BKW_CTR",
+      "call_sign": "LECBBKW",
       "unit": "LECB_CTR",
       "frequency": "134.680"
     },
     {
-      "call_sign": "LECB_BKE_CTR",
+      "call_sign": "LECBBKE",
       "unit": "LECB_CTR",
       "frequency": "135.355"
     },
     {
-      "call_sign": "LECB_DDX_CTR",
+      "call_sign": "LEBLDDX",
       "unit": "LECB_CTR",
       "frequency": "132.580"
     },
     {
-      "call_sign": "LECP_GIX_CTR",
-      "unit": "LECB_CTR",
-      "frequency": "118.125"
+      "call_sign": "LECPGXX",
+      "unit": "LECP_CTR",
+      "frequency": "121.300"
+    },
+    {
+      "call_sign": "LECPTXX",
+      "unit": "LECP_CTR",
+      "frequency": "129.255"
     }
   ]
 }

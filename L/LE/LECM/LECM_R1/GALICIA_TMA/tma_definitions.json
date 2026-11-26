@@ -2,15 +2,15 @@
   "schema": 3,
   "units": [
     {
-      "id": "LECO_APP",
+      "id": "LECOAPP",
       "call_sign": "A Coruna approach",
       "services": ["approach_radar"]
     }
   ],
   "positions": [
     {
-      "call_sign": "LECO_APP",
-      "unit": "LECO_APP",
+      "call_sign": "LECGTMA",
+      "unit": "LECOAPP",
       "frequency": "120.200"
     }
   ]

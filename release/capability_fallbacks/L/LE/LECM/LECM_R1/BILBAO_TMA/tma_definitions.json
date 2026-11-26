@@ -1,0 +1,17 @@
+{
+  "schema": 3,
+  "units": [
+    {
+      "id": "LEBB_APP",
+      "call_sign": "Bilbao approach",
+      "services": ["approach_radar"]
+    }
+  ],
+  "positions": [
+    {
+      "call_sign": "LEBB_TMA_APP",
+      "unit": "LEBB_APP",
+      "frequency": "127.450"
+    }
+  ]
+}

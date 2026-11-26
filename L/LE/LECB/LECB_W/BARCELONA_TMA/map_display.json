@@ -73,7 +73,7 @@
   "vors": ["BCN", "BGR", "CLE", "PRA", "RES", "SLL", "VLA"],
   "ndbs": ["LRD"],
   "positions": {
-    "LEBL_CORE_APP": {
+    "LEBLCORE": {
       "airspaces": [],
       "fixes": [
         "ALBER",

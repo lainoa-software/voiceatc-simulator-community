@@ -1,10 +1,10 @@
 {
   "schema": 3,
   "configurations": {
-    "LEMG_APP": {
+    "LEMGAPP": {
       "1": {
         "positions": {
-          "LEMG_APP": ["LEMGALL"]
+          "LEMGALL": ["LEMGALL"]
         },
         "airports": ["LEMG"],
         "valid_for_runways": {
