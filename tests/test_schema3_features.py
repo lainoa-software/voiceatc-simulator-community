@@ -206,7 +206,7 @@ class PalmaSectorEndTests(unittest.TestCase):
 
     def test_two_entries_keep_todays_first_and_the_projected_tma_json(self) -> None:
         bundle = "L/LE/LECB/LECP/PALMA_TMA"
-        rewrites = {"LECB_BKE_CTR": "LECBBKE", "LECB_BKW_CTR": "LECBBKW"}
+        rewrites = {"LEMHTWR": "LEMHAPP"}
         with tempfile.TemporaryDirectory() as tmp:
             main_root = Path(tmp) / "main"
             main_coordination = self._palma(main_root)
@@ -220,7 +220,7 @@ class PalmaSectorEndTests(unittest.TestCase):
                 if isinstance(go_around, dict):
                     go_around["to"] = rewrites.get(go_around.get("to"), go_around.get("to"))
             coordination.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8")
-            self.assertIn("LECBBKE", [row["from"] for row in document["agreements"]])
+            self.assertIn("LEMHAPP", [row["to"] for row in document["agreements"]])
 
             main_entries, main_bytes = release_entries(main_root)
             new_entries, new_bytes = release_entries(new_root)
@@ -339,7 +339,7 @@ class NeighbourCentreTests(unittest.TestCase):
                 shutil.copytree(REPO_ROOT / area, root / area)
             document = _read(root, f"{BARCELONA}/tma_coordination.json")
             row = agreement(
-                "LEBL_ARR_VERSO_LFBB_POSITION", "LFBBCTR", "LEBL_APP", arrives=["LEBL"], level="F220"
+                "LEBL_ARR_VERSO_LFBB_POSITION", "LFBBCTR", "LEBLAPP", arrives=["LEBL"], level="F220"
             )
             document["agreements"].append(row)
             _write(root, f"{BARCELONA}/tma_coordination.json", document)
@@ -364,7 +364,7 @@ class NeighbourCentreTests(unittest.TestCase):
             _write(root, "L/LF/LFBB/acc_definitions.json", center)
             document = _read(root, f"{BARCELONA}/tma_coordination.json")
             row = agreement(
-                "LEBL_ARR_VERSO_LOWERCASE", "lfbb_ctr", "LEBL_APP", arrives=["LEBL"], level="F220"
+                "LEBL_ARR_VERSO_LOWERCASE", "lfbb_ctr", "LEBLAPP", arrives=["LEBL"], level="F220"
             )
             document["agreements"] = [
                 kept for kept in document["agreements"] if kept["name"] not in FRENCH_ROWS

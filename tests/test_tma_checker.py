@@ -96,36 +96,6 @@ class TmaCheckerTests(unittest.TestCase):
                     [problem.code for problem in
                      MODULE.check(broken, layout, "PALMA_TMA", {"LECPIXX"})])
 
-    def test_no_spanish_code_uses_the_typed_form_the_released_games_refuse(self) -> None:
-        """A released game accepts the ICAO_part_TYPE code form only.
-
-        The typed form (four characters, then two to six capitals or digits, no underscore)
-        is what the Spanish rename moves every Spanish unit id, position call sign, layout key
-        and agreement end to. Until that rename ships, a released game refuses a typed code,
-        so no L/** tma_/acc_ file outside L/LF may use one: every such name must still match
-        the released form (`TMA_UNIT_CODE` in the release let it through otherwise). The
-        Spanish rename removes this test.
-        """
-        released = re.compile(
-            r"^[A-Z0-9]{4}(_(?!ALL_)[A-Z0-9]+)?_(TWR|APP|CTR|AFIS)$")
-        names: set[str] = set()
-        for path in sorted((REPO_ROOT / "L").rglob("*.json")):
-            relative = path.relative_to(REPO_ROOT).as_posix()
-            if relative.startswith("L/LF/"):
-                continue
-            if path.name not in {
-                "tma_definitions.json", "tma_layout.json",
-                "acc_definitions.json", "acc_layout.json",
-                "tma_coordination.json", "acc_coordination.json",
-            }:
-                continue
-            payload = json.loads(path.read_text(encoding="utf-8"))
-            for name in typed_names(payload):
-                names.add(f"{relative}: {name}")
-        refused = sorted(
-            entry for entry in names if not released.match(entry.split(": ", 1)[1]))
-        self.assertEqual([], refused)
-
     def test_message_case_sentence_is_exact(self) -> None:
         message_case = CORPUS["message_case"]
         case = next(case for case in CORPUS["cases"] if case["name"] == message_case["name"])
