@@ -4,167 +4,84 @@
     "LEPAAPP": {
       "3D": {
         "positions": {
-          "LECPAPR": [
-            "LECPAPR"
-          ],
-          "LECPMXX": [
-            "LECPMXX"
-          ],
-          "LECPIXX": [
-            "LECPIXX"
-          ]
+          "LECPAPR": ["LECPAPR"],
+          "LECPMXX": ["LECPMXX"],
+          "LECPIXX": ["LECPIXX"]
         },
-        "airports": [
-          "LEPA",
-          "LEIB",
-          "LEMH"
-        ]
+        "airports": ["LEPA", "LEIB", "LEMH"]
       },
       "4F": {
         "positions": {
-          "LECPAPR": [
-            "LECPAPR"
-          ],
-          "LECPMXX": [
-            "LECPMXX"
-          ],
-          "LECPIXX": [
-            "LECPIXX"
-          ],
-          "LECPGTX": [
-            "LECPGXX",
-            "LECPTXX"
-          ]
+          "LECPAPR": ["LECPAPR"],
+          "LECPMXX": ["LECPMXX"],
+          "LECPIXX": ["LECPIXX"],
+          "LECPGTX": ["LECPGXX", "LECPTXX"]
         },
-        "airports": [
-          "LEPA",
-          "LEIB",
-          "LEMH"
-        ]
+        "airports": ["LEPA", "LEIB", "LEMH"]
       },
       "7G": {
         "positions": {
-          "LECPAPP": [
-            "LECPAPP"
-          ],
-          "LECPF1X": [
-            "LECPF1X"
-          ],
-          "LECPF2X": [
-            "LECPF2X"
-          ],
-          "LECPMXX": [
-            "LECPMXX"
-          ],
-          "LECPIXX": [
-            "LECPIXX"
-          ]
+          "LECPAPP": ["LECPAPP"],
+          "LECPF1X": ["LECPF1X"],
+          "LECPF2X": ["LECPF2X"],
+          "LECPMXX": ["LECPMXX"],
+          "LECPIXX": ["LECPIXX"]
         },
-        "airports": [
-          "LEPA",
-          "LEIB",
-          "LEMH"
-        ]
+        "airports": ["LEPA", "LEIB", "LEMH"]
       },
       "8A": {
         "positions": {
-          "LECPAPP": [
-            "LECPAPP"
-          ],
-          "LECPDWX": [
-            "LECPDWX"
-          ],
-          "LECPL1W": [
-            "LECPL1W"
-          ],
-          "LECPL2W": [
-            "LECPL2W"
-          ],
-          "LECPMXX": [
-            "LECPMXX"
-          ],
-          "LECPIXX": [
-            "LECPIXX"
-          ]
+          "LECPAPP": ["LECPAPP"],
+          "LECPDWX": ["LECPDWX"],
+          "LECPL1W": ["LECPL1W"],
+          "LECPL2W": ["LECPL2W"],
+          "LECPMXX": ["LECPMXX"],
+          "LECPIXX": ["LECPIXX"]
         },
-        "airports": [
-          "LEPA"
-        ],
+        "airports": ["LEPA"],
         "valid_for_runways": {
-          "LEPA": [
-            "WLR",
-            "WEST_DUAL"
-          ]
+          "LEPA": ["WLR", "WEST_DUAL"]
         }
       },
       "8B": {
         "positions": {
-          "LECPAPP": [
-            "LECPAPP"
-          ],
-          "LECPDEX": [
-            "LECPDEX"
-          ],
-          "LECPL1E": [
-            "LECPL1E"
-          ],
-          "LECPL2E": [
-            "LECPL2E"
-          ],
-          "LECPMXX": [
-            "LECPMXX"
-          ],
-          "LECPIXX": [
-            "LECPIXX"
-          ]
+          "LECPAPP": ["LECPAPP"],
+          "LECPDEX": ["LECPDEX"],
+          "LECPL1E": ["LECPL1E"],
+          "LECPL2E": ["LECPL2E"],
+          "LECPMXX": ["LECPMXX"],
+          "LECPIXX": ["LECPIXX"]
         },
-        "airports": [
-          "LEPA"
-        ],
+        "airports": ["LEPA"],
         "valid_for_runways": {
-          "LEPA": [
-            "ELR"
-          ]
+          "LEPA": ["ELR"]
         }
       },
       "1A": {
         "positions": {
-          "LECPALP": [
-            "LECPALP",
-            "LECPGXX",
-            "LECPTXX"
-          ]
+          "LECPALP": ["LECPALP", "LECPGXX", "LECPTXX"]
         },
-        "airports": [
-          "LEPA"
-        ]
+        "airports": ["LEPA"]
       }
     },
     "LEMHTWR": {
       "1": {
         "positions": {
-          "LEMHTWR": [
-            "LEMHAPP",
-            "LEMHCTR"
-          ]
+          "LEMHTWR": ["LEMHAPP", "LEMHCTR"]
         }
       }
     },
     "LEIBTWR": {
       "1": {
         "positions": {
-          "LEIBTWR": [
-            "LEIBCTR"
-          ]
+          "LEIBTWR": ["LEIBCTR"]
         }
       }
     },
     "LEPATWR": {
       "1": {
         "positions": {
-          "LEPATWR": [
-            "LEPATZ"
-          ]
+          "LEPATWR": ["LEPATZ"]
         }
       }
     }

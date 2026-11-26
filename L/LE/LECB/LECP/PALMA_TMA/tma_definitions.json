@@ -4,45 +4,32 @@
     {
       "id": "LEPAAPP",
       "call_sign": "Palma Control",
-      "services": [
-        "approach_radar"
-      ],
+      "services": ["approach_radar"],
       "part_of": "LECP_CTR"
     },
     {
       "id": "LEPATWR",
       "call_sign": "Palma Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEPA",
-      "unassigned_frequencies": [
-        "118.455"
-      ]
+      "unassigned_frequencies": ["118.455"]
     },
     {
       "id": "LEIBTWR",
       "call_sign": "Ibiza Tower",
-      "services": [
-        "tower"
-      ],
+      "services": ["tower"],
       "airport": "LEIB"
     },
     {
       "id": "LEMHTWR",
       "call_sign": "Menorca Tower",
-      "services": [
-        "tower",
-        "approach_conventional"
-      ],
+      "services": ["tower", "approach_conventional"],
       "airport": "LEMH"
     },
     {
       "id": "LEBLAPP",
       "call_sign": "Barcelona Approach",
-      "services": [
-        "approach_radar"
-      ]
+      "services": ["approach_radar"]
     }
   ],
   "positions": [
