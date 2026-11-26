@@ -22,6 +22,11 @@
       "call_sign": "LECLAAW",
       "unit": "LEALAPP",
       "frequency": "120.400"
+    },
+    {
+      "call_sign": "LECLSUW",
+      "unit": "LEALAPP",
+      "frequency": "118.800"
     }
   ]
 }

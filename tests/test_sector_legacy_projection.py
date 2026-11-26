@@ -501,6 +501,7 @@ class SectorLegacyProjectionTests(unittest.TestCase):
             "E/ES/ESAA/ESOS_Y/ESOS_APP",
             "L/LE/LECB/LECB_E/PALMA_TMA",
             "L/LE/LECB/LECB_W/BARCELONA_TMA",
+            "L/LE/LECB/LECB_W/VALENCIA_TMA",     # 11 stepped LECLSUW volumes replace single volume
             "L/LE/LECM/LECM_R2/MADRID_TMA",
             "L/LO/LOVV/VIENNA_TMA",  # Vienna returns to Willek10's outline (#337 replaced it)
             "L/LT/LTBB/ISTANBUL_TMA",
