@@ -1,5 +1,5 @@
 {
-  "asset_name": "sector-data-2611.zip",
+  "asset_name": "sector-data-2612.zip",
   "bundle_count": 136,
   "bundles": {
     "C/CZ/CZUL/MONTREAL_TMA": {
@@ -2587,9 +2587,9 @@
       }
     }
   },
-  "commit_sha": "17856542d5531a2571d034572459965c7715884a",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-26/sector-data-2611.zip",
-  "published_at": "2026-11-26T09:29:29Z",
+  "commit_sha": "0aec73329484fa130466833c8f3914570336dfeb",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-26/sector-data-2612.zip",
+  "published_at": "2026-11-26T23:08:37Z",
   "release_tag": "daily-2026-11-26",
   "repo": "lainoa-software/voiceatc-simulator-community",
   "schema_version": 2,
