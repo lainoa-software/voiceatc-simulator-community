@@ -58,7 +58,7 @@ def typed_names(payload: object) -> set[str]:
 
 class TmaCheckerTests(unittest.TestCase):
     def test_every_corpus_case_matches_in_order(self) -> None:
-        self.assertEqual(63, len(CORPUS["cases"]))
+        self.assertEqual(67, len(CORPUS["cases"]))
         for case in CORPUS["cases"]:
             with self.subTest(case=case["name"]):
                 problems = MODULE.check(

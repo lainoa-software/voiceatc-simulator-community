@@ -36,6 +36,7 @@ PLAYABLE = [name for name, row in SERVICES.items() if row["playable"]]
 ICAO_RE = re.compile(r"^[A-Z0-9]{4}$")
 SECTOR_RE = re.compile(r"^[A-Z0-9_]+$")
 ZONE_KINDS: list[str] = list(RULES.get("zone_kinds", []))
+POSITION_ROLES: list[str] = list(RULES.get("position_roles", []))
 FREQ_RE = re.compile(r"^\d{3}\.\d{3}$")
 LEVEL_RE = re.compile(r"^(?:[FA]\d{3}|EVEN|ODD)$")
 CODE_RE = re.compile(RULES["code_pattern"])
@@ -45,7 +46,7 @@ KEYS = {
     "layout_root": {"schema", "configurations", "runway_combinations"},
     "coordination_root": {"schema", "agreements"},
     "unit": {"id", "call_sign", "part_of", "title", "services", "airport", "unassigned_frequencies"},
-    "position": {"call_sign", "unit", "frequency"},
+    "position": {"call_sign", "unit", "frequency", "roles"},
     "zone": {"sector", "kind", "airport"},
     "configuration_entry": {"positions", "airports", "valid_for_runways"},
     "runway_combination": {"id", "title", "airports"},
@@ -376,6 +377,16 @@ def _check_positions(w: _Walk, payload: dict, units: dict[str, dict]) -> dict[st
                 if freq in units[check_uid].get("unassigned_freqs", []):
                     w.add("TMA_UNASSIGNED_FREQ_USED", check_uid, freq)
                 check_uid = str(units[check_uid].get("part_of", ""))
+        if "roles" in pos:
+            seen_roles: set[str] = set()
+            for r_index, role in enumerate(w.array(pos, "roles", where)):
+                role_where = f"{where}.roles[{r_index}]"
+                if not isinstance(role, str) or role not in POSITION_ROLES:
+                    w.add("TMA_POSITION_ROLE", role_where, role, allowed=", ".join(POSITION_ROLES))
+                elif role in seen_roles:
+                    w.add("TMA_ID_DUPLICATE", role_where, role)
+                else:
+                    seen_roles.add(role)
         if cs:
             positions[cs] = {"call_sign": cs, "unit": unit_id, "frequency": freq}
     return positions

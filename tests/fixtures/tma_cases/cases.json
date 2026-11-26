@@ -1174,6 +1174,431 @@
       ]
     },
     {
+      "name": "position_roles_ok",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLALB",
+        "LEBLCORE",
+        "LEGEAPP",
+        "LERSAPP"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          },
+          {
+            "id": "BCN_TWR",
+            "call_sign": "Barcelona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEBL",
+            "unassigned_frequencies": [
+              "118.105",
+              "118.330"
+            ]
+          },
+          {
+            "id": "GIR_TWR",
+            "call_sign": "Girona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEGE",
+            "unassigned_frequencies": [
+              "120.905"
+            ]
+          },
+          {
+            "id": "REU_TWR",
+            "call_sign": "Reus Tower",
+            "services": [
+              "tower",
+              "approach_conventional"
+            ],
+            "airport": "LERS",
+            "unassigned_frequencies": [
+              "128.880"
+            ]
+          },
+          {
+            "id": "LLE_TWR",
+            "call_sign": "Lleida Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEDA",
+            "unassigned_frequencies": [
+              "121.330"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125",
+            "roles": [
+              "feeder",
+              "final",
+              "departure"
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL",
+                "LEGE",
+                "LERS",
+                "LEDA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": []
+    },
+    {
+      "name": "position_roles_unknown",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLALB",
+        "LEBLCORE",
+        "LEGEAPP",
+        "LERSAPP"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          },
+          {
+            "id": "BCN_TWR",
+            "call_sign": "Barcelona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEBL",
+            "unassigned_frequencies": [
+              "118.105",
+              "118.330"
+            ]
+          },
+          {
+            "id": "GIR_TWR",
+            "call_sign": "Girona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEGE",
+            "unassigned_frequencies": [
+              "120.905"
+            ]
+          },
+          {
+            "id": "REU_TWR",
+            "call_sign": "Reus Tower",
+            "services": [
+              "tower",
+              "approach_conventional"
+            ],
+            "airport": "LERS",
+            "unassigned_frequencies": [
+              "128.880"
+            ]
+          },
+          {
+            "id": "LLE_TWR",
+            "call_sign": "Lleida Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEDA",
+            "unassigned_frequencies": [
+              "121.330"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125",
+            "roles": [
+              "feeder",
+              "approach"
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL",
+                "LEGE",
+                "LERS",
+                "LEDA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_POSITION_ROLE",
+          "positions[0] \"LEBL_CORE_APP\".roles[1]"
+        ]
+      ]
+    },
+    {
+      "name": "position_roles_duplicate",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLALB",
+        "LEBLCORE",
+        "LEGEAPP",
+        "LERSAPP"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          },
+          {
+            "id": "BCN_TWR",
+            "call_sign": "Barcelona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEBL",
+            "unassigned_frequencies": [
+              "118.105",
+              "118.330"
+            ]
+          },
+          {
+            "id": "GIR_TWR",
+            "call_sign": "Girona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEGE",
+            "unassigned_frequencies": [
+              "120.905"
+            ]
+          },
+          {
+            "id": "REU_TWR",
+            "call_sign": "Reus Tower",
+            "services": [
+              "tower",
+              "approach_conventional"
+            ],
+            "airport": "LERS",
+            "unassigned_frequencies": [
+              "128.880"
+            ]
+          },
+          {
+            "id": "LLE_TWR",
+            "call_sign": "Lleida Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEDA",
+            "unassigned_frequencies": [
+              "121.330"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125",
+            "roles": [
+              "final",
+              "final"
+            ]
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL",
+                "LEGE",
+                "LERS",
+                "LEDA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_ID_DUPLICATE",
+          "positions[0] \"LEBL_CORE_APP\".roles[1]"
+        ]
+      ]
+    },
+    {
+      "name": "position_roles_empty",
+      "bundle_key": "BARCELONA_TMA",
+      "sector_ids": [
+        "LEBLALB",
+        "LEBLCORE",
+        "LEGEAPP",
+        "LERSAPP"
+      ],
+      "defs": {
+        "schema": 3,
+        "units": [
+          {
+            "id": "BCN_APP",
+            "call_sign": "Barcelona Approach",
+            "services": [
+              "approach_radar"
+            ]
+          },
+          {
+            "id": "BCN_TWR",
+            "call_sign": "Barcelona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEBL",
+            "unassigned_frequencies": [
+              "118.105",
+              "118.330"
+            ]
+          },
+          {
+            "id": "GIR_TWR",
+            "call_sign": "Girona Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEGE",
+            "unassigned_frequencies": [
+              "120.905"
+            ]
+          },
+          {
+            "id": "REU_TWR",
+            "call_sign": "Reus Tower",
+            "services": [
+              "tower",
+              "approach_conventional"
+            ],
+            "airport": "LERS",
+            "unassigned_frequencies": [
+              "128.880"
+            ]
+          },
+          {
+            "id": "LLE_TWR",
+            "call_sign": "Lleida Tower",
+            "services": [
+              "tower"
+            ],
+            "airport": "LEDA",
+            "unassigned_frequencies": [
+              "121.330"
+            ]
+          }
+        ],
+        "positions": [
+          {
+            "call_sign": "LEBL_CORE_APP",
+            "unit": "BCN_APP",
+            "frequency": "131.125",
+            "roles": []
+          }
+        ]
+      },
+      "layout": {
+        "schema": 3,
+        "configurations": {
+          "BCN_APP": {
+            "2CO": {
+              "positions": {
+                "LEBL_CORE_APP": [
+                  "LEBLCORE"
+                ]
+              },
+              "airports": [
+                "LEBL",
+                "LEGE",
+                "LERS",
+                "LEDA"
+              ]
+            }
+          }
+        }
+      },
+      "acc_units": [],
+      "acc_positions": [],
+      "coordination": null,
+      "expect": [
+        [
+          "TMA_FIELD_SHAPE",
+          "positions[0] \"LEBL_CORE_APP\".roles"
+        ]
+      ]
+    },
+    {
       "name": "tower_needs_airport",
       "bundle_key": "BARCELONA_TMA",
       "sector_ids": [
