@@ -46,7 +46,7 @@ KEYS = {
     "layout_root": {"schema", "configurations", "runway_combinations"},
     "coordination_root": {"schema", "agreements"},
     "unit": {"id", "call_sign", "part_of", "title", "services", "airport", "unassigned_frequencies"},
-    "position": {"call_sign", "unit", "frequency", "roles"},
+    "position": {"call_sign", "unit", "frequency", "roles", "airports"},
     "zone": {"sector", "kind", "airport"},
     "configuration_entry": {"positions", "airports", "valid_for_runways"},
     "runway_combination": {"id", "title", "airports"},
@@ -407,6 +407,10 @@ def _check_positions(w: _Walk, payload: dict, units: dict[str, dict]) -> dict[st
                     w.add("TMA_ID_DUPLICATE", role_where, role)
                 else:
                     seen_roles.add(role)
+        if "airports" in pos:
+            for a_index, code in enumerate(w.array(pos, "airports", where)):
+                if not isinstance(code, str) or not ICAO_RE.search(code):
+                    w.add("TMA_AIRPORT_INVALID", f"{where}.airports[{a_index}]", code)
         if cs:
             positions[cs] = {"call_sign": cs, "unit": unit_id, "frequency": freq}
     return positions
