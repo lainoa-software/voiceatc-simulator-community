@@ -36,8 +36,7 @@
     {
       "call_sign": "LEBLDDX",
       "unit": "LECB_CTR",
-      "frequency": "132.580",
-      "roles": ["departure"]
+      "frequency": "132.580"
     },
     {
       "call_sign": "LECPGXX",
