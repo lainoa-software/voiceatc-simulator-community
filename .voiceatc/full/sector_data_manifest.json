@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2612-full.zip",
-  "commit_sha": "5bad77e399e323d5eee947aa82b64d0784fc245a",
+  "commit_sha": "8e11da11256bb12a8111fea629433e835dd6d051",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-27/sector-data-2612-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-27-b/sector-data-2612-full.zip",
   "entries": [
     {
       "files": {
@@ -2470,8 +2470,8 @@
         "tma_definitions": {
           "repo_path": "feature_variants/L/LE/LECB/LECP/PALMA_TMA/tma_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "377b082988f1e678daa7dcceb2b805dc57bec2cff8d6ec53b48977bdc4fdaf3a",
-          "size_bytes": 3295
+          "sha256": "371bb3af0b974848c0dc1aced931dc976300c82534a13295d5207334635cc482",
+          "size_bytes": 3239
         },
         "tma_layout": {
           "repo_path": "feature_variants/L/LE/LECB/LECP/PALMA_TMA/tma_layout.json",
@@ -6848,10 +6848,10 @@
     }
   ],
   "entry_count": 304,
-  "generated_at": "2026-11-27T09:39:18Z",
-  "published_at": "2026-11-27T09:39:18Z",
-  "release_tag": "daily-2026-11-27",
+  "generated_at": "2026-11-27T11:24:55Z",
+  "published_at": "2026-11-27T11:24:55Z",
+  "release_tag": "daily-2026-11-27-b",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "1dbad81774f378a7d8e095f03aa5ae8bcaea096466b7be365ad2800f45cfceb2",
-  "size_bytes": 1387163
+  "sha256": "586d2b9699210928eb3a598148013bf61d9aab7a7dfdda0a2ca6a536d724c4e4",
+  "size_bytes": 1387139
 }
