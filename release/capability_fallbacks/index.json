@@ -20,7 +20,11 @@
     "files": ["tma_definitions.json", "tma_layout.json"]
   },
   "L/LE/LECB/LECP/PALMA_TMA": {
-    "requires": ["community.seat_handoffs", "community.setup_follows_player"],
+    "requires": [
+      "community.seat_airports",
+      "community.seat_handoffs",
+      "community.setup_follows_player"
+    ],
     "files": [
       "sector_definitions.json",
       "tma_coordination.json",
