@@ -5,7 +5,8 @@
       "id": "LEPAAPP",
       "call_sign": "Palma Control",
       "services": ["approach_radar"],
-      "part_of": "LECP_CTR"
+      "part_of": "LECP_CTR",
+      "airport": "LEPA"
     },
     {
       "id": "LEPATWR",
@@ -36,62 +37,76 @@
     {
       "call_sign": "LECPAPR",
       "unit": "LEPAAPP",
-      "frequency": "119.155"
+      "frequency": "119.155",
+      "roles": ["feeder", "final", "departure"]
     },
     {
       "call_sign": "LECPIXX",
       "unit": "LEPAAPP",
-      "frequency": "134.825"
+      "frequency": "134.825",
+      "roles": ["feeder", "final", "departure"],
+      "airports": ["LEIB"]
     },
     {
       "call_sign": "LECPMXX",
       "unit": "LEPAAPP",
-      "frequency": "120.700"
+      "frequency": "120.700",
+      "roles": ["feeder", "final", "departure"],
+      "airports": ["LEMH"]
     },
     {
       "call_sign": "LECPAPP",
       "unit": "LEPAAPP",
-      "frequency": "119.155"
+      "frequency": "119.155",
+      "roles": ["final"]
     },
     {
       "call_sign": "LECPF1X",
       "unit": "LEPAAPP",
-      "frequency": "118.955"
+      "frequency": "118.955",
+      "roles": ["feeder", "departure"]
     },
     {
       "call_sign": "LECPF2X",
       "unit": "LEPAAPP",
-      "frequency": "119.405"
+      "frequency": "119.405",
+      "roles": ["feeder", "departure"]
     },
     {
       "call_sign": "LECPL1W",
       "unit": "LEPAAPP",
-      "frequency": "118.955"
+      "frequency": "118.955",
+      "roles": ["feeder"]
     },
     {
       "call_sign": "LECPL2W",
       "unit": "LEPAAPP",
-      "frequency": "119.405"
+      "frequency": "119.405",
+      "roles": ["feeder"]
     },
     {
       "call_sign": "LECPDWX",
       "unit": "LEPAAPP",
-      "frequency": "118.005"
+      "frequency": "118.005",
+      "roles": ["departure"]
     },
     {
       "call_sign": "LECPL1E",
       "unit": "LEPAAPP",
-      "frequency": "118.955"
+      "frequency": "118.955",
+      "roles": ["feeder"]
     },
     {
       "call_sign": "LECPL2E",
       "unit": "LEPAAPP",
-      "frequency": "119.405"
+      "frequency": "119.405",
+      "roles": ["feeder"]
     },
     {
       "call_sign": "LECPDEX",
       "unit": "LEPAAPP",
-      "frequency": "118.005"
+      "frequency": "118.005",
+      "roles": ["departure"]
     },
     {
       "call_sign": "LECPALP",
@@ -121,7 +136,8 @@
     {
       "call_sign": "LECPGTX",
       "unit": "LEPAAPP",
-      "frequency": "129.255"
+      "frequency": "129.255",
+      "roles": ["center"]
     }
   ],
   "zones": [
