@@ -1,8 +1,8 @@
 {
   "asset_name": "sector-data-2612-full.zip",
-  "commit_sha": "0aec73329484fa130466833c8f3914570336dfeb",
+  "commit_sha": "5bad77e399e323d5eee947aa82b64d0784fc245a",
   "dataset": "sector_data",
-  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-26/sector-data-2612-full.zip",
+  "download_url": "https://github.com/lainoa-software/voiceatc-simulator-community/releases/download/daily-2026-11-27/sector-data-2612-full.zip",
   "entries": [
     {
       "files": {
@@ -2333,8 +2333,8 @@
         "tma_definitions": {
           "repo_path": "feature_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "ed00842371c5a707c6f6fe650e323e852a8e037b31e1925a6970c189ad811aa5",
-          "size_bytes": 1520
+          "sha256": "423bb6af79c683aff15584f047a48602a08a90d9933922ec9f2aa6c277affcf4",
+          "size_bytes": 1572
         },
         "tma_layout": {
           "repo_path": "feature_variants/L/LE/LECB/LECB_W/BARCELONA_TMA/tma_layout.json",
@@ -2470,8 +2470,8 @@
         "tma_definitions": {
           "repo_path": "feature_variants/L/LE/LECB/LECP/PALMA_TMA/tma_definitions.json",
           "requires": ["community.airspace_files"],
-          "sha256": "6a8f65c08992761dcf9ae769f1ab95b807689ed4f44c9ae07a16a3af166f6b68",
-          "size_bytes": 2766
+          "sha256": "377b082988f1e678daa7dcceb2b805dc57bec2cff8d6ec53b48977bdc4fdaf3a",
+          "size_bytes": 3295
         },
         "tma_layout": {
           "repo_path": "feature_variants/L/LE/LECB/LECP/PALMA_TMA/tma_layout.json",
@@ -6848,10 +6848,10 @@
     }
   ],
   "entry_count": 304,
-  "generated_at": "2026-11-26T23:08:37Z",
-  "published_at": "2026-11-26T23:08:37Z",
-  "release_tag": "daily-2026-11-26",
+  "generated_at": "2026-11-27T09:39:18Z",
+  "published_at": "2026-11-27T09:39:18Z",
+  "release_tag": "daily-2026-11-27",
   "repo": "lainoa-software/voiceatc-simulator-community",
-  "sha256": "625a810dafc77a0c784057aba1ff7a4beef08b1ec5e5d3f172634346aa542e21",
-  "size_bytes": 1387009
+  "sha256": "1dbad81774f378a7d8e095f03aa5ae8bcaea096466b7be365ad2800f45cfceb2",
+  "size_bytes": 1387163
 }
