@@ -1,10 +1,10 @@
 {
-  "commit_sha": "8e11da11256bb12a8111fea629433e835dd6d051",
+  "commit_sha": "5cf6b74cca13e37f205be30e1558e559a454dcd1",
   "dataset": "routes",
   "entries": [],
   "entry_count": 0,
-  "generated_at": "2026-11-27T11:24:55Z",
-  "published_at": "2026-11-27T11:24:55Z",
-  "release_tag": "daily-2026-11-27-b",
+  "generated_at": "2026-11-27T18:50:27Z",
+  "published_at": "2026-11-27T18:50:27Z",
+  "release_tag": "daily-2026-11-27-c",
   "repo": "lainoa-software/voiceatc-simulator-community"
 }
