@@ -44,15 +44,13 @@
       "call_sign": "LECPIXX",
       "unit": "LEPAAPP",
       "frequency": "134.825",
-      "roles": ["feeder", "final", "departure"],
-      "airports": ["LEIB"]
+      "roles": ["feeder", "final", "departure"]
     },
     {
       "call_sign": "LECPMXX",
       "unit": "LEPAAPP",
       "frequency": "120.700",
-      "roles": ["feeder", "final", "departure"],
-      "airports": ["LEMH"]
+      "roles": ["feeder", "final", "departure"]
     },
     {
       "call_sign": "LECPAPP",
