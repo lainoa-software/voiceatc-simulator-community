@@ -43,6 +43,16 @@ generated indexes under `.voiceatc/`. Approval and a green required check are bo
 [`.git-blame-ignore-revs`](.git-blame-ignore-revs) skips the formatting and schema-migration
 commits in `git blame`, so it still names the contributor who wrote each value.
 
+## Seat rules
+
+A seat is a position a controller works, listed under `positions` with its call sign.
+Pull requests are checked against two rules:
+
+- Centre and tower jobs can't be removed from a seat. To remove such a seat, remove the sectors it works too.
+- Approach seats on a radar approach unit stay at or below FL300.
+
+The required `validate` check runs both.
+
 ## Reference
 
 - [Hierarchy authority](documentation/CONTENT_HIERARCHY.md) — registry and placement contracts.
