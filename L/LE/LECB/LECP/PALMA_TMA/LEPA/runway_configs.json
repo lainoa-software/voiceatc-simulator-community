@@ -1,5 +1,4 @@
 {
-  "schema": 3,
   "airport": "LEPA",
   "runway_configs": [
     {
@@ -19,6 +18,30 @@
       "name": "WEST DUAL",
       "arr": "24R 24L",
       "dep": "24R"
+    },
+    {
+      "id": "WEST_24L_SINGLE",
+      "name": "WEST 24L Single",
+      "arr": "24L",
+      "dep": "24L"
+    },
+    {
+      "id": "WEST_24R_SINGLE",
+      "name": "WEST 24R Single",
+      "arr": "24R",
+      "dep": "24R"
+    },
+    {
+      "id": "EAST_06L_SINGLE",
+      "name": "EAST 06L Single",
+      "arr": "06L",
+      "dep": "06L"
+    },
+    {
+      "id": "EAST_06R_SINGLE",
+      "name": "EAST 06R Single",
+      "arr": "06R",
+      "dep": "06R"
     }
   ]
 }
