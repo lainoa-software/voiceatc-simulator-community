@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The seat guard compares jobs with the base branch.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -29,6 +32,14 @@ jobs:
         run: python tools/routes_release_manifest.py --validate-only
       - name: Validate default routes file
         run: python tools/routes_release_manifest.py --validate-only --validate-default
+      - name: Validate approach seat ceiling
+        run: python tools/seat_jobs_guard.py
+      # A multi-line step so tools/validate_all.py skips it: only a pull request has a base.
+      - name: Guard seat jobs against the base branch
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          python tools/seat_jobs_guard.py --base "origin/${{ github.base_ref }}"
       - name: Validate MVA files
         run: python tools/mva_manifest.py --validate-only
       - name: Validate runway config files
